@@ -1,0 +1,239 @@
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability}{}\section{C\+Player\+Capability\+Build\+Normal\+:\+:C\+Activated\+Capability Class Reference}
+\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability}\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+
+
+Inheritance diagram for C\+Player\+Capability\+Build\+Normal\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Player\+Capability\+Build\+Normal\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a33a64e3a38d5e2e3c705d3350780a17a}{C\+Activated\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target, int lumber, int gold, int steps)
+\item 
+virtual \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a68b7fdfbb1f47ac01fafc46acafa22b5}{$\sim$\+C\+Activated\+Capability} ()
+\item 
+int \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a40bf27f9dfe88ad17a51ebb12c078568}{Percent\+Complete} (int max)
+\item 
+bool \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a19b9ba979e8deebcb2b7e4225af47d2e}{Increment\+Step} ()
+\item 
+void \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a7cc74f98f4071edfa75395d02d897fef}{Cancel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{D\+Current\+Step}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{D\+Total\+Steps}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229}{D\+Lumber}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84}{D\+Gold}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file Build\+Capabilities.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a33a64e3a38d5e2e3c705d3350780a17a}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a33a64e3a38d5e2e3c705d3350780a17a} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!C\+Activated\+Capability@{C\+Activated\+Capability}}
+\index{C\+Activated\+Capability@{C\+Activated\+Capability}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{C\+Activated\+Capability()}{CActivatedCapability()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+C\+Activated\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target,  }\item[{int}]{lumber,  }\item[{int}]{gold,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file Build\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+144                                                                                                            
+                                                                                                                  
+         :
+145 \hyperlink{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1}{CActivatedPlayerCapability}(actor, playerdata, target)\{
+146     \hyperlink{structSAssetCommand}{SAssetCommand} AssetCommand;
+147     
+148     \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep} = 0;
+149     \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{DTotalSteps} = steps;
+150     \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229}{DLumber} = lumber;
+151     \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84}{DGold} = gold;
+152     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementLumber(\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229}{DLumber});
+153     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementGold(\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84}{DGold});
+154     AssetCommand.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct};
+155     AssetCommand.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget} = \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor};
+156     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PushCommand(AssetCommand);
+157 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a68b7fdfbb1f47ac01fafc46acafa22b5}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a68b7fdfbb1f47ac01fafc46acafa22b5} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}}
+\index{````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Activated\+Capability()}{~CActivatedCapability()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::$\sim$\+C\+Activated\+Capability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 38 of file Build\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a7cc74f98f4071edfa75395d02d897fef}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a7cc74f98f4071edfa75395d02d897fef} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 192 of file Build\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+192                                                              \{
+193     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementLumber(\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229}{DLumber});
+194     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementGold(\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84}{DGold});
+195     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DeleteAsset(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget});
+196     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+197 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a19b9ba979e8deebcb2b7e4225af47d2e}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a19b9ba979e8deebcb2b7e4225af47d2e} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!Increment\+Step@{Increment\+Step}}
+\index{Increment\+Step@{Increment\+Step}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Increment\+Step()}{IncrementStep()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+Increment\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 164 of file Build\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+164                                                                     \{
+165     \textcolor{keywordtype}{int} AddHitPoints = (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * (\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep} + 1) / 
+      \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{DTotalSteps}) - (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep} / 
+      \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{DTotalSteps});
+166     
+167     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->IncrementHitPoints(AddHitPoints);
+168     \textcolor{keywordflow}{if}(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints() > \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints())\{
+169         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints());
+170     \}
+171     \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep}++;
+172     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->IncrementStep();
+173     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->IncrementStep();
+174     \textcolor{keywordflow}{if}(\hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep} >= \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{DTotalSteps})\{
+175         \hyperlink{structSGameEvent}{SGameEvent} TempEvent;
+176         
+177         TempEvent.\hyperlink{structSGameEvent_afa10562e243f4ac2b473b655cc58fee7}{DType} = \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587}{etWorkComplete};
+178         TempEvent.\hyperlink{structSGameEvent_a40c85eeac83b96887b7449c9bdc5d624}{DAsset} = \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor};
+179         \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AddGameEvent(TempEvent);
+180         
+181         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PopCommand();
+182         \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+183         \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->TilePosition(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->FindAssetPlacement(
+      \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}, \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}, \hyperlink{classCPosition}{CPosition}(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Width()-1, 
+      \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Height()-1)));
+184         \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->ResetStep();
+185         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->ResetStep();
+186         
+187         \textcolor{keywordflow}{return} \textcolor{keyword}{true};    
+188     \}
+189     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+190 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a40bf27f9dfe88ad17a51ebb12c078568}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a40bf27f9dfe88ad17a51ebb12c078568} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!Percent\+Complete@{Percent\+Complete}}
+\index{Percent\+Complete@{Percent\+Complete}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Percent\+Complete()}{PercentComplete()}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+Percent\+Complete (\begin{DoxyParamCaption}\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 160 of file Build\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+160                                                                             \{
+161     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{DCurrentStep} * max / \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{DTotalSteps};
+162 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_ab6e20b5de47d912d9e38c2e8395f1ad1} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!D\+Current\+Step@{D\+Current\+Step}}
+\index{D\+Current\+Step@{D\+Current\+Step}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Current\+Step}{DCurrentStep}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Current\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Build\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a8997bc10da71f5df340096cd0d717d84} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!D\+Gold@{D\+Gold}}
+\index{D\+Gold@{D\+Gold}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Gold}{DGold}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Gold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Build\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_acc7750973121c2b8ada035bca9264229} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!D\+Lumber@{D\+Lumber}}
+\index{D\+Lumber@{D\+Lumber}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Lumber}{DLumber}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Lumber\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Build\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5}{}\label{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a50e3103232671fc231348e7a86c1fed5} 
+\index{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}!D\+Total\+Steps@{D\+Total\+Steps}}
+\index{D\+Total\+Steps@{D\+Total\+Steps}!C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Total\+Steps}{DTotalSteps}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Total\+Steps\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Build\+Capabilities.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{BuildCapabilities_8cpp}{Build\+Capabilities.\+cpp}\end{DoxyCompactItemize}

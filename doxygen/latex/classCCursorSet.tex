@@ -1,0 +1,310 @@
+\hypertarget{classCCursorSet}{}\section{C\+Cursor\+Set Class Reference}
+\label{classCCursorSet}\index{C\+Cursor\+Set@{C\+Cursor\+Set}}
+
+
+{\ttfamily \#include $<$Cursor\+Set.\+h$>$}
+
+
+
+Inheritance diagram for C\+Cursor\+Set\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCCursorSet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Cursor\+Set\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCCursorSet__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCCursorSet_af7040d50fde2f260b3d95c42312b1cc9}{C\+Cursor\+Set} ()
+\item 
+virtual \hyperlink{classCCursorSet_ae8783829a637263e44fc6dff799c5e0e}{$\sim$\+C\+Cursor\+Set} ()
+\item 
+int \hyperlink{classCCursorSet_ad42c2ad37c03f39fa4b84aa362b337e6}{Cursor\+Count} () const
+\item 
+int \hyperlink{classCCursorSet_a6984a5bfd8b989c09f9ab8aac459993e}{Cursor\+Width} () const
+\item 
+int \hyperlink{classCCursorSet_a25ce1f3e861c3d4ea701bb2e810728a6}{Cursor\+Height} () const
+\item 
+int \hyperlink{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f}{Find\+Cursor} (const std\+::string \&cursorname) const
+\item 
+bool \hyperlink{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0}{Load\+Cursors} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+void \hyperlink{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba}{Draw\+Cursor} (Gdk\+Drawable $\ast$drawable, Gdk\+GC $\ast$gc, gint xpos, gint ypos, int cursorindex)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCCursorSet_af36d1812e93362f15553c63876f2045b}{D\+Cursor\+X\+Point}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{D\+Cursor\+Y\+Point}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file Cursor\+Set.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCCursorSet_af7040d50fde2f260b3d95c42312b1cc9}{}\label{classCCursorSet_af7040d50fde2f260b3d95c42312b1cc9} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{C\+Cursor\+Set()}{CCursorSet()}}
+{\footnotesize\ttfamily C\+Cursor\+Set\+::\+C\+Cursor\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file Cursor\+Set.\+cpp.
+
+
+\begin{DoxyCode}
+22                        : \hyperlink{classCGraphicTileset_a871889683273be71a94c73776fcd507b}{CGraphicTileset}()\{
+23     
+24 \}
+\end{DoxyCode}
+\hypertarget{classCCursorSet_ae8783829a637263e44fc6dff799c5e0e}{}\label{classCCursorSet_ae8783829a637263e44fc6dff799c5e0e} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!````~C\+Cursor\+Set@{$\sim$\+C\+Cursor\+Set}}
+\index{````~C\+Cursor\+Set@{$\sim$\+C\+Cursor\+Set}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Cursor\+Set()}{~CCursorSet()}}
+{\footnotesize\ttfamily C\+Cursor\+Set\+::$\sim$\+C\+Cursor\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 26 of file Cursor\+Set.\+cpp.
+
+
+\begin{DoxyCode}
+26                        \{
+27     
+28 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCCursorSet_ad42c2ad37c03f39fa4b84aa362b337e6}{}\label{classCCursorSet_ad42c2ad37c03f39fa4b84aa362b337e6} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Cursor\+Count@{Cursor\+Count}}
+\index{Cursor\+Count@{Cursor\+Count}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Cursor\+Count()}{CursorCount()}}
+{\footnotesize\ttfamily int C\+Cursor\+Set\+::\+Cursor\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 31 of file Cursor\+Set.\+h.
+
+
+\begin{DoxyCode}
+31                                \{
+32             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount};
+33         \};
+\end{DoxyCode}
+\hypertarget{classCCursorSet_a25ce1f3e861c3d4ea701bb2e810728a6}{}\label{classCCursorSet_a25ce1f3e861c3d4ea701bb2e810728a6} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Cursor\+Height@{Cursor\+Height}}
+\index{Cursor\+Height@{Cursor\+Height}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Cursor\+Height()}{CursorHeight()}}
+{\footnotesize\ttfamily int C\+Cursor\+Set\+::\+Cursor\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 39 of file Cursor\+Set.\+h.
+
+
+\begin{DoxyCode}
+39                                 \{
+40             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
+41         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_a25ce1f3e861c3d4ea701bb2e810728a6_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCCursorSet_a6984a5bfd8b989c09f9ab8aac459993e}{}\label{classCCursorSet_a6984a5bfd8b989c09f9ab8aac459993e} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Cursor\+Width@{Cursor\+Width}}
+\index{Cursor\+Width@{Cursor\+Width}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Cursor\+Width()}{CursorWidth()}}
+{\footnotesize\ttfamily int C\+Cursor\+Set\+::\+Cursor\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 35 of file Cursor\+Set.\+h.
+
+
+\begin{DoxyCode}
+35                                \{
+36             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth};
+37         \};
+\end{DoxyCode}
+\hypertarget{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba}{}\label{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Draw\+Cursor@{Draw\+Cursor}}
+\index{Draw\+Cursor@{Draw\+Cursor}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Draw\+Cursor()}{DrawCursor()}}
+{\footnotesize\ttfamily void C\+Cursor\+Set\+::\+Draw\+Cursor (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+GC $\ast$}]{gc,  }\item[{gint}]{xpos,  }\item[{gint}]{ypos,  }\item[{int}]{cursorindex }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file Cursor\+Set.\+cpp.
+
+
+\begin{DoxyCode}
+74                                                                                                   \{
+75     \textcolor{keywordflow}{if}((0 > cursorindex)||(cursorindex >= \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}))\{
+76         \textcolor{keywordflow}{return};
+77     \}
+78     
+79     \hyperlink{classCGraphicTileset_afefd501a74e95295b7cd2dc868dcbbcb}{DrawTile}(drawable, gc, xpos - \hyperlink{classCCursorSet_af36d1812e93362f15553c63876f2045b}{DCursorXPoint}[cursorindex], ypos - 
+      \hyperlink{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{DCursorYPoint}[cursorindex], cursorindex);
+80 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f}{}\label{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Find\+Cursor@{Find\+Cursor}}
+\index{Find\+Cursor@{Find\+Cursor}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Find\+Cursor()}{FindCursor()}}
+{\footnotesize\ttfamily int C\+Cursor\+Set\+::\+Find\+Cursor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cursorname }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 31 of file Cursor\+Set.\+cpp.
+
+
+\begin{DoxyCode}
+31                                                            \{
+32     \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_ab8f2c2b2f2095b17d53c3dc475d5685c}{FindTile}(cursorname);
+33 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0}{}\label{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!Load\+Cursors@{Load\+Cursors}}
+\index{Load\+Cursors@{Load\+Cursors}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{Load\+Cursors()}{LoadCursors()}}
+{\footnotesize\ttfamily bool C\+Cursor\+Set\+::\+Load\+Cursors (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Cursor\+Set.\+cpp.
+
+
+\begin{DoxyCode}
+35                                                                \{
+36     \hyperlink{classCLineDataSource}{CLineDataSource} LineSource(source);
+37     std::string TempString;
+38     std::vector< std::string > Tokens;
+39     \textcolor{keywordtype}{bool} ReturnStatus = \textcolor{keyword}{false};
+40 
+41     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} == source)\{
+42         \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+43     \}    
+44     \textcolor{keywordflow}{if}(!\hyperlink{classCGraphicTileset_a7d47754f26f03958be28a064f54eef1d}{CGraphicTileset::LoadTileset}(source))\{
+45         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+46     \}
+47     
+48     \textcolor{keywordflow}{try}\{
+49         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}; Index++)\{
+50             \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+51                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to get %d cursor point.\(\backslash\)n"}, Index);
+52                 \textcolor{keywordflow}{goto} LoadCursorsExit;
+53             \}
+54             \hyperlink{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c}{CTokenizer::Tokenize}(Tokens, TempString);
+55             \textcolor{keywordflow}{if}(2 != Tokens.size())\{
+56                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Invalid cursor points %s (%zd).\(\backslash\)n"},TempString.c\_str(), Tokens.size())
+      ;
+57                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} I = 0; I < Tokens.size(); I++)\{
+58                     \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Tokens[%d] = %s\(\backslash\)n"},I,Tokens[I].c\_str());
+59                 \}
+60                 \textcolor{keywordflow}{goto} LoadCursorsExit;
+61             \}
+62             \hyperlink{classCCursorSet_af36d1812e93362f15553c63876f2045b}{DCursorXPoint}.push\_back(std::stoi(Tokens[0]));
+63             \hyperlink{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{DCursorYPoint}.push\_back(std::stoi(Tokens[1]));
+64         \}
+65     \}
+66     \textcolor{keywordflow}{catch}(std::exception &E)\{
+67         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"%s\(\backslash\)n"},E.what());
+68     \}
+69     ReturnStatus = \textcolor{keyword}{true};
+70 LoadCursorsExit:
+71     \textcolor{keywordflow}{return} ReturnStatus;
+72 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCCursorSet_af36d1812e93362f15553c63876f2045b}{}\label{classCCursorSet_af36d1812e93362f15553c63876f2045b} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!D\+Cursor\+X\+Point@{D\+Cursor\+X\+Point}}
+\index{D\+Cursor\+X\+Point@{D\+Cursor\+X\+Point}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{D\+Cursor\+X\+Point}{DCursorXPoint}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Cursor\+Set\+::\+D\+Cursor\+X\+Point\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Cursor\+Set.\+h.
+
+\hypertarget{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{}\label{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98} 
+\index{C\+Cursor\+Set@{C\+Cursor\+Set}!D\+Cursor\+Y\+Point@{D\+Cursor\+Y\+Point}}
+\index{D\+Cursor\+Y\+Point@{D\+Cursor\+Y\+Point}!C\+Cursor\+Set@{C\+Cursor\+Set}}
+\subsubsection{\texorpdfstring{D\+Cursor\+Y\+Point}{DCursorYPoint}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Cursor\+Set\+::\+D\+Cursor\+Y\+Point\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Cursor\+Set.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{CursorSet_8h}{Cursor\+Set.\+h}\item 
+src/\hyperlink{CursorSet_8cpp}{Cursor\+Set.\+cpp}\end{DoxyCompactItemize}

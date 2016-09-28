@@ -1,0 +1,582 @@
+\hypertarget{classCViewportRenderer}{}\section{C\+Viewport\+Renderer Class Reference}
+\label{classCViewportRenderer}\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+
+
+{\ttfamily \#include $<$Viewport\+Renderer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCViewportRenderer_a21067af3982b3e7468e3770c50a7c6a0}{C\+Viewport\+Renderer} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCMapRenderer}{C\+Map\+Renderer} $>$ maprender, std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetRenderer}{C\+Asset\+Renderer} $>$ assetrender, std\+::shared\+\_\+ptr$<$ \hyperlink{classCFogRenderer}{C\+Fog\+Renderer} $>$ fogrender)
+\item 
+\hyperlink{classCViewportRenderer_a88d046fb19e26d8d5f331e34aa86d598}{$\sim$\+C\+Viewport\+Renderer} ()
+\item 
+void \hyperlink{classCViewportRenderer_ab033e4011819d904d25c74e8876e0517}{Init\+Viewport\+Dimensions} (int width, int height)
+\item 
+int \hyperlink{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{ViewportX} () const
+\item 
+int \hyperlink{classCViewportRenderer_ac81f563649d991e03cc0f35a86dda296}{ViewportX} (int x)
+\item 
+int \hyperlink{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{ViewportY} () const
+\item 
+int \hyperlink{classCViewportRenderer_aebbe5e095b192de093376cde3cfc82dc}{ViewportY} (int y)
+\item 
+gint \hyperlink{classCViewportRenderer_a4d87305e8c2da6933d13c9a98d80bb21}{Last\+Viewport\+Width} () const
+\item 
+gint \hyperlink{classCViewportRenderer_a55bdef4acd6335ac15f5017ad82111b3}{Last\+Viewport\+Height} () const
+\item 
+void \hyperlink{classCViewportRenderer_a12842df851be0f115a735cec994d863e}{Center\+Viewport} (const \hyperlink{classCPosition}{C\+Position} \&pos)
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCViewportRenderer_a2c23b54725686c6219c8765e48351d72}{Detailed\+Position} (const \hyperlink{classCPosition}{C\+Position} \&pos) const
+\item 
+void \hyperlink{classCViewportRenderer_a3dae20056eb4f9fc1c7d8238737ab290}{Pan\+North} (int pan)
+\item 
+void \hyperlink{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c}{Pan\+East} (int pan)
+\item 
+void \hyperlink{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132}{Pan\+South} (int pan)
+\item 
+void \hyperlink{classCViewportRenderer_aa09c1b984311f77ea1cdcdc74a7a0316}{Pan\+West} (int pan)
+\item 
+void \hyperlink{classCViewportRenderer_ad5cf67fd6d4d69f861dbc0b773cdcab2}{Draw\+Viewport} (Gdk\+Drawable $\ast$drawable, Gdk\+Drawable $\ast$typedrawable, const std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \&selectionmarkerlist, const \hyperlink{structSRectangle}{S\+Rectangle} \&selectrect, \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} curcapability)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCMapRenderer}{C\+Map\+Renderer} $>$ \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{D\+Map\+Renderer}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetRenderer}{C\+Asset\+Renderer} $>$ \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{D\+Asset\+Renderer}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCFogRenderer}{C\+Fog\+Renderer} $>$ \hyperlink{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{D\+Fog\+Renderer}
+\item 
+int \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{D\+ViewportX}
+\item 
+int \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{D\+ViewportY}
+\item 
+gint \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{D\+Last\+Viewport\+Width}
+\item 
+gint \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{D\+Last\+Viewport\+Height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file Viewport\+Renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCViewportRenderer_a21067af3982b3e7468e3770c50a7c6a0}{}\label{classCViewportRenderer_a21067af3982b3e7468e3770c50a7c6a0} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{C\+Viewport\+Renderer()}{CViewportRenderer()}}
+{\footnotesize\ttfamily C\+Viewport\+Renderer\+::\+C\+Viewport\+Renderer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCMapRenderer}{C\+Map\+Renderer} $>$}]{maprender,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetRenderer}{C\+Asset\+Renderer} $>$}]{assetrender,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCFogRenderer}{C\+Fog\+Renderer} $>$}]{fogrender }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                                                                            
+                                                            \{
+20     \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer} = maprender;
+21     \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{DAssetRenderer} = assetrender;
+22     \hyperlink{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{DFogRenderer} = fogrender;
+23     \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = 0;
+24     \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = 0;
+25     \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth} = maprender->DetailedMapWidth();
+26     \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight} = maprender->DetailedMapHeight();
+27 \}
+\end{DoxyCode}
+\hypertarget{classCViewportRenderer_a88d046fb19e26d8d5f331e34aa86d598}{}\label{classCViewportRenderer_a88d046fb19e26d8d5f331e34aa86d598} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!````~C\+Viewport\+Renderer@{$\sim$\+C\+Viewport\+Renderer}}
+\index{````~C\+Viewport\+Renderer@{$\sim$\+C\+Viewport\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Viewport\+Renderer()}{~CViewportRenderer()}}
+{\footnotesize\ttfamily C\+Viewport\+Renderer\+::$\sim$\+C\+Viewport\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+29                                      \{
+30 
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCViewportRenderer_a12842df851be0f115a735cec994d863e}{}\label{classCViewportRenderer_a12842df851be0f115a735cec994d863e} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Center\+Viewport@{Center\+Viewport}}
+\index{Center\+Viewport@{Center\+Viewport}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Center\+Viewport()}{CenterViewport()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Center\+Viewport (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 56 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+56                                                           \{
+57     \hyperlink{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{ViewportX}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() - \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth}/2);
+58     \hyperlink{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{ViewportY}(pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() - \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight}/2);
+59 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a12842df851be0f115a735cec994d863e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a12842df851be0f115a735cec994d863e_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_a2c23b54725686c6219c8765e48351d72}{}\label{classCViewportRenderer_a2c23b54725686c6219c8765e48351d72} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Detailed\+Position@{Detailed\+Position}}
+\index{Detailed\+Position@{Detailed\+Position}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Detailed\+Position()}{DetailedPosition()}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Viewport\+Renderer\+::\+Detailed\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+60                                                               \{
+61             \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX}, pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 
+      \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY});  
+62         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a2c23b54725686c6219c8765e48351d72_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_ad5cf67fd6d4d69f861dbc0b773cdcab2}{}\label{classCViewportRenderer_ad5cf67fd6d4d69f861dbc0b773cdcab2} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Draw\+Viewport@{Draw\+Viewport}}
+\index{Draw\+Viewport@{Draw\+Viewport}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Viewport()}{DrawViewport()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Draw\+Viewport (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+Drawable $\ast$}]{typedrawable,  }\item[{const std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \&}]{selectionmarkerlist,  }\item[{const \hyperlink{structSRectangle}{S\+Rectangle} \&}]{selectrect,  }\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{curcapability }\end{DoxyParamCaption})}
+
+
+
+Definition at line 84 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+84                                                                                                            
+                                                                                                                  
+        \{
+85     \hyperlink{structSRectangle}{SRectangle} TempRectangle;
+86     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{EAssetType} PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone};
+87     std::shared\_ptr< CPlayerAsset > Builder;
+88     gdk\_pixmap\_get\_size(drawable, &\hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth}, &
+      \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight}); 
+89     
+90     \textcolor{keywordflow}{if}(\hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} + \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth} >= 
+      \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapWidth())\{
+91         \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapWidth() - 
+      \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth};
+92     \}
+93     \textcolor{keywordflow}{if}(\hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} + \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight} >= 
+      \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapHeight())\{
+94         \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapHeight() - 
+      \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight};
+95     \}
+96     
+97     TempRectangle.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} = \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX};
+98     TempRectangle.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} = \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY};
+99     TempRectangle.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth} = \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth};
+100     TempRectangle.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight} = \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight};
+101     
+102     \textcolor{keywordflow}{switch}(curcapability)\{
+103         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{actBuildFarm}:          PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm};
+104                                     \textcolor{keywordflow}{break};
+105         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall}:      PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall};
+106                                     \textcolor{keywordflow}{break};
+107         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{actBuildBarracks}:      PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks};
+108                                     \textcolor{keywordflow}{break};
+109         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{actBuildLumberMill}:    PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill};
+110                                     \textcolor{keywordflow}{break};
+111         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{actBuildBlacksmith}:    PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{atBlacksmith};
+112                                     \textcolor{keywordflow}{break};
+113         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69}{actBuildScoutTower}:    PlaceType = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecab8835f936f9ce8c2df6c201e542fbfcd}{atScoutTower};
+114                                     \textcolor{keywordflow}{break};
+115         \textcolor{keywordflow}{default}:                    \textcolor{keywordflow}{break};
+116     \}
+117     \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DrawMap(drawable, typedrawable, TempRectangle, 0);
+118     \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{DAssetRenderer}->DrawSelections(drawable, TempRectangle, selectionmarkerlist, selectrect, 
+      \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} != PlaceType);
+119     \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{DAssetRenderer}->DrawAssets(drawable, typedrawable, TempRectangle);
+120     \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DrawMap(drawable, typedrawable, TempRectangle, 1);
+121     \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{DAssetRenderer}->DrawOverlays(drawable, TempRectangle);
+122     
+123     \textcolor{keywordflow}{if}(selectionmarkerlist.size())\{
+124         Builder = selectionmarkerlist.front().lock();  
+125     \}
+126     \hyperlink{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{DAssetRenderer}->DrawPlacement(drawable, TempRectangle, 
+      \hyperlink{classCPosition}{CPosition}(selectrect.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition}, selectrect.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition}), PlaceType, Builder);
+127     \hyperlink{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{DFogRenderer}->DrawMap(drawable, TempRectangle);
+128 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_ad5cf67fd6d4d69f861dbc0b773cdcab2_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_ab033e4011819d904d25c74e8876e0517}{}\label{classCViewportRenderer_ab033e4011819d904d25c74e8876e0517} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Init\+Viewport\+Dimensions@{Init\+Viewport\+Dimensions}}
+\index{Init\+Viewport\+Dimensions@{Init\+Viewport\+Dimensions}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Init\+Viewport\+Dimensions()}{InitViewportDimensions()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Init\+Viewport\+Dimensions (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+37                                                           \{
+38             \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth} = width;
+39             \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight} = height;
+40         \};
+\end{DoxyCode}
+\hypertarget{classCViewportRenderer_a55bdef4acd6335ac15f5017ad82111b3}{}\label{classCViewportRenderer_a55bdef4acd6335ac15f5017ad82111b3} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Last\+Viewport\+Height@{Last\+Viewport\+Height}}
+\index{Last\+Viewport\+Height@{Last\+Viewport\+Height}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Last\+Viewport\+Height()}{LastViewportHeight()}}
+{\footnotesize\ttfamily gint C\+Viewport\+Renderer\+::\+Last\+Viewport\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 55 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+55                                        \{
+56             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight};
+57         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a55bdef4acd6335ac15f5017ad82111b3_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_a4d87305e8c2da6933d13c9a98d80bb21}{}\label{classCViewportRenderer_a4d87305e8c2da6933d13c9a98d80bb21} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Last\+Viewport\+Width@{Last\+Viewport\+Width}}
+\index{Last\+Viewport\+Width@{Last\+Viewport\+Width}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Last\+Viewport\+Width()}{LastViewportWidth()}}
+{\footnotesize\ttfamily gint C\+Viewport\+Renderer\+::\+Last\+Viewport\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 52 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+52                                       \{
+53             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth};
+54         \};
+\end{DoxyCode}
+\hypertarget{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c}{}\label{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Pan\+East@{Pan\+East}}
+\index{Pan\+East@{Pan\+East}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Pan\+East()}{PanEast()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Pan\+East (\begin{DoxyParamCaption}\item[{int}]{pan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 68 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+68                                       \{
+69     \hyperlink{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{ViewportX}(\hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} + pan);
+70 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_a3dae20056eb4f9fc1c7d8238737ab290}{}\label{classCViewportRenderer_a3dae20056eb4f9fc1c7d8238737ab290} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Pan\+North@{Pan\+North}}
+\index{Pan\+North@{Pan\+North}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Pan\+North()}{PanNorth()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Pan\+North (\begin{DoxyParamCaption}\item[{int}]{pan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 61 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+61                                        \{
+62     \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} -= pan;
+63     \textcolor{keywordflow}{if}(0 > \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY})\{
+64         \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = 0;
+65     \}
+66 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_a3dae20056eb4f9fc1c7d8238737ab290_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132}{}\label{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Pan\+South@{Pan\+South}}
+\index{Pan\+South@{Pan\+South}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Pan\+South()}{PanSouth()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Pan\+South (\begin{DoxyParamCaption}\item[{int}]{pan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+72                                        \{
+73     \hyperlink{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{ViewportY}(\hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} + pan);
+74 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_aa09c1b984311f77ea1cdcdc74a7a0316}{}\label{classCViewportRenderer_aa09c1b984311f77ea1cdcdc74a7a0316} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!Pan\+West@{Pan\+West}}
+\index{Pan\+West@{Pan\+West}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Pan\+West()}{PanWest()}}
+{\footnotesize\ttfamily void C\+Viewport\+Renderer\+::\+Pan\+West (\begin{DoxyParamCaption}\item[{int}]{pan }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+76                                       \{
+77     \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} -= pan;
+78     \textcolor{keywordflow}{if}(0 > \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX})\{
+79         \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = 0;
+80     \}
+81 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_aa09c1b984311f77ea1cdcdc74a7a0316_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{}\label{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!ViewportX@{ViewportX}}
+\index{ViewportX@{ViewportX}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Viewport\+X()}{ViewportX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+ViewportX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 42 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+42                              \{
+43             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX};  
+44         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_ac81f563649d991e03cc0f35a86dda296}{}\label{classCViewportRenderer_ac81f563649d991e03cc0f35a86dda296} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!ViewportX@{ViewportX}}
+\index{ViewportX@{ViewportX}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Viewport\+X()}{ViewportX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+ViewportX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+34                                      \{
+35     \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = x;
+36     \textcolor{keywordflow}{if}(\hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} + \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth} >= 
+      \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapWidth())\{
+37         \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapWidth() - 
+      \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth};
+38     \}
+39     \textcolor{keywordflow}{if}(0 > \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX})\{
+40         \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} = 0;
+41     \}
+42     \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX};
+43 \}
+\end{DoxyCode}
+\hypertarget{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{}\label{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!ViewportY@{ViewportY}}
+\index{ViewportY@{ViewportY}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Viewport\+Y()}{ViewportY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+ViewportY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 47 of file Viewport\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+47                              \{
+48             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY};  
+49         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCViewportRenderer_aebbe5e095b192de093376cde3cfc82dc}{}\label{classCViewportRenderer_aebbe5e095b192de093376cde3cfc82dc} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!ViewportY@{ViewportY}}
+\index{ViewportY@{ViewportY}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{Viewport\+Y()}{ViewportY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+ViewportY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file Viewport\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+45                                      \{
+46     \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = y;
+47     \textcolor{keywordflow}{if}(\hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} + \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight} >= 
+      \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapHeight())\{
+48         \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = \hyperlink{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{DMapRenderer}->DetailedMapHeight() - 
+      \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight};
+49     \}
+50     \textcolor{keywordflow}{if}(0 > \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY})\{
+51         \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} = 0;
+52     \}
+53     \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY};
+54 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8}{}\label{classCViewportRenderer_a3daa075c87bbdde4d1ada41f0b98f4a8} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Asset\+Renderer@{D\+Asset\+Renderer}}
+\index{D\+Asset\+Renderer@{D\+Asset\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Asset\+Renderer}{DAssetRenderer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetRenderer}{C\+Asset\+Renderer} $>$ C\+Viewport\+Renderer\+::\+D\+Asset\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{}\label{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Fog\+Renderer@{D\+Fog\+Renderer}}
+\index{D\+Fog\+Renderer@{D\+Fog\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Fog\+Renderer}{DFogRenderer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCFogRenderer}{C\+Fog\+Renderer} $>$ C\+Viewport\+Renderer\+::\+D\+Fog\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{}\label{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Last\+Viewport\+Height@{D\+Last\+Viewport\+Height}}
+\index{D\+Last\+Viewport\+Height@{D\+Last\+Viewport\+Height}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Last\+Viewport\+Height}{DLastViewportHeight}}
+{\footnotesize\ttfamily gint C\+Viewport\+Renderer\+::\+D\+Last\+Viewport\+Height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{}\label{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Last\+Viewport\+Width@{D\+Last\+Viewport\+Width}}
+\index{D\+Last\+Viewport\+Width@{D\+Last\+Viewport\+Width}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Last\+Viewport\+Width}{DLastViewportWidth}}
+{\footnotesize\ttfamily gint C\+Viewport\+Renderer\+::\+D\+Last\+Viewport\+Width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{}\label{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Map\+Renderer@{D\+Map\+Renderer}}
+\index{D\+Map\+Renderer@{D\+Map\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Map\+Renderer}{DMapRenderer}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCMapRenderer}{C\+Map\+Renderer} $>$ C\+Viewport\+Renderer\+::\+D\+Map\+Renderer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{}\label{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+ViewportX@{D\+ViewportX}}
+\index{D\+ViewportX@{D\+ViewportX}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+ViewportX}{DViewportX}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+D\+ViewportX\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Viewport\+Renderer.\+h.
+
+\hypertarget{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{}\label{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f} 
+\index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+ViewportY@{D\+ViewportY}}
+\index{D\+ViewportY@{D\+ViewportY}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
+\subsubsection{\texorpdfstring{D\+ViewportY}{DViewportY}}
+{\footnotesize\ttfamily int C\+Viewport\+Renderer\+::\+D\+ViewportY\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Viewport\+Renderer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ViewportRenderer_8h}{Viewport\+Renderer.\+h}\item 
+src/\hyperlink{ViewportRenderer_8cpp}{Viewport\+Renderer.\+cpp}\end{DoxyCompactItemize}

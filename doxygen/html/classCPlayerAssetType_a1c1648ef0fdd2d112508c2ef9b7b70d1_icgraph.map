@@ -1,0 +1,4 @@
+<map id="CPlayerAssetType::MaxSight" name="CPlayerAssetType::MaxSight">
+<area shape="rect" id="node2" href="$classCAssetDecoratedMap.html#aa05e81ec37b4217053e8de050e47dba7" title="CAssetDecoratedMap\l::CreateVisibilityMap" alt="" coords="263,5,425,47"/>
+<area shape="rect" id="node3" href="$classCAssetDecoratedMap.html#a1ead2938a9585fa82b5b5ef72efe6eba" title="CAssetDecoratedMap\l::PlayerCount" alt="" coords="473,5,636,47"/>
+</map>

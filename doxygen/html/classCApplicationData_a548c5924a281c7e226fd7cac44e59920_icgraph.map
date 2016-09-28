@@ -1,0 +1,10 @@
+<map id="CApplicationData::RenderMenuTitle" name="CApplicationData::RenderMenuTitle">
+<area shape="rect" id="node2" href="$classCApplicationData.html#a4766e5533d32e4194816f5a4ea838bd3" title="CApplicationData::Render\lButtonMenuMode" alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node7" href="$classCApplicationData.html#a7da1dd0b9a8d7c68d8df5f60b4e94189" title="CApplicationData::Render\lEditOptionsMode" alt="" coords="244,71,435,112"/>
+<area shape="rect" id="node8" href="$classCApplicationData.html#a72fff3a266be49b3e9f323dcfe545923" title="CApplicationData::Render\lMapSelectMode" alt="" coords="244,136,435,177"/>
+<area shape="rect" id="node9" href="$classCApplicationData.html#a7d46646402ac95a056456e4a3bb353ed" title="CApplicationData::Render\lPlayerAISelectMode" alt="" coords="244,201,435,243"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="483,111,681,138"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="729,104,928,145"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="976,111,1140,138"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1188,111,1243,138"/>
+</map>

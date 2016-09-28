@@ -1,0 +1,5 @@
+<map id="CPlayerCapabilityUnitUpgrade::CanInitiate" name="CPlayerCapabilityUnitUpgrade::CanInitiate">
+<area shape="rect" id="node2" href="$classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="531,5,765,47"/>
+<area shape="rect" id="node3" href="$classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="268,51,483,92"/>
+<area shape="rect" id="node4" href="$classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="531,84,765,125"/>
+</map>

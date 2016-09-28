@@ -1,0 +1,223 @@
+\hypertarget{classCGraphicMulticolorTileset}{}\section{C\+Graphic\+Multicolor\+Tileset Class Reference}
+\label{classCGraphicMulticolorTileset}\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+
+
+{\ttfamily \#include $<$Graphic\+Multicolor\+Tileset.\+h$>$}
+
+
+
+Inheritance diagram for C\+Graphic\+Multicolor\+Tileset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classCGraphicMulticolorTileset__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Graphic\+Multicolor\+Tileset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classCGraphicMulticolorTileset__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCGraphicMulticolorTileset_ab91793ba1d14579e979db7e2fcd80199}{C\+Graphic\+Multicolor\+Tileset} ()
+\item 
+virtual \hyperlink{classCGraphicMulticolorTileset_aa454897de796ad7048f6bb64fdd5311e}{$\sim$\+C\+Graphic\+Multicolor\+Tileset} ()
+\item 
+int \hyperlink{classCGraphicMulticolorTileset_abde63a1cef8d3eaeafe5c86f31ab9cae}{Color\+Count} () const
+\item 
+bool \hyperlink{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc}{Load\+Tileset} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicRecolorMap}{C\+Graphic\+Recolor\+Map} $>$ colormap, std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+void \hyperlink{classCGraphicMulticolorTileset_a17ee648ac82c48079a1853dc8a10365a}{Draw\+Tile} (Gdk\+Drawable $\ast$drawable, Gdk\+GC $\ast$gc, gint xpos, gint ypos, int tileindex, int colorindex)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Gdk\+Pixbuf $\ast$$>$ \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{D\+Pixbuf\+Tilesets}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 26 of file Graphic\+Multicolor\+Tileset.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCGraphicMulticolorTileset_ab91793ba1d14579e979db7e2fcd80199}{}\label{classCGraphicMulticolorTileset_ab91793ba1d14579e979db7e2fcd80199} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{C\+Graphic\+Multicolor\+Tileset()}{CGraphicMulticolorTileset()}}
+{\footnotesize\ttfamily C\+Graphic\+Multicolor\+Tileset\+::\+C\+Graphic\+Multicolor\+Tileset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Graphic\+Multicolor\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+20                                                      : \hyperlink{classCGraphicTileset_a871889683273be71a94c73776fcd507b}{CGraphicTileset}()\{
+21     
+22 \}
+\end{DoxyCode}
+\hypertarget{classCGraphicMulticolorTileset_aa454897de796ad7048f6bb64fdd5311e}{}\label{classCGraphicMulticolorTileset_aa454897de796ad7048f6bb64fdd5311e} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!````~C\+Graphic\+Multicolor\+Tileset@{$\sim$\+C\+Graphic\+Multicolor\+Tileset}}
+\index{````~C\+Graphic\+Multicolor\+Tileset@{$\sim$\+C\+Graphic\+Multicolor\+Tileset}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Graphic\+Multicolor\+Tileset()}{~CGraphicMulticolorTileset()}}
+{\footnotesize\ttfamily C\+Graphic\+Multicolor\+Tileset\+::$\sim$\+C\+Graphic\+Multicolor\+Tileset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 24 of file Graphic\+Multicolor\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+24                                                      \{
+25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.size(); Index++)\{
+26         g\_object\_unref(G\_OBJECT(\hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}[Index]));   
+27     \}
+28 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCGraphicMulticolorTileset_abde63a1cef8d3eaeafe5c86f31ab9cae}{}\label{classCGraphicMulticolorTileset_abde63a1cef8d3eaeafe5c86f31ab9cae} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!Color\+Count@{Color\+Count}}
+\index{Color\+Count@{Color\+Count}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{Color\+Count()}{ColorCount()}}
+{\footnotesize\ttfamily int C\+Graphic\+Multicolor\+Tileset\+::\+Color\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 34 of file Graphic\+Multicolor\+Tileset.\+h.
+
+
+\begin{DoxyCode}
+34                               \{
+35             \textcolor{keywordflow}{return} \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.size();  
+36         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicMulticolorTileset_abde63a1cef8d3eaeafe5c86f31ab9cae_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCGraphicMulticolorTileset_a17ee648ac82c48079a1853dc8a10365a}{}\label{classCGraphicMulticolorTileset_a17ee648ac82c48079a1853dc8a10365a} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!Draw\+Tile@{Draw\+Tile}}
+\index{Draw\+Tile@{Draw\+Tile}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{Draw\+Tile()}{DrawTile()}}
+{\footnotesize\ttfamily void C\+Graphic\+Multicolor\+Tileset\+::\+Draw\+Tile (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+GC $\ast$}]{gc,  }\item[{gint}]{xpos,  }\item[{gint}]{ypos,  }\item[{int}]{tileindex,  }\item[{int}]{colorindex }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file Graphic\+Multicolor\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+63                                                                                                            
+                        \{
+64     \textcolor{keywordflow}{if}((0 > tileindex)||(tileindex >= \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}))\{
+65         \textcolor{keywordflow}{return};
+66     \}
+67     \textcolor{keywordflow}{if}((0 > colorindex)||(colorindex >= \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.size()))\{
+68         \textcolor{keywordflow}{return};    
+69     \}
+70     gdk\_draw\_pixbuf(drawable, gc, \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}[colorindex], 0, tileindex * 
+      \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, xpos, ypos, \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth}, DTileHeight, GDK\_RGB\_DITHER\_NONE, 0, 0);
+71 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicMulticolorTileset_a17ee648ac82c48079a1853dc8a10365a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc}{}\label{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!Load\+Tileset@{Load\+Tileset}}
+\index{Load\+Tileset@{Load\+Tileset}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{Load\+Tileset()}{LoadTileset()}}
+{\footnotesize\ttfamily bool C\+Graphic\+Multicolor\+Tileset\+::\+Load\+Tileset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicRecolorMap}{C\+Graphic\+Recolor\+Map} $>$}]{colormap,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Graphic\+Multicolor\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+30                                                                                                            
+                       \{
+31     \textcolor{keywordtype}{int} Width, Height, NumberChannels, RowStride;
+32     
+33     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW},\textcolor{stringliteral}{"CGraphicMulticolorTileset::LoadTileset\(\backslash\)n"}); 
+34     \textcolor{keywordflow}{if}(!\hyperlink{classCGraphicTileset_a7d47754f26f03958be28a064f54eef1d}{CGraphicTileset::LoadTileset}(source))\{
+35         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+36     \}
+37     Height = gdk\_pixbuf\_get\_height(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+38     Width = gdk\_pixbuf\_get\_width(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+39     NumberChannels = gdk\_pixbuf\_get\_n\_channels(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+40     RowStride = gdk\_pixbuf\_get\_rowstride(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+41     
+42     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW},\textcolor{stringliteral}{"Translating Colors\(\backslash\)n"}); 
+43     \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.clear();
+44     \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.push\_back(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+45     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < colormap->GroupCount(); Index++)\{
+46         \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.push\_back(gdk\_pixbuf\_copy(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset}));
+47         
+48         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YPos = 0; YPos < Height; YPos++)\{
+49             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XPos = 0; XPos < Width; XPos++)\{
+50                 guchar *Pixel = gdk\_pixbuf\_get\_pixels(\hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.back()) + YPos * 
+      RowStride + XPos * NumberChannels;
+51                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} ColIndex = 0; ColIndex < colormap->ColorCount(); ColIndex++)\{
+52                     \textcolor{keywordflow}{if}(colormap->Recolor(Index, Pixel[0], Pixel[1], Pixel[2]))\{
+53                         \textcolor{keywordflow}{break};   
+54                     \}
+55                 \}
+56             \}
+57         \}
+58     \}
+59     
+60     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+61 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{}\label{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c} 
+\index{C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}!D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}}
+\index{D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}!C\+Graphic\+Multicolor\+Tileset@{C\+Graphic\+Multicolor\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Pixbuf\+Tilesets}{DPixbufTilesets}}
+{\footnotesize\ttfamily std\+::vector$<$ Gdk\+Pixbuf $\ast$ $>$ C\+Graphic\+Multicolor\+Tileset\+::\+D\+Pixbuf\+Tilesets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Graphic\+Multicolor\+Tileset.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{GraphicMulticolorTileset_8h}{Graphic\+Multicolor\+Tileset.\+h}\item 
+src/\hyperlink{GraphicMulticolorTileset_8cpp}{Graphic\+Multicolor\+Tileset.\+cpp}\end{DoxyCompactItemize}

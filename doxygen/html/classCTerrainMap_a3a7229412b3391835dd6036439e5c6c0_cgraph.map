@@ -1,0 +1,9 @@
+<map id="CTerrainMap::TileType" name="CTerrainMap::TileType">
+<area shape="rect" id="node2" href="$classCTerrainMap.html#a7e0e440467a09cb1c59e2bdbec01ccb4" title="CTerrainMap::TileType" alt="" coords="245,5,411,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="510,57,613,84"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="510,112,613,139"/>
+<area shape="rect" id="node5" href="$classCTerrainMap.html#af32811cace3a3b01c9519b304ddb8efc" title="CTerrainMap::FindNearest\lTileType" alt="" coords="233,158,423,199"/>
+<area shape="rect" id="node8" href="$classCTerrainMap.html#a40757d66d7458620a327d6f69a35a2bd" title="CTerrainMap::ChangeTileType" alt="" coords="220,224,436,251"/>
+<area shape="rect" id="node6" href="$classCTerrainMap.html#a34cb754aa9b26e85a73377159f2527d7" title="CTerrainMap::Width" alt="" coords="486,164,637,191"/>
+<area shape="rect" id="node7" href="$classCTerrainMap.html#ae5e4bf6507e0e3e9ac0322b43eed8a7a" title="CTerrainMap::Height" alt="" coords="484,215,639,241"/>
+</map>

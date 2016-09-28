@@ -1,0 +1,5 @@
+<map id="CTerrainMap::LoadMap" name="CTerrainMap::LoadMap">
+<area shape="rect" id="node2" href="$classCTerrainMap.html#a4a4f26c13a3d8116f4295bef3c25c3e5" title="CTerrainMap::ChangeTileType" alt="" coords="227,5,443,32"/>
+<area shape="rect" id="node3" href="$classCAssetDecoratedMap.html#aaf40414c8e291bd45327787ddaf58f31" title="CAssetDecoratedMap\l::LoadMap" alt="" coords="253,57,416,98"/>
+<area shape="rect" id="node4" href="$classCAssetDecoratedMap.html#a1ead2938a9585fa82b5b5ef72efe6eba" title="CAssetDecoratedMap\l::PlayerCount" alt="" coords="491,57,653,98"/>
+</map>

@@ -1,0 +1,327 @@
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability}{}\section{C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability Class Reference}
+\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability}\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+
+
+Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a8b462671b0888c5374f4196b04d411d6}{C\+Activated\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ upgradingtype, const std\+::string \&unitname, int lumber, int gold, int steps)
+\item 
+virtual \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_afd5d1ba5ad2b35faa67e4574627d46e1}{$\sim$\+C\+Activated\+Capability} ()
+\item 
+int \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a2e1c0859b129404fe1cc65bcdb187bad}{Percent\+Complete} (int max)
+\item 
+bool \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a5fd10074c6b25ffb36401055ed90b70b}{Increment\+Step} ()
+\item 
+void \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a46a5240502d6a8de65d3d56bbda8bf91}{Cancel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{D\+Upgrading\+Type}
+\item 
+std\+::string \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{D\+Unit\+Name}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{D\+Current\+Step}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{D\+Total\+Steps}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{D\+Lumber}
+\item 
+int \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{D\+Gold}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 169 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a8b462671b0888c5374f4196b04d411d6}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a8b462671b0888c5374f4196b04d411d6} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!C\+Activated\+Capability@{C\+Activated\+Capability}}
+\index{C\+Activated\+Capability@{C\+Activated\+Capability}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{C\+Activated\+Capability()}{CActivatedCapability()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+C\+Activated\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$}]{upgradingtype,  }\item[{const std\+::string \&}]{unitname,  }\item[{int}]{lumber,  }\item[{int}]{gold,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 288 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+288                                                                                                            
+                                                                                                                  
+                                                                                     :
+289 \hyperlink{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1}{CActivatedPlayerCapability}(actor, playerdata, target)\{
+290     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{DUnitName} = unitname;
+291     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} = 0;
+292     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps} = steps;
+293     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{DLumber} = lumber;
+294     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{DGold} = gold;
+295     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementLumber(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{DLumber});
+296     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementGold(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{DGold});
+297     \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill} == actor->Type())\{
+298         \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{DUpgradingType} = upgradingtype;
+299         \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{DUpgradingType}->RemoveCapability(
+      \hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{CPlayerCapability::NameToType}(std::string(\textcolor{stringliteral}{"Build"}) + 
+      \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{DUnitName}));
+300     \}
+301     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks} == actor->Type())\{
+302         \hyperlink{structSAssetCommand}{SAssetCommand} AssetCommand;
+303 
+304         AssetCommand.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct};
+305         AssetCommand.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget} = \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor};
+306         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PushCommand(AssetCommand);
+307     \}
+308 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a8b462671b0888c5374f4196b04d411d6_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_afd5d1ba5ad2b35faa67e4574627d46e1}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_afd5d1ba5ad2b35faa67e4574627d46e1} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}}
+\index{````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Activated\+Capability()}{~CActivatedCapability()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::$\sim$\+C\+Activated\+Capability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 180 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+180 \{\};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_afd5d1ba5ad2b35faa67e4574627d46e1_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a46a5240502d6a8de65d3d56bbda8bf91}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a46a5240502d6a8de65d3d56bbda8bf91} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 369 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+369                                                              \{
+370     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementLumber(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{DLumber});
+371     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementGold(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{DGold});
+372     \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill} == \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->Type())\{
+373         \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{DUpgradingType}->AddCapability(
+      \hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{CPlayerCapability::NameToType}(std::string(\textcolor{stringliteral}{"Build"}) + 
+      \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{DUnitName}));
+374     \}
+375     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks} == \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->Type())\{
+376         \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DeleteAsset(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget});
+377     \}
+378     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+379 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a46a5240502d6a8de65d3d56bbda8bf91_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a5fd10074c6b25ffb36401055ed90b70b}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a5fd10074c6b25ffb36401055ed90b70b} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!Increment\+Step@{Increment\+Step}}
+\index{Increment\+Step@{Increment\+Step}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Increment\+Step()}{IncrementStep()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+Increment\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 315 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+315                                                                     \{
+316     \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks} == \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->Type())\{
+317         \textcolor{keywordtype}{int} AddHitPoints = (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * (\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} + 1) / 
+      \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps}) - (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} / 
+      \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps});
+318         
+319         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->IncrementHitPoints(AddHitPoints);
+320         \textcolor{keywordflow}{if}(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints() > \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints())\{
+321             \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints());
+322         \}   
+323     \}
+324     
+325     \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep}++;
+326     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->IncrementStep();
+327     \textcolor{keywordflow}{if}(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} >= \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps})\{
+328         \hyperlink{structSGameEvent}{SGameEvent} TempEvent;
+329         
+330         \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill} == \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->Type())\{
+331             \textcolor{keyword}{auto} BarracksIterator = \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AssetTypes()->find(\textcolor{stringliteral}{"Barracks"});
+332             \textcolor{keyword}{auto} RangerIterator = \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AssetTypes()->find(\textcolor{stringliteral}{"Ranger"});
+333             \textcolor{keyword}{auto} LumberMillIterator = \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AssetTypes()->find(\textcolor{stringliteral}{"LumberMill"});
+334             
+335             TempEvent.\hyperlink{structSGameEvent_afa10562e243f4ac2b473b655cc58fee7}{DType} = \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587}{etWorkComplete};
+336             TempEvent.\hyperlink{structSGameEvent_a40c85eeac83b96887b7449c9bdc5d624}{DAsset} = \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor};
+337             
+338             BarracksIterator->second->AddCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger});
+339             BarracksIterator->second->RemoveCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher});
+340             LumberMillIterator->second->AddCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7}{actLongbow});
+341             LumberMillIterator->second->AddCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8}{actRangerScouting});
+342             LumberMillIterator->second->AddCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36}{actMarksmanship});
+343             \textcolor{comment}{// Upgrade all Archers}
+344             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->Assets())\{
+345                 \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+346                     \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher} == Asset->Type())\{
+347                         \textcolor{keywordtype}{int} HitPointIncrement = RangerIterator->second->HitPoints() - Asset->MaxHitPoints()
+      ;
+348                         
+349                         Asset->ChangeType(RangerIterator->second);
+350                         Asset->IncrementHitPoints(HitPointIncrement);
+351                     \}   
+352                 \}
+353             \}
+354         \}
+355         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks} == \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->Type())\{
+356             TempEvent.\hyperlink{structSGameEvent_afa10562e243f4ac2b473b655cc58fee7}{DType} = \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56}{etReady};
+357             TempEvent.\hyperlink{structSGameEvent_a40c85eeac83b96887b7449c9bdc5d624}{DAsset} = \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget};
+358         
+359             \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PopCommand();
+360             \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->TilePosition(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->FindAssetPlacement(
+      \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}, \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}, \hyperlink{classCPosition}{CPosition}(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Width()-1, 
+      \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Height()-1)));
+361         \}
+362         \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AddGameEvent(TempEvent);
+363         \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+364         \textcolor{keywordflow}{return} \textcolor{keyword}{true};    
+365     \}
+366     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+367 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a2e1c0859b129404fe1cc65bcdb187bad}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a2e1c0859b129404fe1cc65bcdb187bad} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!Percent\+Complete@{Percent\+Complete}}
+\index{Percent\+Complete@{Percent\+Complete}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Percent\+Complete()}{PercentComplete()}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+Percent\+Complete (\begin{DoxyParamCaption}\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 311 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+311                                                                             \{
+312     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} * max / \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps};
+313 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Current\+Step@{D\+Current\+Step}}
+\index{D\+Current\+Step@{D\+Current\+Step}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Current\+Step}{DCurrentStep}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Current\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 173 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Gold@{D\+Gold}}
+\index{D\+Gold@{D\+Gold}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Gold}{DGold}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Gold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 176 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Lumber@{D\+Lumber}}
+\index{D\+Lumber@{D\+Lumber}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Lumber}{DLumber}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Lumber\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 175 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Total\+Steps@{D\+Total\+Steps}}
+\index{D\+Total\+Steps@{D\+Total\+Steps}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Total\+Steps}{DTotalSteps}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Total\+Steps\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 174 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Unit\+Name@{D\+Unit\+Name}}
+\index{D\+Unit\+Name@{D\+Unit\+Name}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Unit\+Name}{DUnitName}}
+{\footnotesize\ttfamily std\+::string C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Unit\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 172 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682} 
+\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Upgrading\+Type@{D\+Upgrading\+Type}}
+\index{D\+Upgrading\+Type@{D\+Upgrading\+Type}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Upgrading\+Type}{DUpgradingType}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+D\+Upgrading\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 171 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{UnitUpgradeCapabilities_8cpp}{Unit\+Upgrade\+Capabilities.\+cpp}\end{DoxyCompactItemize}

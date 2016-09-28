@@ -1,0 +1,1117 @@
+\hypertarget{classCMapRenderer}{}\section{C\+Map\+Renderer Class Reference}
+\label{classCMapRenderer}\index{C\+Map\+Renderer@{C\+Map\+Renderer}}
+
+
+{\ttfamily \#include $<$Map\+Renderer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCMapRenderer_a9aca3f780976a94fc6e8873e3cf8e199}{C\+Map\+Renderer} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ tileset, std\+::shared\+\_\+ptr$<$ \hyperlink{classCTerrainMap}{C\+Terrain\+Map} $>$ map)
+\item 
+int \hyperlink{classCMapRenderer_a4b63ead9be943cbe40b936fa224dc826}{Map\+Width} () const
+\item 
+int \hyperlink{classCMapRenderer_a68b0c78e7d7d532c14eaf483f4ea3f24}{Map\+Height} () const
+\item 
+int \hyperlink{classCMapRenderer_a12af1a120fdfa3e80f451ba22fe21a62}{Detailed\+Map\+Width} () const
+\item 
+int \hyperlink{classCMapRenderer_a08177d52d070532e46538ec65c88277d}{Detailed\+Map\+Height} () const
+\item 
+void \hyperlink{classCMapRenderer_a26786befd5d6d0b09210736916d1b912}{Draw\+Map} (Gdk\+Drawable $\ast$drawable, Gdk\+Drawable $\ast$typedrawable, const \hyperlink{structSRectangle}{S\+Rectangle} \&rect, int level)
+\item 
+void \hyperlink{classCMapRenderer_ae5c68b6a4892eb8b9e7a4d8afb4e344e}{Draw\+Mini\+Map} (Gdk\+Drawable $\ast$drawable)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{Make\+Hamming\+Set} (int value, std\+::vector$<$ int $>$ \&hammingset)
+\item 
+int \hyperlink{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{Find\+Unknown} (\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{C\+Terrain\+Map\+::\+E\+Tile\+Type} type, int known, int unknown)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{D\+Tileset}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCTerrainMap}{C\+Terrain\+Map} $>$ \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{D\+Map}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{D\+Grass\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{D\+Tree\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{D\+Dirt\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{D\+Water\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{D\+Rock\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{D\+Wall\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_a032989788e978e11147ab8603d875771}{D\+Wall\+Damaged\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{D\+Pixel\+Indices}
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \hyperlink{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{D\+Tree\+Unknown}
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \hyperlink{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{D\+Water\+Unknown}
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \hyperlink{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{D\+Dirt\+Unknown}
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \hyperlink{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{D\+Rock\+Unknown}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file Map\+Renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCMapRenderer_a9aca3f780976a94fc6e8873e3cf8e199}{}\label{classCMapRenderer_a9aca3f780976a94fc6e8873e3cf8e199} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{C\+Map\+Renderer()}{CMapRenderer()}}
+{\footnotesize\ttfamily C\+Map\+Renderer\+::\+C\+Map\+Renderer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$}]{tileset,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCTerrainMap}{C\+Terrain\+Map} $>$}]{map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+21                                                                                                     \{
+22     \textcolor{keywordtype}{int} Index;
+23     std::vector< int > Hamming;
+24     \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset} = tileset;
+25     \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap} = map;
+26     
+27     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}.resize(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a63a0be7e3c2e41dcc569f3d335bd9a02}{CTerrainMap::ttMax});
+28     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{CTerrainMap::ttGrass}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"grass"});
+29     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"dirt"});
+30     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"rock"});
+31     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"tree"});
+32     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{CTerrainMap::ttStump}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"stump"});
+33     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"water"});
+34     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{CTerrainMap::ttWall}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"wall"});
+35     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{CTerrainMap::ttWallDamaged}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"walldamaged"});
+36     \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{CTerrainMap::ttRubble}] = 
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindPixel(\textcolor{stringliteral}{"rubble"});
+37     
+38     Index = 0;
+39     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+40         \textcolor{keywordtype}{int} Value = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"grass-"}) + std::to\_string(Index));
+41         \textcolor{keywordflow}{if}(0 > Value)\{
+42             \textcolor{keywordflow}{break};   
+43         \}
+44         \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{DGrassIndices}.push\_back(Value);
+45         Index++;
+46     \}
+47 
+48     \textcolor{keywordflow}{for}(Index = 0; Index < 0x40; Index++)\{
+49         \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}.push\_back(\hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"tree-"}) + std::to\_string
+      (Index)));
+50     \}
+51     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x0A] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x03];
+52     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x0B] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x03];
+53     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x23] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x03];
+54     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x2B] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x03];
+55     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x0E] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x06];
+56     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x22] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x06];
+57     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x26] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x06];
+58     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x2E] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x06];
+59     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x0F] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x07];
+60     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x27] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x07];
+61     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x2F] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x07];
+62     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x18] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x11];
+63     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x19] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x11];
+64     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x39] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x11];
+65     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x30] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x14];
+66     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x34] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x14];
+67     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x32] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x16];
+68     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x3A] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x1A];
+69     
+70     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x11] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x10];
+71     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x14] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x10];
+72     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x15] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x10];
+73     
+74     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x39] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x38];
+75     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x3C] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x38];
+76     \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x3D] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x38];
+77     \textcolor{keywordflow}{for}(Index = 0; Index < 0x100; Index++)\{
+78         \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}.push\_back(\hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"dirt-"}) + std::to\_string
+      (Index)));
+79     \}
+80     \textcolor{comment}{// Three in a row on side}
+81     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x03] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x02];
+82     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x05] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x02];
+83     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x06] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x02];
+84     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x07] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x02];
+85     
+86     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x09] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x08];
+87     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x21] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x08];
+88     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x28] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x08];
+89     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x29] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x08];
+90     
+91     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x14] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x10];
+92     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x84] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x10];
+93     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x90] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x10];
+94     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x94] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x10];
+95     
+96     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x60] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x40];
+97     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xA0] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x40];
+98     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xC0] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x40];
+99     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE0] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x40];
+100     
+101     \textcolor{comment}{// Corner three}
+102     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0A] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+103     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0F] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+104     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x25] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+105     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x27] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+106     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x2D] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+107     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x2B] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+108     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x2F] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x0B];
+109     
+110     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x12] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+111     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x17] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+112     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x85] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+113     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x87] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+114     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x95] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+115     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x96] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+116     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x97] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x16];
+117     
+118     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x48] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+119     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x69] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+120     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xA1] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+121     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xA9] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+122     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE1] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+123     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE8] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+124     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE9] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x68];
+125     
+126     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x50] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+127     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xA4] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+128     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xB4] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+129     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD4] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+130     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE4] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+131     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xF0] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+132     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xF4] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xD0];
+133     
+134     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0x5A, Hamming);
+135     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+136         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[Value | 0x24])\{
+137             \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[Value | 0x24] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x7E];
+138         \}
+139         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[Value | 0x81])\{
+140             \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[Value | 0x81] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xDB];
+141         \}
+142     \}   
+143 
+144     
+145     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x1D] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+146     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x3D] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+147     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x9D] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+148     
+149     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x63] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+150     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0x67] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+151     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE3] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+152     
+153     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xB8] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+154     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xB9] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+155     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xBC] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+156     
+157     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xC6] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+158     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xC7] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+159     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE6] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+160     
+161     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xBD] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];    
+162     \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xE7] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+163     \textcolor{comment}{/*}
+164 \textcolor{comment}{}
+165 \textcolor{comment}{    DDirtIndices[0x0F] = DDirtIndices[0x0B];}
+166 \textcolor{comment}{    DDirtIndices[0x2B] = DDirtIndices[0x0B];}
+167 \textcolor{comment}{    DDirtIndices[0x2F] = DDirtIndices[0x0B];}
+168 \textcolor{comment}{    DDirtIndices[0x17] = DDirtIndices[0x16];}
+169 \textcolor{comment}{    DDirtIndices[0x87] = DDirtIndices[0x16];}
+170 \textcolor{comment}{    DDirtIndices[0x96] = DDirtIndices[0x16];}
+171 \textcolor{comment}{    DDirtIndices[0x97] = DDirtIndices[0x16];}
+172 \textcolor{comment}{    DDirtIndices[0x69] = DDirtIndices[0x68];}
+173 \textcolor{comment}{    DDirtIndices[0xC8] = DDirtIndices[0x68];}
+174 \textcolor{comment}{    DDirtIndices[0xE8] = DDirtIndices[0x68];}
+175 \textcolor{comment}{    DDirtIndices[0xE9] = DDirtIndices[0x68];}
+176 \textcolor{comment}{    DDirtIndices[0xD4] = DDirtIndices[0xD0];}
+177 \textcolor{comment}{    DDirtIndices[0xF0] = DDirtIndices[0xD0];}
+178 \textcolor{comment}{    DDirtIndices[0xF4] = DDirtIndices[0xD0];}
+179 \textcolor{comment}{    }
+180 \textcolor{comment}{    DDirtIndices[0x63] = DDirtIndices[0xFF];}
+181 \textcolor{comment}{    DDirtIndices[0xC6] = DDirtIndices[0xFF];}
+182 \textcolor{comment}{    DDirtIndices[0xC7] = DDirtIndices[0xFF];}
+183 \textcolor{comment}{    DDirtIndices[0xE7] = DDirtIndices[0xFF];}
+184 \textcolor{comment}{    */}
+185     \textcolor{keywordflow}{for}(Index = 0; Index < 0x100; Index++)\{
+186         \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}.push\_back(\hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"water-"}) + 
+      std::to\_string(Index)));
+187     \}
+188     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF];
+189     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x01] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+190     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x02] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+191     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x04] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+192     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x08] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+193     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x10] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+194     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x20] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+195     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x40] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+196     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x80] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00];
+197     
+198     
+199     \textcolor{comment}{// Three ground in corner}
+200     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x0F] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x0B];
+201     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x2B] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x0B];
+202     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x2F] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x0B];
+203     
+204     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x17] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x16];
+205     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x96] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x16];
+206     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x97] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x16];
+207     
+208     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x69] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x68];
+209     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xE8] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x68];
+210     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xE9] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x68];
+211     
+212     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD4] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD0];
+213     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF0] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD0];
+214     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF4] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD0];
+215     
+216     \textcolor{comment}{// Three ground straight}
+217     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x3F] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x1F];
+218     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x9F] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x1F];
+219     
+220     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x6F] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x6B];
+221     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xEB] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x6B];
+222     
+223     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD7] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD6];
+224     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF6] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xD6];
+225     
+226     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF9] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF8];
+227     \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xFC] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0xF8];
+228     
+229     Index = 0;
+230     \textcolor{keywordflow}{for}(Index = 0; Index < 0x100; Index++)\{
+231         \textcolor{keywordtype}{int} Value = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"rock-"}) + std::to\_string(Index));
+232         \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}.push\_back(Value);
+233     \}
+234     
+235     \textcolor{comment}{// Three rocks in corner}
+236     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0x25, Hamming);
+237     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+238         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x0A | Value])\{
+239             \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x0A | Value] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x0B];
+240         \}
+241     \} 
+242     
+243     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0x85, Hamming);
+244     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+245         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x12 | Value])\{
+246             \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x12 | Value] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x16];
+247         \}
+248     \}
+249     
+250     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0xA1, Hamming);
+251     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+252         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x48 | Value])\{
+253             \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x48 | Value] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x68];
+254         \}
+255     \}
+256     
+257     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0xA4, Hamming);
+258     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+259         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x50 | Value])\{
+260             \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x50 | Value] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xD0];
+261         \}
+262     \} 
+263     \textcolor{comment}{// Three rocks straight}
+264     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1B] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1F];
+265     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1E] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1F];
+266     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x3F] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1F];
+267     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x9F] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x1F];
+268     
+269     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x6F] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x6B];
+270     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xEB] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x6B];
+271     
+272     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xD7] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xD6];
+273     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF6] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xD6];
+274     
+275     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x78] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF8];
+276     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xD8] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF8];
+277     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF9] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF8];
+278     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xFC] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0xF8];
+279     
+280     \textcolor{comment}{// Ends}
+281     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x09] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x08];
+282     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x28] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x08];
+283     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x29] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x08];
+284     
+285     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x14] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x10];
+286     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x90] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x10];
+287     \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x94] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x10];
+288 
+289     \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(0xA5, Hamming);
+290     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Value : Hamming)\{
+291         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[Value])\{
+292             \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[Value] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x02];
+293         \}
+294     \} 
+295     
+296     Index = 0;
+297     \textcolor{keywordflow}{for}(Index = 0; Index < 0x10; Index++)\{
+298         \textcolor{keywordtype}{int} Value = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"wall-"}) + std::to\_string(Index));
+299         \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}.push\_back(Value);
+300     \}
+301     Index = 0;
+302     \textcolor{keywordflow}{for}(Index = 0; Index < 0x10; Index++)\{
+303         \textcolor{keywordtype}{int} Value = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->FindTile(std::string(\textcolor{stringliteral}{"wall-damaged-"}) + std::to\_string(Index));
+304         \hyperlink{classCMapRenderer_a032989788e978e11147ab8603d875771}{DWallDamagedIndices}.push\_back(Value);
+305     \}
+306 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMapRenderer_a9aca3f780976a94fc6e8873e3cf8e199_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCMapRenderer_a08177d52d070532e46538ec65c88277d}{}\label{classCMapRenderer_a08177d52d070532e46538ec65c88277d} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Detailed\+Map\+Height@{Detailed\+Map\+Height}}
+\index{Detailed\+Map\+Height@{Detailed\+Map\+Height}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Detailed\+Map\+Height()}{DetailedMapHeight()}}
+{\footnotesize\ttfamily int C\+Map\+Renderer\+::\+Detailed\+Map\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 415 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+415                                          \{
+416     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Height() * \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileHeight();
+417 \}
+\end{DoxyCode}
+\hypertarget{classCMapRenderer_a12af1a120fdfa3e80f451ba22fe21a62}{}\label{classCMapRenderer_a12af1a120fdfa3e80f451ba22fe21a62} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Detailed\+Map\+Width@{Detailed\+Map\+Width}}
+\index{Detailed\+Map\+Width@{Detailed\+Map\+Width}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Detailed\+Map\+Width()}{DetailedMapWidth()}}
+{\footnotesize\ttfamily int C\+Map\+Renderer\+::\+Detailed\+Map\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 411 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+411                                         \{
+412     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Width() * \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileWidth();
+413 \}
+\end{DoxyCode}
+\hypertarget{classCMapRenderer_a26786befd5d6d0b09210736916d1b912}{}\label{classCMapRenderer_a26786befd5d6d0b09210736916d1b912} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Draw\+Map@{Draw\+Map}}
+\index{Draw\+Map@{Draw\+Map}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Map()}{DrawMap()}}
+{\footnotesize\ttfamily void C\+Map\+Renderer\+::\+Draw\+Map (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+Drawable $\ast$}]{typedrawable,  }\item[{const \hyperlink{structSRectangle}{S\+Rectangle} \&}]{rect,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+419                                                                                                            
+        \{
+420     GdkGC *TempGC = gdk\_gc\_new(drawable);
+421     GdkGC *TempTypeGC = gdk\_gc\_new(typedrawable);
+422     \textcolor{keywordtype}{int} TileWidth, TileHeight;
+423     \textcolor{keyword}{static} std::vector< bool > UnknownTree, UnknownWater, UnknownDirt, UnknownRock;
+424     \textcolor{keyword}{static} std::unordered\_map< int, bool > UnknownUnknownTree, UnknownUnknownWater, UnknownUnknownDirt, 
+      UnknownUnknownRock;
+425     
+426     
+427     \textcolor{keywordflow}{if}(UnknownTree.empty())\{
+428         UnknownTree.resize(0x100);   
+429         UnknownWater.resize(0x100);   
+430         UnknownDirt.resize(0x100);  
+431         UnknownRock.resize(0x100);  
+432     \}
+433     
+434     TileWidth = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileWidth();
+435     TileHeight = \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileHeight();
+436     \textcolor{keywordflow}{if}(0 == level)\{
+437         GdkColor NoneColor;
+438         
+439         NoneColor.pixel = 0;
+440         NoneColor.red = 0;
+441         NoneColor.green = 0;
+442         NoneColor.blue = 0;
+443         gdk\_gc\_set\_rgb\_fg\_color(TempTypeGC, &NoneColor);
+444         gdk\_gc\_set\_rgb\_bg\_color(TempTypeGC, &NoneColor);
+445         gdk\_draw\_rectangle(typedrawable, TempTypeGC, TRUE, 0, 0, rect.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth}, rect.
+      \hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight});
+446         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YIndex = rect.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} / TileHeight, YPos = -(rect.
+      \hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} % TileHeight); YPos < rect.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight}; YIndex++, YPos += TileHeight)\{
+447             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XIndex = rect.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} / TileWidth, XPos = -(rect.
+      \hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} % TileWidth); XPos < rect.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth}; XIndex++, XPos += TileWidth)\{
+448                 \hyperlink{classCPixelType}{CPixelType} PixelType(\hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex, YIndex)); 
+449                 \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} ThisTileType = \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex, 
+      YIndex);
+450                 \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} == ThisTileType)\{\textcolor{comment}{//||(CTerrainMap::ttTree ==
+       DMap->TileType(XIndex, YIndex+1)))\{}
+451                     \textcolor{keywordtype}{int} TreeIndex = 0, TreeMask = 0x1, UnknownMask = 0, DisplayIndex = -1;
+452                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = 0; YOff < 2; YOff++)\{
+453                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+454                             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} Tile = 
+      \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+455                             \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} == Tile)\{
+456                                 TreeIndex |= TreeMask;   
+457                             \}
+458                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == Tile)\{
+459                                 UnknownMask |= TreeMask;
+460                             \}
+461                             TreeMask <<= 1;
+462                         \}
+463                     \}
+464                     \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[TreeIndex])\{
+465                         \textcolor{keywordflow}{if}(!UnknownTree[TreeIndex] && !UnknownMask)\{
+466                             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown tree 0x%02X @ (%d, %d)\(\backslash\)n"},TreeIndex, XIndex, 
+      YIndex);   
+467                             UnknownTree[TreeIndex] = \textcolor{keyword}{true};
+468                         \}
+469                         DisplayIndex = \hyperlink{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{FindUnknown}(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree}, TreeIndex, UnknownMask);
+470                         \textcolor{keywordflow}{if}(-1 == DisplayIndex)\{
+471                             \textcolor{keywordflow}{if}(UnknownUnknownTree.end() == UnknownUnknownTree.find((TreeIndex<<8) | 
+      UnknownMask))\{
+472                                 UnknownUnknownTree[(TreeIndex<<8) | UnknownMask] = \textcolor{keyword}{true};
+473                                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown tree 0x%02X/%02X @ (%d, %d)\(\backslash\)n"},TreeIndex, 
+      UnknownMask, XIndex, YIndex);   
+474                             \}
+475                         \}
+476                     \}
+477                     \textcolor{keywordflow}{else}\{
+478                         DisplayIndex = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[TreeIndex];  
+479                     \}
+480                     \textcolor{keywordflow}{if}(-1 != DisplayIndex)\{
+481                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, DisplayIndex);
+482                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, DisplayIndex, 
+      PixelType.ToPixelColor());
+483                     \}
+484                 \}
+485                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater} == ThisTileType)\{
+486                     \textcolor{keywordtype}{int} WaterIndex = 0, WaterMask = 0x1, UnknownMask = 0, DisplayIndex = -1;
+487                     
+488                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = -1; YOff < 2; YOff++)\{
+489                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+490                             \textcolor{keywordflow}{if}(YOff || XOff)\{
+491                                 \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} Tile = 
+      \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+492                                 \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater} == Tile)\{
+493                                     WaterIndex |= WaterMask;   
+494                                 \}
+495                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == Tile)\{
+496                                     UnknownMask |= WaterMask;
+497                                 \}
+498                                 WaterMask <<= 1;
+499                             \}
+500                         \}
+501                     \}
+502                     \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[WaterIndex])\{
+503                         \textcolor{keywordflow}{if}(!UnknownWater[WaterIndex] && !UnknownMask)\{
+504                             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown water 0x%02X @ (%d, %d)\(\backslash\)n"},WaterIndex, XIndex, 
+      YIndex);   
+505                             UnknownWater[WaterIndex] = \textcolor{keyword}{true};
+506                         \}
+507                         DisplayIndex = \hyperlink{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{FindUnknown}(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater}, WaterIndex, UnknownMask);
+508                         \textcolor{keywordflow}{if}(-1 == DisplayIndex)\{
+509                             \textcolor{keywordflow}{if}(UnknownUnknownWater.end() == UnknownUnknownWater.find((WaterIndex<<8) | 
+      UnknownMask))\{
+510                                 UnknownUnknownWater[(WaterIndex<<8) | UnknownMask] = \textcolor{keyword}{true};
+511                                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown water 0x%02X/%02X @ (%d, %d)\(\backslash\)n"},WaterIndex, 
+      UnknownMask, XIndex, YIndex);   
+512                             \}
+513                         \}
+514                     \}
+515                     \textcolor{keywordflow}{else}\{
+516                         DisplayIndex = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[WaterIndex];  
+517                     \}
+518                     \textcolor{keywordflow}{if}(-1 != DisplayIndex)\{
+519                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, DisplayIndex);
+520                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, DisplayIndex, 
+      PixelType.ToPixelColor());
+521                     \}
+522                 \}
+523                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{CTerrainMap::ttGrass} == ThisTileType)\{
+524                     \textcolor{keywordtype}{int} OtherIndex = 0, OtherMask = 0x1, UnknownMask = 0, DisplayIndex = -1;
+525                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = -1; YOff < 2; YOff++)\{
+526                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+527                             \textcolor{keywordflow}{if}(YOff || XOff)\{
+528                                 \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} Tile = 
+      \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+529                                 \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater} == Tile)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt} == Tile)||(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock} == Tile))\{
+530                                     OtherIndex |= OtherMask;   
+531                                 \}
+532                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == Tile)\{
+533                                     UnknownMask |= OtherMask;
+534                                 \}
+535                                 OtherMask <<= 1;
+536                             \}
+537                         \}
+538                     \}
+539                     \textcolor{keywordflow}{if}(OtherIndex)\{
+540                         \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[OtherIndex])\{
+541                             \textcolor{keywordflow}{if}(!UnknownDirt[OtherIndex] && !UnknownMask)\{
+542                                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown dirt 0x%02X @ (%d, %d)\(\backslash\)n"},OtherIndex, XIndex,
+       YIndex);   
+543                                 UnknownDirt[OtherIndex] = \textcolor{keyword}{true};
+544                             \}
+545                             DisplayIndex = \hyperlink{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{FindUnknown}(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt}, OtherIndex, UnknownMask);
+546                             \textcolor{keywordflow}{if}(-1 == DisplayIndex)\{
+547                                 \textcolor{keywordflow}{if}(UnknownUnknownDirt.end() == UnknownUnknownDirt.find((OtherIndex<<8) | 
+      UnknownMask))\{
+548                                     UnknownUnknownDirt[(OtherIndex<<8) | UnknownMask] = \textcolor{keyword}{true};
+549                                     \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown dirt 0x%02X/%02X @ (%d, %d)\(\backslash\)n"},OtherIndex
+      , UnknownMask, XIndex, YIndex);   
+550                                 \}
+551                             \}
+552                         \}
+553                         \textcolor{keywordflow}{else}\{
+554                             DisplayIndex = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[OtherIndex];
+555                         \}
+556                         
+557                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, DisplayIndex);   
+558                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, DisplayIndex, 
+      PixelType.ToPixelColor());
+559                     \}
+560                     \textcolor{keywordflow}{else}\{
+561                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{DGrassIndices}[0x00]);
+562                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, 
+      \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{DGrassIndices}[0x00], PixelType.ToPixelColor());
+563                     \}
+564                 \}
+565                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock} == ThisTileType)\{
+566                     \textcolor{keywordtype}{int} RockIndex = 0, RockMask = 0x1, UnknownMask = 0, DisplayIndex = -1;
+567                     
+568                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = -1; YOff < 2; YOff++)\{
+569                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+570                             \textcolor{keywordflow}{if}(YOff || XOff)\{
+571                                 \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} Tile = 
+      \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+572                                 \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock} == Tile)\{
+573                                     RockIndex |= RockMask;   
+574                                 \}
+575                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == Tile)\{
+576                                     UnknownMask |= RockMask;
+577                                 \}
+578                                 RockMask <<= 1;
+579                             \}
+580                         \}
+581                     \}
+582                     \textcolor{keywordflow}{if}(-1 == \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[RockIndex])\{
+583                         \textcolor{keywordflow}{if}(!UnknownRock[RockIndex] && !UnknownMask)\{
+584                             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown rock 0x%02X @ (%d, %d)\(\backslash\)n"},RockIndex, XIndex, 
+      YIndex);   
+585                             UnknownRock[RockIndex] = \textcolor{keyword}{true};
+586                         \}
+587                         DisplayIndex = \hyperlink{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{FindUnknown}(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock}, RockIndex, UnknownMask);
+588                         \textcolor{keywordflow}{if}(-1 == DisplayIndex)\{
+589                             \textcolor{keywordflow}{if}(UnknownUnknownRock.end() == UnknownUnknownRock.find((RockIndex<<8) | 
+      UnknownMask))\{
+590                                 UnknownUnknownRock[(RockIndex<<8) | UnknownMask] = \textcolor{keyword}{true};
+591                                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown rock 0x%02X/%02X @ (%d, %d)\(\backslash\)n"},RockIndex, 
+      UnknownMask, XIndex, YIndex);   
+592                             \}
+593                         \}
+594                     \}
+595                     \textcolor{keywordflow}{else}\{
+596                         DisplayIndex = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[RockIndex];  
+597                     \}
+598                     \textcolor{keywordflow}{if}(-1 != DisplayIndex)\{
+599                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, DisplayIndex);
+600                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, DisplayIndex, 
+      PixelType.ToPixelColor());
+601                     \}
+602                 \}
+603                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{CTerrainMap::ttWall} == ThisTileType)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{CTerrainMap::ttWallDamaged} == ThisTileType))\{
+604                     \textcolor{keywordtype}{int} WallIndex = 0, WallMask = 0x1, DisplayIndex = -1;
+605                     \textcolor{keywordtype}{int} XOffsets[] = \{0, 1, 0, -1\};
+606                     \textcolor{keywordtype}{int} YOffsets[] = \{-1, 0, 1, 0\};
+607                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \textcolor{keyword}{sizeof}(XOffsets) / \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}); Index++)\{
+608                         \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} Tile = \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + 
+      XOffsets[Index], YIndex + YOffsets[Index]);
+609                         \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{CTerrainMap::ttWall} == Tile)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{CTerrainMap::ttWallDamaged} == Tile)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{CTerrainMap::ttRubble} == Tile))\{
+610                             WallIndex |= WallMask;
+611                         \}
+612                         WallMask <<= 1;
+613                     \}
+614                     DisplayIndex = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{CTerrainMap::ttWall} == ThisTileType ? 
+      \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[WallIndex] : \hyperlink{classCMapRenderer_a032989788e978e11147ab8603d875771}{DWallDamagedIndices}[WallIndex];
+615                     \textcolor{keywordflow}{if}(-1 != DisplayIndex)\{
+616                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, DisplayIndex);
+617                         \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, DisplayIndex, 
+      PixelType.ToPixelColor());
+618                     \}
+619                 \}
+620                 \textcolor{keywordflow}{else}\{
+621                     
+622                     \textcolor{keywordflow}{switch}(\hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex, YIndex))\{
+623                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{CTerrainMap::ttGrass}:          
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{DGrassIndices}[0x00]);
+624                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{DGrassIndices}[0x00], PixelType.ToPixelColor());
+625                                                             \textcolor{keywordflow}{break};
+626                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt}:           
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF]);
+627                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[0xFF], PixelType.ToPixelColor());
+628                                                             \textcolor{keywordflow}{break};
+629                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock}:           
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x00]);
+630                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[0x00], PixelType.ToPixelColor());
+631                                                             \textcolor{keywordflow}{break};
+632                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree}:           
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x00]);
+633                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x00], PixelType.ToPixelColor());
+634                                                             \textcolor{keywordflow}{break};
+635                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{CTerrainMap::ttStump}:          
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x00]);
+636                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[0x00], PixelType.ToPixelColor());
+637                                                             \textcolor{keywordflow}{break};
+638                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater}:          
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00]);
+639                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[0x00], PixelType.ToPixelColor());
+640                                                             \textcolor{keywordflow}{break};
+641                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{CTerrainMap::ttWall}:           
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00]);
+642                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00], PixelType.ToPixelColor());
+643                                                             \textcolor{keywordflow}{break};
+644                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{CTerrainMap::ttWallDamaged}:    
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00]);
+645                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00], PixelType.ToPixelColor());
+646                                                             \textcolor{keywordflow}{break};
+647                         \textcolor{keywordflow}{case} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{CTerrainMap::ttRubble}:         
+      \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00]);
+648                                                             \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, 
+      TempTypeGC, XPos, YPos, \hyperlink{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{DWallIndices}[0x00], PixelType.ToPixelColor());
+649                                                             \textcolor{keywordflow}{break};
+650                         \textcolor{keywordflow}{default}:                            \textcolor{keywordflow}{break};
+651                     \}
+652                 \}
+653             \}
+654         \}
+655     \}
+656     \textcolor{keywordflow}{else}\{
+657         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YIndex = rect.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} / TileHeight, YPos = -(rect.
+      \hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} % TileHeight); YPos < rect.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight}; YIndex++, YPos += TileHeight)\{
+658             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XIndex = rect.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} / TileWidth, XPos = -(rect.
+      \hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} % TileWidth); XPos < rect.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth}; XIndex++, XPos += TileWidth)\{
+659                 \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} == \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex, YIndex+1))&&(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} != \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex, YIndex)))\{
+660                     \hyperlink{classCPixelType}{CPixelType} PixelType(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree}); 
+661                     \textcolor{keywordtype}{int} TreeIndex = 0, TreeMask = 0x1;
+662                     
+663                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = 0; YOff < 2; YOff++)\{
+664                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+665                             \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} == \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XIndex + XOff, 
+      YIndex + YOff))\{
+666                                 TreeIndex |= TreeMask;   
+667                             \}
+668                             TreeMask <<= 1;
+669                         \}
+670                     \}
+671                     \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[TreeIndex]);
+672                     \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawClipped(typedrawable, TempTypeGC, XPos, YPos, 
+      \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[TreeIndex], PixelType.ToPixelColor());
+673                 \}
+674             \}
+675         \}
+676     \}
+677     g\_object\_unref(TempTypeGC);
+678     g\_object\_unref(TempGC);
+679 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMapRenderer_a26786befd5d6d0b09210736916d1b912_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCMapRenderer_ae5c68b6a4892eb8b9e7a4d8afb4e344e}{}\label{classCMapRenderer_ae5c68b6a4892eb8b9e7a4d8afb4e344e} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Draw\+Mini\+Map@{Draw\+Mini\+Map}}
+\index{Draw\+Mini\+Map@{Draw\+Mini\+Map}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Mini\+Map()}{DrawMiniMap()}}
+{\footnotesize\ttfamily void C\+Map\+Renderer\+::\+Draw\+Mini\+Map (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 681 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+681                                                    \{
+682     GdkGC *TempGC = gdk\_gc\_new(drawable);
+683     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YPos = 0; YPos < \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Height(); YPos++)\{
+684         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XPos = 0; XPos < \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Width(); XPos++)\{
+685             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} TileType = \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->TileType(XPos, YPos);
+686             \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} != TileType)\{
+687                 \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->DrawPixel(drawable, TempGC, XPos, YPos, 1, 
+      \hyperlink{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{DPixelIndices}[TileType]);
+688             \}
+689         \}
+690     \}
+691     g\_object\_unref(TempGC);
+692 \}
+\end{DoxyCode}
+\hypertarget{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870}{}\label{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Find\+Unknown@{Find\+Unknown}}
+\index{Find\+Unknown@{Find\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Find\+Unknown()}{FindUnknown()}}
+{\footnotesize\ttfamily int C\+Map\+Renderer\+::\+Find\+Unknown (\begin{DoxyParamCaption}\item[{\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{C\+Terrain\+Map\+::\+E\+Tile\+Type}}]{type,  }\item[{int}]{known,  }\item[{int}]{unknown }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 342 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+342                                                                               \{
+343     \textcolor{keywordtype}{int} ReturnValue = -1;
+344     \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree} == type)\{
+345         \textcolor{keyword}{auto} Iterator = \hyperlink{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{DTreeUnknown}.find((known<<8) | unknown);
+346         \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{DTreeUnknown}.end())\{
+347             \textcolor{keywordflow}{return} Iterator->second;
+348         \}
+349         std::vector< int > HammingSet;
+350         \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(unknown, HammingSet);
+351         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Value : HammingSet)\{
+352             \textcolor{keywordflow}{if}(-1 != \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[known | Value])\{
+353                 \hyperlink{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{DTreeUnknown}[(known<<8) | unknown] = \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[known | Value];
+354                 \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{DTreeIndices}[known | Value];
+355             \}
+356         \}
+357     \}
+358     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{CTerrainMap::ttWater} == type)\{
+359         \textcolor{keyword}{auto} Iterator = \hyperlink{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{DWaterUnknown}.find((known<<8) | unknown);
+360         \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{DWaterUnknown}.end())\{
+361             \textcolor{keywordflow}{return} Iterator->second;
+362         \}
+363         std::vector< int > HammingSet;
+364         \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(unknown, HammingSet);
+365         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Value : HammingSet)\{
+366             \textcolor{keywordflow}{if}(-1 != \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[known | Value])\{
+367                 \hyperlink{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{DWaterUnknown}[(known<<8) | unknown] = \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[known | Value
+      ];
+368                 \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{DWaterIndices}[known | Value];
+369             \}
+370         \}
+371     \}
+372     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt} == type)\{
+373         \textcolor{keyword}{auto} Iterator = \hyperlink{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{DDirtUnknown}.find((known<<8) | unknown);
+374         \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{DDirtUnknown}.end())\{
+375             \textcolor{keywordflow}{return} Iterator->second;
+376         \}
+377         std::vector< int > HammingSet;
+378         \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(unknown, HammingSet);
+379         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Value : HammingSet)\{
+380             \textcolor{keywordflow}{if}(-1 != \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[known | Value])\{
+381                 \hyperlink{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{DDirtUnknown}[(known<<8) | unknown] = \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[known | Value];
+382                 \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{DDirtIndices}[known | Value];
+383             \}
+384         \}
+385     \}
+386     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{CTerrainMap::ttRock} == type)\{
+387         \textcolor{keyword}{auto} Iterator = \hyperlink{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{DRockUnknown}.find((known<<8) | unknown);
+388         \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{DRockUnknown}.end())\{
+389             \textcolor{keywordflow}{return} Iterator->second;
+390         \}
+391         std::vector< int > HammingSet;
+392         \hyperlink{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{MakeHammingSet}(unknown, HammingSet);
+393         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Value : HammingSet)\{
+394             \textcolor{keywordflow}{if}(-1 != \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[known | Value])\{
+395                 \hyperlink{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{DRockUnknown}[(known<<8) | unknown] = \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[known | Value];
+396                 \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{DRockIndices}[known | Value];
+397             \}
+398         \}
+399     \}
+400     \textcolor{keywordflow}{return} ReturnValue;
+401 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a}{}\label{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Make\+Hamming\+Set@{Make\+Hamming\+Set}}
+\index{Make\+Hamming\+Set@{Make\+Hamming\+Set}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Make\+Hamming\+Set()}{MakeHammingSet()}}
+{\footnotesize\ttfamily void C\+Map\+Renderer\+::\+Make\+Hamming\+Set (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{std\+::vector$<$ int $>$ \&}]{hammingset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 308 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+308                                                                         \{
+309     \textcolor{keywordtype}{int} BitCount, Anchor, LastEnd;
+310     hammingset.clear();
+311     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < 8; Index++)\{
+312         \textcolor{keywordtype}{int} Value = 1<<Index;
+313         \textcolor{keywordflow}{if}(value & Value)\{
+314             hammingset.push\_back(Value);
+315         \}
+316     \}
+317     LastEnd = BitCount = hammingset.size();
+318     Anchor = 0;
+319     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} TotalBits = 1; TotalBits < BitCount; TotalBits++)\{
+320         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} LastIndex = Anchor; LastIndex < LastEnd; LastIndex++)\{
+321             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} BitIndex = 0; BitIndex < BitCount; BitIndex++)\{
+322                 \textcolor{keywordtype}{int} NewValue = hammingset[LastIndex] | hammingset[BitIndex];
+323                 \textcolor{keywordflow}{if}(NewValue != hammingset[LastIndex])\{
+324                     \textcolor{keywordtype}{bool} Found = \textcolor{keyword}{false};
+325                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = LastEnd; Index < hammingset.size(); Index++)\{
+326                         \textcolor{keywordflow}{if}(NewValue == hammingset[Index])\{
+327                             Found = \textcolor{keyword}{true};
+328                             \textcolor{keywordflow}{break};
+329                         \}
+330                     \}
+331                     \textcolor{keywordflow}{if}(!Found)\{
+332                         hammingset.push\_back(NewValue);   
+333                     \}
+334                 \}
+335             \}
+336         \}
+337         Anchor = LastEnd + 1;
+338         LastEnd = hammingset.size();
+339     \}
+340 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCMapRenderer_a0b06ba89b9a7ad75fa945a3c22dc019a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCMapRenderer_a68b0c78e7d7d532c14eaf483f4ea3f24}{}\label{classCMapRenderer_a68b0c78e7d7d532c14eaf483f4ea3f24} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Map\+Height@{Map\+Height}}
+\index{Map\+Height@{Map\+Height}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Map\+Height()}{MapHeight()}}
+{\footnotesize\ttfamily int C\+Map\+Renderer\+::\+Map\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 407 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+407                                  \{
+408     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Height();
+409 \}
+\end{DoxyCode}
+\hypertarget{classCMapRenderer_a4b63ead9be943cbe40b936fa224dc826}{}\label{classCMapRenderer_a4b63ead9be943cbe40b936fa224dc826} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!Map\+Width@{Map\+Width}}
+\index{Map\+Width@{Map\+Width}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{Map\+Width()}{MapWidth()}}
+{\footnotesize\ttfamily int C\+Map\+Renderer\+::\+Map\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 403 of file Map\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+403                                 \{
+404     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Width();
+405 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf}{}\label{classCMapRenderer_a5916c26aa5bedf8367a8f3f7efb457bf} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Dirt\+Indices@{D\+Dirt\+Indices}}
+\index{D\+Dirt\+Indices@{D\+Dirt\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Dirt\+Indices}{DDirtIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Dirt\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{}\label{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Dirt\+Unknown@{D\+Dirt\+Unknown}}
+\index{D\+Dirt\+Unknown@{D\+Dirt\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Dirt\+Unknown}{DDirtUnknown}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, int $>$ C\+Map\+Renderer\+::\+D\+Dirt\+Unknown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{}\label{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Grass\+Indices@{D\+Grass\+Indices}}
+\index{D\+Grass\+Indices@{D\+Grass\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Grass\+Indices}{DGrassIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Grass\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{}\label{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Map@{D\+Map}}
+\index{D\+Map@{D\+Map}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Map}{DMap}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCTerrainMap}{C\+Terrain\+Map} $>$ C\+Map\+Renderer\+::\+D\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{}\label{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Pixel\+Indices@{D\+Pixel\+Indices}}
+\index{D\+Pixel\+Indices@{D\+Pixel\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Pixel\+Indices}{DPixelIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Pixel\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{}\label{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Rock\+Indices@{D\+Rock\+Indices}}
+\index{D\+Rock\+Indices@{D\+Rock\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Rock\+Indices}{DRockIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Rock\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{}\label{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Rock\+Unknown@{D\+Rock\+Unknown}}
+\index{D\+Rock\+Unknown@{D\+Rock\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Rock\+Unknown}{DRockUnknown}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, int $>$ C\+Map\+Renderer\+::\+D\+Rock\+Unknown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{}\label{classCMapRenderer_ace0648cba050b5e02431096edd15b836} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tileset@{D\+Tileset}}
+\index{D\+Tileset@{D\+Tileset}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Tileset}{DTileset}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ C\+Map\+Renderer\+::\+D\+Tileset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{}\label{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tree\+Indices@{D\+Tree\+Indices}}
+\index{D\+Tree\+Indices@{D\+Tree\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Tree\+Indices}{DTreeIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Tree\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{}\label{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tree\+Unknown@{D\+Tree\+Unknown}}
+\index{D\+Tree\+Unknown@{D\+Tree\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Tree\+Unknown}{DTreeUnknown}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, int $>$ C\+Map\+Renderer\+::\+D\+Tree\+Unknown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a032989788e978e11147ab8603d875771}{}\label{classCMapRenderer_a032989788e978e11147ab8603d875771} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Wall\+Damaged\+Indices@{D\+Wall\+Damaged\+Indices}}
+\index{D\+Wall\+Damaged\+Indices@{D\+Wall\+Damaged\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Wall\+Damaged\+Indices}{DWallDamagedIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Wall\+Damaged\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{}\label{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Wall\+Indices@{D\+Wall\+Indices}}
+\index{D\+Wall\+Indices@{D\+Wall\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Wall\+Indices}{DWallIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Wall\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{}\label{classCMapRenderer_af82295ac61f841481490da6f2b433db2} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Water\+Indices@{D\+Water\+Indices}}
+\index{D\+Water\+Indices@{D\+Water\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Water\+Indices}{DWaterIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Map\+Renderer\+::\+D\+Water\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Map\+Renderer.\+h.
+
+\hypertarget{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{}\label{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194} 
+\index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Water\+Unknown@{D\+Water\+Unknown}}
+\index{D\+Water\+Unknown@{D\+Water\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Water\+Unknown}{DWaterUnknown}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, int $>$ C\+Map\+Renderer\+::\+D\+Water\+Unknown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Map\+Renderer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{MapRenderer_8h}{Map\+Renderer.\+h}\item 
+src/\hyperlink{MapRenderer_8cpp}{Map\+Renderer.\+cpp}\end{DoxyCompactItemize}

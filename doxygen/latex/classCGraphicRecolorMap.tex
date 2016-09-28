@@ -1,0 +1,253 @@
+\hypertarget{classCGraphicRecolorMap}{}\section{C\+Graphic\+Recolor\+Map Class Reference}
+\label{classCGraphicRecolorMap}\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+
+
+{\ttfamily \#include $<$Graphic\+Recolor\+Map.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCGraphicRecolorMap_1_1SRGBColor}{S\+R\+G\+B\+Color}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCGraphicRecolorMap_a448553601e8405dc915e4e6b4f56b8c7}{C\+Graphic\+Recolor\+Map} ()
+\item 
+\hyperlink{classCGraphicRecolorMap_a74252a2b353bb46a757319c43a61ccfb}{$\sim$\+C\+Graphic\+Recolor\+Map} ()
+\item 
+int \hyperlink{classCGraphicRecolorMap_a326b3f7b5ba379e2ccc07ffeb1eb69ca}{Group\+Count} () const
+\item 
+int \hyperlink{classCGraphicRecolorMap_a62215bd2082304dc710d0f63af9c9906}{Color\+Count} () const
+\item 
+bool \hyperlink{classCGraphicRecolorMap_a71b26547c2e943036278611d048afdfb}{Load} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+bool \hyperlink{classCGraphicRecolorMap_a338087373145b89a29902b50276358d1}{Recolor} (int index, guchar \&red, guchar \&green, guchar \&blue)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structCGraphicRecolorMap_1_1SRGBColor}{C\+Graphic\+Recolor\+Map\+::\+S\+R\+G\+B\+Color} $\ast$ \hyperlink{classCGraphicRecolorMap_a0d6a510563b75b7dfe5f97db2cdeb2c2}{S\+R\+G\+B\+Color\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{structCGraphicRecolorMap_1_1SRGBColor}{S\+R\+G\+B\+Color} $>$ $>$ \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{D\+Colors}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file Graphic\+Recolor\+Map.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCGraphicRecolorMap_a0d6a510563b75b7dfe5f97db2cdeb2c2}{}\label{classCGraphicRecolorMap_a0d6a510563b75b7dfe5f97db2cdeb2c2} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!S\+R\+G\+B\+Color\+Ref@{S\+R\+G\+B\+Color\+Ref}}
+\index{S\+R\+G\+B\+Color\+Ref@{S\+R\+G\+B\+Color\+Ref}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{S\+R\+G\+B\+Color\+Ref}{SRGBColorRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structCGraphicRecolorMap_1_1SRGBColor}{C\+Graphic\+Recolor\+Map\+::\+S\+R\+G\+B\+Color} $\ast$ \hyperlink{classCGraphicRecolorMap_a0d6a510563b75b7dfe5f97db2cdeb2c2}{C\+Graphic\+Recolor\+Map\+::\+S\+R\+G\+B\+Color\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCGraphicRecolorMap_a448553601e8405dc915e4e6b4f56b8c7}{}\label{classCGraphicRecolorMap_a448553601e8405dc915e4e6b4f56b8c7} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{C\+Graphic\+Recolor\+Map()}{CGraphicRecolorMap()}}
+{\footnotesize\ttfamily C\+Graphic\+Recolor\+Map\+::\+C\+Graphic\+Recolor\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Graphic\+Recolor\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+20                                       \{
+21     
+22 \}
+\end{DoxyCode}
+\hypertarget{classCGraphicRecolorMap_a74252a2b353bb46a757319c43a61ccfb}{}\label{classCGraphicRecolorMap_a74252a2b353bb46a757319c43a61ccfb} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!````~C\+Graphic\+Recolor\+Map@{$\sim$\+C\+Graphic\+Recolor\+Map}}
+\index{````~C\+Graphic\+Recolor\+Map@{$\sim$\+C\+Graphic\+Recolor\+Map}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Graphic\+Recolor\+Map()}{~CGraphicRecolorMap()}}
+{\footnotesize\ttfamily C\+Graphic\+Recolor\+Map\+::$\sim$\+C\+Graphic\+Recolor\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Graphic\+Recolor\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+24                                        \{
+25     
+26 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCGraphicRecolorMap_a62215bd2082304dc710d0f63af9c9906}{}\label{classCGraphicRecolorMap_a62215bd2082304dc710d0f63af9c9906} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!Color\+Count@{Color\+Count}}
+\index{Color\+Count@{Color\+Count}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{Color\+Count()}{ColorCount()}}
+{\footnotesize\ttfamily int C\+Graphic\+Recolor\+Map\+::\+Color\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file Graphic\+Recolor\+Map.\+h.
+
+
+\begin{DoxyCode}
+41                               \{
+42             \textcolor{keywordflow}{if}(\hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}.size())\{
+43                 \textcolor{keywordflow}{return} \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[0].size();    
+44             \}
+45             \textcolor{keywordflow}{return} 0;
+46         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicRecolorMap_a62215bd2082304dc710d0f63af9c9906_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCGraphicRecolorMap_a326b3f7b5ba379e2ccc07ffeb1eb69ca}{}\label{classCGraphicRecolorMap_a326b3f7b5ba379e2ccc07ffeb1eb69ca} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!Group\+Count@{Group\+Count}}
+\index{Group\+Count@{Group\+Count}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{Group\+Count()}{GroupCount()}}
+{\footnotesize\ttfamily int C\+Graphic\+Recolor\+Map\+::\+Group\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file Graphic\+Recolor\+Map.\+h.
+
+
+\begin{DoxyCode}
+37                               \{
+38             \textcolor{keywordflow}{return} \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}.size();
+39         \};
+\end{DoxyCode}
+\hypertarget{classCGraphicRecolorMap_a71b26547c2e943036278611d048afdfb}{}\label{classCGraphicRecolorMap_a71b26547c2e943036278611d048afdfb} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!Load@{Load}}
+\index{Load@{Load}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily bool C\+Graphic\+Recolor\+Map\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Graphic\+Recolor\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+29                                                                 \{
+30     GdkPixbuf *ColorPixbuf;
+31     \textcolor{keywordtype}{bool} ReturnStatus = \textcolor{keyword}{false};
+32     \textcolor{keywordtype}{int} NumberChannels, RowStride;
+33     
+34     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} == source)\{
+35         \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+36     \}
+37 
+38     ColorPixbuf = \hyperlink{classCGraphicLoader_ac7778dec4fd0ea51674f0b23f3029edf}{CGraphicLoader::LoadPixbuf}(source);
+39     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} == ColorPixbuf)\{
+40         printf(\textcolor{stringliteral}{"Failed to load file colormap.\(\backslash\)n"});
+41         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+42     \}
+43     NumberChannels = gdk\_pixbuf\_get\_n\_channels(ColorPixbuf);
+44     RowStride = gdk\_pixbuf\_get\_rowstride(ColorPixbuf);
+45     \textcolor{keywordflow}{if}(GDK\_COLORSPACE\_RGB != gdk\_pixbuf\_get\_colorspace(ColorPixbuf))\{
+46         printf(\textcolor{stringliteral}{"Colormap not RGB.\(\backslash\)n"});
+47         \textcolor{keywordflow}{goto} LoadExit;
+48     \}
+49     \textcolor{keywordflow}{if}(8 != gdk\_pixbuf\_get\_bits\_per\_sample(ColorPixbuf))\{
+50         printf(\textcolor{stringliteral}{"Colormap not 8-bit samples.\(\backslash\)n"});
+51         \textcolor{keywordflow}{goto} LoadExit;
+52     \}
+53     \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}.resize(gdk\_pixbuf\_get\_height(ColorPixbuf));
+54     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} Index = 0; Index < \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}.size(); Index++)\{
+55         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XPos = 0; XPos < gdk\_pixbuf\_get\_width(ColorPixbuf); XPos++)\{
+56             guchar *Pixel = gdk\_pixbuf\_get\_pixels(ColorPixbuf) + RowStride * Index + XPos * NumberChannels;
+57             SRGBColor TempColor;
+58             
+59             TempColor.DRed = Pixel[0];
+60             TempColor.DGreen = Pixel[1];
+61             TempColor.DBlue = Pixel[2];
+62             \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[Index].push\_back(TempColor);
+63         \}   
+64     \}
+65     ReturnStatus = \textcolor{keyword}{true};
+66 LoadExit:
+67     g\_object\_unref(G\_OBJECT(ColorPixbuf));
+68     \textcolor{keywordflow}{return} ReturnStatus;
+69 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicRecolorMap_a71b26547c2e943036278611d048afdfb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicRecolorMap_a71b26547c2e943036278611d048afdfb_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCGraphicRecolorMap_a338087373145b89a29902b50276358d1}{}\label{classCGraphicRecolorMap_a338087373145b89a29902b50276358d1} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!Recolor@{Recolor}}
+\index{Recolor@{Recolor}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{Recolor()}{Recolor()}}
+{\footnotesize\ttfamily bool C\+Graphic\+Recolor\+Map\+::\+Recolor (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{guchar \&}]{red,  }\item[{guchar \&}]{green,  }\item[{guchar \&}]{blue }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Graphic\+Recolor\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+72                                                                                    \{
+73     \textcolor{keywordflow}{if}((0 <= index) && (index < \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}.size()))\{
+74         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} ColIndex = 0; ColIndex < \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[0].size(); ColIndex++)\{
+75             \textcolor{keywordflow}{if}((\hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[0][ColIndex].DRed == red)&&(\hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[0][ColIndex].DGreen == green)&&(
+      \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[0][ColIndex].DBlue == blue))\{
+76                 red = \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[index][ColIndex].DRed;
+77                 green = \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[index][ColIndex].DGreen;
+78                 blue = \hyperlink{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{DColors}[index][ColIndex].DBlue;
+79                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+80             \}
+81         \}
+82     \}
+83     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+84 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCGraphicRecolorMap_a338087373145b89a29902b50276358d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71}{}\label{classCGraphicRecolorMap_a9dea9a9e96e4465a53a40c4a34cebf71} 
+\index{C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}!D\+Colors@{D\+Colors}}
+\index{D\+Colors@{D\+Colors}!C\+Graphic\+Recolor\+Map@{C\+Graphic\+Recolor\+Map}}
+\subsubsection{\texorpdfstring{D\+Colors}{DColors}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \hyperlink{structCGraphicRecolorMap_1_1SRGBColor}{S\+R\+G\+B\+Color} $>$ $>$ C\+Graphic\+Recolor\+Map\+::\+D\+Colors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Graphic\+Recolor\+Map.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{GraphicRecolorMap_8h}{Graphic\+Recolor\+Map.\+h}\item 
+src/\hyperlink{GraphicRecolorMap_8cpp}{Graphic\+Recolor\+Map.\+cpp}\end{DoxyCompactItemize}

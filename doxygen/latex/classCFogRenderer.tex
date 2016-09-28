@@ -1,0 +1,445 @@
+\hypertarget{classCFogRenderer}{}\section{C\+Fog\+Renderer Class Reference}
+\label{classCFogRenderer}\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+
+
+{\ttfamily \#include $<$Fog\+Renderer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCFogRenderer_aa802bea4a0983b7cbcacf4ebfc1cf6a3}{C\+Fog\+Renderer} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ tileset, std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ map)
+\item 
+void \hyperlink{classCFogRenderer_aa7e0638c279ac426b9b643d26a38777e}{Draw\+Map} (Gdk\+Drawable $\ast$drawable, const \hyperlink{structSRectangle}{S\+Rectangle} \&rect)
+\item 
+void \hyperlink{classCFogRenderer_a818691538177c9a265477847cc2b35ea}{Draw\+Mini\+Map} (Gdk\+Drawable $\ast$drawable)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{D\+Tileset}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{D\+Map}
+\item 
+int \hyperlink{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{D\+None\+Index}
+\item 
+int \hyperlink{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{D\+Seen\+Index}
+\item 
+int \hyperlink{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca}{D\+Partial\+Index}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{D\+Fog\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{D\+Black\+Indices}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file Fog\+Renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCFogRenderer_aa802bea4a0983b7cbcacf4ebfc1cf6a3}{}\label{classCFogRenderer_aa802bea4a0983b7cbcacf4ebfc1cf6a3} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{C\+Fog\+Renderer()}{CFogRenderer()}}
+{\footnotesize\ttfamily C\+Fog\+Renderer\+::\+C\+Fog\+Renderer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$}]{tileset,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$}]{map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Fog\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+32                                                                                                        \{
+33     \textcolor{keywordtype}{int} Index, VisibleIndex, NextIndex;
+34     std::vector< int > OriginialValues(\{ 0x0B, 0x16, 0xD0, 0x68, 0x07, 0x94, 0xE0, 0x29, 0x03, 0x06, 0x14, 
+      0x90, 0x60, 0xC0, 0x09, 0x28, 0x01, 0x02, 0x04, 0x10, 0x80, 0x40, 0x20, 0x08\});
+35     
+36     \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset} = tileset;
+37     \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap} = map;
+38     VisibleIndex = DTileset->FindTile(\textcolor{stringliteral}{"visible"});
+39     \hyperlink{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{DNoneIndex} = DTileset->FindTile(\textcolor{stringliteral}{"none"});
+40     \hyperlink{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{DSeenIndex} = DTileset->FindTile(\textcolor{stringliteral}{"seen"});
+41     \hyperlink{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca}{DPartialIndex} = DTileset->FindTile(\textcolor{stringliteral}{"partial"});
+42     \textcolor{keywordflow}{for}(Index = 0; Index < 0x100; Index++)\{
+43         \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}.push\_back(DTileset->FindTile(std::string(\textcolor{stringliteral}{"pf-"}) + std::to\_string(Index)));
+44     \}
+45     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x00] = \hyperlink{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{DSeenIndex};
+46     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x03] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x07];
+47     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x06] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x07];
+48     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x14] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x94];
+49     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x90] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x94];
+50     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x60] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0xE0];
+51     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0xC0] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0xE0];
+52     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x09] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x29];
+53     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x28] = \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[0x29];
+54 
+55     \textcolor{comment}{/*}
+56 \textcolor{comment}{    DFogIndices[0x00] = DSeenIndex;}
+57 \textcolor{comment}{    DFogIndices[0x03] = DFogIndices[0x07];}
+58 \textcolor{comment}{    DFogIndices[0x06] = DFogIndices[0x07];}
+59 \textcolor{comment}{    }
+60 \textcolor{comment}{    DFogIndices[0x0F] = DFogIndices[0x0B];}
+61 \textcolor{comment}{    DFogIndices[0x2B] = DFogIndices[0x0B];}
+62 \textcolor{comment}{    DFogIndices[0x2F] = DFogIndices[0x0B];}
+63 \textcolor{comment}{    }
+64 \textcolor{comment}{    DFogIndices[0x17] = DFogIndices[0x16];}
+65 \textcolor{comment}{    DFogIndices[0x96] = DFogIndices[0x16];}
+66 \textcolor{comment}{    DFogIndices[0x97] = DFogIndices[0x16];}
+67 \textcolor{comment}{    }
+68 \textcolor{comment}{    DFogIndices[0x09] = DFogIndices[0x29];}
+69 \textcolor{comment}{    DFogIndices[0x28] = DFogIndices[0x29];}
+70 \textcolor{comment}{    }
+71 \textcolor{comment}{    DFogIndices[0x69] = DFogIndices[0x68];}
+72 \textcolor{comment}{    DFogIndices[0xE8] = DFogIndices[0x68];}
+73 \textcolor{comment}{    DFogIndices[0xE9] = DFogIndices[0x68];}
+74 \textcolor{comment}{    }
+75 \textcolor{comment}{    DFogIndices[0x14] = DFogIndices[0x94];}
+76 \textcolor{comment}{    DFogIndices[0x90] = DFogIndices[0x94];}
+77 \textcolor{comment}{    }
+78 \textcolor{comment}{    DFogIndices[0xD4] = DFogIndices[0xD0];}
+79 \textcolor{comment}{    DFogIndices[0xF0] = DFogIndices[0xD0];}
+80 \textcolor{comment}{    DFogIndices[0xF4] = DFogIndices[0xD0];}
+81 \textcolor{comment}{    }
+82 \textcolor{comment}{    DFogIndices[0x60] = DFogIndices[0xE0];}
+83 \textcolor{comment}{    DFogIndices[0xC0] = DFogIndices[0xE0];}
+84 \textcolor{comment}{    */}
+85     
+86     \textcolor{keywordflow}{for}(Index = 0; Index < 0x100; Index++)\{
+87         \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}.push\_back(DTileset->FindTile(std::string(\textcolor{stringliteral}{"pb-"}) + std::to\_string(Index))
+      );
+88     \}
+89     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x00] = \hyperlink{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{DNoneIndex};
+90     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x03] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x07];
+91     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x06] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x07];
+92     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x14] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x94];
+93     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x90] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x94];
+94     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x60] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0xE0];
+95     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0xC0] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0xE0];
+96     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x09] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x29];
+97     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x28] = \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[0x29];
+98     \textcolor{comment}{/*}
+99 \textcolor{comment}{    DBlackIndices[0xA7] = VisibleIndex;}
+100 \textcolor{comment}{    DBlackIndices[0xAD] = VisibleIndex;}
+101 \textcolor{comment}{    DBlackIndices[0xB5] = VisibleIndex;}
+102 \textcolor{comment}{    DBlackIndices[0xE5] = VisibleIndex;}
+103 \textcolor{comment}{    }
+104 \textcolor{comment}{    }
+105 \textcolor{comment}{    DBlackIndices[0x00] = DNoneIndex;}
+106 \textcolor{comment}{    DBlackIndices[0x03] = DBlackIndices[0x07];}
+107 \textcolor{comment}{    DBlackIndices[0x06] = DBlackIndices[0x07];}
+108 \textcolor{comment}{    }
+109 \textcolor{comment}{    DBlackIndices[0x0F] = DBlackIndices[0x0B];}
+110 \textcolor{comment}{    DBlackIndices[0x2B] = DBlackIndices[0x0B];}
+111 \textcolor{comment}{    DBlackIndices[0x2F] = DBlackIndices[0x0B];}
+112 \textcolor{comment}{    }
+113 \textcolor{comment}{    DBlackIndices[0x17] = DBlackIndices[0x16];}
+114 \textcolor{comment}{    DBlackIndices[0x96] = DBlackIndices[0x16];}
+115 \textcolor{comment}{    DBlackIndices[0x97] = DBlackIndices[0x16];}
+116 \textcolor{comment}{    }
+117 \textcolor{comment}{    DBlackIndices[0x09] = DBlackIndices[0x29];}
+118 \textcolor{comment}{    DBlackIndices[0x28] = DBlackIndices[0x29];}
+119 \textcolor{comment}{    }
+120 \textcolor{comment}{    DBlackIndices[0x69] = DBlackIndices[0x68];}
+121 \textcolor{comment}{    DBlackIndices[0xE8] = DBlackIndices[0x68];}
+122 \textcolor{comment}{    DBlackIndices[0xE9] = DBlackIndices[0x68];}
+123 \textcolor{comment}{    }
+124 \textcolor{comment}{    DBlackIndices[0x14] = DBlackIndices[0x94];}
+125 \textcolor{comment}{    DBlackIndices[0x90] = DBlackIndices[0x94];}
+126 \textcolor{comment}{    }
+127 \textcolor{comment}{    DBlackIndices[0xD4] = DBlackIndices[0xD0];}
+128 \textcolor{comment}{    DBlackIndices[0xF0] = DBlackIndices[0xD0];}
+129 \textcolor{comment}{    DBlackIndices[0xF4] = DBlackIndices[0xD0];}
+130 \textcolor{comment}{    }
+131 \textcolor{comment}{    DBlackIndices[0x60] = DBlackIndices[0xE0];}
+132 \textcolor{comment}{    DBlackIndices[0xC0] = DBlackIndices[0xE0];}
+133 \textcolor{comment}{    */}
+134     NextIndex = DTileset->TileCount();
+135     DTileset->TileCount(DTileset->TileCount() + (0x100 - OriginialValues.size()) * 2);
+136     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} AllowedHamming = 1; AllowedHamming < 8; AllowedHamming++)\{
+137         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Value = 0; Value < 0x100; Value++)\{
+138             \textcolor{keywordflow}{if}(-1 == \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[Value])\{
+139                 \textcolor{keywordtype}{int} BestMatch = -1;
+140                 \textcolor{keywordtype}{int} BestHamming = 8;    
+141                 
+142                 \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Orig : OriginialValues)\{
+143                     \textcolor{keywordtype}{int} CurHamming = \hyperlink{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{HammingDistance}(Orig, Value);
+144                     
+145                     \textcolor{keywordflow}{if}(CurHamming == \hyperlink{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{HammingDistance}(0, ~Orig & Value))\{
+146                         \textcolor{keywordflow}{if}(CurHamming < BestHamming)\{
+147                             BestHamming = CurHamming;
+148                             BestMatch = Orig;
+149                         \}
+150                     \}
+151                 \}
+152                 \textcolor{keywordflow}{if}(BestHamming <= AllowedHamming)\{
+153                     \textcolor{keywordtype}{int} CurVal;
+154                     DTileset->DuplicateTile(NextIndex, std::string(\textcolor{stringliteral}{"pf-"}) + std::to\_string(Value), 
+      \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[BestMatch]);
+155                     \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[Value] = NextIndex;
+156                     DTileset->DuplicateTile(NextIndex+1, std::string(\textcolor{stringliteral}{"pb-"}) + std::to\_string(Value), 
+      \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[BestMatch]);
+157                     \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[Value] = NextIndex+1;
+158                     CurVal = Value & ~BestMatch;
+159                     BestMatch = -1;
+160                     BestHamming = 8;    
+161                     \textcolor{keywordflow}{while}(CurVal)\{
+162                         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Orig : OriginialValues)\{
+163                             \textcolor{keywordtype}{int} CurHamming = \hyperlink{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{HammingDistance}(Orig, CurVal);
+164                             
+165                             \textcolor{keywordflow}{if}(CurHamming == \hyperlink{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{HammingDistance}(0, ~Orig & CurVal))\{
+166                                 \textcolor{keywordflow}{if}(CurHamming < BestHamming)\{
+167                                     BestHamming = CurHamming;
+168                                     BestMatch = Orig;
+169                                 \}
+170                             \}
+171                         \}
+172                         DTileset->OrAlphaTile(NextIndex, \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[BestMatch]);
+173                         DTileset->OrAlphaTile(NextIndex+1, \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[BestMatch]);
+174                         CurVal &= ~BestMatch;
+175                     \}
+176                     NextIndex += 2;
+177                 \}
+178             \}
+179         \}
+180     \}
+181 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFogRenderer_aa802bea4a0983b7cbcacf4ebfc1cf6a3_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCFogRenderer_aa7e0638c279ac426b9b643d26a38777e}{}\label{classCFogRenderer_aa7e0638c279ac426b9b643d26a38777e} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!Draw\+Map@{Draw\+Map}}
+\index{Draw\+Map@{Draw\+Map}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Map()}{DrawMap()}}
+{\footnotesize\ttfamily void C\+Fog\+Renderer\+::\+Draw\+Map (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{const \hyperlink{structSRectangle}{S\+Rectangle} \&}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line 184 of file Fog\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+184                                                                        \{
+185     GdkGC *TempGC = gdk\_gc\_new(drawable);
+186     \textcolor{keywordtype}{int} TileWidth, TileHeight;
+187     \textcolor{keyword}{static} std::vector< bool > UnknownFog, UnknownBlack;
+188     
+189     \textcolor{keywordflow}{if}((UnknownFog.size() < 0x100)||(UnknownBlack.size() < 0x100))\{
+190         UnknownFog.resize(0x100);
+191         UnknownBlack.resize(0x100);
+192     \}
+193     
+194     TileWidth = \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->TileWidth();
+195     TileHeight = \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->TileHeight();
+196 
+197     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YIndex = rect.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} / TileHeight, YPos = -(rect.
+      \hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} % TileHeight); YPos < rect.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight}; YIndex++, YPos += TileHeight)\{
+198         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XIndex = rect.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} / TileWidth, XPos = -(rect.
+      \hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} % TileWidth); XPos < rect.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth}; XIndex++, XPos += TileWidth)\{
+199             \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30}{CVisibilityMap::ETileVisibility} TileType = 
+      \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->TileType(XIndex, YIndex);
+200             
+201             \textcolor{keywordflow}{if}(\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30aec106086bdc6328c8c6c02ee1bf32d2c}{CVisibilityMap::tvNone} == TileType)\{
+202                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{DNoneIndex});
+203                 \textcolor{keywordflow}{continue};
+204             \}
+205             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a3c881652ef7164aa086e595eef0ff5d6}{CVisibilityMap::tvVisible} == TileType)\{
+206                 \textcolor{keywordflow}{continue};
+207             \}
+208             \textcolor{keywordflow}{if}((\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30ab7c30a117286ac3a8891862f6c1bb5c6}{CVisibilityMap::tvSeen} == TileType)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a7f9292f5d7ed9e9497f8ef342c890466}{CVisibilityMap::tvSeenPartial} == TileType))\{
+209                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{DSeenIndex});
+210             \}
+211             \textcolor{keywordflow}{if}((\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a75af969b6d667b802b64bacd8bca7b63}{CVisibilityMap::tvPartialPartial} == TileType)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a0037f47075e3bde5e8e32dbd55754976}{CVisibilityMap::tvPartial} == TileType))\{
+212                 \textcolor{keywordtype}{int} VisibilityIndex = 0, VisibilityMask = 0x1;
+213                 
+214                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = -1; YOff < 2; YOff++)\{
+215                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+216                         \textcolor{keywordflow}{if}(YOff || XOff)\{
+217                             \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30}{CVisibilityMap::ETileVisibility} VisTile = 
+      \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+218                             
+219                             \textcolor{keywordflow}{if}(\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a3c881652ef7164aa086e595eef0ff5d6}{CVisibilityMap::tvVisible} == VisTile)\{
+220                                 VisibilityIndex |= VisibilityMask;   
+221                             \}
+222                             VisibilityMask <<= 1;
+223                         \}
+224                     \}
+225                 \}
+226                 \textcolor{keywordflow}{if}(-1 == \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[VisibilityIndex])\{
+227                     \textcolor{keywordflow}{if}(!UnknownFog[VisibilityIndex])\{
+228                         printf(\textcolor{stringliteral}{"Unknown fog 0x%02X @ (%d, %d)\(\backslash\)n"},VisibilityIndex, XIndex, YIndex);   
+229                         UnknownFog[VisibilityIndex] = \textcolor{keyword}{true};
+230                     \}
+231                 \}
+232                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCFogRenderer_a2028e4642e756016819aab6567800af5}{DFogIndices}[VisibilityIndex]);
+233             \}
+234             
+235             \textcolor{keywordflow}{if}((\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a75af969b6d667b802b64bacd8bca7b63}{CVisibilityMap::tvPartialPartial} == TileType)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a7f9292f5d7ed9e9497f8ef342c890466}{CVisibilityMap::tvSeenPartial} == TileType))\{
+236                 \textcolor{keywordtype}{int} VisibilityIndex = 0, VisibilityMask = 0x1;
+237                 
+238                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = -1; YOff < 2; YOff++)\{
+239                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = -1; XOff < 2; XOff++)\{
+240                         \textcolor{keywordflow}{if}(YOff || XOff)\{
+241                             \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30}{CVisibilityMap::ETileVisibility} VisTile = 
+      \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->TileType(XIndex + XOff, YIndex + YOff);
+242                             
+243                             \textcolor{keywordflow}{if}((\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a3c881652ef7164aa086e595eef0ff5d6}{CVisibilityMap::tvVisible} == VisTile)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a0037f47075e3bde5e8e32dbd55754976}{CVisibilityMap::tvPartial} == VisTile)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30ab7c30a117286ac3a8891862f6c1bb5c6}{CVisibilityMap::tvSeen} == VisTile))\{
+244                                 VisibilityIndex |= VisibilityMask;   
+245                             \}
+246                             VisibilityMask <<= 1;
+247                         \}
+248                     \}
+249                 \}
+250                 \textcolor{keywordflow}{if}(-1 == \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[VisibilityIndex])\{
+251                     \textcolor{keywordflow}{if}(!UnknownBlack[VisibilityIndex])\{
+252                         printf(\textcolor{stringliteral}{"Unknown black 0x%02X @ (%d, %d)\(\backslash\)n"},VisibilityIndex, XIndex, YIndex);   
+253                         UnknownBlack[VisibilityIndex] = \textcolor{keyword}{true};
+254                     \}
+255                 \}
+256                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTile(drawable, TempGC, XPos, YPos, 
+      \hyperlink{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{DBlackIndices}[VisibilityIndex]);
+257             \}
+258         \}
+259     \}
+260     g\_object\_unref(TempGC);
+261 \}
+\end{DoxyCode}
+\hypertarget{classCFogRenderer_a818691538177c9a265477847cc2b35ea}{}\label{classCFogRenderer_a818691538177c9a265477847cc2b35ea} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!Draw\+Mini\+Map@{Draw\+Mini\+Map}}
+\index{Draw\+Mini\+Map@{Draw\+Mini\+Map}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Mini\+Map()}{DrawMiniMap()}}
+{\footnotesize\ttfamily void C\+Fog\+Renderer\+::\+Draw\+Mini\+Map (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable }\end{DoxyParamCaption})}
+
+
+
+Definition at line 263 of file Fog\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+263                                                    \{
+264     GdkGC *TempGC = gdk\_gc\_new(drawable);
+265 
+266     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YIndex = 0; YIndex < \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->Height(); YIndex++)\{
+267         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XIndex = 0; XIndex < \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->Width(); XIndex++)\{
+268             \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30}{CVisibilityMap::ETileVisibility} TileType = 
+      \hyperlink{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{DMap}->TileType(XIndex, YIndex);
+269             
+270             \textcolor{keywordflow}{if}(\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30aec106086bdc6328c8c6c02ee1bf32d2c}{CVisibilityMap::tvNone} == TileType)\{
+271                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTileCorner(drawable, TempGC, XIndex, YIndex, 
+      \hyperlink{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{DNoneIndex});
+272                 \textcolor{keywordflow}{continue};
+273             \}
+274             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a3c881652ef7164aa086e595eef0ff5d6}{CVisibilityMap::tvVisible} == TileType)\{
+275                 \textcolor{keywordflow}{continue};
+276             \}
+277             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((\hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30ab7c30a117286ac3a8891862f6c1bb5c6}{CVisibilityMap::tvSeen} == TileType)||(
+      \hyperlink{classCVisibilityMap_a6665f905da08825adbb0eee7bd1f2f30a7f9292f5d7ed9e9497f8ef342c890466}{CVisibilityMap::tvSeenPartial} == TileType))\{
+278                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTileCorner(drawable, TempGC, XIndex, YIndex, 
+      \hyperlink{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{DSeenIndex});
+279             \}
+280             \textcolor{keywordflow}{else}\{
+281                 \hyperlink{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{DTileset}->DrawTileCorner(drawable, TempGC, XIndex, YIndex, 
+      \hyperlink{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca}{DPartialIndex});
+282             \}
+283         \}
+284     \}
+285     g\_object\_unref(TempGC);
+286 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c}{}\label{classCFogRenderer_a09e3b546abbe52cc9addd1edfcc5ea9c} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Black\+Indices@{D\+Black\+Indices}}
+\index{D\+Black\+Indices@{D\+Black\+Indices}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Black\+Indices}{DBlackIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Fog\+Renderer\+::\+D\+Black\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_a2028e4642e756016819aab6567800af5}{}\label{classCFogRenderer_a2028e4642e756016819aab6567800af5} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Fog\+Indices@{D\+Fog\+Indices}}
+\index{D\+Fog\+Indices@{D\+Fog\+Indices}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Fog\+Indices}{DFogIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Fog\+Renderer\+::\+D\+Fog\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{}\label{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Map@{D\+Map}}
+\index{D\+Map@{D\+Map}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Map}{DMap}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ C\+Fog\+Renderer\+::\+D\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{}\label{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+None\+Index@{D\+None\+Index}}
+\index{D\+None\+Index@{D\+None\+Index}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+None\+Index}{DNoneIndex}}
+{\footnotesize\ttfamily int C\+Fog\+Renderer\+::\+D\+None\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca}{}\label{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Partial\+Index@{D\+Partial\+Index}}
+\index{D\+Partial\+Index@{D\+Partial\+Index}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Partial\+Index}{DPartialIndex}}
+{\footnotesize\ttfamily int C\+Fog\+Renderer\+::\+D\+Partial\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{}\label{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Seen\+Index@{D\+Seen\+Index}}
+\index{D\+Seen\+Index@{D\+Seen\+Index}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Seen\+Index}{DSeenIndex}}
+{\footnotesize\ttfamily int C\+Fog\+Renderer\+::\+D\+Seen\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Fog\+Renderer.\+h.
+
+\hypertarget{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{}\label{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89} 
+\index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Tileset@{D\+Tileset}}
+\index{D\+Tileset@{D\+Tileset}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Tileset}{DTileset}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ C\+Fog\+Renderer\+::\+D\+Tileset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Fog\+Renderer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{FogRenderer_8h}{Fog\+Renderer.\+h}\item 
+src/\hyperlink{FogRenderer_8cpp}{Fog\+Renderer.\+cpp}\end{DoxyCompactItemize}

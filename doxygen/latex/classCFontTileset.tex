@@ -1,0 +1,524 @@
+\hypertarget{classCFontTileset}{}\section{C\+Font\+Tileset Class Reference}
+\label{classCFontTileset}\index{C\+Font\+Tileset@{C\+Font\+Tileset}}
+
+
+{\ttfamily \#include $<$Font\+Tileset.\+h$>$}
+
+
+
+Inheritance diagram for C\+Font\+Tileset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCFontTileset__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Font\+Tileset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCFontTileset__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCFontTileset_a28d6cb7e16b6dcd4d6572dddd4d59014}{C\+Font\+Tileset} ()
+\item 
+virtual \hyperlink{classCFontTileset_a615232874cd33ae3d5f92ec836bf1f0b}{$\sim$\+C\+Font\+Tileset} ()
+\item 
+bool \hyperlink{classCFontTileset_a9564525bf20b3b5b6941e5f86827eb5d}{Load\+Font} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+gint \hyperlink{classCFontTileset_a888dd4fe8f46b35550386a1997f4376a}{Character\+Baseline} () const
+\item 
+void \hyperlink{classCFontTileset_a4121603694e96e93378e079edd27086e}{Draw\+Text} (Gdk\+Drawable $\ast$drawable, Gdk\+GC $\ast$gc, gint xpos, gint ypos, const std\+::string \&str)
+\item 
+void \hyperlink{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7}{Draw\+Text\+Color} (Gdk\+Drawable $\ast$drawable, Gdk\+GC $\ast$gc, gint xpos, gint ypos, int colorindex, const std\+::string \&str)
+\item 
+void \hyperlink{classCFontTileset_a6716e51a5692130847914287a5f1b734}{Draw\+Text\+With\+Shadow} (Gdk\+Drawable $\ast$drawable, Gdk\+GC $\ast$gc, gint xpos, gint ypos, int color, int shadowcol, int shadowwidth, const std\+::string \&str)
+\item 
+void \hyperlink{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15}{Measure\+Text} (const std\+::string \&str, gint \&width, gint \&height)
+\item 
+void \hyperlink{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3}{Measure\+Text\+Detailed} (const std\+::string \&str, gint \&width, gint \&height, gint \&top, gint \&bottom)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Gdk\+Pixbuf $\ast$$>$ \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{D\+Pixbuf\+Tilesets}
+\item 
+std\+::vector$<$ gint $>$ \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{D\+Character\+Widths}
+\item 
+std\+::vector$<$ std\+::vector$<$ gint $>$ $>$ \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{D\+Delta\+Widths}
+\item 
+std\+::vector$<$ gint $>$ \hyperlink{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{D\+Character\+Tops}
+\item 
+std\+::vector$<$ gint $>$ \hyperlink{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{D\+Character\+Bottoms}
+\item 
+gint \hyperlink{classCFontTileset_aba19d07744c08aeb957728067c52466c}{D\+Character\+Baseline}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file Font\+Tileset.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCFontTileset_a28d6cb7e16b6dcd4d6572dddd4d59014}{}\label{classCFontTileset_a28d6cb7e16b6dcd4d6572dddd4d59014} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{C\+Font\+Tileset()}{CFontTileset()}}
+{\footnotesize\ttfamily C\+Font\+Tileset\+::\+C\+Font\+Tileset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+24                           \{
+25     
+26 \}
+\end{DoxyCode}
+\hypertarget{classCFontTileset_a615232874cd33ae3d5f92ec836bf1f0b}{}\label{classCFontTileset_a615232874cd33ae3d5f92ec836bf1f0b} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!````~C\+Font\+Tileset@{$\sim$\+C\+Font\+Tileset}}
+\index{````~C\+Font\+Tileset@{$\sim$\+C\+Font\+Tileset}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Font\+Tileset()}{~CFontTileset()}}
+{\footnotesize\ttfamily C\+Font\+Tileset\+::$\sim$\+C\+Font\+Tileset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 28 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+28                            \{
+29 
+30 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCFontTileset_a888dd4fe8f46b35550386a1997f4376a}{}\label{classCFontTileset_a888dd4fe8f46b35550386a1997f4376a} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Character\+Baseline@{Character\+Baseline}}
+\index{Character\+Baseline@{Character\+Baseline}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Character\+Baseline()}{CharacterBaseline()}}
+{\footnotesize\ttfamily gint C\+Font\+Tileset\+::\+Character\+Baseline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 38 of file Font\+Tileset.\+h.
+
+
+\begin{DoxyCode}
+38                                       \{
+39             \textcolor{keywordflow}{return} \hyperlink{classCFontTileset_aba19d07744c08aeb957728067c52466c}{DCharacterBaseline};  
+40         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a888dd4fe8f46b35550386a1997f4376a_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_a4121603694e96e93378e079edd27086e}{}\label{classCFontTileset_a4121603694e96e93378e079edd27086e} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Draw\+Text@{Draw\+Text}}
+\index{Draw\+Text@{Draw\+Text}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Draw\+Text()}{DrawText()}}
+{\footnotesize\ttfamily void C\+Font\+Tileset\+::\+Draw\+Text (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+GC $\ast$}]{gc,  }\item[{gint}]{xpos,  }\item[{gint}]{ypos,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 146 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+146                                                                                                        \{
+147     \textcolor{keywordtype}{int} LastChar, NextChar;
+148     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < str.length(); Index++)\{
+149         NextChar = str[Index] - \textcolor{charliteral}{' '};
+150         
+151         \textcolor{keywordflow}{if}(Index)\{
+152             xpos += \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{DCharacterWidths}[LastChar] + \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}[LastChar][
+      NextChar]; 
+153         \}
+154         \hyperlink{classCGraphicTileset_afefd501a74e95295b7cd2dc868dcbbcb}{DrawTile}(drawable, gc, xpos, ypos, NextChar);
+155         LastChar = NextChar;
+156     \}
+157 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a4121603694e96e93378e079edd27086e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a4121603694e96e93378e079edd27086e_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7}{}\label{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Draw\+Text\+Color@{Draw\+Text\+Color}}
+\index{Draw\+Text\+Color@{Draw\+Text\+Color}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Draw\+Text\+Color()}{DrawTextColor()}}
+{\footnotesize\ttfamily void C\+Font\+Tileset\+::\+Draw\+Text\+Color (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+GC $\ast$}]{gc,  }\item[{gint}]{xpos,  }\item[{gint}]{ypos,  }\item[{int}]{colorindex,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 159 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+159                                                                                                            
+                       \{
+160     \textcolor{keywordtype}{int} LastChar, NextChar;
+161     \textcolor{keywordflow}{if}((0 > colorindex)||(colorindex >= \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.size()))\{
+162         \textcolor{keywordflow}{return};    
+163     \}
+164     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < str.length(); Index++)\{
+165         NextChar = str[Index] - \textcolor{charliteral}{' '};
+166         
+167         \textcolor{keywordflow}{if}(Index)\{
+168             xpos += \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{DCharacterWidths}[LastChar] + \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}[LastChar][
+      NextChar]; 
+169         \}
+170         
+171         gdk\_draw\_pixbuf(drawable, gc, \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}[colorindex], 0, NextChar * 
+      \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, xpos, ypos, \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth}, DTileHeight, GDK\_RGB\_DITHER\_NONE, 0, 0);
+172         LastChar = NextChar;
+173     \}
+174 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_a6716e51a5692130847914287a5f1b734}{}\label{classCFontTileset_a6716e51a5692130847914287a5f1b734} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Draw\+Text\+With\+Shadow@{Draw\+Text\+With\+Shadow}}
+\index{Draw\+Text\+With\+Shadow@{Draw\+Text\+With\+Shadow}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Draw\+Text\+With\+Shadow()}{DrawTextWithShadow()}}
+{\footnotesize\ttfamily void C\+Font\+Tileset\+::\+Draw\+Text\+With\+Shadow (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{Gdk\+GC $\ast$}]{gc,  }\item[{gint}]{xpos,  }\item[{gint}]{ypos,  }\item[{int}]{color,  }\item[{int}]{shadowcol,  }\item[{int}]{shadowwidth,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 176 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+176                                                                                                            
+                                                       \{
+177     \textcolor{keywordflow}{if}((0 > color)||(color >= \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.size()))\{
+178         \textcolor{keywordflow}{return};    
+179     \}
+180     \textcolor{keywordflow}{if}((0 > shadowcol)||(shadowcol >= \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.size()))\{
+181         \textcolor{keywordflow}{return};    
+182     \}
+183     \hyperlink{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7}{DrawTextColor}(drawable, gc, xpos + shadowwidth, ypos + shadowwidth, shadowcol, str);
+184     \hyperlink{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7}{DrawTextColor}(drawable, gc, xpos, ypos, color, str);
+185 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a6716e51a5692130847914287a5f1b734_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a6716e51a5692130847914287a5f1b734_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_a9564525bf20b3b5b6941e5f86827eb5d}{}\label{classCFontTileset_a9564525bf20b3b5b6941e5f86827eb5d} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Load\+Font@{Load\+Font}}
+\index{Load\+Font@{Load\+Font}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Load\+Font()}{LoadFont()}}
+{\footnotesize\ttfamily bool C\+Font\+Tileset\+::\+Load\+Font (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+32                                                               \{
+33     \hyperlink{classCLineDataSource}{CLineDataSource} LineSource(source);
+34     std::string TempString;
+35     \textcolor{keywordtype}{bool} ReturnStatus = \textcolor{keyword}{false};
+36     
+37     \textcolor{keywordflow}{if}(!\hyperlink{classCGraphicTileset_a7d47754f26f03958be28a064f54eef1d}{LoadTileset}(source))\{
+38         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+39     \}
+40     
+41     \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{DCharacterWidths}.resize(\hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount});
+42     \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}.resize(\hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount});
+43     \hyperlink{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{DCharacterTops}.resize(\hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount});
+44     \hyperlink{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{DCharacterBottoms}.resize(\hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount});
+45     \hyperlink{classCFontTileset_aba19d07744c08aeb957728067c52466c}{DCharacterBaseline} = \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
+46     \textcolor{keywordflow}{try}\{
+47         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}; Index++)\{
+48             \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+49                 \textcolor{keywordflow}{goto} LoadFontExit;
+50             \}
+51             \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{DCharacterWidths}[Index] = std::stoi(TempString);
+52         \}
+53         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} FromIndex = 0; FromIndex < \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}; FromIndex++)\{
+54             std::vector< std::string > Values;
+55             \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}[FromIndex].resize(DTileCount);
+56             \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+57                 \textcolor{keywordflow}{goto} LoadFontExit;
+58             \}
+59             \hyperlink{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c}{CTokenizer::Tokenize}(Values, TempString);
+60             \textcolor{keywordflow}{if}(Values.size() != \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount})\{
+61                 \textcolor{keywordflow}{goto} LoadFontExit;
+62             \}
+63             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} ToIndex = 0; ToIndex < \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}; ToIndex++)\{
+64                 \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}[FromIndex][ToIndex] = std::stoi(Values[ToIndex]);
+65             \}
+66         \}
+67         ReturnStatus = \textcolor{keyword}{true};
+68     \}
+69     \textcolor{keywordflow}{catch}(std::exception &E)\{
+70         printf(\textcolor{stringliteral}{"%s\(\backslash\)n"},E.what());
+71     \}
+72     \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.clear();
+73     \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.push\_back(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+74     \textcolor{keywordflow}{if}(\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}.size())\{
+75         \textcolor{keywordtype}{int} Width, Height, NumberChannels, RowStride;
+76         guchar SrcRed, SrcGreen, SrcBlue;
+77         std::vector< gint > BottomOccurence;
+78         \textcolor{keywordtype}{int} BestLine = 0;
+79         
+80         Height = gdk\_pixbuf\_get\_height(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+81         Width = gdk\_pixbuf\_get\_width(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+82         NumberChannels = gdk\_pixbuf\_get\_n\_channels(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+83         RowStride = gdk\_pixbuf\_get\_rowstride(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset});
+84         
+85         SrcRed = (\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[0].pixel>>16) & 0xFF;
+86         SrcGreen = (\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[0].pixel>>8) & 0xFF;
+87         SrcBlue = \hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[0].pixel & 0xFF;
+88         BottomOccurence.resize(\hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight} + 1);
+89         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < BottomOccurence.size(); Index++)\{
+90             BottomOccurence[Index] = 0;
+91         \}
+92         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}; Index++)\{
+93             \textcolor{keywordtype}{int} TopOpaque = \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, BottomOpaque = 0;
+94             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Row = 0; Row < \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}; Row++)\{
+95                 \textcolor{keywordtype}{bool} RowClear = \textcolor{keyword}{true};
+96                 guchar *Pixel = gdk\_pixbuf\_get\_pixels(\hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset}) + (DTileHeight * Index 
+      + Row) * RowStride;
+97                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Column = 0; Column < \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth}; Column++)\{
+98                     \textcolor{keywordflow}{if}(Pixel[3])\{
+99                         RowClear = \textcolor{keyword}{false};
+100                         \textcolor{keywordflow}{break};      
+101                     \}
+102                     Pixel += NumberChannels;   
+103                 \}
+104                 \textcolor{keywordflow}{if}(!RowClear)\{
+105                     \textcolor{keywordflow}{if}(Row < TopOpaque)\{
+106                         TopOpaque = Row;
+107                     \}
+108                     BottomOpaque = Row;
+109                 \}
+110             \}
+111             \hyperlink{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{DCharacterTops}[Index] = TopOpaque;
+112             \hyperlink{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{DCharacterBottoms}[Index] = BottomOpaque;
+113             BottomOccurence[BottomOpaque]++;
+114         \}
+115         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < BottomOccurence.size(); Index++)\{
+116             \textcolor{keywordflow}{if}(BottomOccurence[BestLine] < BottomOccurence[Index])\{
+117                 BestLine = Index;
+118             \}
+119         \}
+120         \hyperlink{classCFontTileset_aba19d07744c08aeb957728067c52466c}{DCharacterBaseline} = BestLine;
+121         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < \hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}.size(); Index++)\{
+122             guchar DestRed, DestGreen, DestBlue;
+123         
+124             DestRed = (\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[Index].pixel>>16) & 0xFF;
+125             DestGreen = (\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[Index].pixel>>8) & 0xFF;
+126             DestBlue = \hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[Index].pixel & 0xFF;
+127             \hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.push\_back(gdk\_pixbuf\_copy(
+      \hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset}));
+128             
+129             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YPos = 0; YPos < Height; YPos++)\{
+130                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XPos = 0; XPos < Width; XPos++)\{
+131                     guchar *Pixel = gdk\_pixbuf\_get\_pixels(\hyperlink{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{DPixbufTilesets}.back()) + YPos * 
+      RowStride + XPos * NumberChannels;
+132                     \textcolor{keywordflow}{if}((SrcRed == Pixel[0])&&(SrcGreen == Pixel[1])&&(SrcBlue == Pixel[2]))\{
+133                         Pixel[0] = DestRed;
+134                         Pixel[1] = DestGreen;
+135                         Pixel[2] = DestBlue;
+136                     \}
+137                 \}
+138             \}
+139         \}
+140     \}
+141     
+142 LoadFontExit:
+143     \textcolor{keywordflow}{return} ReturnStatus;
+144 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a9564525bf20b3b5b6941e5f86827eb5d_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15}{}\label{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Measure\+Text@{Measure\+Text}}
+\index{Measure\+Text@{Measure\+Text}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Measure\+Text()}{MeasureText()}}
+{\footnotesize\ttfamily void C\+Font\+Tileset\+::\+Measure\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{gint \&}]{width,  }\item[{gint \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 187 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+187                                                                              \{
+188     gint TempTop, TempBottom;
+189     \hyperlink{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3}{MeasureTextDetailed}(str, width, height, TempTop, TempBottom);
+190 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3}{}\label{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!Measure\+Text\+Detailed@{Measure\+Text\+Detailed}}
+\index{Measure\+Text\+Detailed@{Measure\+Text\+Detailed}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{Measure\+Text\+Detailed()}{MeasureTextDetailed()}}
+{\footnotesize\ttfamily void C\+Font\+Tileset\+::\+Measure\+Text\+Detailed (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{gint \&}]{width,  }\item[{gint \&}]{height,  }\item[{gint \&}]{top,  }\item[{gint \&}]{bottom }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file Font\+Tileset.\+cpp.
+
+
+\begin{DoxyCode}
+192                                                                                                            
+         \{
+193     \textcolor{keywordtype}{int} LastChar, NextChar;
+194     width = 0;
+195     top = \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
+196     bottom = 0;
+197     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < str.length(); Index++)\{
+198         NextChar = str[Index] - \textcolor{charliteral}{' '};
+199         
+200         \textcolor{keywordflow}{if}(Index)\{
+201             width += \hyperlink{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{DDeltaWidths}[LastChar][NextChar]; 
+202         \}
+203         width += \hyperlink{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{DCharacterWidths}[NextChar]; 
+204         \textcolor{keywordflow}{if}(\hyperlink{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{DCharacterTops}[NextChar] < top)\{
+205             top = \hyperlink{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{DCharacterTops}[NextChar];   
+206         \}
+207         \textcolor{keywordflow}{if}(\hyperlink{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{DCharacterBottoms}[NextChar] > bottom)\{
+208             bottom = \hyperlink{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{DCharacterBottoms}[NextChar];   
+209         \}
+210         LastChar = NextChar;
+211     \}
+212     height = \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
+213 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCFontTileset_aba19d07744c08aeb957728067c52466c}{}\label{classCFontTileset_aba19d07744c08aeb957728067c52466c} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Baseline@{D\+Character\+Baseline}}
+\index{D\+Character\+Baseline@{D\+Character\+Baseline}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Character\+Baseline}{DCharacterBaseline}}
+{\footnotesize\ttfamily gint C\+Font\+Tileset\+::\+D\+Character\+Baseline\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Font\+Tileset.\+h.
+
+\hypertarget{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{}\label{classCFontTileset_a13d7063022d59bf3347452c78be50a8b} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Bottoms@{D\+Character\+Bottoms}}
+\index{D\+Character\+Bottoms@{D\+Character\+Bottoms}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Character\+Bottoms}{DCharacterBottoms}}
+{\footnotesize\ttfamily std\+::vector$<$ gint $>$ C\+Font\+Tileset\+::\+D\+Character\+Bottoms\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Font\+Tileset.\+h.
+
+\hypertarget{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{}\label{classCFontTileset_aa009ebe41a491d854a5f6005919649c2} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Tops@{D\+Character\+Tops}}
+\index{D\+Character\+Tops@{D\+Character\+Tops}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Character\+Tops}{DCharacterTops}}
+{\footnotesize\ttfamily std\+::vector$<$ gint $>$ C\+Font\+Tileset\+::\+D\+Character\+Tops\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Font\+Tileset.\+h.
+
+\hypertarget{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{}\label{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Widths@{D\+Character\+Widths}}
+\index{D\+Character\+Widths@{D\+Character\+Widths}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Character\+Widths}{DCharacterWidths}}
+{\footnotesize\ttfamily std\+::vector$<$ gint $>$ C\+Font\+Tileset\+::\+D\+Character\+Widths\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Font\+Tileset.\+h.
+
+\hypertarget{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{}\label{classCFontTileset_a1e253853e14282e9582a7f47dace8f70} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Delta\+Widths@{D\+Delta\+Widths}}
+\index{D\+Delta\+Widths@{D\+Delta\+Widths}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Delta\+Widths}{DDeltaWidths}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector $<$ gint $>$ $>$ C\+Font\+Tileset\+::\+D\+Delta\+Widths\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Font\+Tileset.\+h.
+
+\hypertarget{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{}\label{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940} 
+\index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}}
+\index{D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}!C\+Font\+Tileset@{C\+Font\+Tileset}}
+\subsubsection{\texorpdfstring{D\+Pixbuf\+Tilesets}{DPixbufTilesets}}
+{\footnotesize\ttfamily std\+::vector$<$ Gdk\+Pixbuf $\ast$ $>$ C\+Font\+Tileset\+::\+D\+Pixbuf\+Tilesets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Font\+Tileset.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{FontTileset_8h}{Font\+Tileset.\+h}\item 
+src/\hyperlink{FontTileset_8cpp}{Font\+Tileset.\+cpp}\end{DoxyCompactItemize}

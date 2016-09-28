@@ -1,0 +1,50 @@
+\hypertarget{FogRenderer_8cpp}{}\section{src/\+Fog\+Renderer.cpp File Reference}
+\label{FogRenderer_8cpp}\index{src/\+Fog\+Renderer.\+cpp@{src/\+Fog\+Renderer.\+cpp}}
+{\ttfamily \#include \char`\"{}Fog\+Renderer.\+h\char`\"{}}\newline
+Include dependency graph for Fog\+Renderer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FogRenderer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{Hamming\+Distance} (int v1, int v2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52}{}\label{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52} 
+\index{Fog\+Renderer.\+cpp@{Fog\+Renderer.\+cpp}!Hamming\+Distance@{Hamming\+Distance}}
+\index{Hamming\+Distance@{Hamming\+Distance}!Fog\+Renderer.\+cpp@{Fog\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{Hamming\+Distance()}{HammingDistance()}}
+{\footnotesize\ttfamily static int Hamming\+Distance (\begin{DoxyParamCaption}\item[{int}]{v1,  }\item[{int}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 19 of file Fog\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+19                                           \{
+20     \textcolor{keywordtype}{int} Delta = v1 ^ v2;
+21     \textcolor{keywordtype}{int} Distance = 0;
+22     
+23     \textcolor{keywordflow}{while}(Delta)\{
+24         \textcolor{keywordflow}{if}(Delta & 0x01)\{
+25             Distance++;   
+26         \}
+27         Delta >>= 1;
+28     \}
+29     \textcolor{keywordflow}{return} Distance;
+30 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FogRenderer_8cpp_a0cf7f6be616e12a84cc37fd98785fd52_icgraph}
+\end{center}
+\end{figure}

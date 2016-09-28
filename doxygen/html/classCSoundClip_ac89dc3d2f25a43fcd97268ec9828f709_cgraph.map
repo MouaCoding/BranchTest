@@ -1,0 +1,11 @@
+<map id="CSoundClip::SampleRate" name="CSoundClip::SampleRate">
+<area shape="rect" id="node2" href="$classCSoundClip.html#a4b8a88d0062844969cbe1ab763c3590a" title="CSoundClip::Load" alt="" coords="271,143,409,170"/>
+<area shape="rect" id="node9" href="$classCSoundClip.html#a9cc8dd683c638331b2d0532aa68149da" title="CSoundClip::CopyStereoClip" alt="" coords="237,194,443,221"/>
+<area shape="rect" id="node10" href="$classCSoundClip.html#a54fb05ee6936503af55650b10c861967" title="CSoundClip::MixStereoClip" alt="" coords="243,245,437,271"/>
+<area shape="rect" id="node3" href="$classCSFVirtualIODataSource.html#a9c15fbbe734fdfc2af17ca8f424b7e43" title="CSFVirtualIODataSource\l::SFVirtualIO" alt="" coords="491,136,669,177"/>
+<area shape="rect" id="node4" href="$classCSFVirtualIODataSource.html#a94ee0d9f4703661ca7f2cad8cf294690" title="CSFVirtualIODataSource\l::GetFileLength" alt="" coords="717,5,896,47"/>
+<area shape="rect" id="node5" href="$classCSFVirtualIODataSource.html#a04735e135ffc05dd53fce944e772fcfc" title="CSFVirtualIODataSource\l::Seek" alt="" coords="717,71,896,112"/>
+<area shape="rect" id="node6" href="$classCSFVirtualIODataSource.html#a40021962590f0911d8af1020397fbba1" title="CSFVirtualIODataSource\l::Read" alt="" coords="717,136,896,177"/>
+<area shape="rect" id="node7" href="$classCSFVirtualIODataSource.html#ac1d38c4c9d8ba3e0a2affd7dd72283ee" title="CSFVirtualIODataSource\l::Write" alt="" coords="717,201,896,243"/>
+<area shape="rect" id="node8" href="$classCSFVirtualIODataSource.html#aae8e2b59f9753ed1f8baca1561b15962" title="CSFVirtualIODataSource\l::Tell" alt="" coords="717,267,896,308"/>
+</map>

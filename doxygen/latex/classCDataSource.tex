@@ -1,0 +1,67 @@
+\hypertarget{classCDataSource}{}\section{C\+Data\+Source Class Reference}
+\label{classCDataSource}\index{C\+Data\+Source@{C\+Data\+Source}}
+
+
+{\ttfamily \#include $<$Data\+Source.\+h$>$}
+
+
+
+Inheritance diagram for C\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCDataSource__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classCDataSource_ad94adc5076f973dcce83b73395eec86b}{Read} (void $\ast$data, int length)=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ \hyperlink{classCDataSource_ada14cfe01c850d01b23c9b49d2f65efc}{Container} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 25 of file Data\+Source.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCDataSource_ada14cfe01c850d01b23c9b49d2f65efc}{}\label{classCDataSource_ada14cfe01c850d01b23c9b49d2f65efc} 
+\index{C\+Data\+Source@{C\+Data\+Source}!Container@{Container}}
+\index{Container@{Container}!C\+Data\+Source@{C\+Data\+Source}}
+\subsubsection{\texorpdfstring{Container()}{Container()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ C\+Data\+Source\+::\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classCFileDataSource_a2492b88ea8186c4cbd4bdfa92060f5fa}{C\+File\+Data\+Source}.
+
+
+
+Definition at line 28 of file Data\+Source.\+h.
+
+
+\begin{DoxyCode}
+28                                                                  \{
+29             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+30         \};
+\end{DoxyCode}
+\hypertarget{classCDataSource_ad94adc5076f973dcce83b73395eec86b}{}\label{classCDataSource_ad94adc5076f973dcce83b73395eec86b} 
+\index{C\+Data\+Source@{C\+Data\+Source}!Read@{Read}}
+\index{Read@{Read}!C\+Data\+Source@{C\+Data\+Source}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual int C\+Data\+Source\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCFileDataSource_a97b9c7b8904aecbe7b0e8797508265fd}{C\+File\+Data\+Source}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{DataSource_8h}{Data\+Source.\+h}\end{DoxyCompactItemize}

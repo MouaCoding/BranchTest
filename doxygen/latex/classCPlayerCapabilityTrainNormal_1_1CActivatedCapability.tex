@@ -1,0 +1,236 @@
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability}{}\section{C\+Player\+Capability\+Train\+Normal\+:\+:C\+Activated\+Capability Class Reference}
+\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability}\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+
+
+Inheritance diagram for C\+Player\+Capability\+Train\+Normal\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Player\+Capability\+Train\+Normal\+:\+:C\+Activated\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a6d160dbc57c968390a91f0797cc53306}{C\+Activated\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target, int lumber, int gold, int steps)
+\item 
+virtual \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ad0ce8533475cce5a85aca7b98bedb6b3}{$\sim$\+C\+Activated\+Capability} ()
+\item 
+int \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ac0d2dd8e1b3aedb0873149ba4c92e6f7}{Percent\+Complete} (int max)
+\item 
+bool \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a201f09e738af96fba1a871e4ed00f18a}{Increment\+Step} ()
+\item 
+void \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a028dc1f8c528cc726737d712f0236884}{Cancel} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{D\+Current\+Step}
+\item 
+int \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{D\+Total\+Steps}
+\item 
+int \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972}{D\+Lumber}
+\item 
+int \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988}{D\+Gold}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file Train\+Capabilities.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a6d160dbc57c968390a91f0797cc53306}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a6d160dbc57c968390a91f0797cc53306} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!C\+Activated\+Capability@{C\+Activated\+Capability}}
+\index{C\+Activated\+Capability@{C\+Activated\+Capability}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{C\+Activated\+Capability()}{CActivatedCapability()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+C\+Activated\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target,  }\item[{int}]{lumber,  }\item[{int}]{gold,  }\item[{int}]{steps }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file Train\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+115                                                                                                            
+                                                                                                                  
+         :
+116 \hyperlink{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1}{CActivatedPlayerCapability}(actor, playerdata, target)\{
+117     \hyperlink{structSAssetCommand}{SAssetCommand} AssetCommand;
+118     
+119     \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep} = 0;
+120     \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{DTotalSteps} = steps;
+121     \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972}{DLumber} = lumber;
+122     \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988}{DGold} = gold;
+123     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementLumber(\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972}{DLumber});
+124     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DecrementGold(\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988}{DGold});
+125     AssetCommand.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct};
+126     AssetCommand.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget} = \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor};
+127     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PushCommand(AssetCommand);
+128 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ad0ce8533475cce5a85aca7b98bedb6b3}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ad0ce8533475cce5a85aca7b98bedb6b3} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}}
+\index{````~C\+Activated\+Capability@{$\sim$\+C\+Activated\+Capability}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Activated\+Capability()}{~CActivatedCapability()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::$\sim$\+C\+Activated\+Capability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 38 of file Train\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a028dc1f8c528cc726737d712f0236884}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a028dc1f8c528cc726737d712f0236884} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 160 of file Train\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+160                                                              \{
+161     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementLumber(\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972}{DLumber});
+162     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementGold(\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988}{DGold});
+163     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->DeleteAsset(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget});
+164     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+165 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a201f09e738af96fba1a871e4ed00f18a}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a201f09e738af96fba1a871e4ed00f18a} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!Increment\+Step@{Increment\+Step}}
+\index{Increment\+Step@{Increment\+Step}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Increment\+Step()}{IncrementStep()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+Increment\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 135 of file Train\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+135                                                                     \{
+136     \textcolor{keywordtype}{int} AddHitPoints = (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * (\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep} + 1) / 
+      \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{DTotalSteps}) - (\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints() * \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep} / 
+      \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{DTotalSteps});
+137     
+138     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->IncrementHitPoints(AddHitPoints);
+139     \textcolor{keywordflow}{if}(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints() > \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints())\{
+140         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->HitPoints(\hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->MaxHitPoints());
+141     \}
+142     \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep}++;
+143     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->IncrementStep();
+144     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->IncrementStep();
+145     \textcolor{keywordflow}{if}(\hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep} >= \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{DTotalSteps})\{
+146         \hyperlink{structSGameEvent}{SGameEvent} TempEvent;
+147         
+148         TempEvent.\hyperlink{structSGameEvent_afa10562e243f4ac2b473b655cc58fee7}{DType} = \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56}{etReady};
+149         TempEvent.\hyperlink{structSGameEvent_a40c85eeac83b96887b7449c9bdc5d624}{DAsset} = \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget};
+150         \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->AddGameEvent(TempEvent);
+151         
+152         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->PopCommand();
+153         \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
+154         \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}->TilePosition(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->FindAssetPlacement(
+      \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget}, \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}, \hyperlink{classCPosition}{CPosition}(\hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Width()-1, 
+      \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->PlayerMap()->Height()-1)));
+155         \textcolor{keywordflow}{return} \textcolor{keyword}{true};    
+156     \}
+157     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+158 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ac0d2dd8e1b3aedb0873149ba4c92e6f7}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ac0d2dd8e1b3aedb0873149ba4c92e6f7} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!Percent\+Complete@{Percent\+Complete}}
+\index{Percent\+Complete@{Percent\+Complete}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{Percent\+Complete()}{PercentComplete()}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+Percent\+Complete (\begin{DoxyParamCaption}\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d}{C\+Activated\+Player\+Capability}.
+
+
+
+Definition at line 131 of file Train\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+131                                                                             \{
+132     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{DCurrentStep} * max / \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{DTotalSteps};
+133 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2053317e0ee29f45f4ff5a28269cd635} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!D\+Current\+Step@{D\+Current\+Step}}
+\index{D\+Current\+Step@{D\+Current\+Step}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Current\+Step}{DCurrentStep}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Current\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Train\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a1b994a572ca0fdfd64f6f71afb6b5988} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!D\+Gold@{D\+Gold}}
+\index{D\+Gold@{D\+Gold}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Gold}{DGold}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Gold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Train\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a49a77c92b6146819efb1a7a8b6fb8972} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!D\+Lumber@{D\+Lumber}}
+\index{D\+Lumber@{D\+Lumber}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Lumber}{DLumber}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Lumber\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Train\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165}{}\label{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a2bee6a6395fd7cc0fcf4001bbbadb165} 
+\index{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}!D\+Total\+Steps@{D\+Total\+Steps}}
+\index{D\+Total\+Steps@{D\+Total\+Steps}!C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}}
+\subsubsection{\texorpdfstring{D\+Total\+Steps}{DTotalSteps}}
+{\footnotesize\ttfamily int C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability\+::\+D\+Total\+Steps\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Train\+Capabilities.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{TrainCapabilities_8cpp}{Train\+Capabilities.\+cpp}\end{DoxyCompactItemize}

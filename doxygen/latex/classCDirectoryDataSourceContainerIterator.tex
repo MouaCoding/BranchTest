@@ -1,0 +1,260 @@
+\hypertarget{classCDirectoryDataSourceContainerIterator}{}\section{C\+Directory\+Data\+Source\+Container\+Iterator Class Reference}
+\label{classCDirectoryDataSourceContainerIterator}\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+
+
+{\ttfamily \#include $<$File\+Data\+Source.\+h$>$}
+
+
+
+Inheritance diagram for C\+Directory\+Data\+Source\+Container\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classCDirectoryDataSourceContainerIterator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Directory\+Data\+Source\+Container\+Iterator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classCDirectoryDataSourceContainerIterator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classCDirectoryDataSourceContainerIterator_a24631e9ef36d3cb075e42d38912049ec}{Name} ()
+\item 
+bool \hyperlink{classCDirectoryDataSourceContainerIterator_a5430df3036bfd75734ffb807b888b208}{Is\+Container} ()
+\item 
+bool \hyperlink{classCDirectoryDataSourceContainerIterator_ab89d8af808bff115ac7c096bbec23188}{Is\+Valid} ()
+\item 
+void \hyperlink{classCDirectoryDataSourceContainerIterator_a2b58c5a78c5820e39cd2d9a61724a55e}{Next} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCDirectoryDataSourceContainerIterator_a34b3253df5cc88a08b8f3f51f7fe9768}{C\+Directory\+Data\+Source\+Container\+Iterator} (const std\+::string \&path)
+\item 
+\hyperlink{classCDirectoryDataSourceContainerIterator_a451c618483bc9809f53606fea47a52a8}{$\sim$\+C\+Directory\+Data\+Source\+Container\+Iterator} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+D\+IR $\ast$ \hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{D\+Directory}
+\item 
+struct dirent \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{D\+Entry}
+\item 
+struct dirent $\ast$ \hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{D\+Entry\+Result}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCDirectoryDataSourceContainerIterator_ab421e385625629f6c45d70648a928574}{C\+Directory\+Data\+Source\+Container}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 36 of file File\+Data\+Source.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a34b3253df5cc88a08b8f3f51f7fe9768}{}\label{classCDirectoryDataSourceContainerIterator_a34b3253df5cc88a08b8f3f51f7fe9768} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{C\+Directory\+Data\+Source\+Container\+Iterator()}{CDirectoryDataSourceContainerIterator()}}
+{\footnotesize\ttfamily C\+Directory\+Data\+Source\+Container\+Iterator\+::\+C\+Directory\+Data\+Source\+Container\+Iterator (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+57                                                                                                   : 
+      \hyperlink{classCDataSourceContainerIterator}{CDataSourceContainerIterator}()\{
+58     \textcolor{comment}{//
+      printf("CDirectoryDataSourceContainerIterator::CDirectoryDataSourceContainerIterator(\(\backslash\)"%s\(\backslash\)")\(\backslash\)n",path.c\_str());}
+59     \hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory} = opendir(path.c\_str());
+60     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory})\{
+61         \textcolor{keywordflow}{if}(0 != readdir\_r(\hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory}, &\hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}, &\hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult}))\{
+62             \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_name[0] = \textcolor{charliteral}{'\(\backslash\)0'};
+63             \hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult} = \textcolor{keyword}{nullptr};
+64         \}
+65         \textcolor{keywordflow}{else}\{
+66             \textcolor{comment}{//printf("Name = %s\(\backslash\)n",DEntry.d\_name);   }
+67         \}
+68     \}
+69     \textcolor{keywordflow}{else}\{
+70         \textcolor{comment}{//printf("nullptr != DDirectory\(\backslash\)n");}
+71     \}
+72 \}
+\end{DoxyCode}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a451c618483bc9809f53606fea47a52a8}{}\label{classCDirectoryDataSourceContainerIterator_a451c618483bc9809f53606fea47a52a8} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!````~C\+Directory\+Data\+Source\+Container\+Iterator@{$\sim$\+C\+Directory\+Data\+Source\+Container\+Iterator}}
+\index{````~C\+Directory\+Data\+Source\+Container\+Iterator@{$\sim$\+C\+Directory\+Data\+Source\+Container\+Iterator}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Directory\+Data\+Source\+Container\+Iterator()}{~CDirectoryDataSourceContainerIterator()}}
+{\footnotesize\ttfamily C\+Directory\+Data\+Source\+Container\+Iterator\+::$\sim$\+C\+Directory\+Data\+Source\+Container\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 74 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+74                                                                              \{
+75     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory})\{
+76         closedir(\hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory});
+77     \}
+78 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a5430df3036bfd75734ffb807b888b208}{}\label{classCDirectoryDataSourceContainerIterator_a5430df3036bfd75734ffb807b888b208} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!Is\+Container@{Is\+Container}}
+\index{Is\+Container@{Is\+Container}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{Is\+Container()}{IsContainer()}}
+{\footnotesize\ttfamily bool C\+Directory\+Data\+Source\+Container\+Iterator\+::\+Is\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCDataSourceContainerIterator_aafcccb5733f936b03e1930b09c02df87}{C\+Data\+Source\+Container\+Iterator}.
+
+
+
+Definition at line 84 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+84                                                        \{
+85     \textcolor{keywordflow}{return} DT\_DIR == \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_type;
+86 \}
+\end{DoxyCode}
+\hypertarget{classCDirectoryDataSourceContainerIterator_ab89d8af808bff115ac7c096bbec23188}{}\label{classCDirectoryDataSourceContainerIterator_ab89d8af808bff115ac7c096bbec23188} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily bool C\+Directory\+Data\+Source\+Container\+Iterator\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCDataSourceContainerIterator_ad1e2a9c6bde2f80ed03cb45085ce0441}{C\+Data\+Source\+Container\+Iterator}.
+
+
+
+Definition at line 88 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+88                                                    \{
+89     \textcolor{keywordflow}{return} (\textcolor{keyword}{nullptr} != \hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult}) || (\textcolor{charliteral}{'\(\backslash\)0'} != \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_name[0]);
+90 \}
+\end{DoxyCode}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a24631e9ef36d3cb075e42d38912049ec}{}\label{classCDirectoryDataSourceContainerIterator_a24631e9ef36d3cb075e42d38912049ec} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!Name@{Name}}
+\index{Name@{Name}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily std\+::string C\+Directory\+Data\+Source\+Container\+Iterator\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCDataSourceContainerIterator_a95b57204a76fab1d5a75a01189d5fcc5}{C\+Data\+Source\+Container\+Iterator}.
+
+
+
+Definition at line 80 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+80                                                      \{
+81     \textcolor{keywordflow}{return} \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_name;
+82 \}
+\end{DoxyCode}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a2b58c5a78c5820e39cd2d9a61724a55e}{}\label{classCDirectoryDataSourceContainerIterator_a2b58c5a78c5820e39cd2d9a61724a55e} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!Next@{Next}}
+\index{Next@{Next}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily void C\+Directory\+Data\+Source\+Container\+Iterator\+::\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCDataSourceContainerIterator_a2a9cc99d17cd217727ac4ab5e78f1a35}{C\+Data\+Source\+Container\+Iterator}.
+
+
+
+Definition at line 92 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+92                                                 \{
+93     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory})\{
+94         \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} == \hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult})\{
+95             \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_name[0] = \textcolor{charliteral}{'\(\backslash\)0'};   
+96         \}
+97         \textcolor{keywordflow}{else}\{
+98             \textcolor{keywordflow}{if}(0 != readdir\_r(\hyperlink{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{DDirectory}, &\hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}, &\hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult}))\{
+99                 \hyperlink{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{DEntry}.d\_name[0] = \textcolor{charliteral}{'\(\backslash\)0'};
+100                 \hyperlink{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{DEntryResult} = \textcolor{keyword}{nullptr};
+101             \}
+102         \}
+103     \}
+104 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classCDirectoryDataSourceContainerIterator_ab421e385625629f6c45d70648a928574}{}\label{classCDirectoryDataSourceContainerIterator_ab421e385625629f6c45d70648a928574} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!C\+Directory\+Data\+Source\+Container@{C\+Directory\+Data\+Source\+Container}}
+\index{C\+Directory\+Data\+Source\+Container@{C\+Directory\+Data\+Source\+Container}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{C\+Directory\+Data\+Source\+Container}{CDirectoryDataSourceContainer}}
+{\footnotesize\ttfamily friend class \hyperlink{classCDirectoryDataSourceContainer}{C\+Directory\+Data\+Source\+Container}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 37 of file File\+Data\+Source.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16}{}\label{classCDirectoryDataSourceContainerIterator_a0e07044b1a916e3dd931ae0778317e16} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!D\+Directory@{D\+Directory}}
+\index{D\+Directory@{D\+Directory}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{D\+Directory}{DDirectory}}
+{\footnotesize\ttfamily D\+IR$\ast$ C\+Directory\+Data\+Source\+Container\+Iterator\+::\+D\+Directory\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file File\+Data\+Source.\+h.
+
+\hypertarget{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b}{}\label{classCDirectoryDataSourceContainerIterator_a69dfb8a9f2ab7f71e7d106d4d6c0e29b} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!D\+Entry@{D\+Entry}}
+\index{D\+Entry@{D\+Entry}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{D\+Entry}{DEntry}}
+{\footnotesize\ttfamily struct dirent C\+Directory\+Data\+Source\+Container\+Iterator\+::\+D\+Entry\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file File\+Data\+Source.\+h.
+
+\hypertarget{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616}{}\label{classCDirectoryDataSourceContainerIterator_a7e8c1c50ef09013ee6013dcbd1bdc616} 
+\index{C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}!D\+Entry\+Result@{D\+Entry\+Result}}
+\index{D\+Entry\+Result@{D\+Entry\+Result}!C\+Directory\+Data\+Source\+Container\+Iterator@{C\+Directory\+Data\+Source\+Container\+Iterator}}
+\subsubsection{\texorpdfstring{D\+Entry\+Result}{DEntryResult}}
+{\footnotesize\ttfamily struct dirent$\ast$ C\+Directory\+Data\+Source\+Container\+Iterator\+::\+D\+Entry\+Result\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file File\+Data\+Source.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{FileDataSource_8h}{File\+Data\+Source.\+h}\item 
+src/\hyperlink{FileDataSource_8cpp}{File\+Data\+Source.\+cpp}\end{DoxyCompactItemize}

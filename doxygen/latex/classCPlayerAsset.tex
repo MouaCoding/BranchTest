@@ -1,0 +1,2046 @@
+\hypertarget{classCPlayerAsset}{}\section{C\+Player\+Asset Class Reference}
+\label{classCPlayerAsset}\index{C\+Player\+Asset@{C\+Player\+Asset}}
+
+
+{\ttfamily \#include $<$Player\+Asset.\+h$>$}
+
+
+
+Collaboration diagram for C\+Player\+Asset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classCPlayerAsset__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerAsset_a84787ab2502e70d52c5b73b51ba9063a}{C\+Player\+Asset} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ type)
+\item 
+\hyperlink{classCPlayerAsset_a5dbb83d6431454644f98d46c6348dfb8}{$\sim$\+C\+Player\+Asset} ()
+\item 
+bool \hyperlink{classCPlayerAsset_a616d6139b57b9e74cca2559d7501ad3e}{Alive} () const
+\item 
+int \hyperlink{classCPlayerAsset_ab1667cc26c3439f868708af9d0fc1bda}{Creation\+Cycle} () const
+\item 
+int \hyperlink{classCPlayerAsset_a101a234ccd90537c2900cde093bc8708}{Creation\+Cycle} (int cycle)
+\item 
+int \hyperlink{classCPlayerAsset_a605862c6f6e57a2c6e21030d716485bd}{Hit\+Points} () const
+\item 
+int \hyperlink{classCPlayerAsset_a5da6f77ba278109e159d392035f4e1dd}{Hit\+Points} (int hitpts)
+\item 
+int \hyperlink{classCPlayerAsset_a101767304149c0d1c1b0b88cf8e09b36}{Increment\+Hit\+Points} (int hitpts)
+\item 
+int \hyperlink{classCPlayerAsset_a34aa2679bb9d5d2d46774b8e7210fe53}{Decrement\+Hit\+Points} (int hitpts)
+\item 
+int \hyperlink{classCPlayerAsset_a03ee2a60c0d332675b4b30573b96d64f}{Gold} () const
+\item 
+int \hyperlink{classCPlayerAsset_a97976cb3f9db851ecaf2a78c268dce32}{Gold} (int gold)
+\item 
+int \hyperlink{classCPlayerAsset_afe41876166e7a3ad8d3d5465595d3de7}{Increment\+Gold} (int gold)
+\item 
+int \hyperlink{classCPlayerAsset_ab29218b9af24ca9db186ee36f75ae7d4}{Decrement\+Gold} (int gold)
+\item 
+int \hyperlink{classCPlayerAsset_aeaf2bc68dac6348ef48c2c49703325ad}{Lumber} () const
+\item 
+int \hyperlink{classCPlayerAsset_a66a1a78326ba5d6e2892920cbfddebc6}{Lumber} (int lumber)
+\item 
+int \hyperlink{classCPlayerAsset_a12855b5c0cddb6b72e5ecba92ae77223}{Increment\+Lumber} (int lumber)
+\item 
+int \hyperlink{classCPlayerAsset_a95f968ddfe0ec332764a730bced03834}{Decrement\+Lumber} (int lumber)
+\item 
+int \hyperlink{classCPlayerAsset_a787d4ac869cf7b5525b9a81f5d1bb5b1}{Step} () const
+\item 
+int \hyperlink{classCPlayerAsset_aaa8c5b62f8c2c3bf05443c88e1619517}{Step} (int step)
+\item 
+void \hyperlink{classCPlayerAsset_ae94600f78d050944f4d93dcbbf8c0ee0}{Reset\+Step} ()
+\item 
+void \hyperlink{classCPlayerAsset_aa1d39b408fd5aa11f2c3a19ef4d3895d}{Increment\+Step} ()
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_a23354232e5585574bc8e12c1fdb37ad9}{Tile\+Position} () const
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_a6d84105b6db136a6846fcaf80dba3747}{Tile\+Position} (const \hyperlink{classCPosition}{C\+Position} \&pos)
+\item 
+int \hyperlink{classCPlayerAsset_aeabaa8fe7161cce571b6c4d2f7180085}{Tile\+PositionX} () const
+\item 
+int \hyperlink{classCPlayerAsset_ad3a0b4bafbfa9021b59925a5c3364cd5}{Tile\+PositionX} (int x)
+\item 
+int \hyperlink{classCPlayerAsset_a189adb25bf0a45117a9c0bb36b45e6a4}{Tile\+PositionY} () const
+\item 
+int \hyperlink{classCPlayerAsset_ad3ce562cbd27e2c35abe968a7ff19cd6}{Tile\+PositionY} (int y)
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_aed5b55f9b2f2771ebac193275d378799}{Position} () const
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_a8c3ed4ab81f79aa28faec6bf790a0a79}{Position} (const \hyperlink{classCPosition}{C\+Position} \&pos)
+\item 
+bool \hyperlink{classCPlayerAsset_aaaea60176986f3e4f464bf5cec056521}{Tile\+Aligned} () const
+\item 
+int \hyperlink{classCPlayerAsset_a9cf8961ac97f2928d1e08bc4f311f220}{PositionX} () const
+\item 
+int \hyperlink{classCPlayerAsset_a3b0981638b2e86e1ffb211365db26b41}{PositionX} (int x)
+\item 
+int \hyperlink{classCPlayerAsset_a4f70846298e9951489ef138847c268a5}{PositionY} () const
+\item 
+int \hyperlink{classCPlayerAsset_a497fe719ca97252f0ee7985e0e30518e}{PositionY} (int y)
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_a67e700ce77122894c02da584dd652767}{Closest\+Position} (const \hyperlink{classCPosition}{C\+Position} \&pos) const
+\item 
+int \hyperlink{classCPlayerAsset_a5349f1cee794bd34f2255aa6b3177344}{Command\+Count} () const
+\item 
+void \hyperlink{classCPlayerAsset_ad4b1ea5ddba1c2b5dbee5ee5015e193b}{Clear\+Command} ()
+\item 
+void \hyperlink{classCPlayerAsset_ab7421ec7906d36f028484ff518cc3c90}{Push\+Command} (const \hyperlink{structSAssetCommand}{S\+Asset\+Command} \&command)
+\item 
+void \hyperlink{classCPlayerAsset_a92dcc002f1349cc41c7870495484a442}{Enqueue\+Command} (const \hyperlink{structSAssetCommand}{S\+Asset\+Command} \&command)
+\item 
+void \hyperlink{classCPlayerAsset_ae443fc4aa41aaa71d1d553f2ca9d9999}{Pop\+Command} ()
+\item 
+\hyperlink{structSAssetCommand}{S\+Asset\+Command} \hyperlink{classCPlayerAsset_ae2040e12e5319593c9a2d724c7b7eda0}{Current\+Command} () const
+\item 
+\hyperlink{structSAssetCommand}{S\+Asset\+Command} \hyperlink{classCPlayerAsset_aa7723b668d4278f23eb28ca8b6043192}{Next\+Command} () const
+\item 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} \hyperlink{classCPlayerAsset_ad9a1fdc2ca221636ccab01891ea1f951}{Action} () const
+\item 
+bool \hyperlink{classCPlayerAsset_acd64c8a11af0f9d17b232d3e1e85dda1}{Has\+Action} (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} action) const
+\item 
+bool \hyperlink{classCPlayerAsset_a6502fe94b663fb3729086ffad530d5ca}{Has\+Active\+Capability} (\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} capability) const
+\item 
+bool \hyperlink{classCPlayerAsset_a927a79955847918fa2807d37374b4fb6}{Interruptible} () const
+\item 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{classCPlayerAsset_add74a452e9a030ae0d04d4281d964935}{Direction} () const
+\item 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{classCPlayerAsset_abda0d14d43b52315a40defa0a6a2440f}{Direction} (\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} direction)
+\item 
+int \hyperlink{classCPlayerAsset_a119a30dbc2a8e4369b9525aca812618c}{Max\+Hit\+Points} () const
+\item 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} \hyperlink{classCPlayerAsset_a6d6aeea4e8b02e0f239bac95db6d9e0a}{Type} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ \hyperlink{classCPlayerAsset_acbc2e90c81b34861edd613e4bf8325f8}{Asset\+Type} () const
+\item 
+void \hyperlink{classCPlayerAsset_ab67080b147a98db2cf379870cedbca2d}{Change\+Type} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ type)
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCPlayerAsset_a969e6e60c6343186d2b9a6cddd6654f8}{Color} () const
+\item 
+int \hyperlink{classCPlayerAsset_a3de4826a7d7e8d2c5fd325ec736567ab}{Armor} () const
+\item 
+int \hyperlink{classCPlayerAsset_ac732622598cbd05dd2ec9233468e2b07}{Sight} () const
+\item 
+int \hyperlink{classCPlayerAsset_a85a9e2ce62f557e93219676117159fec}{Size} () const
+\item 
+int \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed} () const
+\item 
+int \hyperlink{classCPlayerAsset_aa27a1ef30ef9f6a0452f7eeea6ae9516}{Gold\+Cost} () const
+\item 
+int \hyperlink{classCPlayerAsset_add6700156ae77b23fcb8fa7831f897d8}{Lumber\+Cost} () const
+\item 
+int \hyperlink{classCPlayerAsset_ab95c988b7c13ed8c686da8f354d120f4}{Food\+Consumption} () const
+\item 
+int \hyperlink{classCPlayerAsset_aba613ebb3be5fd70293468198da9b30d}{Build\+Time} () const
+\item 
+int \hyperlink{classCPlayerAsset_a33db708bb6bf66d67b54b24c322f27fa}{Attack\+Steps} () const
+\item 
+int \hyperlink{classCPlayerAsset_a0c696a50d23ee7fb3fcfbf7e696c739f}{Reload\+Steps} () const
+\item 
+int \hyperlink{classCPlayerAsset_a17dcdcd436e6edfab325bc4dbca4f03c}{Basic\+Damage} () const
+\item 
+int \hyperlink{classCPlayerAsset_a1949069b1bec611fdfa74488a3d6864f}{Piercing\+Damage} () const
+\item 
+int \hyperlink{classCPlayerAsset_a717695212dd7159bd0b6e97d4ae5cf9b}{Range} () const
+\item 
+int \hyperlink{classCPlayerAsset_a1312cb77efe2cf732cc255a8345e7c44}{Armor\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_aaa297dbacfa25d61ce2b3498ed139c5b}{Sight\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_a6b6b17c9d4b1fe095120032bee4977af}{Speed\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_affad00c05e4a1325601f2dc23df1cf05}{Basic\+Damage\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_af7403a6a0eab4eaedd2b04d66e21d601}{Piercing\+Damage\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_aad35da7eb13a1d5830471a0f6de5090e}{Range\+Upgrade} () const
+\item 
+int \hyperlink{classCPlayerAsset_a1bceaff561a420eaa8924eeb421fd594}{Effective\+Armor} () const
+\item 
+int \hyperlink{classCPlayerAsset_a69a1226429ded98b31fde2623d0058bf}{Effective\+Sight} () const
+\item 
+int \hyperlink{classCPlayerAsset_af6d10fcbbd9cc861ced9ba3a85d387ab}{Effective\+Speed} () const
+\item 
+int \hyperlink{classCPlayerAsset_a13b40b2b670c86fb2d1f319837eca2da}{Effective\+Basic\+Damage} () const
+\item 
+int \hyperlink{classCPlayerAsset_a180f67342aa933dbf0918759714858e3}{Effective\+Piercing\+Damage} () const
+\item 
+int \hyperlink{classCPlayerAsset_af2a2747655729e3a58586f28ddd7cd8d}{Effective\+Range} () const
+\item 
+bool \hyperlink{classCPlayerAsset_ac01bc82d9b4cc54a72cb092fa1368663}{Has\+Capability} (\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} capability) const
+\item 
+std\+::vector$<$ \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} $>$ \hyperlink{classCPlayerAsset_adf61d7228fa5d665156d111be5a49d6f}{Capabilities} () const
+\item 
+bool \hyperlink{classCPlayerAsset_a4c8ef6c0049b48045c2ba95d398dbc05}{Move\+Step} (std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ $>$ \&occupancymap, std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \&diagonals)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f}{Update\+Frequency} ()
+\item 
+static int \hyperlink{classCPlayerAsset_ad53a2f58bcbccb7995431e8e2d050c09}{Update\+Frequency} (int freq)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d}{D\+Creation\+Cycle}
+\item 
+int \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{D\+Hit\+Points}
+\item 
+int \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{D\+Gold}
+\item 
+int \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{D\+Lumber}
+\item 
+int \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{D\+Step}
+\item 
+int \hyperlink{classCPlayerAsset_aa57d93e239e9a80c362949f260471456}{D\+Move\+RemainderX}
+\item 
+int \hyperlink{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e}{D\+Move\+RemainderY}
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{D\+Tile\+Position}
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{D\+Position}
+\item 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{D\+Direction}
+\item 
+std\+::vector$<$ \hyperlink{structSAssetCommand}{S\+Asset\+Command} $>$ \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{D\+Commands}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{D\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{D\+Update\+Frequency} = 1
+\item 
+static int \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{D\+Update\+Divisor} = 32
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 321 of file Player\+Asset.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerAsset_a84787ab2502e70d52c5b73b51ba9063a}{}\label{classCPlayerAsset_a84787ab2502e70d52c5b73b51ba9063a} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!C\+Player\+Asset@{C\+Player\+Asset}}
+\index{C\+Player\+Asset@{C\+Player\+Asset}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{C\+Player\+Asset()}{CPlayerAsset()}}
+{\footnotesize\ttfamily C\+Player\+Asset\+::\+C\+Player\+Asset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 715 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+715                                                                  : \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}(0,0), 
+      \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}(0,0)\{
+716     \hyperlink{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d}{DCreationCycle} = 0;
+717     \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType} = type;
+718     \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} = type->HitPoints();
+719     \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold} = 0;
+720     \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber} = 0;
+721     \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{DStep} = 0;
+722     \hyperlink{classCPlayerAsset_aa57d93e239e9a80c362949f260471456}{DMoveRemainderX} = 0;
+723     \hyperlink{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e}{DMoveRemainderY} = 0;
+724     \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection} = \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{dSouth};
+725     \hyperlink{classCPlayerAsset_a23354232e5585574bc8e12c1fdb37ad9}{TilePosition}(\hyperlink{classCPosition}{CPosition}());
+726 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a84787ab2502e70d52c5b73b51ba9063a_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a5dbb83d6431454644f98d46c6348dfb8}{}\label{classCPlayerAsset_a5dbb83d6431454644f98d46c6348dfb8} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!````~C\+Player\+Asset@{$\sim$\+C\+Player\+Asset}}
+\index{````~C\+Player\+Asset@{$\sim$\+C\+Player\+Asset}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Player\+Asset()}{~CPlayerAsset()}}
+{\footnotesize\ttfamily C\+Player\+Asset\+::$\sim$\+C\+Player\+Asset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 728 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+728                            \{
+729     
+730 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerAsset_ad9a1fdc2ca221636ccab01891ea1f951}{}\label{classCPlayerAsset_ad9a1fdc2ca221636ccab01891ea1f951} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Action@{Action}}
+\index{Action@{Action}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Action()}{Action()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} C\+Player\+Asset\+::\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 518 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+518                                    \{
+519             \textcolor{keywordflow}{if}(!\hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.empty())\{
+520                 \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.back().DAction;
+521             \}
+522             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone};
+523         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a616d6139b57b9e74cca2559d7501ad3e}{}\label{classCPlayerAsset_a616d6139b57b9e74cca2559d7501ad3e} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Alive@{Alive}}
+\index{Alive@{Alive}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Alive()}{Alive()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 348 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+348                           \{
+349             \textcolor{keywordflow}{return} 0 < \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints};
+350         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a3de4826a7d7e8d2c5fd325ec736567ab}{}\label{classCPlayerAsset_a3de4826a7d7e8d2c5fd325ec736567ab} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Armor@{Armor}}
+\index{Armor@{Armor}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Armor()}{Armor()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Armor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 575 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+575                          \{
+576             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Armor();
+577         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a1312cb77efe2cf732cc255a8345e7c44}{}\label{classCPlayerAsset_a1312cb77efe2cf732cc255a8345e7c44} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Armor\+Upgrade@{Armor\+Upgrade}}
+\index{Armor\+Upgrade@{Armor\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Armor\+Upgrade()}{ArmorUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Armor\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 627 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+627                                 \{
+628             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->ArmorUpgrade();
+629         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_acbc2e90c81b34861edd613e4bf8325f8}{}\label{classCPlayerAsset_acbc2e90c81b34861edd613e4bf8325f8} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Asset\+Type@{Asset\+Type}}
+\index{Asset\+Type@{Asset\+Type}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Asset\+Type()}{AssetType()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ C\+Player\+Asset\+::\+Asset\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 563 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+563                                                            \{
+564             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType};  
+565         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a33db708bb6bf66d67b54b24c322f27fa}{}\label{classCPlayerAsset_a33db708bb6bf66d67b54b24c322f27fa} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Attack\+Steps@{Attack\+Steps}}
+\index{Attack\+Steps@{Attack\+Steps}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Attack\+Steps()}{AttackSteps()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Attack\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 607 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+607                                \{
+608             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->AttackSteps();
+609         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a17dcdcd436e6edfab325bc4dbca4f03c}{}\label{classCPlayerAsset_a17dcdcd436e6edfab325bc4dbca4f03c} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Basic\+Damage@{Basic\+Damage}}
+\index{Basic\+Damage@{Basic\+Damage}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Basic\+Damage()}{BasicDamage()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Basic\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 615 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+615                                \{
+616             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->BasicDamage(); 
+617         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_affad00c05e4a1325601f2dc23df1cf05}{}\label{classCPlayerAsset_affad00c05e4a1325601f2dc23df1cf05} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Basic\+Damage\+Upgrade@{Basic\+Damage\+Upgrade}}
+\index{Basic\+Damage\+Upgrade@{Basic\+Damage\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Basic\+Damage\+Upgrade()}{BasicDamageUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Basic\+Damage\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 639 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+639                                       \{
+640             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->BasicDamageUpgrade();
+641         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aba613ebb3be5fd70293468198da9b30d}{}\label{classCPlayerAsset_aba613ebb3be5fd70293468198da9b30d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Build\+Time@{Build\+Time}}
+\index{Build\+Time@{Build\+Time}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Build\+Time()}{BuildTime()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Build\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 603 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+603                              \{
+604             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->BuildTime(); 
+605         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_adf61d7228fa5d665156d111be5a49d6f}{}\label{classCPlayerAsset_adf61d7228fa5d665156d111be5a49d6f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Capabilities@{Capabilities}}
+\index{Capabilities@{Capabilities}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Capabilities()}{Capabilities()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} $>$ C\+Player\+Asset\+::\+Capabilities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 679 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+679                                                               \{
+680             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Capabilities();  
+681         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ab67080b147a98db2cf379870cedbca2d}{}\label{classCPlayerAsset_ab67080b147a98db2cf379870cedbca2d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Change\+Type@{Change\+Type}}
+\index{Change\+Type@{Change\+Type}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Change\+Type()}{ChangeType()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Change\+Type (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 567 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+567                                                                \{
+568             \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType} = type;
+569         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ad4b1ea5ddba1c2b5dbee5ee5015e193b}{}\label{classCPlayerAsset_ad4b1ea5ddba1c2b5dbee5ee5015e193b} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Clear\+Command@{Clear\+Command}}
+\index{Clear\+Command@{Clear\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Clear\+Command()}{ClearCommand()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Clear\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 482 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+482                            \{
+483             \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.clear();  
+484         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a67e700ce77122894c02da584dd652767}{}\label{classCPlayerAsset_a67e700ce77122894c02da584dd652767} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Closest\+Position@{Closest\+Position}}
+\index{Closest\+Position@{Closest\+Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Closest\+Position()}{ClosestPosition()}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+Closest\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 762 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+762                                                                  \{
+763     \textcolor{keywordflow}{return} pos.\hyperlink{classCPosition_a91fd43eeb2c894bcb7577ae87247b726}{ClosestPosition}(\hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}, \hyperlink{classCPlayerAsset_a85a9e2ce62f557e93219676117159fec}{Size}());
+764 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a67e700ce77122894c02da584dd652767_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a969e6e60c6343186d2b9a6cddd6654f8}{}\label{classCPlayerAsset_a969e6e60c6343186d2b9a6cddd6654f8} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Color@{Color}}
+\index{Color@{Color}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Player\+Asset\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 571 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+571                                   \{
+572             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Color();  
+573         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a969e6e60c6343186d2b9a6cddd6654f8_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a5349f1cee794bd34f2255aa6b3177344}{}\label{classCPlayerAsset_a5349f1cee794bd34f2255aa6b3177344} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Command\+Count@{Command\+Count}}
+\index{Command\+Count@{Command\+Count}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Command\+Count()}{CommandCount()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Command\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 478 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+478                                 \{
+479             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.size();  
+480         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ab1667cc26c3439f868708af9d0fc1bda}{}\label{classCPlayerAsset_ab1667cc26c3439f868708af9d0fc1bda} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Creation\+Cycle@{Creation\+Cycle}}
+\index{Creation\+Cycle@{Creation\+Cycle}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Creation\+Cycle()}{CreationCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Creation\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 352 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+352                                  \{
+353             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d}{DCreationCycle};
+354         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a101a234ccd90537c2900cde093bc8708}{}\label{classCPlayerAsset_a101a234ccd90537c2900cde093bc8708} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Creation\+Cycle@{Creation\+Cycle}}
+\index{Creation\+Cycle@{Creation\+Cycle}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Creation\+Cycle()}{CreationCycle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Creation\+Cycle (\begin{DoxyParamCaption}\item[{int}]{cycle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 356 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+356                                     \{
+357             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d}{DCreationCycle} = cycle;  
+358         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ae2040e12e5319593c9a2d724c7b7eda0}{}\label{classCPlayerAsset_ae2040e12e5319593c9a2d724c7b7eda0} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Current\+Command@{Current\+Command}}
+\index{Current\+Command@{Current\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Current\+Command()}{CurrentCommand()}}
+{\footnotesize\ttfamily \hyperlink{structSAssetCommand}{S\+Asset\+Command} C\+Player\+Asset\+::\+Current\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 500 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+500                                             \{
+501             \textcolor{keywordflow}{if}(!\hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.empty())\{
+502                 \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.back();
+503             \}
+504             \hyperlink{structSAssetCommand}{SAssetCommand} RetVal;
+505             RetVal.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone};
+506             \textcolor{keywordflow}{return} RetVal;
+507         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_ae2040e12e5319593c9a2d724c7b7eda0_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_ab29218b9af24ca9db186ee36f75ae7d4}{}\label{classCPlayerAsset_ab29218b9af24ca9db186ee36f75ae7d4} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Decrement\+Gold@{Decrement\+Gold}}
+\index{Decrement\+Gold@{Decrement\+Gold}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Decrement\+Gold()}{DecrementGold()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Decrement\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 397 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+397                                    \{
+398             \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold} -= gold;
+399             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold};
+400         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a34aa2679bb9d5d2d46774b8e7210fe53}{}\label{classCPlayerAsset_a34aa2679bb9d5d2d46774b8e7210fe53} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Decrement\+Hit\+Points@{Decrement\+Hit\+Points}}
+\index{Decrement\+Hit\+Points@{Decrement\+Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Decrement\+Hit\+Points()}{DecrementHitPoints()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Decrement\+Hit\+Points (\begin{DoxyParamCaption}\item[{int}]{hitpts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 376 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+376                                           \{
+377             \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} -= hitpts;
+378             \textcolor{keywordflow}{if}(0 > \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints})\{
+379                 \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} = 0;   
+380             \}
+381             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints};
+382         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a95f968ddfe0ec332764a730bced03834}{}\label{classCPlayerAsset_a95f968ddfe0ec332764a730bced03834} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Decrement\+Lumber@{Decrement\+Lumber}}
+\index{Decrement\+Lumber@{Decrement\+Lumber}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Decrement\+Lumber()}{DecrementLumber()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Decrement\+Lumber (\begin{DoxyParamCaption}\item[{int}]{lumber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 415 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+415                                        \{
+416             \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber} -= lumber;
+417             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber};
+418         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_add74a452e9a030ae0d04d4281d964935}{}\label{classCPlayerAsset_add74a452e9a030ae0d04d4281d964935} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Direction@{Direction}}
+\index{Direction@{Direction}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Direction()}{Direction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} C\+Player\+Asset\+::\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 547 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+547                                     \{
+548             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection};
+549         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_add74a452e9a030ae0d04d4281d964935_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_abda0d14d43b52315a40defa0a6a2440f}{}\label{classCPlayerAsset_abda0d14d43b52315a40defa0a6a2440f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Direction@{Direction}}
+\index{Direction@{Direction}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Direction()}{Direction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} C\+Player\+Asset\+::\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 551 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+551                                                   \{
+552             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection} = direction;
+553         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a1bceaff561a420eaa8924eeb421fd594}{}\label{classCPlayerAsset_a1bceaff561a420eaa8924eeb421fd594} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Armor@{Effective\+Armor}}
+\index{Effective\+Armor@{Effective\+Armor}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Armor()}{EffectiveArmor()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Armor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 651 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+651                                   \{
+652             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a3de4826a7d7e8d2c5fd325ec736567ab}{Armor}() + \hyperlink{classCPlayerAsset_a1312cb77efe2cf732cc255a8345e7c44}{ArmorUpgrade}();
+653         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a13b40b2b670c86fb2d1f319837eca2da}{}\label{classCPlayerAsset_a13b40b2b670c86fb2d1f319837eca2da} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Basic\+Damage@{Effective\+Basic\+Damage}}
+\index{Effective\+Basic\+Damage@{Effective\+Basic\+Damage}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Basic\+Damage()}{EffectiveBasicDamage()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Basic\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 663 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+663                                         \{
+664             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a17dcdcd436e6edfab325bc4dbca4f03c}{BasicDamage}() + \hyperlink{classCPlayerAsset_affad00c05e4a1325601f2dc23df1cf05}{BasicDamageUpgrade}();
+665         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a180f67342aa933dbf0918759714858e3}{}\label{classCPlayerAsset_a180f67342aa933dbf0918759714858e3} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Piercing\+Damage@{Effective\+Piercing\+Damage}}
+\index{Effective\+Piercing\+Damage@{Effective\+Piercing\+Damage}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Piercing\+Damage()}{EffectivePiercingDamage()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Piercing\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 667 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+667                                            \{
+668             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a1949069b1bec611fdfa74488a3d6864f}{PiercingDamage}() + \hyperlink{classCPlayerAsset_af7403a6a0eab4eaedd2b04d66e21d601}{PiercingDamageUpgrade}();
+669         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_af2a2747655729e3a58586f28ddd7cd8d}{}\label{classCPlayerAsset_af2a2747655729e3a58586f28ddd7cd8d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Range@{Effective\+Range}}
+\index{Effective\+Range@{Effective\+Range}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Range()}{EffectiveRange()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 671 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+671                                   \{
+672             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a717695212dd7159bd0b6e97d4ae5cf9b}{Range}() + \hyperlink{classCPlayerAsset_aad35da7eb13a1d5830471a0f6de5090e}{RangeUpgrade}();
+673         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a69a1226429ded98b31fde2623d0058bf}{}\label{classCPlayerAsset_a69a1226429ded98b31fde2623d0058bf} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Sight@{Effective\+Sight}}
+\index{Effective\+Sight@{Effective\+Sight}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Sight()}{EffectiveSight()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Sight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 655 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+655                                   \{
+656             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ac732622598cbd05dd2ec9233468e2b07}{Sight}() + \hyperlink{classCPlayerAsset_aaa297dbacfa25d61ce2b3498ed139c5b}{SightUpgrade}();
+657         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_af6d10fcbbd9cc861ced9ba3a85d387ab}{}\label{classCPlayerAsset_af6d10fcbbd9cc861ced9ba3a85d387ab} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Effective\+Speed@{Effective\+Speed}}
+\index{Effective\+Speed@{Effective\+Speed}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Effective\+Speed()}{EffectiveSpeed()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Effective\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 659 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+659                                   \{
+660             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed}() + \hyperlink{classCPlayerAsset_a6b6b17c9d4b1fe095120032bee4977af}{SpeedUpgrade}();
+661         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a92dcc002f1349cc41c7870495484a442}{}\label{classCPlayerAsset_a92dcc002f1349cc41c7870495484a442} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Enqueue\+Command@{Enqueue\+Command}}
+\index{Enqueue\+Command@{Enqueue\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Enqueue\+Command()}{EnqueueCommand()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Enqueue\+Command (\begin{DoxyParamCaption}\item[{const \hyperlink{structSAssetCommand}{S\+Asset\+Command} \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 490 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+490                                                          \{
+491             \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.insert(\hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.begin(),command);
+492         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ab95c988b7c13ed8c686da8f354d120f4}{}\label{classCPlayerAsset_ab95c988b7c13ed8c686da8f354d120f4} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Food\+Consumption@{Food\+Consumption}}
+\index{Food\+Consumption@{Food\+Consumption}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Food\+Consumption()}{FoodConsumption()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Food\+Consumption (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 599 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+599                                    \{
+600             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->FoodConsumption(); 
+601         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a03ee2a60c0d332675b4b30573b96d64f}{}\label{classCPlayerAsset_a03ee2a60c0d332675b4b30573b96d64f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Gold@{Gold}}
+\index{Gold@{Gold}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Gold()}{Gold()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Gold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 384 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+384                         \{
+385             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold};
+386         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a97976cb3f9db851ecaf2a78c268dce32}{}\label{classCPlayerAsset_a97976cb3f9db851ecaf2a78c268dce32} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Gold@{Gold}}
+\index{Gold@{Gold}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Gold()}{Gold()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 388 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+388                           \{
+389             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold} = gold;
+390         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aa27a1ef30ef9f6a0452f7eeea6ae9516}{}\label{classCPlayerAsset_aa27a1ef30ef9f6a0452f7eeea6ae9516} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Gold\+Cost@{Gold\+Cost}}
+\index{Gold\+Cost@{Gold\+Cost}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Gold\+Cost()}{GoldCost()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Gold\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 591 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+591                             \{
+592             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->GoldCost(); 
+593         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_acd64c8a11af0f9d17b232d3e1e85dda1}{}\label{classCPlayerAsset_acd64c8a11af0f9d17b232d3e1e85dda1} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Has\+Action@{Has\+Action}}
+\index{Has\+Action@{Has\+Action}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Has\+Action()}{HasAction()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Has\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action}}]{action }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 525 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+525                                                  \{
+526             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Command : \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands})\{
+527                 \textcolor{keywordflow}{if}(action == Command.DAction)\{
+528                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};   
+529                 \}
+530             \}
+531             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+532         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a6502fe94b663fb3729086ffad530d5ca}{}\label{classCPlayerAsset_a6502fe94b663fb3729086ffad530d5ca} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Has\+Active\+Capability@{Has\+Active\+Capability}}
+\index{Has\+Active\+Capability@{Has\+Active\+Capability}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Has\+Active\+Capability()}{HasActiveCapability()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Has\+Active\+Capability (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{capability }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 534 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+534                                                                        \{
+535             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Command : \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands})\{
+536                 \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability} == Command.DAction)\{
+537                     \textcolor{keywordflow}{if}(capability == Command.DCapability)\{
+538                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+539                     \}
+540                 \}
+541             \}
+542             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+543         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ac01bc82d9b4cc54a72cb092fa1368663}{}\label{classCPlayerAsset_ac01bc82d9b4cc54a72cb092fa1368663} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Has\+Capability@{Has\+Capability}}
+\index{Has\+Capability@{Has\+Capability}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Has\+Capability()}{HasCapability()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Has\+Capability (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{capability }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 675 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+675                                                                  \{
+676             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->HasCapability(capability);  
+677         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a605862c6f6e57a2c6e21030d716485bd}{}\label{classCPlayerAsset_a605862c6f6e57a2c6e21030d716485bd} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Hit\+Points@{Hit\+Points}}
+\index{Hit\+Points@{Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Hit\+Points()}{HitPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Hit\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 360 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+360                              \{
+361             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints};
+362         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a5da6f77ba278109e159d392035f4e1dd}{}\label{classCPlayerAsset_a5da6f77ba278109e159d392035f4e1dd} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Hit\+Points@{Hit\+Points}}
+\index{Hit\+Points@{Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Hit\+Points()}{HitPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Hit\+Points (\begin{DoxyParamCaption}\item[{int}]{hitpts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 364 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+364                                  \{
+365             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} = hitpts;
+366         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_afe41876166e7a3ad8d3d5465595d3de7}{}\label{classCPlayerAsset_afe41876166e7a3ad8d3d5465595d3de7} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Increment\+Gold@{Increment\+Gold}}
+\index{Increment\+Gold@{Increment\+Gold}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Increment\+Gold()}{IncrementGold()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Increment\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 392 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+392                                    \{
+393             \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold} += gold;
+394             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{DGold};
+395         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a101767304149c0d1c1b0b88cf8e09b36}{}\label{classCPlayerAsset_a101767304149c0d1c1b0b88cf8e09b36} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Increment\+Hit\+Points@{Increment\+Hit\+Points}}
+\index{Increment\+Hit\+Points@{Increment\+Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Increment\+Hit\+Points()}{IncrementHitPoints()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Increment\+Hit\+Points (\begin{DoxyParamCaption}\item[{int}]{hitpts }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 368 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+368                                           \{
+369             \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} += hitpts;
+370             \textcolor{keywordflow}{if}(\hyperlink{classCPlayerAsset_a119a30dbc2a8e4369b9525aca812618c}{MaxHitPoints}() < \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints})\{
+371                 \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints} = \hyperlink{classCPlayerAsset_a119a30dbc2a8e4369b9525aca812618c}{MaxHitPoints}();   
+372             \}
+373             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{DHitPoints};
+374         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a12855b5c0cddb6b72e5ecba92ae77223}{}\label{classCPlayerAsset_a12855b5c0cddb6b72e5ecba92ae77223} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Increment\+Lumber@{Increment\+Lumber}}
+\index{Increment\+Lumber@{Increment\+Lumber}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Increment\+Lumber()}{IncrementLumber()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Increment\+Lumber (\begin{DoxyParamCaption}\item[{int}]{lumber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 410 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+410                                        \{
+411             \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber} += lumber;
+412             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber};
+413         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aa1d39b408fd5aa11f2c3a19ef4d3895d}{}\label{classCPlayerAsset_aa1d39b408fd5aa11f2c3a19ef4d3895d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Increment\+Step@{Increment\+Step}}
+\index{Increment\+Step@{Increment\+Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Increment\+Step()}{IncrementStep()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Increment\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 432 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+432                             \{
+433             \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{DStep}++;    
+434         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_aa1d39b408fd5aa11f2c3a19ef4d3895d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a927a79955847918fa2807d37374b4fb6}{}\label{classCPlayerAsset_a927a79955847918fa2807d37374b4fb6} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Interruptible@{Interruptible}}
+\index{Interruptible@{Interruptible}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Interruptible()}{Interruptible()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Interruptible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 766 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+766                                       \{
+767     \hyperlink{structSAssetCommand}{SAssetCommand} Command = \hyperlink{classCPlayerAsset_ae2040e12e5319593c9a2d724c7b7eda0}{CurrentCommand}();
+768     
+769     \textcolor{keywordflow}{switch}(Command.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction})\{
+770         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct}:
+771         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a02b95b7163284c6e80c9008073d8480d}{aaBuild}:
+772         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold}:
+773         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{aaConveyLumber}:
+774         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{aaConveyGold}:
+775         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a917cb474275eadda79115015ef00d5df}{aaDeath}:
+776         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a5529d58a84a26b10744433d7bf171451}{aaDecay}:       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+777         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability}:  \textcolor{keywordflow}{if}(Command.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget})\{
+778                                 \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Command.
+      \hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget}->Action();  
+779                             \}
+780         \textcolor{keywordflow}{default}:            \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+781     \}
+782 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a927a79955847918fa2807d37374b4fb6_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_aeaf2bc68dac6348ef48c2c49703325ad}{}\label{classCPlayerAsset_aeaf2bc68dac6348ef48c2c49703325ad} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Lumber@{Lumber}}
+\index{Lumber@{Lumber}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Lumber()}{Lumber()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Lumber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 402 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+402                           \{
+403             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber};
+404         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a66a1a78326ba5d6e2892920cbfddebc6}{}\label{classCPlayerAsset_a66a1a78326ba5d6e2892920cbfddebc6} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Lumber@{Lumber}}
+\index{Lumber@{Lumber}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Lumber()}{Lumber()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Lumber (\begin{DoxyParamCaption}\item[{int}]{lumber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 406 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+406                               \{
+407             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{DLumber} = lumber;
+408         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_add6700156ae77b23fcb8fa7831f897d8}{}\label{classCPlayerAsset_add6700156ae77b23fcb8fa7831f897d8} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Lumber\+Cost@{Lumber\+Cost}}
+\index{Lumber\+Cost@{Lumber\+Cost}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Lumber\+Cost()}{LumberCost()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Lumber\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 595 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+595                               \{
+596             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->LumberCost(); 
+597         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a119a30dbc2a8e4369b9525aca812618c}{}\label{classCPlayerAsset_a119a30dbc2a8e4369b9525aca812618c} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Max\+Hit\+Points@{Max\+Hit\+Points}}
+\index{Max\+Hit\+Points@{Max\+Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Max\+Hit\+Points()}{MaxHitPoints()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Max\+Hit\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 555 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+555                                 \{
+556             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->HitPoints();
+557         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a4c8ef6c0049b48045c2ba95d398dbc05}{}\label{classCPlayerAsset_a4c8ef6c0049b48045c2ba95d398dbc05} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Move\+Step@{Move\+Step}}
+\index{Move\+Step@{Move\+Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Move\+Step()}{MoveStep()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Move\+Step (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ $>$ \&}]{occupancymap,  }\item[{std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+
+
+Definition at line 784 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+784                                                                                                            
+                                      \{
+785     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection} CurrentOctant = \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a6acbc9445751b0a040c2971720f00088}{TileOctant}();
+786     \textcolor{keyword}{const} \textcolor{keywordtype}{int} DeltaX[] = \{0, 5, 7, 5, 0, -5, -7, -5\};
+787     \textcolor{keyword}{const} \textcolor{keywordtype}{int} DeltaY[] = \{-7, -5, 0, 5, 7, 5, 0, -5\};
+788     \hyperlink{classCPosition}{CPosition} CurrentTile(\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}), CurrentPosition(
+      \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition});
+789     
+790     \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax} == CurrentOctant)||(CurrentOctant == \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection}))\{\textcolor{comment}{// Aligned just move}
+791         \textcolor{keywordtype}{int} NewX = \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed}() * DeltaX[\hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection}] * 
+      \hyperlink{classCPosition_a27a7a8b9a5541da0aa8d97d785650fb8}{CPosition::TileWidth}() + \hyperlink{classCPlayerAsset_aa57d93e239e9a80c362949f260471456}{DMoveRemainderX};
+792         \textcolor{keywordtype}{int} NewY = \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed}() * DeltaY[\hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection}] * 
+      \hyperlink{classCPosition_ac4f0edd9c9632f1bdca981ef5d9b71e5}{CPosition::TileHeight}() + \hyperlink{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e}{DMoveRemainderY};
+793         DMoveRemainderX = NewX % \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor};
+794         DMoveRemainderY = NewY % \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor};
+795         \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_aa5955d67d5ab7ca74d80cb7303b6eaa9}{IncrementX}(NewX / \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor});
+796         \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a3f2a26798bb27b1252ff1be303b3adfc}{IncrementY}(NewY / \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor});
+797     \}
+798     \textcolor{keywordflow}{else}\{ \textcolor{comment}{// Entering}
+799         \textcolor{keywordtype}{int} NewX = \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed}() * DeltaX[\hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection}] * 
+      \hyperlink{classCPosition_a27a7a8b9a5541da0aa8d97d785650fb8}{CPosition::TileWidth}() + \hyperlink{classCPlayerAsset_aa57d93e239e9a80c362949f260471456}{DMoveRemainderX};
+800         \textcolor{keywordtype}{int} NewY = \hyperlink{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{Speed}() * DeltaY[\hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection}] * 
+      \hyperlink{classCPosition_ac4f0edd9c9632f1bdca981ef5d9b71e5}{CPosition::TileHeight}() + \hyperlink{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e}{DMoveRemainderY};
+801         \textcolor{keywordtype}{int} TempMoveRemainderX = NewX % \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor};
+802         \textcolor{keywordtype}{int} TempMoveRemainderY = NewY % \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor};
+803         \hyperlink{classCPosition}{CPosition} NewPosition(\hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + NewX / 
+      \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor}, \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + NewY / \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor});
+804         
+805         \textcolor{keywordflow}{if}(NewPosition.TileOctant() == \hyperlink{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{DDirection})\{
+806             NewPosition.\hyperlink{classCPosition_ae302aa21792de64c97de29e2cbbfeb94}{SetToTile}(NewPosition);
+807             NewPosition.SetFromTile(NewPosition);
+808             TempMoveRemainderX = TempMoveRemainderY = 0;
+809         \}
+810         \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition} = NewPosition;
+811         DMoveRemainderX = TempMoveRemainderX;
+812         DMoveRemainderY = TempMoveRemainderY;
+813     \}
+814     \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_ae302aa21792de64c97de29e2cbbfeb94}{SetToTile}(\hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition});
+815     \textcolor{keywordflow}{if}(CurrentTile != \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition})\{
+816         \textcolor{keywordtype}{bool} Diagonal = (CurrentTile.X() != \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()) && (CurrentTile.Y() != 
+      \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}());
+817         \textcolor{keywordtype}{int} DiagonalX = \hyperlink{PlayerAsset_8cpp_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}(CurrentTile.X(), \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}());
+818         \textcolor{keywordtype}{int} DiagonalY = \hyperlink{PlayerAsset_8cpp_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}(CurrentTile.Y(), \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}());
+819         
+820         \textcolor{keywordflow}{if}(occupancymap[\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}()][\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.
+      \hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()] || (Diagonal && diagonals[DiagonalY][DiagonalX]))\{
+821             \textcolor{keywordtype}{bool} ReturnValue = \textcolor{keyword}{false};
+822             \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276}{aaWalk} == occupancymap[\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}()][
+      \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()]->Action())\{
+823                 ReturnValue = occupancymap[\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}()][
+      \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()]->Direction() == CurrentPosition.TileOctant();
+824             \}
+825             \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition} = CurrentTile;
+826             \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition} = CurrentPosition;
+827             \textcolor{keywordflow}{return} ReturnValue;
+828         \}
+829         \textcolor{keywordflow}{if}(Diagonal)\{
+830             diagonals[DiagonalY][DiagonalX] = \textcolor{keyword}{true};
+831         \}
+832         occupancymap[\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}()][\hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.
+      \hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()] = occupancymap[CurrentTile.Y()][CurrentTile.X()];
+833         occupancymap[CurrentTile.Y()][CurrentTile.X()] = \textcolor{keyword}{nullptr};
+834     \}
+835     
+836     \hyperlink{classCPlayerAsset_aa1d39b408fd5aa11f2c3a19ef4d3895d}{IncrementStep}();
+837     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+838 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a4c8ef6c0049b48045c2ba95d398dbc05_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_aa7723b668d4278f23eb28ca8b6043192}{}\label{classCPlayerAsset_aa7723b668d4278f23eb28ca8b6043192} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Next\+Command@{Next\+Command}}
+\index{Next\+Command@{Next\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Next\+Command()}{NextCommand()}}
+{\footnotesize\ttfamily \hyperlink{structSAssetCommand}{S\+Asset\+Command} C\+Player\+Asset\+::\+Next\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 509 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+509                                          \{
+510             \textcolor{keywordflow}{if}(1 < \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.size())\{
+511                 \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}[\hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.size() - 2];
+512             \}
+513             \hyperlink{structSAssetCommand}{SAssetCommand} RetVal;
+514             RetVal.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone};
+515             \textcolor{keywordflow}{return} RetVal;
+516         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a1949069b1bec611fdfa74488a3d6864f}{}\label{classCPlayerAsset_a1949069b1bec611fdfa74488a3d6864f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Piercing\+Damage@{Piercing\+Damage}}
+\index{Piercing\+Damage@{Piercing\+Damage}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Piercing\+Damage()}{PiercingDamage()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Piercing\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 619 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+619                                   \{
+620             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->PiercingDamage(); 
+621         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_af7403a6a0eab4eaedd2b04d66e21d601}{}\label{classCPlayerAsset_af7403a6a0eab4eaedd2b04d66e21d601} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Piercing\+Damage\+Upgrade@{Piercing\+Damage\+Upgrade}}
+\index{Piercing\+Damage\+Upgrade@{Piercing\+Damage\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Piercing\+Damage\+Upgrade()}{PiercingDamageUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Piercing\+Damage\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 643 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+643                                          \{
+644             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->PiercingDamageUpgrade();
+645         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ae443fc4aa41aaa71d1d553f2ca9d9999}{}\label{classCPlayerAsset_ae443fc4aa41aaa71d1d553f2ca9d9999} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Pop\+Command@{Pop\+Command}}
+\index{Pop\+Command@{Pop\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Pop\+Command()}{PopCommand()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Pop\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 494 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+494                          \{
+495             \textcolor{keywordflow}{if}(!\hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.empty())\{
+496                 \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.pop\_back();
+497             \}
+498         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aed5b55f9b2f2771ebac193275d378799}{}\label{classCPlayerAsset_aed5b55f9b2f2771ebac193275d378799} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Position@{Position}}
+\index{Position@{Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 454 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+454                                   \{
+455             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition};  
+456         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a8c3ed4ab81f79aa28faec6bf790a0a79}{}\label{classCPlayerAsset_a8c3ed4ab81f79aa28faec6bf790a0a79} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Position@{Position}}
+\index{Position@{Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 747 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+747                                                     \{
+748     \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_ae302aa21792de64c97de29e2cbbfeb94}{SetToTile}(pos);
+749     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition} = pos;
+750 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a8c3ed4ab81f79aa28faec6bf790a0a79_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a9cf8961ac97f2928d1e08bc4f311f220}{}\label{classCPlayerAsset_a9cf8961ac97f2928d1e08bc4f311f220} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position\+X()}{PositionX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 464 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+464                              \{
+465             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}();  
+466         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classCPlayerAsset_a9cf8961ac97f2928d1e08bc4f311f220_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a9cf8961ac97f2928d1e08bc4f311f220_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a3b0981638b2e86e1ffb211365db26b41}{}\label{classCPlayerAsset_a3b0981638b2e86e1ffb211365db26b41} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!PositionX@{PositionX}}
+\index{PositionX@{PositionX}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position\+X()}{PositionX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+PositionX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 752 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+752                                 \{
+753     \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a12795d06d34e608697b7b4c9bf202a10}{SetXToTile}(x);
+754     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(x);
+755 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a3b0981638b2e86e1ffb211365db26b41_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a4f70846298e9951489ef138847c268a5}{}\label{classCPlayerAsset_a4f70846298e9951489ef138847c268a5} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position\+Y()}{PositionY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 470 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+470                              \{
+471             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}();  
+472         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classCPlayerAsset_a4f70846298e9951489ef138847c268a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a4f70846298e9951489ef138847c268a5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a497fe719ca97252f0ee7985e0e30518e}{}\label{classCPlayerAsset_a497fe719ca97252f0ee7985e0e30518e} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!PositionY@{PositionY}}
+\index{PositionY@{PositionY}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Position\+Y()}{PositionY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+PositionY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 757 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+757                                 \{
+758     \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a5805485f623398197ac595a5d389f691}{SetYToTile}(y);
+759     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(y);
+760 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a497fe719ca97252f0ee7985e0e30518e_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_ab7421ec7906d36f028484ff518cc3c90}{}\label{classCPlayerAsset_ab7421ec7906d36f028484ff518cc3c90} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Push\+Command@{Push\+Command}}
+\index{Push\+Command@{Push\+Command}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Push\+Command()}{PushCommand()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Push\+Command (\begin{DoxyParamCaption}\item[{const \hyperlink{structSAssetCommand}{S\+Asset\+Command} \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 486 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+486                                                       \{
+487             \hyperlink{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{DCommands}.push\_back(command);
+488         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a717695212dd7159bd0b6e97d4ae5cf9b}{}\label{classCPlayerAsset_a717695212dd7159bd0b6e97d4ae5cf9b} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Range@{Range}}
+\index{Range@{Range}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Range()}{Range()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 623 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+623                          \{
+624             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Range(); 
+625         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aad35da7eb13a1d5830471a0f6de5090e}{}\label{classCPlayerAsset_aad35da7eb13a1d5830471a0f6de5090e} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Range\+Upgrade@{Range\+Upgrade}}
+\index{Range\+Upgrade@{Range\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Range\+Upgrade()}{RangeUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Range\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 647 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+647                                 \{
+648             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->RangeUpgrade();
+649         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a0c696a50d23ee7fb3fcfbf7e696c739f}{}\label{classCPlayerAsset_a0c696a50d23ee7fb3fcfbf7e696c739f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Reload\+Steps@{Reload\+Steps}}
+\index{Reload\+Steps@{Reload\+Steps}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Reload\+Steps()}{ReloadSteps()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Reload\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 611 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+611                                \{
+612             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->ReloadSteps();
+613         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ae94600f78d050944f4d93dcbbf8c0ee0}{}\label{classCPlayerAsset_ae94600f78d050944f4d93dcbbf8c0ee0} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Reset\+Step@{Reset\+Step}}
+\index{Reset\+Step@{Reset\+Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Reset\+Step()}{ResetStep()}}
+{\footnotesize\ttfamily void C\+Player\+Asset\+::\+Reset\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 428 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+428                         \{
+429             \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{DStep} = 0;  
+430         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_ac732622598cbd05dd2ec9233468e2b07}{}\label{classCPlayerAsset_ac732622598cbd05dd2ec9233468e2b07} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Sight@{Sight}}
+\index{Sight@{Sight}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Sight()}{Sight()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Sight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 579 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+579                          \{
+580             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} == \hyperlink{classCPlayerAsset_ad9a1fdc2ca221636ccab01891ea1f951}{Action}() ? \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->ConstructionSight() : 
+      \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Sight();  
+581         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aaa297dbacfa25d61ce2b3498ed139c5b}{}\label{classCPlayerAsset_aaa297dbacfa25d61ce2b3498ed139c5b} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Sight\+Upgrade@{Sight\+Upgrade}}
+\index{Sight\+Upgrade@{Sight\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Sight\+Upgrade()}{SightUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Sight\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 631 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+631                                 \{
+632             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->SightUpgrade();
+633         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a85a9e2ce62f557e93219676117159fec}{}\label{classCPlayerAsset_a85a9e2ce62f557e93219676117159fec} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Size@{Size}}
+\index{Size@{Size}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 583 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+583                         \{
+584             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Size(); 
+585         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a85a9e2ce62f557e93219676117159fec_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5}{}\label{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Speed@{Speed}}
+\index{Speed@{Speed}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Speed()}{Speed()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 587 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+587                          \{
+588             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Speed(); 
+589         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_af1c093600f1567e3abf1cefc0f5350d5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a6b6b17c9d4b1fe095120032bee4977af}{}\label{classCPlayerAsset_a6b6b17c9d4b1fe095120032bee4977af} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Speed\+Upgrade@{Speed\+Upgrade}}
+\index{Speed\+Upgrade@{Speed\+Upgrade}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Speed\+Upgrade()}{SpeedUpgrade()}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Speed\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 635 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+635                                 \{
+636             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->SpeedUpgrade();
+637         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_a787d4ac869cf7b5525b9a81f5d1bb5b1}{}\label{classCPlayerAsset_a787d4ac869cf7b5525b9a81f5d1bb5b1} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Step@{Step}}
+\index{Step@{Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Step()}{Step()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 420 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+420                         \{
+421             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{DStep};  
+422         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aaa8c5b62f8c2c3bf05443c88e1619517}{}\label{classCPlayerAsset_aaa8c5b62f8c2c3bf05443c88e1619517} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Step@{Step}}
+\index{Step@{Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Step()}{Step()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Step (\begin{DoxyParamCaption}\item[{int}]{step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 424 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+424                           \{
+425             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{DStep} = step;  
+426         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerAsset_aaaea60176986f3e4f464bf5cec056521}{}\label{classCPlayerAsset_aaaea60176986f3e4f464bf5cec056521} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+Aligned@{Tile\+Aligned}}
+\index{Tile\+Aligned@{Tile\+Aligned}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Aligned()}{TileAligned()}}
+{\footnotesize\ttfamily bool C\+Player\+Asset\+::\+Tile\+Aligned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 460 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+460                                 \{
+461             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_abe4ef039d9bbf51cd542167b5a0cd88e}{TileAligned}();  
+462         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_aaaea60176986f3e4f464bf5cec056521_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a23354232e5585574bc8e12c1fdb37ad9}{}\label{classCPlayerAsset_a23354232e5585574bc8e12c1fdb37ad9} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+Position@{Tile\+Position}}
+\index{Tile\+Position@{Tile\+Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position()}{TilePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+Tile\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 436 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+436                                       \{
+437             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition};  
+438         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a23354232e5585574bc8e12c1fdb37ad9_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a6d84105b6db136a6846fcaf80dba3747}{}\label{classCPlayerAsset_a6d84105b6db136a6846fcaf80dba3747} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+Position@{Tile\+Position}}
+\index{Tile\+Position@{Tile\+Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position()}{TilePosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+Tile\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 732 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+732                                                         \{
+733     \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(pos);
+734     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition} = pos;
+735 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a6d84105b6db136a6846fcaf80dba3747_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_aeabaa8fe7161cce571b6c4d2f7180085}{}\label{classCPlayerAsset_aeabaa8fe7161cce571b6c4d2f7180085} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+PositionX@{Tile\+PositionX}}
+\index{Tile\+PositionX@{Tile\+PositionX}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position\+X()}{TilePositionX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Tile\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 442 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+442                                  \{
+443             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}();  
+444         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classCPlayerAsset_aeabaa8fe7161cce571b6c4d2f7180085_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_aeabaa8fe7161cce571b6c4d2f7180085_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_ad3a0b4bafbfa9021b59925a5c3364cd5}{}\label{classCPlayerAsset_ad3a0b4bafbfa9021b59925a5c3364cd5} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+PositionX@{Tile\+PositionX}}
+\index{Tile\+PositionX@{Tile\+PositionX}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position\+X()}{TilePositionX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Tile\+PositionX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line 737 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+737                                     \{
+738     \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_ac6a1eeaeb98e20942efea7cf253b2ec4}{SetXFromTile}(x);
+739     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(x);
+740 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_ad3a0b4bafbfa9021b59925a5c3364cd5_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a189adb25bf0a45117a9c0bb36b45e6a4}{}\label{classCPlayerAsset_a189adb25bf0a45117a9c0bb36b45e6a4} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+PositionY@{Tile\+PositionY}}
+\index{Tile\+PositionY@{Tile\+PositionY}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position\+Y()}{TilePositionY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Tile\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 448 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+448                                  \{
+449             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}();  
+450         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classCPlayerAsset_a189adb25bf0a45117a9c0bb36b45e6a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a189adb25bf0a45117a9c0bb36b45e6a4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_ad3ce562cbd27e2c35abe968a7ff19cd6}{}\label{classCPlayerAsset_ad3ce562cbd27e2c35abe968a7ff19cd6} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Tile\+PositionY@{Tile\+PositionY}}
+\index{Tile\+PositionY@{Tile\+PositionY}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Tile\+Position\+Y()}{TilePositionY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Tile\+PositionY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line 742 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+742                                     \{
+743     \hyperlink{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{DPosition}.\hyperlink{classCPosition_a4be1caa5ce58297e9d371f6bc1db32d9}{SetYFromTile}(y);
+744     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{DTilePosition}.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(y);
+745 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_ad3ce562cbd27e2c35abe968a7ff19cd6_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a6d6aeea4e8b02e0f239bac95db6d9e0a}{}\label{classCPlayerAsset_a6d6aeea4e8b02e0f239bac95db6d9e0a} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Type@{Type}}
+\index{Type@{Type}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Type()}{Type()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} C\+Player\+Asset\+::\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 559 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+559                                \{
+560             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{DType}->Type();  
+561         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a6d6aeea4e8b02e0f239bac95db6d9e0a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f}{}\label{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Update\+Frequency@{Update\+Frequency}}
+\index{Update\+Frequency@{Update\+Frequency}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Update\+Frequency()}{UpdateFrequency()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static int C\+Player\+Asset\+::\+Update\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 342 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+342                                     \{
+343             \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{DUpdateFrequency};
+344         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerAsset_ad53a2f58bcbccb7995431e8e2d050c09}{}\label{classCPlayerAsset_ad53a2f58bcbccb7995431e8e2d050c09} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!Update\+Frequency@{Update\+Frequency}}
+\index{Update\+Frequency@{Update\+Frequency}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{Update\+Frequency()}{UpdateFrequency()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+Update\+Frequency (\begin{DoxyParamCaption}\item[{int}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 707 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+707                                          \{
+708     \textcolor{keywordflow}{if}(0 < freq)\{
+709        \hyperlink{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{DUpdateFrequency} = freq;
+710        \hyperlink{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{DUpdateDivisor} = 32 * \hyperlink{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{DUpdateFrequency};
+711     \}
+712     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{DUpdateFrequency};
+713 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87}{}\label{classCPlayerAsset_a4d3b96106d3b1c1020f98005884d2a87} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Commands@{D\+Commands}}
+\index{D\+Commands@{D\+Commands}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Commands}{DCommands}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structSAssetCommand}{S\+Asset\+Command} $>$ C\+Player\+Asset\+::\+D\+Commands\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 333 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d}{}\label{classCPlayerAsset_a8b0efb3ddc27ee11f331ade667bc4b0d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Creation\+Cycle@{D\+Creation\+Cycle}}
+\index{D\+Creation\+Cycle@{D\+Creation\+Cycle}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Creation\+Cycle}{DCreationCycle}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Creation\+Cycle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 323 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a2f07e280268d0402220c583d1029d683}{}\label{classCPlayerAsset_a2f07e280268d0402220c583d1029d683} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Direction@{D\+Direction}}
+\index{D\+Direction@{D\+Direction}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Direction}{DDirection}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} C\+Player\+Asset\+::\+D\+Direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 332 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292}{}\label{classCPlayerAsset_ab90ebdc73c6794fd44ddbe273f610292} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Gold@{D\+Gold}}
+\index{D\+Gold@{D\+Gold}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Gold}{DGold}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Gold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 325 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a331750935bf594e665544085fb74e89d}{}\label{classCPlayerAsset_a331750935bf594e665544085fb74e89d} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Hit\+Points@{D\+Hit\+Points}}
+\index{D\+Hit\+Points@{D\+Hit\+Points}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Hit\+Points}{DHitPoints}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Hit\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 324 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349}{}\label{classCPlayerAsset_af726ea7df9596f02cdb1428d61186349} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Lumber@{D\+Lumber}}
+\index{D\+Lumber@{D\+Lumber}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Lumber}{DLumber}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Lumber\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 326 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_aa57d93e239e9a80c362949f260471456}{}\label{classCPlayerAsset_aa57d93e239e9a80c362949f260471456} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Move\+RemainderX@{D\+Move\+RemainderX}}
+\index{D\+Move\+RemainderX@{D\+Move\+RemainderX}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Move\+RemainderX}{DMoveRemainderX}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Move\+RemainderX\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 328 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e}{}\label{classCPlayerAsset_a282502fea7d02e38aa40a538a9c1565e} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Move\+RemainderY@{D\+Move\+RemainderY}}
+\index{D\+Move\+RemainderY@{D\+Move\+RemainderY}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Move\+RemainderY}{DMoveRemainderY}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Move\+RemainderY\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 329 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c}{}\label{classCPlayerAsset_aa9f53c009b181c7c5647c6b03776a04c} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Position@{D\+Position}}
+\index{D\+Position@{D\+Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Position}{DPosition}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+D\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 331 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0}{}\label{classCPlayerAsset_a7964d2161d51b3edd66fbc9c59eba4b0} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Step@{D\+Step}}
+\index{D\+Step@{D\+Step}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Step}{DStep}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 327 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186}{}\label{classCPlayerAsset_a5b59a9d3b7db8c7fa194b80dafb96186} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Tile\+Position@{D\+Tile\+Position}}
+\index{D\+Tile\+Position@{D\+Tile\+Position}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Tile\+Position}{DTilePosition}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Asset\+::\+D\+Tile\+Position\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 330 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359}{}\label{classCPlayerAsset_a5d61f73471e1e6f0a6ab15f2ffa7b359} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Type@{D\+Type}}
+\index{D\+Type@{D\+Type}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Type}{DType}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ C\+Player\+Asset\+::\+D\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 334 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398}{}\label{classCPlayerAsset_a09d17faf2ad70e2f778095a3c314d398} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Update\+Divisor@{D\+Update\+Divisor}}
+\index{D\+Update\+Divisor@{D\+Update\+Divisor}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Update\+Divisor}{DUpdateDivisor}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Update\+Divisor = 32\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 336 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5}{}\label{classCPlayerAsset_ade2147d67ec25b0280d5f11a89dd0dc5} 
+\index{C\+Player\+Asset@{C\+Player\+Asset}!D\+Update\+Frequency@{D\+Update\+Frequency}}
+\index{D\+Update\+Frequency@{D\+Update\+Frequency}!C\+Player\+Asset@{C\+Player\+Asset}}
+\subsubsection{\texorpdfstring{D\+Update\+Frequency}{DUpdateFrequency}}
+{\footnotesize\ttfamily int C\+Player\+Asset\+::\+D\+Update\+Frequency = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 335 of file Player\+Asset.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{PlayerAsset_8h}{Player\+Asset.\+h}\item 
+src/\hyperlink{PlayerAsset_8cpp}{Player\+Asset.\+cpp}\end{DoxyCompactItemize}

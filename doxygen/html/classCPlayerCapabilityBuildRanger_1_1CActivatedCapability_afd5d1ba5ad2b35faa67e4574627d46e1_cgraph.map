@@ -1,0 +1,6 @@
+<map id="CPlayerCapabilityBuildRanger::CActivatedCapability::~CActivatedCapability" name="CPlayerCapabilityBuildRanger::CActivatedCapability::~CActivatedCapability">
+<area shape="rect" id="node2" href="$classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability.html#a16026f30b1ec10fbd4cb7049d0b74719" title="CPlayerCapabilityUnitUpgrade\l::CActivatedCapability::PercentComplete" alt="" coords="267,5,555,47"/>
+<area shape="rect" id="node3" href="$classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability.html#a86833312cb2f2460e923808fe0e19223" title="CPlayerCapabilityUnitUpgrade\l::CActivatedCapability::IncrementStep" alt="" coords="275,71,546,112"/>
+<area shape="rect" id="node5" href="$classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability.html#a29b41666081cf420e9f3b7d93c09920b" title="CPlayerCapabilityUnitUpgrade\l::CActivatedCapability::Cancel" alt="" coords="301,136,520,177"/>
+<area shape="rect" id="node4" href="$classCPlayerCapability.html#a920a696526e8a839f728192aea0ba1c5" title="CPlayerCapability::\lNameToType" alt="" coords="603,104,748,145"/>
+</map>

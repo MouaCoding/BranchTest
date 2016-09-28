@@ -1,0 +1,8 @@
+<map id="CAssetDecoratedMap::UpdateMap" name="CAssetDecoratedMap::UpdateMap">
+<area shape="rect" id="node2" href="$classCAssetDecoratedMap.html#a77f46be1ceb30bb83fc3f35c0d58a9a7" title="CAssetDecoratedMap\l::RemoveAsset" alt="" coords="222,5,385,47"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="653,97,756,123"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="653,147,756,174"/>
+<area shape="rect" id="node5" href="$classCVisibilityMap.html#a8517fe52114dd469093fd1bd13482733" title="CVisibilityMap::TileType" alt="" coords="216,122,391,149"/>
+<area shape="rect" id="node7" href="$classCAssetDecoratedMap.html#aaa798030159fd44251dd60aef9b00516" title="CAssetDecoratedMap\l::AddAsset" alt="" coords="222,224,385,265"/>
+<area shape="rect" id="node6" href="$classCVisibilityMap.html#a5ca9902ef0bc2714617719800e20aa19" title="CVisibilityMap::Update" alt="" coords="439,122,605,149"/>
+</map>

@@ -1,0 +1,180 @@
+\hypertarget{classCActivatedPlayerCapability}{}\section{C\+Activated\+Player\+Capability Class Reference}
+\label{classCActivatedPlayerCapability}\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+
+
+{\ttfamily \#include $<$Player\+Asset.\+h$>$}
+
+
+
+Inheritance diagram for C\+Activated\+Player\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classCActivatedPlayerCapability__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1}{C\+Activated\+Player\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)
+\item 
+virtual \hyperlink{classCActivatedPlayerCapability_a75845fda9554fb75644aae5a6c5f0084}{$\sim$\+C\+Activated\+Player\+Capability} ()
+\item 
+virtual int \hyperlink{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d}{Percent\+Complete} (int max)=0
+\item 
+virtual bool \hyperlink{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a}{Increment\+Step} ()=0
+\item 
+virtual void \hyperlink{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81}{Cancel} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{D\+Actor}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{D\+Player\+Data}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{D\+Target}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 29 of file Player\+Asset.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1}{}\label{classCActivatedPlayerCapability_a1ece00ffb6a7b925c84dd94a7407a0d1} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{C\+Activated\+Player\+Capability()}{CActivatedPlayerCapability()}}
+{\footnotesize\ttfamily C\+Activated\+Player\+Capability\+::\+C\+Activated\+Player\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+64                                                                                                            
+                                                                   \{
+65     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor} = actor;
+66     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData} = playerdata;
+67     \hyperlink{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{DTarget} = target;
+68 \}
+\end{DoxyCode}
+\hypertarget{classCActivatedPlayerCapability_a75845fda9554fb75644aae5a6c5f0084}{}\label{classCActivatedPlayerCapability_a75845fda9554fb75644aae5a6c5f0084} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!````~C\+Activated\+Player\+Capability@{$\sim$\+C\+Activated\+Player\+Capability}}
+\index{````~C\+Activated\+Player\+Capability@{$\sim$\+C\+Activated\+Player\+Capability}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Activated\+Player\+Capability()}{~CActivatedPlayerCapability()}}
+{\footnotesize\ttfamily virtual C\+Activated\+Player\+Capability\+::$\sim$\+C\+Activated\+Player\+Capability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 36 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+36 \{\};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCActivatedPlayerCapability_a75845fda9554fb75644aae5a6c5f0084_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81}{}\label{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily virtual void C\+Activated\+Player\+Capability\+::\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_1_1CActivatedCapability_a719cee3446291470987f504739f63215}{C\+Player\+Capability\+Repair\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityAttack_1_1CActivatedCapability_a0796fbda8a35b60a2320becfdf2b5c13}{C\+Player\+Capability\+Attack\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityPatrol_1_1CActivatedCapability_a36165c232eb283ce4a92bd4606480c73}{C\+Player\+Capability\+Patrol\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityConvey_1_1CActivatedCapability_ad84a94a1ae3647ea160e262a0154e229}{C\+Player\+Capability\+Convey\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityCancel_1_1CActivatedCapability_accd67b449574b6c99e21f522d13bc96a}{C\+Player\+Capability\+Cancel\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityStandGround_1_1CActivatedCapability_ac75cd8a26726adb60cf045f99059ca7d}{C\+Player\+Capability\+Stand\+Ground\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a46a5240502d6a8de65d3d56bbda8bf91}{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityMineHarvest_1_1CActivatedCapability_ab1fef064fbc085a6419b5a822e787614}{C\+Player\+Capability\+Mine\+Harvest\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CActivatedCapability_adca97e7f7611f4adfcfea615428dac0b}{C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability_a29b41666081cf420e9f3b7d93c09920b}{C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a7cc74f98f4071edfa75395d02d897fef}{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a028dc1f8c528cc726737d712f0236884}{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}, and \hyperlink{classCPlayerCapabilityMove_1_1CActivatedCapability_a6fe1e26646bd14e94ebf7abd0a41cdd3}{C\+Player\+Capability\+Move\+::\+C\+Activated\+Capability}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e28684a81_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a}{}\label{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!Increment\+Step@{Increment\+Step}}
+\index{Increment\+Step@{Increment\+Step}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Increment\+Step()}{IncrementStep()}}
+{\footnotesize\ttfamily virtual bool C\+Activated\+Player\+Capability\+::\+Increment\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_1_1CActivatedCapability_a5b5b42dbbda50b29e9f917df3cb0f650}{C\+Player\+Capability\+Repair\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityAttack_1_1CActivatedCapability_a6b772cbd6be96fbd9bf88380b143856c}{C\+Player\+Capability\+Attack\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityPatrol_1_1CActivatedCapability_a576a71646225c0723a0ed9e77add01fd}{C\+Player\+Capability\+Patrol\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityConvey_1_1CActivatedCapability_ac1bf251eca552885041b1bcefa594591}{C\+Player\+Capability\+Convey\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityCancel_1_1CActivatedCapability_a28351293b3a662bca20a2d666b8801e1}{C\+Player\+Capability\+Cancel\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityStandGround_1_1CActivatedCapability_ab4061171835e4c1008176e5765ded595}{C\+Player\+Capability\+Stand\+Ground\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a5fd10074c6b25ffb36401055ed90b70b}{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityMineHarvest_1_1CActivatedCapability_a46dbd6e2ae2fb889da1714c97ed3ca2f}{C\+Player\+Capability\+Mine\+Harvest\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CActivatedCapability_acc732144e87e5fc88117c0b3a032a97a}{C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability_a86833312cb2f2460e923808fe0e19223}{C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a19b9ba979e8deebcb2b7e4225af47d2e}{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_a201f09e738af96fba1a871e4ed00f18a}{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}, and \hyperlink{classCPlayerCapabilityMove_1_1CActivatedCapability_af4670890b462f59d24195db14aeb436d}{C\+Player\+Capability\+Move\+::\+C\+Activated\+Capability}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCActivatedPlayerCapability_a943b5999a57504399293250382c0ec6a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d}{}\label{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!Percent\+Complete@{Percent\+Complete}}
+\index{Percent\+Complete@{Percent\+Complete}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Percent\+Complete()}{PercentComplete()}}
+{\footnotesize\ttfamily virtual int C\+Activated\+Player\+Capability\+::\+Percent\+Complete (\begin{DoxyParamCaption}\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_1_1CActivatedCapability_a88276fec60e08b56daecfd14b36fe888}{C\+Player\+Capability\+Repair\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityAttack_1_1CActivatedCapability_a75866109b62de0522622b03137461519}{C\+Player\+Capability\+Attack\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityPatrol_1_1CActivatedCapability_a868e6583a55b01e5aa3b926ef14677bc}{C\+Player\+Capability\+Patrol\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityConvey_1_1CActivatedCapability_aec6b75fc004f4ac18755d8f601c8ffca}{C\+Player\+Capability\+Convey\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityCancel_1_1CActivatedCapability_a69d2fec27186cba11ab545560e7bf45d}{C\+Player\+Capability\+Cancel\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityStandGround_1_1CActivatedCapability_aa9bf1824e755460b699d81f866f2aadc}{C\+Player\+Capability\+Stand\+Ground\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a2e1c0859b129404fe1cc65bcdb187bad}{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityMineHarvest_1_1CActivatedCapability_ac198166a008306dc543ceed94baaf4a3}{C\+Player\+Capability\+Mine\+Harvest\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CActivatedCapability_afb2aab171773fa9f33539e33315c1c28}{C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityUnitUpgrade_1_1CActivatedCapability_a16026f30b1ec10fbd4cb7049d0b74719}{C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityBuildNormal_1_1CActivatedCapability_a40bf27f9dfe88ad17a51ebb12c078568}{C\+Player\+Capability\+Build\+Normal\+::\+C\+Activated\+Capability}, \hyperlink{classCPlayerCapabilityTrainNormal_1_1CActivatedCapability_ac0d2dd8e1b3aedb0873149ba4c92e6f7}{C\+Player\+Capability\+Train\+Normal\+::\+C\+Activated\+Capability}, and \hyperlink{classCPlayerCapabilityMove_1_1CActivatedCapability_a1696dd16d89d0978284a95dd1531d0d5}{C\+Player\+Capability\+Move\+::\+C\+Activated\+Capability}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCActivatedPlayerCapability_a405dc6076058006a4f801727de4cfe4d_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{}\label{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!D\+Actor@{D\+Actor}}
+\index{D\+Actor@{D\+Actor}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Actor}{DActor}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Activated\+Player\+Capability\+::\+D\+Actor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Player\+Asset.\+h.
+
+\hypertarget{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{}\label{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!D\+Player\+Data@{D\+Player\+Data}}
+\index{D\+Player\+Data@{D\+Player\+Data}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Player\+Data}{DPlayerData}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ C\+Activated\+Player\+Capability\+::\+D\+Player\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Player\+Asset.\+h.
+
+\hypertarget{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395}{}\label{classCActivatedPlayerCapability_a8a1cf50b6501bcfd55af0c935828e395} 
+\index{C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}!D\+Target@{D\+Target}}
+\index{D\+Target@{D\+Target}!C\+Activated\+Player\+Capability@{C\+Activated\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Target}{DTarget}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Activated\+Player\+Capability\+::\+D\+Target\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Player\+Asset.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{PlayerAsset_8h}{Player\+Asset.\+h}\item 
+src/\hyperlink{PlayerAsset_8cpp}{Player\+Asset.\+cpp}\end{DoxyCompactItemize}

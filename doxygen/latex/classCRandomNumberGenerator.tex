@@ -1,0 +1,144 @@
+\hypertarget{classCRandomNumberGenerator}{}\section{C\+Random\+Number\+Generator Class Reference}
+\label{classCRandomNumberGenerator}\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+
+
+{\ttfamily \#include $<$Random\+Number\+Generator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCRandomNumberGenerator_aca38d399d5d34b1fbe917aa4a2f5fd19}{C\+Random\+Number\+Generator} ()
+\item 
+void \hyperlink{classCRandomNumberGenerator_a9b6f52335ea93f1aaec4521c66806f39}{Seed} (uint64\+\_\+t seed)
+\item 
+void \hyperlink{classCRandomNumberGenerator_a2d7da1eb7f5886a113b0617276740f07}{Seed} (uint32\+\_\+t high, uint32\+\_\+t low)
+\item 
+uint32\+\_\+t \hyperlink{classCRandomNumberGenerator_aa7fc51bde5647d15df2f1b9826702ca2}{Random} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{D\+Random\+Seed\+High}
+\item 
+uint32\+\_\+t \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{D\+Random\+Seed\+Low}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file Random\+Number\+Generator.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCRandomNumberGenerator_aca38d399d5d34b1fbe917aa4a2f5fd19}{}\label{classCRandomNumberGenerator_aca38d399d5d34b1fbe917aa4a2f5fd19} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{C\+Random\+Number\+Generator()}{CRandomNumberGenerator()}}
+{\footnotesize\ttfamily C\+Random\+Number\+Generator\+::\+C\+Random\+Number\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file Random\+Number\+Generator.\+h.
+
+
+\begin{DoxyCode}
+27                                 \{
+28             \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} = 0x01234567;
+29             \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow} = 0x89ABCDEF;
+30         \};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCRandomNumberGenerator_aa7fc51bde5647d15df2f1b9826702ca2}{}\label{classCRandomNumberGenerator_aa7fc51bde5647d15df2f1b9826702ca2} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!Random@{Random}}
+\index{Random@{Random}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+Random\+Number\+Generator\+::\+Random (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 43 of file Random\+Number\+Generator.\+h.
+
+
+\begin{DoxyCode}
+43                          \{
+44             \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} = 36969 * (\hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} & 65535) + (
+      \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} >> 16);
+45             \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow} = 18000 * (\hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow} & 65535) + (
+      \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow} >> 16);
+46             \textcolor{keywordflow}{return} (\hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} << 16) + \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow};
+47         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCRandomNumberGenerator_aa7fc51bde5647d15df2f1b9826702ca2_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCRandomNumberGenerator_a9b6f52335ea93f1aaec4521c66806f39}{}\label{classCRandomNumberGenerator_a9b6f52335ea93f1aaec4521c66806f39} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!Seed@{Seed}}
+\index{Seed@{Seed}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{Seed()}{Seed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+Random\+Number\+Generator\+::\+Seed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file Random\+Number\+Generator.\+h.
+
+
+\begin{DoxyCode}
+32                                 \{
+33             \hyperlink{classCRandomNumberGenerator_a9b6f52335ea93f1aaec4521c66806f39}{Seed}(seed>>32, seed);
+34         \};
+\end{DoxyCode}
+\hypertarget{classCRandomNumberGenerator_a2d7da1eb7f5886a113b0617276740f07}{}\label{classCRandomNumberGenerator_a2d7da1eb7f5886a113b0617276740f07} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!Seed@{Seed}}
+\index{Seed@{Seed}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{Seed()}{Seed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Random\+Number\+Generator\+::\+Seed (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{high,  }\item[{uint32\+\_\+t}]{low }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Random\+Number\+Generator.\+h.
+
+
+\begin{DoxyCode}
+36                                               \{
+37             \textcolor{keywordflow}{if}((high != low) && low && high)\{
+38                 \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} = high;
+39                 \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow} = low;   
+40             \}
+41         \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{}\label{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!D\+Random\+Seed\+High@{D\+Random\+Seed\+High}}
+\index{D\+Random\+Seed\+High@{D\+Random\+Seed\+High}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{D\+Random\+Seed\+High}{DRandomSeedHigh}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+Random\+Number\+Generator\+::\+D\+Random\+Seed\+High\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Random\+Number\+Generator.\+h.
+
+\hypertarget{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{}\label{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd} 
+\index{C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}!D\+Random\+Seed\+Low@{D\+Random\+Seed\+Low}}
+\index{D\+Random\+Seed\+Low@{D\+Random\+Seed\+Low}!C\+Random\+Number\+Generator@{C\+Random\+Number\+Generator}}
+\subsubsection{\texorpdfstring{D\+Random\+Seed\+Low}{DRandomSeedLow}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+Random\+Number\+Generator\+::\+D\+Random\+Seed\+Low\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Random\+Number\+Generator.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{RandomNumberGenerator_8h}{Random\+Number\+Generator.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="CApplicationData::RenderMapSelectMode" name="CApplicationData::RenderMapSelectMode">
+<area shape="rect" id="node2" href="$classCApplicationData.html#a548c5924a281c7e226fd7cac44e59920" title="CApplicationData::Render\lMenuTitle" alt="" coords="253,5,444,47"/>
+<area shape="rect" id="node3" href="$classCAssetDecoratedMap.html#afafb067884070fe0340f8b7e63bdc099" title="CAssetDecoratedMap\l::GetMap" alt="" coords="267,71,430,112"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#a5f915dc03205b67ca79f4dcfd7b43f5a" title="CApplicationData::Select\lMapButtonCallback" alt="" coords="257,136,440,177"/>
+<area shape="rect" id="node6" href="$classCApplicationData.html#a4410839118b5b74dab798ad7be6f703b" title="CApplicationData::MainMenu\lButtonCallback" alt="" coords="244,201,453,243"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#aee18c113e9a0acb3cad3d63eb19de71b" title="CApplicationData::ChangeMode" alt="" coords="501,177,731,203"/>
+</map>

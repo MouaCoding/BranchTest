@@ -1,0 +1,16 @@
+<map id="include/SoundEventRenderer.h" name="include/SoundEventRenderer.h">
+<area shape="rect" id="node2" href="$SoundLibraryMixer_8h.html" title="SoundLibraryMixer.h" alt="" coords="373,304,528,331"/>
+<area shape="rect" id="node13" href="$GameModel_8h.html" title="GameModel.h" alt="" coords="1105,80,1217,107"/>
+<area shape="rect" id="node3" href="$SoundClip_8h.html" title="SoundClip.h" alt="" coords="315,379,413,405"/>
+<area shape="rect" id="node5" href="$DataSource_8h.html" title="DataSource.h" alt="" coords="398,453,509,480"/>
+<area shape="rect" id="node14" href="$RandomNumberGenerator_8h.html" title="RandomNumberGenerator.h" alt="" coords="818,155,1025,181"/>
+<area shape="rect" id="node16" href="$AssetDecoratedMap_8h.html" title="AssetDecoratedMap.h" alt="" coords="975,229,1142,256"/>
+<area shape="rect" id="node23" href="$RouterMap_8h.html" title="RouterMap.h" alt="" coords="1172,155,1279,181"/>
+<area shape="rect" id="node24" href="$FileDataSource_8h.html" title="FileDataSource.h" alt="" coords="660,155,793,181"/>
+<area shape="rect" id="node26" href="$Rectangle_8h.html" title="Rectangle.h" alt="" coords="1049,155,1148,181"/>
+<area shape="rect" id="node17" href="$TerrainMap_8h.html" title="TerrainMap.h" alt="" coords="901,379,1008,405"/>
+<area shape="rect" id="node20" href="$PlayerAsset_8h.html" title="PlayerAsset.h" alt="" coords="1033,379,1143,405"/>
+<area shape="rect" id="node22" href="$VisibilityMap_8h.html" title="VisibilityMap.h" alt="" coords="851,304,965,331"/>
+<area shape="rect" id="node18" href="$GameDataTypes_8h.html" title="GameDataTypes.h" alt="" coords="1015,528,1159,555"/>
+<area shape="rect" id="node19" href="$Position_8h.html" title="Position.h" alt="" coords="1043,453,1130,480"/>
+</map>

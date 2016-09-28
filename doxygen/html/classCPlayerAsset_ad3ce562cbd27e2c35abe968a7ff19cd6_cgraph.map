@@ -1,0 +1,4 @@
+<map id="CPlayerAsset::TilePositionY" name="CPlayerAsset::TilePositionY">
+<area shape="rect" id="node2" href="$classCPosition.html#a4be1caa5ce58297e9d371f6bc1db32d9" title="CPosition::SetYFromTile" alt="" coords="255,5,435,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="293,56,396,83"/>
+</map>

@@ -1,0 +1,578 @@
+\hypertarget{classCButtonRenderer}{}\section{C\+Button\+Renderer Class Reference}
+\label{classCButtonRenderer}\index{C\+Button\+Renderer@{C\+Button\+Renderer}}
+
+
+{\ttfamily \#include $<$Button\+Renderer.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{E\+Button\+State} \{ \newline
+\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa0cd7277705307bef6c50f2250b5d62d}{bs\+None} = 0, 
+\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a8fad69630f3700a97a0c51bcbb4441b5}{bs\+Pressed}, 
+\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1ad6758a415bde0eee152a0e2f7d07e3b6}{bs\+Hover}, 
+\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a982d739b5c4b45ebf0b20a4c205a3531}{bs\+Inactive}, 
+\newline
+\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa674e22146de8dfe27c5c1ad64f3e1bd}{bs\+Max}
+ \}
+\item 
+typedef enum \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{C\+Button\+Renderer\+::\+E\+Button\+State} $\ast$ \hyperlink{classCButtonRenderer_a402e6dc71de924ff3daf036e31048ce7}{E\+Button\+State\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCButtonRenderer_a168e60a1e237820d58b4667003340aaf}{C\+Button\+Renderer} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ colors, std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ innerbevel, std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ outerbevel, std\+::shared\+\_\+ptr$<$ \hyperlink{classCFontTileset}{C\+Font\+Tileset} $>$ font)
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCButtonRenderer_a1b7adb2d7ced22c309cb497ea5e8d10c}{Button\+Color} () const
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCButtonRenderer_a76037d44fb1da753bcd1447a44dba51c}{Button\+Color} (\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} color)
+\item 
+std\+::string \hyperlink{classCButtonRenderer_ab0ff6bd90e3f7f7a9946c5c3198ed30c}{Text} () const
+\item 
+std\+::string \hyperlink{classCButtonRenderer_a565c9c19612bc2c7fb29a22f18b74d13}{Text} (const std\+::string \&text, bool minimize=false)
+\item 
+int \hyperlink{classCButtonRenderer_a9da3b741cb517d2386dd265ad494af54}{Width} () const
+\item 
+int \hyperlink{classCButtonRenderer_ace9959d559850f1b916e1a949f25e21f}{Width} (int width)
+\item 
+int \hyperlink{classCButtonRenderer_aecdea7c8978a3d0fb27f3a7bf49d8387}{Height} () const
+\item 
+int \hyperlink{classCButtonRenderer_addba56a5d490f33010c919020e67a376}{Height} (int height)
+\item 
+void \hyperlink{classCButtonRenderer_a9f29dd6d2243ddae58211706cc6b37b6}{Draw\+Button} (Gdk\+Drawable $\ast$drawable, int x, int y, \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{E\+Button\+State} state)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{D\+Color\+Tileset}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{D\+Outer\+Bevel}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ \hyperlink{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb}{D\+Inner\+Bevel}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{D\+Light\+Indices}
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{D\+Dark\+Indices}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCFontTileset}{C\+Font\+Tileset} $>$ \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{D\+Font}
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{D\+Button\+Color}
+\item 
+std\+::string \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{D\+Text}
+\item 
+int \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{D\+Text\+OffsetX}
+\item 
+int \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{D\+Text\+OffsetY}
+\item 
+int \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{D\+Width}
+\item 
+int \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{D\+Height}
+\item 
+int \hyperlink{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{D\+White\+Index}
+\item 
+int \hyperlink{classCButtonRenderer_aba9e3360876958aad5eb83c66b2c4ae5}{D\+Gold\+Index}
+\item 
+int \hyperlink{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{D\+Black\+Index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file Button\+Renderer.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCButtonRenderer_a402e6dc71de924ff3daf036e31048ce7}{}\label{classCButtonRenderer_a402e6dc71de924ff3daf036e31048ce7} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!E\+Button\+State\+Ref@{E\+Button\+State\+Ref}}
+\index{E\+Button\+State\+Ref@{E\+Button\+State\+Ref}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{E\+Button\+State\+Ref}{EButtonStateRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{C\+Button\+Renderer\+::\+E\+Button\+State} $\ast$ \hyperlink{classCButtonRenderer_a402e6dc71de924ff3daf036e31048ce7}{C\+Button\+Renderer\+::\+E\+Button\+State\+Ref}}
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!E\+Button\+State@{E\+Button\+State}}
+\index{E\+Button\+State@{E\+Button\+State}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{E\+Button\+State}{EButtonState}}
+{\footnotesize\ttfamily enum \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{C\+Button\+Renderer\+::\+E\+Button\+State}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bs\+None@{bs\+None}!C\+Button\+Renderer@{C\+Button\+Renderer}}\index{C\+Button\+Renderer@{C\+Button\+Renderer}!bs\+None@{bs\+None}}}\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa0cd7277705307bef6c50f2250b5d62d}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa0cd7277705307bef6c50f2250b5d62d} 
+bs\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bs\+Pressed@{bs\+Pressed}!C\+Button\+Renderer@{C\+Button\+Renderer}}\index{C\+Button\+Renderer@{C\+Button\+Renderer}!bs\+Pressed@{bs\+Pressed}}}\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a8fad69630f3700a97a0c51bcbb4441b5}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a8fad69630f3700a97a0c51bcbb4441b5} 
+bs\+Pressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bs\+Hover@{bs\+Hover}!C\+Button\+Renderer@{C\+Button\+Renderer}}\index{C\+Button\+Renderer@{C\+Button\+Renderer}!bs\+Hover@{bs\+Hover}}}\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1ad6758a415bde0eee152a0e2f7d07e3b6}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1ad6758a415bde0eee152a0e2f7d07e3b6} 
+bs\+Hover&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bs\+Inactive@{bs\+Inactive}!C\+Button\+Renderer@{C\+Button\+Renderer}}\index{C\+Button\+Renderer@{C\+Button\+Renderer}!bs\+Inactive@{bs\+Inactive}}}\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a982d739b5c4b45ebf0b20a4c205a3531}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a982d739b5c4b45ebf0b20a4c205a3531} 
+bs\+Inactive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bs\+Max@{bs\+Max}!C\+Button\+Renderer@{C\+Button\+Renderer}}\index{C\+Button\+Renderer@{C\+Button\+Renderer}!bs\+Max@{bs\+Max}}}\hypertarget{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa674e22146de8dfe27c5c1ad64f3e1bd}{}\label{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa674e22146de8dfe27c5c1ad64f3e1bd} 
+bs\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 26 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+26                     \{
+27             \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa0cd7277705307bef6c50f2250b5d62d}{bsNone} = 0,
+28             \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a8fad69630f3700a97a0c51bcbb4441b5}{bsPressed},
+29             \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1ad6758a415bde0eee152a0e2f7d07e3b6}{bsHover},
+30             \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a982d739b5c4b45ebf0b20a4c205a3531}{bsInactive},
+31             \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1aa674e22146de8dfe27c5c1ad64f3e1bd}{bsMax}
+32         \} \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{EButtonState}, *\hyperlink{classCButtonRenderer_a402e6dc71de924ff3daf036e31048ce7}{EButtonStateRef};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCButtonRenderer_a168e60a1e237820d58b4667003340aaf}{}\label{classCButtonRenderer_a168e60a1e237820d58b4667003340aaf} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{C\+Button\+Renderer()}{CButtonRenderer()}}
+{\footnotesize\ttfamily C\+Button\+Renderer\+::\+C\+Button\+Renderer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$}]{colors,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$}]{innerbevel,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$}]{outerbevel,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCFontTileset}{C\+Font\+Tileset} $>$}]{font }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file Button\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+20                                                                                                            
+                                                                              \{
+21     \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset} = colors;
+22     \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel} = outerbevel;
+23     \hyperlink{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb}{DInnerBevel} = innerbevel;
+24     \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont} = font;
+25     \hyperlink{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{DButtonColor} = \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone};
+26     \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX} = 0;
+27     \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY} = 0;
+28     \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} = \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2;
+29     \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} = \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth};
+30     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}.resize(\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34}{pcMax});
+31     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}.resize(\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34}{pcMax});             
+32     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone}] = \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f}{pcBlue}] = 
+      \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"blue-dark"});
+33     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb}{pcRed}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"red-dark"});
+34     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14}{pcGreen}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"green-dark"});
+35     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b}{pcPurple}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"purple-dark"});
+36     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea}{pcOrange}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"orange-dark"});
+37     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34}{pcYellow}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"yellow-dark"});
+38     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{pcBlack}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"black-dark"});
+39     \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc}{pcWhite}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"white-dark"});
+40 
+41     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone}] = \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f}{pcBlue}] = 
+      \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"blue-light"});
+42     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb}{pcRed}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"red-light"});
+43     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14}{pcGreen}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"green-light"});
+44     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b}{pcPurple}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"purple-light"});
+45     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea}{pcOrange}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"orange-light"});
+46     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34}{pcYellow}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"yellow-light"});
+47     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{pcBlack}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"black-light"});
+48     \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc}{pcWhite}] = \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->FindTile(\textcolor{stringliteral}{"white-light"});
+49     
+50     \hyperlink{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{DWhiteIndex} = \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->FindPixel(\textcolor{stringliteral}{"white"});
+51     \hyperlink{classCButtonRenderer_aba9e3360876958aad5eb83c66b2c4ae5}{DGoldIndex} = \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->FindPixel(\textcolor{stringliteral}{"gold"});
+52     \hyperlink{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{DBlackIndex} = \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->FindPixel(\textcolor{stringliteral}{"black"});
+53 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCButtonRenderer_a1b7adb2d7ced22c309cb497ea5e8d10c}{}\label{classCButtonRenderer_a1b7adb2d7ced22c309cb497ea5e8d10c} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Button\+Color@{Button\+Color}}
+\index{Button\+Color@{Button\+Color}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Button\+Color()}{ButtonColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Button\+Renderer\+::\+Button\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 54 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+54                                         \{
+55             \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{DButtonColor};   
+56         \};
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_a76037d44fb1da753bcd1447a44dba51c}{}\label{classCButtonRenderer_a76037d44fb1da753bcd1447a44dba51c} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Button\+Color@{Button\+Color}}
+\index{Button\+Color@{Button\+Color}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Button\+Color()}{ButtonColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Button\+Renderer\+::\+Button\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+58                                                     \{
+59             \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{DButtonColor} = color;
+60         \};
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_a9f29dd6d2243ddae58211706cc6b37b6}{}\label{classCButtonRenderer_a9f29dd6d2243ddae58211706cc6b37b6} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Draw\+Button@{Draw\+Button}}
+\index{Draw\+Button@{Draw\+Button}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Draw\+Button()}{DrawButton()}}
+{\footnotesize\ttfamily void C\+Button\+Renderer\+::\+Draw\+Button (\begin{DoxyParamCaption}\item[{Gdk\+Drawable $\ast$}]{drawable,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1}{E\+Button\+State}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line 102 of file Button\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+102                                                                                        \{
+103     GdkGC *TempGC = gdk\_gc\_new(drawable);
+104     
+105     \textcolor{keywordflow}{if}(\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a8fad69630f3700a97a0c51bcbb4441b5}{bsPressed} == state)\{
+106         \textcolor{keywordtype}{int} BevelWidth = \hyperlink{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb}{DInnerBevel}->Width();
+107         \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->DrawTileRectangle(drawable, x, y, \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth}, 
+      \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight}, \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{DButtonColor}]);
+108         \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->DrawTextWithShadow(drawable, TempGC, x + \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX}, y + 
+      \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY}, \hyperlink{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{DWhiteIndex}, \hyperlink{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{DBlackIndex}, 1, 
+      \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText});
+109         \hyperlink{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb}{DInnerBevel}->DrawBevel(drawable, x + BevelWidth, y + BevelWidth, 
+      \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} - BevelWidth * 2, \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} - BevelWidth * 2);
+110     \}
+111     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1a982d739b5c4b45ebf0b20a4c205a3531}{bsInactive} == state)\{
+112         \textcolor{keywordtype}{int} BevelWidth = \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width();
+113         \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->DrawTileRectangle(drawable, x, y, \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth}, 
+      \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight}, \hyperlink{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{DDarkIndices}[\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{pcBlack}]);
+114         \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->DrawTextWithShadow(drawable, TempGC, x + \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX}, y + 
+      \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY}, \hyperlink{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{DBlackIndex}, \hyperlink{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{DWhiteIndex}, 1, 
+      \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText});
+115         \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->DrawBevel(drawable, x + BevelWidth, y + BevelWidth, 
+      \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} - BevelWidth * 2, \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} - BevelWidth * 2);
+116     \}
+117     \textcolor{keywordflow}{else}\{
+118         \textcolor{keywordtype}{int} BevelWidth = \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width();
+119         \hyperlink{classCButtonRenderer_aa823ae99f3642927241c085963888128}{DColorTileset}->DrawTileRectangle(drawable, x, y, \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth}, 
+      \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight}, \hyperlink{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{DLightIndices}[DButtonColor]);
+120         \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->DrawTextWithShadow(drawable, TempGC, x + \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX}, y + 
+      \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY}, \hyperlink{classCButtonRenderer_ae0eccda184600f6e14bfd59033e5e9a1ad6758a415bde0eee152a0e2f7d07e3b6}{bsHover} == state ? \hyperlink{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{DWhiteIndex} : 
+      \hyperlink{classCButtonRenderer_aba9e3360876958aad5eb83c66b2c4ae5}{DGoldIndex}, \hyperlink{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{DBlackIndex}, 1, \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText});
+121         \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->DrawBevel(drawable, x + BevelWidth, y + BevelWidth, 
+      \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} - BevelWidth * 2, \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} - BevelWidth * 2);
+122     \}
+123     
+124     g\_object\_unref(TempGC);
+125 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCButtonRenderer_a9f29dd6d2243ddae58211706cc6b37b6_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCButtonRenderer_aecdea7c8978a3d0fb27f3a7bf49d8387}{}\label{classCButtonRenderer_aecdea7c8978a3d0fb27f3a7bf49d8387} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Height@{Height}}
+\index{Height@{Height}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Height()}{Height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+74                           \{
+75             \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight};    
+76         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCButtonRenderer_aecdea7c8978a3d0fb27f3a7bf49d8387_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCButtonRenderer_addba56a5d490f33010c919020e67a376}{}\label{classCButtonRenderer_addba56a5d490f33010c919020e67a376} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Height@{Height}}
+\index{Height@{Height}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Height()}{Height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+Height (\begin{DoxyParamCaption}\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file Button\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+89                                      \{
+90     \textcolor{keywordflow}{if}(height > \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight})\{
+91         gint TotalWidth, TotalHeight, Top, Bottom;
+92         
+93         \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->MeasureTextDetailed(\hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText}, TotalWidth, TotalHeight, Top, Bottom);
+94         TotalHeight = Bottom - Top + 1;
+95         \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} = height;
+96         \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY} = \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight}/2 - TotalHeight/2 - Top;
+97         
+98     \}
+99     \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight};    
+100 \}
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_ab0ff6bd90e3f7f7a9946c5c3198ed30c}{}\label{classCButtonRenderer_ab0ff6bd90e3f7f7a9946c5c3198ed30c} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Text@{Text}}
+\index{Text@{Text}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string C\+Button\+Renderer\+::\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 62 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+62                               \{
+63             \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText};   
+64         \};
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_a565c9c19612bc2c7fb29a22f18b74d13}{}\label{classCButtonRenderer_a565c9c19612bc2c7fb29a22f18b74d13} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Text@{Text}}
+\index{Text@{Text}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Text()}{Text()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string C\+Button\+Renderer\+::\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{bool}]{minimize = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file Button\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+55                                                                    \{
+56     gint TotalWidth, TotalHeight, Top, Bottom;
+57     \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText} = text;
+58     \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->MeasureTextDetailed(\hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText}, TotalWidth, TotalHeight, Top, Bottom);
+59     
+60     TotalHeight = Bottom - Top + 1;
+61     \textcolor{keywordflow}{if}(TotalHeight + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2 > \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight})\{
+62         \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} = TotalHeight + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2;  
+63     \}
+64     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(minimize)\{
+65         \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight} = TotalHeight + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2;  
+66     \}
+67     \textcolor{keywordflow}{if}(TotalWidth + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2 > \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth})\{
+68         \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} = TotalWidth + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2;
+69     \}
+70     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(minimize)\{
+71         \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} = TotalWidth + \hyperlink{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{DOuterBevel}->Width() * 2;
+72     \}
+73     \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX} = \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth}/2 - TotalWidth/2;
+74     \hyperlink{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{DTextOffsetY} = \hyperlink{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{DHeight}/2 - TotalHeight/2 - Top;
+75     \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText};
+76 \}
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_a9da3b741cb517d2386dd265ad494af54}{}\label{classCButtonRenderer_a9da3b741cb517d2386dd265ad494af54} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Width@{Width}}
+\index{Width@{Width}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Width()}{Width()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file Button\+Renderer.\+h.
+
+
+\begin{DoxyCode}
+68                          \{
+69             \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth};
+70         \};
+\end{DoxyCode}
+\hypertarget{classCButtonRenderer_ace9959d559850f1b916e1a949f25e21f}{}\label{classCButtonRenderer_ace9959d559850f1b916e1a949f25e21f} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!Width@{Width}}
+\index{Width@{Width}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{Width()}{Width()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+Width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file Button\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+78                                    \{
+79     \textcolor{keywordflow}{if}(width > \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth})\{
+80         gint TotalWidth, TotalHeight, Top, Bottom;
+81         
+82         \hyperlink{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{DFont}->MeasureTextDetailed(\hyperlink{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{DText}, TotalWidth, TotalHeight, Top, Bottom);
+83         \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth} = width;  
+84         \hyperlink{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{DTextOffsetX} = \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth}/2 - TotalWidth/2;
+85     \}
+86     \textcolor{keywordflow}{return} \hyperlink{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{DWidth};
+87 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295}{}\label{classCButtonRenderer_ac5306adba14177b75998e4ffc79a7295} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Black\+Index@{D\+Black\+Index}}
+\index{D\+Black\+Index@{D\+Black\+Index}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Black\+Index}{DBlackIndex}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Black\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996}{}\label{classCButtonRenderer_a8b2bce7400657eb1a8f896b070d11996} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Button\+Color@{D\+Button\+Color}}
+\index{D\+Button\+Color@{D\+Button\+Color}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Button\+Color}{DButtonColor}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Button\+Renderer\+::\+D\+Button\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_aa823ae99f3642927241c085963888128}{}\label{classCButtonRenderer_aa823ae99f3642927241c085963888128} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Color\+Tileset@{D\+Color\+Tileset}}
+\index{D\+Color\+Tileset@{D\+Color\+Tileset}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Color\+Tileset}{DColorTileset}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCGraphicTileset}{C\+Graphic\+Tileset} $>$ C\+Button\+Renderer\+::\+D\+Color\+Tileset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831}{}\label{classCButtonRenderer_a0f0723933f4800dcded7a4d180a87831} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Dark\+Indices@{D\+Dark\+Indices}}
+\index{D\+Dark\+Indices@{D\+Dark\+Indices}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Dark\+Indices}{DDarkIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Button\+Renderer\+::\+D\+Dark\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a}{}\label{classCButtonRenderer_adcdace35cb4fac1c90368b7cc86d860a} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Font@{D\+Font}}
+\index{D\+Font@{D\+Font}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Font}{DFont}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCFontTileset}{C\+Font\+Tileset} $>$ C\+Button\+Renderer\+::\+D\+Font\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_aba9e3360876958aad5eb83c66b2c4ae5}{}\label{classCButtonRenderer_aba9e3360876958aad5eb83c66b2c4ae5} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Gold\+Index@{D\+Gold\+Index}}
+\index{D\+Gold\+Index@{D\+Gold\+Index}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Gold\+Index}{DGoldIndex}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Gold\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250}{}\label{classCButtonRenderer_a7e3d605b90c45d87ac1396c23c90b250} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Height@{D\+Height}}
+\index{D\+Height@{D\+Height}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Height}{DHeight}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb}{}\label{classCButtonRenderer_ab3c6dd552abb11fe7cd9db5d71648afb} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Inner\+Bevel@{D\+Inner\+Bevel}}
+\index{D\+Inner\+Bevel@{D\+Inner\+Bevel}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Inner\+Bevel}{DInnerBevel}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ C\+Button\+Renderer\+::\+D\+Inner\+Bevel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156}{}\label{classCButtonRenderer_a3f72c8f3b860fbaf43a372f112c11156} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Light\+Indices@{D\+Light\+Indices}}
+\index{D\+Light\+Indices@{D\+Light\+Indices}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Light\+Indices}{DLightIndices}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ C\+Button\+Renderer\+::\+D\+Light\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 38 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48}{}\label{classCButtonRenderer_a6b0a352b22395934e0483569d2757a48} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Outer\+Bevel@{D\+Outer\+Bevel}}
+\index{D\+Outer\+Bevel@{D\+Outer\+Bevel}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Outer\+Bevel}{DOuterBevel}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCBevel}{C\+Bevel} $>$ C\+Button\+Renderer\+::\+D\+Outer\+Bevel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092}{}\label{classCButtonRenderer_a8f058166dec8d1c73adc009e4c436092} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Text@{D\+Text}}
+\index{D\+Text@{D\+Text}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Text}{DText}}
+{\footnotesize\ttfamily std\+::string C\+Button\+Renderer\+::\+D\+Text\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96}{}\label{classCButtonRenderer_aaeb649ff53e0032e756c53b2f51f3d96} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Text\+OffsetX@{D\+Text\+OffsetX}}
+\index{D\+Text\+OffsetX@{D\+Text\+OffsetX}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Text\+OffsetX}{DTextOffsetX}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Text\+OffsetX\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23}{}\label{classCButtonRenderer_a3922fa80775b693fd83e4d5e9f518b23} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Text\+OffsetY@{D\+Text\+OffsetY}}
+\index{D\+Text\+OffsetY@{D\+Text\+OffsetY}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Text\+OffsetY}{DTextOffsetY}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Text\+OffsetY\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a931258275773c59f73b769ec0574b615}{}\label{classCButtonRenderer_a931258275773c59f73b769ec0574b615} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+White\+Index@{D\+White\+Index}}
+\index{D\+White\+Index@{D\+White\+Index}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+White\+Index}{DWhiteIndex}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+White\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file Button\+Renderer.\+h.
+
+\hypertarget{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94}{}\label{classCButtonRenderer_a5c2ce68af06e91c14cbd1b8dd8bd4b94} 
+\index{C\+Button\+Renderer@{C\+Button\+Renderer}!D\+Width@{D\+Width}}
+\index{D\+Width@{D\+Width}!C\+Button\+Renderer@{C\+Button\+Renderer}}
+\subsubsection{\texorpdfstring{D\+Width}{DWidth}}
+{\footnotesize\ttfamily int C\+Button\+Renderer\+::\+D\+Width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Button\+Renderer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ButtonRenderer_8h}{Button\+Renderer.\+h}\item 
+src/\hyperlink{ButtonRenderer_8cpp}{Button\+Renderer.\+cpp}\end{DoxyCompactItemize}

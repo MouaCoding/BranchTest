@@ -1,0 +1,10 @@
+<map id="CApplicationData::RenderPlayerAISelectMode" name="CApplicationData::RenderPlayerAISelectMode">
+<area shape="rect" id="node2" href="$classCApplicationData.html#a548c5924a281c7e226fd7cac44e59920" title="CApplicationData::Render\lMenuTitle" alt="" coords="254,5,445,47"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#a659aa43022e92610c2f8cc182eab1b8e" title="CApplicationData::PlayGame\lButtonCallback" alt="" coords="244,71,455,112"/>
+<area shape="rect" id="node9" href="$classCApplicationData.html#a4410839118b5b74dab798ad7be6f703b" title="CApplicationData::MainMenu\lButtonCallback" alt="" coords="245,136,454,177"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#a89af0c7917be766575720e5ac79c8d2d" title="CApplicationData::LoadGameMap" alt="" coords="503,78,745,105"/>
+<area shape="rect" id="node8" href="$classCApplicationData.html#aee18c113e9a0acb3cad3d63eb19de71b" title="CApplicationData::ChangeMode" alt="" coords="509,135,739,162"/>
+<area shape="rect" id="node5" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="793,27,1025,54"/>
+<area shape="rect" id="node6" href="$classCApplicationData.html#a18ae4aed31d9ef2416059e66babb05b0" title="CApplicationData::ResetMap" alt="" coords="805,78,1014,105"/>
+<area shape="rect" id="node7" href="$classCApplicationData.html#ad8b16ccb099b4996ce9fee34a407c091" title="CApplicationData::Resize\lCanvases" alt="" coords="816,129,1003,171"/>
+</map>

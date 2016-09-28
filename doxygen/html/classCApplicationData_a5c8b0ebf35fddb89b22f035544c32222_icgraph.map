@@ -1,0 +1,8 @@
+<map id="CApplicationData::ScreenToDetailedMap" name="CApplicationData::ScreenToDetailedMap">
+<area shape="rect" id="node2" href="$classCApplicationData.html#a018490e670662ed9a9266449516a2ac7" title="CApplicationData::Process\lInputGameMode" alt="" coords="241,5,437,47"/>
+<area shape="rect" id="node7" href="$classCApplicationData.html#ae5ba05c6fb7e6f0414c26f0b44bc842c" title="CApplicationData::Render\lGameMode" alt="" coords="244,71,435,112"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="485,46,684,73"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="732,39,931,80"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="979,46,1143,73"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1191,46,1245,73"/>
+</map>

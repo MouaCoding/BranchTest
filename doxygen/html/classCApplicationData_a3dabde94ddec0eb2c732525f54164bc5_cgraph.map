@@ -1,0 +1,6 @@
+<map id="CApplicationData::MiniMapToDetailedMap" name="CApplicationData::MiniMapToDetailedMap">
+<area shape="rect" id="node2" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="289,5,391,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="289,56,391,83"/>
+<area shape="rect" id="node4" href="$classCPosition.html#ac6a1eeaeb98e20942efea7cf253b2ec4" title="CPosition::SetXFromTile" alt="" coords="249,107,431,133"/>
+<area shape="rect" id="node5" href="$classCPosition.html#a4be1caa5ce58297e9d371f6bc1db32d9" title="CPosition::SetYFromTile" alt="" coords="250,157,430,184"/>
+</map>

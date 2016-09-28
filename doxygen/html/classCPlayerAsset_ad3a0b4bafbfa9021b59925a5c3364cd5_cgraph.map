@@ -1,0 +1,4 @@
+<map id="CPlayerAsset::TilePositionX" name="CPlayerAsset::TilePositionX">
+<area shape="rect" id="node2" href="$classCPosition.html#ac6a1eeaeb98e20942efea7cf253b2ec4" title="CPosition::SetXFromTile" alt="" coords="256,5,437,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="295,56,398,83"/>
+</map>

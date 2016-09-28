@@ -1,0 +1,5 @@
+<map id="CAIPlayer::FindEnemies" name="CAIPlayer::FindEnemies">
+<area shape="rect" id="node2" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="232,31,399,57"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="481,5,584,32"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="447,56,619,83"/>
+</map>

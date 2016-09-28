@@ -1,0 +1,5 @@
+<map id="CPlayerCapabilityTrainNormal::ApplyCapability" name="CPlayerCapabilityTrainNormal::ApplyCapability">
+<area shape="rect" id="node2" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="307,5,461,32"/>
+<area shape="rect" id="node3" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="307,57,461,98"/>
+<area shape="rect" id="node4" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="268,123,500,149"/>
+</map>

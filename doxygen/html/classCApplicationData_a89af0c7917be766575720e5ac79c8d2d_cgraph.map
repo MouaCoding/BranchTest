@@ -1,0 +1,5 @@
+<map id="CApplicationData::LoadGameMap" name="CApplicationData::LoadGameMap">
+<area shape="rect" id="node2" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="296,5,528,32"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#a18ae4aed31d9ef2416059e66babb05b0" title="CApplicationData::ResetMap" alt="" coords="307,56,517,83"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#ad8b16ccb099b4996ce9fee34a407c091" title="CApplicationData::Resize\lCanvases" alt="" coords="319,107,505,149"/>
+</map>

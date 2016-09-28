@@ -1,0 +1,21 @@
+<map id="include/MiniMapRenderer.h" name="include/MiniMapRenderer.h">
+<area shape="rect" id="node2" href="$ViewportRenderer_8h.html" title="ViewportRenderer.h" alt="" coords="143,80,295,107"/>
+<area shape="rect" id="node3" href="$MapRenderer_8h.html" title="MapRenderer.h" alt="" coords="14,379,135,405"/>
+<area shape="rect" id="node15" href="$AssetRenderer_8h.html" title="AssetRenderer.h" alt="" coords="847,155,977,181"/>
+<area shape="rect" id="node29" href="$FogRenderer_8h.html" title="FogRenderer.h" alt="" coords="159,379,278,405"/>
+<area shape="rect" id="node4" href="$GraphicTileset_8h.html" title="GraphicTileset.h" alt="" coords="116,528,241,555"/>
+<area shape="rect" id="node11" href="$TerrainMap_8h.html" title="TerrainMap.h" alt="" coords="916,528,1023,555"/>
+<area shape="rect" id="node14" href="$Rectangle_8h.html" title="Rectangle.h" alt="" coords="231,453,329,480"/>
+<area shape="rect" id="node9" href="$DataSource_8h.html" title="DataSource.h" alt="" coords="511,603,622,629"/>
+<area shape="rect" id="node12" href="$GameDataTypes_8h.html" title="GameDataTypes.h" alt="" coords="900,677,1044,704"/>
+<area shape="rect" id="node13" href="$Position_8h.html" title="Position.h" alt="" coords="929,603,1015,629"/>
+<area shape="rect" id="node16" href="$GraphicMulticolorTileset_8h.html" title="GraphicMulticolorTileset.h" alt="" coords="354,453,542,480"/>
+<area shape="rect" id="node19" href="$AssetDecoratedMap_8h.html" title="AssetDecoratedMap.h" alt="" coords="850,379,1017,405"/>
+<area shape="rect" id="node23" href="$GameModel_8h.html" title="GameModel.h" alt="" coords="731,229,843,256"/>
+<area shape="rect" id="node18" href="$GraphicRecolorMap_8h.html" title="GraphicRecolorMap.h" alt="" coords="367,528,529,555"/>
+<area shape="rect" id="node20" href="$PlayerAsset_8h.html" title="PlayerAsset.h" alt="" coords="781,528,891,555"/>
+<area shape="rect" id="node21" href="$VisibilityMap_8h.html" title="VisibilityMap.h" alt="" coords="767,453,881,480"/>
+<area shape="rect" id="node24" href="$RandomNumberGenerator_8h.html" title="RandomNumberGenerator.h" alt="" coords="613,304,819,331"/>
+<area shape="rect" id="node26" href="$RouterMap_8h.html" title="RouterMap.h" alt="" coords="895,304,1001,331"/>
+<area shape="rect" id="node27" href="$FileDataSource_8h.html" title="FileDataSource.h" alt="" coords="404,304,537,331"/>
+</map>

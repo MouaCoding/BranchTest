@@ -1,0 +1,91 @@
+\hypertarget{classCDataSourceContainer}{}\section{C\+Data\+Source\+Container Class Reference}
+\label{classCDataSourceContainer}\index{C\+Data\+Source\+Container@{C\+Data\+Source\+Container}}
+
+
+{\ttfamily \#include $<$Data\+Source.\+h$>$}
+
+
+
+Inheritance diagram for C\+Data\+Source\+Container\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classCDataSourceContainer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainerIterator}{C\+Data\+Source\+Container\+Iterator} $>$ \hyperlink{classCDataSourceContainer_ad50184dd4ec1c79c776fe0d7d9910925}{First} ()=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ \hyperlink{classCDataSourceContainer_aea214236c4ed2aef231072b909982f7d}{Data\+Source} (const std\+::string \&name)=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ \hyperlink{classCDataSourceContainer_a040c80f46e9d2df36b494290a945e61a}{Container} ()
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ \hyperlink{classCDataSourceContainer_abebf1b9a6168b6783ee9753df612e511}{Data\+Source\+Container} (const std\+::string \&name)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file Data\+Source.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCDataSourceContainer_a040c80f46e9d2df36b494290a945e61a}{}\label{classCDataSourceContainer_a040c80f46e9d2df36b494290a945e61a} 
+\index{C\+Data\+Source\+Container@{C\+Data\+Source\+Container}!Container@{Container}}
+\index{Container@{Container}!C\+Data\+Source\+Container@{C\+Data\+Source\+Container}}
+\subsubsection{\texorpdfstring{Container()}{Container()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ C\+Data\+Source\+Container\+::\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classCDirectoryDataSourceContainer_a5a498db9b312c223b0816fc6cc1fcd3d}{C\+Directory\+Data\+Source\+Container}.
+
+
+
+Definition at line 45 of file Data\+Source.\+h.
+
+
+\begin{DoxyCode}
+45                                                                  \{
+46             \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+47         \};
+\end{DoxyCode}
+\hypertarget{classCDataSourceContainer_aea214236c4ed2aef231072b909982f7d}{}\label{classCDataSourceContainer_aea214236c4ed2aef231072b909982f7d} 
+\index{C\+Data\+Source\+Container@{C\+Data\+Source\+Container}!Data\+Source@{Data\+Source}}
+\index{Data\+Source@{Data\+Source}!C\+Data\+Source\+Container@{C\+Data\+Source\+Container}}
+\subsubsection{\texorpdfstring{Data\+Source()}{DataSource()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ C\+Data\+Source\+Container\+::\+Data\+Source (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCDirectoryDataSourceContainer_ac925eec9c2c71654d0012bff92a462d4}{C\+Directory\+Data\+Source\+Container}.
+
+\hypertarget{classCDataSourceContainer_abebf1b9a6168b6783ee9753df612e511}{}\label{classCDataSourceContainer_abebf1b9a6168b6783ee9753df612e511} 
+\index{C\+Data\+Source\+Container@{C\+Data\+Source\+Container}!Data\+Source\+Container@{Data\+Source\+Container}}
+\index{Data\+Source\+Container@{Data\+Source\+Container}!C\+Data\+Source\+Container@{C\+Data\+Source\+Container}}
+\subsubsection{\texorpdfstring{Data\+Source\+Container()}{DataSourceContainer()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ C\+Data\+Source\+Container\+::\+Data\+Source\+Container (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCDirectoryDataSourceContainer_a71291ab0a549056fc784f0c553a8dc39}{C\+Directory\+Data\+Source\+Container}.
+
+\hypertarget{classCDataSourceContainer_ad50184dd4ec1c79c776fe0d7d9910925}{}\label{classCDataSourceContainer_ad50184dd4ec1c79c776fe0d7d9910925} 
+\index{C\+Data\+Source\+Container@{C\+Data\+Source\+Container}!First@{First}}
+\index{First@{First}!C\+Data\+Source\+Container@{C\+Data\+Source\+Container}}
+\subsubsection{\texorpdfstring{First()}{First()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainerIterator}{C\+Data\+Source\+Container\+Iterator} $>$ C\+Data\+Source\+Container\+::\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCDirectoryDataSourceContainer_a32aa8888dbf78f5a2a1ddb5324aad0cf}{C\+Directory\+Data\+Source\+Container}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{DataSource_8h}{Data\+Source.\+h}\end{DoxyCompactItemize}

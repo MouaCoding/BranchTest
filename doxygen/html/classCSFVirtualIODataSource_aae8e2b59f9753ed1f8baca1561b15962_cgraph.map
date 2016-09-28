@@ -1,0 +1,7 @@
+<map id="CSFVirtualIODataSource::Tell" name="CSFVirtualIODataSource::Tell">
+<area shape="rect" id="node2" href="$classCSFVirtualIODataSource.html#a9c15fbbe734fdfc2af17ca8f424b7e43" title="CSFVirtualIODataSource\l::SFVirtualIO" alt="" coords="232,104,411,145"/>
+<area shape="rect" id="node3" href="$classCSFVirtualIODataSource.html#a94ee0d9f4703661ca7f2cad8cf294690" title="CSFVirtualIODataSource\l::GetFileLength" alt="" coords="459,5,637,47"/>
+<area shape="rect" id="node4" href="$classCSFVirtualIODataSource.html#a04735e135ffc05dd53fce944e772fcfc" title="CSFVirtualIODataSource\l::Seek" alt="" coords="459,71,637,112"/>
+<area shape="rect" id="node5" href="$classCSFVirtualIODataSource.html#a40021962590f0911d8af1020397fbba1" title="CSFVirtualIODataSource\l::Read" alt="" coords="459,136,637,177"/>
+<area shape="rect" id="node6" href="$classCSFVirtualIODataSource.html#ac1d38c4c9d8ba3e0a2affd7dd72283ee" title="CSFVirtualIODataSource\l::Write" alt="" coords="459,201,637,243"/>
+</map>

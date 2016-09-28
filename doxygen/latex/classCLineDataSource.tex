@@ -1,0 +1,105 @@
+\hypertarget{classCLineDataSource}{}\section{C\+Line\+Data\+Source Class Reference}
+\label{classCLineDataSource}\index{C\+Line\+Data\+Source@{C\+Line\+Data\+Source}}
+
+
+{\ttfamily \#include $<$Line\+Data\+Source.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCLineDataSource_ae304217b213b06d75d0ea417840af8ee}{C\+Line\+Data\+Source} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+bool \hyperlink{classCLineDataSource_a569f5a9732d73ac8813c0ba4860e2e66}{Read} (std\+::string \&line)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ \hyperlink{classCLineDataSource_a976b7e02379cb8b29eb16cfedd1352cb}{D\+Data\+Source}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 22 of file Line\+Data\+Source.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCLineDataSource_ae304217b213b06d75d0ea417840af8ee}{}\label{classCLineDataSource_ae304217b213b06d75d0ea417840af8ee} 
+\index{C\+Line\+Data\+Source@{C\+Line\+Data\+Source}!C\+Line\+Data\+Source@{C\+Line\+Data\+Source}}
+\index{C\+Line\+Data\+Source@{C\+Line\+Data\+Source}!C\+Line\+Data\+Source@{C\+Line\+Data\+Source}}
+\subsubsection{\texorpdfstring{C\+Line\+Data\+Source()}{CLineDataSource()}}
+{\footnotesize\ttfamily C\+Line\+Data\+Source\+::\+C\+Line\+Data\+Source (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Line\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                                    \{
+20     \hyperlink{classCLineDataSource_a976b7e02379cb8b29eb16cfedd1352cb}{DDataSource} = source;
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCLineDataSource_a569f5a9732d73ac8813c0ba4860e2e66}{}\label{classCLineDataSource_a569f5a9732d73ac8813c0ba4860e2e66} 
+\index{C\+Line\+Data\+Source@{C\+Line\+Data\+Source}!Read@{Read}}
+\index{Read@{Read}!C\+Line\+Data\+Source@{C\+Line\+Data\+Source}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily bool C\+Line\+Data\+Source\+::\+Read (\begin{DoxyParamCaption}\item[{std\+::string \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Line\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+23                                          \{
+24     \textcolor{keywordtype}{char} TempChar;
+25     
+26     line.clear();
+27     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+28         \textcolor{keywordflow}{if}(0 < \hyperlink{classCLineDataSource_a976b7e02379cb8b29eb16cfedd1352cb}{DDataSource}->Read(&TempChar, 1))\{
+29             \textcolor{keywordflow}{if}(\textcolor{charliteral}{'\(\backslash\)n'} == TempChar)\{
+30                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+31             \}
+32             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\textcolor{charliteral}{'\(\backslash\)r'} != TempChar)\{
+33                 line += TempChar;
+34             \}
+35         \}
+36         \textcolor{keywordflow}{else}\{
+37             \textcolor{keywordflow}{return} 0 < line.length();
+38         \}
+39     \}
+40     
+41 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCLineDataSource_a569f5a9732d73ac8813c0ba4860e2e66_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCLineDataSource_a976b7e02379cb8b29eb16cfedd1352cb}{}\label{classCLineDataSource_a976b7e02379cb8b29eb16cfedd1352cb} 
+\index{C\+Line\+Data\+Source@{C\+Line\+Data\+Source}!D\+Data\+Source@{D\+Data\+Source}}
+\index{D\+Data\+Source@{D\+Data\+Source}!C\+Line\+Data\+Source@{C\+Line\+Data\+Source}}
+\subsubsection{\texorpdfstring{D\+Data\+Source}{DDataSource}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ C\+Line\+Data\+Source\+::\+D\+Data\+Source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Line\+Data\+Source.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{LineDataSource_8h}{Line\+Data\+Source.\+h}\item 
+src/\hyperlink{LineDataSource_8cpp}{Line\+Data\+Source.\+cpp}\end{DoxyCompactItemize}

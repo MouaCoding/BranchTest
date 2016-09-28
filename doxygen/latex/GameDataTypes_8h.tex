@@ -1,0 +1,715 @@
+\hypertarget{GameDataTypes_8h}{}\section{include/\+Game\+Data\+Types.h File Reference}
+\label{GameDataTypes_8h}\index{include/\+Game\+Data\+Types.\+h@{include/\+Game\+Data\+Types.\+h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GameDataTypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} $\ast$ \hyperlink{GameDataTypes_8h_ae36400b9c638f95ba883371851553938}{E\+Player\+Color\+Ref}
+\item 
+typedef enum \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} $\ast$ \hyperlink{GameDataTypes_8h_a77dc84fd61859d31e497db5a133baad9}{E\+Asset\+Action\+Ref}
+\item 
+typedef enum \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} $\ast$ \hyperlink{GameDataTypes_8h_a9830154ac69a3a2c815baedef2dabe94}{E\+Asset\+Capability\+Type\+Ref}
+\item 
+typedef enum \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} $\ast$ \hyperlink{GameDataTypes_8h_a1ae3843717c7d2461d3605c62c1aa34c}{E\+Asset\+Type\+Ref}
+\item 
+typedef enum \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{GameDataTypes_8h_a03ae92312bec907cd4b11e98e43e705e}{E\+Direction\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \{ \newline
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pc\+None} = 0, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f}{pc\+Blue}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb}{pc\+Red}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14}{pc\+Green}, 
+\newline
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b}{pc\+Purple}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea}{pc\+Orange}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34}{pc\+Yellow}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{pc\+Black}, 
+\newline
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc}{pc\+White}, 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34}{pc\+Max}
+ \}
+\item 
+enum \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} \{ \newline
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aa\+None} = 0, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aa\+Construct}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a02b95b7163284c6e80c9008073d8480d}{aa\+Build}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a85399def907073717f41849c8f09eba5}{aa\+Repair}, 
+\newline
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276}{aa\+Walk}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3}{aa\+Stand\+Ground}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d}{aa\+Attack}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee}{aa\+Harvest\+Lumber}, 
+\newline
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aa\+Mine\+Gold}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{aa\+Convey\+Lumber}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{aa\+Convey\+Gold}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a917cb474275eadda79115015ef00d5df}{aa\+Death}, 
+\newline
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a5529d58a84a26b10744433d7bf171451}{aa\+Decay}, 
+\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aa\+Capability}
+ \}
+\item 
+enum \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} \{ \newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{act\+None} = 0, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{act\+Build\+Peasant}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{act\+Build\+Footman}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{act\+Build\+Archer}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{act\+Build\+Ranger}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{act\+Build\+Farm}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{act\+Build\+Town\+Hall}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{act\+Build\+Barracks}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{act\+Build\+Lumber\+Mill}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{act\+Build\+Blacksmith}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceadc780d56a9807d6bd10f7299b801c9eb}{act\+Build\+Keep}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceabbccd11a12c00ecde4d4bb2a0c27ab75}{act\+Build\+Castle}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69}{act\+Build\+Scout\+Tower}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7dc70c7da2eb8cb4f235b900e67991f2}{act\+Build\+Guard\+Tower}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea416089b5ee9555bf5ef27d6c661a2961}{act\+Build\+Cannon\+Tower}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{act\+Move}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae54caebc57cf41bd048ab64375ce4082}{act\+Repair}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{act\+Mine}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceacab8a5395c24e2bf1c9778a0066a3237}{act\+Build\+Simple}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea337456d051e71bb60e1a7424d9703896}{act\+Build\+Advanced}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{act\+Convey}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaec5e11ffc62be241b4f6673586b35a6b}{act\+Cancel}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea71c243197582f2607944883bb98438cc}{act\+Build\+Wall}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{act\+Attack}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{act\+Stand\+Ground}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea3cba4431d7962d2d5ffd01a9f7571332}{act\+Patrol}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae6fd736f1ed1b76546c0ee54dc4e4958}{act\+Weapon\+Upgrade1}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead92335c1ecc716f99e62d0983b110e51}{act\+Weapon\+Upgrade2}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e368536b0eff35ab7cd8fead517b843}{act\+Weapon\+Upgrade3}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea9b943265810dd3beb73722efe67dfcdc}{act\+Arrow\+Upgrade1}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa194a5e6d4c99415ff2bafb8c2713bc1}{act\+Arrow\+Upgrade2}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa083167c01a18c40d9b87df16796bbef}{act\+Arrow\+Upgrade3}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceab76385a4b1e7de9c0a60ad73a2a9292e}{act\+Armor\+Upgrade1}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7352085c235d92657871cfb1b7fcdfa5}{act\+Armor\+Upgrade2}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea13d786245276e72226d94e4e43d5893d}{act\+Armor\+Upgrade3}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7}{act\+Longbow}, 
+\newline
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8}{act\+Ranger\+Scouting}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36}{act\+Marksmanship}, 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70}{act\+Max}
+ \}
+\item 
+enum \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} \{ \newline
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{at\+None} = 0, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{at\+Peasant}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{at\+Footman}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{at\+Archer}, 
+\newline
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0}{at\+Ranger}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{at\+Gold\+Mine}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{at\+Town\+Hall}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{at\+Keep}, 
+\newline
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{at\+Castle}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{at\+Farm}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{at\+Barracks}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{at\+Lumber\+Mill}, 
+\newline
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{at\+Blacksmith}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecab8835f936f9ce8c2df6c201e542fbfcd}{at\+Scout\+Tower}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca65fa6c84ff93972a623793d4ee72d87f}{at\+Guard\+Tower}, 
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca226f6f1968ce76c97cdabb780a6c289d}{at\+Cannon\+Tower}, 
+\newline
+\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca92fbf60b4e5c335160f915b6a1c17c05}{at\+Max}
+ \}
+\item 
+enum \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \{ \newline
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{d\+North} = 0, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a27d1b6db9b056b1c0d42dce9c259bfc5}{d\+North\+East}, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55}{d\+East}, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a44067bc8d66314648f9abcafd594743b}{d\+South\+East}, 
+\newline
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{d\+South}, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42aff3cf1f87f6003fab2e8fc616500345b}{d\+South\+West}, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0}{d\+West}, 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a005e8358dded5729dae6ca3c8cf98898}{d\+North\+West}, 
+\newline
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{d\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GameDataTypes_8h_a77dc84fd61859d31e497db5a133baad9}{}\label{GameDataTypes_8h_a77dc84fd61859d31e497db5a133baad9} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Action\+Ref@{E\+Asset\+Action\+Ref}}
+\index{E\+Asset\+Action\+Ref@{E\+Asset\+Action\+Ref}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Action\+Ref}{EAssetActionRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action} $\ast$ \hyperlink{GameDataTypes_8h_a77dc84fd61859d31e497db5a133baad9}{E\+Asset\+Action\+Ref}}
+
+\hypertarget{GameDataTypes_8h_a9830154ac69a3a2c815baedef2dabe94}{}\label{GameDataTypes_8h_a9830154ac69a3a2c815baedef2dabe94} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Capability\+Type\+Ref@{E\+Asset\+Capability\+Type\+Ref}}
+\index{E\+Asset\+Capability\+Type\+Ref@{E\+Asset\+Capability\+Type\+Ref}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Capability\+Type\+Ref}{EAssetCapabilityTypeRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} $\ast$ \hyperlink{GameDataTypes_8h_a9830154ac69a3a2c815baedef2dabe94}{E\+Asset\+Capability\+Type\+Ref}}
+
+\hypertarget{GameDataTypes_8h_a1ae3843717c7d2461d3605c62c1aa34c}{}\label{GameDataTypes_8h_a1ae3843717c7d2461d3605c62c1aa34c} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Type\+Ref@{E\+Asset\+Type\+Ref}}
+\index{E\+Asset\+Type\+Ref@{E\+Asset\+Type\+Ref}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Type\+Ref}{EAssetTypeRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} $\ast$ \hyperlink{GameDataTypes_8h_a1ae3843717c7d2461d3605c62c1aa34c}{E\+Asset\+Type\+Ref}}
+
+\hypertarget{GameDataTypes_8h_a03ae92312bec907cd4b11e98e43e705e}{}\label{GameDataTypes_8h_a03ae92312bec907cd4b11e98e43e705e} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Direction\+Ref@{E\+Direction\+Ref}}
+\index{E\+Direction\+Ref@{E\+Direction\+Ref}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Direction\+Ref}{EDirectionRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction}  \hyperlink{GameDataTypes_8h_a03ae92312bec907cd4b11e98e43e705e}{E\+Direction\+Ref}}
+
+\hypertarget{GameDataTypes_8h_ae36400b9c638f95ba883371851553938}{}\label{GameDataTypes_8h_ae36400b9c638f95ba883371851553938} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Player\+Color\+Ref@{E\+Player\+Color\+Ref}}
+\index{E\+Player\+Color\+Ref@{E\+Player\+Color\+Ref}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Player\+Color\+Ref}{EPlayerColorRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} $\ast$ \hyperlink{GameDataTypes_8h_ae36400b9c638f95ba883371851553938}{E\+Player\+Color\+Ref}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Action@{E\+Asset\+Action}}
+\index{E\+Asset\+Action@{E\+Asset\+Action}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Action}{EAssetAction}}
+{\footnotesize\ttfamily enum \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{E\+Asset\+Action}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+None@{aa\+None}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+None@{aa\+None}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507} 
+aa\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Construct@{aa\+Construct}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Construct@{aa\+Construct}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d} 
+aa\+Construct&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Build@{aa\+Build}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Build@{aa\+Build}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a02b95b7163284c6e80c9008073d8480d}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a02b95b7163284c6e80c9008073d8480d} 
+aa\+Build&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Repair@{aa\+Repair}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Repair@{aa\+Repair}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a85399def907073717f41849c8f09eba5}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a85399def907073717f41849c8f09eba5} 
+aa\+Repair&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Walk@{aa\+Walk}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Walk@{aa\+Walk}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276} 
+aa\+Walk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Stand\+Ground@{aa\+Stand\+Ground}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Stand\+Ground@{aa\+Stand\+Ground}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3} 
+aa\+Stand\+Ground&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Attack@{aa\+Attack}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Attack@{aa\+Attack}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d} 
+aa\+Attack&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Harvest\+Lumber@{aa\+Harvest\+Lumber}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Harvest\+Lumber@{aa\+Harvest\+Lumber}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee} 
+aa\+Harvest\+Lumber&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Mine\+Gold@{aa\+Mine\+Gold}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Mine\+Gold@{aa\+Mine\+Gold}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b} 
+aa\+Mine\+Gold&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Convey\+Lumber@{aa\+Convey\+Lumber}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Convey\+Lumber@{aa\+Convey\+Lumber}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154} 
+aa\+Convey\+Lumber&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Convey\+Gold@{aa\+Convey\+Gold}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Convey\+Gold@{aa\+Convey\+Gold}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a} 
+aa\+Convey\+Gold&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Death@{aa\+Death}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Death@{aa\+Death}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a917cb474275eadda79115015ef00d5df}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a917cb474275eadda79115015ef00d5df} 
+aa\+Death&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Decay@{aa\+Decay}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Decay@{aa\+Decay}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a5529d58a84a26b10744433d7bf171451}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a5529d58a84a26b10744433d7bf171451} 
+aa\+Decay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{aa\+Capability@{aa\+Capability}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!aa\+Capability@{aa\+Capability}}}\hypertarget{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{}\label{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4} 
+aa\+Capability&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 33 of file Game\+Data\+Types.\+h.
+
+
+\begin{DoxyCode}
+33             \{
+34     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} = 0,
+35     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct},
+36     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a02b95b7163284c6e80c9008073d8480d}{aaBuild},
+37     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a85399def907073717f41849c8f09eba5}{aaRepair},
+38     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276}{aaWalk},
+39     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3}{aaStandGround},
+40     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d}{aaAttack},
+41     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee}{aaHarvestLumber},
+42     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold},
+43     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{aaConveyLumber},
+44     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{aaConveyGold},
+45     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a917cb474275eadda79115015ef00d5df}{aaDeath},
+46     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a5529d58a84a26b10744433d7bf171451}{aaDecay},
+47     \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability}
+48 \} \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670}{EAssetAction}, *\hyperlink{GameDataTypes_8h_a77dc84fd61859d31e497db5a133baad9}{EAssetActionRef};
+\end{DoxyCode}
+\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Capability\+Type@{E\+Asset\+Capability\+Type}}
+\index{E\+Asset\+Capability\+Type@{E\+Asset\+Capability\+Type}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Capability\+Type}{EAssetCapabilityType}}
+{\footnotesize\ttfamily enum \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+None@{act\+None}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+None@{act\+None}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92} 
+act\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Peasant@{act\+Build\+Peasant}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Peasant@{act\+Build\+Peasant}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71} 
+act\+Build\+Peasant&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Footman@{act\+Build\+Footman}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Footman@{act\+Build\+Footman}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662} 
+act\+Build\+Footman&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Archer@{act\+Build\+Archer}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Archer@{act\+Build\+Archer}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b} 
+act\+Build\+Archer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Ranger@{act\+Build\+Ranger}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Ranger@{act\+Build\+Ranger}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11} 
+act\+Build\+Ranger&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Farm@{act\+Build\+Farm}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Farm@{act\+Build\+Farm}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078} 
+act\+Build\+Farm&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Town\+Hall@{act\+Build\+Town\+Hall}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Town\+Hall@{act\+Build\+Town\+Hall}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498} 
+act\+Build\+Town\+Hall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Barracks@{act\+Build\+Barracks}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Barracks@{act\+Build\+Barracks}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac} 
+act\+Build\+Barracks&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Lumber\+Mill@{act\+Build\+Lumber\+Mill}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Lumber\+Mill@{act\+Build\+Lumber\+Mill}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242} 
+act\+Build\+Lumber\+Mill&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Blacksmith@{act\+Build\+Blacksmith}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Blacksmith@{act\+Build\+Blacksmith}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7} 
+act\+Build\+Blacksmith&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Keep@{act\+Build\+Keep}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Keep@{act\+Build\+Keep}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceadc780d56a9807d6bd10f7299b801c9eb}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceadc780d56a9807d6bd10f7299b801c9eb} 
+act\+Build\+Keep&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Castle@{act\+Build\+Castle}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Castle@{act\+Build\+Castle}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceabbccd11a12c00ecde4d4bb2a0c27ab75}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceabbccd11a12c00ecde4d4bb2a0c27ab75} 
+act\+Build\+Castle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Scout\+Tower@{act\+Build\+Scout\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Scout\+Tower@{act\+Build\+Scout\+Tower}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69} 
+act\+Build\+Scout\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Guard\+Tower@{act\+Build\+Guard\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Guard\+Tower@{act\+Build\+Guard\+Tower}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7dc70c7da2eb8cb4f235b900e67991f2}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7dc70c7da2eb8cb4f235b900e67991f2} 
+act\+Build\+Guard\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Cannon\+Tower@{act\+Build\+Cannon\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Cannon\+Tower@{act\+Build\+Cannon\+Tower}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea416089b5ee9555bf5ef27d6c661a2961}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea416089b5ee9555bf5ef27d6c661a2961} 
+act\+Build\+Cannon\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Move@{act\+Move}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Move@{act\+Move}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af} 
+act\+Move&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Repair@{act\+Repair}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Repair@{act\+Repair}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae54caebc57cf41bd048ab64375ce4082}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae54caebc57cf41bd048ab64375ce4082} 
+act\+Repair&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Mine@{act\+Mine}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Mine@{act\+Mine}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b} 
+act\+Mine&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Simple@{act\+Build\+Simple}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Simple@{act\+Build\+Simple}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceacab8a5395c24e2bf1c9778a0066a3237}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceacab8a5395c24e2bf1c9778a0066a3237} 
+act\+Build\+Simple&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Advanced@{act\+Build\+Advanced}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Advanced@{act\+Build\+Advanced}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea337456d051e71bb60e1a7424d9703896}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea337456d051e71bb60e1a7424d9703896} 
+act\+Build\+Advanced&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Convey@{act\+Convey}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Convey@{act\+Convey}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8} 
+act\+Convey&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Cancel@{act\+Cancel}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Cancel@{act\+Cancel}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaec5e11ffc62be241b4f6673586b35a6b}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaec5e11ffc62be241b4f6673586b35a6b} 
+act\+Cancel&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Build\+Wall@{act\+Build\+Wall}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Build\+Wall@{act\+Build\+Wall}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea71c243197582f2607944883bb98438cc}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea71c243197582f2607944883bb98438cc} 
+act\+Build\+Wall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Attack@{act\+Attack}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Attack@{act\+Attack}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c} 
+act\+Attack&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Stand\+Ground@{act\+Stand\+Ground}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Stand\+Ground@{act\+Stand\+Ground}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04} 
+act\+Stand\+Ground&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Patrol@{act\+Patrol}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Patrol@{act\+Patrol}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea3cba4431d7962d2d5ffd01a9f7571332}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea3cba4431d7962d2d5ffd01a9f7571332} 
+act\+Patrol&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Weapon\+Upgrade1@{act\+Weapon\+Upgrade1}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Weapon\+Upgrade1@{act\+Weapon\+Upgrade1}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae6fd736f1ed1b76546c0ee54dc4e4958}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae6fd736f1ed1b76546c0ee54dc4e4958} 
+act\+Weapon\+Upgrade1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Weapon\+Upgrade2@{act\+Weapon\+Upgrade2}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Weapon\+Upgrade2@{act\+Weapon\+Upgrade2}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead92335c1ecc716f99e62d0983b110e51}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead92335c1ecc716f99e62d0983b110e51} 
+act\+Weapon\+Upgrade2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Weapon\+Upgrade3@{act\+Weapon\+Upgrade3}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Weapon\+Upgrade3@{act\+Weapon\+Upgrade3}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e368536b0eff35ab7cd8fead517b843}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e368536b0eff35ab7cd8fead517b843} 
+act\+Weapon\+Upgrade3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Arrow\+Upgrade1@{act\+Arrow\+Upgrade1}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Arrow\+Upgrade1@{act\+Arrow\+Upgrade1}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea9b943265810dd3beb73722efe67dfcdc}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea9b943265810dd3beb73722efe67dfcdc} 
+act\+Arrow\+Upgrade1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Arrow\+Upgrade2@{act\+Arrow\+Upgrade2}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Arrow\+Upgrade2@{act\+Arrow\+Upgrade2}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa194a5e6d4c99415ff2bafb8c2713bc1}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa194a5e6d4c99415ff2bafb8c2713bc1} 
+act\+Arrow\+Upgrade2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Arrow\+Upgrade3@{act\+Arrow\+Upgrade3}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Arrow\+Upgrade3@{act\+Arrow\+Upgrade3}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa083167c01a18c40d9b87df16796bbef}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa083167c01a18c40d9b87df16796bbef} 
+act\+Arrow\+Upgrade3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Armor\+Upgrade1@{act\+Armor\+Upgrade1}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Armor\+Upgrade1@{act\+Armor\+Upgrade1}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceab76385a4b1e7de9c0a60ad73a2a9292e}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceab76385a4b1e7de9c0a60ad73a2a9292e} 
+act\+Armor\+Upgrade1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Armor\+Upgrade2@{act\+Armor\+Upgrade2}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Armor\+Upgrade2@{act\+Armor\+Upgrade2}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7352085c235d92657871cfb1b7fcdfa5}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7352085c235d92657871cfb1b7fcdfa5} 
+act\+Armor\+Upgrade2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Armor\+Upgrade3@{act\+Armor\+Upgrade3}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Armor\+Upgrade3@{act\+Armor\+Upgrade3}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea13d786245276e72226d94e4e43d5893d}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea13d786245276e72226d94e4e43d5893d} 
+act\+Armor\+Upgrade3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Longbow@{act\+Longbow}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Longbow@{act\+Longbow}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7} 
+act\+Longbow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Ranger\+Scouting@{act\+Ranger\+Scouting}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Ranger\+Scouting@{act\+Ranger\+Scouting}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8} 
+act\+Ranger\+Scouting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Marksmanship@{act\+Marksmanship}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Marksmanship@{act\+Marksmanship}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36} 
+act\+Marksmanship&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{act\+Max@{act\+Max}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!act\+Max@{act\+Max}}}\hypertarget{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70}{}\label{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70} 
+act\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 50 of file Game\+Data\+Types.\+h.
+
+
+\begin{DoxyCode}
+50             \{
+51     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone} = 0,
+52     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant},
+53     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman},
+54     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher},
+55     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger},
+56     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{actBuildFarm},
+57     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall},
+58     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{actBuildBarracks},
+59     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{actBuildLumberMill},
+60     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{actBuildBlacksmith},
+61     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceadc780d56a9807d6bd10f7299b801c9eb}{actBuildKeep},
+62     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceabbccd11a12c00ecde4d4bb2a0c27ab75}{actBuildCastle},
+63     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69}{actBuildScoutTower},
+64     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7dc70c7da2eb8cb4f235b900e67991f2}{actBuildGuardTower},
+65     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea416089b5ee9555bf5ef27d6c661a2961}{actBuildCannonTower},
+66     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{actMove},
+67     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae54caebc57cf41bd048ab64375ce4082}{actRepair},
+68     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine},
+69     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceacab8a5395c24e2bf1c9778a0066a3237}{actBuildSimple},
+70     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea337456d051e71bb60e1a7424d9703896}{actBuildAdvanced},
+71     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{actConvey},
+72     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaec5e11ffc62be241b4f6673586b35a6b}{actCancel},
+73     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea71c243197582f2607944883bb98438cc}{actBuildWall},
+74     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{actAttack},
+75     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{actStandGround},
+76     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea3cba4431d7962d2d5ffd01a9f7571332}{actPatrol},
+77     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae6fd736f1ed1b76546c0ee54dc4e4958}{actWeaponUpgrade1},
+78     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead92335c1ecc716f99e62d0983b110e51}{actWeaponUpgrade2},
+79     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e368536b0eff35ab7cd8fead517b843}{actWeaponUpgrade3},
+80     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea9b943265810dd3beb73722efe67dfcdc}{actArrowUpgrade1},
+81     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa194a5e6d4c99415ff2bafb8c2713bc1}{actArrowUpgrade2},
+82     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa083167c01a18c40d9b87df16796bbef}{actArrowUpgrade3},
+83     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceab76385a4b1e7de9c0a60ad73a2a9292e}{actArmorUpgrade1},
+84     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7352085c235d92657871cfb1b7fcdfa5}{actArmorUpgrade2},
+85     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea13d786245276e72226d94e4e43d5893d}{actArmorUpgrade3},
+86     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7}{actLongbow},
+87     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8}{actRangerScouting},
+88     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36}{actMarksmanship},
+89     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70}{actMax}
+90 \} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{EAssetCapabilityType}, *\hyperlink{GameDataTypes_8h_a9830154ac69a3a2c815baedef2dabe94}{EAssetCapabilityTypeRef};
+\end{DoxyCode}
+\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fec} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Asset\+Type@{E\+Asset\+Type}}
+\index{E\+Asset\+Type@{E\+Asset\+Type}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Asset\+Type}{EAssetType}}
+{\footnotesize\ttfamily enum \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+None@{at\+None}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+None@{at\+None}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593} 
+at\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Peasant@{at\+Peasant}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Peasant@{at\+Peasant}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61} 
+at\+Peasant&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Footman@{at\+Footman}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Footman@{at\+Footman}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2} 
+at\+Footman&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Archer@{at\+Archer}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Archer@{at\+Archer}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8} 
+at\+Archer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Ranger@{at\+Ranger}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Ranger@{at\+Ranger}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0} 
+at\+Ranger&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Gold\+Mine@{at\+Gold\+Mine}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Gold\+Mine@{at\+Gold\+Mine}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3} 
+at\+Gold\+Mine&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Town\+Hall@{at\+Town\+Hall}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Town\+Hall@{at\+Town\+Hall}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321} 
+at\+Town\+Hall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Keep@{at\+Keep}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Keep@{at\+Keep}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31} 
+at\+Keep&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Castle@{at\+Castle}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Castle@{at\+Castle}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a} 
+at\+Castle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Farm@{at\+Farm}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Farm@{at\+Farm}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5} 
+at\+Farm&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Barracks@{at\+Barracks}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Barracks@{at\+Barracks}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230} 
+at\+Barracks&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Lumber\+Mill@{at\+Lumber\+Mill}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Lumber\+Mill@{at\+Lumber\+Mill}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c} 
+at\+Lumber\+Mill&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Blacksmith@{at\+Blacksmith}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Blacksmith@{at\+Blacksmith}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e} 
+at\+Blacksmith&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Scout\+Tower@{at\+Scout\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Scout\+Tower@{at\+Scout\+Tower}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477fecab8835f936f9ce8c2df6c201e542fbfcd}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477fecab8835f936f9ce8c2df6c201e542fbfcd} 
+at\+Scout\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Guard\+Tower@{at\+Guard\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Guard\+Tower@{at\+Guard\+Tower}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca65fa6c84ff93972a623793d4ee72d87f}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca65fa6c84ff93972a623793d4ee72d87f} 
+at\+Guard\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Cannon\+Tower@{at\+Cannon\+Tower}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Cannon\+Tower@{at\+Cannon\+Tower}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca226f6f1968ce76c97cdabb780a6c289d}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca226f6f1968ce76c97cdabb780a6c289d} 
+at\+Cannon\+Tower&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{at\+Max@{at\+Max}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!at\+Max@{at\+Max}}}\hypertarget{GameDataTypes_8h_a5600d4fc433b83300308921974477feca92fbf60b4e5c335160f915b6a1c17c05}{}\label{GameDataTypes_8h_a5600d4fc433b83300308921974477feca92fbf60b4e5c335160f915b6a1c17c05} 
+at\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 92 of file Game\+Data\+Types.\+h.
+
+
+\begin{DoxyCode}
+92             \{
+93     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} = 0,
+94     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{atPeasant},
+95     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{atFootman},
+96     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher},
+97     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0}{atRanger},
+98     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine},
+99     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall},
+100     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{atKeep},
+101     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{atCastle},
+102     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm},
+103     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks},
+104     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill},
+105     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{atBlacksmith},
+106     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecab8835f936f9ce8c2df6c201e542fbfcd}{atScoutTower},
+107     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca65fa6c84ff93972a623793d4ee72d87f}{atGuardTower},
+108     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca226f6f1968ce76c97cdabb780a6c289d}{atCannonTower},
+109     \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca92fbf60b4e5c335160f915b6a1c17c05}{atMax}
+110 \} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{EAssetType}, *\hyperlink{GameDataTypes_8h_a1ae3843717c7d2461d3605c62c1aa34c}{EAssetTypeRef};
+\end{DoxyCode}
+\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Direction@{E\+Direction}}
+\index{E\+Direction@{E\+Direction}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Direction}{EDirection}}
+{\footnotesize\ttfamily enum \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+North@{d\+North}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+North@{d\+North}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e} 
+d\+North&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+North\+East@{d\+North\+East}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+North\+East@{d\+North\+East}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a27d1b6db9b056b1c0d42dce9c259bfc5}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a27d1b6db9b056b1c0d42dce9c259bfc5} 
+d\+North\+East&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+East@{d\+East}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+East@{d\+East}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55} 
+d\+East&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+South\+East@{d\+South\+East}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+South\+East@{d\+South\+East}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a44067bc8d66314648f9abcafd594743b}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a44067bc8d66314648f9abcafd594743b} 
+d\+South\+East&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+South@{d\+South}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+South@{d\+South}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0} 
+d\+South&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+South\+West@{d\+South\+West}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+South\+West@{d\+South\+West}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42aff3cf1f87f6003fab2e8fc616500345b}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42aff3cf1f87f6003fab2e8fc616500345b} 
+d\+South\+West&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+West@{d\+West}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+West@{d\+West}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0} 
+d\+West&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+North\+West@{d\+North\+West}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+North\+West@{d\+North\+West}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a005e8358dded5729dae6ca3c8cf98898}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a005e8358dded5729dae6ca3c8cf98898} 
+d\+North\+West&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{d\+Max@{d\+Max}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!d\+Max@{d\+Max}}}\hypertarget{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{}\label{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319} 
+d\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 112 of file Game\+Data\+Types.\+h.
+
+
+\begin{DoxyCode}
+112             \{
+113     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{dNorth} = 0,
+114     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a27d1b6db9b056b1c0d42dce9c259bfc5}{dNorthEast},
+115     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55}{dEast},
+116     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a44067bc8d66314648f9abcafd594743b}{dSouthEast},
+117     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{dSouth},
+118     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42aff3cf1f87f6003fab2e8fc616500345b}{dSouthWest},
+119     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0}{dWest},
+120     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a005e8358dded5729dae6ca3c8cf98898}{dNorthWest},
+121     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax}
+122 \} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection}, \hyperlink{GameDataTypes_8h_a03ae92312bec907cd4b11e98e43e705e}{EDirectionRef};
+\end{DoxyCode}
+\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f} 
+\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!E\+Player\+Color@{E\+Player\+Color}}
+\index{E\+Player\+Color@{E\+Player\+Color}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}
+\subsubsection{\texorpdfstring{E\+Player\+Color}{EPlayerColor}}
+{\footnotesize\ttfamily enum \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+None@{pc\+None}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+None@{pc\+None}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729} 
+pc\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Blue@{pc\+Blue}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Blue@{pc\+Blue}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f} 
+pc\+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Red@{pc\+Red}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Red@{pc\+Red}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb} 
+pc\+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Green@{pc\+Green}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Green@{pc\+Green}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14} 
+pc\+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Purple@{pc\+Purple}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Purple@{pc\+Purple}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b} 
+pc\+Purple&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Orange@{pc\+Orange}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Orange@{pc\+Orange}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea} 
+pc\+Orange&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Yellow@{pc\+Yellow}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Yellow@{pc\+Yellow}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34} 
+pc\+Yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Black@{pc\+Black}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Black@{pc\+Black}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9} 
+pc\+Black&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+White@{pc\+White}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+White@{pc\+White}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc} 
+pc\+White&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pc\+Max@{pc\+Max}!Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}}\index{Game\+Data\+Types.\+h@{Game\+Data\+Types.\+h}!pc\+Max@{pc\+Max}}}\hypertarget{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34}{}\label{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34} 
+pc\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 20 of file Game\+Data\+Types.\+h.
+
+
+\begin{DoxyCode}
+20             \{
+21     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone} = 0,
+22     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fadcf8082584aa05faae86371b4814197f}{pcBlue},
+23     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa652ff871a9f39832585b78ef248abbeb}{pcRed},
+24     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa120ab274419719b214f2e8f30b4cce14}{pcGreen},
+25     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa6d0bdf7ea2732041d24c033aef69690b}{pcPurple},
+26     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa1131e0bea3d784182299818717993eea}{pcOrange},
+27     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fabe29a0eabd9c2d47ac0179eb5b252c34}{pcYellow},
+28     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa9ae67c5388342a6ed3f5f2e2c09acce9}{pcBlack},
+29     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa3cbd8201421af4b5b5993c7a6847f1bc}{pcWhite},
+30     \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa594a5c8dd3987f24e8a0f23f1a72cd34}{pcMax}
+31 \} \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{EPlayerColor}, *\hyperlink{GameDataTypes_8h_ae36400b9c638f95ba883371851553938}{EPlayerColorRef};
+\end{DoxyCode}

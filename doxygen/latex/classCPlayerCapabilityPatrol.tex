@@ -1,0 +1,222 @@
+\hypertarget{classCPlayerCapabilityPatrol}{}\section{C\+Player\+Capability\+Patrol Class Reference}
+\label{classCPlayerCapabilityPatrol}\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+
+
+Inheritance diagram for C\+Player\+Capability\+Patrol\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classCPlayerCapabilityPatrol__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Player\+Capability\+Patrol\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classCPlayerCapabilityPatrol__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCPlayerCapabilityPatrol_1_1CActivatedCapability}{C\+Activated\+Capability}
+\item 
+class \hyperlink{classCPlayerCapabilityPatrol_1_1CRegistrant}{C\+Registrant}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classCPlayerCapabilityPatrol_a1f27cf43aabf3360d5db92fd23b55c01}{$\sim$\+C\+Player\+Capability\+Patrol} ()
+\item 
+bool \hyperlink{classCPlayerCapabilityPatrol_a48e60ecd544759f3aad66afeb4a6e0a9}{Can\+Initiate} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata)
+\item 
+bool \hyperlink{classCPlayerCapabilityPatrol_a63c099d931e1e57db01120db7b1fdbe4}{Can\+Apply} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)
+\item 
+bool \hyperlink{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51}{Apply\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapabilityPatrol_a9c8653e6b0509a753d0b084f3988953b}{C\+Player\+Capability\+Patrol} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCPlayerCapabilityPatrol_1_1CRegistrant}{C\+Registrant} \hyperlink{classCPlayerCapabilityPatrol_af3e88478d9266aa4c7f2f0457da84e89}{D\+Registrant}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 542 of file Basic\+Capabilities.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapabilityPatrol_a9c8653e6b0509a753d0b084f3988953b}{}\label{classCPlayerCapabilityPatrol_a9c8653e6b0509a753d0b084f3988953b} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{C\+Player\+Capability\+Patrol()}{CPlayerCapabilityPatrol()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+Patrol\+::\+C\+Player\+Capability\+Patrol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 577 of file Basic\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+577                                                  : \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Patrol"})
+      , \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa465193c39da3100a1ce87c4a01a7ec2f}{ttTerrain})\{
+578 
+579 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapabilityPatrol_a1f27cf43aabf3360d5db92fd23b55c01}{}\label{classCPlayerCapabilityPatrol_a1f27cf43aabf3360d5db92fd23b55c01} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!````~C\+Player\+Capability\+Patrol@{$\sim$\+C\+Player\+Capability\+Patrol}}
+\index{````~C\+Player\+Capability\+Patrol@{$\sim$\+C\+Player\+Capability\+Patrol}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Player\+Capability\+Patrol()}{~CPlayerCapabilityPatrol()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+Patrol\+::$\sim$\+C\+Player\+Capability\+Patrol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 564 of file Basic\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+564 \{\};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityPatrol_a1f27cf43aabf3360d5db92fd23b55c01_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51}{}\label{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!Apply\+Capability@{Apply\+Capability}}
+\index{Apply\+Capability@{Apply\+Capability}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{Apply\+Capability()}{ApplyCapability()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Patrol\+::\+Apply\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{C\+Player\+Capability}.
+
+
+
+Definition at line 589 of file Basic\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+589                                                                                                            
+                                                          \{
+590     \textcolor{keywordflow}{if}(actor->TilePosition() != target->TilePosition())\{
+591         \hyperlink{structSAssetCommand}{SAssetCommand} NewCommand;
+592         
+593         NewCommand.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability};
+594         NewCommand.\hyperlink{structSAssetCommand_a734ea7c6847457b437360f333f570ff9}{DCapability} = \hyperlink{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98}{AssetCapabilityType}();
+595         NewCommand.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget} = target;
+596         NewCommand.\hyperlink{structSAssetCommand_ad8beda19520811cc70fe1eab16c774dd}{DActivatedCapability} = std::make\_shared< CActivatedCapability >(
+      actor, playerdata, target);
+597         actor->ClearCommand();
+598         actor->PushCommand(NewCommand);
+599         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+600     \}
+601 
+602     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+603 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityPatrol_a63c099d931e1e57db01120db7b1fdbe4}{}\label{classCPlayerCapabilityPatrol_a63c099d931e1e57db01120db7b1fdbe4} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!Can\+Apply@{Can\+Apply}}
+\index{Can\+Apply@{Can\+Apply}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{Can\+Apply()}{CanApply()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Patrol\+::\+Can\+Apply (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{C\+Player\+Capability}.
+
+
+
+Definition at line 585 of file Basic\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+585                                                                                                            
+                                                   \{
+586     \textcolor{keywordflow}{return} actor->Speed() > 0;
+587 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityPatrol_a63c099d931e1e57db01120db7b1fdbe4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityPatrol_a48e60ecd544759f3aad66afeb4a6e0a9}{}\label{classCPlayerCapabilityPatrol_a48e60ecd544759f3aad66afeb4a6e0a9} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!Can\+Initiate@{Can\+Initiate}}
+\index{Can\+Initiate@{Can\+Initiate}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{Can\+Initiate()}{CanInitiate()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Patrol\+::\+Can\+Initiate (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{C\+Player\+Capability}.
+
+
+
+Definition at line 581 of file Basic\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+581                                                                                                            
+                \{
+582     \textcolor{keywordflow}{return} actor->Speed() > 0;
+583 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityPatrol_a48e60ecd544759f3aad66afeb4a6e0a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapabilityPatrol_af3e88478d9266aa4c7f2f0457da84e89}{}\label{classCPlayerCapabilityPatrol_af3e88478d9266aa4c7f2f0457da84e89} 
+\index{C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}!D\+Registrant@{D\+Registrant}}
+\index{D\+Registrant@{D\+Registrant}!C\+Player\+Capability\+Patrol@{C\+Player\+Capability\+Patrol}}
+\subsubsection{\texorpdfstring{D\+Registrant}{DRegistrant}}
+{\footnotesize\ttfamily \hyperlink{classCPlayerCapabilityPatrol_1_1CRegistrant}{C\+Player\+Capability\+Patrol\+::\+C\+Registrant} C\+Player\+Capability\+Patrol\+::\+D\+Registrant\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 548 of file Basic\+Capabilities.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{BasicCapabilities_8cpp}{Basic\+Capabilities.\+cpp}\end{DoxyCompactItemize}

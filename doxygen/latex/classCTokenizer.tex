@@ -1,0 +1,163 @@
+\hypertarget{classCTokenizer}{}\section{C\+Tokenizer Class Reference}
+\label{classCTokenizer}\index{C\+Tokenizer@{C\+Tokenizer}}
+
+
+{\ttfamily \#include $<$Tokenizer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCTokenizer_abb6403c9fb2fe0e5d2a4349d7bcbf3ef}{C\+Tokenizer} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source, const std\+::string delimiters=\char`\"{}\char`\"{})
+\item 
+bool \hyperlink{classCTokenizer_ab3afe12900a14497129426e46d9f65d9}{Read} (std\+::string \&token)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c}{Tokenize} (std\+::vector$<$ std\+::string $>$ \&tokens, const std\+::string \&data, const std\+::string delimiters=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ \hyperlink{classCTokenizer_aaa6faab432000d3f942a0c14fc09f60b}{D\+Data\+Source}
+\item 
+std\+::string \hyperlink{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52}{D\+Delimiters}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file Tokenizer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCTokenizer_abb6403c9fb2fe0e5d2a4349d7bcbf3ef}{}\label{classCTokenizer_abb6403c9fb2fe0e5d2a4349d7bcbf3ef} 
+\index{C\+Tokenizer@{C\+Tokenizer}!C\+Tokenizer@{C\+Tokenizer}}
+\index{C\+Tokenizer@{C\+Tokenizer}!C\+Tokenizer@{C\+Tokenizer}}
+\subsubsection{\texorpdfstring{C\+Tokenizer()}{CTokenizer()}}
+{\footnotesize\ttfamily C\+Tokenizer\+::\+C\+Tokenizer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source,  }\item[{const std\+::string}]{delimiters = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Tokenizer.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                                                      \{
+20     \hyperlink{classCTokenizer_aaa6faab432000d3f942a0c14fc09f60b}{DDataSource} = source;
+21     \textcolor{keywordflow}{if}(delimiters.length())\{
+22         \hyperlink{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52}{DDelimiters} = delimiters;
+23     \}
+24     \textcolor{keywordflow}{else}\{
+25         \hyperlink{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52}{DDelimiters} = \textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)r\(\backslash\)n"};
+26     \}
+27 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCTokenizer_ab3afe12900a14497129426e46d9f65d9}{}\label{classCTokenizer_ab3afe12900a14497129426e46d9f65d9} 
+\index{C\+Tokenizer@{C\+Tokenizer}!Read@{Read}}
+\index{Read@{Read}!C\+Tokenizer@{C\+Tokenizer}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily bool C\+Tokenizer\+::\+Read (\begin{DoxyParamCaption}\item[{std\+::string \&}]{token }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Tokenizer.\+cpp.
+
+
+\begin{DoxyCode}
+29                                      \{
+30     \textcolor{keywordtype}{char} TempChar;
+31     
+32     token.clear();
+33     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+34         \textcolor{keywordflow}{if}(0 < \hyperlink{classCTokenizer_aaa6faab432000d3f942a0c14fc09f60b}{DDataSource}->Read(&TempChar, 1))\{
+35             \textcolor{keywordflow}{if}(std::string::npos != \hyperlink{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52}{DDelimiters}.find(TempChar))\{
+36                 token += TempChar;
+37             \}
+38             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(token.length())\{
+39                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+40             \}
+41         \}
+42         \textcolor{keywordflow}{else}\{
+43             \textcolor{keywordflow}{return} 0 < token.length();
+44         \}
+45     \}
+46 \}
+\end{DoxyCode}
+\hypertarget{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c}{}\label{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c} 
+\index{C\+Tokenizer@{C\+Tokenizer}!Tokenize@{Tokenize}}
+\index{Tokenize@{Tokenize}!C\+Tokenizer@{C\+Tokenizer}}
+\subsubsection{\texorpdfstring{Tokenize()}{Tokenize()}}
+{\footnotesize\ttfamily void C\+Tokenizer\+::\+Tokenize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{tokens,  }\item[{const std\+::string \&}]{data,  }\item[{const std\+::string}]{delimiters = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 48 of file Tokenizer.\+cpp.
+
+
+\begin{DoxyCode}
+48                                                                                                           \{
+49     std::string Delimiters, TempString;
+50     
+51     \textcolor{keywordflow}{if}(delimiters.length())\{
+52         Delimiters = delimiters;
+53     \}
+54     \textcolor{keywordflow}{else}\{
+55         Delimiters = \textcolor{stringliteral}{" \(\backslash\)t\(\backslash\)r\(\backslash\)n"};
+56     \}
+57     tokens.clear();
+58     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} Index = 0; Index < data.length(); Index++)\{
+59         \textcolor{keywordflow}{if}(std::string::npos == Delimiters.find(data[Index]))\{
+60             TempString += data[Index];
+61         \}
+62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(TempString.length())\{
+63             tokens.push\_back(TempString);
+64             TempString.clear();
+65         \}
+66     \}
+67     \textcolor{keywordflow}{if}(TempString.length())\{
+68         tokens.push\_back(TempString);
+69     \}
+70 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCTokenizer_aaa6faab432000d3f942a0c14fc09f60b}{}\label{classCTokenizer_aaa6faab432000d3f942a0c14fc09f60b} 
+\index{C\+Tokenizer@{C\+Tokenizer}!D\+Data\+Source@{D\+Data\+Source}}
+\index{D\+Data\+Source@{D\+Data\+Source}!C\+Tokenizer@{C\+Tokenizer}}
+\subsubsection{\texorpdfstring{D\+Data\+Source}{DDataSource}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ C\+Tokenizer\+::\+D\+Data\+Source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Tokenizer.\+h.
+
+\hypertarget{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52}{}\label{classCTokenizer_ad1edcf297f5f9ccf43dc32a992556f52} 
+\index{C\+Tokenizer@{C\+Tokenizer}!D\+Delimiters@{D\+Delimiters}}
+\index{D\+Delimiters@{D\+Delimiters}!C\+Tokenizer@{C\+Tokenizer}}
+\subsubsection{\texorpdfstring{D\+Delimiters}{DDelimiters}}
+{\footnotesize\ttfamily std\+::string C\+Tokenizer\+::\+D\+Delimiters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Tokenizer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Tokenizer_8h}{Tokenizer.\+h}\item 
+src/\hyperlink{Tokenizer_8cpp}{Tokenizer.\+cpp}\end{DoxyCompactItemize}

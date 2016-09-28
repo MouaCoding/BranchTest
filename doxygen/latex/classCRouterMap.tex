@@ -1,0 +1,423 @@
+\hypertarget{classCRouterMap}{}\section{C\+Router\+Map Class Reference}
+\label{classCRouterMap}\index{C\+Router\+Map@{C\+Router\+Map}}
+
+
+{\ttfamily \#include $<$Router\+Map.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{classCRouterMap_ac638dca74d6ebe3602db9f7c69881146}{Find\+Route} (const \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} \&resmap, const \hyperlink{classCPlayerAsset}{C\+Player\+Asset} \&resource, const \hyperlink{classCPosition}{C\+Position} \&target)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structCRouterMap_1_1SSearchTarget}{C\+Router\+Map\+::\+S\+Search\+Target} $\ast$ \hyperlink{classCRouterMap_a6996ef024b965180f73c433ba6f50154}{S\+Search\+Target\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classCRouterMap_adf9041b4e1face1308c556c0ba0de9af}{Moving\+Away} (\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} dir1, \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} dir2)
+\item 
+static bool \hyperlink{classCRouterMap_a1a581c85a34b6d0fcc5ddc3d0ae7fb00}{Search\+Target\+Compare} (const \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} \&first, const \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} \&second)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{D\+Map}
+\item 
+std\+::list$<$ \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} $>$ \hyperlink{classCRouterMap_a903a8d0891e61b169e6aa72da27d62ba}{D\+Search\+Targets}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} \hyperlink{classCRouterMap_addf4151d25670daf5cb45058e978fde2}{D\+Ideal\+Search\+Direction} = \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{d\+North}
+\item 
+static int \hyperlink{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{D\+Map\+Width} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file Router\+Map.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCRouterMap_a6996ef024b965180f73c433ba6f50154}{}\label{classCRouterMap_a6996ef024b965180f73c433ba6f50154} 
+\index{C\+Router\+Map@{C\+Router\+Map}!S\+Search\+Target\+Ref@{S\+Search\+Target\+Ref}}
+\index{S\+Search\+Target\+Ref@{S\+Search\+Target\+Ref}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{S\+Search\+Target\+Ref}{SSearchTargetRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structCRouterMap_1_1SSearchTarget}{C\+Router\+Map\+::\+S\+Search\+Target} $\ast$ \hyperlink{classCRouterMap_a6996ef024b965180f73c433ba6f50154}{C\+Router\+Map\+::\+S\+Search\+Target\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCRouterMap_ac638dca74d6ebe3602db9f7c69881146}{}\label{classCRouterMap_ac638dca74d6ebe3602db9f7c69881146} 
+\index{C\+Router\+Map@{C\+Router\+Map}!Find\+Route@{Find\+Route}}
+\index{Find\+Route@{Find\+Route}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{Find\+Route()}{FindRoute()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} C\+Router\+Map\+::\+Find\+Route (\begin{DoxyParamCaption}\item[{const \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} \&}]{resmap,  }\item[{const \hyperlink{classCPlayerAsset}{C\+Player\+Asset} \&}]{resource,  }\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line 91 of file Router\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+91                                                                                                            
+               \{
+92     \textcolor{keywordtype}{int} MapWidth = resmap.\hyperlink{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{Width}();
+93     \textcolor{keywordtype}{int} MapHeight = resmap.\hyperlink{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{Height}();
+94     \textcolor{keywordtype}{int} StartX = asset.TilePositionX();
+95     \textcolor{keywordtype}{int} StartY = asset.TilePositionY();
+96     SSearchTarget CurrentSearch, BestSearch, TempSearch;
+97     \hyperlink{classCPosition}{CPosition} CurrentTile, TargetTile, TempTile;
+98     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection} SearchDirecitons[] = \{\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{dNorth},\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55}{dEast},\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{dSouth},
+      \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0}{dWest}\};
+99     \textcolor{keywordtype}{int} ResMapXOffsets[] = \{0,1,0,-1\};
+100     \textcolor{keywordtype}{int} ResMapYOffsets[] = \{-1,0,1,0\};
+101     \textcolor{keywordtype}{int} DiagCheckXOffset[] = \{0,1,1,1,0,-1,-1,-1\};
+102     \textcolor{keywordtype}{int} DiagCheckYOffset[] = \{-1,-1,0,1,1,1,0,-1\};
+103     \textcolor{keywordtype}{int} SearchDirectionCount = \textcolor{keyword}{sizeof}(SearchDirecitons) / \textcolor{keyword}{sizeof}(\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection});
+104     \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection} LastInDirection, DirectionBeforeLast;
+105     std::queue< SSearchTarget > SearchQueue;
+106     
+107     \textcolor{comment}{//printf("Initializing Map\(\backslash\)n");}
+108     TargetTile.\hyperlink{classCPosition_ae302aa21792de64c97de29e2cbbfeb94}{SetToTile}(target);
+109     \textcolor{keywordflow}{if}((\hyperlink{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{DMap}.size() != MapHeight + 2)||(\hyperlink{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{DMap}[0].size() != MapWidth + 2))\{
+110         \textcolor{keywordtype}{int} LastYIndex = MapHeight + 1;
+111         \textcolor{keywordtype}{int} LastXIndex = MapWidth + 1;
+112         \hyperlink{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{DMap}.resize(MapHeight + 2);
+113         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Row : \hyperlink{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{DMap})\{
+114             Row.resize(MapWidth + 2);   
+115         \}
+116         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < DMap.size(); Index++)\{
+117             DMap[Index][0] = \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED};
+118             DMap[Index][LastXIndex] = \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED}; 
+119         \}
+120         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < MapWidth; Index++)\{
+121             DMap[0][Index+1] = \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED};
+122             DMap[LastYIndex][Index+1] = \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED};
+123         \}
+124         \hyperlink{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{DMapWidth} = MapWidth + 2;
+125     \}
+126     \textcolor{comment}{//printf("Comparing target to current\(\backslash\)n");}
+127     \textcolor{keywordflow}{if}(asset.TilePosition() == TargetTile)\{
+128         \textcolor{keywordtype}{int} DeltaX = target.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() - asset.PositionX();
+129         \textcolor{keywordtype}{int} DeltaY = target.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() - asset.PositionY();
+130         
+131         \textcolor{keywordflow}{if}(0 < DeltaX)\{
+132             \textcolor{keywordflow}{if}(0 < DeltaY)\{
+133                 \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a27d1b6db9b056b1c0d42dce9c259bfc5}{dNorthEast};
+134             \}
+135             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(0 > DeltaY)\{
+136                 \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a44067bc8d66314648f9abcafd594743b}{dSouthEast};
+137             \}
+138             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a06b098879996cb811972f1fb43f11e55}{dEast};
+139         \}
+140         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(0 > DeltaX)\{
+141             \textcolor{keywordflow}{if}(0 < DeltaY)\{
+142                 \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a005e8358dded5729dae6ca3c8cf98898}{dNorthWest};
+143             \}
+144             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(0 > DeltaY)\{
+145                 \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42aff3cf1f87f6003fab2e8fc616500345b}{dSouthWest};
+146             \}
+147             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a3006340383b02f53e16c07e89b1163b0}{dWest};            
+148         \}
+149         \textcolor{keywordflow}{if}(0 < DeltaY)\{
+150             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{dNorth};
+151         \}
+152         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(0 > DeltaY)\{
+153             \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42ab97d9c3d0f527d3f74de60cc1889ecd0}{dSouth};
+154         \}
+155         
+156         \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax};
+157     \}
+158     \textcolor{comment}{//printf("Initializing unvisited\(\backslash\)n");}
+159     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Y = 0; Y < MapHeight; Y++)\{
+160         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} X = 0; X < MapWidth; X++)\{
+161             DMap[Y+1][X+1] = \hyperlink{RouterMap_8cpp_a59f1c84b6a309e92137f4cc017de2f52}{SEARCH\_STATUS\_UNVISITED};
+162         \}
+163     \}
+164     \textcolor{comment}{//printf("Marking assets visited\(\backslash\)n");}
+165     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Res : resmap.\hyperlink{classCAssetDecoratedMap_a2f4d2597697593197567877900d55c52}{Assets}())\{
+166         \textcolor{keywordflow}{if}(&asset != Res.get())\{
+167             \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} != Res->Type())\{
+168                 \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a60ca9010aa62b73c1aab838ff4bf7276}{aaWalk} != Res->Action())||(asset.Color() != Res->Color()))\{
+169                     \textcolor{keywordflow}{if}((asset.Color() != Res->Color())||((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{aaConveyGold} != Res->Action())&&(
+      \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{aaConveyLumber} != Res->Action())&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold} != Res->Action())))\{
+170                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = 0; YOff < Res->Size(); YOff++)\{
+171                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = 0; XOff < Res->Size(); XOff++)\{
+172                                 DMap[Res->TilePositionY() + YOff + 1][Res->TilePositionX() + XOff + 1] = 
+      \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED};
+173                             \}
+174                         \}
+175                     \}
+176                 \}
+177                 \textcolor{keywordflow}{else}\{
+178                     DMap[Res->TilePositionY() + 1][Res->TilePositionX() + 1] = 
+      \hyperlink{RouterMap_8cpp_ade7d48394ed5ca89b019914cb5e7a9da}{SEARCH\_STATUS\_OCCUPIED} - Res->Direction();   
+179                 \}
+180             \}
+181         \}
+182     \}
+183     
+184     \textcolor{comment}{//DSearchTargets.clear();}
+185     \hyperlink{classCRouterMap_addf4151d25670daf5cb45058e978fde2}{DIdealSearchDirection} = asset.Direction();\textcolor{comment}{//(asset.Direction()/2) * 2;}
+186     CurrentTile = asset.TilePosition();
+187     CurrentSearch.\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} = BestSearch.DX = CurrentTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}();
+188     CurrentSearch.DY = BestSearch.DY = CurrentTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}();
+189     CurrentSearch.DSteps = 0;
+190     CurrentSearch.DTargetDistanceSquared = BestSearch.DTargetDistanceSquared = CurrentTile.
+      \hyperlink{classCPosition_acd96d507f44c0fdf13036ebc1a09e59c}{DistanceSquared}(TargetTile);
+191     CurrentSearch.DInDirection = BestSearch.DInDirection = \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax};
+192     DMap[StartY+1][StartX+1] = \hyperlink{RouterMap_8cpp_ae8b1ae5dd44be7811fb48e54c1194503}{SEARCH\_STATUS\_VISITED};
+193     \textcolor{comment}{//printf("Searching Map (%d, %d) -> (%d, %d)\(\backslash\)n", CurrentTile.X(), CurrentTile.Y(), TargetTile.X(),
+       TargetTile.Y());}
+194     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{
+195         \textcolor{keywordflow}{if}(CurrentTile == TargetTile)\{
+196             BestSearch = CurrentSearch;
+197             \textcolor{keywordflow}{break};
+198         \}
+199         \textcolor{keywordflow}{if}(CurrentSearch.DTargetDistanceSquared < BestSearch.DTargetDistanceSquared)\{
+200             BestSearch = CurrentSearch;
+201         \}
+202         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < SearchDirectionCount; Index++)\{
+203             TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(CurrentSearch.DX + ResMapXOffsets[Index]);
+204             TempTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(CurrentSearch.DY + ResMapYOffsets[Index]);
+205             \textcolor{comment}{//printf("Tile(%d, %d) = %d\(\backslash\)n",TempTile.X(), TempTile.Y(), DMap[TempTile.Y() + 1][TempTile.X()
+       + 1]);}
+206             \textcolor{keywordflow}{if}((\hyperlink{RouterMap_8cpp_a59f1c84b6a309e92137f4cc017de2f52}{SEARCH\_STATUS\_UNVISITED} == DMap[TempTile.
+      \hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 1][TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + 1])||\hyperlink{classCRouterMap_adf9041b4e1face1308c556c0ba0de9af}{MovingAway}(SearchDirecitons[Index], (
+      \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection})(\hyperlink{RouterMap_8cpp_ade7d48394ed5ca89b019914cb5e7a9da}{SEARCH\_STATUS\_OCCUPIED} - DMap[TempTile.
+      \hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 1][TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + 1])))\{
+207                 DMap[TempTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 1][TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + 1] = Index;
+208                 \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} CurTileType = resmap.
+      \hyperlink{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4}{TileType}(TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(), TempTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}());
+209                 \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{CTerrainMap::ttGrass} == CurTileType)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt} == CurTileType)||(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{CTerrainMap::ttStump} == 
+      CurTileType)||(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{CTerrainMap::ttRubble} == CurTileType)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == CurTileType))\{
+210                     TempSearch.DX = TempTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}();
+211                     TempSearch.DY = TempTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}();
+212                     TempSearch.DSteps = CurrentSearch.DSteps + 1;
+213                     TempSearch.DTileType = CurTileType;
+214                     TempSearch.DTargetDistanceSquared = TempTile.\hyperlink{classCPosition_acd96d507f44c0fdf13036ebc1a09e59c}{DistanceSquared}(TargetTile)
+      ;
+215                     TempSearch.DInDirection = SearchDirecitons[Index];
+216                     \textcolor{comment}{//DSearchTargets.push\_back(TempSearch);}
+217                     SearchQueue.push(TempSearch);
+218                 \}
+219             \}
+220         \}
+221         \textcolor{comment}{//DSearchTargets.sort(SearchTargetCompare);}
+222         \textcolor{comment}{//if(DSearchTargets.empty())\{}
+223         \textcolor{comment}{//    break;    }
+224         \textcolor{comment}{//\}}
+225         \textcolor{keywordflow}{if}(SearchQueue.empty())\{
+226             \textcolor{keywordflow}{break};   
+227         \}
+228         \textcolor{comment}{//CurrentSearch = DSearchTargets.front();}
+229         \textcolor{comment}{//DSearchTargets.pop\_front();}
+230         CurrentSearch = SearchQueue.front();
+231         SearchQueue.pop();
+232         CurrentTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(CurrentSearch.DX);
+233         CurrentTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(CurrentSearch.DY);
+234     \}
+235     \textcolor{comment}{//printf("Finding backpath (%d,%d) %d\(\backslash\)n", BestSearch.DX, BestSearch.DY, BestSearch.DInDirection);}
+236     DirectionBeforeLast = LastInDirection = BestSearch.DInDirection;
+237     CurrentTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(BestSearch.DX);
+238     CurrentTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(BestSearch.DY);
+239     \textcolor{keywordflow}{while}((CurrentTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() != StartX)||(CurrentTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() != StartY))\{
+240         \textcolor{keywordtype}{int} Index = DMap[CurrentTile.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}()+1][CurrentTile.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}()+1];
+241         
+242         \textcolor{comment}{//printf("DMap[%d][%d] == %d\(\backslash\)n",CurrentTile.Y()+1, CurrentTile.X()+1, Index);}
+243         \textcolor{keywordflow}{if}((0 > Index)||(SearchDirectionCount <= Index))\{
+244             exit(0);   
+245         \}
+246         DirectionBeforeLast = LastInDirection;
+247         LastInDirection = SearchDirecitons[Index];
+248         CurrentTile.\hyperlink{classCPosition_a64f0d8ef8ca26c8b66b0997b3b132416}{DecrementX}(ResMapXOffsets[Index]);
+249         CurrentTile.\hyperlink{classCPosition_a51ee44d9e0457d6277567fd8a66fdec7}{DecrementY}(ResMapYOffsets[Index]);
+250     \}
+251     \textcolor{comment}{//printf("Returning direction\(\backslash\)n");}
+252     \textcolor{keywordflow}{if}(DirectionBeforeLast != LastInDirection)\{
+253         
+254         \textcolor{comment}{//printf("D %d -> %d\(\backslash\)n", LastInDirection, DirectionBeforeLast);  }
+255         \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{CTerrainMap::ETileType} CurTileType = resmap.
+      \hyperlink{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4}{TileType}(StartX + DiagCheckXOffset[DirectionBeforeLast], StartY + DiagCheckYOffset[
+      DirectionBeforeLast]);
+256         \textcolor{keywordflow}{if}((\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{CTerrainMap::ttGrass} == CurTileType)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{CTerrainMap::ttDirt} == CurTileType)||(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{CTerrainMap::ttStump} == 
+      CurTileType)||(\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{CTerrainMap::ttRubble} == CurTileType)||(
+      \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone} == CurTileType))\{
+257             \textcolor{keywordtype}{int} Sum = LastInDirection + DirectionBeforeLast;
+258             \textcolor{keywordflow}{if}((6 == Sum)&&(!LastInDirection || !DirectionBeforeLast))\{ \textcolor{comment}{// NW wrap around}
+259                 Sum += 8;
+260             \}
+261             Sum /= 2;
+262             \textcolor{comment}{//printf("Can go diag %d\(\backslash\)n", Sum);  }
+263             LastInDirection = (\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{EDirection})Sum;
+264         \}
+265     \}
+266     
+267     \textcolor{keywordflow}{return} LastInDirection;
+268 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCRouterMap_ac638dca74d6ebe3602db9f7c69881146_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCRouterMap_adf9041b4e1face1308c556c0ba0de9af}{}\label{classCRouterMap_adf9041b4e1face1308c556c0ba0de9af} 
+\index{C\+Router\+Map@{C\+Router\+Map}!Moving\+Away@{Moving\+Away}}
+\index{Moving\+Away@{Moving\+Away}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{Moving\+Away()}{MovingAway()}}
+{\footnotesize\ttfamily bool C\+Router\+Map\+::\+Moving\+Away (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction}}]{dir1,  }\item[{\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction}}]{dir2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 79 of file Router\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+79                                                            \{
+80     \textcolor{keywordtype}{int} Value;
+81     \textcolor{keywordflow}{if}((0 > dir2)||(\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax} <= dir2))\{
+82         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+83     \}
+84     Value = ((\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax} + dir2) - dir1) % \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax};
+85     \textcolor{keywordflow}{if}((1 >= Value)||(\hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42af6546049275557ce0ade2ceee042a319}{dMax} - 1 <= Value))\{
+86         \textcolor{keywordflow}{return} \textcolor{keyword}{true};   
+87     \}
+88     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+89 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCRouterMap_adf9041b4e1face1308c556c0ba0de9af_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCRouterMap_a1a581c85a34b6d0fcc5ddc3d0ae7fb00}{}\label{classCRouterMap_a1a581c85a34b6d0fcc5ddc3d0ae7fb00} 
+\index{C\+Router\+Map@{C\+Router\+Map}!Search\+Target\+Compare@{Search\+Target\+Compare}}
+\index{Search\+Target\+Compare@{Search\+Target\+Compare}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{Search\+Target\+Compare()}{SearchTargetCompare()}}
+{\footnotesize\ttfamily bool C\+Router\+Map\+::\+Search\+Target\+Compare (\begin{DoxyParamCaption}\item[{const \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} \&}]{first,  }\item[{const \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} \&}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Router\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+29                                                                                            \{
+30     \textcolor{keywordflow}{if}(first.DTargetDistanceSquared == second.DTargetDistanceSquared)\{
+31         \textcolor{keywordflow}{if}(first.DSteps == second.DSteps)\{
+32             \textcolor{keywordflow}{return} (first.DX + first.DY * \hyperlink{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{DMapWidth}) <= (second.DX + second.DY * 
+      \hyperlink{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{DMapWidth});
+33         \}
+34         \textcolor{keywordflow}{return} first.DSteps < second.DSteps;
+35     \}
+36     \textcolor{keywordflow}{return} first.DTargetDistanceSquared < second.DTargetDistanceSquared;
+37 \textcolor{comment}{/*    }
+38 \textcolor{comment}{    if(first.DTargetDistanceSquared == second.DTargetDistanceSquared)\{}
+39 \textcolor{comment}{        if(first.DSteps == second.DSteps)\{}
+40 \textcolor{comment}{            if(first.DTileType == second.DTileType)\{}
+41 \textcolor{comment}{                int DeltaDir1 = DIdealSearchDirection - first.DInDirection;}
+42 \textcolor{comment}{                int DeltaDir2 = DIdealSearchDirection - second.DInDirection;}
+43 \textcolor{comment}{                }
+44 \textcolor{comment}{                if(-(dMax/2) >= DeltaDir1)\{}
+45 \textcolor{comment}{                    DeltaDir1 += dMax;   }
+46 \textcolor{comment}{                \}}
+47 \textcolor{comment}{                if((dMax/2) < DeltaDir1)\{}
+48 \textcolor{comment}{                    DeltaDir1 -= dMax;   }
+49 \textcolor{comment}{                \}}
+50 \textcolor{comment}{                if(-(dMax/2) >= DeltaDir2)\{}
+51 \textcolor{comment}{                    DeltaDir2 += dMax;   }
+52 \textcolor{comment}{                \}}
+53 \textcolor{comment}{                if((dMax/2) < DeltaDir2)\{}
+54 \textcolor{comment}{                    DeltaDir2 -= dMax;   }
+55 \textcolor{comment}{                \}}
+56 \textcolor{comment}{                if((DeltaDir1 == DeltaDir2)||(DeltaDir1 == -DeltaDir2))\{}
+57 \textcolor{comment}{                    return DeltaDir1 <= DeltaDir2;    }
+58 \textcolor{comment}{                \}}
+59 \textcolor{comment}{                DeltaDir1 = DeltaDir1 < 0 ? -DeltaDir1 : DeltaDir1;}
+60 \textcolor{comment}{                DeltaDir2 = DeltaDir2 < 0 ? -DeltaDir2 : DeltaDir2;}
+61 \textcolor{comment}{                return DeltaDir1 <= DeltaDir2; }
+62 \textcolor{comment}{            \}}
+63 \textcolor{comment}{        \}}
+64 \textcolor{comment}{        if(first.DTileType == second.DTileType)\{}
+65 \textcolor{comment}{            return first.DSteps < second.DSteps;}
+66 \textcolor{comment}{        \}}
+67 \textcolor{comment}{        if(CTerrainMap::ttNone == second.DTileType)\{}
+68 \textcolor{comment}{            return false;   }
+69 \textcolor{comment}{        \}}
+70 \textcolor{comment}{        if(CTerrainMap::ttNone == first.DTileType)\{}
+71 \textcolor{comment}{            return true;   }
+72 \textcolor{comment}{        \}}
+73 \textcolor{comment}{        return first.DSteps < second.DSteps;}
+74 \textcolor{comment}{    \}}
+75 \textcolor{comment}{    return first.DTargetDistanceSquared <= second.DTargetDistanceSquared;}
+76 \textcolor{comment}{*/}
+77 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCRouterMap_addf4151d25670daf5cb45058e978fde2}{}\label{classCRouterMap_addf4151d25670daf5cb45058e978fde2} 
+\index{C\+Router\+Map@{C\+Router\+Map}!D\+Ideal\+Search\+Direction@{D\+Ideal\+Search\+Direction}}
+\index{D\+Ideal\+Search\+Direction@{D\+Ideal\+Search\+Direction}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{D\+Ideal\+Search\+Direction}{DIdealSearchDirection}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42}{E\+Direction} C\+Router\+Map\+::\+D\+Ideal\+Search\+Direction = \hyperlink{GameDataTypes_8h_acb2b033915f6659a71a38b5aa6e4eb42a74d0139aee571cee88ff1393bbc6999e}{d\+North}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Router\+Map.\+h.
+
+\hypertarget{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{}\label{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6} 
+\index{C\+Router\+Map@{C\+Router\+Map}!D\+Map@{D\+Map}}
+\index{D\+Map@{D\+Map}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{D\+Map}{DMap}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ int $>$ $>$ C\+Router\+Map\+::\+D\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Router\+Map.\+h.
+
+\hypertarget{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{}\label{classCRouterMap_a9899b7a017d376a16af153f6f91159d3} 
+\index{C\+Router\+Map@{C\+Router\+Map}!D\+Map\+Width@{D\+Map\+Width}}
+\index{D\+Map\+Width@{D\+Map\+Width}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{D\+Map\+Width}{DMapWidth}}
+{\footnotesize\ttfamily int C\+Router\+Map\+::\+D\+Map\+Width = 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Router\+Map.\+h.
+
+\hypertarget{classCRouterMap_a903a8d0891e61b169e6aa72da27d62ba}{}\label{classCRouterMap_a903a8d0891e61b169e6aa72da27d62ba} 
+\index{C\+Router\+Map@{C\+Router\+Map}!D\+Search\+Targets@{D\+Search\+Targets}}
+\index{D\+Search\+Targets@{D\+Search\+Targets}!C\+Router\+Map@{C\+Router\+Map}}
+\subsubsection{\texorpdfstring{D\+Search\+Targets}{DSearchTargets}}
+{\footnotesize\ttfamily std\+::list$<$ \hyperlink{structCRouterMap_1_1SSearchTarget}{S\+Search\+Target} $>$ C\+Router\+Map\+::\+D\+Search\+Targets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Router\+Map.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{RouterMap_8h}{Router\+Map.\+h}\item 
+src/\hyperlink{RouterMap_8cpp}{Router\+Map.\+cpp}\end{DoxyCompactItemize}

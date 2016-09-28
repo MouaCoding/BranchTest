@@ -1,0 +1,1136 @@
+\hypertarget{classCSoundLibraryMixer}{}\section{C\+Sound\+Library\+Mixer Class Reference}
+\label{classCSoundLibraryMixer}\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+
+
+{\ttfamily \#include $<$Sound\+Library\+Mixer.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCSoundLibraryMixer_1_1SClipStatus}{S\+Clip\+Status}
+\item 
+struct \hyperlink{structCSoundLibraryMixer_1_1SToneStatus}{S\+Tone\+Status}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSoundLibraryMixer_a555dc21fe5bd397e09b524c5f0975a08}{C\+Sound\+Library\+Mixer} ()
+\item 
+\hyperlink{classCSoundLibraryMixer_a73733f975356d1f21834d72503bc580f}{$\sim$\+C\+Sound\+Library\+Mixer} ()
+\item 
+int \hyperlink{classCSoundLibraryMixer_a3abff4a43967eb0975ded98011c23e4e}{Clip\+Count} () const
+\item 
+int \hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{Sample\+Rate} () const
+\item 
+int \hyperlink{classCSoundLibraryMixer_ad8cc956bda999fe677e92f7392834b7a}{Find\+Clip} (const std\+::string \&clipname) const
+\item 
+int \hyperlink{classCSoundLibraryMixer_a67d0364979fab26c2b2467357ec03696}{Find\+Song} (const std\+::string \&songname) const
+\item 
+int \hyperlink{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490}{Clip\+Duration\+MS} (int index)
+\item 
+int \hyperlink{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7}{Timestep} (void $\ast$out, unsigned long frames, const Pa\+Stream\+Callback\+Time\+Info $\ast$timeinfo, Pa\+Stream\+Callback\+Flags status)
+\item 
+bool \hyperlink{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d}{Load\+Library} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+int \hyperlink{classCSoundLibraryMixer_a9af6d9e3dacf63b07a7ad75e629bdc2f}{Play\+Clip} (int index, float volume, float rightbias)
+\item 
+int \hyperlink{classCSoundLibraryMixer_a48bf99193d92c07a5c5229d58a10d9fe}{Play\+Tone} (float freq, float freqdecay, float volume, float volumedecay, float rightbias, float rightshift)
+\item 
+void \hyperlink{classCSoundLibraryMixer_ab57bc3217de14130ed95c48223351ce3}{Stop\+Tone} (int id)
+\item 
+bool \hyperlink{classCSoundLibraryMixer_acd11bc59b6f11b1a8e1f0e821f0b8207}{Clip\+Completed} (int id)
+\item 
+void \hyperlink{classCSoundLibraryMixer_ad8fdd1f573967a8124cd4bc4a8c29ea1}{Play\+Song} (int index, float volume)
+\item 
+void \hyperlink{classCSoundLibraryMixer_a13fdebfbc5fdee60067c38a3c60dd2a9}{Stop\+Song} ()
+\item 
+void \hyperlink{classCSoundLibraryMixer_ad38d70e5783e3b67fdf022877549ccf8}{Song\+Volume} (float volume)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1}{Timestep\+Callback} (const void $\ast$in, void $\ast$out, unsigned long frames, const Pa\+Stream\+Callback\+Time\+Info $\ast$timeinfo, Pa\+Stream\+Callback\+Flags status, void $\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structCSoundLibraryMixer_1_1SClipStatus}{C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status} $\ast$ \hyperlink{classCSoundLibraryMixer_a2f004304483c7a121cb477d218b9226f}{S\+Clip\+Status\+Ref}
+\item 
+typedef struct \hyperlink{structCSoundLibraryMixer_1_1SToneStatus}{C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status} $\ast$ \hyperlink{classCSoundLibraryMixer_ad772f44e33c3fce7e970b5057bdf81b9}{S\+Tone\+Status\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classCSoundClip}{C\+Sound\+Clip} $>$ \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{D\+Sound\+Clips}
+\item 
+std\+::map$<$ std\+::string, int $>$ \hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{D\+Mapping}
+\item 
+std\+::list$<$ \hyperlink{structCSoundLibraryMixer_1_1SClipStatus}{S\+Clip\+Status} $>$ \hyperlink{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{D\+Clips\+In\+Progress}
+\item 
+std\+::list$<$ \hyperlink{structCSoundLibraryMixer_1_1SToneStatus}{S\+Tone\+Status} $>$ \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{D\+Tones\+In\+Progress}
+\item 
+std\+::list$<$ int $>$ \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{D\+Free\+Clip\+I\+Ds}
+\item 
+std\+::list$<$ int $>$ \hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{D\+Free\+Tone\+I\+Ds}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{D\+Music\+Filenames}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$ $>$ $>$ \hyperlink{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{D\+Music\+Data}
+\item 
+std\+::map$<$ std\+::string, int $>$ \hyperlink{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{D\+Music\+Mapping}
+\item 
+Pa\+Stream $\ast$ \hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{D\+Stream}
+\item 
+bool \hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{D\+Port\+Audio\+Initialized}
+\item 
+fluid\+\_\+settings\+\_\+t $\ast$ \hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{D\+Fluid\+Settings}
+\item 
+fluid\+\_\+synth\+\_\+t $\ast$ \hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{D\+Fluid\+Synthesizer}
+\item 
+fluid\+\_\+player\+\_\+t $\ast$ \hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{D\+Fluid\+Player}
+\item 
+fluid\+\_\+audio\+\_\+driver\+\_\+t $\ast$ \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{D\+Fluid\+Audio\+Driver}
+\item 
+std\+::mutex \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{D\+Mutex}
+\item 
+float $\ast$ \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{D\+Sine\+Wave}
+\item 
+int \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{D\+Sample\+Rate}
+\item 
+int \hyperlink{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60}{D\+Next\+Clip\+ID}
+\item 
+int \hyperlink{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736}{D\+Next\+Tone\+ID}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file Sound\+Library\+Mixer.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCSoundLibraryMixer_a2f004304483c7a121cb477d218b9226f}{}\label{classCSoundLibraryMixer_a2f004304483c7a121cb477d218b9226f} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!S\+Clip\+Status\+Ref@{S\+Clip\+Status\+Ref}}
+\index{S\+Clip\+Status\+Ref@{S\+Clip\+Status\+Ref}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{S\+Clip\+Status\+Ref}{SClipStatusRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structCSoundLibraryMixer_1_1SClipStatus}{C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status} $\ast$ \hyperlink{classCSoundLibraryMixer_a2f004304483c7a121cb477d218b9226f}{C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\hypertarget{classCSoundLibraryMixer_ad772f44e33c3fce7e970b5057bdf81b9}{}\label{classCSoundLibraryMixer_ad772f44e33c3fce7e970b5057bdf81b9} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!S\+Tone\+Status\+Ref@{S\+Tone\+Status\+Ref}}
+\index{S\+Tone\+Status\+Ref@{S\+Tone\+Status\+Ref}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{S\+Tone\+Status\+Ref}{SToneStatusRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structCSoundLibraryMixer_1_1SToneStatus}{C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status} $\ast$ \hyperlink{classCSoundLibraryMixer_ad772f44e33c3fce7e970b5057bdf81b9}{C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCSoundLibraryMixer_a555dc21fe5bd397e09b524c5f0975a08}{}\label{classCSoundLibraryMixer_a555dc21fe5bd397e09b524c5f0975a08} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{C\+Sound\+Library\+Mixer()}{CSoundLibraryMixer()}}
+{\footnotesize\ttfamily C\+Sound\+Library\+Mixer\+::\+C\+Sound\+Library\+Mixer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+30                                       \{
+31     \hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream} = \textcolor{keyword}{nullptr};
+32     \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave} = \textcolor{keyword}{nullptr};
+33     \hyperlink{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60}{DNextClipID} = 0;
+34     \hyperlink{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736}{DNextToneID} = 0;
+35     \hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{DPortAudioInitialized} = paNoError == Pa\_Initialize();
+36     \textcolor{comment}{//pthread\_mutex\_init(&DMutex, nullptr);}
+37     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < 128; Index++)\{
+38         \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.push\_back(Index);   
+39     \}
+40     
+41     \hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings} = \textcolor{keyword}{nullptr};
+42     \hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer} = \textcolor{keyword}{nullptr};
+43     \hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer} = \textcolor{keyword}{nullptr};
+44     \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver} = \textcolor{keyword}{nullptr};
+45 \}
+\end{DoxyCode}
+\hypertarget{classCSoundLibraryMixer_a73733f975356d1f21834d72503bc580f}{}\label{classCSoundLibraryMixer_a73733f975356d1f21834d72503bc580f} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!````~C\+Sound\+Library\+Mixer@{$\sim$\+C\+Sound\+Library\+Mixer}}
+\index{````~C\+Sound\+Library\+Mixer@{$\sim$\+C\+Sound\+Library\+Mixer}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Sound\+Library\+Mixer()}{~CSoundLibraryMixer()}}
+{\footnotesize\ttfamily C\+Sound\+Library\+Mixer\+::$\sim$\+C\+Sound\+Library\+Mixer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+47                                        \{
+48     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream})\{
+49         \textcolor{keywordflow}{if}(Pa\_IsStreamActive(\hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream}))\{
+50             Pa\_StopStream(\hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream});
+51         \}
+52         Pa\_CloseStream(\hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream});
+53         \hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream} = \textcolor{keyword}{nullptr};
+54     \}
+55     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave})\{
+56         \textcolor{keyword}{delete} [] \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave};    
+57     \}
+58     \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{DPortAudioInitialized})\{
+59         Pa\_Terminate();
+60     \}
+61     \textcolor{comment}{//pthread\_mutex\_destroy(&DMutex);}
+62     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver})\{
+63         delete\_fluid\_audio\_driver(\hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver});
+64         \textcolor{comment}{//unlink(TEMP\_SFNAME);}
+65     \}
+66     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver})\{
+67         delete\_fluid\_player(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
+68     \}
+69     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver})\{
+70         delete\_fluid\_synth(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer});
+71     \}
+72     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver})\{
+73         delete\_fluid\_settings(\hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings});
+74     \}
+75 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCSoundLibraryMixer_acd11bc59b6f11b1a8e1f0e821f0b8207}{}\label{classCSoundLibraryMixer_acd11bc59b6f11b1a8e1f0e821f0b8207} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Clip\+Completed@{Clip\+Completed}}
+\index{Clip\+Completed@{Clip\+Completed}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Clip\+Completed()}{ClipCompleted()}}
+{\footnotesize\ttfamily bool C\+Sound\+Library\+Mixer\+::\+Clip\+Completed (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 420 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+420                                             \{
+421     std::list< int >::iterator ClipIDIterator;
+422     \textcolor{keywordtype}{bool} FoundID = \textcolor{keyword}{false};
+423     
+424     \textcolor{comment}{//pthread\_mutex\_lock(&DMutex);}
+425     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.lock();
+426     ClipIDIterator = \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.begin();
+427     \textcolor{keywordflow}{while}(ClipIDIterator != \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.end())\{
+428         \textcolor{keywordflow}{if}(*ClipIDIterator == \textcolor{keywordtype}{id})\{
+429             FoundID = \textcolor{keyword}{true};
+430             \textcolor{keywordflow}{break};
+431         \}
+432         ClipIDIterator++;
+433     \}
+434     \textcolor{comment}{//pthread\_mutex\_unlock(&DMutex); }
+435     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
+436     \textcolor{keywordflow}{return} FoundID;
+437 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_acd11bc59b6f11b1a8e1f0e821f0b8207_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a3abff4a43967eb0975ded98011c23e4e}{}\label{classCSoundLibraryMixer_a3abff4a43967eb0975ded98011c23e4e} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Clip\+Count@{Clip\+Count}}
+\index{Clip\+Count@{Clip\+Count}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Clip\+Count()}{ClipCount()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Clip\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 77 of file Sound\+Library\+Mixer.\+h.
+
+
+\begin{DoxyCode}
+77                              \{
+78             \textcolor{keywordflow}{return} \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.size();  
+79         \};
+\end{DoxyCode}
+\hypertarget{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490}{}\label{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Clip\+Duration\+MS@{Clip\+Duration\+MS}}
+\index{Clip\+Duration\+MS@{Clip\+Duration\+MS}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Clip\+Duration\+M\+S()}{ClipDurationMS()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Clip\+Duration\+MS (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+93                                                \{
+94     \textcolor{keywordflow}{if}((0 > index)||(index >= \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.size()))\{
+95         \textcolor{keywordflow}{return} 0;    
+96     \}
+97     \textcolor{keywordflow}{return} (\hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[index].TotalFrames() * 1000) / \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[index].
+      \hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{SampleRate}();
+98 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_ad8cc956bda999fe677e92f7392834b7a}{}\label{classCSoundLibraryMixer_ad8cc956bda999fe677e92f7392834b7a} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Find\+Clip@{Find\+Clip}}
+\index{Find\+Clip@{Find\+Clip}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Find\+Clip()}{FindClip()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Find\+Clip (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{clipname }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 77 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+77                                                                \{
+78     std::map< std::string, int >::const\_iterator Iterator = \hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{DMapping}.find(clipname);
+79     \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{DMapping}.end() != Iterator)\{
+80         \textcolor{keywordflow}{return} Iterator->second;
+81     \}
+82     \textcolor{keywordflow}{return} -1;
+83 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_ad8cc956bda999fe677e92f7392834b7a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a67d0364979fab26c2b2467357ec03696}{}\label{classCSoundLibraryMixer_a67d0364979fab26c2b2467357ec03696} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Find\+Song@{Find\+Song}}
+\index{Find\+Song@{Find\+Song}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Find\+Song()}{FindSong()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Find\+Song (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{songname }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 85 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+85                                                                \{
+86     std::map< std::string, int >::const\_iterator Iterator = \hyperlink{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{DMusicMapping}.find(songname);
+87     \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{DMusicMapping}.end() != Iterator)\{
+88         \textcolor{keywordflow}{return} Iterator->second;
+89     \}
+90     \textcolor{keywordflow}{return} -1;
+91 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a67d0364979fab26c2b2467357ec03696_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d}{}\label{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Load\+Library@{Load\+Library}}
+\index{Load\+Library@{Load\+Library}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Load\+Library()}{LoadLibrary()}}
+{\footnotesize\ttfamily bool C\+Sound\+Library\+Mixer\+::\+Load\+Library (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 196 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+196                                                                        \{
+197     \hyperlink{classCLineDataSource}{CLineDataSource} LineSource(source);
+198     \textcolor{keywordtype}{int} TotalClips, TotalSongs;
+199     \textcolor{keywordtype}{bool} ReturnStatus = \textcolor{keyword}{false};
+200     std::string TempString;
+201     std::shared\_ptr< CDataSource >  SFInput;
+202     std::ofstream SFOutput;
+203     \textcolor{keywordtype}{char} Buffer[1024];
+204     \textcolor{keywordtype}{int} BytesRead;
+205     
+206     \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+207         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read clip count.\(\backslash\)n"});
+208         \textcolor{keywordflow}{goto} LoadLibraryExit;
+209     \}
+210     \textcolor{keywordflow}{try}\{
+211         TotalClips = std::stoi(TempString);
+212     \}
+213     \textcolor{keywordflow}{catch}(std::exception &E)\{
+214         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"%s\(\backslash\)n"},E.what());
+215         \textcolor{keywordflow}{goto} LoadLibraryExit;
+216     \}
+217         
+218     \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.resize(TotalClips);
+219     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < TotalClips; Index++)\{
+220         \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+221             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read clip name %d.\(\backslash\)n"}, Index);
+222             \textcolor{keywordflow}{goto} LoadLibraryExit;
+223         \}
+224         \hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{DMapping}[TempString] = Index;
+225         \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+226             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read clip path %d.\(\backslash\)n"}, Index);
+227             \textcolor{keywordflow}{goto} LoadLibraryExit;
+228         \}
+229         \textcolor{keywordflow}{if}(!\hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[Index].Load(source->Container()->DataSource(TempString)))\{
+230             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to load sound clip %d.\(\backslash\)n"}, Index);
+231             \textcolor{keywordflow}{goto} LoadLibraryExit;    
+232         \}
+233     \}
+234     \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate} = \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[0].SampleRate();
+235     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < TotalClips; Index++)\{
+236         \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[0].\hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{SampleRate}() != \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[Index].
+      \hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{SampleRate}())\{
+237             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Incompatible sample rate %dHz of clip %d.\(\backslash\)n"}, 
+      \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[Index].\hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{SampleRate}(), Index);
+238             \textcolor{keywordflow}{goto} LoadLibraryExit;    
+239         \}
+240     \}
+241     \textcolor{keywordflow}{if}(NULL != \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave})\{
+242         \textcolor{keyword}{delete} [] \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave};    
+243     \}
+244     \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave} = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[\hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate}];
+245     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate}; Index++)\{
+246         \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave}[Index] = sin( ((\textcolor{keywordtype}{double})Index/(\textcolor{keywordtype}{double})DSampleRate) * 
+      \hyperlink{SoundLibraryMixer_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI} * 2.0 );
+247     \}
+248     \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+249         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read sound font name!\(\backslash\)n"});
+250         \textcolor{keywordflow}{goto} LoadLibraryExit;
+251     \}
+252     \textcolor{keywordflow}{if}(!fluid\_is\_soundfont(\hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME}))\{
+253         \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Copying sound font %s to %s\(\backslash\)n"},TempString.c\_str(), 
+      \hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME});
+254         SFInput = source->Container()->DataSource(TempString);
+255         SFOutput.open(\hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME}, std::ofstream::binary);    
+256         \textcolor{keywordflow}{while}(0 < (BytesRead = SFInput->Read(Buffer, \textcolor{keyword}{sizeof}(Buffer))))\{
+257             SFOutput.write(Buffer, BytesRead);
+258         \}
+259         SFOutput.close();
+260         \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Copying complete.\(\backslash\)nChecking if valid sound font.\(\backslash\)n"});
+261     \}
+262     \textcolor{keywordflow}{if}(!fluid\_is\_soundfont(\hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME}))\{
+263         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"%s not a sound font!\(\backslash\)n"},TempString.c\_str());
+264         \textcolor{keywordflow}{goto} LoadLibraryExit;
+265     \}
+266     \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+267         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read line\(\backslash\)n"});
+268         \textcolor{keywordflow}{goto} LoadLibraryExit;
+269     \}
+270     \textcolor{keywordflow}{try}\{
+271         TotalSongs = std::stoi(TempString);
+272     \}
+273     \textcolor{keywordflow}{catch}(std::exception &E)\{
+274         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"%s\(\backslash\)n"},E.what());
+275         \textcolor{keywordflow}{goto} LoadLibraryExit;
+276     \}
+277     \hyperlink{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{DMusicFilenames}.resize(TotalSongs);
+278     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < TotalSongs; Index++)\{
+279         \textcolor{keyword}{auto} TempData = std::make\_shared< std::vector< char > > ();
+280         
+281         \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+282             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read song name %d\(\backslash\)n"}, Index);
+283             \textcolor{keywordflow}{goto} LoadLibraryExit;
+284         \}    
+285         \hyperlink{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{DMusicMapping}[TempString] = Index;
+286         \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+287             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read song path %d\(\backslash\)n"}, Index);
+288             \textcolor{keywordflow}{goto} LoadLibraryExit;
+289         \}   
+290         \textcolor{keyword}{auto} MidiInput = source->Container()->DataSource(TempString);
+291         \textcolor{keywordflow}{while}(0 < (BytesRead = MidiInput->Read(Buffer, \textcolor{keyword}{sizeof}(Buffer))))\{
+292             TempData->insert(TempData->end(), Buffer, Buffer + BytesRead);
+293         \}
+294         \hyperlink{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{DMusicData}.push\_back(TempData);
+295         \textcolor{comment}{/*}
+296 \textcolor{comment}{        if(!fluid\_is\_midifile(TempString.c\_str()))\{}
+297 \textcolor{comment}{            PrintError("%s is not a midi file!\(\backslash\)n", TempString.c\_str());}
+298 \textcolor{comment}{            goto LoadLibraryExit;    }
+299 \textcolor{comment}{        \}}
+300 \textcolor{comment}{        */}
+301         \hyperlink{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{DMusicFilenames}[Index] = TempString;
+302     \}
+303     
+304     \hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings} = new\_fluid\_settings();
+305     fluid\_settings\_setstr(\hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings}, \textcolor{stringliteral}{"audio.driver"}, \textcolor{stringliteral}{"portaudio"});
+306     \hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer} = new\_fluid\_synth(\hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings});
+307     \hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer} = new\_fluid\_player(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer});
+308     \hyperlink{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{DFluidAudioDriver} = new\_fluid\_audio\_driver(\hyperlink{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{DFluidSettings}, 
+      \hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer});
+309     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Loading sound font %s.\(\backslash\)n"}, 
+      \hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME});
+310     \textcolor{keywordflow}{if}(FLUID\_FAILED == fluid\_synth\_sfload(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 
+      \hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME}, 1))\{
+311         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to load sound font %s\(\backslash\)n"}, \hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME});
+312         \textcolor{keywordflow}{goto} LoadLibraryExit;
+313     \}
+314     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Sound font %s loaded.\(\backslash\)n"}, 
+      \hyperlink{SoundLibraryMixer_8cpp_a1ba6e33012d926b97ef45f11d1f703ac}{TEMP\_SFNAME});
+315     \textcolor{keywordflow}{if}(!\hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{DPortAudioInitialized})\{
+316         PaError PortAudioResult;
+317         \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Port Audio not initialized, try to reinitialize.\(\backslash\)n"});
+318         PortAudioResult = Pa\_Initialize();    
+319         \hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{DPortAudioInitialized} = paNoError == PortAudioResult;
+320         \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{DPortAudioInitialized})\{
+321             \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Port Audio initialized.\(\backslash\)n"});
+322         \}
+323         \textcolor{keywordflow}{else}\{
+324             \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Port Audio failed to initialize with code %d.\(\backslash\)n"}, 
+      PortAudioResult);
+325         \}
+326     \}
+327     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Opening stream at %dHz with %d frames per buffer\(\backslash\)n"},
+      DSampleRate, \hyperlink{SoundLibraryMixer_8cpp_af4f62216aa14e0407faa6631e9ec4c62}{FRAMES\_PER\_BUFFER});
+328     \textcolor{keywordflow}{if}(paNoError != Pa\_OpenDefaultStream(&\hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream}, 0, 2, paFloat32, DSampleRate, 
+      \hyperlink{SoundLibraryMixer_8cpp_af4f62216aa14e0407faa6631e9ec4c62}{FRAMES\_PER\_BUFFER}, \hyperlink{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1}{TimestepCallback}, \textcolor{keyword}{this}))\{
+329         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to open default sound stream\(\backslash\)n"});
+330         \textcolor{keywordflow}{goto} LoadLibraryExit;
+331     \}
+332     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Default sound stream opened.\(\backslash\)n"});
+333     \textcolor{keywordflow}{if}(paNoError != Pa\_StartStream(\hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream}))\{
+334         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to start default sound stream\(\backslash\)n"});
+335         \textcolor{keywordflow}{goto} LoadLibraryExit;
+336     \}
+337     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Sound stream started.\(\backslash\)n"});
+338     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+339     
+340 LoadLibraryExit:
+341     \hyperlink{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{DMusicFilenames}.clear();
+342     \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.clear();
+343     \hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{DMapping}.clear();
+344 
+345     \textcolor{keywordflow}{return} ReturnStatus;
+346 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a9af6d9e3dacf63b07a7ad75e629bdc2f}{}\label{classCSoundLibraryMixer_a9af6d9e3dacf63b07a7ad75e629bdc2f} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Play\+Clip@{Play\+Clip}}
+\index{Play\+Clip@{Play\+Clip}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Play\+Clip()}{PlayClip()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Play\+Clip (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{volume,  }\item[{float}]{rightbias }\end{DoxyParamCaption})}
+
+
+
+Definition at line 348 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+348                                                                         \{
+349     SClipStatus TempClipStatus;
+350     
+351     \textcolor{keywordflow}{if}((0 > index)||(\hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.size() <= index))\{
+352         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Invalid Clip %d!!!!!\(\backslash\)n"},index);
+353         \textcolor{keywordflow}{return} -1;
+354     \}
+355     TempClipStatus.DIndex = index;
+356     TempClipStatus.DOffset = 0;
+357     TempClipStatus.DVolume = volume;
+358     TempClipStatus.DRightBias = rightbias;
+359     
+360     \textcolor{comment}{//pthread\_mutex\_lock(&DMutex);}
+361     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.lock();
+362     \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.size())\{
+363         TempClipStatus.DIdentification = \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.front();
+364         \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.pop\_front();
+365     \}
+366     \textcolor{keywordflow}{else}\{
+367         TempClipStatus.DIdentification = \hyperlink{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60}{DNextClipID}++;    
+368     \}
+369     \hyperlink{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{DClipsInProgress}.push\_back(TempClipStatus);
+370     \textcolor{comment}{//pthread\_mutex\_unlock(&DMutex);  }
+371     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
+372     \textcolor{keywordflow}{return} TempClipStatus.DIdentification;
+373 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a9af6d9e3dacf63b07a7ad75e629bdc2f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_ad8fdd1f573967a8124cd4bc4a8c29ea1}{}\label{classCSoundLibraryMixer_ad8fdd1f573967a8124cd4bc4a8c29ea1} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Play\+Song@{Play\+Song}}
+\index{Play\+Song@{Play\+Song}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Play\+Song()}{PlaySong()}}
+{\footnotesize\ttfamily void C\+Sound\+Library\+Mixer\+::\+Play\+Song (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Definition at line 439 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+439                                                         \{
+440     \textcolor{keywordflow}{if}((0 > index)||(index >= \hyperlink{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{DMusicData}.size()))\{
+441         \textcolor{keywordflow}{return};   
+442     \}
+443     \textcolor{keywordflow}{switch}(fluid\_player\_get\_status(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer}))\{
+444         \textcolor{keywordflow}{case} FLUID\_PLAYER\_PLAYING:  fluid\_player\_stop(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
+445         \textcolor{keywordflow}{case} FLUID\_PLAYER\_READY:    
+446         \textcolor{keywordflow}{default}:                    delete\_fluid\_player(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
+447                                     \hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer} = new\_fluid\_player(
+      \hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer});
+448                                     \textcolor{keywordflow}{break};
+449     \}
+450     fluid\_synth\_set\_gain(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 0.2 * volume);
+451     \textcolor{comment}{//fluid\_player\_add(DFluidPlayer,DMusicFilenames[index].c\_str());}
+452     fluid\_player\_add\_mem(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer}, \hyperlink{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{DMusicData}[index]->data(), 
+      \hyperlink{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{DMusicData}[index]->size());
+453     fluid\_player\_set\_loop(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer}, -1);
+454     fluid\_player\_play(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
+455 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_ad8fdd1f573967a8124cd4bc4a8c29ea1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a48bf99193d92c07a5c5229d58a10d9fe}{}\label{classCSoundLibraryMixer_a48bf99193d92c07a5c5229d58a10d9fe} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Play\+Tone@{Play\+Tone}}
+\index{Play\+Tone@{Play\+Tone}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Play\+Tone()}{PlayTone()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Play\+Tone (\begin{DoxyParamCaption}\item[{float}]{freq,  }\item[{float}]{freqdecay,  }\item[{float}]{volume,  }\item[{float}]{volumedecay,  }\item[{float}]{rightbias,  }\item[{float}]{rightshift }\end{DoxyParamCaption})}
+
+
+
+Definition at line 375 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+375                                                                                                            
+                          \{
+376     SToneStatus TempToneStatus;
+377     
+378 
+379     TempToneStatus.DCurrentFrequency = freq;
+380     TempToneStatus.DCurrentStep = 0;
+381     TempToneStatus.DFrequencyDecay = freqdecay / \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};
+382     TempToneStatus.DVolume = volume;
+383     TempToneStatus.DVolumeDecay = volumedecay / \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};
+384     TempToneStatus.DRightBias = rightbias;
+385     TempToneStatus.DRightShift = rightshift / \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};
+386     
+387     \textcolor{comment}{//pthread\_mutex\_lock(&DMutex);}
+388     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.lock();
+389     \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{DFreeToneIDs}.size())\{
+390         TempToneStatus.DIdentification = \hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{DFreeToneIDs}.front();
+391         \hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{DFreeToneIDs}.pop\_front();
+392     \}
+393     \textcolor{keywordflow}{else}\{
+394         TempToneStatus.DIdentification = \hyperlink{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736}{DNextToneID}++;    
+395     \}
+396     \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.push\_back(TempToneStatus);
+397     \textcolor{comment}{//pthread\_mutex\_unlock(&DMutex);  }
+398     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
+399     \textcolor{keywordflow}{return} TempToneStatus.DIdentification;
+400 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a48bf99193d92c07a5c5229d58a10d9fe_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{}\label{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Sample\+Rate@{Sample\+Rate}}
+\index{Sample\+Rate@{Sample\+Rate}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Sample\+Rate()}{SampleRate()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Sample\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 81 of file Sound\+Library\+Mixer.\+h.
+
+
+\begin{DoxyCode}
+81                               \{
+82             \textcolor{keywordflow}{return} \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};  
+83         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_ad38d70e5783e3b67fdf022877549ccf8}{}\label{classCSoundLibraryMixer_ad38d70e5783e3b67fdf022877549ccf8} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Song\+Volume@{Song\+Volume}}
+\index{Song\+Volume@{Song\+Volume}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Song\+Volume()}{SongVolume()}}
+{\footnotesize\ttfamily void C\+Sound\+Library\+Mixer\+::\+Song\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Definition at line 462 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+462                                                \{
+463     fluid\_synth\_set\_gain(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 0.2 * volume);
+464 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_ad38d70e5783e3b67fdf022877549ccf8_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a13fdebfbc5fdee60067c38a3c60dd2a9}{}\label{classCSoundLibraryMixer_a13fdebfbc5fdee60067c38a3c60dd2a9} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Stop\+Song@{Stop\+Song}}
+\index{Stop\+Song@{Stop\+Song}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Stop\+Song()}{StopSong()}}
+{\footnotesize\ttfamily void C\+Sound\+Library\+Mixer\+::\+Stop\+Song (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 457 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+457                                  \{
+458     fluid\_player\_stop(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
+459     fluid\_synth\_set\_gain(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 0.0);
+460 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a13fdebfbc5fdee60067c38a3c60dd2a9_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_ab57bc3217de14130ed95c48223351ce3}{}\label{classCSoundLibraryMixer_ab57bc3217de14130ed95c48223351ce3} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Stop\+Tone@{Stop\+Tone}}
+\index{Stop\+Tone@{Stop\+Tone}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Stop\+Tone()}{StopTone()}}
+{\footnotesize\ttfamily void C\+Sound\+Library\+Mixer\+::\+Stop\+Tone (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line 402 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+402                                        \{
+403     std::list< SToneStatus >::iterator ToneIterator;
+404     
+405     \textcolor{comment}{//pthread\_mutex\_lock(&DMutex);}
+406     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.lock();
+407     ToneIterator = \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.begin();
+408     \textcolor{keywordflow}{while}(ToneIterator != \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.end())\{
+409         \textcolor{keywordflow}{if}(ToneIterator->DIdentification == \textcolor{keywordtype}{id})\{
+410             \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.erase(ToneIterator);
+411             \hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{DFreeToneIDs}.push\_back(\textcolor{keywordtype}{id});
+412             \textcolor{keywordflow}{break};
+413         \}
+414         ToneIterator++;
+415     \}
+416     \textcolor{comment}{//pthread\_mutex\_unlock(&DMutex);  }
+417     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
+418 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_ab57bc3217de14130ed95c48223351ce3_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7}{}\label{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Timestep@{Timestep}}
+\index{Timestep@{Timestep}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Timestep()}{Timestep()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Timestep (\begin{DoxyParamCaption}\item[{void $\ast$}]{out,  }\item[{unsigned long}]{frames,  }\item[{const Pa\+Stream\+Callback\+Time\+Info $\ast$}]{timeinfo,  }\item[{Pa\+Stream\+Callback\+Flags}]{status }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+110                                                                                                            
+                                  \{
+111     \textcolor{keywordtype}{float} *DataPtr = (\textcolor{keywordtype}{float} *)out;
+112     
+113     memset(DataPtr, 0, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}) * frames * 2);
+114     \textcolor{comment}{//pthread\_mutex\_lock(&DMutex);}
+115     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.lock();
+116     \textcolor{keywordflow}{for}(std::list< SClipStatus >::iterator ClipIterator = \hyperlink{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{DClipsInProgress}.begin(); 
+      ClipIterator != \hyperlink{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{DClipsInProgress}.end(); )\{
+117         \textcolor{keywordtype}{bool} Advance = \textcolor{keyword}{true};
+118         
+119         \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[ClipIterator->DIndex].MixStereoClip(DataPtr, ClipIterator->DOffset, frames, 
+      ClipIterator->DVolume, ClipIterator->DRightBias);
+120         
+121         ClipIterator->DOffset += frames;
+122         \textcolor{keywordflow}{if}(ClipIterator->DOffset >= \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}[ClipIterator->DIndex].TotalFrames())\{
+123             \hyperlink{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{DFreeClipIDs}.push\_back(ClipIterator->DIdentification);   
+124             ClipIterator = \hyperlink{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{DClipsInProgress}.erase(ClipIterator);
+125             Advance = \textcolor{keyword}{false};
+126         \}
+127         \textcolor{keywordflow}{if}(Advance)\{
+128             ClipIterator++;   
+129         \}
+130     \}
+131     
+132     \textcolor{keywordflow}{for}(std::list< SToneStatus >::iterator ToneIterator = \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.begin(); 
+      ToneIterator != \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.end(); )\{
+133         \textcolor{keywordtype}{bool} Advance = \textcolor{keyword}{true};
+134         \textcolor{keywordtype}{float} *CurOutPtr = DataPtr;
+135         
+136         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Frame = 0; Frame < frames; Frame++)\{
+137             \textcolor{keywordtype}{int} SineIndex = ToneIterator->DCurrentStep;
+138             
+139             \textcolor{keywordflow}{if}(0.5 <= (ToneIterator->DCurrentStep - SineIndex))\{
+140                 SineIndex++;
+141                 \textcolor{keywordflow}{if}(\hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate} <= SineIndex)\{
+142                     SineIndex = 0;   
+143                 \}
+144             \}
+145             *CurOutPtr++ += ToneIterator->DVolume * (1.0 - ToneIterator->DRightBias) * 
+      \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave}[SineIndex];
+146             *CurOutPtr++ += ToneIterator->DVolume * (1.0 + ToneIterator->DRightBias) * 
+      \hyperlink{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{DSineWave}[SineIndex];
+147             ToneIterator->DCurrentStep += ToneIterator->DCurrentFrequency;
+148             ToneIterator->DCurrentFrequency += ToneIterator->DFrequencyDecay;
+149             ToneIterator->DVolume += ToneIterator->DVolumeDecay;
+150             ToneIterator->DRightBias += ToneIterator->DRightShift;
+151             \textcolor{keywordflow}{if}(DSampleRate <= ToneIterator->DCurrentStep)\{
+152                 ToneIterator->DCurrentStep -= \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};
+153             \}
+154             \textcolor{keywordflow}{if}(0.0 > ToneIterator->DVolume)\{
+155                 Advance = \textcolor{keyword}{false};
+156                 \textcolor{keywordflow}{break};
+157             \}
+158             \textcolor{keywordflow}{if}(20.0 > ToneIterator->DCurrentFrequency)\{
+159                 Advance = \textcolor{keyword}{false};
+160                 \textcolor{keywordflow}{break};
+161             \}
+162             \textcolor{keywordflow}{if}(-1.0 > ToneIterator->DRightBias)\{
+163                 ToneIterator->DRightBias = -1.0;
+164                 ToneIterator->DRightShift = 0.0;
+165             \}
+166             \textcolor{keywordflow}{if}(1.0 < ToneIterator->DRightBias)\{
+167                 ToneIterator->DRightBias = -1.0;
+168                 ToneIterator->DRightShift = 0.0;                
+169             \}
+170         \}        
+171         \textcolor{keywordflow}{if}(Advance)\{
+172             ToneIterator++;    
+173         \}
+174         \textcolor{keywordflow}{else}\{
+175             \hyperlink{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{DFreeToneIDs}.push\_back(ToneIterator->DIdentification);   
+176             ToneIterator = \hyperlink{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{DTonesInProgress}.erase(ToneIterator);
+177         \}
+178     \}
+179     
+180     \textcolor{comment}{//pthread\_mutex\_unlock(&DMutex);    }
+181     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
+182     frames *= 2;
+183     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Frame = 0; Frame < frames; Frame++)\{
+184         \textcolor{keywordflow}{if}(-1.0 > *DataPtr)\{
+185             *DataPtr = -1.0;
+186         \}
+187         \textcolor{keywordflow}{if}(1.0 < *DataPtr)\{
+188             *DataPtr = 1.0;
+189         \}
+190         DataPtr++;
+191     \}
+192     
+193     \textcolor{keywordflow}{return} paContinue;
+194 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1}{}\label{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!Timestep\+Callback@{Timestep\+Callback}}
+\index{Timestep\+Callback@{Timestep\+Callback}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{Timestep\+Callback()}{TimestepCallback()}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+Timestep\+Callback (\begin{DoxyParamCaption}\item[{const void $\ast$}]{in,  }\item[{void $\ast$}]{out,  }\item[{unsigned long}]{frames,  }\item[{const Pa\+Stream\+Callback\+Time\+Info $\ast$}]{timeinfo,  }\item[{Pa\+Stream\+Callback\+Flags}]{status,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 100 of file Sound\+Library\+Mixer.\+cpp.
+
+
+\begin{DoxyCode}
+100                                                                                                            
+                                                                      \{
+101     \hyperlink{classCSoundLibraryMixer}{CSoundLibraryMixer} *Mixer = (\hyperlink{classCSoundLibraryMixer}{CSoundLibraryMixer} *)data;
+102 \textcolor{keyword}{static} \textcolor{keywordtype}{bool} FirstCall = \textcolor{keyword}{true};
+103 \textcolor{keywordflow}{if}(FirstCall)\{
+104     \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"First TimestepCallback call\(\backslash\)n"});
+105     FirstCall = \textcolor{keyword}{false};   
+106 \}
+107     \textcolor{keywordflow}{return} Mixer->\hyperlink{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7}{Timestep}(out, frames, timeinfo, status);
+108 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9}{}\label{classCSoundLibraryMixer_aad014b54093b2aeee4d7014ab329dbf9} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Clips\+In\+Progress@{D\+Clips\+In\+Progress}}
+\index{D\+Clips\+In\+Progress@{D\+Clips\+In\+Progress}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Clips\+In\+Progress}{DClipsInProgress}}
+{\footnotesize\ttfamily std\+::list$<$ \hyperlink{structCSoundLibraryMixer_1_1SClipStatus}{S\+Clip\+Status} $>$ C\+Sound\+Library\+Mixer\+::\+D\+Clips\+In\+Progress\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{}\label{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Audio\+Driver@{D\+Fluid\+Audio\+Driver}}
+\index{D\+Fluid\+Audio\+Driver@{D\+Fluid\+Audio\+Driver}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Fluid\+Audio\+Driver}{DFluidAudioDriver}}
+{\footnotesize\ttfamily fluid\+\_\+audio\+\_\+driver\+\_\+t$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Fluid\+Audio\+Driver\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 66 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{}\label{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Player@{D\+Fluid\+Player}}
+\index{D\+Fluid\+Player@{D\+Fluid\+Player}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Fluid\+Player}{DFluidPlayer}}
+{\footnotesize\ttfamily fluid\+\_\+player\+\_\+t$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Fluid\+Player\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 65 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{}\label{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Settings@{D\+Fluid\+Settings}}
+\index{D\+Fluid\+Settings@{D\+Fluid\+Settings}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Fluid\+Settings}{DFluidSettings}}
+{\footnotesize\ttfamily fluid\+\_\+settings\+\_\+t$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Fluid\+Settings\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 63 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{}\label{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Synthesizer@{D\+Fluid\+Synthesizer}}
+\index{D\+Fluid\+Synthesizer@{D\+Fluid\+Synthesizer}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Fluid\+Synthesizer}{DFluidSynthesizer}}
+{\footnotesize\ttfamily fluid\+\_\+synth\+\_\+t$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Fluid\+Synthesizer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 64 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{}\label{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Free\+Clip\+I\+Ds@{D\+Free\+Clip\+I\+Ds}}
+\index{D\+Free\+Clip\+I\+Ds@{D\+Free\+Clip\+I\+Ds}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Free\+Clip\+I\+Ds}{DFreeClipIDs}}
+{\footnotesize\ttfamily std\+::list$<$ int $>$ C\+Sound\+Library\+Mixer\+::\+D\+Free\+Clip\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{}\label{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Free\+Tone\+I\+Ds@{D\+Free\+Tone\+I\+Ds}}
+\index{D\+Free\+Tone\+I\+Ds@{D\+Free\+Tone\+I\+Ds}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Free\+Tone\+I\+Ds}{DFreeToneIDs}}
+{\footnotesize\ttfamily std\+::list$<$ int $>$ C\+Sound\+Library\+Mixer\+::\+D\+Free\+Tone\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{}\label{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Mapping@{D\+Mapping}}
+\index{D\+Mapping@{D\+Mapping}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Mapping}{DMapping}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, int $>$ C\+Sound\+Library\+Mixer\+::\+D\+Mapping\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{}\label{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Data@{D\+Music\+Data}}
+\index{D\+Music\+Data@{D\+Music\+Data}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Music\+Data}{DMusicData}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$ $>$ $>$ C\+Sound\+Library\+Mixer\+::\+D\+Music\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{}\label{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Filenames@{D\+Music\+Filenames}}
+\index{D\+Music\+Filenames@{D\+Music\+Filenames}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Music\+Filenames}{DMusicFilenames}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ C\+Sound\+Library\+Mixer\+::\+D\+Music\+Filenames\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{}\label{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Mapping@{D\+Music\+Mapping}}
+\index{D\+Music\+Mapping@{D\+Music\+Mapping}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Music\+Mapping}{DMusicMapping}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, int $>$ C\+Sound\+Library\+Mixer\+::\+D\+Music\+Mapping\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{}\label{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Mutex@{D\+Mutex}}
+\index{D\+Mutex@{D\+Mutex}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Mutex}{DMutex}}
+{\footnotesize\ttfamily std\+::mutex C\+Sound\+Library\+Mixer\+::\+D\+Mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 67 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60}{}\label{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Next\+Clip\+ID@{D\+Next\+Clip\+ID}}
+\index{D\+Next\+Clip\+ID@{D\+Next\+Clip\+ID}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Next\+Clip\+ID}{DNextClipID}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+D\+Next\+Clip\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 70 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736}{}\label{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Next\+Tone\+ID@{D\+Next\+Tone\+ID}}
+\index{D\+Next\+Tone\+ID@{D\+Next\+Tone\+ID}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Next\+Tone\+ID}{DNextToneID}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+D\+Next\+Tone\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 71 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{}\label{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Port\+Audio\+Initialized@{D\+Port\+Audio\+Initialized}}
+\index{D\+Port\+Audio\+Initialized@{D\+Port\+Audio\+Initialized}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Port\+Audio\+Initialized}{DPortAudioInitialized}}
+{\footnotesize\ttfamily bool C\+Sound\+Library\+Mixer\+::\+D\+Port\+Audio\+Initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 62 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{}\label{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sample\+Rate@{D\+Sample\+Rate}}
+\index{D\+Sample\+Rate@{D\+Sample\+Rate}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Sample\+Rate}{DSampleRate}}
+{\footnotesize\ttfamily int C\+Sound\+Library\+Mixer\+::\+D\+Sample\+Rate\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{}\label{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sine\+Wave@{D\+Sine\+Wave}}
+\index{D\+Sine\+Wave@{D\+Sine\+Wave}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Sine\+Wave}{DSineWave}}
+{\footnotesize\ttfamily float$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Sine\+Wave\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 68 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{}\label{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sound\+Clips@{D\+Sound\+Clips}}
+\index{D\+Sound\+Clips@{D\+Sound\+Clips}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Sound\+Clips}{DSoundClips}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{classCSoundClip}{C\+Sound\+Clip} $>$ C\+Sound\+Library\+Mixer\+::\+D\+Sound\+Clips\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{}\label{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Stream@{D\+Stream}}
+\index{D\+Stream@{D\+Stream}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Stream}{DStream}}
+{\footnotesize\ttfamily Pa\+Stream$\ast$ C\+Sound\+Library\+Mixer\+::\+D\+Stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 61 of file Sound\+Library\+Mixer.\+h.
+
+\hypertarget{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{}\label{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c} 
+\index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Tones\+In\+Progress@{D\+Tones\+In\+Progress}}
+\index{D\+Tones\+In\+Progress@{D\+Tones\+In\+Progress}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
+\subsubsection{\texorpdfstring{D\+Tones\+In\+Progress}{DTonesInProgress}}
+{\footnotesize\ttfamily std\+::list$<$ \hyperlink{structCSoundLibraryMixer_1_1SToneStatus}{S\+Tone\+Status} $>$ C\+Sound\+Library\+Mixer\+::\+D\+Tones\+In\+Progress\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 55 of file Sound\+Library\+Mixer.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{SoundLibraryMixer_8h}{Sound\+Library\+Mixer.\+h}\item 
+src/\hyperlink{SoundLibraryMixer_8cpp}{Sound\+Library\+Mixer.\+cpp}\end{DoxyCompactItemize}

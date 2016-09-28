@@ -1,0 +1,12 @@
+<map id="include/GraphicMulticolorTileset.h" name="include/GraphicMulticolorTileset.h">
+<area shape="rect" id="node2" href="$AssetRenderer_8h.html" title="include/AssetRenderer.h" alt="" coords="473,95,652,121"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="452,319,556,345"/>
+<area shape="rect" id="node9" href="$UnitDescriptionRenderer_8h.html" title="include/UnitDescriptionRenderer.h" alt="" coords="784,95,1027,121"/>
+<area shape="rect" id="node11" href="$GraphicMulticolorTileset_8cpp.html" title="src/GraphicMulticolorTileset.cpp" alt="" coords="1051,95,1277,121"/>
+<area shape="rect" id="node3" href="$ViewportRenderer_8h.html" title="include/ViewportRenderer.h" alt="" coords="201,169,402,196"/>
+<area shape="rect" id="node8" href="$AssetRenderer_8cpp.html" title="src/AssetRenderer.cpp" alt="" coords="541,169,709,196"/>
+<area shape="rect" id="node4" href="$MiniMapRenderer_8h.html" title="include/MiniMapRenderer.h" alt="" coords="5,244,200,271"/>
+<area shape="rect" id="node7" href="$ViewportRenderer_8cpp.html" title="src/ViewportRenderer.cpp" alt="" coords="275,244,466,271"/>
+<area shape="rect" id="node6" href="$MiniMapRenderer_8cpp.html" title="src/MiniMapRenderer.cpp" alt="" coords="11,319,195,345"/>
+<area shape="rect" id="node10" href="$UnitDescriptionRenderer_8cpp.html" title="src/UnitDescriptionRenderer.cpp" alt="" coords="835,169,1066,196"/>
+</map>

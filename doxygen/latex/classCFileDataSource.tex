@@ -1,0 +1,191 @@
+\hypertarget{classCFileDataSource}{}\section{C\+File\+Data\+Source Class Reference}
+\label{classCFileDataSource}\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+
+
+{\ttfamily \#include $<$File\+Data\+Source.\+h$>$}
+
+
+
+Inheritance diagram for C\+File\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCFileDataSource__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+File\+Data\+Source\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classCFileDataSource__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCFileDataSource_a785000233dad6de4fe5f5986639642b3}{C\+File\+Data\+Source} (const std\+::string \&filename)
+\item 
+\hyperlink{classCFileDataSource_a4f2d2cbc2a166ee6afb0c08e5c0edbd4}{$\sim$\+C\+File\+Data\+Source} ()
+\item 
+int \hyperlink{classCFileDataSource_a97b9c7b8904aecbe7b0e8797508265fd}{Read} (void $\ast$data, int length)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ \hyperlink{classCFileDataSource_a2492b88ea8186c4cbd4bdfa92060f5fa}{Container} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{D\+File\+Handle}
+\item 
+std\+::string \hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{D\+Full\+Path}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file File\+Data\+Source.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCFileDataSource_a785000233dad6de4fe5f5986639642b3}{}\label{classCFileDataSource_a785000233dad6de4fe5f5986639642b3} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{C\+File\+Data\+Source()}{CFileDataSource()}}
+{\footnotesize\ttfamily C\+File\+Data\+Source\+::\+C\+File\+Data\+Source (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+23                                                           : \hyperlink{classCDataSource}{CDataSource}()\{
+24     \hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath} = \hyperlink{classCPath_a5161b834e754b217ddead2437eaaa223}{CPath::CurrentPath}().\hyperlink{classCPath_aa52dcb50c943a8abc8883db5ec43a45e}{Simplify}(filename).
+      \hyperlink{classCPath_abbafaf377a7e38e0151bd9567d526951}{ToString}();
+25     \textcolor{comment}{//printf("CFileDataSource::CFileDataSource(\(\backslash\)"%s\(\backslash\)");\(\backslash\)n",DFullPath.c\_str());}
+26     \textcolor{keywordflow}{if}(\hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath}.length())\{
+27         \hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{DFileHandle} = open(\hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath}.c\_str(), O\_RDONLY);
+28     \}
+29 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFileDataSource_a785000233dad6de4fe5f5986639642b3_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFileDataSource_a4f2d2cbc2a166ee6afb0c08e5c0edbd4}{}\label{classCFileDataSource_a4f2d2cbc2a166ee6afb0c08e5c0edbd4} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!````~C\+File\+Data\+Source@{$\sim$\+C\+File\+Data\+Source}}
+\index{````~C\+File\+Data\+Source@{$\sim$\+C\+File\+Data\+Source}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+File\+Data\+Source()}{~CFileDataSource()}}
+{\footnotesize\ttfamily C\+File\+Data\+Source\+::$\sim$\+C\+File\+Data\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+31                                  \{
+32     \textcolor{keywordflow}{if}(0 <= \hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{DFileHandle})\{
+33         close(\hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{DFileHandle});   
+34     \}
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCFileDataSource_a2492b88ea8186c4cbd4bdfa92060f5fa}{}\label{classCFileDataSource_a2492b88ea8186c4cbd4bdfa92060f5fa} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!Container@{Container}}
+\index{Container@{Container}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{Container()}{Container()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSourceContainer}{C\+Data\+Source\+Container} $>$ C\+File\+Data\+Source\+::\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{classCDataSource_ada14cfe01c850d01b23c9b49d2f65efc}{C\+Data\+Source}.
+
+
+
+Definition at line 48 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+48                                                                 \{
+49     std::string ContainerName = \hyperlink{classCPath}{CPath}(\hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath}).\hyperlink{classCPath_a24d8c455b1663ce251d3a749437fa4fe}{Containing}().
+      \hyperlink{classCPath_abbafaf377a7e38e0151bd9567d526951}{ToString}();
+50     
+51     \textcolor{keywordflow}{if}(ContainerName.length())\{
+52         \textcolor{keywordflow}{return} (std::shared\_ptr< CDataSourceContainer >)(\hyperlink{classCDataSourceContainer}{CDataSourceContainer} *) \textcolor{keyword}{new} 
+      \hyperlink{classCDirectoryDataSourceContainer}{CDirectoryDataSourceContainer}(ContainerName);
+53     \}
+54     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCFileDataSource_a2492b88ea8186c4cbd4bdfa92060f5fa_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCFileDataSource_a97b9c7b8904aecbe7b0e8797508265fd}{}\label{classCFileDataSource_a97b9c7b8904aecbe7b0e8797508265fd} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!Read@{Read}}
+\index{Read@{Read}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily int C\+File\+Data\+Source\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCDataSource_ad94adc5076f973dcce83b73395eec86b}{C\+Data\+Source}.
+
+
+
+Definition at line 37 of file File\+Data\+Source.\+cpp.
+
+
+\begin{DoxyCode}
+37                                                \{
+38     \textcolor{keywordflow}{if}(0 <= \hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{DFileHandle})\{
+39         \textcolor{keywordtype}{int} BytesRead = read(\hyperlink{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{DFileHandle}, data, length);
+40         
+41         \textcolor{keywordflow}{if}(0 < BytesRead)\{
+42             \textcolor{keywordflow}{return} BytesRead;   
+43         \}
+44     \}
+45     \textcolor{keywordflow}{return} -1;
+46 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d}{}\label{classCFileDataSource_abad036de6dfe018ddc6160a2026a401d} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!D\+File\+Handle@{D\+File\+Handle}}
+\index{D\+File\+Handle@{D\+File\+Handle}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{D\+File\+Handle}{DFileHandle}}
+{\footnotesize\ttfamily int C\+File\+Data\+Source\+::\+D\+File\+Handle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file File\+Data\+Source.\+h.
+
+\hypertarget{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{}\label{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea} 
+\index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!D\+Full\+Path@{D\+Full\+Path}}
+\index{D\+Full\+Path@{D\+Full\+Path}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
+\subsubsection{\texorpdfstring{D\+Full\+Path}{DFullPath}}
+{\footnotesize\ttfamily std\+::string C\+File\+Data\+Source\+::\+D\+Full\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file File\+Data\+Source.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{FileDataSource_8h}{File\+Data\+Source.\+h}\item 
+src/\hyperlink{FileDataSource_8cpp}{File\+Data\+Source.\+cpp}\end{DoxyCompactItemize}

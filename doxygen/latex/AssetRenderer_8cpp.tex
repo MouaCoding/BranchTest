@@ -1,0 +1,87 @@
+\hypertarget{AssetRenderer_8cpp}{}\section{src/\+Asset\+Renderer.cpp File Reference}
+\label{AssetRenderer_8cpp}\index{src/\+Asset\+Renderer.\+cpp@{src/\+Asset\+Renderer.\+cpp}}
+{\ttfamily \#include \char`\"{}Asset\+Renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pixel\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\newline
+Include dependency graph for Asset\+Renderer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssetRenderer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{AssetRenderer_8cpp_a0d86e657ae1200c5ec796a3f31e36d49}{T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} $\ast$ \hyperlink{AssetRenderer_8cpp_aeda2cc585f3c964555883fb244c7c0ed}{S\+Asset\+Render\+Data\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{AssetRenderer_8cpp_a53d5d2ea0d8c526bc694320e9e902e0c}{Compare\+Render\+Data} (const \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} \&first, const \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} \&second)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{AssetRenderer_8cpp_a0d86e657ae1200c5ec796a3f31e36d49}{}\label{AssetRenderer_8cpp_a0d86e657ae1200c5ec796a3f31e36d49} 
+\index{Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}!T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}
+\index{T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}{TARGET\_FREQUENCY}}
+{\footnotesize\ttfamily \#define T\+A\+R\+G\+E\+T\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~10}
+
+
+
+Definition at line 21 of file Asset\+Renderer.\+cpp.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{AssetRenderer_8cpp_aeda2cc585f3c964555883fb244c7c0ed}{}\label{AssetRenderer_8cpp_aeda2cc585f3c964555883fb244c7c0ed} 
+\index{Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}!S\+Asset\+Render\+Data\+Ref@{S\+Asset\+Render\+Data\+Ref}}
+\index{S\+Asset\+Render\+Data\+Ref@{S\+Asset\+Render\+Data\+Ref}!Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{S\+Asset\+Render\+Data\+Ref}{SAssetRenderDataRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} $\ast$ \hyperlink{AssetRenderer_8cpp_aeda2cc585f3c964555883fb244c7c0ed}{S\+Asset\+Render\+Data\+Ref}}
+
+
+
+\subsection{Function Documentation}
+\hypertarget{AssetRenderer_8cpp_a53d5d2ea0d8c526bc694320e9e902e0c}{}\label{AssetRenderer_8cpp_a53d5d2ea0d8c526bc694320e9e902e0c} 
+\index{Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}!Compare\+Render\+Data@{Compare\+Render\+Data}}
+\index{Compare\+Render\+Data@{Compare\+Render\+Data}!Asset\+Renderer.\+cpp@{Asset\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{Compare\+Render\+Data()}{CompareRenderData()}}
+{\footnotesize\ttfamily bool Compare\+Render\+Data (\begin{DoxyParamCaption}\item[{const \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} \&}]{first,  }\item[{const \hyperlink{structSAssetRenderData}{S\+Asset\+Render\+Data} \&}]{second }\end{DoxyParamCaption})}
+
+
+
+Definition at line 286 of file Asset\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+286                                                                                      \{
+287     \textcolor{keywordflow}{if}(first.\hyperlink{structSAssetRenderData_a187b7d405b649f0f400a3a8204ef7de2}{DBottomY} < second.\hyperlink{structSAssetRenderData_a187b7d405b649f0f400a3a8204ef7de2}{DBottomY})\{
+288         \textcolor{keywordflow}{return} \textcolor{keyword}{true};   
+289     \}
+290     \textcolor{keywordflow}{if}(first.\hyperlink{structSAssetRenderData_a187b7d405b649f0f400a3a8204ef7de2}{DBottomY} > second.\hyperlink{structSAssetRenderData_a187b7d405b649f0f400a3a8204ef7de2}{DBottomY})\{
+291         \textcolor{keywordflow}{return} \textcolor{keyword}{false};        
+292     \}
+293     
+294     \textcolor{keywordflow}{return} first.\hyperlink{structSAssetRenderData_ab432edfd1146e38a92576b78e2ad5581}{DX} <= second.\hyperlink{structSAssetRenderData_ab432edfd1146e38a92576b78e2ad5581}{DX};
+295 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AssetRenderer_8cpp_a53d5d2ea0d8c526bc694320e9e902e0c_icgraph}
+\end{center}
+\end{figure}

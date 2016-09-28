@@ -1,0 +1,5 @@
+<map id="CMapRenderer::DrawMap" name="CMapRenderer::DrawMap">
+<area shape="rect" id="node2" href="$classCMapRenderer.html#aec3c1d3294ac3af8ebb717ed5be88870" title="CMapRenderer::FindUnknown" alt="" coords="244,5,459,32"/>
+<area shape="rect" id="node4" href="$classCPixelType.html#abdad3e51c47f410745f7795931798cb3" title="CPixelType::ToPixelColor" alt="" coords="258,56,445,83"/>
+<area shape="rect" id="node3" href="$classCMapRenderer.html#a0b06ba89b9a7ad75fa945a3c22dc019a" title="CMapRenderer::MakeHammingSet" alt="" coords="507,5,753,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="CApplicationData::PlayGameButtonCallback" name="CApplicationData::PlayGameButtonCallback">
+<area shape="rect" id="node2" href="$classCApplicationData.html#a89af0c7917be766575720e5ac79c8d2d" title="CApplicationData::LoadGameMap" alt="" coords="264,56,507,83"/>
+<area shape="rect" id="node6" href="$classCApplicationData.html#aee18c113e9a0acb3cad3d63eb19de71b" title="CApplicationData::ChangeMode" alt="" coords="271,107,500,133"/>
+<area shape="rect" id="node3" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="555,5,787,32"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#a18ae4aed31d9ef2416059e66babb05b0" title="CApplicationData::ResetMap" alt="" coords="566,56,775,83"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#ad8b16ccb099b4996ce9fee34a407c091" title="CApplicationData::Resize\lCanvases" alt="" coords="577,107,764,149"/>
+</map>

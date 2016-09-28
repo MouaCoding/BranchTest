@@ -1,0 +1,8 @@
+<map id="CTerrainMap::ChangeTileType" name="CTerrainMap::ChangeTileType">
+<area shape="rect" id="node2" href="$classCTerrainMap.html#a40757d66d7458620a327d6f69a35a2bd" title="CTerrainMap::ChangeTileType" alt="" coords="269,5,485,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="326,56,429,83"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="326,107,429,133"/>
+<area shape="rect" id="node5" href="$classCTerrainMap.html#a620258ecf38afb6275c865dad4fc4af4" title="CTerrainMap::LoadMap" alt="" coords="291,157,464,184"/>
+<area shape="rect" id="node6" href="$classCLineDataSource.html#a569f5a9732d73ac8813c0ba4860e2e66" title="CLineDataSource::Read" alt="" coords="533,132,712,159"/>
+<area shape="rect" id="node7" href="$classCTokenizer.html#a7477f6849a3d0a5154879d8622e4012c" title="CTokenizer::Tokenize" alt="" coords="541,183,704,209"/>
+</map>

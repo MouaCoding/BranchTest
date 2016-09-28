@@ -1,0 +1,7 @@
+<map id="CAssetDecoratedMap::CanPlaceAsset" name="CAssetDecoratedMap::CanPlaceAsset">
+<area shape="rect" id="node2" href="$classCTerrainMap.html#a7e0e440467a09cb1c59e2bdbec01ccb4" title="CTerrainMap::TileType" alt="" coords="216,5,383,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="248,56,351,83"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="248,107,351,133"/>
+<area shape="rect" id="node5" href="$classCTerrainMap.html#a34cb754aa9b26e85a73377159f2527d7" title="CTerrainMap::Width" alt="" coords="224,157,375,184"/>
+<area shape="rect" id="node6" href="$classCTerrainMap.html#ae5e4bf6507e0e3e9ac0322b43eed8a7a" title="CTerrainMap::Height" alt="" coords="222,208,377,235"/>
+</map>

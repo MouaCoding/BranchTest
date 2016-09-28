@@ -1,0 +1,551 @@
+\hypertarget{classCPlayerCapability}{}\section{C\+Player\+Capability Class Reference}
+\label{classCPlayerCapability}\index{C\+Player\+Capability@{C\+Player\+Capability}}
+
+
+{\ttfamily \#include $<$Player\+Asset.\+h$>$}
+
+
+
+Inheritance diagram for C\+Player\+Capability\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapability__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} \{ \newline
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{tt\+None} = 0, 
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02facb6ee2a28b5d50b9d3009c272f2881aa}{tt\+Asset}, 
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa465193c39da3100a1ce87c4a01a7ec2f}{tt\+Terrain}, 
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa67cc6d11bc0aafc1b786bd6557ba4aa2}{tt\+Terrain\+Or\+Asset}, 
+\newline
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fafa6672fe0ac4e39cb5908cd5438b824f}{tt\+Player}
+ \}
+\item 
+typedef enum \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{C\+Player\+Capability\+::\+E\+Target\+Type} $\ast$ \hyperlink{classCPlayerCapability_aaf4a5763a2fa5b81c138c52da0888e87}{E\+Target\+Type\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classCPlayerCapability_afd26c4ec0dd3f55ef316e90aa0648be1}{$\sim$\+C\+Player\+Capability} ()
+\item 
+std\+::string \hyperlink{classCPlayerCapability_a596925849a8c1f887919d57e50132782}{Name} () const
+\item 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} \hyperlink{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98}{Asset\+Capability\+Type} () const
+\item 
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} \hyperlink{classCPlayerCapability_a022d6efcdc0897253d7c2e33ade0851d}{Target\+Type} () const
+\item 
+virtual bool \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{Can\+Initiate} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata)=0
+\item 
+virtual bool \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{Can\+Apply} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)=0
+\item 
+virtual bool \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{Apply\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{Find\+Capability} (\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} type)
+\item 
+static std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ \hyperlink{classCPlayerCapability_aca2e1bf2f3dfdced2ff12f922aa52a30}{Find\+Capability} (const std\+::string \&name)
+\item 
+static \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} \hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{Name\+To\+Type} (const std\+::string \&name)
+\item 
+static std\+::string \hyperlink{classCPlayerCapability_a976f05b7e620b721bdb5051debc9b93d}{Type\+To\+Name} (\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} type)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{C\+Player\+Capability} (const std\+::string \&name, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} targettype)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ $>$ \& \hyperlink{classCPlayerCapability_aa804d42c236f11ec9549057c22699837}{Name\+Registry} ()
+\item 
+static std\+::unordered\+\_\+map$<$ int, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ $>$ \& \hyperlink{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{Type\+Registry} ()
+\item 
+static bool \hyperlink{classCPlayerCapability_a7e298018dcde2684451add3cfff065f7}{Register} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ capability)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classCPlayerCapability_aae795f4ae4c19a9c7792a4101ca18560}{D\+Name}
+\item 
+\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} \hyperlink{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1}{D\+Asset\+Capability\+Type}
+\item 
+\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} \hyperlink{classCPlayerCapability_af3e2c3d386fbdce314d36e3e16ee823c}{D\+Target\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 43 of file Player\+Asset.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCPlayerCapability_aaf4a5763a2fa5b81c138c52da0888e87}{}\label{classCPlayerCapability_aaf4a5763a2fa5b81c138c52da0888e87} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!E\+Target\+Type\+Ref@{E\+Target\+Type\+Ref}}
+\index{E\+Target\+Type\+Ref@{E\+Target\+Type\+Ref}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{E\+Target\+Type\+Ref}{ETargetTypeRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{C\+Player\+Capability\+::\+E\+Target\+Type} $\ast$ \hyperlink{classCPlayerCapability_aaf4a5763a2fa5b81c138c52da0888e87}{C\+Player\+Capability\+::\+E\+Target\+Type\+Ref}}
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!E\+Target\+Type@{E\+Target\+Type}}
+\index{E\+Target\+Type@{E\+Target\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{E\+Target\+Type}{ETargetType}}
+{\footnotesize\ttfamily enum \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{C\+Player\+Capability\+::\+E\+Target\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+None@{tt\+None}!C\+Player\+Capability@{C\+Player\+Capability}}\index{C\+Player\+Capability@{C\+Player\+Capability}!tt\+None@{tt\+None}}}\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929} 
+tt\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Asset@{tt\+Asset}!C\+Player\+Capability@{C\+Player\+Capability}}\index{C\+Player\+Capability@{C\+Player\+Capability}!tt\+Asset@{tt\+Asset}}}\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02facb6ee2a28b5d50b9d3009c272f2881aa}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02facb6ee2a28b5d50b9d3009c272f2881aa} 
+tt\+Asset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Terrain@{tt\+Terrain}!C\+Player\+Capability@{C\+Player\+Capability}}\index{C\+Player\+Capability@{C\+Player\+Capability}!tt\+Terrain@{tt\+Terrain}}}\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa465193c39da3100a1ce87c4a01a7ec2f}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa465193c39da3100a1ce87c4a01a7ec2f} 
+tt\+Terrain&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Terrain\+Or\+Asset@{tt\+Terrain\+Or\+Asset}!C\+Player\+Capability@{C\+Player\+Capability}}\index{C\+Player\+Capability@{C\+Player\+Capability}!tt\+Terrain\+Or\+Asset@{tt\+Terrain\+Or\+Asset}}}\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa67cc6d11bc0aafc1b786bd6557ba4aa2}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa67cc6d11bc0aafc1b786bd6557ba4aa2} 
+tt\+Terrain\+Or\+Asset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Player@{tt\+Player}!C\+Player\+Capability@{C\+Player\+Capability}}\index{C\+Player\+Capability@{C\+Player\+Capability}!tt\+Player@{tt\+Player}}}\hypertarget{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fafa6672fe0ac4e39cb5908cd5438b824f}{}\label{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fafa6672fe0ac4e39cb5908cd5438b824f} 
+tt\+Player&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 45 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+45                     \{
+46               \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone} = 0,
+47               \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02facb6ee2a28b5d50b9d3009c272f2881aa}{ttAsset},
+48               \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa465193c39da3100a1ce87c4a01a7ec2f}{ttTerrain},
+49               \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa67cc6d11bc0aafc1b786bd6557ba4aa2}{ttTerrainOrAsset},
+50               \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fafa6672fe0ac4e39cb5908cd5438b824f}{ttPlayer}
+51         \} \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{ETargetType}, *\hyperlink{classCPlayerCapability_aaf4a5763a2fa5b81c138c52da0888e87}{ETargetTypeRef};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{}\label{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\index{C\+Player\+Capability@{C\+Player\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{C\+Player\+Capability()}{CPlayerCapability()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+::\+C\+Player\+Capability (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type}}]{targettype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 70 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+70                                                                                  \{
+71     \hyperlink{classCPlayerCapability_aae795f4ae4c19a9c7792a4101ca18560}{DName} = name;
+72     \hyperlink{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1}{DAssetCapabilityType} = \hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{NameToType}(name);
+73     \hyperlink{classCPlayerCapability_af3e2c3d386fbdce314d36e3e16ee823c}{DTargetType} = targettype;
+74 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_afd26c4ec0dd3f55ef316e90aa0648be1}{}\label{classCPlayerCapability_afd26c4ec0dd3f55ef316e90aa0648be1} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!````~C\+Player\+Capability@{$\sim$\+C\+Player\+Capability}}
+\index{````~C\+Player\+Capability@{$\sim$\+C\+Player\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Player\+Capability()}{~CPlayerCapability()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+::$\sim$\+C\+Player\+Capability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 65 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+65 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{}\label{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Apply\+Capability@{Apply\+Capability}}
+\index{Apply\+Capability@{Apply\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Apply\+Capability()}{ApplyCapability()}}
+{\footnotesize\ttfamily virtual bool C\+Player\+Capability\+::\+Apply\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_ab4e8da6f225b4bfb7023d75749454ff1}{C\+Player\+Capability\+Repair}, \hyperlink{classCPlayerCapabilityAttack_a536095f572f9f6af786eaec0376f3771}{C\+Player\+Capability\+Attack}, \hyperlink{classCPlayerCapabilityPatrol_a6b9e361d99e256efadcd99a829f93f51}{C\+Player\+Capability\+Patrol}, \hyperlink{classCPlayerCapabilityConvey_ad05e5ab950872e685fb9449592f7f5a9}{C\+Player\+Capability\+Convey}, \hyperlink{classCPlayerCapabilityCancel_a8f738ac375bf5d1e7f8b768bce16b946}{C\+Player\+Capability\+Cancel}, \hyperlink{classCPlayerCapabilityStandGround_a3e1beee9125b2a940f803c3234866bb2}{C\+Player\+Capability\+Stand\+Ground}, \hyperlink{classCPlayerCapabilityBuildRanger_a113a97c3d833f206d333cb0e2e37aa31}{C\+Player\+Capability\+Build\+Ranger}, \hyperlink{classCPlayerCapabilityMineHarvest_a76a72fe97148f5026e67aab24ab21b21}{C\+Player\+Capability\+Mine\+Harvest}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681}{C\+Player\+Capability\+Building\+Upgrade}, \hyperlink{classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d}{C\+Player\+Capability\+Unit\+Upgrade}, \hyperlink{classCPlayerCapabilityBuildNormal_afc2fbda17580385a4028d44cd03c9149}{C\+Player\+Capability\+Build\+Normal}, \hyperlink{classCPlayerCapabilityTrainNormal_a04ed166d2072d44ddc96735ac1beb9bc}{C\+Player\+Capability\+Train\+Normal}, and \hyperlink{classCPlayerCapabilityMove_ade3f4e72612cbf2ad73a6c2e6aa843df}{C\+Player\+Capability\+Move}.
+
+\hypertarget{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98}{}\label{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Asset\+Capability\+Type@{Asset\+Capability\+Type}}
+\index{Asset\+Capability\+Type@{Asset\+Capability\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Asset\+Capability\+Type()}{AssetCapabilityType()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} C\+Player\+Capability\+::\+Asset\+Capability\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 71 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+71                                                         \{
+72             \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1}{DAssetCapabilityType};
+73         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{}\label{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Can\+Apply@{Can\+Apply}}
+\index{Can\+Apply@{Can\+Apply}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Can\+Apply()}{CanApply()}}
+{\footnotesize\ttfamily virtual bool C\+Player\+Capability\+::\+Can\+Apply (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_ae989c67c5e14bbba5b2ddda993ee635a}{C\+Player\+Capability\+Repair}, \hyperlink{classCPlayerCapabilityAttack_ab5cdd55fa3838304fd551426e41f7b17}{C\+Player\+Capability\+Attack}, \hyperlink{classCPlayerCapabilityPatrol_a63c099d931e1e57db01120db7b1fdbe4}{C\+Player\+Capability\+Patrol}, \hyperlink{classCPlayerCapabilityConvey_a795b3eb4c3879a6d7da1cba7962a1c78}{C\+Player\+Capability\+Convey}, \hyperlink{classCPlayerCapabilityCancel_a0221e4e768c998cb46f1dbc757647ec1}{C\+Player\+Capability\+Cancel}, \hyperlink{classCPlayerCapabilityStandGround_a468f2618edaebf2088b5917d2688b6f6}{C\+Player\+Capability\+Stand\+Ground}, \hyperlink{classCPlayerCapabilityBuildRanger_a2e688d8f68ab53402afe9303dd28754a}{C\+Player\+Capability\+Build\+Ranger}, \hyperlink{classCPlayerCapabilityMineHarvest_a31da799cc9bc9be9f986bd878d13283a}{C\+Player\+Capability\+Mine\+Harvest}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35}{C\+Player\+Capability\+Building\+Upgrade}, \hyperlink{classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd}{C\+Player\+Capability\+Unit\+Upgrade}, \hyperlink{classCPlayerCapabilityBuildNormal_a1a8c6fdd9d8a91ecb7417163279e2276}{C\+Player\+Capability\+Build\+Normal}, \hyperlink{classCPlayerCapabilityTrainNormal_a625d2154bed47357f45662fe5dee7c1b}{C\+Player\+Capability\+Train\+Normal}, and \hyperlink{classCPlayerCapabilityMove_a76cbb0fa4051961c00e3169d11d76568}{C\+Player\+Capability\+Move}.
+
+\hypertarget{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{}\label{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Can\+Initiate@{Can\+Initiate}}
+\index{Can\+Initiate@{Can\+Initiate}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Can\+Initiate()}{CanInitiate()}}
+{\footnotesize\ttfamily virtual bool C\+Player\+Capability\+::\+Can\+Initiate (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{classCPlayerCapabilityRepair_a579761cab74d447b95856a24a7841b2e}{C\+Player\+Capability\+Repair}, \hyperlink{classCPlayerCapabilityAttack_ab1cda67a8e637a90accf03d1581d4072}{C\+Player\+Capability\+Attack}, \hyperlink{classCPlayerCapabilityPatrol_a48e60ecd544759f3aad66afeb4a6e0a9}{C\+Player\+Capability\+Patrol}, \hyperlink{classCPlayerCapabilityConvey_a6c5ebd62a9c3a619c56e070aca5443a7}{C\+Player\+Capability\+Convey}, \hyperlink{classCPlayerCapabilityCancel_a8b4ad4a4983b01e458d439cf68fd2ba9}{C\+Player\+Capability\+Cancel}, \hyperlink{classCPlayerCapabilityStandGround_a5567bfa47166f4080bd2b86f5c33e29c}{C\+Player\+Capability\+Stand\+Ground}, \hyperlink{classCPlayerCapabilityBuildRanger_ad8b45a3ffc7ee82d5550cc690823d82c}{C\+Player\+Capability\+Build\+Ranger}, \hyperlink{classCPlayerCapabilityMineHarvest_a37944eb249559f1246348b47e3f24dee}{C\+Player\+Capability\+Mine\+Harvest}, \hyperlink{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c}{C\+Player\+Capability\+Building\+Upgrade}, \hyperlink{classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9}{C\+Player\+Capability\+Unit\+Upgrade}, \hyperlink{classCPlayerCapabilityBuildNormal_a5487e5521779846198604e8ebadaf283}{C\+Player\+Capability\+Build\+Normal}, \hyperlink{classCPlayerCapabilityTrainNormal_ac49cf646b94220844a03b7c3a8a7f215}{C\+Player\+Capability\+Train\+Normal}, and \hyperlink{classCPlayerCapabilityMove_aef25bc0d224e993c46f5cd4cd6b8b7c8}{C\+Player\+Capability\+Move}.
+
+\hypertarget{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{}\label{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Find\+Capability@{Find\+Capability}}
+\index{Find\+Capability@{Find\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Find\+Capability()}{FindCapability()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ C\+Player\+Capability\+::\+Find\+Capability (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 97 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+97                                                                                              \{
+98     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{TypeRegistry}().find((\textcolor{keywordtype}{int})type);
+99     
+100     \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{TypeRegistry}().end())\{
+101         \textcolor{keywordflow}{return} Iterator->second;   
+102     \}
+103     \textcolor{keywordflow}{return} std::shared\_ptr< CPlayerCapability >();
+104 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapability_aca2e1bf2f3dfdced2ff12f922aa52a30}{}\label{classCPlayerCapability_aca2e1bf2f3dfdced2ff12f922aa52a30} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Find\+Capability@{Find\+Capability}}
+\index{Find\+Capability@{Find\+Capability}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Find\+Capability()}{FindCapability()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ C\+Player\+Capability\+::\+Find\+Capability (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 106 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+106                                                                                          \{
+107     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerCapability_aa804d42c236f11ec9549057c22699837}{NameRegistry}().find(name);
+108     
+109     \textcolor{keywordflow}{if}(Iterator != \hyperlink{classCPlayerCapability_aa804d42c236f11ec9549057c22699837}{NameRegistry}().end())\{
+110         \textcolor{keywordflow}{return} Iterator->second;   
+111     \}
+112     \textcolor{keywordflow}{return} std::shared\_ptr< CPlayerCapability >();
+113 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_a596925849a8c1f887919d57e50132782}{}\label{classCPlayerCapability_a596925849a8c1f887919d57e50132782} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Name@{Name}}
+\index{Name@{Name}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily std\+::string C\+Player\+Capability\+::\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+67                               \{
+68             \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapability_aae795f4ae4c19a9c7792a4101ca18560}{DName};
+69         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_aa804d42c236f11ec9549057c22699837}{}\label{classCPlayerCapability_aa804d42c236f11ec9549057c22699837} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Name\+Registry@{Name\+Registry}}
+\index{Name\+Registry@{Name\+Registry}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Name\+Registry()}{NameRegistry()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ $>$ \& C\+Player\+Capability\+::\+Name\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 76 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+76                                                                                                   \{
+77     \textcolor{keyword}{static} std::unordered\_map< std::string, std::shared\_ptr< CPlayerCapability > > TheRegistry;
+78     
+79     \textcolor{keywordflow}{return} TheRegistry;
+80 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{}\label{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Name\+To\+Type@{Name\+To\+Type}}
+\index{Name\+To\+Type@{Name\+To\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Name\+To\+Type()}{NameToType()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} C\+Player\+Capability\+::\+Name\+To\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 115 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+115                                                                        \{
+116     \textcolor{keyword}{static} std::unordered\_map< std::string, EAssetCapabilityType > NameTypeTranslation(\{
+117         \{\textcolor{stringliteral}{"None"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone}\},
+118         \{\textcolor{stringliteral}{"BuildPeasant"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}\},
+119         \{\textcolor{stringliteral}{"BuildFootman"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman}\},
+120         \{\textcolor{stringliteral}{"BuildArcher"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher}\},
+121         \{\textcolor{stringliteral}{"BuildRanger"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger}\},
+122         \{\textcolor{stringliteral}{"BuildFarm"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{actBuildFarm}\},
+123         \{\textcolor{stringliteral}{"BuildTownHall"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall}\},
+124         \{\textcolor{stringliteral}{"BuildBarracks"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{actBuildBarracks}\},
+125         \{\textcolor{stringliteral}{"BuildLumberMill"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{actBuildLumberMill}\},
+126         \{\textcolor{stringliteral}{"BuildBlacksmith"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{actBuildBlacksmith}\},
+127         \{\textcolor{stringliteral}{"BuildKeep"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceadc780d56a9807d6bd10f7299b801c9eb}{actBuildKeep}\},
+128         \{\textcolor{stringliteral}{"BuildCastle"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceabbccd11a12c00ecde4d4bb2a0c27ab75}{actBuildCastle}\},
+129         \{\textcolor{stringliteral}{"BuildScoutTower"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaee04c14681474465b63d4922f31a1a69}{actBuildScoutTower}\},
+130         \{\textcolor{stringliteral}{"BuildGuardTower"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7dc70c7da2eb8cb4f235b900e67991f2}{actBuildGuardTower}\},
+131         \{\textcolor{stringliteral}{"BuildCannonTower"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea416089b5ee9555bf5ef27d6c661a2961}{actBuildCannonTower}\},
+132         \{\textcolor{stringliteral}{"Move"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{actMove}\},
+133         \{\textcolor{stringliteral}{"Repair"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae54caebc57cf41bd048ab64375ce4082}{actRepair}\},
+134         \{\textcolor{stringliteral}{"Mine"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine}\},
+135         \{\textcolor{stringliteral}{"BuildSimple"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceacab8a5395c24e2bf1c9778a0066a3237}{actBuildSimple}\},
+136         \{\textcolor{stringliteral}{"BuildAdvanced"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea337456d051e71bb60e1a7424d9703896}{actBuildAdvanced}\},
+137         \{\textcolor{stringliteral}{"Convey"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{actConvey}\},                                                                     
+                 
+138         \{\textcolor{stringliteral}{"Cancel"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaec5e11ffc62be241b4f6673586b35a6b}{actCancel}\},
+139         \{\textcolor{stringliteral}{"BuildWall"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea71c243197582f2607944883bb98438cc}{actBuildWall}\},
+140         \{\textcolor{stringliteral}{"Attack"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{actAttack}\},
+141         \{\textcolor{stringliteral}{"StandGround"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{actStandGround}\},
+142         \{\textcolor{stringliteral}{"Patrol"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea3cba4431d7962d2d5ffd01a9f7571332}{actPatrol}\},
+143         \{\textcolor{stringliteral}{"WeaponUpgrade1"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae6fd736f1ed1b76546c0ee54dc4e4958}{actWeaponUpgrade1}\},
+144         \{\textcolor{stringliteral}{"WeaponUpgrade2"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead92335c1ecc716f99e62d0983b110e51}{actWeaponUpgrade2}\},
+145         \{\textcolor{stringliteral}{"WeaponUpgrade3"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e368536b0eff35ab7cd8fead517b843}{actWeaponUpgrade3}\},
+146         \{\textcolor{stringliteral}{"ArrowUpgrade1"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea9b943265810dd3beb73722efe67dfcdc}{actArrowUpgrade1}\},
+147         \{\textcolor{stringliteral}{"ArrowUpgrade2"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa194a5e6d4c99415ff2bafb8c2713bc1}{actArrowUpgrade2}\},
+148         \{\textcolor{stringliteral}{"ArrowUpgrade3"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa083167c01a18c40d9b87df16796bbef}{actArrowUpgrade3}\},
+149         \{\textcolor{stringliteral}{"ArmorUpgrade1"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceab76385a4b1e7de9c0a60ad73a2a9292e}{actArmorUpgrade1}\},
+150         \{\textcolor{stringliteral}{"ArmorUpgrade2"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7352085c235d92657871cfb1b7fcdfa5}{actArmorUpgrade2}\},
+151         \{\textcolor{stringliteral}{"ArmorUpgrade3"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea13d786245276e72226d94e4e43d5893d}{actArmorUpgrade3}\},
+152         \{\textcolor{stringliteral}{"Longbow"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea626066b8caa034d801ef8cd601cd1cd7}{actLongbow}\},
+153         \{\textcolor{stringliteral}{"RangerScouting"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea7c23f07dfc3362bc9b85d704b5750fd8}{actRangerScouting}\},
+154         \{\textcolor{stringliteral}{"Marksmanship"},\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea23634cb2bfdd2dcc6f6cd6433b36df36}{actMarksmanship}\}
+155     \});
+156     \textcolor{keyword}{auto} Iterator = NameTypeTranslation.find(name);
+157     
+158     \textcolor{keywordflow}{if}(Iterator != NameTypeTranslation.end())\{
+159         \textcolor{keywordflow}{return} Iterator->second;
+160     \}
+161     \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknown capability name \(\backslash\)"%s\(\backslash\)"\(\backslash\)n"},name.c\_str());
+162     \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone};
+163 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapability_a7e298018dcde2684451add3cfff065f7}{}\label{classCPlayerCapability_a7e298018dcde2684451add3cfff065f7} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Register@{Register}}
+\index{Register@{Register}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+::\+Register (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$}]{capability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 88 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+88                                                                              \{
+89     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{FindCapability}(capability->Name()))\{
+90         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+91     \}
+92     \hyperlink{classCPlayerCapability_aa804d42c236f11ec9549057c22699837}{NameRegistry}()[capability->Name()] = capability;
+93     \hyperlink{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{TypeRegistry}()[\hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{NameToType}(capability->Name())] = capability;
+94     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+95 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classCPlayerCapability_a7e298018dcde2684451add3cfff065f7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapability_a022d6efcdc0897253d7c2e33ade0851d}{}\label{classCPlayerCapability_a022d6efcdc0897253d7c2e33ade0851d} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Target\+Type@{Target\+Type}}
+\index{Target\+Type@{Target\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Target\+Type()}{TargetType()}}
+{\footnotesize\ttfamily \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} C\+Player\+Capability\+::\+Target\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 75 of file Player\+Asset.\+h.
+
+
+\begin{DoxyCode}
+75                                       \{
+76             \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapability_af3e2c3d386fbdce314d36e3e16ee823c}{DTargetType};   
+77         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{}\label{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Type\+Registry@{Type\+Registry}}
+\index{Type\+Registry@{Type\+Registry}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Type\+Registry()}{TypeRegistry()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ int, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerCapability}{C\+Player\+Capability} $>$ $>$ \& C\+Player\+Capability\+::\+Type\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 82 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+82                                                                                             \{
+83     \textcolor{keyword}{static} std::unordered\_map< int, std::shared\_ptr< CPlayerCapability > > TheRegistry;
+84     
+85     \textcolor{keywordflow}{return} TheRegistry;
+86 \}
+\end{DoxyCode}
+\hypertarget{classCPlayerCapability_a976f05b7e620b721bdb5051debc9b93d}{}\label{classCPlayerCapability_a976f05b7e620b721bdb5051debc9b93d} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!Type\+To\+Name@{Type\+To\+Name}}
+\index{Type\+To\+Name@{Type\+To\+Name}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{Type\+To\+Name()}{TypeToName()}}
+{\footnotesize\ttfamily std\+::string C\+Player\+Capability\+::\+Type\+To\+Name (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 165 of file Player\+Asset.\+cpp.
+
+
+\begin{DoxyCode}
+165                                                                 \{
+166     \textcolor{keyword}{static} std::vector< std::string > TypeStrings(\{
+167         \textcolor{stringliteral}{"None"},
+168         \textcolor{stringliteral}{"BuildPeasant"},
+169         \textcolor{stringliteral}{"BuildFootman"},
+170         \textcolor{stringliteral}{"BuildArcher"},
+171         \textcolor{stringliteral}{"BuildRanger"},
+172         \textcolor{stringliteral}{"BuildFarm"},
+173         \textcolor{stringliteral}{"BuildTownHall"},
+174         \textcolor{stringliteral}{"BuildBarracks"},
+175         \textcolor{stringliteral}{"BuildLumberMill"},
+176         \textcolor{stringliteral}{"BuildBlacksmith"},
+177         \textcolor{stringliteral}{"BuildKeep"},
+178         \textcolor{stringliteral}{"BuildCastle"},
+179         \textcolor{stringliteral}{"BuildScoutTower"},
+180         \textcolor{stringliteral}{"BuildGuardTower"},
+181         \textcolor{stringliteral}{"BuildCannonTower"},
+182         \textcolor{stringliteral}{"Move"},
+183         \textcolor{stringliteral}{"Repair"},
+184         \textcolor{stringliteral}{"Mine"},
+185         \textcolor{stringliteral}{"BuildSimple"},
+186         \textcolor{stringliteral}{"BuildAdvanced"},
+187         \textcolor{stringliteral}{"Convey"},
+188         \textcolor{stringliteral}{"Cancel"},
+189         \textcolor{stringliteral}{"BuildWall"},
+190         \textcolor{stringliteral}{"Attack"},
+191         \textcolor{stringliteral}{"StandGround"},
+192         \textcolor{stringliteral}{"Patrol"},
+193         \textcolor{stringliteral}{"WeaponUpgrade1"},
+194         \textcolor{stringliteral}{"WeaponUpgrade2"},
+195         \textcolor{stringliteral}{"WeaponUpgrade3"},
+196         \textcolor{stringliteral}{"ArrowUpgrade1"},
+197         \textcolor{stringliteral}{"ArrowUpgrade2"},
+198         \textcolor{stringliteral}{"ArrowUpgrade3"},
+199         \textcolor{stringliteral}{"ArmorUpgrade1"},
+200         \textcolor{stringliteral}{"ArmorUpgrade2"},
+201         \textcolor{stringliteral}{"ArmorUpgrade3"},
+202         \textcolor{stringliteral}{"Longbow"},
+203         \textcolor{stringliteral}{"RangerScouting"},
+204         \textcolor{stringliteral}{"Marksmanship"},\});
+205     \textcolor{keywordflow}{if}((0 > type)||(type >= TypeStrings.size()))\{
+206         \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+207     \}
+208     \textcolor{keywordflow}{return} TypeStrings[type];
+209 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapability_a976f05b7e620b721bdb5051debc9b93d_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1}{}\label{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!D\+Asset\+Capability\+Type@{D\+Asset\+Capability\+Type}}
+\index{D\+Asset\+Capability\+Type@{D\+Asset\+Capability\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Asset\+Capability\+Type}{DAssetCapabilityType}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} C\+Player\+Capability\+::\+D\+Asset\+Capability\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 55 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerCapability_aae795f4ae4c19a9c7792a4101ca18560}{}\label{classCPlayerCapability_aae795f4ae4c19a9c7792a4101ca18560} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!D\+Name@{D\+Name}}
+\index{D\+Name@{D\+Name}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Name}{DName}}
+{\footnotesize\ttfamily std\+::string C\+Player\+Capability\+::\+D\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Player\+Asset.\+h.
+
+\hypertarget{classCPlayerCapability_af3e2c3d386fbdce314d36e3e16ee823c}{}\label{classCPlayerCapability_af3e2c3d386fbdce314d36e3e16ee823c} 
+\index{C\+Player\+Capability@{C\+Player\+Capability}!D\+Target\+Type@{D\+Target\+Type}}
+\index{D\+Target\+Type@{D\+Target\+Type}!C\+Player\+Capability@{C\+Player\+Capability}}
+\subsubsection{\texorpdfstring{D\+Target\+Type}{DTargetType}}
+{\footnotesize\ttfamily \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02f}{E\+Target\+Type} C\+Player\+Capability\+::\+D\+Target\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file Player\+Asset.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{PlayerAsset_8h}{Player\+Asset.\+h}\item 
+src/\hyperlink{PlayerAsset_8cpp}{Player\+Asset.\+cpp}\end{DoxyCompactItemize}

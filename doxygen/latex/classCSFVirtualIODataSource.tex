@@ -1,0 +1,264 @@
+\hypertarget{classCSFVirtualIODataSource}{}\section{C\+S\+F\+Virtual\+I\+O\+Data\+Source Class Reference}
+\label{classCSFVirtualIODataSource}\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSFVirtualIODataSource_acd8bf4483224c3101dafc14df967bc24}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\item 
+S\+F\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+IO \hyperlink{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43}{S\+F\+Virtual\+IO} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_a94ee0d9f4703661ca7f2cad8cf294690}{Get\+File\+Length} (\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$iosource)
+\item 
+static sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_a04735e135ffc05dd53fce944e772fcfc}{Seek} (sf\+\_\+count\+\_\+t offset, int whence, \hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$iosource)
+\item 
+static sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_a40021962590f0911d8af1020397fbba1}{Read} (void $\ast$ptr, sf\+\_\+count\+\_\+t count, \hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$iosource)
+\item 
+static sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_ac1d38c4c9d8ba3e0a2affd7dd72283ee}{Write} (const void $\ast$ptr, sf\+\_\+count\+\_\+t count, \hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$iosource)
+\item 
+static sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_aae8e2b59f9753ed1f8baca1561b15962}{Tell} (\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$iosource)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{D\+Data}
+\item 
+sf\+\_\+count\+\_\+t \hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{D\+Offset}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 23 of file Sound\+Clip.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCSFVirtualIODataSource_acd8bf4483224c3101dafc14df967bc24}{}\label{classCSFVirtualIODataSource_acd8bf4483224c3101dafc14df967bc24} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{C\+S\+F\+Virtual\+I\+O\+Data\+Source()}{CSFVirtualIODataSource()}}
+{\footnotesize\ttfamily C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+C\+S\+F\+Virtual\+I\+O\+Data\+Source (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+40                                                                                  \{
+41     uint8\_t TempByte;
+42     
+43     \textcolor{keywordflow}{while}(0 < source->Read(&TempByte, 1))\{
+44         \hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.push\_back(TempByte);   
+45     \}
+46     \hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} = 0;
+47 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCSFVirtualIODataSource_a94ee0d9f4703661ca7f2cad8cf294690}{}\label{classCSFVirtualIODataSource_a94ee0d9f4703661ca7f2cad8cf294690} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!Get\+File\+Length@{Get\+File\+Length}}
+\index{Get\+File\+Length@{Get\+File\+Length}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{Get\+File\+Length()}{GetFileLength()}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+Get\+File\+Length (\begin{DoxyParamCaption}\item[{\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$}]{iosource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+60                                                                                 \{
+61     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size();
+62 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_a94ee0d9f4703661ca7f2cad8cf294690_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSFVirtualIODataSource_a40021962590f0911d8af1020397fbba1}{}\label{classCSFVirtualIODataSource_a40021962590f0911d8af1020397fbba1} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!Read@{Read}}
+\index{Read@{Read}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{sf\+\_\+count\+\_\+t}]{count,  }\item[{\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$}]{iosource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 83 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+83                                                                                                     \{
+84     \textcolor{keywordflow}{if}(iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} + count > iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size())\{
+85         count = iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size() - iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset};
+86     \}
+87     memcpy(ptr, iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.data() + iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset}, count);
+88     iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} += count;
+89     \textcolor{keywordflow}{return} count;
+90 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_a40021962590f0911d8af1020397fbba1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSFVirtualIODataSource_a04735e135ffc05dd53fce944e772fcfc}{}\label{classCSFVirtualIODataSource_a04735e135ffc05dd53fce944e772fcfc} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!Seek@{Seek}}
+\index{Seek@{Seek}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+Seek (\begin{DoxyParamCaption}\item[{sf\+\_\+count\+\_\+t}]{offset,  }\item[{int}]{whence,  }\item[{\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$}]{iosource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 64 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+64                                                                                                       \{
+65     \textcolor{keywordflow}{if}(SEEK\_SET == whence)\{
+66         iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} = offset;
+67     \}
+68     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(SEEK\_CUR == whence)\{
+69         iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} += offset;
+70     \}
+71     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(SEEK\_END == whence)\{
+72         iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} = iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size() + offset;        
+73     \}
+74     \textcolor{keywordflow}{if}(0 > iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset})\{
+75         iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} = 0;    
+76     \}
+77     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size() < iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset})\{
+78         iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} = iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size();
+79     \}
+80     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset};
+81 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_a04735e135ffc05dd53fce944e772fcfc_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43}{}\label{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!S\+F\+Virtual\+IO@{S\+F\+Virtual\+IO}}
+\index{S\+F\+Virtual\+IO@{S\+F\+Virtual\+IO}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{S\+F\+Virtual\+I\+O()}{SFVirtualIO()}}
+{\footnotesize\ttfamily S\+F\+\_\+\+V\+I\+R\+T\+U\+A\+L\+\_\+\+IO C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+S\+F\+Virtual\+IO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 49 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+49                                                        \{
+50     SF\_VIRTUAL\_IO ReturnIO;
+51     
+52     ReturnIO.get\_filelen = (sf\_vio\_get\_filelen)\hyperlink{classCSFVirtualIODataSource_a94ee0d9f4703661ca7f2cad8cf294690}{GetFileLength};   
+53     ReturnIO.seek = (sf\_vio\_seek)\hyperlink{classCSFVirtualIODataSource_a04735e135ffc05dd53fce944e772fcfc}{Seek};
+54     ReturnIO.read = (sf\_vio\_read)\hyperlink{classCSFVirtualIODataSource_a40021962590f0911d8af1020397fbba1}{Read};
+55     ReturnIO.write = (sf\_vio\_write)\hyperlink{classCSFVirtualIODataSource_ac1d38c4c9d8ba3e0a2affd7dd72283ee}{Write};   
+56     ReturnIO.tell = (sf\_vio\_tell)\hyperlink{classCSFVirtualIODataSource_aae8e2b59f9753ed1f8baca1561b15962}{Tell};   
+57     \textcolor{keywordflow}{return} ReturnIO;
+58 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSFVirtualIODataSource_aae8e2b59f9753ed1f8baca1561b15962}{}\label{classCSFVirtualIODataSource_aae8e2b59f9753ed1f8baca1561b15962} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!Tell@{Tell}}
+\index{Tell@{Tell}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{Tell()}{Tell()}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+Tell (\begin{DoxyParamCaption}\item[{\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$}]{iosource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 96 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+96                                                                        \{
+97     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset};
+98 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_aae8e2b59f9753ed1f8baca1561b15962_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCSFVirtualIODataSource_ac1d38c4c9d8ba3e0a2affd7dd72283ee}{}\label{classCSFVirtualIODataSource_ac1d38c4c9d8ba3e0a2affd7dd72283ee} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!Write@{Write}}
+\index{Write@{Write}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+Write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{sf\+\_\+count\+\_\+t}]{count,  }\item[{\hyperlink{classCSFVirtualIODataSource}{C\+S\+F\+Virtual\+I\+O\+Data\+Source} $\ast$}]{iosource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 92 of file Sound\+Clip.\+cpp.
+
+
+\begin{DoxyCode}
+92                                                                                                            
+      \{
+93     \textcolor{keywordflow}{return} 0;
+94 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCSFVirtualIODataSource_ac1d38c4c9d8ba3e0a2affd7dd72283ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{}\label{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!D\+Data@{D\+Data}}
+\index{D\+Data@{D\+Data}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{D\+Data}{DData}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+D\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Sound\+Clip.\+cpp.
+
+\hypertarget{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{}\label{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8} 
+\index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!D\+Offset@{D\+Offset}}
+\index{D\+Offset@{D\+Offset}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
+\subsubsection{\texorpdfstring{D\+Offset}{DOffset}}
+{\footnotesize\ttfamily sf\+\_\+count\+\_\+t C\+S\+F\+Virtual\+I\+O\+Data\+Source\+::\+D\+Offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Sound\+Clip.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SoundClip_8cpp}{Sound\+Clip.\+cpp}\end{DoxyCompactItemize}

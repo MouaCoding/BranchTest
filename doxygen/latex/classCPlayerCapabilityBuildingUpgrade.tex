@@ -1,0 +1,270 @@
+\hypertarget{classCPlayerCapabilityBuildingUpgrade}{}\section{C\+Player\+Capability\+Building\+Upgrade Class Reference}
+\label{classCPlayerCapabilityBuildingUpgrade}\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+
+
+Inheritance diagram for C\+Player\+Capability\+Building\+Upgrade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classCPlayerCapabilityBuildingUpgrade__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Player\+Capability\+Building\+Upgrade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classCPlayerCapabilityBuildingUpgrade__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CActivatedCapability}{C\+Activated\+Capability}
+\item 
+class \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CRegistrant}{C\+Registrant}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classCPlayerCapabilityBuildingUpgrade_abcef586e377c86c3da3cd698dca268ef}{$\sim$\+C\+Player\+Capability\+Building\+Upgrade} ()
+\item 
+bool \hyperlink{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c}{Can\+Initiate} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata)
+\item 
+bool \hyperlink{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35}{Can\+Apply} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)
+\item 
+bool \hyperlink{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681}{Apply\+Capability} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ actor, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$ playerdata, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ target)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerCapabilityBuildingUpgrade_a80ccec4b17a9e43914bec537dcbe1b9e}{C\+Player\+Capability\+Building\+Upgrade} (const std\+::string \&buildingname)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{D\+Building\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CRegistrant}{C\+Registrant} \hyperlink{classCPlayerCapabilityBuildingUpgrade_abbc814330c1c8e96abb2f0c512e8abb3}{D\+Registrant}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 21 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_a80ccec4b17a9e43914bec537dcbe1b9e}{}\label{classCPlayerCapabilityBuildingUpgrade_a80ccec4b17a9e43914bec537dcbe1b9e} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{C\+Player\+Capability\+Building\+Upgrade()}{CPlayerCapabilityBuildingUpgrade()}}
+{\footnotesize\ttfamily C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Player\+Capability\+Building\+Upgrade (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{buildingname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 66 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+66                                                                                                 : 
+      \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Build"}) + buildingname, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone})\{
+67     \hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{DBuildingName} = buildingname;
+68 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a80ccec4b17a9e43914bec537dcbe1b9e_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_abcef586e377c86c3da3cd698dca268ef}{}\label{classCPlayerCapabilityBuildingUpgrade_abcef586e377c86c3da3cd698dca268ef} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!````~C\+Player\+Capability\+Building\+Upgrade@{$\sim$\+C\+Player\+Capability\+Building\+Upgrade}}
+\index{````~C\+Player\+Capability\+Building\+Upgrade@{$\sim$\+C\+Player\+Capability\+Building\+Upgrade}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Player\+Capability\+Building\+Upgrade()}{~CPlayerCapabilityBuildingUpgrade()}}
+{\footnotesize\ttfamily virtual C\+Player\+Capability\+Building\+Upgrade\+::$\sim$\+C\+Player\+Capability\+Building\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 50 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{\};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_abcef586e377c86c3da3cd698dca268ef_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681}{}\label{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!Apply\+Capability@{Apply\+Capability}}
+\index{Apply\+Capability@{Apply\+Capability}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{Apply\+Capability()}{ApplyCapability()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Building\+Upgrade\+::\+Apply\+Capability (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{C\+Player\+Capability}.
+
+
+
+Definition at line 93 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+93                                                                                                            
+                                                                   \{
+94     \textcolor{keyword}{auto} Iterator = playerdata->AssetTypes()->find(\hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{DBuildingName});
+95     
+96     \textcolor{keywordflow}{if}(Iterator != playerdata->AssetTypes()->end())\{
+97         \hyperlink{structSAssetCommand}{SAssetCommand} NewCommand;
+98         \textcolor{keyword}{auto} AssetType = Iterator->second;
+99         
+100         actor->ClearCommand();
+101         NewCommand.\hyperlink{structSAssetCommand_a8edd3b3d59a76d5514ba403bc8076a75}{DAction} = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability};
+102         NewCommand.\hyperlink{structSAssetCommand_a734ea7c6847457b437360f333f570ff9}{DCapability} = \hyperlink{classCPlayerCapability_a433bb196cd6ab6a932f1cac102b3aa98}{AssetCapabilityType}();
+103         NewCommand.\hyperlink{structSAssetCommand_a3d9b43f6e59c386c48c41a65448a0c39}{DAssetTarget} = target;
+104         NewCommand.\hyperlink{structSAssetCommand_ad8beda19520811cc70fe1eab16c774dd}{DActivatedCapability} = std::make\_shared< CActivatedCapability >(
+      actor, playerdata, target, actor->AssetType(), AssetType, AssetType->LumberCost(), AssetType->GoldCost(), 
+      \hyperlink{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f}{CPlayerAsset::UpdateFrequency}() * AssetType->BuildTime());
+105         actor->PushCommand(NewCommand);
+106         
+107         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+108     \}
+109     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+110 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35}{}\label{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!Can\+Apply@{Can\+Apply}}
+\index{Can\+Apply@{Can\+Apply}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{Can\+Apply()}{CanApply()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Building\+Upgrade\+::\+Can\+Apply (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{C\+Player\+Capability}.
+
+
+
+Definition at line 89 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+89                                                                                                            
+                                                            \{
+90     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c}{CanInitiate}(actor, playerdata);
+91 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c}{}\label{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!Can\+Initiate@{Can\+Initiate}}
+\index{Can\+Initiate@{Can\+Initiate}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{Can\+Initiate()}{CanInitiate()}}
+{\footnotesize\ttfamily bool C\+Player\+Capability\+Building\+Upgrade\+::\+Can\+Initiate (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{actor,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerData}{C\+Player\+Data} $>$}]{playerdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{C\+Player\+Capability}.
+
+
+
+Definition at line 70 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+\begin{DoxyCode}
+70                                                                                                            
+                         \{
+71     \textcolor{keyword}{auto} Iterator = playerdata->AssetTypes()->find(\hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{DBuildingName});
+72     
+73     \textcolor{keywordflow}{if}(Iterator != playerdata->AssetTypes()->end())\{
+74         \textcolor{keyword}{auto} AssetType = Iterator->second;
+75         \textcolor{keywordflow}{if}(AssetType->LumberCost() > playerdata->Lumber())\{
+76             \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+77         \}
+78         \textcolor{keywordflow}{if}(AssetType->GoldCost() > playerdata->Gold())\{
+79             \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+80         \}
+81         \textcolor{keywordflow}{if}(!playerdata->AssetRequirementsMet(\hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{DBuildingName}))\{
+82             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+83         \}
+84     \}
+85     
+86     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+87 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{}\label{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!D\+Building\+Name@{D\+Building\+Name}}
+\index{D\+Building\+Name@{D\+Building\+Name}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{D\+Building\+Name}{DBuildingName}}
+{\footnotesize\ttfamily std\+::string C\+Player\+Capability\+Building\+Upgrade\+::\+D\+Building\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+\hypertarget{classCPlayerCapabilityBuildingUpgrade_abbc814330c1c8e96abb2f0c512e8abb3}{}\label{classCPlayerCapabilityBuildingUpgrade_abbc814330c1c8e96abb2f0c512e8abb3} 
+\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!D\+Registrant@{D\+Registrant}}
+\index{D\+Registrant@{D\+Registrant}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
+\subsubsection{\texorpdfstring{D\+Registrant}{DRegistrant}}
+{\footnotesize\ttfamily \hyperlink{classCPlayerCapabilityBuildingUpgrade_1_1CRegistrant}{C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Registrant} C\+Player\+Capability\+Building\+Upgrade\+::\+D\+Registrant\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{BuildingUpgradeCapabilities_8cpp}{Building\+Upgrade\+Capabilities.\+cpp}\end{DoxyCompactItemize}

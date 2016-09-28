@@ -1,0 +1,75 @@
+\hypertarget{ResourceRenderer_8cpp}{}\section{src/\+Resource\+Renderer.cpp File Reference}
+\label{ResourceRenderer_8cpp}\index{src/\+Resource\+Renderer.\+cpp@{src/\+Resource\+Renderer.\+cpp}}
+{\ttfamily \#include \char`\"{}Resource\+Renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Text\+Formatter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\newline
+Include dependency graph for Resource\+Renderer.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ResourceRenderer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{E\+Mini\+Icon\+Types} $\ast$ \hyperlink{ResourceRenderer_8cpp_acbdfb2557786dc74007ec4dcad50293c}{Ref}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{E\+Mini\+Icon\+Types} \{ \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba7adf8c9c4baae104b28012b03306bc46}{mit\+Gold} = 0, 
+\hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91bafbe38806a69543fdbb9284d81494e62f}{mit\+Lumber}, 
+\hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba9e3285934c30b89391b32ff263225ff9}{mit\+Food}, 
+\hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba53daf7e5b90d60adca18d7bc264a319d}{mit\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{ResourceRenderer_8cpp_acbdfb2557786dc74007ec4dcad50293c}{}\label{ResourceRenderer_8cpp_acbdfb2557786dc74007ec4dcad50293c} 
+\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!Ref@{Ref}}
+\index{Ref@{Ref}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{Ref}{Ref}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{E\+Mini\+Icon\+Types} $\ast$ \hyperlink{ResourceRenderer_8cpp_acbdfb2557786dc74007ec4dcad50293c}{Ref}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{}\label{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b} 
+\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!E\+Mini\+Icon\+Types@{E\+Mini\+Icon\+Types}}
+\index{E\+Mini\+Icon\+Types@{E\+Mini\+Icon\+Types}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}
+\subsubsection{\texorpdfstring{E\+Mini\+Icon\+Types}{EMiniIconTypes}}
+{\footnotesize\ttfamily enum \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{E\+Mini\+Icon\+Types}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mit\+Gold@{mit\+Gold}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!mit\+Gold@{mit\+Gold}}}\hypertarget{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba7adf8c9c4baae104b28012b03306bc46}{}\label{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba7adf8c9c4baae104b28012b03306bc46} 
+mit\+Gold&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mit\+Lumber@{mit\+Lumber}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!mit\+Lumber@{mit\+Lumber}}}\hypertarget{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91bafbe38806a69543fdbb9284d81494e62f}{}\label{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91bafbe38806a69543fdbb9284d81494e62f} 
+mit\+Lumber&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mit\+Food@{mit\+Food}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!mit\+Food@{mit\+Food}}}\hypertarget{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba9e3285934c30b89391b32ff263225ff9}{}\label{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba9e3285934c30b89391b32ff263225ff9} 
+mit\+Food&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mit\+Max@{mit\+Max}!Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}}\index{Resource\+Renderer.\+cpp@{Resource\+Renderer.\+cpp}!mit\+Max@{mit\+Max}}}\hypertarget{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba53daf7e5b90d60adca18d7bc264a319d}{}\label{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba53daf7e5b90d60adca18d7bc264a319d} 
+mit\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 21 of file Resource\+Renderer.\+cpp.
+
+
+\begin{DoxyCode}
+21             \{
+22     \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba7adf8c9c4baae104b28012b03306bc46}{mitGold} = 0,
+23     \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91bafbe38806a69543fdbb9284d81494e62f}{mitLumber},
+24     \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba9e3285934c30b89391b32ff263225ff9}{mitFood},
+25     \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91ba53daf7e5b90d60adca18d7bc264a319d}{mitMax}
+26 \} \hyperlink{ResourceRenderer_8cpp_ab27b08cd0a54e12064fc6ddb3733a91b}{EMiniIconTypes}, *\hyperlink{ResourceRenderer_8cpp_acbdfb2557786dc74007ec4dcad50293c}{Ref};
+\end{DoxyCode}

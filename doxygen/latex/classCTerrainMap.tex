@@ -1,0 +1,688 @@
+\hypertarget{classCTerrainMap}{}\section{C\+Terrain\+Map Class Reference}
+\label{classCTerrainMap}\index{C\+Terrain\+Map@{C\+Terrain\+Map}}
+
+
+{\ttfamily \#include $<$Terrain\+Map.\+h$>$}
+
+
+
+Inheritance diagram for C\+Terrain\+Map\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classCTerrainMap__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} \{ \newline
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{tt\+None} = 0, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{tt\+Grass}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{tt\+Dirt}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{tt\+Rock}, 
+\newline
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{tt\+Tree}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{tt\+Stump}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{tt\+Water}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{tt\+Wall}, 
+\newline
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{tt\+Wall\+Damaged}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{tt\+Rubble}, 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a63a0be7e3c2e41dcc569f3d335bd9a02}{tt\+Max}
+ \}
+\item 
+typedef enum \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{C\+Terrain\+Map\+::\+E\+Tile\+Type} $\ast$ \hyperlink{classCTerrainMap_a817b5c0c7f75205946ef7d0a2f49642e}{E\+Tile\+Type\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCTerrainMap_a2ac9c0f2622d06b8e0b1f5d67199f1ea}{C\+Terrain\+Map} ()
+\item 
+\hyperlink{classCTerrainMap_a9c98a824cf26ee35735a632472ca7ffd}{C\+Terrain\+Map} (const \hyperlink{classCTerrainMap}{C\+Terrain\+Map} \&map)
+\item 
+\hyperlink{classCTerrainMap_a7e7b02ec0a42ca686fc895d0923567b3}{$\sim$\+C\+Terrain\+Map} ()
+\item 
+\hyperlink{classCTerrainMap}{C\+Terrain\+Map} \& \hyperlink{classCTerrainMap_ad9f476d5d4db6de2907dfa3d4d9de7e6}{operator=} (const \hyperlink{classCTerrainMap}{C\+Terrain\+Map} \&map)
+\item 
+std\+::string \hyperlink{classCTerrainMap_a2bdc91c2f8d16783992363ea16532dd7}{Map\+Name} () const
+\item 
+int \hyperlink{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{Width} () const
+\item 
+int \hyperlink{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{Height} () const
+\item 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} \hyperlink{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4}{Tile\+Type} (int xindex, int yindex) const
+\item 
+\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} \hyperlink{classCTerrainMap_a3a7229412b3391835dd6036439e5c6c0}{Tile\+Type} (const \hyperlink{classCPosition}{C\+Position} \&pos) const
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCTerrainMap_af32811cace3a3b01c9519b304ddb8efc}{Find\+Nearest\+Tile\+Type} (const \hyperlink{classCPosition}{C\+Position} \&pos, \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} type)
+\item 
+void \hyperlink{classCTerrainMap_a40757d66d7458620a327d6f69a35a2bd}{Change\+Tile\+Type} (int xindex, int yindex, \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} type)
+\item 
+void \hyperlink{classCTerrainMap_a4a4f26c13a3d8116f4295bef3c25c3e5}{Change\+Tile\+Type} (const \hyperlink{classCPosition}{C\+Position} \&pos, \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} type)
+\item 
+virtual bool \hyperlink{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4}{Load\+Map} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$ source)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} $>$ $>$ \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{D\+Map}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{D\+String\+Map}
+\item 
+int \hyperlink{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{D\+Player\+Count}
+\item 
+std\+::string \hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{D\+Map\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 24 of file Terrain\+Map.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classCTerrainMap_a817b5c0c7f75205946ef7d0a2f49642e}{}\label{classCTerrainMap_a817b5c0c7f75205946ef7d0a2f49642e} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!E\+Tile\+Type\+Ref@{E\+Tile\+Type\+Ref}}
+\index{E\+Tile\+Type\+Ref@{E\+Tile\+Type\+Ref}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{E\+Tile\+Type\+Ref}{ETileTypeRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{C\+Terrain\+Map\+::\+E\+Tile\+Type} $\ast$ \hyperlink{classCTerrainMap_a817b5c0c7f75205946ef7d0a2f49642e}{C\+Terrain\+Map\+::\+E\+Tile\+Type\+Ref}}
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!E\+Tile\+Type@{E\+Tile\+Type}}
+\index{E\+Tile\+Type@{E\+Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{E\+Tile\+Type}{ETileType}}
+{\footnotesize\ttfamily enum \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{C\+Terrain\+Map\+::\+E\+Tile\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+None@{tt\+None}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+None@{tt\+None}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5} 
+tt\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Grass@{tt\+Grass}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Grass@{tt\+Grass}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a} 
+tt\+Grass&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Dirt@{tt\+Dirt}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Dirt@{tt\+Dirt}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8} 
+tt\+Dirt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Rock@{tt\+Rock}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Rock@{tt\+Rock}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad} 
+tt\+Rock&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Tree@{tt\+Tree}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Tree@{tt\+Tree}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c} 
+tt\+Tree&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Stump@{tt\+Stump}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Stump@{tt\+Stump}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef} 
+tt\+Stump&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Water@{tt\+Water}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Water@{tt\+Water}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5} 
+tt\+Water&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Wall@{tt\+Wall}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Wall@{tt\+Wall}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2} 
+tt\+Wall&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Wall\+Damaged@{tt\+Wall\+Damaged}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Wall\+Damaged@{tt\+Wall\+Damaged}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd} 
+tt\+Wall\+Damaged&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Rubble@{tt\+Rubble}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Rubble@{tt\+Rubble}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371} 
+tt\+Rubble&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tt\+Max@{tt\+Max}!C\+Terrain\+Map@{C\+Terrain\+Map}}\index{C\+Terrain\+Map@{C\+Terrain\+Map}!tt\+Max@{tt\+Max}}}\hypertarget{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a63a0be7e3c2e41dcc569f3d335bd9a02}{}\label{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a63a0be7e3c2e41dcc569f3d335bd9a02} 
+tt\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 26 of file Terrain\+Map.\+h.
+
+
+\begin{DoxyCode}
+26                     \{
+27             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{ttNone} = 0,
+28             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{ttGrass},
+29             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{ttDirt},
+30             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{ttRock},
+31             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{ttTree},
+32             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ac6008e344fb024b62741b2ffaef042ef}{ttStump},
+33             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{ttWater},
+34             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{ttWall},
+35             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{ttWallDamaged},
+36             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a0969ea4c56acb3f5acf137c0d06a3371}{ttRubble},
+37             \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a63a0be7e3c2e41dcc569f3d335bd9a02}{ttMax}
+38         \} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{ETileType}, *\hyperlink{classCTerrainMap_a817b5c0c7f75205946ef7d0a2f49642e}{ETileTypeRef};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCTerrainMap_a2ac9c0f2622d06b8e0b1f5d67199f1ea}{}\label{classCTerrainMap_a2ac9c0f2622d06b8e0b1f5d67199f1ea} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{C\+Terrain\+Map()}{CTerrainMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily C\+Terrain\+Map\+::\+C\+Terrain\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+24                         \{
+25 
+26 \}
+\end{DoxyCode}
+\hypertarget{classCTerrainMap_a9c98a824cf26ee35735a632472ca7ffd}{}\label{classCTerrainMap_a9c98a824cf26ee35735a632472ca7ffd} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{C\+Terrain\+Map()}{CTerrainMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily C\+Terrain\+Map\+::\+C\+Terrain\+Map (\begin{DoxyParamCaption}\item[{const \hyperlink{classCTerrainMap}{C\+Terrain\+Map} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+28                                               \{
+29     \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap} = map.\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap};
+30     \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap} = map.\hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap};
+31     \hyperlink{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{DPlayerCount} = map.\hyperlink{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{DPlayerCount};
+32     \hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName} = map.\hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName};
+33 \}
+\end{DoxyCode}
+\hypertarget{classCTerrainMap_a7e7b02ec0a42ca686fc895d0923567b3}{}\label{classCTerrainMap_a7e7b02ec0a42ca686fc895d0923567b3} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!````~C\+Terrain\+Map@{$\sim$\+C\+Terrain\+Map}}
+\index{````~C\+Terrain\+Map@{$\sim$\+C\+Terrain\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Terrain\+Map()}{~CTerrainMap()}}
+{\footnotesize\ttfamily C\+Terrain\+Map\+::$\sim$\+C\+Terrain\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 35 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+35                          \{
+36 
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCTerrainMap_a40757d66d7458620a327d6f69a35a2bd}{}\label{classCTerrainMap_a40757d66d7458620a327d6f69a35a2bd} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Change\+Tile\+Type@{Change\+Tile\+Type}}
+\index{Change\+Tile\+Type@{Change\+Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Change\+Tile\+Type()}{ChangeTileType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+Terrain\+Map\+::\+Change\+Tile\+Type (\begin{DoxyParamCaption}\item[{int}]{xindex,  }\item[{int}]{yindex,  }\item[{\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 130 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+130                                                                       \{
+131     \textcolor{keywordflow}{if}((-1 > xindex)||(-1 > yindex))\{
+132         \textcolor{keywordflow}{return};    
+133     \}
+134     \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size() <= yindex+1)\{
+135         \textcolor{keywordflow}{return};   
+136     \}
+137     \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[yindex+1].size() <= xindex+1)\{
+138         \textcolor{keywordflow}{return};   
+139     \}
+140     \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[yindex+1][xindex+1] = type;
+141 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a40757d66d7458620a327d6f69a35a2bd_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a4a4f26c13a3d8116f4295bef3c25c3e5}{}\label{classCTerrainMap_a4a4f26c13a3d8116f4295bef3c25c3e5} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Change\+Tile\+Type@{Change\+Tile\+Type}}
+\index{Change\+Tile\+Type@{Change\+Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Change\+Tile\+Type()}{ChangeTileType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Terrain\+Map\+::\+Change\+Tile\+Type (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 75 of file Terrain\+Map.\+h.
+
+
+\begin{DoxyCode}
+75                                                                  \{
+76             \hyperlink{classCTerrainMap_a40757d66d7458620a327d6f69a35a2bd}{ChangeTileType}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(), pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}(), type);
+77         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a4a4f26c13a3d8116f4295bef3c25c3e5_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_af32811cace3a3b01c9519b304ddb8efc}{}\label{classCTerrainMap_af32811cace3a3b01c9519b304ddb8efc} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Find\+Nearest\+Tile\+Type@{Find\+Nearest\+Tile\+Type}}
+\index{Find\+Nearest\+Tile\+Type@{Find\+Nearest\+Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Find\+Nearest\+Tile\+Type()}{FindNearestTileType()}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Terrain\+Map\+::\+Find\+Nearest\+Tile\+Type (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{\hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 64 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+64                                                                               \{
+65     \textcolor{keywordtype}{int} MaxDistance = \hyperlink{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{Width}() > \hyperlink{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{Height}() ? \hyperlink{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{Width}() : \hyperlink{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{Height}();
+66     \textcolor{keywordtype}{int} XOffset = pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + 1;
+67     \textcolor{keywordtype}{int} YOffset = pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 1;
+68     
+69     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} SearchDistance = 0; SearchDistance < MaxDistance; SearchDistance++)\{
+70         \textcolor{keywordtype}{int} PositiveX = XOffset + SearchDistance;
+71         \textcolor{keywordtype}{int} NegativeX = XOffset - SearchDistance;
+72         \textcolor{keywordtype}{int} PositiveY = YOffset + SearchDistance;
+73         \textcolor{keywordtype}{int} NegativeY = YOffset - SearchDistance;
+74         \textcolor{keywordtype}{bool} SearchPX = \textcolor{keyword}{true};
+75         \textcolor{keywordtype}{bool} SearchNX = \textcolor{keyword}{true};
+76         \textcolor{keywordtype}{bool} SearchPY = \textcolor{keyword}{true};
+77         \textcolor{keywordtype}{bool} SearchNY = \textcolor{keyword}{true};
+78         
+79         \textcolor{keywordflow}{if}(0 >= NegativeX)\{
+80             NegativeX = 1;   
+81             SearchNX = \textcolor{keyword}{false};
+82         \}
+83         \textcolor{keywordflow}{if}(PositiveX + 1 >= \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[0].size())\{
+84             PositiveX = \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[0].size() - 2;
+85             SearchPX = \textcolor{keyword}{false};
+86         \}
+87         \textcolor{keywordflow}{if}(0 >= NegativeY)\{
+88             NegativeY = 1;
+89             SearchNY = \textcolor{keyword}{false};
+90         \}
+91         \textcolor{keywordflow}{if}(PositiveY + 1 >= \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size())\{
+92             PositiveY = \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size() - 2;
+93             SearchPY = \textcolor{keyword}{false};
+94         \}
+95         \textcolor{keywordflow}{if}(!SearchNX && !SearchNY && !SearchPX && !SearchPY)\{
+96             \textcolor{keywordflow}{break};
+97         \}
+98         \textcolor{keywordflow}{if}(SearchNY)\{
+99             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = NegativeX; XOff <= PositiveX; XOff++)\{
+100                 \textcolor{keywordflow}{if}(type == \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[NegativeY][XOff])\{
+101                     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(XOff-1, NegativeY-1);
+102                 \}
+103             \}
+104         \}
+105         \textcolor{keywordflow}{if}(SearchPX)\{
+106             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = NegativeY; YOff <= PositiveY; YOff++)\{
+107                 \textcolor{keywordflow}{if}(type == \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[YOff][PositiveX])\{
+108                     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(PositiveX-1, YOff-1);
+109                 \}
+110             \}
+111         \}
+112         \textcolor{keywordflow}{if}(SearchPY)\{
+113             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} XOff = PositiveX; XOff >= NegativeX; XOff--)\{
+114                 \textcolor{keywordflow}{if}(type == \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[PositiveY][XOff])\{
+115                     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(XOff-1, PositiveY-1);
+116                 \}
+117             \}
+118         \}
+119         \textcolor{keywordflow}{if}(SearchNX)\{
+120             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} YOff = PositiveY; YOff >= NegativeY; YOff--)\{
+121                 \textcolor{keywordflow}{if}(type == \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[YOff][NegativeX])\{
+122                     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(NegativeX-1, YOff-1);
+123                 \}
+124             \}
+125         \}
+126     \}
+127     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(-1, -1);
+128 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_af32811cace3a3b01c9519b304ddb8efc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_af32811cace3a3b01c9519b304ddb8efc_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{}\label{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Height@{Height}}
+\index{Height@{Height}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily int C\+Terrain\+Map\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 60 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+60                              \{
+61     \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size()-2;
+62 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4}{}\label{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Load\+Map@{Load\+Map}}
+\index{Load\+Map@{Load\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Load\+Map()}{LoadMap()}}
+{\footnotesize\ttfamily bool C\+Terrain\+Map\+::\+Load\+Map (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCDataSource}{C\+Data\+Source} $>$}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{classCAssetDecoratedMap_aaf40414c8e291bd45327787ddaf58f31}{C\+Asset\+Decorated\+Map}.
+
+
+
+Definition at line 143 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+143                                                             \{     
+144     \hyperlink{classCLineDataSource}{CLineDataSource} LineSource(source);
+145     std::string TempString;
+146     std::vector< std::string > Tokens;
+147     \textcolor{keywordtype}{int} MapWidth, MapHeight;
+148     \textcolor{keywordtype}{bool} ReturnStatus = \textcolor{keyword}{false};
+149     \textcolor{comment}{//int PlayerColorsFound = 0;}
+150     
+151     \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.clear();
+152     
+153 
+154     \textcolor{keywordflow}{if}(!LineSource.Read(\hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName}))\{
+155         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read map line.\(\backslash\)n"});
+156         \textcolor{keywordflow}{goto} LoadMapExit;
+157     \}
+158     
+159     \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+160         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read map line.\(\backslash\)n"});
+161         \textcolor{keywordflow}{goto} LoadMapExit;
+162     \}
+163     \hyperlink{classCTokenizer_a7477f6849a3d0a5154879d8622e4012c}{CTokenizer::Tokenize}(Tokens, TempString);
+164     \textcolor{keywordflow}{if}(2 != Tokens.size())\{
+165         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Invalid map dimensions %s (%zd).\(\backslash\)n"},TempString.c\_str(), Tokens.size());
+166         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} I = 0; I < Tokens.size(); I++)\{
+167             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Tokens[%d] = %s\(\backslash\)n"},I,Tokens[I].c\_str());
+168         \}
+169         \textcolor{keywordflow}{goto} LoadMapExit;
+170     \}
+171     \textcolor{keywordflow}{try}\{
+172         MapWidth = std::stoi(Tokens[0]);
+173         MapHeight = std::stoi(Tokens[1]);
+174             
+175         \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Map %s is %d x %d\(\backslash\)n"},\hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName}.c\_str(), MapWidth, 
+      MapHeight); 
+176         \textcolor{keywordflow}{if}((8 > MapWidth)||(8 > MapHeight))\{
+177             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Invalid map dimensions.\(\backslash\)n"});
+178             \textcolor{keywordflow}{goto} LoadMapExit;        
+179         \}
+180         \textcolor{keywordflow}{while}(\hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}.size() < MapHeight + 2)\{
+181             \textcolor{keywordflow}{if}(!LineSource.Read(TempString))\{
+182                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Failed to read map line.\(\backslash\)n"});
+183                 \textcolor{keywordflow}{goto} LoadMapExit;
+184             \}                                 
+185             \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}.push\_back(TempString);
+186             \textcolor{keywordflow}{if}(MapWidth + 2 > \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}.back().length())\{
+187                 \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Map line %zd too short!\(\backslash\)n"}, \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}.size());
+188                 \textcolor{keywordflow}{goto} LoadMapExit;
+189             \}
+190         \}
+191         \textcolor{keywordflow}{if}(MapHeight + 2 > \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}.size())\{
+192             \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Map has too few lines!\(\backslash\)n"});
+193             \textcolor{keywordflow}{goto} LoadMapExit;
+194         \}
+195         \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.resize(MapHeight+2);
+196         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size(); Index++)\{
+197             \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index].resize(MapWidth+2);
+198             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Inner = 0; Inner < MapWidth+2; Inner++)\{
+199                 \textcolor{keywordflow}{switch}(\hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}[Index][Inner])\{
+200                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'G'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ae587716ed26a437b6ea33f0ac823d47a}{ttGrass};
+201                                 \textcolor{keywordflow}{break};
+202                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'F'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{ttTree};
+203                                 \textcolor{keywordflow}{break};
+204                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a49fb754039632e7127fca005dd95bab8}{ttDirt};
+205                                 \textcolor{keywordflow}{break};
+206                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'W'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a9faa5ddca496d71c34b9d01157de34b2}{ttWall};
+207                                 \textcolor{keywordflow}{break};
+208                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'w'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4acbd754bea3ab1493a28f3a67596482dd}{ttWallDamaged};
+209                                 \textcolor{keywordflow}{break};
+210                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'R'}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a215740f194a2d72a21d47c848fbfecad}{ttRock};
+211                                 \textcolor{keywordflow}{break};
+212                     \textcolor{keywordflow}{case} \textcolor{charliteral}{' '}:   \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[Index][Inner] = \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4ab7c7a2abbef411fd768a4f209e307de5}{ttWater};
+213                                 \textcolor{keywordflow}{break};
+214                     \textcolor{keywordflow}{default}:    \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"Unknwon tile type '%c'on line %d\(\backslash\)n"}, 
+      \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap}[Index][Inner],Index+2);
+215                                 \textcolor{keywordflow}{goto} LoadMapExit;
+216                                 \textcolor{keywordflow}{break};
+217                 \}
+218             \}
+219         \}    
+220         ReturnStatus = \textcolor{keyword}{true};
+221     \}
+222     \textcolor{keywordflow}{catch}(std::exception &E)\{
+223         \hyperlink{Debug_8h_a2ed825eefefe35baf59a93a8c641323d}{PrintError}(\textcolor{stringliteral}{"%s\(\backslash\)n"},E.what());
+224     \}
+225 
+226 LoadMapExit:
+227     \textcolor{keywordflow}{return} ReturnStatus;
+228 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a2bdc91c2f8d16783992363ea16532dd7}{}\label{classCTerrainMap_a2bdc91c2f8d16783992363ea16532dd7} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Map\+Name@{Map\+Name}}
+\index{Map\+Name@{Map\+Name}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Map\+Name()}{MapName()}}
+{\footnotesize\ttfamily std\+::string C\+Terrain\+Map\+::\+Map\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 49 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+49                                     \{
+50     \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName};   
+51 \}
+\end{DoxyCode}
+\hypertarget{classCTerrainMap_ad9f476d5d4db6de2907dfa3d4d9de7e6}{}\label{classCTerrainMap_ad9f476d5d4db6de2907dfa3d4d9de7e6} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classCTerrainMap}{C\+Terrain\+Map} \& C\+Terrain\+Map\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCTerrainMap}{C\+Terrain\+Map} \&}]{map }\end{DoxyParamCaption})}
+
+
+
+Definition at line 39 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+39                                                          \{
+40     \textcolor{keywordflow}{if}(\textcolor{keyword}{this} != &map)\{
+41         \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap} = map.\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap};
+42         \hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap} = map.\hyperlink{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{DStringMap};
+43         \hyperlink{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{DPlayerCount} = map.\hyperlink{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{DPlayerCount};
+44         \hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName} = map.\hyperlink{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{DMapName}; 
+45     \}
+46     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+47 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_ad9f476d5d4db6de2907dfa3d4d9de7e6_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4}{}\label{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Tile\+Type@{Tile\+Type}}
+\index{Tile\+Type@{Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Tile\+Type()}{TileType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} C\+Terrain\+Map\+::\+Tile\+Type (\begin{DoxyParamCaption}\item[{int}]{xindex,  }\item[{int}]{yindex }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file Terrain\+Map.\+h.
+
+
+\begin{DoxyCode}
+58                                                         \{
+59             \textcolor{keywordflow}{if}((-1 > xindex)||(-1 > yindex))\{
+60                 \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{ttNone};    
+61             \}
+62             \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size() <= yindex+1)\{
+63                 \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{ttNone};   
+64             \}
+65             \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[yindex+1].size() <= xindex+1)\{
+66                 \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{ttNone};   
+67             \}
+68             \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[yindex+1][xindex+1];
+69         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a3a7229412b3391835dd6036439e5c6c0}{}\label{classCTerrainMap_a3a7229412b3391835dd6036439e5c6c0} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Tile\+Type@{Tile\+Type}}
+\index{Tile\+Type@{Tile\+Type}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Tile\+Type()}{TileType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} C\+Terrain\+Map\+::\+Tile\+Type (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 70 of file Terrain\+Map.\+h.
+
+
+\begin{DoxyCode}
+70                                                       \{
+71             \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_a7e0e440467a09cb1c59e2bdbec01ccb4}{TileType}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}(), pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}());
+72         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a3a7229412b3391835dd6036439e5c6c0_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{}\label{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!Width@{Width}}
+\index{Width@{Width}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily int C\+Terrain\+Map\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 53 of file Terrain\+Map.\+cpp.
+
+
+\begin{DoxyCode}
+53                             \{
+54     \textcolor{keywordflow}{if}(\hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}.size())\{
+55         \textcolor{keywordflow}{return} \hyperlink{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{DMap}[0].size()-2;
+56     \}
+57     \textcolor{keywordflow}{return} 0;
+58 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCTerrainMap_a80d154ce478948b10473534a7bca13f6}{}\label{classCTerrainMap_a80d154ce478948b10473534a7bca13f6} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!D\+Map@{D\+Map}}
+\index{D\+Map@{D\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{D\+Map}{DMap}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4}{E\+Tile\+Type} $>$ $>$ C\+Terrain\+Map\+::\+D\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file Terrain\+Map.\+h.
+
+\hypertarget{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6}{}\label{classCTerrainMap_a9026e4a5f073885b9e9fc3b43e93caa6} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!D\+Map\+Name@{D\+Map\+Name}}
+\index{D\+Map\+Name@{D\+Map\+Name}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{D\+Map\+Name}{DMapName}}
+{\footnotesize\ttfamily std\+::string C\+Terrain\+Map\+::\+D\+Map\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Terrain\+Map.\+h.
+
+\hypertarget{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b}{}\label{classCTerrainMap_a79e2cf566ac9dfbaddd2c73ea256785b} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!D\+Player\+Count@{D\+Player\+Count}}
+\index{D\+Player\+Count@{D\+Player\+Count}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{D\+Player\+Count}{DPlayerCount}}
+{\footnotesize\ttfamily int C\+Terrain\+Map\+::\+D\+Player\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Terrain\+Map.\+h.
+
+\hypertarget{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282}{}\label{classCTerrainMap_a76db5fd05e22e0aea413f49175f9c282} 
+\index{C\+Terrain\+Map@{C\+Terrain\+Map}!D\+String\+Map@{D\+String\+Map}}
+\index{D\+String\+Map@{D\+String\+Map}!C\+Terrain\+Map@{C\+Terrain\+Map}}
+\subsubsection{\texorpdfstring{D\+String\+Map}{DStringMap}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ C\+Terrain\+Map\+::\+D\+String\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Terrain\+Map.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{TerrainMap_8h}{Terrain\+Map.\+h}\item 
+src/\hyperlink{TerrainMap_8cpp}{Terrain\+Map.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="CVisibilityMap::TileType" name="CVisibilityMap::TileType">
+<area shape="rect" id="node2" href="$classCVisibilityMap.html#a5ca9902ef0bc2714617719800e20aa19" title="CVisibilityMap::Update" alt="" coords="228,31,395,57"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="443,5,545,32"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="443,56,545,83"/>
+</map>

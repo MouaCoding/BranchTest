@@ -1,0 +1,1452 @@
+\hypertarget{classCPlayerData}{}\section{C\+Player\+Data Class Reference}
+\label{classCPlayerData}\index{C\+Player\+Data@{C\+Player\+Data}}
+
+
+{\ttfamily \#include $<$Game\+Model.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPlayerData_af60332b967ddb3044bd71376656bcdc0}{C\+Player\+Data} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ map, \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} color)
+\item 
+int \hyperlink{classCPlayerData_a91ef320747b0c6281c05a9284279e16a}{Game\+Cycle} () const
+\item 
+void \hyperlink{classCPlayerData_a6fbfd47b568e721df80644689f8dd172}{Increment\+Cycle} ()
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCPlayerData_a4f313db2728a8be2b24484515a2445df}{Color} () const
+\item 
+bool \hyperlink{classCPlayerData_ac68129067db822343e68b307de53e11c}{Is\+AI} () const
+\item 
+bool \hyperlink{classCPlayerData_a20d6aa66a3483ad16052b0afea928ec6}{Is\+AI} (bool isai)
+\item 
+bool \hyperlink{classCPlayerData_a46ba3f00069e6da5cf4a1203a7456e1d}{Is\+Alive} () const
+\item 
+int \hyperlink{classCPlayerData_afa5c728fc86335a9ca00b5121c0ec765}{Gold} () const
+\item 
+int \hyperlink{classCPlayerData_a73b2e6868bd85953604412904a20316a}{Lumber} () const
+\item 
+int \hyperlink{classCPlayerData_a4d99d876561ac76a9d4f7a3e2f7f3edb}{Increment\+Gold} (int gold)
+\item 
+int \hyperlink{classCPlayerData_ac072cd77c60b35920a278aaffcefd3fd}{Decrement\+Gold} (int gold)
+\item 
+int \hyperlink{classCPlayerData_a4115ca5ce5e6f10e64c0a310d5348c93}{Increment\+Lumber} (int lumber)
+\item 
+int \hyperlink{classCPlayerData_a0c79b0b958333fc52b1de5ec93c01ede}{Decrement\+Lumber} (int lumber)
+\item 
+int \hyperlink{classCPlayerData_a45b5ba15a17796acdbaca7eacc7532d0}{Food\+Consumption} () const
+\item 
+int \hyperlink{classCPlayerData_ae71ad19439d31ba0eb7f59809885ed6d}{Food\+Production} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ \hyperlink{classCPlayerData_af263bd5a4864d98570d5a8a3f7986cdd}{Visibility\+Map} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ \hyperlink{classCPlayerData_a9a54d695ff57c633dfb3a18c98408c54}{Player\+Map} () const
+\item 
+std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \hyperlink{classCPlayerData_a9715c8a64e26d669556b029901ec5ab5}{Assets} () const
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ $>$ $>$ \& \hyperlink{classCPlayerData_adbe01c300ec2d40267ca84c7529b9045}{Asset\+Types} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a4ef7c98c3b0f28354a2bccc2782b57ad}{Create\+Marker} (const \hyperlink{classCPosition}{C\+Position} \&pos, bool addtomap)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a4d203da2adbd6d00b0cd5b334bddba4f}{Create\+Asset} (const std\+::string \&assettypename)
+\item 
+void \hyperlink{classCPlayerData_a24f56e033f6d68ceba0f876d854201f0}{Delete\+Asset} (std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ asset)
+\item 
+bool \hyperlink{classCPlayerData_a21238056db09447e0ed054aafbd953c1}{Asset\+Requirements\+Met} (const std\+::string \&assettypename)
+\item 
+void \hyperlink{classCPlayerData_a3ac1393306e8a3f7c95d13ca01e429a7}{Update\+Visibility} ()
+\item 
+std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \hyperlink{classCPlayerData_afb3303a53687383e4101d4de37391d84}{Select\+Assets} (const \hyperlink{structSRectangle}{S\+Rectangle} \&selectarea, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} assettype, bool selectidentical=false)
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a1c926b101513f871ec85e34ac3c83ec4}{Select\+Asset} (const \hyperlink{classCPosition}{C\+Position} \&pos, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} assettype)
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a53c9e046c6f43fd83a0feb32b4fe999d}{Find\+Nearest\+Owned\+Asset} (const \hyperlink{classCPosition}{C\+Position} \&pos, const std\+::vector$<$ \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} $>$ assettypes)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a5f70ad16e9b4e8aa9edc6e8fc4136527}{Find\+Nearest\+Asset} (const \hyperlink{classCPosition}{C\+Position} \&pos, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} assettype)
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ \hyperlink{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69}{Find\+Nearest\+Enemy} (const \hyperlink{classCPosition}{C\+Position} \&pos, int range)
+\item 
+\hyperlink{classCPosition}{C\+Position} \hyperlink{classCPlayerData_ac43ee660aa07b2d9d96eb5285d50fab5}{Find\+Best\+Asset\+Placement} (const \hyperlink{classCPosition}{C\+Position} \&pos, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ builder, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} assettype, int buffer)
+\item 
+std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \hyperlink{classCPlayerData_a5bd2ebe2e3dc25669bb312226e087fd1}{Idle\+Assets} () const
+\item 
+int \hyperlink{classCPlayerData_a3fe55bd902f7a819c0689825d8ad3e4c}{Player\+Asset\+Count} (\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} type)
+\item 
+int \hyperlink{classCPlayerData_ac81c0899651bf3f9962b03ef0d7a2415}{Found\+Asset\+Count} (\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} type)
+\item 
+void \hyperlink{classCPlayerData_ae66fe7d594267990adf34f9286925efb}{Add\+Upgrade} (const std\+::string \&upgradename)
+\item 
+bool \hyperlink{classCPlayerData_abba8a81a8d4d8309e8cd68016ee1900b}{Has\+Upgrade} (\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type} upgrade) const
+\item 
+const std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$ \& \hyperlink{classCPlayerData_ab82e14be0012e6bedfa2035e1c95ae81}{Game\+Events} () const
+\item 
+void \hyperlink{classCPlayerData_a74cbe8bf72037ca113c9c40ae7bca5ec}{Clear\+Game\+Events} ()
+\item 
+void \hyperlink{classCPlayerData_a3f49383e8ba2fbba8e6193919f014413}{Add\+Game\+Event} (const \hyperlink{structSGameEvent}{S\+Game\+Event} \&event)
+\item 
+void \hyperlink{classCPlayerData_a058ba3a3acf824fe4707d5e8a5024806}{Append\+Game\+Events} (const std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$ \&events)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5}{D\+Is\+AI}
+\item 
+\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} \hyperlink{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{D\+Color}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ \hyperlink{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{D\+Visibility\+Map}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{D\+Actual\+Map}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{D\+Player\+Map}
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ $>$ $>$ \hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{D\+Asset\+Types}
+\item 
+std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{D\+Assets}
+\item 
+std\+::vector$<$ bool $>$ \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{D\+Upgrades}
+\item 
+std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$ \hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{D\+Game\+Events}
+\item 
+int \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{D\+Gold}
+\item 
+int \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{D\+Lumber}
+\item 
+int \hyperlink{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{D\+Game\+Cycle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 48 of file Game\+Model.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCPlayerData_af60332b967ddb3044bd71376656bcdc0}{}\label{classCPlayerData_af60332b967ddb3044bd71376656bcdc0} 
+\index{C\+Player\+Data@{C\+Player\+Data}!C\+Player\+Data@{C\+Player\+Data}}
+\index{C\+Player\+Data@{C\+Player\+Data}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{C\+Player\+Data()}{CPlayerData()}}
+{\footnotesize\ttfamily C\+Player\+Data\+::\+C\+Player\+Data (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$}]{map,  }\item[{\hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color}}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+34                                                                                    \{
+35     \hyperlink{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5}{DIsAI} = \textcolor{keyword}{true};
+36     \hyperlink{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{DGameCycle} = 0;
+37     \hyperlink{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{DColor} = color;
+38     \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap} = map;
+39     \hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{DAssetTypes} = \hyperlink{classCPlayerAssetType_a6dfbccbbed7fecec6b7e2c51ac22fe5a}{CPlayerAssetType::DuplicateRegistry}(color);
+40     \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap} = \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->CreateInitializeMap();
+41     \hyperlink{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{DVisibilityMap} = \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->CreateVisibilityMap();
+42     \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold} = 0;
+43     \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber} = 0;
+44     
+45     \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}.resize(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70}{actMax});
+46     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 0; Index < \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}.size(); Index++)\{
+47         \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}[Index] = \textcolor{keyword}{false};   
+48     \}
+49     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &ResourceInit : \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->ResourceInitializationList())\{
+50         \textcolor{keywordflow}{if}(ResourceInit.DColor == color)\{
+51             \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold} = ResourceInit.DGold;
+52             \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber} = ResourceInit.DLumber;
+53         \}
+54     \}
+55     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &AssetInit : \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->AssetInitializationList())\{
+56         \textcolor{keywordflow}{if}(AssetInit.DColor == color)\{
+57             \hyperlink{Debug_8h_aa5f00f5537c9760f6ae1782460748ab9}{PrintDebug}(\hyperlink{Debug_8h_a3a5f3fc09784650d8388cb854882f840}{DEBUG\_LOW}, \textcolor{stringliteral}{"Init %s %d (%d, %d)\(\backslash\)n"}, AssetInit.DType.c\_str(), 
+      AssetInit.DColor, AssetInit.DTilePosition.X(), AssetInit.DTilePosition.Y());
+58             std::shared\_ptr< CPlayerAsset > InitAsset = \hyperlink{classCPlayerData_a4d203da2adbd6d00b0cd5b334bddba4f}{CreateAsset}(AssetInit.DType);
+59             InitAsset->TilePosition(AssetInit.DTilePosition);
+60             \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine} == \hyperlink{classCPlayerAssetType_a42d55b6d7606e021c063fce3a14c56de}{CPlayerAssetType::NameToType}(AssetInit.
+      DType))\{
+61                 InitAsset->Gold(\hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold});
+62             \}
+63         \}
+64     \}
+65 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_af60332b967ddb3044bd71376656bcdc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCPlayerData_a3f49383e8ba2fbba8e6193919f014413}{}\label{classCPlayerData_a3f49383e8ba2fbba8e6193919f014413} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Add\+Game\+Event@{Add\+Game\+Event}}
+\index{Add\+Game\+Event@{Add\+Game\+Event}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Add\+Game\+Event()}{AddGameEvent()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Add\+Game\+Event (\begin{DoxyParamCaption}\item[{const \hyperlink{structSGameEvent}{S\+Game\+Event} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 154 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+154                                                   \{
+155             \hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{DGameEvents}.push\_back(event);  
+156         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_ae66fe7d594267990adf34f9286925efb}{}\label{classCPlayerData_ae66fe7d594267990adf34f9286925efb} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Add\+Upgrade@{Add\+Upgrade}}
+\index{Add\+Upgrade@{Add\+Upgrade}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Add\+Upgrade()}{AddUpgrade()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Add\+Upgrade (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{upgradename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 439 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+439                                                         \{
+440     \textcolor{keyword}{auto} Upgrade = \hyperlink{classCPlayerUpgrade_af47a08aba3a1a5b2cefacef24065a82e}{CPlayerUpgrade::FindUpgradeFromName}(upgradename);
+441     
+442     \textcolor{keywordflow}{if}(Upgrade)\{
+443         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} AssetType : Upgrade->AffectedAssets())\{
+444             std::string AssetName = \hyperlink{classCPlayerAssetType_a66ce89c35b74940e9fc947a1f4b9e770}{CPlayerAssetType::TypeToName}(AssetType);
+445             \textcolor{keyword}{auto} AssetIterator = \hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{DAssetTypes}->find(AssetName);
+446             
+447             \textcolor{keywordflow}{if}(AssetIterator != \hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{DAssetTypes}->end())\{
+448                 AssetIterator->second->AddUpgrade(Upgrade);
+449             \}
+450             
+451         \}
+452         \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}[\hyperlink{classCPlayerCapability_a920a696526e8a839f728192aea0ba1c5}{CPlayerCapability::NameToType}(upgradename)] = \textcolor{keyword}{true};
+453     \}
+454 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ae66fe7d594267990adf34f9286925efb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ae66fe7d594267990adf34f9286925efb_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a058ba3a3acf824fe4707d5e8a5024806}{}\label{classCPlayerData_a058ba3a3acf824fe4707d5e8a5024806} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Append\+Game\+Events@{Append\+Game\+Events}}
+\index{Append\+Game\+Events@{Append\+Game\+Events}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Append\+Game\+Events()}{AppendGameEvents()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Append\+Game\+Events (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$ \&}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 157 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+157                                                                     \{
+158             \hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{DGameEvents}.insert(\hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{DGameEvents}.end(), events.begin(), events.end());
+159         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a21238056db09447e0ed054aafbd953c1}{}\label{classCPlayerData_a21238056db09447e0ed054aafbd953c1} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Asset\+Requirements\+Met@{Asset\+Requirements\+Met}}
+\index{Asset\+Requirements\+Met@{Asset\+Requirements\+Met}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Asset\+Requirements\+Met()}{AssetRequirementsMet()}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+Asset\+Requirements\+Met (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{assettypename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+129                                                                     \{
+130     std::vector< int > AssetCount;
+131     
+132     AssetCount.resize(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca92fbf60b4e5c335160f915b6a1c17c05}{atMax});
+133     
+134     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+135         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+136             \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Asset->Action())\{
+137                 AssetCount[Asset->Type()]++;
+138             \}
+139         \}
+140     \}
+141     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Requirement : (*\hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{DAssetTypes})[assettypename]->AssetRequirements())\{
+142         \textcolor{keywordflow}{if}(0 == AssetCount[Requirement])\{
+143             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{atKeep} == Requirement)&&(AssetCount[\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{atCastle}]))\{
+144                 \textcolor{keywordflow}{continue};               
+145             \}
+146             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall} == Requirement)&&(AssetCount[\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{atKeep}]||AssetCount[atCastle]))\{
+147                 \textcolor{keywordflow}{continue};               
+148             \}
+149             \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+150         \}
+151     \}
+152     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+153 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a21238056db09447e0ed054aafbd953c1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a9715c8a64e26d669556b029901ec5ab5}{}\label{classCPlayerData_a9715c8a64e26d669556b029901ec5ab5} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Assets@{Assets}}
+\index{Assets@{Assets}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Assets()}{Assets()}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ C\+Player\+Data\+::\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 120 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+120                                                              \{
+121             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets};  
+122         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_adbe01c300ec2d40267ca84c7529b9045}{}\label{classCPlayerData_adbe01c300ec2d40267ca84c7529b9045} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Asset\+Types@{Asset\+Types}}
+\index{Asset\+Types@{Asset\+Types}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Asset\+Types()}{AssetTypes()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ $>$ $>$\& C\+Player\+Data\+::\+Asset\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 123 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+123                                                                                                        \{
+124             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{DAssetTypes};
+125         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_adbe01c300ec2d40267ca84c7529b9045_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a74cbe8bf72037ca113c9c40ae7bca5ec}{}\label{classCPlayerData_a74cbe8bf72037ca113c9c40ae7bca5ec} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Clear\+Game\+Events@{Clear\+Game\+Events}}
+\index{Clear\+Game\+Events@{Clear\+Game\+Events}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Clear\+Game\+Events()}{ClearGameEvents()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Clear\+Game\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 151 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+151                               \{
+152             \hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{DGameEvents}.clear();  
+153         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a74cbe8bf72037ca113c9c40ae7bca5ec_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a4f313db2728a8be2b24484515a2445df}{}\label{classCPlayerData_a4f313db2728a8be2b24484515a2445df} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Color@{Color}}
+\index{Color@{Color}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Player\+Data\+::\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+74                                   \{
+75             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{DColor};
+76         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a4d203da2adbd6d00b0cd5b334bddba4f}{}\label{classCPlayerData_a4d203da2adbd6d00b0cd5b334bddba4f} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Create\+Asset@{Create\+Asset}}
+\index{Create\+Asset@{Create\+Asset}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Create\+Asset()}{CreateAsset()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Create\+Asset (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{assettypename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+108                                                                                     \{
+109     std::shared\_ptr< CPlayerAsset > CreatedAsset = (*DAssetTypes)[assettypename]->Construct();
+110     
+111     CreatedAsset->CreationCycle(\hyperlink{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{DGameCycle});
+112     \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets}.push\_back(CreatedAsset);
+113     \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->AddAsset(CreatedAsset);
+114     \textcolor{keywordflow}{return} CreatedAsset;
+115 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a4d203da2adbd6d00b0cd5b334bddba4f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a4ef7c98c3b0f28354a2bccc2782b57ad}{}\label{classCPlayerData_a4ef7c98c3b0f28354a2bccc2782b57ad} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Create\+Marker@{Create\+Marker}}
+\index{Create\+Marker@{Create\+Marker}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Create\+Marker()}{CreateMarker()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Create\+Marker (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{bool}]{addtomap }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+95                                                                                           \{
+96     std::shared\_ptr< CPlayerAsset > NewMarker = (*DAssetTypes)[\textcolor{stringliteral}{"None"}]->Construct();
+97     \hyperlink{classCPosition}{CPosition} TilePosition;
+98     
+99     TilePosition.\hyperlink{classCPosition_ae302aa21792de64c97de29e2cbbfeb94}{SetToTile}(pos);
+100     NewMarker->TilePosition(TilePosition);
+101     \textcolor{keywordflow}{if}(addtomap)\{
+102         \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->AddAsset(NewMarker);
+103     \}
+104     
+105     \textcolor{keywordflow}{return} NewMarker;
+106 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a4ef7c98c3b0f28354a2bccc2782b57ad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a4ef7c98c3b0f28354a2bccc2782b57ad_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_ac072cd77c60b35920a278aaffcefd3fd}{}\label{classCPlayerData_ac072cd77c60b35920a278aaffcefd3fd} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Decrement\+Gold@{Decrement\+Gold}}
+\index{Decrement\+Gold@{Decrement\+Gold}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Decrement\+Gold()}{DecrementGold()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Decrement\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 99 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+99                                    \{
+100             \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold} -= gold;
+101             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold};   
+102         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a0c79b0b958333fc52b1de5ec93c01ede}{}\label{classCPlayerData_a0c79b0b958333fc52b1de5ec93c01ede} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Decrement\+Lumber@{Decrement\+Lumber}}
+\index{Decrement\+Lumber@{Decrement\+Lumber}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Decrement\+Lumber()}{DecrementLumber()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Decrement\+Lumber (\begin{DoxyParamCaption}\item[{int}]{lumber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 107 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+107                                        \{
+108             \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber} -= lumber;
+109             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber};  
+110         \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a0c79b0b958333fc52b1de5ec93c01ede_cgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a24f56e033f6d68ceba0f876d854201f0}{}\label{classCPlayerData_a24f56e033f6d68ceba0f876d854201f0} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Delete\+Asset@{Delete\+Asset}}
+\index{Delete\+Asset@{Delete\+Asset}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Delete\+Asset()}{DeleteAsset()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Delete\+Asset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{asset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 117 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+117                                                                 \{
+118     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets}.begin();
+119     \textcolor{keywordflow}{while}(Iterator != \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets}.end())\{
+120         \textcolor{keywordflow}{if}(Iterator->lock() == asset)\{
+121             \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets}.erase(Iterator);
+122             \textcolor{keywordflow}{break};
+123         \}
+124         Iterator++;
+125     \}
+126     \hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap}->RemoveAsset(asset);
+127 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a24f56e033f6d68ceba0f876d854201f0_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_ac43ee660aa07b2d9d96eb5285d50fab5}{}\label{classCPlayerData_ac43ee660aa07b2d9d96eb5285d50fab5} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Find\+Best\+Asset\+Placement@{Find\+Best\+Asset\+Placement}}
+\index{Find\+Best\+Asset\+Placement@{Find\+Best\+Asset\+Placement}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Find\+Best\+Asset\+Placement()}{FindBestAssetPlacement()}}
+{\footnotesize\ttfamily \hyperlink{classCPosition}{C\+Position} C\+Player\+Data\+::\+Find\+Best\+Asset\+Placement (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$}]{builder,  }\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{assettype,  }\item[{int}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 312 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+312                                                                                                            
+                                     \{
+313     \textcolor{keyword}{auto} AssetType = (*DAssetTypes)[\hyperlink{classCPlayerAssetType_a66ce89c35b74940e9fc947a1f4b9e770}{CPlayerAssetType::TypeToName}(assettype)];
+314     \textcolor{keywordtype}{int} PlacementSize = AssetType->Size() + 2 * buffer;
+315     \textcolor{keywordtype}{int} MaxDistance = \hyperlink{GameModel_8cpp_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Width(), \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Height()); 
+316     
+317     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Distance = 1; Distance < MaxDistance; Distance++)\{
+318         \hyperlink{classCPosition}{CPosition} BestPosition;
+319         \textcolor{keywordtype}{int} BestDistance = -1;
+320         \textcolor{keywordtype}{int} LeftX = pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() - Distance;
+321         \textcolor{keywordtype}{int} TopY = pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() - Distance;
+322         \textcolor{keywordtype}{int} RightX = pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + Distance;
+323         \textcolor{keywordtype}{int} BottomY = pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + Distance;
+324         \textcolor{keywordtype}{bool} LeftValid = \textcolor{keyword}{true};
+325         \textcolor{keywordtype}{bool} RightValid = \textcolor{keyword}{true};
+326         \textcolor{keywordtype}{bool} TopValid = \textcolor{keyword}{true};
+327         \textcolor{keywordtype}{bool} BottomValid = \textcolor{keyword}{true};
+328         
+329         \textcolor{keywordflow}{if}(0 > LeftX)\{
+330             LeftValid = \textcolor{keyword}{false};
+331             LeftX = 0;
+332         \}
+333         \textcolor{keywordflow}{if}(0 > TopY)\{
+334             TopValid = \textcolor{keyword}{false};
+335             TopY = 0;
+336         \}
+337         \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Width() <= RightX)\{
+338             RightValid = \textcolor{keyword}{false};
+339             RightX = \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Width() - 1;
+340         \}
+341         \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Height() <= BottomY)\{
+342             BottomValid = \textcolor{keyword}{false};
+343             BottomY = \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Height() - 1;
+344         \}
+345         \textcolor{keywordflow}{if}(TopValid)\{
+346            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = LeftX; Index <= RightX; Index++)\{
+347                 \hyperlink{classCPosition}{CPosition} TempPosition(Index, TopY);
+348                 \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->CanPlaceAsset(TempPosition, PlacementSize, builder))\{
+349                     \textcolor{keywordtype}{int} CurrentDistance = builder->TilePosition().DistanceSquared(TempPosition);
+350                     \textcolor{keywordflow}{if}((-1 == BestDistance)||(CurrentDistance < BestDistance))\{
+351                         BestDistance = CurrentDistance;
+352                         BestPosition = TempPosition;
+353                     \}
+354                 \}
+355             \}
+356         \}
+357         \textcolor{keywordflow}{if}(RightValid)\{
+358            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = TopY; Index <= BottomY; Index++)\{
+359                 \hyperlink{classCPosition}{CPosition} TempPosition(RightX, Index);
+360                 \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->CanPlaceAsset(TempPosition, PlacementSize, builder))\{
+361                     \textcolor{keywordtype}{int} CurrentDistance = builder->TilePosition().DistanceSquared(TempPosition);
+362                     \textcolor{keywordflow}{if}((-1 == BestDistance)||(CurrentDistance < BestDistance))\{
+363                         BestDistance = CurrentDistance;
+364                         BestPosition = TempPosition;
+365                     \}
+366                 \}
+367             \}
+368         \}
+369         \textcolor{keywordflow}{if}(BottomValid)\{
+370            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = LeftX; Index <= RightX; Index++)\{
+371                 \hyperlink{classCPosition}{CPosition} TempPosition(Index, BottomY);
+372                 \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->CanPlaceAsset(TempPosition, PlacementSize, builder))\{
+373                     \textcolor{keywordtype}{int} CurrentDistance = builder->TilePosition().DistanceSquared(TempPosition);
+374                     \textcolor{keywordflow}{if}((-1 == BestDistance)||(CurrentDistance < BestDistance))\{
+375                         BestDistance = CurrentDistance;
+376                         BestPosition = TempPosition;
+377                     \}
+378                 \}
+379             \}
+380         \}
+381         \textcolor{keywordflow}{if}(LeftValid)\{
+382            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = TopY; Index <= BottomY; Index++)\{
+383                 \hyperlink{classCPosition}{CPosition} TempPosition(LeftX, Index);
+384                 \textcolor{keywordflow}{if}(\hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->CanPlaceAsset(TempPosition, PlacementSize, builder))\{
+385                     \textcolor{keywordtype}{int} CurrentDistance = builder->TilePosition().DistanceSquared(TempPosition);
+386                     \textcolor{keywordflow}{if}((-1 == BestDistance)||(CurrentDistance < BestDistance))\{
+387                         BestDistance = CurrentDistance;
+388                         BestPosition = TempPosition;
+389                     \}
+390                 \}
+391             \}
+392         \}
+393         \textcolor{keywordflow}{if}(-1 != BestDistance)\{
+394             \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(BestPosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + buffer, BestPosition.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + buffer); 
+395         \}
+396     \}
+397     
+398     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(-1, -1);
+399 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ac43ee660aa07b2d9d96eb5285d50fab5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ac43ee660aa07b2d9d96eb5285d50fab5_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a5f70ad16e9b4e8aa9edc6e8fc4136527}{}\label{classCPlayerData_a5f70ad16e9b4e8aa9edc6e8fc4136527} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Find\+Nearest\+Asset@{Find\+Nearest\+Asset}}
+\index{Find\+Nearest\+Asset@{Find\+Nearest\+Asset}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Find\+Nearest\+Asset()}{FindNearestAsset()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Find\+Nearest\+Asset (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{assettype }\end{DoxyParamCaption})}
+
+
+
+Definition at line 264 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+264                                                                                                      \{
+265     std::shared\_ptr< CPlayerAsset > BestAsset;
+266     \textcolor{keywordtype}{int} BestDistanceSquared = -1;
+267 
+268     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Asset : \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Assets())\{
+269         \textcolor{keywordflow}{if}(Asset->Type() == assettype)\{
+270             \textcolor{keywordtype}{int} CurrentDistance = Asset->Position().DistanceSquared(pos);
+271             
+272             \textcolor{keywordflow}{if}((-1 == BestDistanceSquared)||(CurrentDistance < BestDistanceSquared))\{
+273                 BestDistanceSquared = CurrentDistance;
+274                 BestAsset = Asset;
+275             \}
+276         \}
+277     \}
+278     \textcolor{keywordflow}{return} BestAsset;
+279 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a5f70ad16e9b4e8aa9edc6e8fc4136527_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69}{}\label{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Find\+Nearest\+Enemy@{Find\+Nearest\+Enemy}}
+\index{Find\+Nearest\+Enemy@{Find\+Nearest\+Enemy}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Find\+Nearest\+Enemy()}{FindNearestEnemy()}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Find\+Nearest\+Enemy (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{int}]{range }\end{DoxyParamCaption})}
+
+
+
+Definition at line 281 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+281                                                                                         \{
+282     std::shared\_ptr< CPlayerAsset > BestAsset;
+283     \textcolor{keywordtype}{int} BestDistanceSquared = -1;
+284     
+285     \textcolor{comment}{// Assume tile width == tile height}
+286     \textcolor{keywordflow}{if}(0 < range)\{
+287         range = \hyperlink{GameModel_8cpp_afd5c111a1369dc53d1b1230506e99f7c}{RangeToDistanceSquared}(range);
+288     \}
+289     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Asset : \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Assets())\{
+290         \textcolor{keywordflow}{if}((Asset->Color() != \hyperlink{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{DColor})&&(Asset->Color() != \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone})&&(Asset->Alive()))\{
+291             \textcolor{keyword}{auto} Command = Asset->CurrentCommand();
+292             \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4}{aaCapability} == Command.DAction)\{
+293                 \textcolor{keywordflow}{if}((Command.DAssetTarget)&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} == Command.DAssetTarget->Action()))\{
+294                     \textcolor{keywordflow}{continue};   
+295                 \}
+296             \}
+297             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ae80ac4dde60023e0a1794e994db7000a}{aaConveyGold} != Command.DAction)&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7b0954302f27f46b3fdf6fddd530d154}{aaConveyLumber} != Command.
+      DAction)&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold} != Command.DAction))\{
+298                 \textcolor{keywordtype}{int} CurrentDistance = Asset->ClosestPosition(pos).DistanceSquared( pos );\textcolor{comment}{//
+      Asset->Position().DistanceSquared(pos);}
+299                 
+300                 \textcolor{keywordflow}{if}((0 > range)||(CurrentDistance <= range))\{
+301                     \textcolor{keywordflow}{if}((-1 == BestDistanceSquared)||(CurrentDistance < BestDistanceSquared))\{
+302                         BestDistanceSquared = CurrentDistance;
+303                         BestAsset = Asset;
+304                     \}
+305                 \}
+306             \}
+307         \}
+308     \}
+309     \textcolor{keywordflow}{return} BestAsset;
+310 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a53c9e046c6f43fd83a0feb32b4fe999d}{}\label{classCPlayerData_a53c9e046c6f43fd83a0feb32b4fe999d} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Find\+Nearest\+Owned\+Asset@{Find\+Nearest\+Owned\+Asset}}
+\index{Find\+Nearest\+Owned\+Asset@{Find\+Nearest\+Owned\+Asset}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Find\+Nearest\+Owned\+Asset()}{FindNearestOwnedAsset()}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Find\+Nearest\+Owned\+Asset (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{const std\+::vector$<$ \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type} $>$}]{assettypes }\end{DoxyParamCaption})}
+
+
+
+Definition at line 242 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+242                                                                                                            
+                       \{
+243     std::shared\_ptr< CPlayerAsset > BestAsset;
+244     \textcolor{keywordtype}{int} BestDistanceSquared = -1;
+245 
+246     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+247         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+248             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &AssetType : assettypes)\{
+249                 \textcolor{keywordflow}{if}((Asset->Type() == AssetType)&&((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Asset->Action())||(
+      \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{atKeep} == AssetType)||(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{atCastle} == AssetType)))\{
+250                     \textcolor{keywordtype}{int} CurrentDistance = Asset->Position().DistanceSquared(pos);
+251                     
+252                     \textcolor{keywordflow}{if}((-1 == BestDistanceSquared)||(CurrentDistance < BestDistanceSquared))\{
+253                         BestDistanceSquared = CurrentDistance;
+254                         BestAsset = Asset;
+255                     \}
+256                     \textcolor{keywordflow}{break};
+257                 \}
+258             \}
+259         \}
+260     \}
+261     \textcolor{keywordflow}{return} BestAsset;
+262 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a53c9e046c6f43fd83a0feb32b4fe999d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a45b5ba15a17796acdbaca7eacc7532d0}{}\label{classCPlayerData_a45b5ba15a17796acdbaca7eacc7532d0} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Food\+Consumption@{Food\+Consumption}}
+\index{Food\+Consumption@{Food\+Consumption}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Food\+Consumption()}{FoodConsumption()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Food\+Consumption (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 67 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+67                                       \{
+68     \textcolor{keywordtype}{int} TotalConsumption = 0;
+69     
+70     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+71         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+72             \textcolor{keywordtype}{int} AssetConsumption = Asset->FoodConsumption();
+73             \textcolor{keywordflow}{if}(0 < AssetConsumption)\{
+74                 TotalConsumption += AssetConsumption;    
+75             \}
+76         \}
+77     \}
+78     \textcolor{keywordflow}{return} TotalConsumption;
+79 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a45b5ba15a17796acdbaca7eacc7532d0_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_ae71ad19439d31ba0eb7f59809885ed6d}{}\label{classCPlayerData_ae71ad19439d31ba0eb7f59809885ed6d} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Food\+Production@{Food\+Production}}
+\index{Food\+Production@{Food\+Production}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Food\+Production()}{FoodProduction()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Food\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 81 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+81                                      \{
+82     \textcolor{keywordtype}{int} TotalProduction = 0;
+83     
+84     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+85         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+86             \textcolor{keywordtype}{int} AssetConsumption = Asset->FoodConsumption();
+87             \textcolor{keywordflow}{if}((0 > AssetConsumption)&&((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Asset->Action())||(!Asset->
+      CurrentCommand().DAssetTarget)))\{
+88                 TotalProduction += -AssetConsumption;
+89             \}
+90         \}
+91     \}
+92     \textcolor{keywordflow}{return} TotalProduction;
+93 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ae71ad19439d31ba0eb7f59809885ed6d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_ac81c0899651bf3f9962b03ef0d7a2415}{}\label{classCPlayerData_ac81c0899651bf3f9962b03ef0d7a2415} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Found\+Asset\+Count@{Found\+Asset\+Count}}
+\index{Found\+Asset\+Count@{Found\+Asset\+Count}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Found\+Asset\+Count()}{FoundAssetCount()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Found\+Asset\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 413 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+413                                                \{
+414     \textcolor{keywordtype}{int} Count = 0;
+415     
+416     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Asset : \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Assets())\{
+417         \textcolor{keywordflow}{if}(type == Asset->Type())\{
+418             Count++;
+419         \}
+420     \}
+421     
+422     \textcolor{keywordflow}{return} Count;
+423 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_ac81c0899651bf3f9962b03ef0d7a2415_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a91ef320747b0c6281c05a9284279e16a}{}\label{classCPlayerData_a91ef320747b0c6281c05a9284279e16a} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Game\+Cycle@{Game\+Cycle}}
+\index{Game\+Cycle@{Game\+Cycle}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Game\+Cycle()}{GameCycle()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Game\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+66                              \{
+67             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{DGameCycle};   
+68         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_ab82e14be0012e6bedfa2035e1c95ae81}{}\label{classCPlayerData_ab82e14be0012e6bedfa2035e1c95ae81} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Game\+Events@{Game\+Events}}
+\index{Game\+Events@{Game\+Events}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Game\+Events()}{GameEvents()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$\& C\+Player\+Data\+::\+Game\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 148 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+148                                                          \{
+149             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{DGameEvents};
+150         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_afa5c728fc86335a9ca00b5121c0ec765}{}\label{classCPlayerData_afa5c728fc86335a9ca00b5121c0ec765} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Gold@{Gold}}
+\index{Gold@{Gold}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Gold()}{Gold()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Gold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 89 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+89                         \{
+90             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold};   
+91         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_afa5c728fc86335a9ca00b5121c0ec765_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_abba8a81a8d4d8309e8cd68016ee1900b}{}\label{classCPlayerData_abba8a81a8d4d8309e8cd68016ee1900b} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Has\+Upgrade@{Has\+Upgrade}}
+\index{Has\+Upgrade@{Has\+Upgrade}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Has\+Upgrade()}{HasUpgrade()}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+Has\+Upgrade (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{E\+Asset\+Capability\+Type}}]{upgrade }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 141 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+141                                                            \{
+142             \textcolor{keywordflow}{if}((0 > upgrade)||(\hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}.size() <= upgrade))\{
+143                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+144             \}
+145             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{DUpgrades}[upgrade];
+146         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a5bd2ebe2e3dc25669bb312226e087fd1}{}\label{classCPlayerData_a5bd2ebe2e3dc25669bb312226e087fd1} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Idle\+Assets@{Idle\+Assets}}
+\index{Idle\+Assets@{Idle\+Assets}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Idle\+Assets()}{IdleAssets()}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ C\+Player\+Data\+::\+Idle\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 425 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+425                                                                     \{
+426     std::list< std::weak\_ptr< CPlayerAsset > > AssetList;
+427     
+428     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+429         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+430             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action())&&(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} != Asset->Type()))\{
+431                 AssetList.push\_back(Asset);
+432             \}
+433         \}
+434     \}
+435     
+436     \textcolor{keywordflow}{return} AssetList;
+437 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a5bd2ebe2e3dc25669bb312226e087fd1_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a6fbfd47b568e721df80644689f8dd172}{}\label{classCPlayerData_a6fbfd47b568e721df80644689f8dd172} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Increment\+Cycle@{Increment\+Cycle}}
+\index{Increment\+Cycle@{Increment\+Cycle}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Increment\+Cycle()}{IncrementCycle()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Increment\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 70 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+70                              \{
+71             \hyperlink{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{DGameCycle}++;
+72         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a4d99d876561ac76a9d4f7a3e2f7f3edb}{}\label{classCPlayerData_a4d99d876561ac76a9d4f7a3e2f7f3edb} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Increment\+Gold@{Increment\+Gold}}
+\index{Increment\+Gold@{Increment\+Gold}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Increment\+Gold()}{IncrementGold()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Increment\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 95 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+95                                    \{
+96             \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold} += gold;
+97             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{DGold};   
+98         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a4115ca5ce5e6f10e64c0a310d5348c93}{}\label{classCPlayerData_a4115ca5ce5e6f10e64c0a310d5348c93} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Increment\+Lumber@{Increment\+Lumber}}
+\index{Increment\+Lumber@{Increment\+Lumber}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Increment\+Lumber()}{IncrementLumber()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Increment\+Lumber (\begin{DoxyParamCaption}\item[{int}]{lumber }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 103 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+103                                        \{
+104             \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber} += lumber;
+105             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber};  
+106         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_ac68129067db822343e68b307de53e11c}{}\label{classCPlayerData_ac68129067db822343e68b307de53e11c} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Is\+AI@{Is\+AI}}
+\index{Is\+AI@{Is\+AI}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Is\+A\+I()}{IsAI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+Is\+AI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 78 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+78                          \{
+79             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5}{DIsAI};
+80         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a20d6aa66a3483ad16052b0afea928ec6}{}\label{classCPlayerData_a20d6aa66a3483ad16052b0afea928ec6} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Is\+AI@{Is\+AI}}
+\index{Is\+AI@{Is\+AI}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Is\+A\+I()}{IsAI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+Is\+AI (\begin{DoxyParamCaption}\item[{bool}]{isai }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 82 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+82                             \{
+83             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5}{DIsAI} = isai;
+84         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a46ba3f00069e6da5cf4a1203a7456e1d}{}\label{classCPlayerData_a46ba3f00069e6da5cf4a1203a7456e1d} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Is\+Alive@{Is\+Alive}}
+\index{Is\+Alive@{Is\+Alive}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Is\+Alive()}{IsAlive()}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 86 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+86                             \{
+87             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets}.size();
+88         \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a46ba3f00069e6da5cf4a1203a7456e1d_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a73b2e6868bd85953604412904a20316a}{}\label{classCPlayerData_a73b2e6868bd85953604412904a20316a} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Lumber@{Lumber}}
+\index{Lumber@{Lumber}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Lumber()}{Lumber()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Lumber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 92 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+92                           \{
+93             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{DLumber};  
+94         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a3fe55bd902f7a819c0689825d8ad3e4c}{}\label{classCPlayerData_a3fe55bd902f7a819c0689825d8ad3e4c} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Player\+Asset\+Count@{Player\+Asset\+Count}}
+\index{Player\+Asset\+Count@{Player\+Asset\+Count}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Player\+Asset\+Count()}{PlayerAssetCount()}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+Player\+Asset\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 401 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+401                                                 \{
+402     \textcolor{keywordtype}{int} Count = 0;
+403     
+404     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} Asset : \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Assets())\{
+405         \textcolor{keywordflow}{if}((Asset->Color() == \hyperlink{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{DColor})&&(type == Asset->Type()))\{
+406             Count++;
+407         \}
+408     \}
+409     
+410     \textcolor{keywordflow}{return} Count;
+411 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a3fe55bd902f7a819c0689825d8ad3e4c_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a9a54d695ff57c633dfb3a18c98408c54}{}\label{classCPlayerData_a9a54d695ff57c633dfb3a18c98408c54} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Player\+Map@{Player\+Map}}
+\index{Player\+Map@{Player\+Map}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Player\+Map()}{PlayerMap()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ C\+Player\+Data\+::\+Player\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+117                                                              \{
+118             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap};   
+119         \};
+\end{DoxyCode}
+\hypertarget{classCPlayerData_a1c926b101513f871ec85e34ac3c83ec4}{}\label{classCPlayerData_a1c926b101513f871ec85e34ac3c83ec4} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Select\+Asset@{Select\+Asset}}
+\index{Select\+Asset@{Select\+Asset}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Select\+Asset()}{SelectAsset()}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ C\+Player\+Data\+::\+Select\+Asset (\begin{DoxyParamCaption}\item[{const \hyperlink{classCPosition}{C\+Position} \&}]{pos,  }\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{assettype }\end{DoxyParamCaption})}
+
+
+
+Definition at line 221 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+221                                                                                               \{
+222     std::shared\_ptr< CPlayerAsset > BestAsset;
+223     \textcolor{keywordtype}{int} BestDistanceSquared = -1;
+224     
+225     \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} != assettype)\{
+226         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+227             \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+228                 \textcolor{keywordflow}{if}(Asset->Type() == assettype)\{
+229                     \textcolor{keywordtype}{int} CurrentDistance = Asset->Position().DistanceSquared(pos);
+230                     
+231                     \textcolor{keywordflow}{if}((-1 == BestDistanceSquared)||(CurrentDistance < BestDistanceSquared))\{
+232                         BestDistanceSquared = CurrentDistance;
+233                         BestAsset = Asset;
+234                     \}
+235                 \}
+236             \}
+237         \}
+238     \}
+239     \textcolor{keywordflow}{return} BestAsset;
+240 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a1c926b101513f871ec85e34ac3c83ec4_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_afb3303a53687383e4101d4de37391d84}{}\label{classCPlayerData_afb3303a53687383e4101d4de37391d84} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Select\+Assets@{Select\+Assets}}
+\index{Select\+Assets@{Select\+Assets}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Select\+Assets()}{SelectAssets()}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ C\+Player\+Data\+::\+Select\+Assets (\begin{DoxyParamCaption}\item[{const \hyperlink{structSRectangle}{S\+Rectangle} \&}]{selectarea,  }\item[{\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fec}{E\+Asset\+Type}}]{assettype,  }\item[{bool}]{selectidentical = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 174 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+174                                                                                                            
+                                   \{
+175     std::list< std::weak\_ptr< CPlayerAsset > > ReturnList;
+176     
+177     \textcolor{keywordflow}{if}((!selectarea.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth})||(!selectarea.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight}))\{
+178         std::weak\_ptr< CPlayerAsset > BestAsset = \hyperlink{classCPlayerData_a1c926b101513f871ec85e34ac3c83ec4}{SelectAsset}(
+      \hyperlink{classCPosition}{CPosition}(selectarea.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition}, selectarea.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition}), assettype);
+179         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} LockedAsset = BestAsset.lock())\{
+180             ReturnList.push\_back(BestAsset);
+181             \textcolor{keywordflow}{if}(selectidentical && LockedAsset->Speed())\{
+182                 \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : \hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets})\{
+183                     \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+184                         \textcolor{keywordflow}{if}((LockedAsset != Asset)&&(Asset->Type() == assettype))\{
+185                             ReturnList.push\_back(Asset);   
+186                         \}
+187                     \}
+188                 \}
+189             \}
+190         \}
+191     \}
+192     \textcolor{keywordflow}{else}\{
+193         \textcolor{keywordtype}{bool} AnyMovable = \textcolor{keyword}{false};
+194         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &WeakAsset : DAssets)\{
+195             \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+196                 \textcolor{keywordflow}{if}((selectarea.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} <= Asset->PositionX())&&(Asset->PositionX() < 
+      selectarea.\hyperlink{structSRectangle_abcbddb03b3ee416cc33109833b5f075c}{DXPosition} + selectarea.\hyperlink{structSRectangle_a4150898b3f7d90f6e4b0d44bf1ae3bd2}{DWidth})&&(selectarea.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} <= Asset->PositionY())&&
+      (Asset->PositionY() < selectarea.\hyperlink{structSRectangle_a120aa0a90033bc6e07c36c151a3bbc71}{DYPosition} + selectarea.\hyperlink{structSRectangle_a84ea3c2314c43cab6186170662188899}{DHeight}))\{
+197                     \textcolor{keywordflow}{if}(AnyMovable)\{
+198                         \textcolor{keywordflow}{if}(Asset->Speed())\{
+199                             ReturnList.push\_back(Asset);
+200                         \}
+201                     \}
+202                     \textcolor{keywordflow}{else}\{
+203                         \textcolor{keywordflow}{if}(Asset->Speed())\{
+204                             ReturnList.clear();
+205                             ReturnList.push\_back(Asset);
+206                             AnyMovable = \textcolor{keyword}{true};
+207                         \}
+208                         \textcolor{keywordflow}{else}\{
+209                             \textcolor{keywordflow}{if}(ReturnList.empty())\{
+210                                 ReturnList.push\_back(Asset);
+211                             \}
+212                         \}
+213                     \}
+214                 \}
+215             \}
+216         \}
+217     \}
+218     \textcolor{keywordflow}{return} ReturnList;
+219 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_afb3303a53687383e4101d4de37391d84_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_afb3303a53687383e4101d4de37391d84_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_a3ac1393306e8a3f7c95d13ca01e429a7}{}\label{classCPlayerData_a3ac1393306e8a3f7c95d13ca01e429a7} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Update\+Visibility@{Update\+Visibility}}
+\index{Update\+Visibility@{Update\+Visibility}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Update\+Visibility()}{UpdateVisibility()}}
+{\footnotesize\ttfamily void C\+Player\+Data\+::\+Update\+Visibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 155 of file Game\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+155                                   \{
+156     std::list< std::shared\_ptr< CPlayerAsset > > RemoveList;
+157     
+158     \hyperlink{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{DVisibilityMap}->Update(\hyperlink{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{DAssets});
+159     \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->UpdateMap(*\hyperlink{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{DVisibilityMap}, *\hyperlink{classCPlayerData_a943801106af1d7ad52abd73d32552186}{DActualMap});
+160     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Asset : \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->Assets())\{
+161         \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone} == Asset->Type())&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action()))\{
+162             Asset->IncrementStep();
+163             \textcolor{keywordflow}{if}(\hyperlink{classCPlayerAsset_a0aff85b9552967a42f4f3f42cb59c19f}{CPlayerAsset::UpdateFrequency}() < Asset->Step() * 2)\{
+164                 RemoveList.push\_back(Asset);   
+165             \}
+166         \}
+167     \}
+168     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} &Asset : RemoveList)\{
+169         \hyperlink{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{DPlayerMap}->RemoveAsset(Asset);     
+170     \}
+171     
+172 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a3ac1393306e8a3f7c95d13ca01e429a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCPlayerData_a3ac1393306e8a3f7c95d13ca01e429a7_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{classCPlayerData_af263bd5a4864d98570d5a8a3f7986cdd}{}\label{classCPlayerData_af263bd5a4864d98570d5a8a3f7986cdd} 
+\index{C\+Player\+Data@{C\+Player\+Data}!Visibility\+Map@{Visibility\+Map}}
+\index{Visibility\+Map@{Visibility\+Map}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{Visibility\+Map()}{VisibilityMap()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ C\+Player\+Data\+::\+Visibility\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 114 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+114                                                              \{
+115             \textcolor{keywordflow}{return} \hyperlink{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{DVisibilityMap};  
+116         \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classCPlayerData_a943801106af1d7ad52abd73d32552186}{}\label{classCPlayerData_a943801106af1d7ad52abd73d32552186} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Actual\+Map@{D\+Actual\+Map}}
+\index{D\+Actual\+Map@{D\+Actual\+Map}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Actual\+Map}{DActualMap}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ C\+Player\+Data\+::\+D\+Actual\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_a1d7dd355facf52db6242e3554373906c}{}\label{classCPlayerData_a1d7dd355facf52db6242e3554373906c} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Assets@{D\+Assets}}
+\index{D\+Assets@{D\+Assets}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Assets}{DAssets}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{classCPlayerAsset}{C\+Player\+Asset} $>$ $>$ C\+Player\+Data\+::\+D\+Assets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_ad922f283c60b1c885dac955815ae2b05}{}\label{classCPlayerData_ad922f283c60b1c885dac955815ae2b05} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Asset\+Types@{D\+Asset\+Types}}
+\index{D\+Asset\+Types@{D\+Asset\+Types}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Asset\+Types}{DAssetTypes}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{classCPlayerAssetType}{C\+Player\+Asset\+Type} $>$ $>$ $>$ C\+Player\+Data\+::\+D\+Asset\+Types\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 55 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085}{}\label{classCPlayerData_a65d69aaa09c8fc0f7ddfa5e858313085} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Color@{D\+Color}}
+\index{D\+Color@{D\+Color}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Color}{DColor}}
+{\footnotesize\ttfamily \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602f}{E\+Player\+Color} C\+Player\+Data\+::\+D\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 51 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106}{}\label{classCPlayerData_ae92ca06a63a01681dd9f3ddc17c0e106} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Game\+Cycle@{D\+Game\+Cycle}}
+\index{D\+Game\+Cycle@{D\+Game\+Cycle}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Game\+Cycle}{DGameCycle}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+D\+Game\+Cycle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 61 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0}{}\label{classCPlayerData_a9a7af43e88055d6d1a384a8817a655a0} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Game\+Events@{D\+Game\+Events}}
+\index{D\+Game\+Events@{D\+Game\+Events}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Game\+Events}{DGameEvents}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{structSGameEvent}{S\+Game\+Event} $>$ C\+Player\+Data\+::\+D\+Game\+Events\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 58 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3}{}\label{classCPlayerData_afa66ff31262c9b287ae8c13259aae6f3} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Gold@{D\+Gold}}
+\index{D\+Gold@{D\+Gold}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Gold}{DGold}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+D\+Gold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 59 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5}{}\label{classCPlayerData_ad3fcb8740d4e37b4654c01c8c595e6d5} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Is\+AI@{D\+Is\+AI}}
+\index{D\+Is\+AI@{D\+Is\+AI}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Is\+AI}{DIsAI}}
+{\footnotesize\ttfamily bool C\+Player\+Data\+::\+D\+Is\+AI\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4}{}\label{classCPlayerData_adf3bf2fa49b5c8a4fb9a478d95f688c4} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Lumber@{D\+Lumber}}
+\index{D\+Lumber@{D\+Lumber}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Lumber}{DLumber}}
+{\footnotesize\ttfamily int C\+Player\+Data\+::\+D\+Lumber\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 60 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c}{}\label{classCPlayerData_a452163191cd4603e1e38dd8d4bb9691c} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Player\+Map@{D\+Player\+Map}}
+\index{D\+Player\+Map@{D\+Player\+Map}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Player\+Map}{DPlayerMap}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCAssetDecoratedMap}{C\+Asset\+Decorated\+Map} $>$ C\+Player\+Data\+::\+D\+Player\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a}{}\label{classCPlayerData_ae7cb90c31ec46b65ba88485368a4b96a} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Upgrades@{D\+Upgrades}}
+\index{D\+Upgrades@{D\+Upgrades}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Upgrades}{DUpgrades}}
+{\footnotesize\ttfamily std\+::vector$<$ bool $>$ C\+Player\+Data\+::\+D\+Upgrades\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Game\+Model.\+h.
+
+\hypertarget{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78}{}\label{classCPlayerData_a804ea65e7ec7c90b2e335414d106cc78} 
+\index{C\+Player\+Data@{C\+Player\+Data}!D\+Visibility\+Map@{D\+Visibility\+Map}}
+\index{D\+Visibility\+Map@{D\+Visibility\+Map}!C\+Player\+Data@{C\+Player\+Data}}
+\subsubsection{\texorpdfstring{D\+Visibility\+Map}{DVisibilityMap}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \hyperlink{classCVisibilityMap}{C\+Visibility\+Map} $>$ C\+Player\+Data\+::\+D\+Visibility\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file Game\+Model.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{GameModel_8h}{Game\+Model.\+h}\item 
+src/\hyperlink{GameModel_8cpp}{Game\+Model.\+cpp}\end{DoxyCompactItemize}

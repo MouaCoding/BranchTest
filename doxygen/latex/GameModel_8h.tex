@@ -1,0 +1,165 @@
+\hypertarget{GameModel_8h}{}\section{include/\+Game\+Model.h File Reference}
+\label{GameModel_8h}\index{include/\+Game\+Model.\+h@{include/\+Game\+Model.\+h}}
+{\ttfamily \#include \char`\"{}Random\+Number\+Generator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Asset\+Decorated\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Router\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+Data\+Source.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Rectangle.\+h\char`\"{}}\newline
+Include dependency graph for Game\+Model.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GameModel_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GameModel_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSGameEvent}{S\+Game\+Event}
+\item 
+class \hyperlink{classCPlayerData}{C\+Player\+Data}
+\item 
+class \hyperlink{classCGameModel}{C\+Game\+Model}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type} $\ast$ \hyperlink{GameModel_8h_a0aec07cb2740920673821027e8379822}{E\+Event\+Type\+Ref}
+\item 
+typedef struct \hyperlink{structSGameEvent}{S\+Game\+Event} $\ast$ \hyperlink{GameModel_8h_ac3ec91d5eb5665f9cbbc4f8addcf6908}{S\+Game\+Event\+Ref}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type} \{ \newline
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0d7c0b563737edc999eebe0a1bcc5717}{et\+None} = 0, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587}{et\+Work\+Complete}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da38393c2ecd9404ab15f2f9bb5aab0497}{et\+Selection}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da9b68fc38f3ca4002cd7a3ec3cc07a612}{et\+Acknowledge}, 
+\newline
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56}{et\+Ready}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da09bf160787410891592fa1e9db2f5235}{et\+Death}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da45f0b42495c144eda41b21a49f89e571}{et\+Attacked}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae891b2dee1677bb6a343c0ca8c01fa0e}{et\+Missle\+Fire}, 
+\newline
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0a45453f61b6c27d3e65b3a2f1441cf1}{et\+Missle\+Hit}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da1e80f7847f187eaf3f313eab1807c66c}{et\+Harvest}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da8d8f64940a6b0bbc74f7e75a0e9e6e70}{et\+Melee\+Hit}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da6b069d43a732ecd2eec5fbcebf3e41ee}{et\+Place\+Action}, 
+\newline
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dafe7284f9af34794514e5dbfe974e3296}{et\+Button\+Tick}, 
+\hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da485dfb05d2e133015d5796ebd93a2028}{et\+Max}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{GameModel_8h_a0aec07cb2740920673821027e8379822}{}\label{GameModel_8h_a0aec07cb2740920673821027e8379822} 
+\index{Game\+Model.\+h@{Game\+Model.\+h}!E\+Event\+Type\+Ref@{E\+Event\+Type\+Ref}}
+\index{E\+Event\+Type\+Ref@{E\+Event\+Type\+Ref}!Game\+Model.\+h@{Game\+Model.\+h}}
+\subsubsection{\texorpdfstring{E\+Event\+Type\+Ref}{EEventTypeRef}}
+{\footnotesize\ttfamily typedef  enum \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type} $\ast$ \hyperlink{GameModel_8h_a0aec07cb2740920673821027e8379822}{E\+Event\+Type\+Ref}}
+
+\hypertarget{GameModel_8h_ac3ec91d5eb5665f9cbbc4f8addcf6908}{}\label{GameModel_8h_ac3ec91d5eb5665f9cbbc4f8addcf6908} 
+\index{Game\+Model.\+h@{Game\+Model.\+h}!S\+Game\+Event\+Ref@{S\+Game\+Event\+Ref}}
+\index{S\+Game\+Event\+Ref@{S\+Game\+Event\+Ref}!Game\+Model.\+h@{Game\+Model.\+h}}
+\subsubsection{\texorpdfstring{S\+Game\+Event\+Ref}{SGameEventRef}}
+{\footnotesize\ttfamily typedef  struct \hyperlink{structSGameEvent}{S\+Game\+Event} $\ast$ \hyperlink{GameModel_8h_ac3ec91d5eb5665f9cbbc4f8addcf6908}{S\+Game\+Event\+Ref}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d} 
+\index{Game\+Model.\+h@{Game\+Model.\+h}!E\+Event\+Type@{E\+Event\+Type}}
+\index{E\+Event\+Type@{E\+Event\+Type}!Game\+Model.\+h@{Game\+Model.\+h}}
+\subsubsection{\texorpdfstring{E\+Event\+Type}{EEventType}}
+{\footnotesize\ttfamily enum \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+None@{et\+None}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+None@{et\+None}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0d7c0b563737edc999eebe0a1bcc5717}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0d7c0b563737edc999eebe0a1bcc5717} 
+et\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Work\+Complete@{et\+Work\+Complete}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Work\+Complete@{et\+Work\+Complete}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587} 
+et\+Work\+Complete&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Selection@{et\+Selection}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Selection@{et\+Selection}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da38393c2ecd9404ab15f2f9bb5aab0497}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da38393c2ecd9404ab15f2f9bb5aab0497} 
+et\+Selection&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Acknowledge@{et\+Acknowledge}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Acknowledge@{et\+Acknowledge}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da9b68fc38f3ca4002cd7a3ec3cc07a612}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da9b68fc38f3ca4002cd7a3ec3cc07a612} 
+et\+Acknowledge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Ready@{et\+Ready}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Ready@{et\+Ready}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56} 
+et\+Ready&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Death@{et\+Death}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Death@{et\+Death}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da09bf160787410891592fa1e9db2f5235}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da09bf160787410891592fa1e9db2f5235} 
+et\+Death&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Attacked@{et\+Attacked}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Attacked@{et\+Attacked}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da45f0b42495c144eda41b21a49f89e571}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da45f0b42495c144eda41b21a49f89e571} 
+et\+Attacked&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Missle\+Fire@{et\+Missle\+Fire}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Missle\+Fire@{et\+Missle\+Fire}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae891b2dee1677bb6a343c0ca8c01fa0e}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae891b2dee1677bb6a343c0ca8c01fa0e} 
+et\+Missle\+Fire&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Missle\+Hit@{et\+Missle\+Hit}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Missle\+Hit@{et\+Missle\+Hit}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0a45453f61b6c27d3e65b3a2f1441cf1}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0a45453f61b6c27d3e65b3a2f1441cf1} 
+et\+Missle\+Hit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Harvest@{et\+Harvest}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Harvest@{et\+Harvest}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da1e80f7847f187eaf3f313eab1807c66c}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da1e80f7847f187eaf3f313eab1807c66c} 
+et\+Harvest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Melee\+Hit@{et\+Melee\+Hit}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Melee\+Hit@{et\+Melee\+Hit}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da8d8f64940a6b0bbc74f7e75a0e9e6e70}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da8d8f64940a6b0bbc74f7e75a0e9e6e70} 
+et\+Melee\+Hit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Place\+Action@{et\+Place\+Action}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Place\+Action@{et\+Place\+Action}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da6b069d43a732ecd2eec5fbcebf3e41ee}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da6b069d43a732ecd2eec5fbcebf3e41ee} 
+et\+Place\+Action&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Button\+Tick@{et\+Button\+Tick}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Button\+Tick@{et\+Button\+Tick}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dafe7284f9af34794514e5dbfe974e3296}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dafe7284f9af34794514e5dbfe974e3296} 
+et\+Button\+Tick&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{et\+Max@{et\+Max}!Game\+Model.\+h@{Game\+Model.\+h}}\index{Game\+Model.\+h@{Game\+Model.\+h}!et\+Max@{et\+Max}}}\hypertarget{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da485dfb05d2e133015d5796ebd93a2028}{}\label{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da485dfb05d2e133015d5796ebd93a2028} 
+et\+Max&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 26 of file Game\+Model.\+h.
+
+
+\begin{DoxyCode}
+26             \{
+27     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0d7c0b563737edc999eebe0a1bcc5717}{etNone} = 0,
+28     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0106cf4227412990140c1d773244b587}{etWorkComplete},
+29     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da38393c2ecd9404ab15f2f9bb5aab0497}{etSelection},
+30     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da9b68fc38f3ca4002cd7a3ec3cc07a612}{etAcknowledge},
+31     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae5bff97fe4f9000e83c5dbfc1c23ca56}{etReady},
+32     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da09bf160787410891592fa1e9db2f5235}{etDeath},
+33     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da45f0b42495c144eda41b21a49f89e571}{etAttacked},
+34     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dae891b2dee1677bb6a343c0ca8c01fa0e}{etMissleFire},
+35     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da0a45453f61b6c27d3e65b3a2f1441cf1}{etMissleHit},
+36     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da1e80f7847f187eaf3f313eab1807c66c}{etHarvest},
+37     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da8d8f64940a6b0bbc74f7e75a0e9e6e70}{etMeleeHit},
+38     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da6b069d43a732ecd2eec5fbcebf3e41ee}{etPlaceAction},
+39     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656dafe7284f9af34794514e5dbfe974e3296}{etButtonTick},
+40     \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656da485dfb05d2e133015d5796ebd93a2028}{etMax}
+41 \} \hyperlink{GameModel_8h_abfcf510bafec7c6429906a6ecaac656d}{EEventType}, *\hyperlink{GameModel_8h_a0aec07cb2740920673821027e8379822}{EEventTypeRef};
+\end{DoxyCode}
