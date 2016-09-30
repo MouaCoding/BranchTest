@@ -1,7 +1,7 @@
 *~
+*.a
 *.o
 *.out
 *.swp
-bin/*
-!bin/data
+bin/thegame
 obj/
