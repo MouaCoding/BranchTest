@@ -25,6 +25,11 @@
 #include <list>
 #include <sstream>
 #include <dirent.h>
+extern "C" {
+#include "lua.h"
+#include "lualib.h"
+#include "lauxlib.h"
+}
 #include "AssetDecoratedMap.h"
 #include "AssetRenderer.h"
 #include "Bevel.h"
@@ -3049,6 +3054,12 @@ int CApplicationData::Init(int argc, char *argv[]){
 int main(int argc, char *argv[]){
     CApplicationData MainData;
     int ReturnValue;    
+
+    // Test Lua by running a sample script.
+    lua_State *L = luaL_newstate();
+    luaL_openlibs(L);
+    luaL_dofile(L, "test.lua");
+    lua_close(L);
     
     OpenDebug("Debug.out", DEBUG_LEVEL);
     

@@ -12,6 +12,7 @@ INC_DIR = ./include
 SRC_DIR = ./src
 OBJ_DIR = ./obj
 BIN_DIR = ./bin
+LUA_DIR = ./lua/src
 
 DEBUG_MODE=TRUE
 
@@ -25,9 +26,10 @@ else
 CFLAGS   += -O3
 endif
 
-INCLUDE  += -I $(INC_DIR)
+INCLUDE  += -I $(INC_DIR) -I $(LUA_DIR)
 CFLAGS   +=  -Wall `pkg-config --cflags $(PKGS)`
-LDFLAGS  +=`pkg-config --libs $(PKGS)` -lpng -lportaudio 
+# -ldl is needed for Linux
+LDFLAGS  +=`pkg-config --libs $(PKGS)` -lpng -lportaudio -ldl
 #LDFLAGS += -lgdk_imlib
 CPPFLAGS += -std=c++11 
 GAME_NAME = thegame
@@ -74,21 +76,61 @@ GAME_OBJS = $(OBJ_DIR)/main.o                   \
     $(OBJ_DIR)/UnitDescriptionRenderer.o        \
     $(OBJ_DIR)/UnitUpgradeCapabilities.o        \
     $(OBJ_DIR)/ViewportRenderer.o               \
-    $(OBJ_DIR)/VisibilityMap.o
+    $(OBJ_DIR)/VisibilityMap.o                  \
+
+# XXX: Are any of these unnecessary?
+LUA_OBJS = $(LUA_DIR)/lapi.o                    \
+    $(LUA_DIR)/lauxlib.o                        \
+    $(LUA_DIR)/lbaselib.o                       \
+    $(LUA_DIR)/lbitlib.o                        \
+    $(LUA_DIR)/lcode.o                          \
+    $(LUA_DIR)/lcorolib.o                       \
+    $(LUA_DIR)/lctype.o                         \
+    $(LUA_DIR)/ldblib.o                         \
+    $(LUA_DIR)/ldebug.o                         \
+    $(LUA_DIR)/ldo.o                            \
+    $(LUA_DIR)/ldump.o                          \
+    $(LUA_DIR)/lfunc.o                          \
+    $(LUA_DIR)/lgc.o                            \
+    $(LUA_DIR)/linit.o                          \
+    $(LUA_DIR)/liolib.o                         \
+    $(LUA_DIR)/llex.o                           \
+    $(LUA_DIR)/lmathlib.o                       \
+    $(LUA_DIR)/lmem.o                           \
+    $(LUA_DIR)/loadlib.o                        \
+    $(LUA_DIR)/lobject.o                        \
+    $(LUA_DIR)/lopcodes.o                       \
+    $(LUA_DIR)/loslib.o                         \
+    $(LUA_DIR)/lparser.o                        \
+    $(LUA_DIR)/lstate.o                         \
+    $(LUA_DIR)/lstring.o                        \
+    $(LUA_DIR)/lstrlib.o                        \
+    $(LUA_DIR)/ltable.o                         \
+    $(LUA_DIR)/ltablib.o                        \
+    $(LUA_DIR)/ltm.o                            \
+    $(LUA_DIR)/lundump.o                        \
+    $(LUA_DIR)/lutf8lib.o                       \
+    $(LUA_DIR)/lvm.o                            \
+    $(LUA_DIR)/lzio.o                           \
 
 all: directories $(BIN_DIR)/$(GAME_NAME)
 
-$(BIN_DIR)/$(GAME_NAME): $(GAME_OBJS)
-	$(CXX) $(GAME_OBJS) -o $(BIN_DIR)/$(GAME_NAME) $(CFLAGS) $(CPPFLAGS) $(DEFINES) $(LDFLAGS) 
+$(BIN_DIR)/$(GAME_NAME): $(GAME_OBJS) $(LUA_OBJS)
+	$(CXX) $(GAME_OBJS) $(LUA_OBJS) -o $(BIN_DIR)/$(GAME_NAME) $(CFLAGS) $(CPPFLAGS) $(DEFINES) $(LDFLAGS) 
 	
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(CFLAGS) $(CPPFLAGS) $(DEFINES) $(INCLUDE) -c $< -o $@
-	
+
+# Call Makefile in Lua source directory to make library
+$(LUA_DIR)/%.o: $(LUA_DIR)/%.c
+	$(MAKE) -C $(LUA_DIR) a SYSCFLAGS="-DLUA_USE_LINUX" SYSLIBS="-Wl,-E -ldl -lreadline"
+
 .PHONY: directories
 directories:
 	mkdir -p $(OBJ_DIR)
 	
 clean::
-	-rm $(GAME_OBJS) $(INC_DIR)/*.*~ $(SRC_DIR)/*.*~
+	-rm -f $(GAME_OBJS) $(INC_DIR)/*.*~ $(SRC_DIR)/*.*~
+	-$(MAKE) -C $(LUA_DIR) clean
 	
 .PHONY: clean
