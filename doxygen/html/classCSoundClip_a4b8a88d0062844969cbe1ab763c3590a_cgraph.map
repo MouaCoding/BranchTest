@@ -1,8 +1,0 @@
-<map id="CSoundClip::Load" name="CSoundClip::Load">
-<area shape="rect" id="node2" href="$classCSFVirtualIODataSource.html#a9c15fbbe734fdfc2af17ca8f424b7e43" title="CSFVirtualIODataSource\l::SFVirtualIO" alt="" coords="192,136,371,177"/>
-<area shape="rect" id="node3" href="$classCSFVirtualIODataSource.html#a94ee0d9f4703661ca7f2cad8cf294690" title="CSFVirtualIODataSource\l::GetFileLength" alt="" coords="419,5,597,47"/>
-<area shape="rect" id="node4" href="$classCSFVirtualIODataSource.html#a04735e135ffc05dd53fce944e772fcfc" title="CSFVirtualIODataSource\l::Seek" alt="" coords="419,71,597,112"/>
-<area shape="rect" id="node5" href="$classCSFVirtualIODataSource.html#a40021962590f0911d8af1020397fbba1" title="CSFVirtualIODataSource\l::Read" alt="" coords="419,136,597,177"/>
-<area shape="rect" id="node6" href="$classCSFVirtualIODataSource.html#ac1d38c4c9d8ba3e0a2affd7dd72283ee" title="CSFVirtualIODataSource\l::Write" alt="" coords="419,201,597,243"/>
-<area shape="rect" id="node7" href="$classCSFVirtualIODataSource.html#aae8e2b59f9753ed1f8baca1561b15962" title="CSFVirtualIODataSource\l::Tell" alt="" coords="419,267,597,308"/>
-</map>

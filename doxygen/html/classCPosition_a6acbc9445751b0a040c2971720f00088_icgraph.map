@@ -1,6 +1,0 @@
-<map id="CPosition::TileOctant" name="CPosition::TileOctant">
-<area shape="rect" id="node2" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="443,23,605,50"/>
-<area shape="rect" id="node4" href="$classCPlayerAsset.html#a4c8ef6c0049b48045c2ba95d398dbc05" title="CPlayerAsset::MoveStep" alt="" coords="212,23,395,50"/>
-<area shape="rect" id="node5" href="$classCPosition.html#a65124e3543c2d2e284e5eb517cd7f842" title="CPosition::DirectionTo" alt="" coords="218,74,389,101"/>
-<area shape="rect" id="node3" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="653,23,840,50"/>
-</map>

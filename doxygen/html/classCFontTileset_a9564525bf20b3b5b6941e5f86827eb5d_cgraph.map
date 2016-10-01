@@ -1,6 +1,0 @@
-<map id="CFontTileset::LoadFont" name="CFontTileset::LoadFont">
-<area shape="rect" id="node2" href="$classCGraphicTileset.html#a7d47754f26f03958be28a064f54eef1d" title="CGraphicTileset::LoadTileset" alt="" coords="229,56,436,83"/>
-<area shape="rect" id="node3" href="$classCLineDataSource.html#a569f5a9732d73ac8813c0ba4860e2e66" title="CLineDataSource::Read" alt="" coords="499,5,678,32"/>
-<area shape="rect" id="node5" href="$classCTokenizer.html#a7477f6849a3d0a5154879d8622e4012c" title="CTokenizer::Tokenize" alt="" coords="507,107,670,133"/>
-<area shape="rect" id="node4" href="$classCGraphicLoader.html#ac7778dec4fd0ea51674f0b23f3029edf" title="CGraphicLoader::LoadPixbuf" alt="" coords="484,56,693,83"/>
-</map>

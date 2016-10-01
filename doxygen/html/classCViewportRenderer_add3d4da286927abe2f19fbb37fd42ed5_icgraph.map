@@ -1,6 +1,0 @@
-<map id="CViewportRenderer::ViewportY" name="CViewportRenderer::ViewportY">
-<area shape="rect" id="node2" href="$classCViewportRenderer.html#a12842df851be0f115a735cec994d863e" title="CViewportRenderer::\lCenterViewport" alt="" coords="212,5,371,47"/>
-<area shape="rect" id="node4" href="$classCViewportRenderer.html#ad4aa68d96923dbea1bfd9ae3f23a3132" title="CViewportRenderer::\lPanSouth" alt="" coords="212,71,371,112"/>
-<area shape="rect" id="node3" href="$classCViewportRenderer.html#a55bdef4acd6335ac15f5017ad82111b3" title="CViewportRenderer::\lLastViewportHeight" alt="" coords="419,5,577,47"/>
-<area shape="rect" id="node5" href="$classCViewportRenderer.html#a2c23b54725686c6219c8765e48351d72" title="CViewportRenderer::\lDetailedPosition" alt="" coords="419,71,577,112"/>
-</map>

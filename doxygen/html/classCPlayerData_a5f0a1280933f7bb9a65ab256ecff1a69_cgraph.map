@@ -1,4 +1,0 @@
-<map id="CPlayerData::FindNearestEnemy" name="CPlayerData::FindNearestEnemy">
-<area shape="rect" id="node2" href="$GameModel_8cpp.html#afd5c111a1369dc53d1b1230506e99f7c" title="RangeToDistanceSquared" alt="" coords="244,13,435,39"/>
-<area shape="rect" id="node3" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="483,13,636,39"/>
-</map>

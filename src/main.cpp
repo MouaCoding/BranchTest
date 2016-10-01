@@ -77,6 +77,9 @@ extern "C" {
     #define MAX(a, b)               ((a) > (b) ? (a) : (b))
 #endif
 
+// TODO: REMOVE
+std::string GLuaMsgTest = "";
+
 typedef struct{
     int DXIndex;
     int DYIndex;
@@ -1324,7 +1327,7 @@ void CApplicationData::RenderGameMode(){
     gdk_draw_pixmap(DResourcePixmap, DDrawingContext, DWorkingBufferPixmap, DViewportXOffset, 0, 0, 0, ResourceWidth, ResourceHeight);
     DResourceRenderer->DrawResources(DResourcePixmap, DDrawingContext);
     gdk_draw_pixmap(DWorkingBufferPixmap, DDrawingContext, DResourcePixmap, 0, 0, DViewportXOffset, 0, -1, -1);
-    
+ 
     DOuterBevel->DrawBevel(DWorkingBufferPixmap, DUnitDescriptionXOffset, DUnitDescriptionYOffset, DescriptionWidth, DescriptionHeight);
     gdk_draw_pixmap(DUnitDescriptionPixmap, DDrawingContext, DWorkingBufferPixmap, DUnitDescriptionXOffset, DUnitDescriptionYOffset, 0, 0, DescriptionWidth, DescriptionHeight);
     DUnitDescriptionRenderer->DrawUnitDescription(DUnitDescriptionPixmap, DSelectedPlayerAssets[DPlayerColor]);
@@ -2415,7 +2418,8 @@ void CApplicationData::LoadGameMap(int index){
     DSoundEventRenderer = std::make_shared< CSoundEventRenderer > (DSoundLibraryMixer, DGameModel->Player(DPlayerColor));
     DMenuButtonRenderer = std::make_shared< CButtonRenderer > (DButtonColorTileset, DInnerBevel, DOuterBevel, DFonts[CUnitDescriptionRenderer::fsMedium]);
     
-    DMenuButtonRenderer->Text("Menu");
+    // TODO: Change back to "Menu"
+    DMenuButtonRenderer->Text(GLuaMsgTest);
     DMenuButtonRenderer->ButtonColor(DPlayerColor);
     
     GdkGeometry Geometry; 
@@ -3059,8 +3063,13 @@ int main(int argc, char *argv[]){
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
     luaL_dofile(L, "test.lua");
+    lua_getglobal(L, "message");
+    std::string LuaMessageTest = lua_tostring(L, -1);
+    lua_pop(L,1);
     lua_close(L);
     
+    GLuaMsgTest = LuaMessageTest;
+
     OpenDebug("Debug.out", DEBUG_LEVEL);
     
     ReturnValue = MainData.Init(argc, argv);

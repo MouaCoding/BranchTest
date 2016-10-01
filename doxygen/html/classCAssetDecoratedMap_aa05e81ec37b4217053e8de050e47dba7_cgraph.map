@@ -1,5 +1,0 @@
-<map id="CAssetDecoratedMap::CreateVisibilityMap" name="CAssetDecoratedMap::CreateVisibilityMap">
-<area shape="rect" id="node2" href="$classCTerrainMap.html#a34cb754aa9b26e85a73377159f2527d7" title="CTerrainMap::Width" alt="" coords="245,5,396,32"/>
-<area shape="rect" id="node3" href="$classCTerrainMap.html#ae5e4bf6507e0e3e9ac0322b43eed8a7a" title="CTerrainMap::Height" alt="" coords="243,56,398,83"/>
-<area shape="rect" id="node4" href="$classCPlayerAssetType.html#a1c1648ef0fdd2d112508c2ef9b7b70d1" title="CPlayerAssetType::MaxSight" alt="" coords="216,107,425,133"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="RangeToDistanceSquared" name="RangeToDistanceSquared">
-<area shape="rect" id="node2" href="$classCPlayerData.html#a5f0a1280933f7bb9a65ab256ecff1a69" title="CPlayerData::FindNearest\lEnemy" alt="" coords="244,5,435,47"/>
-<area shape="rect" id="node4" href="$classCGameModel.html#a699325d41d7ff27bda47bfb3048cfd8f" title="CGameModel::Timestep" alt="" coords="250,71,429,98"/>
-<area shape="rect" id="node3" href="$classCPlayerData.html#adbe01c300ec2d40267ca84c7529b9045" title="CPlayerData::AssetTypes" alt="" coords="483,13,672,39"/>
-</map>

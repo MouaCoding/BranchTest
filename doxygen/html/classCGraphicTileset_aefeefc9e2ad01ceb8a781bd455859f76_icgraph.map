@@ -1,4 +1,0 @@
-<map id="CGraphicTileset::ClearTile" name="CGraphicTileset::ClearTile">
-<area shape="rect" id="node2" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="503,5,701,32"/>
-<area shape="rect" id="node3" href="$classCGraphicTileset.html#a78db70086b4cd1085fd3b5d0d0dc5fdd" title="CGraphicTileset::DuplicateTile" alt="" coords="240,31,455,57"/>
-</map>

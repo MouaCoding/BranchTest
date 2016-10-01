@@ -1,8 +1,0 @@
-<map id="CPlayerCapabilityUnitUpgrade::~CPlayerCapabilityUnitUpgrade" name="CPlayerCapabilityUnitUpgrade::~CPlayerCapabilityUnitUpgrade">
-<area shape="rect" id="node2" href="$classCPlayerCapabilityUnitUpgrade.html#ad01fc5df598efea4063ac2bbf0ba34e9" title="CPlayerCapabilityUnitUpgrade\l::CanInitiate" alt="" coords="559,5,774,47"/>
-<area shape="rect" id="node4" href="$classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="288,57,503,99"/>
-<area shape="rect" id="node5" href="$classCPlayerCapabilityUnitUpgrade.html#a8cc6fee17dd178fd798e36c3d5301e9d" title="CPlayerCapabilityUnitUpgrade\l::ApplyCapability" alt="" coords="288,123,503,164"/>
-<area shape="rect" id="node3" href="$classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="831,35,1048,76"/>
-<area shape="rect" id="node6" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="590,123,743,164"/>
-<area shape="rect" id="node7" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="551,189,783,215"/>
-</map>

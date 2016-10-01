@@ -1,6 +1,0 @@
-<map id="CPosition::ClosestPosition" name="CPosition::ClosestPosition">
-<area shape="rect" id="node2" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="527,25,689,51"/>
-<area shape="rect" id="node4" href="$classCPlayerAsset.html#a67e700ce77122894c02da584dd652767" title="CPlayerAsset::ClosestPosition" alt="" coords="254,25,473,51"/>
-<area shape="rect" id="node5" href="$classCPosition.html#a2295901e4c35cfc81304f9a217e34ac7" title="CPosition::AdjacentTileDirection" alt="" coords="248,75,479,102"/>
-<area shape="rect" id="node3" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="737,25,924,51"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="CSoundLibraryMixer::PlayTone" name="CSoundLibraryMixer::PlayTone">
-<area shape="rect" id="node2" href="$classCSoundLibraryMixer.html#a03221f151dfe72381da5d0d0539bab94" title="CSoundLibraryMixer\l::SampleRate" alt="" coords="205,39,357,80"/>
-<area shape="rect" id="node3" href="$classCSoundLibraryMixer.html#a0492c587cb62cd8945880a7de3dad490" title="CSoundLibraryMixer\l::ClipDurationMS" alt="" coords="405,5,557,47"/>
-<area shape="rect" id="node4" href="$classCSoundLibraryMixer.html#a9753684f44863e3c7cc4d319370cda1d" title="CSoundLibraryMixer\l::LoadLibrary" alt="" coords="405,71,557,112"/>
-</map>

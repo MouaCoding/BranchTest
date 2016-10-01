@@ -1,7 +1,0 @@
-<map id="CPath::RelativePath" name="CPath::RelativePath">
-<area shape="rect" id="node2" href="$classCPath.html#af0213a2ea0de0498ded236137e759922" title="CPath::SimplifyPath" alt="" coords="405,5,556,32"/>
-<area shape="rect" id="node4" href="$classCPath.html#a5161b834e754b217ddead2437eaaa223" title="CPath::CurrentPath" alt="" coords="208,81,357,108"/>
-<area shape="rect" id="node6" href="$classCPath.html#aa52dcb50c943a8abc8883db5ec43a45e" title="CPath::Simplify" alt="" coords="222,31,343,57"/>
-<area shape="rect" id="node3" href="$classCPath.html#a613d8d4c4b72dba9fc8b6e487f583d7d" title="CPath::IsAbsolute" alt="" coords="604,5,743,32"/>
-<area shape="rect" id="node5" href="$classCPath.html#a26b6e34c8019d440136848f809c13897" title="CPath::CPath" alt="" coords="425,81,536,108"/>
-</map>

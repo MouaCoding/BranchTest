@@ -1,8 +1,0 @@
-<map id="include/SoundClip.h" name="include/SoundClip.h">
-<area shape="rect" id="node2" href="$SoundLibraryMixer_8h.html" title="include/SoundLibraryMixer.h" alt="" coords="103,80,307,107"/>
-<area shape="rect" id="node7" href="$SoundClip_8cpp.html" title="src/SoundClip.cpp" alt="" coords="332,80,468,107"/>
-<area shape="rect" id="node3" href="$SoundEventRenderer_8h.html" title="include/SoundEventRenderer.h" alt="" coords="94,155,317,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,229,109,256"/>
-<area shape="rect" id="node6" href="$SoundLibraryMixer_8cpp.html" title="src/SoundLibraryMixer.cpp" alt="" coords="341,155,534,181"/>
-<area shape="rect" id="node5" href="$SoundEventRenderer_8cpp.html" title="src/SoundEventRenderer.cpp" alt="" coords="133,229,344,256"/>
-</map>

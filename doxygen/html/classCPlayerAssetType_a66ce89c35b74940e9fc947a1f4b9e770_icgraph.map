@@ -1,7 +1,0 @@
-<map id="CPlayerAssetType::TypeToName" name="CPlayerAssetType::TypeToName">
-<area shape="rect" id="node2" href="$classCPlayerData.html#ac43ee660aa07b2d9d96eb5285d50fab5" title="CPlayerData::FindBestAsset\lPlacement" alt="" coords="291,5,497,47"/>
-<area shape="rect" id="node4" href="$classCPlayerData.html#ae66fe7d594267990adf34f9286925efb" title="CPlayerData::AddUpgrade" alt="" coords="297,71,491,98"/>
-<area shape="rect" id="node5" href="$classCSoundEventRenderer.html#a2a1c105a120bebf386b772a06c2a053a" title="CSoundEventRenderer\l::CSoundEventRenderer" alt="" coords="304,123,484,164"/>
-<area shape="rect" id="node6" href="$classCUnitDescriptionRenderer.html#a129cfc5d3942ebc37b9ca51530bf4daa" title="CUnitDescriptionRenderer\l::DrawUnitDescription" alt="" coords="299,188,489,229"/>
-<area shape="rect" id="node3" href="$classCPlayerData.html#adbe01c300ec2d40267ca84c7529b9045" title="CPlayerData::AssetTypes" alt="" coords="545,42,735,69"/>
-</map>

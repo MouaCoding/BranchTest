@@ -1,6 +1,0 @@
-<map id="CPlayerCapabilityMove::~CPlayerCapabilityMove" name="CPlayerCapabilityMove::~CPlayerCapabilityMove">
-<area shape="rect" id="node2" href="$classCPlayerCapabilityMove.html#aef25bc0d224e993c46f5cd4cd6b8b7c8" title="CPlayerCapabilityMove\l::CanInitiate" alt="" coords="244,5,415,47"/>
-<area shape="rect" id="node3" href="$classCPlayerCapabilityMove.html#a76cbb0fa4051961c00e3169d11d76568" title="CPlayerCapabilityMove\l::CanApply" alt="" coords="244,71,415,112"/>
-<area shape="rect" id="node4" href="$classCPlayerCapabilityMove.html#ade3f4e72612cbf2ad73a6c2e6aa843df" title="CPlayerCapabilityMove\l::ApplyCapability" alt="" coords="244,136,415,177"/>
-<area shape="rect" id="node5" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="463,136,616,177"/>
-</map>

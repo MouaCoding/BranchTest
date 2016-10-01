@@ -1,8 +1,0 @@
-<map id="include/MapRenderer.h" name="include/MapRenderer.h">
-<area shape="rect" id="node2" href="$GraphicTileset_8h.html" title="GraphicTileset.h" alt="" coords="252,80,377,107"/>
-<area shape="rect" id="node9" href="$TerrainMap_8h.html" title="TerrainMap.h" alt="" coords="545,80,652,107"/>
-<area shape="rect" id="node12" href="$Rectangle_8h.html" title="Rectangle.h" alt="" coords="676,80,775,107"/>
-<area shape="rect" id="node7" href="$DataSource_8h.html" title="DataSource.h" alt="" coords="309,155,419,181"/>
-<area shape="rect" id="node10" href="$GameDataTypes_8h.html" title="GameDataTypes.h" alt="" coords="608,229,752,256"/>
-<area shape="rect" id="node11" href="$Position_8h.html" title="Position.h" alt="" coords="597,155,683,181"/>
-</map>

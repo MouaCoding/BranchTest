@@ -1,7 +1,0 @@
-<map id="CPlayerUpgrade::LoadUpgrades" name="CPlayerUpgrade::LoadUpgrades">
-<area shape="rect" id="node2" href="$classCPlayerUpgrade.html#a685fab69765ef63952cdbcaa6b1b927b" title="CPlayerUpgrade::Load" alt="" coords="284,97,453,124"/>
-<area shape="rect" id="node3" href="$classCLineDataSource.html#a569f5a9732d73ac8813c0ba4860e2e66" title="CLineDataSource::Read" alt="" coords="531,5,709,32"/>
-<area shape="rect" id="node4" href="$classCPlayerCapability.html#a920a696526e8a839f728192aea0ba1c5" title="CPlayerCapability::\lNameToType" alt="" coords="547,57,693,98"/>
-<area shape="rect" id="node5" href="$classCPlayerCapability.html#a976f05b7e620b721bdb5051debc9b93d" title="CPlayerCapability::\lTypeToName" alt="" coords="547,122,693,163"/>
-<area shape="rect" id="node6" href="$classCPlayerAssetType.html#a42d55b6d7606e021c063fce3a14c56de" title="CPlayerAssetType::NameToType" alt="" coords="501,188,739,215"/>
-</map>

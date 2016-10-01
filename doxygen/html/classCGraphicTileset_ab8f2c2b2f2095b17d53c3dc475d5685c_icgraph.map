@@ -1,5 +1,0 @@
-<map id="CGraphicTileset::FindTile" name="CGraphicTileset::FindTile">
-<area shape="rect" id="node2" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="235,5,433,32"/>
-<area shape="rect" id="node3" href="$classCCursorSet.html#a6a7ee8b41e6de490a7817b3f3ce5fb9f" title="CCursorSet::FindCursor" alt="" coords="247,56,421,83"/>
-<area shape="rect" id="node4" href="$classCCursorSet.html#a25ce1f3e861c3d4ea701bb2e810728a6" title="CCursorSet::CursorHeight" alt="" coords="481,56,672,83"/>
-</map>

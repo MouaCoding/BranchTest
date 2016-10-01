@@ -1,7 +1,0 @@
-<map id="CPlayerAssetType::NameToType" name="CPlayerAssetType::NameToType">
-<area shape="rect" id="node2" href="$classCPlayerData.html#af60332b967ddb3044bd71376656bcdc0" title="CPlayerData::CPlayerData" alt="" coords="291,5,487,32"/>
-<area shape="rect" id="node3" href="$classCPlayerUpgrade.html#a685fab69765ef63952cdbcaa6b1b927b" title="CPlayerUpgrade::Load" alt="" coords="304,56,473,83"/>
-<area shape="rect" id="node4" href="$classCPlayerUpgrade.html#a9bef3d3f2866cd555a9b175426e953d6" title="CPlayerUpgrade::LoadUpgrades" alt="" coords="535,56,765,83"/>
-<area shape="rect" id="node5" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="813,56,977,83"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1025,56,1080,83"/>
-</map>

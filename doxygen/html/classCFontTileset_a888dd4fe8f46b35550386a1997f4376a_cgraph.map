@@ -1,8 +1,0 @@
-<map id="CFontTileset::CharacterBaseline" name="CFontTileset::CharacterBaseline">
-<area shape="rect" id="node2" href="$classCFontTileset.html#a4121603694e96e93378e079edd27086e" title="CFontTileset::DrawText" alt="" coords="299,5,476,32"/>
-<area shape="rect" id="node4" href="$classCFontTileset.html#a987f13f64865891b7bf8b10f0b519fb7" title="CFontTileset::DrawTextColor" alt="" coords="539,103,751,129"/>
-<area shape="rect" id="node5" href="$classCFontTileset.html#a6716e51a5692130847914287a5f1b734" title="CFontTileset::DrawTextWith\lShadow" alt="" coords="284,107,491,149"/>
-<area shape="rect" id="node6" href="$classCFontTileset.html#ad6902d89c94a309fb487d4dbdec97a15" title="CFontTileset::MeasureText" alt="" coords="289,173,486,200"/>
-<area shape="rect" id="node7" href="$classCFontTileset.html#a7afa08157a6bea6c0fbd06299685b8b3" title="CFontTileset::MeasureText\lDetailed" alt="" coords="546,179,743,221"/>
-<area shape="rect" id="node3" href="$classCGraphicTileset.html#afefd501a74e95295b7cd2dc868dcbbcb" title="CGraphicTileset::DrawTile" alt="" coords="550,5,739,32"/>
-</map>

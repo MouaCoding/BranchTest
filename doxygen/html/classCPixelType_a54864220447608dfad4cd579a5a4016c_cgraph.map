@@ -1,7 +1,0 @@
-<map id="CPixelType::Color" name="CPixelType::Color">
-<area shape="rect" id="node2" href="$classCPixelType.html#abdad3e51c47f410745f7795931798cb3" title="CPixelType::ToPixelColor" alt="" coords="194,5,381,32"/>
-<area shape="rect" id="node3" href="$classCPixelType.html#addcf6c6d11e8ebafe4455beaa995b675" title="CPixelType::AssetType" alt="" coords="201,56,373,83"/>
-<area shape="rect" id="node4" href="$classCPixelType.html#af38a22feec4bef33deeb628b0877d464" title="CPixelType::GetPixelType" alt="" coords="192,107,383,133"/>
-<area shape="rect" id="node5" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="431,81,533,108"/>
-<area shape="rect" id="node6" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="431,132,533,159"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="CAIPlayer::SearchMap" name="CAIPlayer::SearchMap">
-<area shape="rect" id="node2" href="$classCAIPlayer.html#a33b1533570e7a00114d1b85b3551e395" title="CAIPlayer::FindEnemies" alt="" coords="235,5,413,32"/>
-<area shape="rect" id="node3" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="CAIPlayer::CalculateCommand" alt="" coords="476,132,699,159"/>
-<area shape="rect" id="node4" href="$classCAIPlayer.html#adf7feeba7debf9f19b000887616d7bfb" title="CAIPlayer::AttackEnemies" alt="" coords="228,107,420,133"/>
-<area shape="rect" id="node5" href="$classCAIPlayer.html#a41cdefbe14210fb70b793a32778c5141" title="CAIPlayer::BuildTownHall" alt="" coords="231,157,417,184"/>
-<area shape="rect" id="node6" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="CAIPlayer::BuildBuilding" alt="" coords="236,208,412,235"/>
-<area shape="rect" id="node7" href="$classCAIPlayer.html#a3fab1c955fd68bb53fa80bb1872d2819" title="CAIPlayer::ActivatePeasants" alt="" coords="220,259,428,285"/>
-</map>
