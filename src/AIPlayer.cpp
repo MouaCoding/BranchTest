@@ -25,26 +25,28 @@
 
     The class \ref CAIPlayer is used to make all the decisions for the AI. The AI Player may only decide which actions to take and when. It cannot do anything that the Human player can't do. This keeps the game balanced and fair. 
     
-    The function in \ref CAIPlayer that decides what actions the AI should take is \ref CAIPlayer::CalculateCommand. One of the first things that this function does is determine whether it is allowed to perform an action yet. To manage difficulty, the AI is only allowed to perform an action every so often. To determine when the AI is allowed to perform an action, \ref CAIPlayer has a member variable DCycle, which is an int that is set to zero in the constructor (\ref CAIPlayer::CAIPlayer) and is incremented whenever \ref CAIPlayer::CalculateCommand is called. The AI is only allowed to perform an action if DCycle is currently a multiple of another member variable: DDownSample. By adjusting the value of DDownSample you change the APM (Actions Per Minute) of the AI and therefore you adjust the difficulty. 
+    The function in \ref CAIPlayer that decides what actions the AI should take is \ref CAIPlayer::CalculateCommand. One of the first things that this function does is determine whether the AI is allowed to perform an action yet. To manage difficulty, the AI is only allowed to perform an action every so often. To determine when the AI is allowed to perform an action, \ref CAIPlayer has a member variable DCycle, which is an int that is set to zero in the constructor (\ref CAIPlayer::CAIPlayer) and is incremented whenever \ref CAIPlayer::CalculateCommand is called. The AI is only allowed to perform an action if DCycle is currently a multiple of another member variable: DDownSample. By adjusting the value of DDownSample you change the APM (Actions Per Minute) of the AI and therefore you adjust the difficulty. 
 
     \subsection gdm_sec General Decision Making
-    If the AI is allowed to take an action, it first checks whether it has any gold left at its gold mine; if not it does a \ref CAIPlayer::SearchMap to try to find another gold mine. 
+    If the AI is allowed to preform and action, it will try to do so. If it fails, it will try to perform another action until it runs out of possible actions. As soon as the AI completes an action successfully, it is no longer allowed to perform any actions that cycle.
     
-    If it still has gold in the gold mine, the AI next checks whether it has a Town Hall (this is the building that produces peasants, which are used to gather resources and construct buildings). Even though you usually start by default with a Town Hall, if it gets destroyed you must build another one. So if the AI doesn't have a Town Hall it will \ref CAIPlayer::BuildTownHall next to a gold mine.
+    The AI first checks whether it has any gold left at its gold mine, if not it does a \ref CAIPlayer::SearchMap to try to find another gold mine. 
+    
+    If it still has gold in the gold mine, the AI next checks whether it has a Town Hall (this is the building that produces peasants, which are used to gather resources and construct buildings). If the AI doesn't have a Town Hall it will \ref CAIPlayer::BuildTownHall next to a gold mine.
 
-    If the AI has gold in the mine, a Town Hall and fewer than 5 peasants, the AI calls \ref CAIPlayer::ActivatePeasants which makes peasants gather resources and produce more peasants.
+    If the AI has gold in the mine, a Town Hall and fewer than five peasants, the AI calls \ref CAIPlayer::ActivatePeasants which produces more peasants and makes peasants gather resources.
 
-    If the AI has at least 5 peasants and doesn't have enough visibility of the map, it will send a unit to explore.
+    If the AI has at least five peasants and doesn't have enough visibility of the map, it will send a unit to explore.
 
     If the AI has enough map visibility it will start getting ready for battle.
 
     \subsection bdm_sec Battle Decision Making
 
-    To get ready for battle, the AI will first check whether it has enough food to produce more units. Producing a unit costs a certain amount of food, and you get food by building farms. If the AI doesn't have enough food, it will build (\ref CAIPlayer::BuildBuilding) a farm.
+    To get ready for battle, the AI will first check whether it has enough food to produce more units. If the AI doesn't have enough food, it will build (\ref CAIPlayer::BuildBuilding) a farm.
 
     If the AI has enough food, it will \ref CAIPlayer::ActivatePeasants, so they get back to gathering resources after building.
 
-    When the peasants are gathering again, the AI will check if it has a Barracks. The Barracks is the building used to produce melee units. If there is no Barracks, the AI will build one next to a Farm. After the Barracks is built, the AI will train a Footman if it has fewer than five. 
+    If none of the peasants are idle, the AI will check if it has a Barracks. The Barracks is the building used to produce melee units. If there is no Barracks, the AI will build one next to a Farm. After the Barracks is built, the AI will train a Footman if it has fewer than five. 
 
     Next it will build a Lumber Mill, which is used to produce ranged units. If the AI doesn't already have one, it will build one next to the Barracks. Once that is done, it will train an archer if it has fewer than five.
 
@@ -56,7 +58,7 @@
 
     -Increase or decrease AI APM.
 
-    -Change how many of each type of building the AI should build. (Currently it only builds one Barracks and one Lumber Mill, but if you want to produce more units faster, you need to build more buildings. Also once it runs out of gold and mines from another gold mine, it needs to build another Town Hall close to that mine so the peasants can gather gold faster).
+    -Change how many of each type of building the AI should build. (Currently it only builds one Barracks and one Lumber Mill. To produce more units faster, more buildings must be constructed. Also once the AI runs out of gold and mines from another gold mine, it needs to build another Town Hall close to that mine so the peasants can gather gold faster).
 
     -Change how many of each type of unit the AI produces. 
 
@@ -71,8 +73,6 @@
 /** \file AIPlayer.cpp
     The member functions of \ref CAIPlayer are defined in this file.
  */
-
-
 
 #include "AIPlayer.h"
 #include "Debug.h"
@@ -98,11 +98,18 @@ CAIPlayer::CAIPlayer(std::shared_ptr< CPlayerData > playerdata, int downsample){
     DPlayerData = playerdata;
     // Sets the current cycle to 0.
     DCycle = 0;
-    // Initializes to DDownSample
+    // Initializes DDownSample.
     DDownSample = downsample;
 }
 
-// Function used by the AI to explore the map.
+// Function for the AI player to search the map.
+/*!
+    \brief Function used by the AI player to search for undiscovered tiles on the map.
+
+    \section sm_sec How It Works
+
+    This function returns true if AI Player is able to move to an undiscovered tile and returns false if if fails to find new tiles on the map. First, it looks through all of the idle assets of the AI to find one that has the ability to move. If the first search is successful, the function will proceed on to find the position of the nearest reachable tile in the undiscovered part of the map. This nearest reachable tile is where the AI Player will send a unit to.
+*/
 bool CAIPlayer::SearchMap(SPlayerCommandRequest &command){
     auto IdleAssets = DPlayerData->IdleAssets();
     std::shared_ptr< CPlayerAsset > MovableAsset;
@@ -117,9 +124,10 @@ bool CAIPlayer::SearchMap(SPlayerCommandRequest &command){
             }
         }
     }
-    // Checks if a unit was found.
+    // Checks if a unit (movable asset) was found.
     if(MovableAsset){
-        // Finds the nearest tile that is still covered by fog of war.
+        // Finds the nearest tile that is still covered by fog of war 
+        // (undiscovered).
         CPosition UnknownPosition = DPlayerData->PlayerMap()->FindNearestReachableTileType(MovableAsset->TilePosition(), CTerrainMap::ttNone);
         
         // Checks if it has found an unexplored tile.
@@ -130,11 +138,11 @@ bool CAIPlayer::SearchMap(SPlayerCommandRequest &command){
             command.DAction = actMove;
             command.DActors.push_back(MovableAsset);
             command.DTargetLocation.SetFromTile(UnknownPosition);
-            // Successfully explored more of the map.
+            // Successfully discovered a new tile.
             return true;
         }
     }
-    // Couldn't explore more of the map.
+    // Couldn't find any new tiles.
     return false;
 }
 
@@ -179,12 +187,12 @@ bool CAIPlayer::FindEnemies(SPlayerCommandRequest &command){
 
    \section aehow_sec How It Works
 
-   The function looks through all the assets of the AI and tries to find fighters that are not currently fighting, and adds them to a list. If the list isn't empty, all those fighters are ordered to attack the nearest enemy. If none are found, the AI starts searching the map.
+   The function searches through all the assets of the AI looking for fighters that are not currently attacking anything. Those fighters are then added to a list. If the list isn't empty after the search is complete, all those fighters are ordered to attack the nearest enemy. If no enemies are found, the AI starts searching the map.
  */
 bool CAIPlayer::AttackEnemies(SPlayerCommandRequest &command){
     CPosition AverageLocation(0,0);
     
-    // The functions searches through all of the AI's assets to find fighters.
+    // The function searches through all of the AI's assets to find fighters.
     for(auto WeakAsset : DPlayerData->Assets()){
         if(auto Asset = WeakAsset.lock()){
             if((atFootman == Asset->Type())||(atArcher == Asset->Type())||(atRanger == Asset->Type())){
@@ -205,7 +213,8 @@ bool CAIPlayer::AttackEnemies(SPlayerCommandRequest &command){
         // is on a different tile. 
         AverageLocation.X(AverageLocation.X() / command.DActors.size());
         AverageLocation.Y(AverageLocation.Y() / command.DActors.size());
-        // Finds the location of the nearest enemy.
+        // Finds the location of the nearest enemy, relative to the average 
+        // location of the group.
         auto TargetEnemy = DPlayerData->FindNearestEnemy(AverageLocation, -1).lock();
         // If there are no nearby enemies, get back to searching the map.
         if(!TargetEnemy){
@@ -289,7 +298,7 @@ bool CAIPlayer::BuildTownHall(SPlayerCommandRequest &command){
 
    \section bthhow_sec How It Works
 
-   First he function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The functions has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. This means that for example, if the center of the map is to the North-West of the AI's Town Hall, the building will be constructed to the North-West of the neartype building.
+   First the function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The functions has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. This means that for example, if the center of the map is to the North-West of the AI's Town Hall, the building will be constructed to the North-West of the neartype building.
  */
 bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildingtype, EAssetType neartype){
     std::shared_ptr< CPlayerAsset > BuilderAsset;
@@ -589,8 +598,8 @@ bool CAIPlayer::ActivateFighters(SPlayerCommandRequest &command){
                 // Checks if the asset is currently not standing ground.
                 if(!Asset->HasAction(aaStandGround) && !Asset->HasActiveCapability(actStandGround)){
                     // If the unit is not standing ground it is added to a list
-                    // of actors (assets that can act) which will perform an
-                    // action as a group.
+                    // of actors (assets that can act upon otehr assets) which 
+                    // will perform an action as a group.
                     command.DActors.push_back(Asset);
                 }
             }
