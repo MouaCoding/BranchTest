@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Graphic\+Tileset\+:
-\nopagebreak
+Inheritance diagram for C\+Graphic\+Tileset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -105,6 +104,10 @@ Definition at line 25 of file Graphic\+Tileset.\+h.
 Definition at line 28 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tileset, D\+Pixel\+Count, D\+Tile\+Count, D\+Tile\+Half\+Height, D\+Tile\+Half\+Width, D\+Tile\+Height, and D\+Tile\+Width.
+
+
 \begin{DoxyCode}
 28                                 \{
 29     \hyperlink{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{DPixbufTileset} = \textcolor{keyword}{nullptr};
@@ -125,6 +128,10 @@ Definition at line 28 of file Graphic\+Tileset.\+cpp.
 
 
 Definition at line 38 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Clipping\+Masks, and D\+Pixbuf\+Tileset.
 
 
 \begin{DoxyCode}
@@ -151,6 +158,14 @@ Definition at line 38 of file Graphic\+Tileset.\+cpp.
 Definition at line 90 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by Duplicate\+Tile(), and Pixel\+Color().
+
+
 \begin{DoxyCode}
 90                                         \{
 91     \textcolor{keywordtype}{int} NumberChannels, RowStride;
@@ -171,8 +186,7 @@ Definition at line 90 of file Graphic\+Tileset.\+cpp.
 104     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 105 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -188,6 +202,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 288 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Clipping\+Masks, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -212,8 +234,7 @@ Definition at line 288 of file Graphic\+Tileset.\+cpp.
       \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight});
 305 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -229,6 +250,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 307 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Pixel\+Colors, and D\+Pixel\+Count.
+
+
+
+Referenced by Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -247,8 +276,7 @@ Definition at line 307 of file Graphic\+Tileset.\+cpp.
 318     gdk\_draw\_rectangle(drawable, gc, TRUE, xpos, ypos, size, size);
 319 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -266,6 +294,14 @@ Here is the caller graph for this function\+:
 Definition at line 255 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by C\+Cursor\+Set\+::\+Draw\+Cursor(), C\+Font\+Tileset\+::\+Draw\+Text(), and Pixel\+Color().
+
+
 \begin{DoxyCode}
 255                                                                                                    \{
 256     \textcolor{keywordflow}{if}((0 > tileindex)||(tileindex >= \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}))\{
@@ -275,8 +311,7 @@ Definition at line 255 of file Graphic\+Tileset.\+cpp.
       \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, xpos, ypos, \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth}, DTileHeight, GDK\_RGB\_DITHER\_NONE, 0, 0);
 260 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -294,6 +329,14 @@ Here is the caller graph for this function\+:
 Definition at line 262 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tileset, D\+Tile\+Count, and D\+Tile\+Height.
+
+
+
+Referenced by Pixel\+Color().
+
+
 \begin{DoxyCode}
 262                                                                                                          \{
 263     \textcolor{keywordflow}{if}((0 > tileindex)||(tileindex >= \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}))\{
@@ -303,8 +346,7 @@ Definition at line 262 of file Graphic\+Tileset.\+cpp.
       \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, xpos, ypos, 1, 1, GDK\_RGB\_DITHER\_NONE, 0, 0);
 267 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -320,6 +362,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 269 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -344,8 +394,7 @@ Definition at line 269 of file Graphic\+Tileset.\+cpp.
 285     g\_object\_unref(TempGC);
 286 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -361,6 +410,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 107 of file Graphic\+Tileset.\+cpp.
+
+
+
+References Clear\+Tile(), D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -387,16 +444,14 @@ Definition at line 107 of file Graphic\+Tileset.\+cpp.
 125     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 126 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCGraphicTileset_a78db70086b4cd1085fd3b5d0d0dc5fdd_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -414,6 +469,14 @@ Here is the caller graph for this function\+:
 Definition at line 163 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Pixel\+Mapping.
+
+
+
+Referenced by Pixel\+Color().
+
+
 \begin{DoxyCode}
 163                                                               \{
 164     \textcolor{keyword}{auto} Iterator = \hyperlink{classCGraphicTileset_a650c021d8ea1724a4c9564600df0da05}{DPixelMapping}.find(pixelname);
@@ -423,8 +486,7 @@ Definition at line 163 of file Graphic\+Tileset.\+cpp.
 168     \textcolor{keywordflow}{return} -1;
 169 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -442,6 +504,14 @@ Here is the caller graph for this function\+:
 Definition at line 155 of file Graphic\+Tileset.\+cpp.
 
 
+
+References D\+Mapping.
+
+
+
+Referenced by C\+Cursor\+Set\+::\+Find\+Cursor(), and Pixel\+Color().
+
+
 \begin{DoxyCode}
 155                                                             \{
 156     \textcolor{keyword}{auto} Iterator = \hyperlink{classCGraphicTileset_a17cd13f68f77ea4976b59b37b10e914b}{DMapping}.find(tilename);
@@ -451,8 +521,7 @@ Definition at line 155 of file Graphic\+Tileset.\+cpp.
 160     \textcolor{keywordflow}{return} -1;
 161 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -468,6 +537,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 171 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Clipping\+Masks, D\+E\+B\+U\+G\+\_\+\+L\+OW, D\+Mapping, D\+Pixbuf\+Tileset, D\+Pixel\+Colors, D\+Pixel\+Count, D\+Pixel\+Mapping, D\+Tile\+Count, D\+Tile\+Half\+Height, D\+Tile\+Half\+Width, D\+Tile\+Height, D\+Tile\+Width, C\+Graphic\+Loader\+::\+Load\+Pixbuf(), Print\+Debug, Print\+Error, C\+Line\+Data\+Source\+::\+Read(), and C\+Tokenizer\+::\+Tokenize().
+
+
+
+Referenced by C\+Cursor\+Set\+::\+Load\+Cursors(), C\+Font\+Tileset\+::\+Load\+Font(), C\+Graphic\+Multicolor\+Tileset\+::\+Load\+Tileset(), and Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -558,16 +635,14 @@ Definition at line 171 of file Graphic\+Tileset.\+cpp.
 252     \textcolor{keywordflow}{return} ReturnStatus;
 253 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCGraphicTileset_a7d47754f26f03958be28a064f54eef1d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -583,6 +658,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 128 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
+
+
+
+Referenced by Pixel\+Color().
 
 
 \begin{DoxyCode}
@@ -614,8 +697,7 @@ Definition at line 128 of file Graphic\+Tileset.\+cpp.
 152     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 153 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -633,6 +715,10 @@ Here is the caller graph for this function\+:
 Definition at line 64 of file Graphic\+Tileset.\+h.
 
 
+
+References Clear\+Tile(), Draw\+Clipped(), Draw\+Pixel(), Draw\+Tile(), Draw\+Tile\+Corner(), Draw\+Tile\+Rectangle(), Duplicate\+Tile(), Find\+Pixel(), Find\+Tile(), Load\+Tileset(), and Or\+Alpha\+Tile().
+
+
 \begin{DoxyCode}
 64                                       \{
 65             \textcolor{keywordflow}{if}((0 > index)||(\hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}.size() <= index))\{
@@ -641,8 +727,7 @@ Definition at line 64 of file Graphic\+Tileset.\+h.
 68             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{DPixelColors}[index];
 69         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -658,6 +743,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 61 of file Graphic\+Tileset.\+h.
+
+
+
+References D\+Pixel\+Count.
 
 
 \begin{DoxyCode}
@@ -676,6 +765,10 @@ Definition at line 61 of file Graphic\+Tileset.\+h.
 Definition at line 43 of file Graphic\+Tileset.\+h.
 
 
+
+References D\+Tile\+Count.
+
+
 \begin{DoxyCode}
 43                              \{
 44             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount};
@@ -690,6 +783,10 @@ Definition at line 43 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 47 of file Graphic\+Tileset.\+cpp.
+
+
+
+References D\+Mapping, D\+Pixbuf\+Tileset, D\+Tile\+Count, D\+Tile\+Height, and D\+Tile\+Width.
 
 
 \begin{DoxyCode}
@@ -749,6 +846,10 @@ Definition at line 47 of file Graphic\+Tileset.\+cpp.
 Definition at line 57 of file Graphic\+Tileset.\+h.
 
 
+
+References D\+Tile\+Half\+Height.
+
+
 \begin{DoxyCode}
 57                                   \{
 58             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a16c8bc4e4c8738fe561b0408cd40ccef}{DTileHalfHeight};
@@ -763,6 +864,10 @@ Definition at line 57 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 54 of file Graphic\+Tileset.\+h.
+
+
+
+References D\+Tile\+Half\+Width.
 
 
 \begin{DoxyCode}
@@ -781,6 +886,10 @@ Definition at line 54 of file Graphic\+Tileset.\+h.
 Definition at line 51 of file Graphic\+Tileset.\+h.
 
 
+
+References D\+Tile\+Height.
+
+
 \begin{DoxyCode}
 51                               \{
 52             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
@@ -795,6 +904,10 @@ Definition at line 51 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 48 of file Graphic\+Tileset.\+h.
+
+
+
+References D\+Tile\+Width.
 
 
 \begin{DoxyCode}
@@ -815,6 +928,10 @@ Definition at line 48 of file Graphic\+Tileset.\+h.
 
 Definition at line 28 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by Draw\+Clipped(), Load\+Tileset(), and $\sim$\+C\+Graphic\+Tileset().
+
 \hypertarget{classCGraphicTileset_a17cd13f68f77ea4976b59b37b10e914b}{}\label{classCGraphicTileset_a17cd13f68f77ea4976b59b37b10e914b} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Mapping@{D\+Mapping}}
 \index{D\+Mapping@{D\+Mapping}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -824,6 +941,10 @@ Definition at line 28 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 29 of file Graphic\+Tileset.\+h.
+
+
+
+Referenced by Find\+Tile(), Load\+Tileset(), and Tile\+Count().
 
 \hypertarget{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef}{}\label{classCGraphicTileset_a5d5adfcdbb347a6df3f57535ca08e3ef} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Pixbuf\+Tileset@{D\+Pixbuf\+Tileset}}
@@ -835,6 +956,10 @@ Definition at line 29 of file Graphic\+Tileset.\+h.
 
 Definition at line 27 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by C\+Graphic\+Tileset(), Clear\+Tile(), Draw\+Tile(), Draw\+Tile\+Corner(), Draw\+Tile\+Rectangle(), Duplicate\+Tile(), C\+Font\+Tileset\+::\+Load\+Font(), C\+Graphic\+Multicolor\+Tileset\+::\+Load\+Tileset(), Load\+Tileset(), Or\+Alpha\+Tile(), Tile\+Count(), and $\sim$\+C\+Graphic\+Tileset().
+
 \hypertarget{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3}{}\label{classCGraphicTileset_a4e9672b8b133dbac600fb8bb400d1cb3} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Pixel\+Colors@{D\+Pixel\+Colors}}
 \index{D\+Pixel\+Colors@{D\+Pixel\+Colors}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -844,6 +969,10 @@ Definition at line 27 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 36 of file Graphic\+Tileset.\+h.
+
+
+
+Referenced by Draw\+Pixel(), C\+Font\+Tileset\+::\+Load\+Font(), and Load\+Tileset().
 
 \hypertarget{classCGraphicTileset_a55fc9ceb1c92383c124e61c911fe57db}{}\label{classCGraphicTileset_a55fc9ceb1c92383c124e61c911fe57db} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Pixel\+Count@{D\+Pixel\+Count}}
@@ -855,6 +984,10 @@ Definition at line 36 of file Graphic\+Tileset.\+h.
 
 Definition at line 35 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by C\+Graphic\+Tileset(), Draw\+Pixel(), Load\+Tileset(), and Pixel\+Count().
+
 \hypertarget{classCGraphicTileset_a650c021d8ea1724a4c9564600df0da05}{}\label{classCGraphicTileset_a650c021d8ea1724a4c9564600df0da05} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Pixel\+Mapping@{D\+Pixel\+Mapping}}
 \index{D\+Pixel\+Mapping@{D\+Pixel\+Mapping}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -864,6 +997,10 @@ Definition at line 35 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 37 of file Graphic\+Tileset.\+h.
+
+
+
+Referenced by Find\+Pixel(), and Load\+Tileset().
 
 \hypertarget{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{}\label{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Tile\+Count@{D\+Tile\+Count}}
@@ -875,6 +1012,10 @@ Definition at line 37 of file Graphic\+Tileset.\+h.
 
 Definition at line 30 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by C\+Graphic\+Tileset(), Clear\+Tile(), C\+Cursor\+Set\+::\+Cursor\+Count(), Draw\+Clipped(), C\+Cursor\+Set\+::\+Draw\+Cursor(), C\+Graphic\+Multicolor\+Tileset\+::\+Draw\+Tile(), Draw\+Tile(), Draw\+Tile\+Corner(), Draw\+Tile\+Rectangle(), Duplicate\+Tile(), C\+Cursor\+Set\+::\+Load\+Cursors(), C\+Font\+Tileset\+::\+Load\+Font(), Load\+Tileset(), Or\+Alpha\+Tile(), and Tile\+Count().
+
 \hypertarget{classCGraphicTileset_a16c8bc4e4c8738fe561b0408cd40ccef}{}\label{classCGraphicTileset_a16c8bc4e4c8738fe561b0408cd40ccef} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Tile\+Half\+Height@{D\+Tile\+Half\+Height}}
 \index{D\+Tile\+Half\+Height@{D\+Tile\+Half\+Height}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -884,6 +1025,10 @@ Definition at line 30 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 34 of file Graphic\+Tileset.\+h.
+
+
+
+Referenced by C\+Graphic\+Tileset(), Load\+Tileset(), and Tile\+Half\+Height().
 
 \hypertarget{classCGraphicTileset_a3e82808009078ce29f6b74bcd077b251}{}\label{classCGraphicTileset_a3e82808009078ce29f6b74bcd077b251} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Tile\+Half\+Width@{D\+Tile\+Half\+Width}}
@@ -895,6 +1040,10 @@ Definition at line 34 of file Graphic\+Tileset.\+h.
 
 Definition at line 33 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by C\+Graphic\+Tileset(), Load\+Tileset(), and Tile\+Half\+Width().
+
 \hypertarget{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{}\label{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Tile\+Height@{D\+Tile\+Height}}
 \index{D\+Tile\+Height@{D\+Tile\+Height}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -905,6 +1054,10 @@ Definition at line 33 of file Graphic\+Tileset.\+h.
 
 Definition at line 32 of file Graphic\+Tileset.\+h.
 
+
+
+Referenced by C\+Graphic\+Tileset(), Clear\+Tile(), C\+Cursor\+Set\+::\+Cursor\+Height(), Draw\+Clipped(), C\+Font\+Tileset\+::\+Draw\+Text\+Color(), C\+Graphic\+Multicolor\+Tileset\+::\+Draw\+Tile(), Draw\+Tile(), Draw\+Tile\+Corner(), Draw\+Tile\+Rectangle(), Duplicate\+Tile(), C\+Font\+Tileset\+::\+Load\+Font(), Load\+Tileset(), C\+Font\+Tileset\+::\+Measure\+Text\+Detailed(), Or\+Alpha\+Tile(), Tile\+Count(), and Tile\+Height().
+
 \hypertarget{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{}\label{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00} 
 \index{C\+Graphic\+Tileset@{C\+Graphic\+Tileset}!D\+Tile\+Width@{D\+Tile\+Width}}
 \index{D\+Tile\+Width@{D\+Tile\+Width}!C\+Graphic\+Tileset@{C\+Graphic\+Tileset}}
@@ -914,6 +1067,10 @@ Definition at line 32 of file Graphic\+Tileset.\+h.
 
 
 Definition at line 31 of file Graphic\+Tileset.\+h.
+
+
+
+Referenced by C\+Graphic\+Tileset(), Clear\+Tile(), C\+Cursor\+Set\+::\+Cursor\+Width(), Draw\+Clipped(), C\+Font\+Tileset\+::\+Draw\+Text\+Color(), C\+Graphic\+Multicolor\+Tileset\+::\+Draw\+Tile(), Draw\+Tile(), Draw\+Tile\+Rectangle(), Duplicate\+Tile(), C\+Font\+Tileset\+::\+Load\+Font(), Load\+Tileset(), Or\+Alpha\+Tile(), Tile\+Count(), and Tile\+Width().
 
 
 

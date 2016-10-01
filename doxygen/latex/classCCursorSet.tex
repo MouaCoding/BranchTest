@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Cursor\+Set\+:
-\nopagebreak
+Inheritance diagram for C\+Cursor\+Set\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for C\+Cursor\+Set\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Cursor\+Set\+:
-\nopagebreak
+Collaboration diagram for C\+Cursor\+Set\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -106,6 +104,10 @@ Definition at line 26 of file Cursor\+Set.\+cpp.
 Definition at line 31 of file Cursor\+Set.\+h.
 
 
+
+References C\+Graphic\+Tileset\+::\+D\+Tile\+Count.
+
+
 \begin{DoxyCode}
 31                                \{
 32             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount};
@@ -122,13 +124,16 @@ Definition at line 31 of file Cursor\+Set.\+h.
 Definition at line 39 of file Cursor\+Set.\+h.
 
 
+
+References Draw\+Cursor(), C\+Graphic\+Tileset\+::\+D\+Tile\+Height, Find\+Cursor(), and Load\+Cursors().
+
+
 \begin{DoxyCode}
 39                                 \{
 40             \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
 41         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,6 +149,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 35 of file Cursor\+Set.\+h.
+
+
+
+References C\+Graphic\+Tileset\+::\+D\+Tile\+Width.
 
 
 \begin{DoxyCode}
@@ -162,6 +171,14 @@ Definition at line 35 of file Cursor\+Set.\+h.
 Definition at line 74 of file Cursor\+Set.\+cpp.
 
 
+
+References D\+Cursor\+X\+Point, D\+Cursor\+Y\+Point, C\+Graphic\+Tileset\+::\+Draw\+Tile(), and C\+Graphic\+Tileset\+::\+D\+Tile\+Count.
+
+
+
+Referenced by Cursor\+Height().
+
+
 \begin{DoxyCode}
 74                                                                                                   \{
 75     \textcolor{keywordflow}{if}((0 > cursorindex)||(cursorindex >= \hyperlink{classCGraphicTileset_a39d942b370e47f441bf97385eb1037c8}{DTileCount}))\{
@@ -172,16 +189,14 @@ Definition at line 74 of file Cursor\+Set.\+cpp.
       \hyperlink{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{DCursorYPoint}[cursorindex], cursorindex);
 80 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCCursorSet_ab28cc2871e723b2509a5036eac1086ba_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,21 +214,27 @@ Here is the caller graph for this function\+:
 Definition at line 31 of file Cursor\+Set.\+cpp.
 
 
+
+References C\+Graphic\+Tileset\+::\+Find\+Tile().
+
+
+
+Referenced by Cursor\+Height().
+
+
 \begin{DoxyCode}
 31                                                            \{
 32     \textcolor{keywordflow}{return} \hyperlink{classCGraphicTileset_ab8f2c2b2f2095b17d53c3dc475d5685c}{FindTile}(cursorname);
 33 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCCursorSet_a6a7ee8b41e6de490a7817b3f3ce5fb9f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -229,6 +250,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 35 of file Cursor\+Set.\+cpp.
+
+
+
+References D\+Cursor\+X\+Point, D\+Cursor\+Y\+Point, C\+Graphic\+Tileset\+::\+D\+Tile\+Count, C\+Graphic\+Tileset\+::\+Load\+Tileset(), Print\+Error, C\+Line\+Data\+Source\+::\+Read(), and C\+Tokenizer\+::\+Tokenize().
+
+
+
+Referenced by Cursor\+Height().
 
 
 \begin{DoxyCode}
@@ -272,16 +301,14 @@ Definition at line 35 of file Cursor\+Set.\+cpp.
 71     \textcolor{keywordflow}{return} ReturnStatus;
 72 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCCursorSet_abde01bde36a926de4d2de67e48be0cc0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -301,6 +328,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 24 of file Cursor\+Set.\+h.
 
+
+
+Referenced by Draw\+Cursor(), and Load\+Cursors().
+
 \hypertarget{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98}{}\label{classCCursorSet_a581192f0e4414acce8b1da7f24ea1b98} 
 \index{C\+Cursor\+Set@{C\+Cursor\+Set}!D\+Cursor\+Y\+Point@{D\+Cursor\+Y\+Point}}
 \index{D\+Cursor\+Y\+Point@{D\+Cursor\+Y\+Point}!C\+Cursor\+Set@{C\+Cursor\+Set}}
@@ -310,6 +341,10 @@ Definition at line 24 of file Cursor\+Set.\+h.
 
 
 Definition at line 25 of file Cursor\+Set.\+h.
+
+
+
+Referenced by Draw\+Cursor(), and Load\+Cursors().
 
 
 

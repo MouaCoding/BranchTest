@@ -1,7 +1,7 @@
 <map id="CPosition::SetXToTile" name="CPosition::SetXToTile">
 <area shape="rect" id="node2" href="$classCPosition.html#a51ee44d9e0457d6277567fd8a66fdec7" title="CPosition::DecrementY" alt="" coords="219,31,393,57"/>
 <area shape="rect" id="node6" href="$classCPlayerAsset.html#a3b0981638b2e86e1ffb211365db26b41" title="CPlayerAsset::PositionX" alt="" coords="216,81,396,108"/>
-<area shape="rect" id="node3" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="CAIPlayer::BuildBuilding" alt="" coords="446,5,622,32"/>
+<area shape="rect" id="node3" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="Function used by the AI to build a building other than the Town Hall. Returns true or false..." alt="" coords="446,5,622,32"/>
 <area shape="rect" id="node5" href="$classCRouterMap.html#ac638dca74d6ebe3602db9f7c69881146" title="CRouterMap::FindRoute" alt="" coords="444,56,624,83"/>
-<area shape="rect" id="node4" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="CAIPlayer::CalculateCommand" alt="" coords="672,5,895,32"/>
+<area shape="rect" id="node4" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="Decides what actions the AI should take. " alt="" coords="672,5,895,32"/>
 </map>

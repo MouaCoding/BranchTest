@@ -43,6 +43,10 @@ Definition at line 22 of file Periodic\+Timeout.\+h.
 Definition at line 37 of file Periodic\+Timeout.\+cpp.
 
 
+
+References D\+Next\+Expected\+Timeout, and D\+Timeout\+Interval.
+
+
 \begin{DoxyCode}
 37                                               \{
 38     gettimeofday(&\hyperlink{classCPeriodicTimeout_ae85c3dd7526ee6b538b7c6478133013c}{DNextExpectedTimeout}, \textcolor{keyword}{nullptr});
@@ -68,13 +72,16 @@ Definition at line 37 of file Periodic\+Timeout.\+cpp.
 Definition at line 34 of file Periodic\+Timeout.\+h.
 
 
+
+References D\+Timeout\+Interval, and Mili\+Seconds\+Until\+Deadline().
+
+
 \begin{DoxyCode}
 34                              \{
 35             \textcolor{keywordflow}{return} 1000 / \hyperlink{classCPeriodicTimeout_ab0c2b821c02366c9638a66eced3c1f34}{DTimeoutInterval};  
 36         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -92,6 +99,10 @@ Here is the call graph for this function\+:
 Definition at line 30 of file Periodic\+Timeout.\+h.
 
 
+
+References D\+Timeout\+Interval.
+
+
 \begin{DoxyCode}
 30                                     \{
 31             \textcolor{keywordflow}{return} \hyperlink{classCPeriodicTimeout_ab0c2b821c02366c9638a66eced3c1f34}{DTimeoutInterval}; 
@@ -106,6 +117,14 @@ Definition at line 30 of file Periodic\+Timeout.\+h.
 
 
 Definition at line 47 of file Periodic\+Timeout.\+cpp.
+
+
+
+References D\+Next\+Expected\+Timeout, and D\+Timeout\+Interval.
+
+
+
+Referenced by Frequency().
 
 
 \begin{DoxyCode}
@@ -130,8 +149,7 @@ Definition at line 47 of file Periodic\+Timeout.\+cpp.
 61     \textcolor{keywordflow}{return} TimeDelta;
 62 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,6 +169,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 24 of file Periodic\+Timeout.\+h.
 
+
+
+Referenced by C\+Periodic\+Timeout(), and Mili\+Seconds\+Until\+Deadline().
+
 \hypertarget{classCPeriodicTimeout_ab0c2b821c02366c9638a66eced3c1f34}{}\label{classCPeriodicTimeout_ab0c2b821c02366c9638a66eced3c1f34} 
 \index{C\+Periodic\+Timeout@{C\+Periodic\+Timeout}!D\+Timeout\+Interval@{D\+Timeout\+Interval}}
 \index{D\+Timeout\+Interval@{D\+Timeout\+Interval}!C\+Periodic\+Timeout@{C\+Periodic\+Timeout}}
@@ -160,6 +182,10 @@ Definition at line 24 of file Periodic\+Timeout.\+h.
 
 
 Definition at line 25 of file Periodic\+Timeout.\+h.
+
+
+
+Referenced by C\+Periodic\+Timeout(), Frequency(), Mili\+Second\+Period(), and Mili\+Seconds\+Until\+Deadline().
 
 
 

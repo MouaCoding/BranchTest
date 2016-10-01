@@ -1,6 +1,6 @@
 <map id="CTerrainMap::FindNearestTileType" name="CTerrainMap::FindNearestTileType">
-<area shape="rect" id="node2" href="$classCTerrainMap.html#a34cb754aa9b26e85a73377159f2527d7" title="CTerrainMap::Width" alt="" coords="246,5,397,32"/>
-<area shape="rect" id="node3" href="$classCTerrainMap.html#ae5e4bf6507e0e3e9ac0322b43eed8a7a" title="CTerrainMap::Height" alt="" coords="244,56,399,83"/>
+<area shape="rect" id="node2" href="$classCTerrainMap.html#ae5e4bf6507e0e3e9ac0322b43eed8a7a" title="CTerrainMap::Height" alt="" coords="244,5,399,32"/>
+<area shape="rect" id="node3" href="$classCTerrainMap.html#a34cb754aa9b26e85a73377159f2527d7" title="CTerrainMap::Width" alt="" coords="246,56,397,83"/>
 <area shape="rect" id="node4" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="270,107,373,133"/>
 <area shape="rect" id="node5" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="270,157,373,184"/>
 </map>

@@ -77,6 +77,10 @@ Definition at line 23 of file Viewport\+Renderer.\+h.
 Definition at line 19 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+Asset\+Renderer, D\+Fog\+Renderer, D\+Last\+Viewport\+Height, D\+Last\+Viewport\+Width, D\+Map\+Renderer, D\+ViewportX, and D\+ViewportY.
+
+
 \begin{DoxyCode}
 19                                                                                                            
                                                             \{
@@ -119,22 +123,28 @@ Definition at line 29 of file Viewport\+Renderer.\+cpp.
 Definition at line 56 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+Last\+Viewport\+Height, D\+Last\+Viewport\+Width, Viewport\+X(), Viewport\+Y(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
+
+Referenced by Last\+Viewport\+Height().
+
+
 \begin{DoxyCode}
 56                                                           \{
 57     \hyperlink{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{ViewportX}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() - \hyperlink{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{DLastViewportWidth}/2);
 58     \hyperlink{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{ViewportY}(pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() - \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight}/2);
 59 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCViewportRenderer_a12842df851be0f115a735cec994d863e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -152,14 +162,17 @@ Here is the caller graph for this function\+:
 Definition at line 60 of file Viewport\+Renderer.\+h.
 
 
+
+References Draw\+Viewport(), D\+ViewportX, D\+ViewportY, Pan\+East(), Pan\+North(), Pan\+South(), Pan\+West(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
 \begin{DoxyCode}
 60                                                               \{
 61             \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() + \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX}, pos.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}() + 
       \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY});  
 62         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -175,6 +188,14 @@ Here is the call graph for this function\+:
 
 
 Definition at line 84 of file Viewport\+Renderer.\+cpp.
+
+
+
+References act\+Build\+Barracks, act\+Build\+Blacksmith, act\+Build\+Farm, act\+Build\+Lumber\+Mill, act\+Build\+Scout\+Tower, act\+Build\+Town\+Hall, at\+Barracks, at\+Blacksmith, at\+Farm, at\+Lumber\+Mill, at\+None, at\+Scout\+Tower, at\+Town\+Hall, D\+Asset\+Renderer, D\+Fog\+Renderer, S\+Rectangle\+::\+D\+Height, D\+Last\+Viewport\+Height, D\+Last\+Viewport\+Width, D\+Map\+Renderer, D\+ViewportX, D\+ViewportY, S\+Rectangle\+::\+D\+Width, S\+Rectangle\+::\+D\+X\+Position, and S\+Rectangle\+::\+D\+Y\+Position.
+
+
+
+Referenced by Detailed\+Position().
 
 
 \begin{DoxyCode}
@@ -233,8 +254,7 @@ Definition at line 84 of file Viewport\+Renderer.\+cpp.
 127     \hyperlink{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{DFogRenderer}->DrawMap(drawable, TempRectangle);
 128 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -269,13 +289,16 @@ Definition at line 37 of file Viewport\+Renderer.\+h.
 Definition at line 55 of file Viewport\+Renderer.\+h.
 
 
+
+References Center\+Viewport(), and D\+Last\+Viewport\+Height.
+
+
 \begin{DoxyCode}
 55                                        \{
 56             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{DLastViewportHeight};
 57         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -291,6 +314,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 52 of file Viewport\+Renderer.\+h.
+
+
+
+References D\+Last\+Viewport\+Width.
 
 
 \begin{DoxyCode}
@@ -309,21 +336,27 @@ Definition at line 52 of file Viewport\+Renderer.\+h.
 Definition at line 68 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+ViewportX, and Viewport\+X().
+
+
+
+Referenced by Detailed\+Position().
+
+
 \begin{DoxyCode}
 68                                       \{
 69     \hyperlink{classCViewportRenderer_adf6c09ee00cdbf0803e72d59bff9a235}{ViewportX}(\hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} + pan);
 70 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCViewportRenderer_a047d0b83f7744a9d8b184471dae0cd3c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -341,6 +374,14 @@ Here is the caller graph for this function\+:
 Definition at line 61 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+ViewportY.
+
+
+
+Referenced by Detailed\+Position().
+
+
 \begin{DoxyCode}
 61                                        \{
 62     \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} -= pan;
@@ -349,8 +390,7 @@ Definition at line 61 of file Viewport\+Renderer.\+cpp.
 65     \}
 66 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -368,21 +408,27 @@ Here is the caller graph for this function\+:
 Definition at line 72 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+ViewportY, and Viewport\+Y().
+
+
+
+Referenced by Detailed\+Position().
+
+
 \begin{DoxyCode}
 72                                        \{
 73     \hyperlink{classCViewportRenderer_add3d4da286927abe2f19fbb37fd42ed5}{ViewportY}(\hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY} + pan);
 74 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCViewportRenderer_ad4aa68d96923dbea1bfd9ae3f23a3132_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -400,6 +446,14 @@ Here is the caller graph for this function\+:
 Definition at line 76 of file Viewport\+Renderer.\+cpp.
 
 
+
+References D\+ViewportX.
+
+
+
+Referenced by Detailed\+Position().
+
+
 \begin{DoxyCode}
 76                                       \{
 77     \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX} -= pan;
@@ -408,8 +462,7 @@ Definition at line 76 of file Viewport\+Renderer.\+cpp.
 80     \}
 81 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -427,13 +480,20 @@ Here is the caller graph for this function\+:
 Definition at line 42 of file Viewport\+Renderer.\+h.
 
 
+
+References D\+ViewportX.
+
+
+
+Referenced by Center\+Viewport(), and Pan\+East().
+
+
 \begin{DoxyCode}
 42                              \{
 43             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{DViewportX};  
 44         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -449,6 +509,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 34 of file Viewport\+Renderer.\+cpp.
+
+
+
+References D\+Last\+Viewport\+Width, D\+Map\+Renderer, and D\+ViewportX.
 
 
 \begin{DoxyCode}
@@ -476,13 +540,20 @@ Definition at line 34 of file Viewport\+Renderer.\+cpp.
 Definition at line 47 of file Viewport\+Renderer.\+h.
 
 
+
+References D\+ViewportY.
+
+
+
+Referenced by Center\+Viewport(), and Pan\+South().
+
+
 \begin{DoxyCode}
 47                              \{
 48             \textcolor{keywordflow}{return} \hyperlink{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{DViewportY};  
 49         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -498,6 +569,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 45 of file Viewport\+Renderer.\+cpp.
+
+
+
+References D\+Last\+Viewport\+Height, D\+Map\+Renderer, and D\+ViewportY.
 
 
 \begin{DoxyCode}
@@ -527,6 +602,10 @@ Definition at line 45 of file Viewport\+Renderer.\+cpp.
 
 Definition at line 26 of file Viewport\+Renderer.\+h.
 
+
+
+Referenced by C\+Viewport\+Renderer(), and Draw\+Viewport().
+
 \hypertarget{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608}{}\label{classCViewportRenderer_a2fa9d183d00bdba4a2fea6d946992608} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Fog\+Renderer@{D\+Fog\+Renderer}}
 \index{D\+Fog\+Renderer@{D\+Fog\+Renderer}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
@@ -536,6 +615,10 @@ Definition at line 26 of file Viewport\+Renderer.\+h.
 
 
 Definition at line 27 of file Viewport\+Renderer.\+h.
+
+
+
+Referenced by C\+Viewport\+Renderer(), and Draw\+Viewport().
 
 \hypertarget{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0}{}\label{classCViewportRenderer_aaca5c330615fc2aacc57dede8e7c18b0} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Last\+Viewport\+Height@{D\+Last\+Viewport\+Height}}
@@ -547,6 +630,10 @@ Definition at line 27 of file Viewport\+Renderer.\+h.
 
 Definition at line 31 of file Viewport\+Renderer.\+h.
 
+
+
+Referenced by Center\+Viewport(), C\+Viewport\+Renderer(), Draw\+Viewport(), Last\+Viewport\+Height(), and Viewport\+Y().
+
 \hypertarget{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9}{}\label{classCViewportRenderer_aaa21acd1b43badc3c1a3b0bf9b0f86f9} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Last\+Viewport\+Width@{D\+Last\+Viewport\+Width}}
 \index{D\+Last\+Viewport\+Width@{D\+Last\+Viewport\+Width}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
@@ -556,6 +643,10 @@ Definition at line 31 of file Viewport\+Renderer.\+h.
 
 
 Definition at line 30 of file Viewport\+Renderer.\+h.
+
+
+
+Referenced by Center\+Viewport(), C\+Viewport\+Renderer(), Draw\+Viewport(), Last\+Viewport\+Width(), and Viewport\+X().
 
 \hypertarget{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c}{}\label{classCViewportRenderer_ac6bc7771bd6dcd35107d25bebb0c0a4c} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+Map\+Renderer@{D\+Map\+Renderer}}
@@ -567,6 +658,10 @@ Definition at line 30 of file Viewport\+Renderer.\+h.
 
 Definition at line 25 of file Viewport\+Renderer.\+h.
 
+
+
+Referenced by C\+Viewport\+Renderer(), Draw\+Viewport(), Viewport\+X(), and Viewport\+Y().
+
 \hypertarget{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18}{}\label{classCViewportRenderer_aea9e05347f71a8e6b83439aab653be18} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+ViewportX@{D\+ViewportX}}
 \index{D\+ViewportX@{D\+ViewportX}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
@@ -577,6 +672,10 @@ Definition at line 25 of file Viewport\+Renderer.\+h.
 
 Definition at line 28 of file Viewport\+Renderer.\+h.
 
+
+
+Referenced by C\+Viewport\+Renderer(), Detailed\+Position(), Draw\+Viewport(), Pan\+East(), Pan\+West(), and Viewport\+X().
+
 \hypertarget{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f}{}\label{classCViewportRenderer_ae13dd437a3da3d2bab16bc7ba61cb78f} 
 \index{C\+Viewport\+Renderer@{C\+Viewport\+Renderer}!D\+ViewportY@{D\+ViewportY}}
 \index{D\+ViewportY@{D\+ViewportY}!C\+Viewport\+Renderer@{C\+Viewport\+Renderer}}
@@ -586,6 +685,10 @@ Definition at line 28 of file Viewport\+Renderer.\+h.
 
 
 Definition at line 29 of file Viewport\+Renderer.\+h.
+
+
+
+Referenced by C\+Viewport\+Renderer(), Detailed\+Position(), Draw\+Viewport(), Pan\+North(), Pan\+South(), and Viewport\+Y().
 
 
 

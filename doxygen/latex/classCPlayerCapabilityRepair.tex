@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityRepair}\index{C\+Player\+Capability\+Repair@{C\+Player\+Capability\+Repair}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Repair\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Repair\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Repair\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Repair\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Repair\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -87,11 +85,14 @@ Definition at line 781 of file Basic\+Capabilities.\+cpp.
 Definition at line 768 of file Basic\+Capabilities.\+cpp.
 
 
+
+References C\+Player\+Capability\+Attack\+::\+Apply\+Capability(), C\+Player\+Capability\+Attack\+::\+Can\+Apply(), C\+Player\+Capability\+Attack\+::\+Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 768 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,6 +117,10 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 Definition at line 800 of file Basic\+Capabilities.\+cpp.
 
 
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, and S\+Asset\+Command\+::\+D\+Capability.
+
+
 \begin{DoxyCode}
 800                                                                                                            
                                                           \{
@@ -135,8 +140,7 @@ Definition at line 800 of file Basic\+Capabilities.\+cpp.
 813     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 814 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -158,6 +162,10 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 790 of file Basic\+Capabilities.\+cpp.
 
 
+
+References Can\+Initiate().
+
+
 \begin{DoxyCode}
 790                                                                                                            
                                                    \{
@@ -170,8 +178,7 @@ Definition at line 790 of file Basic\+Capabilities.\+cpp.
 797     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityRepair_a579761cab74d447b95856a24a7841b2e}{CanInitiate}(actor, playerdata);
 798 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -193,6 +200,10 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 Definition at line 785 of file Basic\+Capabilities.\+cpp.
 
 
+
+Referenced by Can\+Apply().
+
+
 \begin{DoxyCode}
 785                                                                                                            
                 \{
@@ -200,8 +211,7 @@ Definition at line 785 of file Basic\+Capabilities.\+cpp.
 787     \textcolor{keywordflow}{return} (actor->Speed() > 0) && playerdata->Gold() && playerdata->Lumber();
 788 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,6 +230,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 752 of file Basic\+Capabilities.\+cpp.
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Repair().
 
 
 

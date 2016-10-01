@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityBuildRanger}\index{C\+Player\+Capability\+Build\+Ranger@{C\+Player\+Capability\+Build\+Ranger}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Build\+Ranger\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Build\+Ranger\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,6 +73,10 @@ Definition at line 161 of file Unit\+Upgrade\+Capabilities.\+cpp.
 Definition at line 203 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References D\+Unit\+Name.
+
+
 \begin{DoxyCode}
 203                                                                                     : 
       \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Build"}) + unitname, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone})\{
@@ -92,11 +94,14 @@ Definition at line 203 of file Unit\+Upgrade\+Capabilities.\+cpp.
 Definition at line 190 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References C\+Player\+Capability\+Unit\+Upgrade\+::\+Apply\+Capability(), C\+Player\+Capability\+Unit\+Upgrade\+::\+Can\+Apply(), C\+Player\+Capability\+Unit\+Upgrade\+::\+Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 190 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -119,6 +124,10 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 
 
 Definition at line 249 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), at\+Barracks, at\+Lumber\+Mill, S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, S\+Asset\+Command\+::\+D\+Capability, D\+Unit\+Name, C\+Player\+Upgrade\+::\+Find\+Upgrade\+From\+Name(), C\+Position\+::\+Set\+To\+Tile(), and C\+Player\+Asset\+::\+Update\+Frequency().
 
 
 \begin{DoxyCode}
@@ -167,8 +176,7 @@ Definition at line 249 of file Unit\+Upgrade\+Capabilities.\+cpp.
 285     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 286 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -190,14 +198,17 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 245 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References Can\+Initiate().
+
+
 \begin{DoxyCode}
 245                                                                                                            
                                                         \{
 246     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildRanger_ad8b45a3ffc7ee82d5550cc690823d82c}{CanInitiate}(actor, playerdata);
 247 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -217,6 +228,14 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 
 
 Definition at line 207 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References at\+Barracks, at\+Lumber\+Mill, D\+Unit\+Name, and C\+Player\+Upgrade\+::\+Find\+Upgrade\+From\+Name().
+
+
+
+Referenced by Can\+Apply().
 
 
 \begin{DoxyCode}
@@ -261,16 +280,14 @@ Definition at line 207 of file Unit\+Upgrade\+Capabilities.\+cpp.
 242     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 243 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityBuildRanger_ad8b45a3ffc7ee82d5550cc690823d82c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -290,6 +307,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 167 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Build\+Ranger().
+
 \hypertarget{classCPlayerCapabilityBuildRanger_a4e85674699365fe1e77bcb2a1996d7ba}{}\label{classCPlayerCapabilityBuildRanger_a4e85674699365fe1e77bcb2a1996d7ba} 
 \index{C\+Player\+Capability\+Build\+Ranger@{C\+Player\+Capability\+Build\+Ranger}!D\+Unit\+Name@{D\+Unit\+Name}}
 \index{D\+Unit\+Name@{D\+Unit\+Name}!C\+Player\+Capability\+Build\+Ranger@{C\+Player\+Capability\+Build\+Ranger}}
@@ -299,6 +320,10 @@ Definition at line 167 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 186 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by Apply\+Capability(), Can\+Initiate(), and C\+Player\+Capability\+Build\+Ranger().
 
 
 

@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Player\+Capability\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,13 +198,16 @@ Implemented in \hyperlink{classCPlayerCapabilityRepair_ab4e8da6f225b4bfb7023d757
 Definition at line 71 of file Player\+Asset.\+h.
 
 
+
+Referenced by C\+Player\+Capability\+Move\+::\+Apply\+Capability(), C\+Player\+Capability\+Build\+Normal\+::\+Apply\+Capability(), C\+Player\+Capability\+Train\+Normal\+::\+Apply\+Capability(), C\+Player\+Capability\+Building\+Upgrade\+::\+Apply\+Capability(), C\+Player\+Capability\+Unit\+Upgrade\+::\+Apply\+Capability(), C\+Player\+Capability\+Mine\+Harvest\+::\+Apply\+Capability(), C\+Player\+Capability\+Build\+Ranger\+::\+Apply\+Capability(), C\+Player\+Capability\+Stand\+Ground\+::\+Apply\+Capability(), C\+Player\+Capability\+Cancel\+::\+Apply\+Capability(), C\+Player\+Capability\+Convey\+::\+Apply\+Capability(), C\+Player\+Capability\+Patrol\+::\+Apply\+Capability(), C\+Player\+Capability\+Attack\+::\+Apply\+Capability(), and C\+Player\+Capability\+Repair\+::\+Apply\+Capability().
+
+
 \begin{DoxyCode}
 71                                                         \{
 72             \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapability_a09011bc8c74c698bfb65f06a1840c6e1}{DAssetCapabilityType};
 73         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -243,6 +245,10 @@ Implemented in \hyperlink{classCPlayerCapabilityRepair_a579761cab74d447b95856a24
 Definition at line 97 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+A\+I\+Player\+::\+Activate\+Peasants(), C\+A\+I\+Player\+::\+Build\+Building(), C\+Application\+Data\+::\+Calculate\+Game\+Mode(), C\+Unit\+Action\+Renderer\+::\+Draw\+Unit\+Action(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), C\+Application\+Data\+::\+Render\+Game\+Mode(), C\+Game\+Model\+::\+Timestep(), C\+A\+I\+Player\+::\+Train\+Archer(), and C\+A\+I\+Player\+::\+Train\+Footman().
+
+
 \begin{DoxyCode}
 97                                                                                              \{
 98     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerCapability_ab7fee932703792663278b1b2128f00f3}{TypeRegistry}().find((\textcolor{keywordtype}{int})type);
@@ -253,8 +259,7 @@ Definition at line 97 of file Player\+Asset.\+cpp.
 103     \textcolor{keywordflow}{return} std::shared\_ptr< CPlayerCapability >();
 104 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -327,6 +332,14 @@ Definition at line 76 of file Player\+Asset.\+cpp.
 Definition at line 115 of file Player\+Asset.\+cpp.
 
 
+
+References act\+Armor\+Upgrade1, act\+Armor\+Upgrade2, act\+Armor\+Upgrade3, act\+Arrow\+Upgrade1, act\+Arrow\+Upgrade2, act\+Arrow\+Upgrade3, act\+Attack, act\+Build\+Advanced, act\+Build\+Archer, act\+Build\+Barracks, act\+Build\+Blacksmith, act\+Build\+Cannon\+Tower, act\+Build\+Castle, act\+Build\+Farm, act\+Build\+Footman, act\+Build\+Guard\+Tower, act\+Build\+Keep, act\+Build\+Lumber\+Mill, act\+Build\+Peasant, act\+Build\+Ranger, act\+Build\+Scout\+Tower, act\+Build\+Simple, act\+Build\+Town\+Hall, act\+Build\+Wall, act\+Cancel, act\+Convey, act\+Longbow, act\+Marksmanship, act\+Mine, act\+Move, act\+None, act\+Patrol, act\+Ranger\+Scouting, act\+Repair, act\+Stand\+Ground, act\+Weapon\+Upgrade1, act\+Weapon\+Upgrade2, act\+Weapon\+Upgrade3, and Print\+Error.
+
+
+
+Referenced by C\+Player\+Data\+::\+Add\+Upgrade(), C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+C\+Activated\+Capability(), C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+C\+Activated\+Capability(), C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+Cancel(), C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability\+::\+Cancel(), C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+Increment\+Step(), C\+Player\+Upgrade\+::\+Load(), and C\+Player\+Asset\+Type\+::\+Load().
+
+
 \begin{DoxyCode}
 115                                                                        \{
 116     \textcolor{keyword}{static} std::unordered\_map< std::string, EAssetCapabilityType > NameTypeTranslation(\{
@@ -379,8 +392,7 @@ Definition at line 115 of file Player\+Asset.\+cpp.
 162     \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone};
 163 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -398,6 +410,10 @@ Here is the caller graph for this function\+:
 Definition at line 88 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Player\+Capability\+Move\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Build\+Normal\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Train\+Normal\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Mine\+Harvest\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Build\+Ranger\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Stand\+Ground\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Cancel\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Convey\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Patrol\+::\+C\+Registrant\+::\+C\+Registrant(), C\+Player\+Capability\+Attack\+::\+C\+Registrant\+::\+C\+Registrant(), and C\+Player\+Capability\+Repair\+::\+C\+Registrant\+::\+C\+Registrant().
+
+
 \begin{DoxyCode}
 88                                                                              \{
 89     \textcolor{keywordflow}{if}(\textcolor{keyword}{nullptr} != \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{FindCapability}(capability->Name()))\{
@@ -408,8 +424,7 @@ Definition at line 88 of file Player\+Asset.\+cpp.
 94     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 95 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -461,6 +476,14 @@ Definition at line 82 of file Player\+Asset.\+cpp.
 Definition at line 165 of file Player\+Asset.\+cpp.
 
 
+
+References C\+Player\+Upgrade\+::\+D\+Registry\+By\+Name, and C\+Player\+Upgrade\+::\+D\+Registry\+By\+Type.
+
+
+
+Referenced by C\+Player\+Upgrade\+::\+Load().
+
+
 \begin{DoxyCode}
 165                                                                 \{
 166     \textcolor{keyword}{static} std::vector< std::string > TypeStrings(\{
@@ -508,8 +531,7 @@ Definition at line 165 of file Player\+Asset.\+cpp.
 208     \textcolor{keywordflow}{return} TypeStrings[type];
 209 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

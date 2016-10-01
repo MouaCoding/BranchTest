@@ -1,6 +1,6 @@
 <map id="CApplicationData::ScreenToDetailedMap" name="CApplicationData::ScreenToDetailedMap">
-<area shape="rect" id="node2" href="$classCApplicationData.html#a2871f1b0855d14ed77db1abd83585d64" title="CApplicationData::Viewport\lToDetailedMap" alt="" coords="241,5,444,47"/>
-<area shape="rect" id="node3" href="$classCApplicationData.html#aebd3ae4cfd74962413024f1649233f08" title="CApplicationData::Screen\lToViewport" alt="" coords="249,71,437,112"/>
-<area shape="rect" id="node4" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="492,53,595,79"/>
-<area shape="rect" id="node5" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="492,103,595,130"/>
+<area shape="rect" id="node2" href="$classCApplicationData.html#aebd3ae4cfd74962413024f1649233f08" title="CApplicationData::Screen\lToViewport" alt="" coords="249,23,437,65"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#a2871f1b0855d14ed77db1abd83585d64" title="CApplicationData::Viewport\lToDetailedMap" alt="" coords="241,89,444,130"/>
+<area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="492,5,595,32"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="492,56,595,83"/>
 </map>

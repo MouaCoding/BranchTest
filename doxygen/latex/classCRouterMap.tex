@@ -70,6 +70,10 @@ Definition at line 21 of file Router\+Map.\+h.
 Definition at line 91 of file Router\+Map.\+cpp.
 
 
+
+References aa\+Convey\+Gold, aa\+Convey\+Lumber, aa\+Mine\+Gold, aa\+Walk, C\+Asset\+Decorated\+Map\+::\+Assets(), at\+None, C\+Player\+Asset\+::\+Color(), d\+East, C\+Position\+::\+Decrement\+X(), C\+Position\+::\+Decrement\+Y(), D\+Ideal\+Search\+Direction, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+In\+Direction, C\+Player\+Asset\+::\+Direction(), C\+Position\+::\+Distance\+Squared(), D\+Map, D\+Map\+Width, d\+Max, d\+North, d\+North\+East, d\+North\+West, d\+South, d\+South\+East, d\+South\+West, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+Steps, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+Target\+Distance\+Squared, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+Tile\+Type, d\+West, C\+Router\+Map\+::\+S\+Search\+Target\+::\+DX, C\+Router\+Map\+::\+S\+Search\+Target\+::\+DY, C\+Terrain\+Map\+::\+Height(), Moving\+Away(), C\+Player\+Asset\+::\+Position\+X(), C\+Player\+Asset\+::\+Position\+Y(), S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+O\+C\+C\+U\+P\+I\+ED, S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+V\+I\+S\+I\+T\+ED, S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+V\+I\+S\+I\+T\+ED, C\+Position\+::\+Set\+To\+Tile(), C\+Player\+Asset\+::\+Tile\+Position(), C\+Player\+Asset\+::\+Tile\+Position\+X(), C\+Player\+Asset\+::\+Tile\+Position\+Y(), C\+Terrain\+Map\+::\+Tile\+Type(), C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Grass, C\+Terrain\+Map\+::tt\+None, C\+Terrain\+Map\+::tt\+Rubble, C\+Terrain\+Map\+::tt\+Stump, C\+Terrain\+Map\+::\+Width(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
 \begin{DoxyCode}
 91                                                                                                            
                \{
@@ -271,8 +275,7 @@ Definition at line 91 of file Router\+Map.\+cpp.
 267     \textcolor{keywordflow}{return} LastInDirection;
 268 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -290,6 +293,14 @@ Here is the call graph for this function\+:
 Definition at line 79 of file Router\+Map.\+cpp.
 
 
+
+References d\+Max.
+
+
+
+Referenced by Find\+Route().
+
+
 \begin{DoxyCode}
 79                                                            \{
 80     \textcolor{keywordtype}{int} Value;
@@ -303,8 +314,7 @@ Definition at line 79 of file Router\+Map.\+cpp.
 88     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 89 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -320,6 +330,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 29 of file Router\+Map.\+cpp.
+
+
+
+References D\+Map\+Width, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+Steps, C\+Router\+Map\+::\+S\+Search\+Target\+::\+D\+Target\+Distance\+Squared, C\+Router\+Map\+::\+S\+Search\+Target\+::\+DX, and C\+Router\+Map\+::\+S\+Search\+Target\+::\+DY.
 
 
 \begin{DoxyCode}
@@ -387,6 +401,10 @@ Definition at line 29 of file Router\+Map.\+cpp.
 
 Definition at line 35 of file Router\+Map.\+h.
 
+
+
+Referenced by Find\+Route().
+
 \hypertarget{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6}{}\label{classCRouterMap_a313fe70c998e9e3f22753d47075af1a6} 
 \index{C\+Router\+Map@{C\+Router\+Map}!D\+Map@{D\+Map}}
 \index{D\+Map@{D\+Map}!C\+Router\+Map@{C\+Router\+Map}}
@@ -397,6 +415,10 @@ Definition at line 35 of file Router\+Map.\+h.
 
 Definition at line 32 of file Router\+Map.\+h.
 
+
+
+Referenced by Find\+Route().
+
 \hypertarget{classCRouterMap_a9899b7a017d376a16af153f6f91159d3}{}\label{classCRouterMap_a9899b7a017d376a16af153f6f91159d3} 
 \index{C\+Router\+Map@{C\+Router\+Map}!D\+Map\+Width@{D\+Map\+Width}}
 \index{D\+Map\+Width@{D\+Map\+Width}!C\+Router\+Map@{C\+Router\+Map}}
@@ -406,6 +428,10 @@ Definition at line 32 of file Router\+Map.\+h.
 
 
 Definition at line 36 of file Router\+Map.\+h.
+
+
+
+Referenced by Find\+Route(), and Search\+Target\+Compare().
 
 \hypertarget{classCRouterMap_a903a8d0891e61b169e6aa72da27d62ba}{}\label{classCRouterMap_a903a8d0891e61b169e6aa72da27d62ba} 
 \index{C\+Router\+Map@{C\+Router\+Map}!D\+Search\+Targets@{D\+Search\+Targets}}

@@ -1,17 +1,17 @@
 <map id="CPosition::IncrementY" name="CPosition::IncrementY">
-<area shape="rect" id="node2" href="$classCAIPlayer.html#adf7feeba7debf9f19b000887616d7bfb" title="CAIPlayer::AttackEnemies" alt="" coords="246,5,438,32"/>
-<area shape="rect" id="node4" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="CAIPlayer::BuildBuilding" alt="" coords="254,56,430,83"/>
-<area shape="rect" id="node5" href="$classCAssetRenderer.html#af9cdf65db6c87c8cfd94fc4a84066b3e" title="CAssetRenderer::DrawPlacement" alt="" coords="221,107,463,133"/>
-<area shape="rect" id="node6" href="$classCApplicationData.html#a018490e670662ed9a9266449516a2ac7" title="CApplicationData::Process\lInputGameMode" alt="" coords="244,158,440,199"/>
-<area shape="rect" id="node11" href="$classCPlayerAsset.html#a4c8ef6c0049b48045c2ba95d398dbc05" title="CPlayerAsset::MoveStep" alt="" coords="251,224,433,251"/>
-<area shape="rect" id="node12" href="$classCPosition.html#a91fd43eeb2c894bcb7577ae87247b726" title="CPosition::ClosestPosition" alt="" coords="245,275,439,301"/>
-<area shape="rect" id="node3" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="CAIPlayer::CalculateCommand" alt="" coords="515,31,737,57"/>
-<area shape="rect" id="node7" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="527,165,725,192"/>
-<area shape="rect" id="node8" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="789,158,988,199"/>
-<area shape="rect" id="node9" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="1047,165,1211,192"/>
-<area shape="rect" id="node10" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1271,165,1325,192"/>
-<area shape="rect" id="node13" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="807,275,970,301"/>
-<area shape="rect" id="node15" href="$classCPlayerAsset.html#a67e700ce77122894c02da584dd652767" title="CPlayerAsset::ClosestPosition" alt="" coords="517,275,735,301"/>
-<area shape="rect" id="node16" href="$classCPosition.html#a2295901e4c35cfc81304f9a217e34ac7" title="CPosition::AdjacentTileDirection" alt="" coords="511,325,741,352"/>
-<area shape="rect" id="node14" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="1036,275,1223,301"/>
+<area shape="rect" id="node2" href="$classCAIPlayer.html#adf7feeba7debf9f19b000887616d7bfb" title="Function used by the AI to select fighters and attack the enemy. " alt="" coords="246,5,438,32"/>
+<area shape="rect" id="node4" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="Function used by the AI to build a building other than the Town Hall. Returns true or false..." alt="" coords="254,56,430,83"/>
+<area shape="rect" id="node5" href="$classCPosition.html#a91fd43eeb2c894bcb7577ae87247b726" title="CPosition::ClosestPosition" alt="" coords="245,107,439,133"/>
+<area shape="rect" id="node10" href="$classCAssetRenderer.html#af9cdf65db6c87c8cfd94fc4a84066b3e" title="CAssetRenderer::DrawPlacement" alt="" coords="221,157,463,184"/>
+<area shape="rect" id="node11" href="$classCPlayerAsset.html#a4c8ef6c0049b48045c2ba95d398dbc05" title="CPlayerAsset::MoveStep" alt="" coords="251,208,433,235"/>
+<area shape="rect" id="node12" href="$classCApplicationData.html#a018490e670662ed9a9266449516a2ac7" title="CApplicationData::Process\lInputGameMode" alt="" coords="244,259,440,301"/>
+<area shape="rect" id="node3" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="Decides what actions the AI should take. " alt="" coords="515,5,737,32"/>
+<area shape="rect" id="node6" href="$classCPosition.html#a2295901e4c35cfc81304f9a217e34ac7" title="CPosition::AdjacentTileDirection" alt="" coords="511,56,741,83"/>
+<area shape="rect" id="node7" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="807,81,970,108"/>
+<area shape="rect" id="node9" href="$classCPlayerAsset.html#a67e700ce77122894c02da584dd652767" title="CPlayerAsset::ClosestPosition" alt="" coords="517,157,735,184"/>
+<area shape="rect" id="node8" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="1036,81,1223,108"/>
+<area shape="rect" id="node13" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="527,267,725,293"/>
+<area shape="rect" id="node14" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="789,259,988,301"/>
+<area shape="rect" id="node15" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="1047,267,1211,293"/>
+<area shape="rect" id="node16" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1271,267,1325,293"/>
 </map>

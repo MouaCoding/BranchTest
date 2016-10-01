@@ -1,7 +1,7 @@
 <map id="CApplicationData::NetworkOptionsButtonCallback" name="CApplicationData::NetworkOptionsButtonCallback">
-<area shape="rect" id="node2" href="$classCApplicationData.html#a4410839118b5b74dab798ad7be6f703b" title="CApplicationData::MainMenu\lButtonCallback" alt="" coords="269,5,478,47"/>
-<area shape="rect" id="node3" href="$classCApplicationData.html#aee18c113e9a0acb3cad3d63eb19de71b" title="CApplicationData::ChangeMode" alt="" coords="543,71,772,98"/>
-<area shape="rect" id="node4" href="$classCApplicationData.html#a3647cf78eb59689b901d4204c81555b4" title="CApplicationData::Options\lButtonCallback" alt="" coords="276,123,471,164"/>
-<area shape="rect" id="node5" href="$classCApplicationData.html#aad04c7da1cc86bef623efda1019907fd" title="CApplicationData::ValidHostname\lCallback" alt="" coords="252,188,495,229"/>
-<area shape="rect" id="node6" href="$classCApplicationData.html#adc8125cc7c4ad01bdd43e6550c6ba133" title="CApplicationData::ValidPort\lNumberCallback" alt="" coords="272,253,475,295"/>
+<area shape="rect" id="node2" href="$classCApplicationData.html#aee18c113e9a0acb3cad3d63eb19de71b" title="CApplicationData::ChangeMode" alt="" coords="543,43,772,69"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#a4410839118b5b74dab798ad7be6f703b" title="CApplicationData::MainMenu\lButtonCallback" alt="" coords="269,35,478,77"/>
+<area shape="rect" id="node4" href="$classCApplicationData.html#a3647cf78eb59689b901d4204c81555b4" title="CApplicationData::Options\lButtonCallback" alt="" coords="276,101,471,142"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#aad04c7da1cc86bef623efda1019907fd" title="CApplicationData::ValidHostname\lCallback" alt="" coords="252,166,495,207"/>
+<area shape="rect" id="node6" href="$classCApplicationData.html#adc8125cc7c4ad01bdd43e6550c6ba133" title="CApplicationData::ValidPort\lNumberCallback" alt="" coords="272,231,475,273"/>
 </map>

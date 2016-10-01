@@ -1,11 +1,11 @@
 <map id="CPosition::AdjacentTileDirection" name="CPosition::AdjacentTileDirection">
-<area shape="rect" id="node2" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="295,31,467,57"/>
-<area shape="rect" id="node3" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="304,81,459,108"/>
-<area shape="rect" id="node4" href="$classCPosition.html#a91fd43eeb2c894bcb7577ae87247b726" title="CPosition::ClosestPosition" alt="" coords="284,132,479,159"/>
-<area shape="rect" id="node5" href="$classCPosition.html#acd96d507f44c0fdf13036ebc1a09e59c" title="CPosition::DistanceSquared" alt="" coords="527,5,731,32"/>
-<area shape="rect" id="node6" href="$classCPosition.html#aa5955d67d5ab7ca74d80cb7303b6eaa9" title="CPosition::IncrementX" alt="" coords="544,56,713,83"/>
-<area shape="rect" id="node7" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="552,107,705,133"/>
-<area shape="rect" id="node8" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="577,157,680,184"/>
-<area shape="rect" id="node9" href="$classCPosition.html#a3f2a26798bb27b1252ff1be303b3adfc" title="CPosition::IncrementY" alt="" coords="545,208,713,235"/>
-<area shape="rect" id="node10" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="549,259,708,285"/>
+<area shape="rect" id="node2" href="$classCPosition.html#a91fd43eeb2c894bcb7577ae87247b726" title="CPosition::ClosestPosition" alt="" coords="284,132,479,159"/>
+<area shape="rect" id="node9" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="295,183,467,209"/>
+<area shape="rect" id="node10" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="304,233,459,260"/>
+<area shape="rect" id="node3" href="$classCPosition.html#acd96d507f44c0fdf13036ebc1a09e59c" title="CPosition::DistanceSquared" alt="" coords="527,5,731,32"/>
+<area shape="rect" id="node4" href="$classCPosition.html#aa5955d67d5ab7ca74d80cb7303b6eaa9" title="CPosition::IncrementX" alt="" coords="544,56,713,83"/>
+<area shape="rect" id="node5" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="552,107,705,133"/>
+<area shape="rect" id="node6" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="577,157,680,184"/>
+<area shape="rect" id="node7" href="$classCPosition.html#a3f2a26798bb27b1252ff1be303b3adfc" title="CPosition::IncrementY" alt="" coords="545,208,713,235"/>
+<area shape="rect" id="node8" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="549,259,708,285"/>
 </map>

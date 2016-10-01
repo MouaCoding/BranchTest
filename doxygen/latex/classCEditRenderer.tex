@@ -89,6 +89,10 @@ Definition at line 24 of file Edit\+Renderer.\+h.
 Definition at line 19 of file Edit\+Renderer.\+cpp.
 
 
+
+References D\+Background\+Color, D\+Black\+Index, D\+Color\+Tileset, D\+Dark\+Indices, D\+Font, D\+Gold\+Index, D\+Height, D\+Inner\+Bevel, D\+Light\+Indices, D\+Red\+Index, D\+White\+Index, D\+Width, Minimum\+Characters(), pc\+Black, pc\+Blue, pc\+Green, pc\+Max, pc\+None, pc\+Orange, pc\+Purple, pc\+Red, pc\+White, and pc\+Yellow.
+
+
 \begin{DoxyCode}
 19                                                                                                            
                                       \{
@@ -129,8 +133,7 @@ Definition at line 19 of file Edit\+Renderer.\+cpp.
 52     \hyperlink{classCEditRenderer_a36726cc31fedec0820076c03186158e7}{MinimumCharacters}(16);
 53 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -149,6 +152,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 47 of file Edit\+Renderer.\+h.
+
+
+
+References D\+Background\+Color.
 
 
 \begin{DoxyCode}
@@ -181,6 +188,14 @@ Definition at line 51 of file Edit\+Renderer.\+h.
 
 
 Definition at line 99 of file Edit\+Renderer.\+cpp.
+
+
+
+References D\+Background\+Color, D\+Black\+Index, D\+Color\+Tileset, D\+Dark\+Indices, D\+Font, D\+Gold\+Index, D\+Height, D\+Inner\+Bevel, D\+Light\+Indices, D\+Red\+Index, D\+Text, D\+Text\+Valid, D\+White\+Index, and D\+Width.
+
+
+
+Referenced by Height().
 
 
 \begin{DoxyCode}
@@ -240,8 +255,7 @@ Definition at line 99 of file Edit\+Renderer.\+cpp.
 148     g\_object\_unref(TempGC);
 149 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -259,13 +273,16 @@ Here is the caller graph for this function\+:
 Definition at line 73 of file Edit\+Renderer.\+h.
 
 
+
+References D\+Height, and Draw\+Edit().
+
+
 \begin{DoxyCode}
 73                           \{
 74             \textcolor{keywordflow}{return} \hyperlink{classCEditRenderer_ade8dedb4f9790d28b38da8ef20a171cb}{DHeight};    
 75         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -281,6 +298,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 92 of file Edit\+Renderer.\+cpp.
+
+
+
+References D\+Height, and D\+Minimum\+Height.
 
 
 \begin{DoxyCode}
@@ -302,13 +323,20 @@ Definition at line 92 of file Edit\+Renderer.\+cpp.
 Definition at line 61 of file Edit\+Renderer.\+h.
 
 
+
+References D\+Minimum\+Characters.
+
+
+
+Referenced by C\+Edit\+Renderer().
+
+
 \begin{DoxyCode}
 61                                      \{
 62             \textcolor{keywordflow}{return} \hyperlink{classCEditRenderer_ae5d0bd249b2d483c361b0bf9c16c15d3}{DMinimumCharacters};  
 63         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -324,6 +352,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 61 of file Edit\+Renderer.\+cpp.
+
+
+
+References D\+Font, D\+Height, D\+Inner\+Bevel, D\+Minimum\+Characters, D\+Minimum\+Height, D\+Minimum\+Width, and D\+Width.
 
 
 \begin{DoxyCode}
@@ -362,6 +394,10 @@ Definition at line 61 of file Edit\+Renderer.\+cpp.
 Definition at line 55 of file Edit\+Renderer.\+h.
 
 
+
+References D\+Text.
+
+
 \begin{DoxyCode}
 55                               \{
 56             \textcolor{keywordflow}{return} \hyperlink{classCEditRenderer_af79bf047383c610d4fc24d937e29c594}{DText};   
@@ -376,6 +412,10 @@ Definition at line 55 of file Edit\+Renderer.\+h.
 
 
 Definition at line 55 of file Edit\+Renderer.\+cpp.
+
+
+
+References D\+Text, and D\+Text\+Valid.
 
 
 \begin{DoxyCode}
@@ -396,6 +436,10 @@ Definition at line 55 of file Edit\+Renderer.\+cpp.
 Definition at line 67 of file Edit\+Renderer.\+h.
 
 
+
+References D\+Width.
+
+
 \begin{DoxyCode}
 67                          \{
 68             \textcolor{keywordflow}{return} \hyperlink{classCEditRenderer_ab203e5083f61d3575eb491f170c21d45}{DWidth};
@@ -410,6 +454,10 @@ Definition at line 67 of file Edit\+Renderer.\+h.
 
 
 Definition at line 85 of file Edit\+Renderer.\+cpp.
+
+
+
+References D\+Minimum\+Width, and D\+Width.
 
 
 \begin{DoxyCode}
@@ -433,6 +481,10 @@ Definition at line 85 of file Edit\+Renderer.\+cpp.
 
 Definition at line 31 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by Background\+Color(), C\+Edit\+Renderer(), and Draw\+Edit().
+
 \hypertarget{classCEditRenderer_a13b03f02ff6673d8df2d6509c17bcccc}{}\label{classCEditRenderer_a13b03f02ff6673d8df2d6509c17bcccc} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Black\+Index@{D\+Black\+Index}}
 \index{D\+Black\+Index@{D\+Black\+Index}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -442,6 +494,10 @@ Definition at line 31 of file Edit\+Renderer.\+h.
 
 
 Definition at line 42 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
 
 \hypertarget{classCEditRenderer_a43dfa83f85527019c7499e33ecaed149}{}\label{classCEditRenderer_a43dfa83f85527019c7499e33ecaed149} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Color\+Tileset@{D\+Color\+Tileset}}
@@ -453,6 +509,10 @@ Definition at line 42 of file Edit\+Renderer.\+h.
 
 Definition at line 26 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
+
 \hypertarget{classCEditRenderer_a6bbd6668cec64e318d5e814423bac3ca}{}\label{classCEditRenderer_a6bbd6668cec64e318d5e814423bac3ca} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Dark\+Indices@{D\+Dark\+Indices}}
 \index{D\+Dark\+Indices@{D\+Dark\+Indices}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -462,6 +522,10 @@ Definition at line 26 of file Edit\+Renderer.\+h.
 
 
 Definition at line 29 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
 
 \hypertarget{classCEditRenderer_afd108ae6cb3e9eeffce881a1ada0f0db}{}\label{classCEditRenderer_afd108ae6cb3e9eeffce881a1ada0f0db} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Font@{D\+Font}}
@@ -473,6 +537,10 @@ Definition at line 29 of file Edit\+Renderer.\+h.
 
 Definition at line 30 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), Draw\+Edit(), and Minimum\+Characters().
+
 \hypertarget{classCEditRenderer_adef6e0cd1cc67b18a196bbac95a7306b}{}\label{classCEditRenderer_adef6e0cd1cc67b18a196bbac95a7306b} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Gold\+Index@{D\+Gold\+Index}}
 \index{D\+Gold\+Index@{D\+Gold\+Index}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -482,6 +550,10 @@ Definition at line 30 of file Edit\+Renderer.\+h.
 
 
 Definition at line 40 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
 
 \hypertarget{classCEditRenderer_ade8dedb4f9790d28b38da8ef20a171cb}{}\label{classCEditRenderer_ade8dedb4f9790d28b38da8ef20a171cb} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Height@{D\+Height}}
@@ -493,6 +565,10 @@ Definition at line 40 of file Edit\+Renderer.\+h.
 
 Definition at line 38 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), Draw\+Edit(), Height(), and Minimum\+Characters().
+
 \hypertarget{classCEditRenderer_a45b1bf4e9aebe3811c15df1018b8d8da}{}\label{classCEditRenderer_a45b1bf4e9aebe3811c15df1018b8d8da} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Inner\+Bevel@{D\+Inner\+Bevel}}
 \index{D\+Inner\+Bevel@{D\+Inner\+Bevel}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -502,6 +578,10 @@ Definition at line 38 of file Edit\+Renderer.\+h.
 
 
 Definition at line 27 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by C\+Edit\+Renderer(), Draw\+Edit(), and Minimum\+Characters().
 
 \hypertarget{classCEditRenderer_aa1d5d41e26d759abd3ff5ba8edc4d692}{}\label{classCEditRenderer_aa1d5d41e26d759abd3ff5ba8edc4d692} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Light\+Indices@{D\+Light\+Indices}}
@@ -513,6 +593,10 @@ Definition at line 27 of file Edit\+Renderer.\+h.
 
 Definition at line 28 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
+
 \hypertarget{classCEditRenderer_ae5d0bd249b2d483c361b0bf9c16c15d3}{}\label{classCEditRenderer_ae5d0bd249b2d483c361b0bf9c16c15d3} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Minimum\+Characters@{D\+Minimum\+Characters}}
 \index{D\+Minimum\+Characters@{D\+Minimum\+Characters}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -522,6 +606,10 @@ Definition at line 28 of file Edit\+Renderer.\+h.
 
 
 Definition at line 34 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by Minimum\+Characters().
 
 \hypertarget{classCEditRenderer_a9e063123747e147ef1c35bd962205fbd}{}\label{classCEditRenderer_a9e063123747e147ef1c35bd962205fbd} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Minimum\+Height@{D\+Minimum\+Height}}
@@ -533,6 +621,10 @@ Definition at line 34 of file Edit\+Renderer.\+h.
 
 Definition at line 36 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by Height(), and Minimum\+Characters().
+
 \hypertarget{classCEditRenderer_aba068f1e6d267e5ac0ed5752304133e8}{}\label{classCEditRenderer_aba068f1e6d267e5ac0ed5752304133e8} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Minimum\+Width@{D\+Minimum\+Width}}
 \index{D\+Minimum\+Width@{D\+Minimum\+Width}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -542,6 +634,10 @@ Definition at line 36 of file Edit\+Renderer.\+h.
 
 
 Definition at line 35 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by Minimum\+Characters(), and Width().
 
 \hypertarget{classCEditRenderer_a77ce4df48e03a8b9245f2045c2c3c4e7}{}\label{classCEditRenderer_a77ce4df48e03a8b9245f2045c2c3c4e7} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Red\+Index@{D\+Red\+Index}}
@@ -553,6 +649,10 @@ Definition at line 35 of file Edit\+Renderer.\+h.
 
 Definition at line 41 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
+
 \hypertarget{classCEditRenderer_af79bf047383c610d4fc24d937e29c594}{}\label{classCEditRenderer_af79bf047383c610d4fc24d937e29c594} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Text@{D\+Text}}
 \index{D\+Text@{D\+Text}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -562,6 +662,10 @@ Definition at line 41 of file Edit\+Renderer.\+h.
 
 
 Definition at line 32 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by Draw\+Edit(), and Text().
 
 \hypertarget{classCEditRenderer_ab4f0c6b356170adad1ad3b3e16573966}{}\label{classCEditRenderer_ab4f0c6b356170adad1ad3b3e16573966} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Text\+Valid@{D\+Text\+Valid}}
@@ -573,6 +677,10 @@ Definition at line 32 of file Edit\+Renderer.\+h.
 
 Definition at line 33 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by Draw\+Edit(), and Text().
+
 \hypertarget{classCEditRenderer_aaa97fde55438f6ad02cbb365097a2274}{}\label{classCEditRenderer_aaa97fde55438f6ad02cbb365097a2274} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+White\+Index@{D\+White\+Index}}
 \index{D\+White\+Index@{D\+White\+Index}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -583,6 +691,10 @@ Definition at line 33 of file Edit\+Renderer.\+h.
 
 Definition at line 39 of file Edit\+Renderer.\+h.
 
+
+
+Referenced by C\+Edit\+Renderer(), and Draw\+Edit().
+
 \hypertarget{classCEditRenderer_ab203e5083f61d3575eb491f170c21d45}{}\label{classCEditRenderer_ab203e5083f61d3575eb491f170c21d45} 
 \index{C\+Edit\+Renderer@{C\+Edit\+Renderer}!D\+Width@{D\+Width}}
 \index{D\+Width@{D\+Width}!C\+Edit\+Renderer@{C\+Edit\+Renderer}}
@@ -592,6 +704,10 @@ Definition at line 39 of file Edit\+Renderer.\+h.
 
 
 Definition at line 37 of file Edit\+Renderer.\+h.
+
+
+
+Referenced by C\+Edit\+Renderer(), Draw\+Edit(), Minimum\+Characters(), and Width().
 
 
 

@@ -1,10 +1,10 @@
 <map id="CPosition::HalfTileHeight" name="CPosition::HalfTileHeight">
-<area shape="rect" id="node2" href="$classCAssetRenderer.html#a5497eeabf031cbebbaa1c92c959a9c47" title="CAssetRenderer::DrawAssets" alt="" coords="249,5,464,32"/>
-<area shape="rect" id="node3" href="$classCAssetRenderer.html#ad9e2ab45919abbec23871b85a95ba8cf" title="CAssetRenderer::DrawSelections" alt="" coords="237,56,476,83"/>
-<area shape="rect" id="node4" href="$classCAssetRenderer.html#a1d2941f9b7aa116f578642c62410bb4a" title="CAssetRenderer::DrawOverlays" alt="" coords="242,107,471,133"/>
-<area shape="rect" id="node5" href="$classCAssetRenderer.html#af9cdf65db6c87c8cfd94fc4a84066b3e" title="CAssetRenderer::DrawPlacement" alt="" coords="236,157,477,184"/>
-<area shape="rect" id="node6" href="$classCGameModel.html#a699325d41d7ff27bda47bfb3048cfd8f" title="CGameModel::Timestep" alt="" coords="267,208,446,235"/>
-<area shape="rect" id="node7" href="$classCPosition.html#a65124e3543c2d2e284e5eb517cd7f842" title="CPosition::DirectionTo" alt="" coords="271,259,442,285"/>
-<area shape="rect" id="node8" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="525,259,688,285"/>
-<area shape="rect" id="node9" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="736,259,923,285"/>
+<area shape="rect" id="node2" href="$classCPosition.html#a65124e3543c2d2e284e5eb517cd7f842" title="CPosition::DirectionTo" alt="" coords="271,5,442,32"/>
+<area shape="rect" id="node5" href="$classCAssetRenderer.html#a5497eeabf031cbebbaa1c92c959a9c47" title="CAssetRenderer::DrawAssets" alt="" coords="249,56,464,83"/>
+<area shape="rect" id="node6" href="$classCAssetRenderer.html#a1d2941f9b7aa116f578642c62410bb4a" title="CAssetRenderer::DrawOverlays" alt="" coords="242,107,471,133"/>
+<area shape="rect" id="node7" href="$classCAssetRenderer.html#af9cdf65db6c87c8cfd94fc4a84066b3e" title="CAssetRenderer::DrawPlacement" alt="" coords="236,157,477,184"/>
+<area shape="rect" id="node8" href="$classCAssetRenderer.html#ad9e2ab45919abbec23871b85a95ba8cf" title="CAssetRenderer::DrawSelections" alt="" coords="237,208,476,235"/>
+<area shape="rect" id="node9" href="$classCGameModel.html#a699325d41d7ff27bda47bfb3048cfd8f" title="CGameModel::Timestep" alt="" coords="267,259,446,285"/>
+<area shape="rect" id="node3" href="$classCPosition.html#abe4ef039d9bbf51cd542167b5a0cd88e" title="CPosition::TileAligned" alt="" coords="525,5,688,32"/>
+<area shape="rect" id="node4" href="$classCPlayerAsset.html#aaaea60176986f3e4f464bf5cec056521" title="CPlayerAsset::TileAligned" alt="" coords="736,5,923,32"/>
 </map>

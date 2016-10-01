@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityMineHarvest}\index{C\+Player\+Capability\+Mine\+Harvest@{C\+Player\+Capability\+Mine\+Harvest}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Mine\+Harvest\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Mine\+Harvest\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Mine\+Harvest\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Mine\+Harvest\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Mine\+Harvest\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -87,11 +85,14 @@ Definition at line 152 of file Basic\+Capabilities.\+cpp.
 Definition at line 139 of file Basic\+Capabilities.\+cpp.
 
 
+
+References C\+Player\+Capability\+Move\+::\+Apply\+Capability(), C\+Player\+Capability\+Move\+::\+Can\+Apply(), C\+Player\+Capability\+Move\+::\+Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 139 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,6 +117,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 Definition at line 177 of file Basic\+Capabilities.\+cpp.
 
 
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, and S\+Asset\+Command\+::\+D\+Capability.
+
+
+
+Referenced by C\+Player\+Capability\+Stand\+Ground\+::$\sim$\+C\+Player\+Capability\+Stand\+Ground().
+
+
 \begin{DoxyCode}
 177                                                                                                            
                                                                \{
@@ -132,16 +141,14 @@ Definition at line 177 of file Basic\+Capabilities.\+cpp.
 187     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 188 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityMineHarvest_a76a72fe97148f5026e67aab24ab21b21_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -161,6 +168,14 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 
 
 Definition at line 160 of file Basic\+Capabilities.\+cpp.
+
+
+
+References act\+Mine, at\+Gold\+Mine, at\+None, and C\+Terrain\+Map\+::tt\+Tree.
+
+
+
+Referenced by C\+Player\+Capability\+Stand\+Ground\+::$\sim$\+C\+Player\+Capability\+Stand\+Ground().
 
 
 \begin{DoxyCode}
@@ -183,8 +198,7 @@ Definition at line 160 of file Basic\+Capabilities.\+cpp.
       ());
 175 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,14 +220,21 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 Definition at line 156 of file Basic\+Capabilities.\+cpp.
 
 
+
+References act\+Mine.
+
+
+
+Referenced by C\+Player\+Capability\+Stand\+Ground\+::$\sim$\+C\+Player\+Capability\+Stand\+Ground().
+
+
 \begin{DoxyCode}
 156                                                                                                            
                      \{
 157     \textcolor{keywordflow}{return} actor->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine});
 158 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -232,6 +253,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 123 of file Basic\+Capabilities.\+cpp.
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Mine\+Harvest().
 
 
 

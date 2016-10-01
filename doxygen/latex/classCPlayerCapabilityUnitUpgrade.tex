@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityUnitUpgrade}\index{C\+Player\+Capability\+Unit\+Upgrade@{C\+Player\+Capability\+Unit\+Upgrade}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Unit\+Upgrade\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Unit\+Upgrade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Unit\+Upgrade\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Unit\+Upgrade\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Unit\+Upgrade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,14 +73,21 @@ Definition at line 21 of file Unit\+Upgrade\+Capabilities.\+cpp.
 Definition at line 71 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References D\+Upgrade\+Name.
+
+
+
+Referenced by C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Registrant\+::\+C\+Registrant().
+
+
 \begin{DoxyCode}
 71                                                                                        : 
       \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(upgradename, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone})\{
 72     \hyperlink{classCPlayerCapabilityUnitUpgrade_a5de8bffd6935c699f431329ad4ee5eec}{DUpgradeName} = upgradename;
 73 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -100,11 +105,14 @@ Here is the caller graph for this function\+:
 Definition at line 50 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References Apply\+Capability(), Can\+Apply(), Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 50 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,6 +135,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 
 
 Definition at line 100 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, S\+Asset\+Command\+::\+D\+Capability, D\+Upgrade\+Name, C\+Player\+Upgrade\+::\+Find\+Upgrade\+From\+Name(), and C\+Player\+Asset\+::\+Update\+Frequency().
+
+
+
+Referenced by C\+Player\+Capability\+Build\+Ranger\+::$\sim$\+C\+Player\+Capability\+Build\+Ranger(), and $\sim$\+C\+Player\+Capability\+Unit\+Upgrade().
 
 
 \begin{DoxyCode}
@@ -152,16 +168,14 @@ Definition at line 100 of file Unit\+Upgrade\+Capabilities.\+cpp.
 115     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 116 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,22 +197,28 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 96 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References Can\+Initiate().
+
+
+
+Referenced by C\+Player\+Capability\+Build\+Ranger\+::$\sim$\+C\+Player\+Capability\+Build\+Ranger(), and $\sim$\+C\+Player\+Capability\+Unit\+Upgrade().
+
+
 \begin{DoxyCode}
 96                                                                                                            
                                                         \{
 97     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9}{CanInitiate}(actor, playerdata);
 98 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,6 +238,14 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 
 
 Definition at line 75 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References D\+Upgrade\+Name, and C\+Player\+Upgrade\+::\+Find\+Upgrade\+From\+Name().
+
+
+
+Referenced by Can\+Apply(), C\+Player\+Capability\+Build\+Ranger\+::$\sim$\+C\+Player\+Capability\+Build\+Ranger(), and $\sim$\+C\+Player\+Capability\+Unit\+Upgrade().
 
 
 \begin{DoxyCode}
@@ -244,16 +272,14 @@ Definition at line 75 of file Unit\+Upgrade\+Capabilities.\+cpp.
 93     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 94 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -273,6 +299,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 27 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Unit\+Upgrade().
+
 \hypertarget{classCPlayerCapabilityUnitUpgrade_a5de8bffd6935c699f431329ad4ee5eec}{}\label{classCPlayerCapabilityUnitUpgrade_a5de8bffd6935c699f431329ad4ee5eec} 
 \index{C\+Player\+Capability\+Unit\+Upgrade@{C\+Player\+Capability\+Unit\+Upgrade}!D\+Upgrade\+Name@{D\+Upgrade\+Name}}
 \index{D\+Upgrade\+Name@{D\+Upgrade\+Name}!C\+Player\+Capability\+Unit\+Upgrade@{C\+Player\+Capability\+Unit\+Upgrade}}
@@ -282,6 +312,10 @@ Definition at line 27 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 46 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by Apply\+Capability(), Can\+Initiate(), and C\+Player\+Capability\+Unit\+Upgrade().
 
 
 

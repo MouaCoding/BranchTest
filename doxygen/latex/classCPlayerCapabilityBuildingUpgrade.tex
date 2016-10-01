@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityBuildingUpgrade}\index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Building\+Upgrade\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Building\+Upgrade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Building\+Upgrade\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Building\+Upgrade\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Building\+Upgrade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,14 +73,21 @@ Definition at line 21 of file Building\+Upgrade\+Capabilities.\+cpp.
 Definition at line 66 of file Building\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References D\+Building\+Name.
+
+
+
+Referenced by C\+Player\+Capability\+Building\+Upgrade\+::\+C\+Registrant\+::\+C\+Registrant().
+
+
 \begin{DoxyCode}
 66                                                                                                 : 
       \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Build"}) + buildingname, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone})\{
 67     \hyperlink{classCPlayerCapabilityBuildingUpgrade_a244e767a3e669441cfb03c13bf703e64}{DBuildingName} = buildingname;
 68 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -100,11 +105,14 @@ Here is the caller graph for this function\+:
 Definition at line 50 of file Building\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References Apply\+Capability(), Can\+Apply(), Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 50 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,6 +135,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 
 
 Definition at line 93 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, D\+Building\+Name, S\+Asset\+Command\+::\+D\+Capability, and C\+Player\+Asset\+::\+Update\+Frequency().
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Building\+Upgrade().
 
 
 \begin{DoxyCode}
@@ -152,16 +168,14 @@ Definition at line 93 of file Building\+Upgrade\+Capabilities.\+cpp.
 109     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 110 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a5e71446b74307f31ce6d6e9bbfd9a681_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,22 +197,28 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 89 of file Building\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References Can\+Initiate().
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Building\+Upgrade().
+
+
 \begin{DoxyCode}
 89                                                                                                            
                                                             \{
 90     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildingUpgrade_af515cec6f1a28607864c853307e17d7c}{CanInitiate}(actor, playerdata);
 91 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityBuildingUpgrade_a22de7902bcf6406a3b3a7c51e5c56f35_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -218,6 +238,14 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 
 
 Definition at line 70 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References D\+Building\+Name.
+
+
+
+Referenced by Can\+Apply(), and $\sim$\+C\+Player\+Capability\+Building\+Upgrade().
 
 
 \begin{DoxyCode}
@@ -241,8 +269,7 @@ Definition at line 70 of file Building\+Upgrade\+Capabilities.\+cpp.
 86     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 87 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -262,6 +289,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 46 of file Building\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by Apply\+Capability(), Can\+Initiate(), and C\+Player\+Capability\+Building\+Upgrade().
+
 \hypertarget{classCPlayerCapabilityBuildingUpgrade_abbc814330c1c8e96abb2f0c512e8abb3}{}\label{classCPlayerCapabilityBuildingUpgrade_abbc814330c1c8e96abb2f0c512e8abb3} 
 \index{C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}!D\+Registrant@{D\+Registrant}}
 \index{D\+Registrant@{D\+Registrant}!C\+Player\+Capability\+Building\+Upgrade@{C\+Player\+Capability\+Building\+Upgrade}}
@@ -271,6 +302,10 @@ Definition at line 46 of file Building\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 27 of file Building\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Building\+Upgrade().
 
 
 

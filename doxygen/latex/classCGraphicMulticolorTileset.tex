@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Graphic\+Multicolor\+Tileset\+:
-\nopagebreak
+Inheritance diagram for C\+Graphic\+Multicolor\+Tileset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for C\+Graphic\+Multicolor\+Tileset\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Graphic\+Multicolor\+Tileset\+:
-\nopagebreak
+Collaboration diagram for C\+Graphic\+Multicolor\+Tileset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -79,6 +77,10 @@ Definition at line 20 of file Graphic\+Multicolor\+Tileset.\+cpp.
 Definition at line 24 of file Graphic\+Multicolor\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tilesets.
+
+
 \begin{DoxyCode}
 24                                                      \{
 25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} Index = 1; Index < \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.size(); Index++)\{
@@ -100,13 +102,16 @@ Definition at line 24 of file Graphic\+Multicolor\+Tileset.\+cpp.
 Definition at line 34 of file Graphic\+Multicolor\+Tileset.\+h.
 
 
+
+References Draw\+Tile(), and Load\+Tileset().
+
+
 \begin{DoxyCode}
 34                               \{
 35             \textcolor{keywordflow}{return} \hyperlink{classCGraphicMulticolorTileset_a30809d113b0f314944425a3c8f21408c}{DPixbufTilesets}.size();  
 36         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,6 +129,14 @@ Here is the call graph for this function\+:
 Definition at line 63 of file Graphic\+Multicolor\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tilesets, C\+Graphic\+Tileset\+::\+D\+Tile\+Count, C\+Graphic\+Tileset\+::\+D\+Tile\+Height, and C\+Graphic\+Tileset\+::\+D\+Tile\+Width.
+
+
+
+Referenced by Color\+Count().
+
+
 \begin{DoxyCode}
 63                                                                                                            
                         \{
@@ -137,8 +150,7 @@ Definition at line 63 of file Graphic\+Multicolor\+Tileset.\+cpp.
       \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight}, xpos, ypos, \hyperlink{classCGraphicTileset_a2d0c7d19865b81911a3a43d5cae50e00}{DTileWidth}, DTileHeight, GDK\_RGB\_DITHER\_NONE, 0, 0);
 71 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -154,6 +166,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 30 of file Graphic\+Multicolor\+Tileset.\+cpp.
+
+
+
+References D\+E\+B\+U\+G\+\_\+\+L\+OW, C\+Graphic\+Tileset\+::\+D\+Pixbuf\+Tileset, D\+Pixbuf\+Tilesets, C\+Graphic\+Tileset\+::\+Load\+Tileset(), and Print\+Debug.
+
+
+
+Referenced by Color\+Count().
 
 
 \begin{DoxyCode}
@@ -192,16 +212,14 @@ Definition at line 30 of file Graphic\+Multicolor\+Tileset.\+cpp.
 60     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 61 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCGraphicMulticolorTileset_a6ab975d5bc2ba0ed892de03bba9242cc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,6 +238,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 28 of file Graphic\+Multicolor\+Tileset.\+h.
+
+
+
+Referenced by Draw\+Tile(), Load\+Tileset(), and $\sim$\+C\+Graphic\+Multicolor\+Tileset().
 
 
 

@@ -135,6 +135,8 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="GameModel_8cpp_source.html#l00024">24</a> of file <a class="el" href="GameModel_8cpp_source.html">GameModel.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="GameModel_8cpp_source.html#l00312">CPlayerData::FindBestAssetPlacement()</a>.</p>
+
 </div>
 </div>
 <a id="a3acffbd305ee72dcd4593c0d8af64a4f"></a>
@@ -185,6 +187,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="GameModel_8cpp_source.html#l00027">27</a> of file <a class="el" href="GameModel_8cpp_source.html">GameModel.cpp</a>.</p>
+
+<p>References <a class="el" href="Position_8h_source.html#l00046">CPosition::TileWidth()</a>.</p>
+
+<p>Referenced by <a class="el" href="GameModel_8cpp_source.html#l00281">CPlayerData::FindNearestEnemy()</a>, and <a class="el" href="GameModel_8cpp_source.html#l00519">CGameModel::Timestep()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                     {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    range *= <a class="code" href="classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8">CPosition::TileWidth</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    range *= range;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    range += <a class="code" href="classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8">CPosition::TileWidth</a>() * <a class="code" href="classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8">CPosition::TileWidth</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> range;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="ttc" id="classCPosition_html_a27a7a8b9a5541da0aa8d97d785650fb8"><div class="ttname"><a href="classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8">CPosition::TileWidth</a></div><div class="ttdeci">static int TileWidth()</div><div class="ttdef"><b>Definition:</b> <a href="Position_8h_source.html#l00046">Position.h:46</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>

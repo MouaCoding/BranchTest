@@ -200,6 +200,10 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00071">71</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00046">DUpgradeName</a>.</p>
+
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00059">CPlayerCapabilityUnitUpgrade::CRegistrant::CRegistrant()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                                                                       : <a class="code" href="classCPlayerCapability.html#a303de62aba5d3f65d9a8e013c64a96c1">CPlayerCapability</a>(upgradename, <a class="code" href="classCPlayerCapability.html#a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929">ttNone</a>){</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">DUpgradeName</a> = upgradename;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="ttc" id="classCPlayerCapability_html_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929"><div class="ttname"><a href="classCPlayerCapability.html#a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929">CPlayerCapability::ttNone</a></div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00046">PlayerAsset.h:46</a></div></div>
 <div class="ttc" id="classCPlayerCapability_html_a303de62aba5d3f65d9a8e013c64a96c1"><div class="ttname"><a href="classCPlayerCapability.html#a303de62aba5d3f65d9a8e013c64a96c1">CPlayerCapability::CPlayerCapability</a></div><div class="ttdeci">CPlayerCapability(const std::string &amp;name, ETargetType targettype)</div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8cpp_source.html#l00070">PlayerAsset.cpp:70</a></div></div>
 <div class="ttc" id="classCPlayerCapabilityUnitUpgrade_html_a5de8bffd6935c699f431329ad4ee5eec"><div class="ttname"><a href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">CPlayerCapabilityUnitUpgrade::DUpgradeName</a></div><div class="ttdeci">std::string DUpgradeName</div><div class="ttdef"><b>Definition:</b> <a href="UnitUpgradeCapabilities_8cpp_source.html#l00046">UnitUpgradeCapabilities.cpp:46</a></div></div>
@@ -238,17 +242,19 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00050">50</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00100">ApplyCapability()</a>, <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00096">CanApply()</a>, <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00075">CanInitiate()</a>, and <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00027">DRegistrant</a>.</p>
 <div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{};</div></div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityUnitUpgrade_a7784e1fb92a26acb700c06ab38d2733b_cgraph.png" border="0" usemap="#classCPlayerCapabilityUnitUpgrade_a7784e1fb92a26acb700c06ab38d2733b_cgraph" alt=""/></div>
 <map name="classCPlayerCapabilityUnitUpgrade_a7784e1fb92a26acb700c06ab38d2733b_cgraph" id="classCPlayerCapabilityUnitUpgrade_a7784e1fb92a26acb700c06ab38d2733b_cgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#ad01fc5df598efea4063ac2bbf0ba34e9" title="CPlayerCapabilityUnitUpgrade\l::CanInitiate" alt="" coords="559,5,774,47"/>
-<area shape="rect" id="node4" href="classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="288,57,503,99"/>
-<area shape="rect" id="node5" href="classCPlayerCapabilityUnitUpgrade.html#a8cc6fee17dd178fd798e36c3d5301e9d" title="CPlayerCapabilityUnitUpgrade\l::ApplyCapability" alt="" coords="288,123,503,164"/>
-<area shape="rect" id="node3" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="831,35,1048,76"/>
-<area shape="rect" id="node6" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="590,123,743,164"/>
-<area shape="rect" id="node7" href="classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="551,189,783,215"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#a8cc6fee17dd178fd798e36c3d5301e9d" title="CPlayerCapabilityUnitUpgrade\l::ApplyCapability" alt="" coords="288,30,503,71"/>
+<area shape="rect" id="node6" href="classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="288,95,503,137"/>
+<area shape="rect" id="node7" href="classCPlayerCapabilityUnitUpgrade.html#ad01fc5df598efea4063ac2bbf0ba34e9" title="CPlayerCapabilityUnitUpgrade\l::CanInitiate" alt="" coords="559,147,774,189"/>
+<area shape="rect" id="node3" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="831,59,1048,101"/>
+<area shape="rect" id="node4" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="590,30,743,71"/>
+<area shape="rect" id="node5" href="classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="551,96,783,123"/>
 </map>
 </div>
 
@@ -298,6 +304,10 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#a2ca6fd7fbd9c0178f1cf1d049c63825f">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00100">100</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="GameDataTypes_8h_source.html#l00047">aaCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00071">CPlayerCapability::AssetCapabilityType()</a>, <a class="el" href="PlayerAsset_8h_source.html#l00315">SAssetCommand::DAction</a>, <a class="el" href="PlayerAsset_8h_source.html#l00318">SAssetCommand::DActivatedCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00317">SAssetCommand::DAssetTarget</a>, <a class="el" href="PlayerAsset_8h_source.html#l00316">SAssetCommand::DCapability</a>, <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00046">DUpgradeName</a>, <a class="el" href="PlayerAsset_8cpp_source.html#l00349">CPlayerUpgrade::FindUpgradeFromName()</a>, and <a class="el" href="PlayerAsset_8h_source.html#l00342">CPlayerAsset::UpdateFrequency()</a>.</p>
+
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00190">CPlayerCapabilityBuildRanger::~CPlayerCapabilityBuildRanger()</a>, and <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00050">~CPlayerCapabilityUnitUpgrade()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                                                                                                                                    {</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">auto</span> Upgrade = <a class="code" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e">CPlayerUpgrade::FindUpgradeFromName</a>(<a class="code" href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">DUpgradeName</a>);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span>(Upgrade){</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="structSAssetCommand.html">SAssetCommand</a> NewCommand;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        actor-&gt;ClearCommand();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a8edd3b3d59a76d5514ba403bc8076a75">DAction</a> = <a class="code" href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a734ea7c6847457b437360f333f570ff9">DCapability</a> = <a class="code" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98">AssetCapabilityType</a>();</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">DAssetTarget</a> = target;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#ad8beda19520811cc70fe1eab16c774dd">DActivatedCapability</a> = std::make_shared&lt; CActivatedCapability &gt;(actor, playerdata, target, actor-&gt;AssetType(), <a class="code" href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">DUpgradeName</a>, Upgrade-&gt;LumberCost(), Upgrade-&gt;GoldCost(), <a class="code" href="classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f">CPlayerAsset::UpdateFrequency</a>() * Upgrade-&gt;ResearchTime());</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        actor-&gt;PushCommand(NewCommand);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        </div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div><div class="ttc" id="structSAssetCommand_html_a3d9b43f6e59c386c48c41a65448a0c39"><div class="ttname"><a href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">SAssetCommand::DAssetTarget</a></div><div class="ttdeci">std::shared_ptr&lt; CPlayerAsset &gt; DAssetTarget</div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00317">PlayerAsset.h:317</a></div></div>
 <div class="ttc" id="structSAssetCommand_html"><div class="ttname"><a href="structSAssetCommand.html">SAssetCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00314">PlayerAsset.h:314</a></div></div>
 <div class="ttc" id="GameDataTypes_8h_html_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4"><div class="ttname"><a href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDataTypes_8h_source.html#l00047">GameDataTypes.h:47</a></div></div>
@@ -313,8 +323,8 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_cgraph.png" border="0" usemap="#classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_cgraph" alt=""/></div>
 <map name="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_cgraph" id="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_cgraph">
-<area shape="rect" id="node2" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="275,5,493,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="307,71,461,112"/>
+<area shape="rect" id="node2" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="307,5,461,47"/>
+<area shape="rect" id="node3" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="275,71,493,112"/>
 <area shape="rect" id="node4" href="classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="268,137,500,163"/>
 </map>
 </div>
@@ -323,8 +333,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_icgraph.png" border="0" usemap="#classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_icgraph" alt=""/></div>
 <map name="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_icgraph" id="classCPlayerCapabilityUnitUpgrade_a8cc6fee17dd178fd798e36c3d5301e9d_icgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="268,5,503,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="269,71,502,112"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="269,5,502,47"/>
+<area shape="rect" id="node3" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="268,71,503,112"/>
 </map>
 </div>
 
@@ -373,6 +383,10 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#ae96263e0950f496492f8baeb877b9554">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00096">96</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00075">CanInitiate()</a>.</p>
+
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00190">CPlayerCapabilityBuildRanger::~CPlayerCapabilityBuildRanger()</a>, and <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00050">~CPlayerCapabilityUnitUpgrade()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                                                                                                                             {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classCPlayerCapabilityUnitUpgrade.html#ad01fc5df598efea4063ac2bbf0ba34e9">CanInitiate</a>(actor, playerdata);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div><div class="ttc" id="classCPlayerCapabilityUnitUpgrade_html_ad01fc5df598efea4063ac2bbf0ba34e9"><div class="ttname"><a href="classCPlayerCapabilityUnitUpgrade.html#ad01fc5df598efea4063ac2bbf0ba34e9">CPlayerCapabilityUnitUpgrade::CanInitiate</a></div><div class="ttdeci">bool CanInitiate(std::shared_ptr&lt; CPlayerAsset &gt; actor, std::shared_ptr&lt; CPlayerData &gt; playerdata)</div><div class="ttdef"><b>Definition:</b> <a href="UnitUpgradeCapabilities_8cpp_source.html#l00075">UnitUpgradeCapabilities.cpp:75</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -388,8 +402,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd_icgraph.png" border="0" usemap="#classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd_icgraph" alt=""/></div>
 <map name="classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd_icgraph" id="classCPlayerCapabilityUnitUpgrade_a93d1a57f2cc52b90ce6cb714717bfefd_icgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="268,5,503,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="269,71,502,112"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="269,5,502,47"/>
+<area shape="rect" id="node3" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="268,71,503,112"/>
 </map>
 </div>
 
@@ -432,6 +446,10 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#aa83b1e1fcaff2985c378132d679154ea">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00075">75</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00046">DUpgradeName</a>, and <a class="el" href="PlayerAsset_8cpp_source.html#l00349">CPlayerUpgrade::FindUpgradeFromName()</a>.</p>
+
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00096">CanApply()</a>, <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00190">CPlayerCapabilityBuildRanger::~CPlayerCapabilityBuildRanger()</a>, and <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00050">~CPlayerCapabilityUnitUpgrade()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                                                                                                          {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">auto</span> Upgrade = <a class="code" href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e">CPlayerUpgrade::FindUpgradeFromName</a>(<a class="code" href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">DUpgradeName</a>);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>(Upgrade){</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">if</span>(Upgrade-&gt;LumberCost() &gt; playerdata-&gt;Lumber()){</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;   </div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">if</span>(Upgrade-&gt;GoldCost() &gt; playerdata-&gt;Gold()){</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;   </div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">/*</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">        if(!playerdata-&gt;AssetRequirementsMet(DUpgradeName)){</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">            return false;</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">        }</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">        */</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    </div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div><div class="ttc" id="classCPlayerCapabilityUnitUpgrade_html_a5de8bffd6935c699f431329ad4ee5eec"><div class="ttname"><a href="classCPlayerCapabilityUnitUpgrade.html#a5de8bffd6935c699f431329ad4ee5eec">CPlayerCapabilityUnitUpgrade::DUpgradeName</a></div><div class="ttdeci">std::string DUpgradeName</div><div class="ttdef"><b>Definition:</b> <a href="UnitUpgradeCapabilities_8cpp_source.html#l00046">UnitUpgradeCapabilities.cpp:46</a></div></div>
 <div class="ttc" id="classCPlayerUpgrade_html_af47a08aba3a1a5b2cefacef24065a82e"><div class="ttname"><a href="classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e">CPlayerUpgrade::FindUpgradeFromName</a></div><div class="ttdeci">static std::shared_ptr&lt; CPlayerUpgrade &gt; FindUpgradeFromName(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8cpp_source.html#l00349">PlayerAsset.cpp:349</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -447,9 +465,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9_icgraph.png" border="0" usemap="#classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9_icgraph" alt=""/></div>
 <map name="classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9_icgraph" id="classCPlayerCapabilityUnitUpgrade_ad01fc5df598efea4063ac2bbf0ba34e9_icgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="531,5,765,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="268,51,483,92"/>
-<area shape="rect" id="node4" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="531,84,765,125"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityUnitUpgrade.html#a93d1a57f2cc52b90ce6cb714717bfefd" title="CPlayerCapabilityUnitUpgrade\l::CanApply" alt="" coords="268,51,483,92"/>
+<area shape="rect" id="node3" href="classCPlayerCapabilityBuildRanger.html#a624146c70790e8a3d85db28a42a466d2" title="CPlayerCapabilityBuildRanger\l::~CPlayerCapabilityBuildRanger" alt="" coords="531,5,765,47"/>
+<area shape="rect" id="node4" href="classCPlayerCapabilityUnitUpgrade.html#a7784e1fb92a26acb700c06ab38d2733b" title="CPlayerCapabilityUnitUpgrade\l::~CPlayerCapabilityUnitUpgrade" alt="" coords="531,84,765,125"/>
 </map>
 </div>
 
@@ -478,6 +496,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00027">27</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
 
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00050">~CPlayerCapabilityUnitUpgrade()</a>.</p>
+
 </div>
 </div>
 <a id="a5de8bffd6935c699f431329ad4ee5eec"></a>
@@ -501,6 +521,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00046">46</a> of file <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html">UnitUpgradeCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00100">ApplyCapability()</a>, <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00075">CanInitiate()</a>, and <a class="el" href="UnitUpgradeCapabilities_8cpp_source.html#l00071">CPlayerCapabilityUnitUpgrade()</a>.</p>
 
 </div>
 </div>

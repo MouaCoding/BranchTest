@@ -1,6 +1,6 @@
 <map id="CPlayerCapabilityBuildRanger::ApplyCapability" name="CPlayerCapabilityBuildRanger::ApplyCapability">
-<area shape="rect" id="node2" href="$classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="274,5,491,47"/>
-<area shape="rect" id="node3" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="306,71,459,112"/>
-<area shape="rect" id="node4" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="267,137,499,163"/>
-<area shape="rect" id="node5" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="305,187,460,214"/>
+<area shape="rect" id="node2" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="306,5,459,47"/>
+<area shape="rect" id="node3" href="$classCPlayerUpgrade.html#af47a08aba3a1a5b2cefacef24065a82e" title="CPlayerUpgrade::FindUpgrade\lFromName" alt="" coords="274,71,491,112"/>
+<area shape="rect" id="node4" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="305,137,460,163"/>
+<area shape="rect" id="node5" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="267,187,499,214"/>
 </map>

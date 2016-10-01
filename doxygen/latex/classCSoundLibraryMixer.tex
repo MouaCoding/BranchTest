@@ -137,6 +137,10 @@ Definition at line 31 of file Sound\+Library\+Mixer.\+h.
 Definition at line 30 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Fluid\+Audio\+Driver, D\+Fluid\+Player, D\+Fluid\+Settings, D\+Fluid\+Synthesizer, D\+Free\+Clip\+I\+Ds, D\+Next\+Clip\+ID, D\+Next\+Tone\+ID, D\+Port\+Audio\+Initialized, D\+Sine\+Wave, and D\+Stream.
+
+
 \begin{DoxyCode}
 30                                       \{
 31     \hyperlink{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{DStream} = \textcolor{keyword}{nullptr};
@@ -164,6 +168,10 @@ Definition at line 30 of file Sound\+Library\+Mixer.\+cpp.
 
 
 Definition at line 47 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+Fluid\+Audio\+Driver, D\+Fluid\+Player, D\+Fluid\+Settings, D\+Fluid\+Synthesizer, D\+Port\+Audio\+Initialized, D\+Sine\+Wave, and D\+Stream.
 
 
 \begin{DoxyCode}
@@ -211,6 +219,14 @@ Definition at line 47 of file Sound\+Library\+Mixer.\+cpp.
 Definition at line 420 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Free\+Clip\+I\+Ds, and D\+Mutex.
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 420                                             \{
 421     std::list< int >::iterator ClipIDIterator;
@@ -231,8 +247,7 @@ Definition at line 420 of file Sound\+Library\+Mixer.\+cpp.
 436     \textcolor{keywordflow}{return} FoundID;
 437 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -266,6 +281,14 @@ Definition at line 77 of file Sound\+Library\+Mixer.\+h.
 Definition at line 93 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Sound\+Clips, and Sample\+Rate().
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 93                                                \{
 94     \textcolor{keywordflow}{if}((0 > index)||(index >= \hyperlink{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{DSoundClips}.size()))\{
@@ -275,16 +298,14 @@ Definition at line 93 of file Sound\+Library\+Mixer.\+cpp.
       \hyperlink{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94}{SampleRate}();
 98 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCSoundLibraryMixer_a0492c587cb62cd8945880a7de3dad490_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -302,6 +323,14 @@ Here is the caller graph for this function\+:
 Definition at line 77 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Mapping.
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 77                                                                \{
 78     std::map< std::string, int >::const\_iterator Iterator = \hyperlink{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{DMapping}.find(clipname);
@@ -311,8 +340,7 @@ Definition at line 77 of file Sound\+Library\+Mixer.\+cpp.
 82     \textcolor{keywordflow}{return} -1;
 83 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -330,6 +358,14 @@ Here is the caller graph for this function\+:
 Definition at line 85 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Music\+Mapping.
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 85                                                                \{
 86     std::map< std::string, int >::const\_iterator Iterator = \hyperlink{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{DMusicMapping}.find(songname);
@@ -339,8 +375,7 @@ Definition at line 85 of file Sound\+Library\+Mixer.\+cpp.
 90     \textcolor{keywordflow}{return} -1;
 91 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -356,6 +391,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 196 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+E\+B\+U\+G\+\_\+\+L\+OW, D\+Fluid\+Audio\+Driver, D\+Fluid\+Player, D\+Fluid\+Settings, D\+Fluid\+Synthesizer, D\+Mapping, D\+Music\+Data, D\+Music\+Filenames, D\+Music\+Mapping, D\+Port\+Audio\+Initialized, D\+Sample\+Rate, D\+Sine\+Wave, D\+Sound\+Clips, D\+Stream, F\+R\+A\+M\+E\+S\+\_\+\+P\+E\+R\+\_\+\+B\+U\+F\+F\+ER, M\+\_\+\+PI, Print\+Debug, Print\+Error, C\+Line\+Data\+Source\+::\+Read(), Sample\+Rate(), T\+E\+M\+P\+\_\+\+S\+F\+N\+A\+ME, and Timestep\+Callback().
+
+
+
+Referenced by Sample\+Rate().
 
 
 \begin{DoxyCode}
@@ -522,16 +565,14 @@ Definition at line 196 of file Sound\+Library\+Mixer.\+cpp.
 345     \textcolor{keywordflow}{return} ReturnStatus;
 346 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCSoundLibraryMixer_a9753684f44863e3c7cc4d319370cda1d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -547,6 +588,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 348 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+Clips\+In\+Progress, D\+Free\+Clip\+I\+Ds, C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+::\+D\+Identification, C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+::\+D\+Index, D\+Mutex, D\+Next\+Clip\+ID, C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+::\+D\+Offset, C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+::\+D\+Right\+Bias, D\+Sound\+Clips, C\+Sound\+Library\+Mixer\+::\+S\+Clip\+Status\+::\+D\+Volume, and Print\+Error.
+
+
+
+Referenced by Sample\+Rate().
 
 
 \begin{DoxyCode}
@@ -577,8 +626,7 @@ Definition at line 348 of file Sound\+Library\+Mixer.\+cpp.
 372     \textcolor{keywordflow}{return} TempClipStatus.DIdentification;
 373 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -594,6 +642,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 439 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+Fluid\+Player, D\+Fluid\+Synthesizer, and D\+Music\+Data.
+
+
+
+Referenced by Sample\+Rate().
 
 
 \begin{DoxyCode}
@@ -617,8 +673,7 @@ Definition at line 439 of file Sound\+Library\+Mixer.\+cpp.
 454     fluid\_player\_play(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
 455 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -634,6 +689,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 375 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Current\+Frequency, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Current\+Step, D\+Free\+Tone\+I\+Ds, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Frequency\+Decay, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Identification, D\+Mutex, D\+Next\+Tone\+ID, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Right\+Bias, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Right\+Shift, D\+Sample\+Rate, D\+Tones\+In\+Progress, C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Volume, and C\+Sound\+Library\+Mixer\+::\+S\+Tone\+Status\+::\+D\+Volume\+Decay.
+
+
+
+Referenced by Sample\+Rate().
 
 
 \begin{DoxyCode}
@@ -665,8 +728,7 @@ Definition at line 375 of file Sound\+Library\+Mixer.\+cpp.
 399     \textcolor{keywordflow}{return} TempToneStatus.DIdentification;
 400 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -684,21 +746,27 @@ Here is the caller graph for this function\+:
 Definition at line 81 of file Sound\+Library\+Mixer.\+h.
 
 
+
+References Clip\+Completed(), Clip\+Duration\+M\+S(), D\+Sample\+Rate, Find\+Clip(), Find\+Song(), Load\+Library(), Play\+Clip(), Play\+Song(), Play\+Tone(), Song\+Volume(), Stop\+Song(), Stop\+Tone(), Timestep(), and Timestep\+Callback().
+
+
+
+Referenced by Clip\+Duration\+M\+S(), and Load\+Library().
+
+
 \begin{DoxyCode}
 81                               \{
 82             \textcolor{keywordflow}{return} \hyperlink{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{DSampleRate};  
 83         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCSoundLibraryMixer_a03221f151dfe72381da5d0d0539bab94_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -716,13 +784,20 @@ Here is the caller graph for this function\+:
 Definition at line 462 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Fluid\+Synthesizer.
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 462                                                \{
 463     fluid\_synth\_set\_gain(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 0.2 * volume);
 464 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -740,14 +815,21 @@ Here is the caller graph for this function\+:
 Definition at line 457 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+Fluid\+Player, and D\+Fluid\+Synthesizer.
+
+
+
+Referenced by Sample\+Rate().
+
+
 \begin{DoxyCode}
 457                                  \{
 458     fluid\_player\_stop(\hyperlink{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{DFluidPlayer});
 459     fluid\_synth\_set\_gain(\hyperlink{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{DFluidSynthesizer}, 0.0);
 460 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -763,6 +845,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 402 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+Free\+Tone\+I\+Ds, D\+Mutex, and D\+Tones\+In\+Progress.
+
+
+
+Referenced by Sample\+Rate().
 
 
 \begin{DoxyCode}
@@ -784,8 +874,7 @@ Definition at line 402 of file Sound\+Library\+Mixer.\+cpp.
 417     \hyperlink{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{DMutex}.unlock();
 418 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -801,6 +890,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 110 of file Sound\+Library\+Mixer.\+cpp.
+
+
+
+References D\+Clips\+In\+Progress, D\+Free\+Clip\+I\+Ds, D\+Free\+Tone\+I\+Ds, D\+Mutex, D\+Sample\+Rate, D\+Sine\+Wave, D\+Sound\+Clips, and D\+Tones\+In\+Progress.
+
+
+
+Referenced by Sample\+Rate(), and Timestep\+Callback().
 
 
 \begin{DoxyCode}
@@ -896,8 +993,7 @@ Definition at line 110 of file Sound\+Library\+Mixer.\+cpp.
 193     \textcolor{keywordflow}{return} paContinue;
 194 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -915,6 +1011,14 @@ Here is the caller graph for this function\+:
 Definition at line 100 of file Sound\+Library\+Mixer.\+cpp.
 
 
+
+References D\+E\+B\+U\+G\+\_\+\+L\+OW, Print\+Debug, and Timestep().
+
+
+
+Referenced by Load\+Library(), and Sample\+Rate().
+
+
 \begin{DoxyCode}
 100                                                                                                            
                                                                       \{
@@ -927,16 +1031,14 @@ Definition at line 100 of file Sound\+Library\+Mixer.\+cpp.
 107     \textcolor{keywordflow}{return} Mixer->\hyperlink{classCSoundLibraryMixer_ad3ef0b67b77862e8c88949c3415095e7}{Timestep}(out, frames, timeinfo, status);
 108 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=344pt]{classCSoundLibraryMixer_a1d04553aa93769b8bff4bb5c8b7bdfa1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -956,6 +1058,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 54 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by Play\+Clip(), and Timestep().
+
 \hypertarget{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e}{}\label{classCSoundLibraryMixer_a4ba4ccc9c6603c98a5432042e779977e} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Audio\+Driver@{D\+Fluid\+Audio\+Driver}}
 \index{D\+Fluid\+Audio\+Driver@{D\+Fluid\+Audio\+Driver}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -965,6 +1071,10 @@ Definition at line 54 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 66 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), and $\sim$\+C\+Sound\+Library\+Mixer().
 
 \hypertarget{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c}{}\label{classCSoundLibraryMixer_a6773ddf83ef86bc27598f6c5cee61d9c} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Player@{D\+Fluid\+Player}}
@@ -976,6 +1086,10 @@ Definition at line 66 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 65 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), Play\+Song(), Stop\+Song(), and $\sim$\+C\+Sound\+Library\+Mixer().
+
 \hypertarget{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee}{}\label{classCSoundLibraryMixer_a2c6fb394c8bed99adb019576dc7f6eee} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Settings@{D\+Fluid\+Settings}}
 \index{D\+Fluid\+Settings@{D\+Fluid\+Settings}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -985,6 +1099,10 @@ Definition at line 65 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 63 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), and $\sim$\+C\+Sound\+Library\+Mixer().
 
 \hypertarget{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c}{}\label{classCSoundLibraryMixer_a6c1663c381dbf2aa18c82a23141f409c} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Fluid\+Synthesizer@{D\+Fluid\+Synthesizer}}
@@ -996,6 +1114,10 @@ Definition at line 63 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 64 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), Play\+Song(), Song\+Volume(), Stop\+Song(), and $\sim$\+C\+Sound\+Library\+Mixer().
+
 \hypertarget{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b}{}\label{classCSoundLibraryMixer_a32956ae09580a1ae4c9c037f0f7b5c0b} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Free\+Clip\+I\+Ds@{D\+Free\+Clip\+I\+Ds}}
 \index{D\+Free\+Clip\+I\+Ds@{D\+Free\+Clip\+I\+Ds}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1005,6 +1127,10 @@ Definition at line 64 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 56 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Clip\+Completed(), C\+Sound\+Library\+Mixer(), Play\+Clip(), and Timestep().
 
 \hypertarget{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164}{}\label{classCSoundLibraryMixer_a2d1389368651db10fd6fd8b3cd08c164} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Free\+Tone\+I\+Ds@{D\+Free\+Tone\+I\+Ds}}
@@ -1016,6 +1142,10 @@ Definition at line 56 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 57 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by Play\+Tone(), Stop\+Tone(), and Timestep().
+
 \hypertarget{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d}{}\label{classCSoundLibraryMixer_a8f193156cafc61b64f04ed88dcabd27d} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Mapping@{D\+Mapping}}
 \index{D\+Mapping@{D\+Mapping}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1025,6 +1155,10 @@ Definition at line 57 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 53 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Find\+Clip(), and Load\+Library().
 
 \hypertarget{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846}{}\label{classCSoundLibraryMixer_a494744db8ea800dd1443418711183846} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Data@{D\+Music\+Data}}
@@ -1036,6 +1170,10 @@ Definition at line 53 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 59 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by Load\+Library(), and Play\+Song().
+
 \hypertarget{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16}{}\label{classCSoundLibraryMixer_a105a9c5d911492518ac706039bf1de16} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Filenames@{D\+Music\+Filenames}}
 \index{D\+Music\+Filenames@{D\+Music\+Filenames}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1045,6 +1183,10 @@ Definition at line 59 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 58 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Load\+Library().
 
 \hypertarget{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a}{}\label{classCSoundLibraryMixer_ada2510450315651ebe948ce63960b98a} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Music\+Mapping@{D\+Music\+Mapping}}
@@ -1056,6 +1198,10 @@ Definition at line 58 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 60 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by Find\+Song(), and Load\+Library().
+
 \hypertarget{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb}{}\label{classCSoundLibraryMixer_a955562a0638df831413a1c6b8860f9fb} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Mutex@{D\+Mutex}}
 \index{D\+Mutex@{D\+Mutex}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1065,6 +1211,10 @@ Definition at line 60 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 67 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Clip\+Completed(), Play\+Clip(), Play\+Tone(), Stop\+Tone(), and Timestep().
 
 \hypertarget{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60}{}\label{classCSoundLibraryMixer_a9bbd8e4d0945a06cdb3b21aa05ddeb60} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Next\+Clip\+ID@{D\+Next\+Clip\+ID}}
@@ -1076,6 +1226,10 @@ Definition at line 67 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 70 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), and Play\+Clip().
+
 \hypertarget{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736}{}\label{classCSoundLibraryMixer_a88efc1ea710744bceadccf66967f9736} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Next\+Tone\+ID@{D\+Next\+Tone\+ID}}
 \index{D\+Next\+Tone\+ID@{D\+Next\+Tone\+ID}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1085,6 +1239,10 @@ Definition at line 70 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 71 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by C\+Sound\+Library\+Mixer(), and Play\+Tone().
 
 \hypertarget{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0}{}\label{classCSoundLibraryMixer_a1c78419f5e6cfdf4bc879bb5eedf52f0} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Port\+Audio\+Initialized@{D\+Port\+Audio\+Initialized}}
@@ -1096,6 +1254,10 @@ Definition at line 71 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 62 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), and $\sim$\+C\+Sound\+Library\+Mixer().
+
 \hypertarget{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a}{}\label{classCSoundLibraryMixer_af2d94eb0c2b55d92ff00d18a25cbed6a} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sample\+Rate@{D\+Sample\+Rate}}
 \index{D\+Sample\+Rate@{D\+Sample\+Rate}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1105,6 +1267,10 @@ Definition at line 62 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 69 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Load\+Library(), Play\+Tone(), Sample\+Rate(), and Timestep().
 
 \hypertarget{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf}{}\label{classCSoundLibraryMixer_a7d696c93362c862bfc651a28ee8f67cf} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sine\+Wave@{D\+Sine\+Wave}}
@@ -1116,6 +1282,10 @@ Definition at line 69 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 68 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), Timestep(), and $\sim$\+C\+Sound\+Library\+Mixer().
+
 \hypertarget{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2}{}\label{classCSoundLibraryMixer_af4a006eacdcd590fad6e02cddaf197c2} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Sound\+Clips@{D\+Sound\+Clips}}
 \index{D\+Sound\+Clips@{D\+Sound\+Clips}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1125,6 +1295,10 @@ Definition at line 68 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 52 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Clip\+Duration\+M\+S(), Load\+Library(), Play\+Clip(), and Timestep().
 
 \hypertarget{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625}{}\label{classCSoundLibraryMixer_ad992cd6202130db3a45ca695eca34625} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Stream@{D\+Stream}}
@@ -1136,6 +1310,10 @@ Definition at line 52 of file Sound\+Library\+Mixer.\+h.
 
 Definition at line 61 of file Sound\+Library\+Mixer.\+h.
 
+
+
+Referenced by C\+Sound\+Library\+Mixer(), Load\+Library(), and $\sim$\+C\+Sound\+Library\+Mixer().
+
 \hypertarget{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c}{}\label{classCSoundLibraryMixer_a39bb9c811d842a282b6b7058ac7dfe1c} 
 \index{C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}!D\+Tones\+In\+Progress@{D\+Tones\+In\+Progress}}
 \index{D\+Tones\+In\+Progress@{D\+Tones\+In\+Progress}!C\+Sound\+Library\+Mixer@{C\+Sound\+Library\+Mixer}}
@@ -1145,6 +1323,10 @@ Definition at line 61 of file Sound\+Library\+Mixer.\+h.
 
 
 Definition at line 55 of file Sound\+Library\+Mixer.\+h.
+
+
+
+Referenced by Play\+Tone(), Stop\+Tone(), and Timestep().
 
 
 

@@ -48,6 +48,10 @@ Definition at line 23 of file Sound\+Clip.\+cpp.
 Definition at line 40 of file Sound\+Clip.\+cpp.
 
 
+
+References D\+Data, and D\+Offset.
+
+
 \begin{DoxyCode}
 40                                                                                  \{
 41     uint8\_t TempByte;
@@ -72,13 +76,20 @@ Definition at line 40 of file Sound\+Clip.\+cpp.
 Definition at line 60 of file Sound\+Clip.\+cpp.
 
 
+
+References D\+Data.
+
+
+
+Referenced by S\+F\+Virtual\+I\+O().
+
+
 \begin{DoxyCode}
 60                                                                                 \{
 61     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size();
 62 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -96,6 +107,14 @@ Here is the caller graph for this function\+:
 Definition at line 83 of file Sound\+Clip.\+cpp.
 
 
+
+References D\+Data, and D\+Offset.
+
+
+
+Referenced by S\+F\+Virtual\+I\+O().
+
+
 \begin{DoxyCode}
 83                                                                                                     \{
 84     \textcolor{keywordflow}{if}(iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset} + count > iosource->\hyperlink{classCSFVirtualIODataSource_ac03be5c46b6647150e12edc04fa52ede}{DData}.size())\{
@@ -106,8 +125,7 @@ Definition at line 83 of file Sound\+Clip.\+cpp.
 89     \textcolor{keywordflow}{return} count;
 90 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -123,6 +141,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 64 of file Sound\+Clip.\+cpp.
+
+
+
+References D\+Data, and D\+Offset.
+
+
+
+Referenced by S\+F\+Virtual\+I\+O().
 
 
 \begin{DoxyCode}
@@ -145,8 +171,7 @@ Definition at line 64 of file Sound\+Clip.\+cpp.
 80     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset};
 81 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -164,6 +189,14 @@ Here is the caller graph for this function\+:
 Definition at line 49 of file Sound\+Clip.\+cpp.
 
 
+
+References Get\+File\+Length(), Read(), Seek(), Tell(), and Write().
+
+
+
+Referenced by C\+Sound\+Clip\+::\+Load().
+
+
 \begin{DoxyCode}
 49                                                        \{
 50     SF\_VIRTUAL\_IO ReturnIO;
@@ -176,16 +209,14 @@ Definition at line 49 of file Sound\+Clip.\+cpp.
 57     \textcolor{keywordflow}{return} ReturnIO;
 58 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCSFVirtualIODataSource_a9c15fbbe734fdfc2af17ca8f424b7e43_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -203,13 +234,20 @@ Here is the caller graph for this function\+:
 Definition at line 96 of file Sound\+Clip.\+cpp.
 
 
+
+References D\+Offset.
+
+
+
+Referenced by S\+F\+Virtual\+I\+O().
+
+
 \begin{DoxyCode}
 96                                                                        \{
 97     \textcolor{keywordflow}{return} iosource->\hyperlink{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{DOffset};
 98 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,14 +265,17 @@ Here is the caller graph for this function\+:
 Definition at line 92 of file Sound\+Clip.\+cpp.
 
 
+
+Referenced by S\+F\+Virtual\+I\+O().
+
+
 \begin{DoxyCode}
 92                                                                                                            
       \{
 93     \textcolor{keywordflow}{return} 0;
 94 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -254,6 +295,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 25 of file Sound\+Clip.\+cpp.
 
+
+
+Referenced by C\+Sound\+Clip\+::\+Copy\+Stereo\+Clip(), C\+S\+F\+Virtual\+I\+O\+Data\+Source(), C\+Sound\+Clip\+::\+C\+Sound\+Clip(), Get\+File\+Length(), C\+Sound\+Clip\+::\+Load(), C\+Sound\+Clip\+::\+Mix\+Stereo\+Clip(), C\+Sound\+Clip\+::operator=(), Read(), Seek(), and C\+Sound\+Clip\+::$\sim$\+C\+Sound\+Clip().
+
 \hypertarget{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8}{}\label{classCSFVirtualIODataSource_a29db7bf8a3a7103deacb80bf619919c8} 
 \index{C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}!D\+Offset@{D\+Offset}}
 \index{D\+Offset@{D\+Offset}!C\+S\+F\+Virtual\+I\+O\+Data\+Source@{C\+S\+F\+Virtual\+I\+O\+Data\+Source}}
@@ -263,6 +308,10 @@ Definition at line 25 of file Sound\+Clip.\+cpp.
 
 
 Definition at line 26 of file Sound\+Clip.\+cpp.
+
+
+
+Referenced by C\+S\+F\+Virtual\+I\+O\+Data\+Source(), Read(), Seek(), and Tell().
 
 
 

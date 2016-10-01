@@ -51,6 +51,10 @@ Definition at line 24 of file Fog\+Renderer.\+h.
 Definition at line 32 of file Fog\+Renderer.\+cpp.
 
 
+
+References D\+Black\+Indices, D\+Fog\+Indices, D\+Map, D\+None\+Index, D\+Partial\+Index, D\+Seen\+Index, D\+Tileset, and Hamming\+Distance().
+
+
 \begin{DoxyCode}
 32                                                                                                        \{
 33     \textcolor{keywordtype}{int} Index, VisibleIndex, NextIndex;
@@ -207,8 +211,7 @@ Definition at line 32 of file Fog\+Renderer.\+cpp.
 180     \}
 181 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,6 +230,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 184 of file Fog\+Renderer.\+cpp.
+
+
+
+References D\+Black\+Indices, D\+Fog\+Indices, S\+Rectangle\+::\+D\+Height, D\+Map, D\+None\+Index, D\+Seen\+Index, D\+Tileset, S\+Rectangle\+::\+D\+Width, S\+Rectangle\+::\+D\+X\+Position, S\+Rectangle\+::\+D\+Y\+Position, C\+Visibility\+Map\+::tv\+None, C\+Visibility\+Map\+::tv\+Partial, C\+Visibility\+Map\+::tv\+Partial\+Partial, C\+Visibility\+Map\+::tv\+Seen, C\+Visibility\+Map\+::tv\+Seen\+Partial, and C\+Visibility\+Map\+::tv\+Visible.
 
 
 \begin{DoxyCode}
@@ -334,6 +341,10 @@ Definition at line 184 of file Fog\+Renderer.\+cpp.
 Definition at line 263 of file Fog\+Renderer.\+cpp.
 
 
+
+References D\+Map, D\+None\+Index, D\+Partial\+Index, D\+Seen\+Index, D\+Tileset, C\+Visibility\+Map\+::tv\+None, C\+Visibility\+Map\+::tv\+Seen, C\+Visibility\+Map\+::tv\+Seen\+Partial, and C\+Visibility\+Map\+::tv\+Visible.
+
+
 \begin{DoxyCode}
 263                                                    \{
 264     GdkGC *TempGC = gdk\_gc\_new(drawable);
@@ -378,6 +389,10 @@ Definition at line 263 of file Fog\+Renderer.\+cpp.
 
 Definition at line 32 of file Fog\+Renderer.\+h.
 
+
+
+Referenced by C\+Fog\+Renderer(), and Draw\+Map().
+
 \hypertarget{classCFogRenderer_a2028e4642e756016819aab6567800af5}{}\label{classCFogRenderer_a2028e4642e756016819aab6567800af5} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Fog\+Indices@{D\+Fog\+Indices}}
 \index{D\+Fog\+Indices@{D\+Fog\+Indices}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
@@ -387,6 +402,10 @@ Definition at line 32 of file Fog\+Renderer.\+h.
 
 
 Definition at line 31 of file Fog\+Renderer.\+h.
+
+
+
+Referenced by C\+Fog\+Renderer(), and Draw\+Map().
 
 \hypertarget{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4}{}\label{classCFogRenderer_a06be3616da23b5fce8ab3407b81788a4} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Map@{D\+Map}}
@@ -398,6 +417,10 @@ Definition at line 31 of file Fog\+Renderer.\+h.
 
 Definition at line 27 of file Fog\+Renderer.\+h.
 
+
+
+Referenced by C\+Fog\+Renderer(), Draw\+Map(), and Draw\+Mini\+Map().
+
 \hypertarget{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba}{}\label{classCFogRenderer_ac4731c0fcb7e73be9fd6839659e519ba} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+None\+Index@{D\+None\+Index}}
 \index{D\+None\+Index@{D\+None\+Index}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
@@ -407,6 +430,10 @@ Definition at line 27 of file Fog\+Renderer.\+h.
 
 
 Definition at line 28 of file Fog\+Renderer.\+h.
+
+
+
+Referenced by C\+Fog\+Renderer(), Draw\+Map(), and Draw\+Mini\+Map().
 
 \hypertarget{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca}{}\label{classCFogRenderer_aa445569ee9f7ede85d5c2cd4fd9d6fca} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Partial\+Index@{D\+Partial\+Index}}
@@ -418,6 +445,10 @@ Definition at line 28 of file Fog\+Renderer.\+h.
 
 Definition at line 30 of file Fog\+Renderer.\+h.
 
+
+
+Referenced by C\+Fog\+Renderer(), and Draw\+Mini\+Map().
+
 \hypertarget{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458}{}\label{classCFogRenderer_acac9ab2c0a8023661ab1aa096d713458} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Seen\+Index@{D\+Seen\+Index}}
 \index{D\+Seen\+Index@{D\+Seen\+Index}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
@@ -428,6 +459,10 @@ Definition at line 30 of file Fog\+Renderer.\+h.
 
 Definition at line 29 of file Fog\+Renderer.\+h.
 
+
+
+Referenced by C\+Fog\+Renderer(), Draw\+Map(), and Draw\+Mini\+Map().
+
 \hypertarget{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89}{}\label{classCFogRenderer_af9f3956c6e371f112ee1ce5decd7ae89} 
 \index{C\+Fog\+Renderer@{C\+Fog\+Renderer}!D\+Tileset@{D\+Tileset}}
 \index{D\+Tileset@{D\+Tileset}!C\+Fog\+Renderer@{C\+Fog\+Renderer}}
@@ -437,6 +472,10 @@ Definition at line 29 of file Fog\+Renderer.\+h.
 
 
 Definition at line 26 of file Fog\+Renderer.\+h.
+
+
+
+Referenced by C\+Fog\+Renderer(), Draw\+Map(), and Draw\+Mini\+Map().
 
 
 

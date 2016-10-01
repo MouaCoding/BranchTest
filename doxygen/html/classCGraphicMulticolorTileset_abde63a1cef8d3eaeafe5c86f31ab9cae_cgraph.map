@@ -1,8 +1,8 @@
 <map id="CGraphicMulticolorTileset::ColorCount" name="CGraphicMulticolorTileset::ColorCount">
-<area shape="rect" id="node2" href="$classCGraphicMulticolorTileset.html#a6ab975d5bc2ba0ed892de03bba9242cc" title="CGraphicMulticolorTileset\l::LoadTileset" alt="" coords="239,49,424,90"/>
-<area shape="rect" id="node7" href="$classCGraphicMulticolorTileset.html#a17ee648ac82c48079a1853dc8a10365a" title="CGraphicMulticolorTileset\l::DrawTile" alt="" coords="239,114,424,155"/>
-<area shape="rect" id="node3" href="$classCGraphicTileset.html#a7d47754f26f03958be28a064f54eef1d" title="CGraphicTileset::LoadTileset" alt="" coords="472,56,679,83"/>
-<area shape="rect" id="node4" href="$classCLineDataSource.html#a569f5a9732d73ac8813c0ba4860e2e66" title="CLineDataSource::Read" alt="" coords="742,5,921,32"/>
-<area shape="rect" id="node5" href="$classCGraphicLoader.html#ac7778dec4fd0ea51674f0b23f3029edf" title="CGraphicLoader::LoadPixbuf" alt="" coords="727,56,936,83"/>
-<area shape="rect" id="node6" href="$classCTokenizer.html#a7477f6849a3d0a5154879d8622e4012c" title="CTokenizer::Tokenize" alt="" coords="750,107,913,133"/>
+<area shape="rect" id="node2" href="$classCGraphicMulticolorTileset.html#a17ee648ac82c48079a1853dc8a10365a" title="CGraphicMulticolorTileset\l::DrawTile" alt="" coords="239,5,424,47"/>
+<area shape="rect" id="node3" href="$classCGraphicMulticolorTileset.html#a6ab975d5bc2ba0ed892de03bba9242cc" title="CGraphicMulticolorTileset\l::LoadTileset" alt="" coords="239,71,424,112"/>
+<area shape="rect" id="node4" href="$classCGraphicTileset.html#a7d47754f26f03958be28a064f54eef1d" title="CGraphicTileset::LoadTileset" alt="" coords="472,78,679,105"/>
+<area shape="rect" id="node5" href="$classCLineDataSource.html#a569f5a9732d73ac8813c0ba4860e2e66" title="CLineDataSource::Read" alt="" coords="742,27,921,54"/>
+<area shape="rect" id="node6" href="$classCGraphicLoader.html#ac7778dec4fd0ea51674f0b23f3029edf" title="CGraphicLoader::LoadPixbuf" alt="" coords="727,78,936,105"/>
+<area shape="rect" id="node7" href="$classCTokenizer.html#a7477f6849a3d0a5154879d8622e4012c" title="CTokenizer::Tokenize" alt="" coords="750,129,913,155"/>
 </map>

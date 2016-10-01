@@ -63,6 +63,14 @@ Definition at line 27 of file Random\+Number\+Generator.\+h.
 Definition at line 43 of file Random\+Number\+Generator.\+h.
 
 
+
+References D\+Random\+Seed\+Low.
+
+
+
+Referenced by C\+Sound\+Event\+Renderer\+::\+Render\+Events().
+
+
 \begin{DoxyCode}
 43                          \{
 44             \hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} = 36969 * (\hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} & 65535) + (
@@ -72,8 +80,7 @@ Definition at line 43 of file Random\+Number\+Generator.\+h.
 46             \textcolor{keywordflow}{return} (\hyperlink{classCRandomNumberGenerator_a450670f954d6ccb3cc39d7eebbf889c6}{DRandomSeedHigh} << 16) + \hyperlink{classCRandomNumberGenerator_a33bf3bb9bc1378f4142932a01a3e2cfd}{DRandomSeedLow};
 47         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,6 +144,10 @@ Definition at line 24 of file Random\+Number\+Generator.\+h.
 
 
 Definition at line 25 of file Random\+Number\+Generator.\+h.
+
+
+
+Referenced by Random().
 
 
 

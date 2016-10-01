@@ -1,9 +1,9 @@
 <map id="CApplicationData::ResetMap" name="CApplicationData::ResetMap">
-<area shape="rect" id="node2" href="$classCApplicationData.html#a89af0c7917be766575720e5ac79c8d2d" title="CApplicationData::LoadGameMap" alt="" coords="263,42,505,69"/>
-<area shape="rect" id="node3" href="$classCApplicationData.html#a659aa43022e92610c2f8cc182eab1b8e" title="CApplicationData::PlayGame\lButtonCallback" alt="" coords="553,5,764,47"/>
-<area shape="rect" id="node7" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="1544,42,1708,69"/>
-<area shape="rect" id="node4" href="$classCApplicationData.html#a7d46646402ac95a056456e4a3bb353ed" title="CApplicationData::Render\lPlayerAISelectMode" alt="" coords="812,5,1003,47"/>
-<area shape="rect" id="node5" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="1051,13,1249,39"/>
-<area shape="rect" id="node6" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="1297,5,1496,47"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1756,42,1811,69"/>
+<area shape="rect" id="node2" href="$classCApplicationData.html#a89af0c7917be766575720e5ac79c8d2d" title="CApplicationData::LoadGameMap" alt="" coords="263,21,505,48"/>
+<area shape="rect" id="node3" href="$classCApplicationData.html#ab757e7ad037decb18cefa3f4ad2e1298" title="CApplicationData::Init" alt="" coords="1544,21,1708,48"/>
+<area shape="rect" id="node5" href="$classCApplicationData.html#a659aa43022e92610c2f8cc182eab1b8e" title="CApplicationData::PlayGame\lButtonCallback" alt="" coords="553,43,764,85"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1756,21,1811,48"/>
+<area shape="rect" id="node6" href="$classCApplicationData.html#a7d46646402ac95a056456e4a3bb353ed" title="CApplicationData::Render\lPlayerAISelectMode" alt="" coords="812,43,1003,85"/>
+<area shape="rect" id="node7" href="$classCApplicationData.html#aae0775b38fac01308e8a81b64db49500" title="CApplicationData::Timeout" alt="" coords="1051,51,1249,77"/>
+<area shape="rect" id="node8" href="$classCApplicationData.html#af66e15f6935f053b46a11aaa51a869c9" title="CApplicationData::Timeout\lCallback" alt="" coords="1297,43,1496,85"/>
 </map>

@@ -61,6 +61,10 @@ Definition at line 25 of file Unit\+Action\+Renderer.\+h.
 Definition at line 19 of file Unit\+Action\+Renderer.\+cpp.
 
 
+
+References act\+Armor\+Upgrade1, act\+Armor\+Upgrade2, act\+Armor\+Upgrade3, act\+Arrow\+Upgrade1, act\+Arrow\+Upgrade2, act\+Arrow\+Upgrade3, act\+Attack, act\+Build\+Advanced, act\+Build\+Archer, act\+Build\+Barracks, act\+Build\+Blacksmith, act\+Build\+Cannon\+Tower, act\+Build\+Castle, act\+Build\+Farm, act\+Build\+Footman, act\+Build\+Guard\+Tower, act\+Build\+Keep, act\+Build\+Lumber\+Mill, act\+Build\+Peasant, act\+Build\+Ranger, act\+Build\+Scout\+Tower, act\+Build\+Simple, act\+Build\+Town\+Hall, act\+Build\+Wall, act\+Cancel, act\+Convey, act\+Longbow, act\+Marksmanship, act\+Max, act\+Mine, act\+Move, act\+None, act\+Patrol, act\+Ranger\+Scouting, act\+Repair, act\+Stand\+Ground, act\+Weapon\+Upgrade1, act\+Weapon\+Upgrade2, act\+Weapon\+Upgrade3, D\+Bevel, D\+Command\+Indices, D\+Disabled\+Index, D\+Displayed\+Commands, D\+Full\+Icon\+Height, D\+Full\+Icon\+Width, D\+Icon\+Tileset, D\+Player\+Color, and D\+Player\+Data.
+
+
 \begin{DoxyCode}
 19                                                                                                            
                                                                  \{
@@ -180,6 +184,10 @@ Definition at line 75 of file Unit\+Action\+Renderer.\+cpp.
 
 
 Definition at line 95 of file Unit\+Action\+Renderer.\+cpp.
+
+
+
+References aa\+Capability, aa\+Construct, act\+Attack, act\+Build\+Barracks, act\+Build\+Blacksmith, act\+Build\+Cannon\+Tower, act\+Build\+Castle, act\+Build\+Farm, act\+Build\+Guard\+Tower, act\+Build\+Keep, act\+Build\+Lumber\+Mill, act\+Build\+Scout\+Tower, act\+Build\+Simple, act\+Build\+Town\+Hall, act\+Cancel, act\+Convey, act\+Mine, act\+Move, act\+None, act\+Patrol, act\+Repair, act\+Stand\+Ground, D\+Bevel, D\+Command\+Indices, D\+Disabled\+Index, D\+Displayed\+Commands, D\+Full\+Icon\+Height, D\+Full\+Icon\+Width, D\+Icon\+Tileset, D\+Player\+Color, D\+Player\+Data, and C\+Player\+Capability\+::\+Find\+Capability().
 
 
 \begin{DoxyCode}
@@ -314,8 +322,7 @@ Definition at line 95 of file Unit\+Action\+Renderer.\+cpp.
 216     g\_object\_unref(TempGC);
 217 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -331,6 +338,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 83 of file Unit\+Action\+Renderer.\+cpp.
+
+
+
+References D\+Bevel, and D\+Full\+Icon\+Height.
 
 
 \begin{DoxyCode}
@@ -349,6 +360,10 @@ Definition at line 83 of file Unit\+Action\+Renderer.\+cpp.
 Definition at line 79 of file Unit\+Action\+Renderer.\+cpp.
 
 
+
+References D\+Bevel, and D\+Full\+Icon\+Width.
+
+
 \begin{DoxyCode}
 79                                            \{
 80     \textcolor{keywordflow}{return} \hyperlink{classCUnitActionRenderer_a67e5c1650ef8f849c05d9f059d12fb95}{DFullIconWidth} * 3 + \hyperlink{classCUnitActionRenderer_a3f4012557f7f4d71cfa02df725984ebb}{DBevel}->Width() * 2;
@@ -365,6 +380,10 @@ Definition at line 79 of file Unit\+Action\+Renderer.\+cpp.
 Definition at line 87 of file Unit\+Action\+Renderer.\+cpp.
 
 
+
+References act\+None, D\+Bevel, D\+Displayed\+Commands, D\+Full\+Icon\+Height, D\+Full\+Icon\+Width, C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
 \begin{DoxyCode}
 87                                                                              \{
 88     \textcolor{keywordflow}{if}(((pos.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}() % (\hyperlink{classCUnitActionRenderer_a67e5c1650ef8f849c05d9f059d12fb95}{DFullIconWidth} + \hyperlink{classCUnitActionRenderer_a3f4012557f7f4d71cfa02df725984ebb}{DBevel}->Width())) < 
@@ -377,8 +396,7 @@ Definition at line 87 of file Unit\+Action\+Renderer.\+cpp.
 92     \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone};
 93 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -398,6 +416,10 @@ Here is the call graph for this function\+:
 
 Definition at line 28 of file Unit\+Action\+Renderer.\+h.
 
+
+
+Referenced by C\+Unit\+Action\+Renderer(), Draw\+Unit\+Action(), Minimum\+Height(), Minimum\+Width(), and Selection().
+
 \hypertarget{classCUnitActionRenderer_a73eebe87330693c8546ea14c23672859}{}\label{classCUnitActionRenderer_a73eebe87330693c8546ea14c23672859} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Command\+Indices@{D\+Command\+Indices}}
 \index{D\+Command\+Indices@{D\+Command\+Indices}!C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}}
@@ -407,6 +429,10 @@ Definition at line 28 of file Unit\+Action\+Renderer.\+h.
 
 
 Definition at line 30 of file Unit\+Action\+Renderer.\+h.
+
+
+
+Referenced by C\+Unit\+Action\+Renderer(), and Draw\+Unit\+Action().
 
 \hypertarget{classCUnitActionRenderer_abf505a324f367378f8c30ddd48bb6549}{}\label{classCUnitActionRenderer_abf505a324f367378f8c30ddd48bb6549} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Disabled\+Index@{D\+Disabled\+Index}}
@@ -418,6 +444,10 @@ Definition at line 30 of file Unit\+Action\+Renderer.\+h.
 
 Definition at line 35 of file Unit\+Action\+Renderer.\+h.
 
+
+
+Referenced by C\+Unit\+Action\+Renderer(), and Draw\+Unit\+Action().
+
 \hypertarget{classCUnitActionRenderer_a194c87c9f3280485f4abceb8d39853b3}{}\label{classCUnitActionRenderer_a194c87c9f3280485f4abceb8d39853b3} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Displayed\+Commands@{D\+Displayed\+Commands}}
 \index{D\+Displayed\+Commands@{D\+Displayed\+Commands}!C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}}
@@ -427,6 +457,10 @@ Definition at line 35 of file Unit\+Action\+Renderer.\+h.
 
 
 Definition at line 31 of file Unit\+Action\+Renderer.\+h.
+
+
+
+Referenced by C\+Unit\+Action\+Renderer(), Draw\+Unit\+Action(), and Selection().
 
 \hypertarget{classCUnitActionRenderer_a11b30763b92ed0cbfb842f86fe76fe26}{}\label{classCUnitActionRenderer_a11b30763b92ed0cbfb842f86fe76fe26} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Full\+Icon\+Height@{D\+Full\+Icon\+Height}}
@@ -438,6 +472,10 @@ Definition at line 31 of file Unit\+Action\+Renderer.\+h.
 
 Definition at line 34 of file Unit\+Action\+Renderer.\+h.
 
+
+
+Referenced by C\+Unit\+Action\+Renderer(), Draw\+Unit\+Action(), Minimum\+Height(), and Selection().
+
 \hypertarget{classCUnitActionRenderer_a67e5c1650ef8f849c05d9f059d12fb95}{}\label{classCUnitActionRenderer_a67e5c1650ef8f849c05d9f059d12fb95} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Full\+Icon\+Width@{D\+Full\+Icon\+Width}}
 \index{D\+Full\+Icon\+Width@{D\+Full\+Icon\+Width}!C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}}
@@ -447,6 +485,10 @@ Definition at line 34 of file Unit\+Action\+Renderer.\+h.
 
 
 Definition at line 33 of file Unit\+Action\+Renderer.\+h.
+
+
+
+Referenced by C\+Unit\+Action\+Renderer(), Draw\+Unit\+Action(), Minimum\+Width(), and Selection().
 
 \hypertarget{classCUnitActionRenderer_a3f5f7cf1840e1aa4b28ab507404a6b3a}{}\label{classCUnitActionRenderer_a3f5f7cf1840e1aa4b28ab507404a6b3a} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Icon\+Tileset@{D\+Icon\+Tileset}}
@@ -458,6 +500,10 @@ Definition at line 33 of file Unit\+Action\+Renderer.\+h.
 
 Definition at line 27 of file Unit\+Action\+Renderer.\+h.
 
+
+
+Referenced by C\+Unit\+Action\+Renderer(), and Draw\+Unit\+Action().
+
 \hypertarget{classCUnitActionRenderer_a092d5c46d431f75499b194dc7b385ceb}{}\label{classCUnitActionRenderer_a092d5c46d431f75499b194dc7b385ceb} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Player\+Color@{D\+Player\+Color}}
 \index{D\+Player\+Color@{D\+Player\+Color}!C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}}
@@ -468,6 +514,10 @@ Definition at line 27 of file Unit\+Action\+Renderer.\+h.
 
 Definition at line 32 of file Unit\+Action\+Renderer.\+h.
 
+
+
+Referenced by C\+Unit\+Action\+Renderer(), and Draw\+Unit\+Action().
+
 \hypertarget{classCUnitActionRenderer_a77f8e3045992a48b27ad6e45d48a7b91}{}\label{classCUnitActionRenderer_a77f8e3045992a48b27ad6e45d48a7b91} 
 \index{C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}!D\+Player\+Data@{D\+Player\+Data}}
 \index{D\+Player\+Data@{D\+Player\+Data}!C\+Unit\+Action\+Renderer@{C\+Unit\+Action\+Renderer}}
@@ -477,6 +527,10 @@ Definition at line 32 of file Unit\+Action\+Renderer.\+h.
 
 
 Definition at line 29 of file Unit\+Action\+Renderer.\+h.
+
+
+
+Referenced by C\+Unit\+Action\+Renderer(), and Draw\+Unit\+Action().
 
 
 

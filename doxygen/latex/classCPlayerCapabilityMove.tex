@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityMove}\index{C\+Player\+Capability\+Move@{C\+Player\+Capability\+Move}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Move\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Move\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Move\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Move\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Move\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,14 +68,17 @@ Definition at line 21 of file Basic\+Capabilities.\+cpp.
 Definition at line 56 of file Basic\+Capabilities.\+cpp.
 
 
+
+Referenced by C\+Player\+Capability\+Move\+::\+C\+Registrant\+::\+C\+Registrant(), and C\+Player\+Capability\+Move\+::\+C\+Activated\+Capability\+::$\sim$\+C\+Activated\+Capability().
+
+
 \begin{DoxyCode}
 56                                              : \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Move"}), 
       \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fa67cc6d11bc0aafc1b786bd6557ba4aa2}{ttTerrainOrAsset})\{
 57 
 58 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -95,11 +96,14 @@ Here is the caller graph for this function\+:
 Definition at line 43 of file Basic\+Capabilities.\+cpp.
 
 
+
+References Apply\+Capability(), Can\+Apply(), Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 43 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,6 +128,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 Definition at line 68 of file Basic\+Capabilities.\+cpp.
 
 
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, and S\+Asset\+Command\+::\+D\+Capability.
+
+
+
+Referenced by C\+Player\+Capability\+Mine\+Harvest\+::$\sim$\+C\+Player\+Capability\+Mine\+Harvest(), and $\sim$\+C\+Player\+Capability\+Move().
+
+
 \begin{DoxyCode}
 68                                                                                                            
                                                         \{
@@ -143,16 +155,14 @@ Definition at line 68 of file Basic\+Capabilities.\+cpp.
 81     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 82 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityMove_ade3f4e72612cbf2ad73a6c2e6aa843df_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -174,14 +184,17 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 64 of file Basic\+Capabilities.\+cpp.
 
 
+
+Referenced by C\+Player\+Capability\+Mine\+Harvest\+::$\sim$\+C\+Player\+Capability\+Mine\+Harvest(), and $\sim$\+C\+Player\+Capability\+Move().
+
+
 \begin{DoxyCode}
 64                                                                                                            
                                                  \{
 65     \textcolor{keywordflow}{return} actor->Speed() > 0;
 66 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -203,14 +216,17 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 Definition at line 60 of file Basic\+Capabilities.\+cpp.
 
 
+
+Referenced by C\+Player\+Capability\+Mine\+Harvest\+::$\sim$\+C\+Player\+Capability\+Mine\+Harvest(), and $\sim$\+C\+Player\+Capability\+Move().
+
+
 \begin{DoxyCode}
 60                                                                                                            
               \{
 61     \textcolor{keywordflow}{return} actor->Speed() > 0;
 62 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -229,6 +245,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 27 of file Basic\+Capabilities.\+cpp.
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Move().
 
 
 

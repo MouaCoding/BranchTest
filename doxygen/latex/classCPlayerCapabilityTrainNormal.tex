@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityTrainNormal}\index{C\+Player\+Capability\+Train\+Normal@{C\+Player\+Capability\+Train\+Normal}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Train\+Normal\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Train\+Normal\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Train\+Normal\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Train\+Normal\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Train\+Normal\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,14 +73,21 @@ Definition at line 21 of file Train\+Capabilities.\+cpp.
 Definition at line 63 of file Train\+Capabilities.\+cpp.
 
 
+
+References D\+Unit\+Name.
+
+
+
+Referenced by C\+Player\+Capability\+Train\+Normal\+::\+C\+Registrant\+::\+C\+Registrant().
+
+
 \begin{DoxyCode}
 63                                                                                     : 
       \hyperlink{classCPlayerCapability_a303de62aba5d3f65d9a8e013c64a96c1}{CPlayerCapability}(std::string(\textcolor{stringliteral}{"Build"}) + unitname, \hyperlink{classCPlayerCapability_a9d3450ed1532fd536bd6cbb1e2eef02fac78f0e806a6b0ead030d63c27c9ce929}{ttNone})\{
 64     \hyperlink{classCPlayerCapabilityTrainNormal_aed40686355e78c151910e23ea2d9d32c}{DUnitName} = unitname;
 65 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -100,11 +105,14 @@ Here is the caller graph for this function\+:
 Definition at line 48 of file Train\+Capabilities.\+cpp.
 
 
+
+References Apply\+Capability(), Can\+Apply(), Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 48 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -127,6 +135,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 
 
 Definition at line 93 of file Train\+Capabilities.\+cpp.
+
+
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, S\+Asset\+Command\+::\+D\+Capability, D\+Unit\+Name, C\+Position\+::\+Set\+To\+Tile(), and C\+Player\+Asset\+::\+Update\+Frequency().
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Train\+Normal().
 
 
 \begin{DoxyCode}
@@ -155,16 +171,14 @@ Definition at line 93 of file Train\+Capabilities.\+cpp.
 112     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 113 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityTrainNormal_a04ed166d2072d44ddc96735ac1beb9bc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -186,22 +200,28 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 89 of file Train\+Capabilities.\+cpp.
 
 
+
+References Can\+Initiate().
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Train\+Normal().
+
+
 \begin{DoxyCode}
 89                                                                                                            
                                                         \{
 90     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityTrainNormal_ac49cf646b94220844a03b7c3a8a7f215}{CanInitiate}(actor, playerdata);
 91 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityTrainNormal_a625d2154bed47357f45662fe5dee7c1b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -221,6 +241,14 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 
 
 Definition at line 67 of file Train\+Capabilities.\+cpp.
+
+
+
+References D\+Unit\+Name.
+
+
+
+Referenced by Can\+Apply(), and $\sim$\+C\+Player\+Capability\+Train\+Normal().
 
 
 \begin{DoxyCode}
@@ -247,8 +275,7 @@ Definition at line 67 of file Train\+Capabilities.\+cpp.
 86     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 87 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -268,6 +295,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 27 of file Train\+Capabilities.\+cpp.
 
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Train\+Normal().
+
 \hypertarget{classCPlayerCapabilityTrainNormal_aed40686355e78c151910e23ea2d9d32c}{}\label{classCPlayerCapabilityTrainNormal_aed40686355e78c151910e23ea2d9d32c} 
 \index{C\+Player\+Capability\+Train\+Normal@{C\+Player\+Capability\+Train\+Normal}!D\+Unit\+Name@{D\+Unit\+Name}}
 \index{D\+Unit\+Name@{D\+Unit\+Name}!C\+Player\+Capability\+Train\+Normal@{C\+Player\+Capability\+Train\+Normal}}
@@ -277,6 +308,10 @@ Definition at line 27 of file Train\+Capabilities.\+cpp.
 
 
 Definition at line 44 of file Train\+Capabilities.\+cpp.
+
+
+
+Referenced by Apply\+Capability(), Can\+Initiate(), and C\+Player\+Capability\+Train\+Normal().
 
 
 

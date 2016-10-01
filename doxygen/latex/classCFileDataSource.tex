@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+File\+Data\+Source\+:
-\nopagebreak
+Inheritance diagram for C\+File\+Data\+Source\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for C\+File\+Data\+Source\+:
 \end{figure}
 
 
-Collaboration diagram for C\+File\+Data\+Source\+:
-\nopagebreak
+Collaboration diagram for C\+File\+Data\+Source\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -63,6 +61,10 @@ Definition at line 23 of file File\+Data\+Source.\+h.
 Definition at line 23 of file File\+Data\+Source.\+cpp.
 
 
+
+References C\+Path\+::\+Current\+Path(), D\+File\+Handle, D\+Full\+Path, C\+Path\+::\+Simplify(), and C\+Path\+::\+To\+String().
+
+
 \begin{DoxyCode}
 23                                                           : \hyperlink{classCDataSource}{CDataSource}()\{
 24     \hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath} = \hyperlink{classCPath_a5161b834e754b217ddead2437eaaa223}{CPath::CurrentPath}().\hyperlink{classCPath_aa52dcb50c943a8abc8883db5ec43a45e}{Simplify}(filename).
@@ -73,8 +75,7 @@ Definition at line 23 of file File\+Data\+Source.\+cpp.
 28     \}
 29 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -90,6 +91,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 31 of file File\+Data\+Source.\+cpp.
+
+
+
+References D\+File\+Handle.
 
 
 \begin{DoxyCode}
@@ -117,6 +122,10 @@ Reimplemented from \hyperlink{classCDataSource_ada14cfe01c850d01b23c9b49d2f65efc
 Definition at line 48 of file File\+Data\+Source.\+cpp.
 
 
+
+References C\+Path\+::\+Containing(), D\+Full\+Path, and C\+Path\+::\+To\+String().
+
+
 \begin{DoxyCode}
 48                                                                 \{
 49     std::string ContainerName = \hyperlink{classCPath}{CPath}(\hyperlink{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{DFullPath}).\hyperlink{classCPath_a24d8c455b1663ce251d3a749437fa4fe}{Containing}().
@@ -129,8 +138,7 @@ Definition at line 48 of file File\+Data\+Source.\+cpp.
 54     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 55 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,6 +158,10 @@ Implements \hyperlink{classCDataSource_ad94adc5076f973dcce83b73395eec86b}{C\+Dat
 
 
 Definition at line 37 of file File\+Data\+Source.\+cpp.
+
+
+
+References D\+File\+Handle.
 
 
 \begin{DoxyCode}
@@ -177,6 +189,10 @@ Definition at line 37 of file File\+Data\+Source.\+cpp.
 
 Definition at line 25 of file File\+Data\+Source.\+h.
 
+
+
+Referenced by C\+File\+Data\+Source(), Read(), and $\sim$\+C\+File\+Data\+Source().
+
 \hypertarget{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea}{}\label{classCFileDataSource_acf4e0d3f7c32cae09f91b7530e490aea} 
 \index{C\+File\+Data\+Source@{C\+File\+Data\+Source}!D\+Full\+Path@{D\+Full\+Path}}
 \index{D\+Full\+Path@{D\+Full\+Path}!C\+File\+Data\+Source@{C\+File\+Data\+Source}}
@@ -186,6 +202,10 @@ Definition at line 25 of file File\+Data\+Source.\+h.
 
 
 Definition at line 26 of file File\+Data\+Source.\+h.
+
+
+
+Referenced by C\+File\+Data\+Source(), and Container().
 
 
 

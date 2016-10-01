@@ -1,8 +1,8 @@
 <map id="CGraphicTileset::LoadTileset" name="CGraphicTileset::LoadTileset">
-<area shape="rect" id="node2" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="260,5,459,32"/>
-<area shape="rect" id="node3" href="$classCCursorSet.html#abde01bde36a926de4d2de67e48be0cc0" title="CCursorSet::LoadCursors" alt="" coords="265,56,453,83"/>
-<area shape="rect" id="node5" href="$classCFontTileset.html#a9564525bf20b3b5b6941e5f86827eb5d" title="CFontTileset::LoadFont" alt="" coords="271,107,447,133"/>
-<area shape="rect" id="node6" href="$classCGraphicMulticolorTileset.html#a6ab975d5bc2ba0ed892de03bba9242cc" title="CGraphicMulticolorTileset\l::LoadTileset" alt="" coords="267,158,452,199"/>
-<area shape="rect" id="node4" href="$classCCursorSet.html#a25ce1f3e861c3d4ea701bb2e810728a6" title="CCursorSet::CursorHeight" alt="" coords="507,56,697,83"/>
-<area shape="rect" id="node7" href="$classCGraphicMulticolorTileset.html#abde63a1cef8d3eaeafe5c86f31ab9cae" title="CGraphicMulticolorTileset\l::ColorCount" alt="" coords="509,158,695,199"/>
+<area shape="rect" id="node2" href="$classCCursorSet.html#abde01bde36a926de4d2de67e48be0cc0" title="CCursorSet::LoadCursors" alt="" coords="265,5,453,32"/>
+<area shape="rect" id="node4" href="$classCFontTileset.html#a9564525bf20b3b5b6941e5f86827eb5d" title="CFontTileset::LoadFont" alt="" coords="271,56,447,83"/>
+<area shape="rect" id="node5" href="$classCGraphicMulticolorTileset.html#a6ab975d5bc2ba0ed892de03bba9242cc" title="CGraphicMulticolorTileset\l::LoadTileset" alt="" coords="267,107,452,149"/>
+<area shape="rect" id="node7" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="260,173,459,200"/>
+<area shape="rect" id="node3" href="$classCCursorSet.html#a25ce1f3e861c3d4ea701bb2e810728a6" title="CCursorSet::CursorHeight" alt="" coords="507,5,697,32"/>
+<area shape="rect" id="node6" href="$classCGraphicMulticolorTileset.html#abde63a1cef8d3eaeafe5c86f31ab9cae" title="CGraphicMulticolorTileset\l::ColorCount" alt="" coords="509,107,695,149"/>
 </map>

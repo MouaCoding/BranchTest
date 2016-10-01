@@ -1,12 +1,12 @@
 <map id="CPlayerAsset::MoveStep" name="CPlayerAsset::MoveStep">
-<area shape="rect" id="node2" href="$classCPosition.html#a6acbc9445751b0a040c2971720f00088" title="CPosition::TileOctant" alt="" coords="263,5,422,32"/>
-<area shape="rect" id="node3" href="$classCPlayerAsset.html#af1c093600f1567e3abf1cefc0f5350d5" title="CPlayerAsset::Speed" alt="" coords="263,56,422,83"/>
-<area shape="rect" id="node4" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="266,107,419,133"/>
-<area shape="rect" id="node5" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="263,157,422,184"/>
-<area shape="rect" id="node6" href="$classCPosition.html#aa5955d67d5ab7ca74d80cb7303b6eaa9" title="CPosition::IncrementX" alt="" coords="258,208,427,235"/>
-<area shape="rect" id="node7" href="$classCPosition.html#a3f2a26798bb27b1252ff1be303b3adfc" title="CPosition::IncrementY" alt="" coords="259,259,427,285"/>
-<area shape="rect" id="node8" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="291,309,394,336"/>
-<area shape="rect" id="node9" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="291,360,394,387"/>
-<area shape="rect" id="node10" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="265,411,420,437"/>
-<area shape="rect" id="node11" href="$classCPlayerAsset.html#aa1d39b408fd5aa11f2c3a19ef4d3895d" title="CPlayerAsset::IncrementStep" alt="" coords="236,461,449,488"/>
+<area shape="rect" id="node2" href="$classCPlayerAsset.html#aa1d39b408fd5aa11f2c3a19ef4d3895d" title="CPlayerAsset::IncrementStep" alt="" coords="236,5,449,32"/>
+<area shape="rect" id="node3" href="$classCPosition.html#aa5955d67d5ab7ca74d80cb7303b6eaa9" title="CPosition::IncrementX" alt="" coords="258,56,427,83"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a3f2a26798bb27b1252ff1be303b3adfc" title="CPosition::IncrementY" alt="" coords="259,107,427,133"/>
+<area shape="rect" id="node5" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="265,157,420,184"/>
+<area shape="rect" id="node6" href="$classCPlayerAsset.html#af1c093600f1567e3abf1cefc0f5350d5" title="CPlayerAsset::Speed" alt="" coords="263,208,422,235"/>
+<area shape="rect" id="node7" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="263,259,422,285"/>
+<area shape="rect" id="node8" href="$classCPosition.html#a6acbc9445751b0a040c2971720f00088" title="CPosition::TileOctant" alt="" coords="263,309,422,336"/>
+<area shape="rect" id="node9" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="266,360,419,387"/>
+<area shape="rect" id="node10" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="291,411,394,437"/>
+<area shape="rect" id="node11" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="291,461,394,488"/>
 </map>

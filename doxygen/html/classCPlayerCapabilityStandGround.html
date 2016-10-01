@@ -222,15 +222,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00252">252</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="BasicCapabilities_8cpp_source.html#l00177">CPlayerCapabilityMineHarvest::ApplyCapability()</a>, <a class="el" href="BasicCapabilities_8cpp_source.html#l00160">CPlayerCapabilityMineHarvest::CanApply()</a>, <a class="el" href="BasicCapabilities_8cpp_source.html#l00156">CPlayerCapabilityMineHarvest::CanInitiate()</a>, and <a class="el" href="BasicCapabilities_8cpp_source.html#l00236">DRegistrant</a>.</p>
 <div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{};</div></div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityStandGround_aa09aba607953849ece673feeb27ef6fd_cgraph.png" border="0" usemap="#classCPlayerCapabilityStandGround_aa09aba607953849ece673feeb27ef6fd_cgraph" alt=""/></div>
 <map name="classCPlayerCapabilityStandGround_aa09aba607953849ece673feeb27ef6fd_cgraph" id="classCPlayerCapabilityStandGround_aa09aba607953849ece673feeb27ef6fd_cgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityMineHarvest.html#a37944eb249559f1246348b47e3f24dee" title="CPlayerCapabilityMineHarvest\l::CanInitiate" alt="" coords="293,5,509,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapabilityMineHarvest.html#a31da799cc9bc9be9f986bd878d13283a" title="CPlayerCapabilityMineHarvest\l::CanApply" alt="" coords="293,71,509,112"/>
-<area shape="rect" id="node4" href="classCPlayerCapabilityMineHarvest.html#a76a72fe97148f5026e67aab24ab21b21" title="CPlayerCapabilityMineHarvest\l::ApplyCapability" alt="" coords="293,136,509,177"/>
-<area shape="rect" id="node5" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="557,136,711,177"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityMineHarvest.html#a76a72fe97148f5026e67aab24ab21b21" title="CPlayerCapabilityMineHarvest\l::ApplyCapability" alt="" coords="293,5,509,47"/>
+<area shape="rect" id="node4" href="classCPlayerCapabilityMineHarvest.html#a31da799cc9bc9be9f986bd878d13283a" title="CPlayerCapabilityMineHarvest\l::CanApply" alt="" coords="293,71,509,112"/>
+<area shape="rect" id="node5" href="classCPlayerCapabilityMineHarvest.html#a37944eb249559f1246348b47e3f24dee" title="CPlayerCapabilityMineHarvest\l::CanInitiate" alt="" coords="293,136,509,177"/>
+<area shape="rect" id="node3" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="557,5,711,47"/>
 </map>
 </div>
 
@@ -280,6 +282,10 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#a2ca6fd7fbd9c0178f1cf1d049c63825f">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00278">278</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="GameDataTypes_8h_source.html#l00047">aaCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00071">CPlayerCapability::AssetCapabilityType()</a>, <a class="el" href="PlayerAsset_8h_source.html#l00315">SAssetCommand::DAction</a>, <a class="el" href="PlayerAsset_8h_source.html#l00318">SAssetCommand::DActivatedCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00317">SAssetCommand::DAssetTarget</a>, and <a class="el" href="PlayerAsset_8h_source.html#l00316">SAssetCommand::DCapability</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00351">CPlayerCapabilityCancel::~CPlayerCapabilityCancel()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                                                                                                                                                                    {</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="structSAssetCommand.html">SAssetCommand</a> NewCommand;</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    </div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    NewCommand.<a class="code" href="structSAssetCommand.html#a8edd3b3d59a76d5514ba403bc8076a75">DAction</a> = <a class="code" href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a>;</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    NewCommand.<a class="code" href="structSAssetCommand.html#a734ea7c6847457b437360f333f570ff9">DCapability</a> = <a class="code" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98">AssetCapabilityType</a>();</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    NewCommand.<a class="code" href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">DAssetTarget</a> = target;</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    NewCommand.<a class="code" href="structSAssetCommand.html#ad8beda19520811cc70fe1eab16c774dd">DActivatedCapability</a> = std::make_shared&lt; CActivatedCapability &gt;(actor, playerdata, target);</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    actor-&gt;ClearCommand();</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    actor-&gt;PushCommand(NewCommand);</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div><div class="ttc" id="structSAssetCommand_html_a3d9b43f6e59c386c48c41a65448a0c39"><div class="ttname"><a href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">SAssetCommand::DAssetTarget</a></div><div class="ttdeci">std::shared_ptr&lt; CPlayerAsset &gt; DAssetTarget</div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00317">PlayerAsset.h:317</a></div></div>
 <div class="ttc" id="structSAssetCommand_html"><div class="ttname"><a href="structSAssetCommand.html">SAssetCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00314">PlayerAsset.h:314</a></div></div>
 <div class="ttc" id="GameDataTypes_8h_html_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4"><div class="ttname"><a href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDataTypes_8h_source.html#l00047">GameDataTypes.h:47</a></div></div>
@@ -349,6 +355,8 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#ae96263e0950f496492f8baeb877b9554">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00273">273</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00351">CPlayerCapabilityCancel::~CPlayerCapabilityCancel()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                                                                                                                             {</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    </div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -397,6 +405,8 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#aa83b1e1fcaff2985c378132d679154ea">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00269">269</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00351">CPlayerCapabilityCancel::~CPlayerCapabilityCancel()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                                                                                                          {</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -430,6 +440,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00236">236</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00252">~CPlayerCapabilityStandGround()</a>.</p>
 
 </div>
 </div>

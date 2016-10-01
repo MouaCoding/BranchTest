@@ -80,6 +80,10 @@ Definition at line 25 of file Map\+Renderer.\+h.
 Definition at line 21 of file Map\+Renderer.\+cpp.
 
 
+
+References D\+Dirt\+Indices, D\+Grass\+Indices, D\+Map, D\+Pixel\+Indices, D\+Rock\+Indices, D\+Tileset, D\+Tree\+Indices, D\+Wall\+Damaged\+Indices, D\+Wall\+Indices, D\+Water\+Indices, Make\+Hamming\+Set(), C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Grass, C\+Terrain\+Map\+::tt\+Max, C\+Terrain\+Map\+::tt\+Rock, C\+Terrain\+Map\+::tt\+Rubble, C\+Terrain\+Map\+::tt\+Stump, C\+Terrain\+Map\+::tt\+Tree, C\+Terrain\+Map\+::tt\+Wall, C\+Terrain\+Map\+::tt\+Wall\+Damaged, and C\+Terrain\+Map\+::tt\+Water.
+
+
 \begin{DoxyCode}
 21                                                                                                     \{
 22     \textcolor{keywordtype}{int} Index;
@@ -380,8 +384,7 @@ Definition at line 21 of file Map\+Renderer.\+cpp.
 305     \}
 306 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -402,6 +405,10 @@ Here is the call graph for this function\+:
 Definition at line 415 of file Map\+Renderer.\+cpp.
 
 
+
+References D\+Map, and D\+Tileset.
+
+
 \begin{DoxyCode}
 415                                          \{
 416     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Height() * \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileHeight();
@@ -418,6 +425,10 @@ Definition at line 415 of file Map\+Renderer.\+cpp.
 Definition at line 411 of file Map\+Renderer.\+cpp.
 
 
+
+References D\+Map, and D\+Tileset.
+
+
 \begin{DoxyCode}
 411                                         \{
 412     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Width() * \hyperlink{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{DTileset}->TileWidth();
@@ -432,6 +443,10 @@ Definition at line 411 of file Map\+Renderer.\+cpp.
 
 
 Definition at line 419 of file Map\+Renderer.\+cpp.
+
+
+
+References D\+Dirt\+Indices, D\+Grass\+Indices, S\+Rectangle\+::\+D\+Height, D\+Map, D\+Rock\+Indices, D\+Tileset, D\+Tree\+Indices, D\+Wall\+Damaged\+Indices, D\+Wall\+Indices, D\+Water\+Indices, S\+Rectangle\+::\+D\+Width, S\+Rectangle\+::\+D\+X\+Position, S\+Rectangle\+::\+D\+Y\+Position, Find\+Unknown(), Print\+Error, C\+Pixel\+Type\+::\+To\+Pixel\+Color(), C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Grass, C\+Terrain\+Map\+::tt\+None, C\+Terrain\+Map\+::tt\+Rock, C\+Terrain\+Map\+::tt\+Rubble, C\+Terrain\+Map\+::tt\+Stump, C\+Terrain\+Map\+::tt\+Tree, C\+Terrain\+Map\+::tt\+Wall, C\+Terrain\+Map\+::tt\+Wall\+Damaged, and C\+Terrain\+Map\+::tt\+Water.
 
 
 \begin{DoxyCode}
@@ -761,8 +776,7 @@ Definition at line 419 of file Map\+Renderer.\+cpp.
 678     g\_object\_unref(TempGC);
 679 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -778,6 +792,10 @@ Here is the call graph for this function\+:
 
 
 Definition at line 681 of file Map\+Renderer.\+cpp.
+
+
+
+References D\+Map, D\+Pixel\+Indices, D\+Tileset, and C\+Terrain\+Map\+::tt\+None.
 
 
 \begin{DoxyCode}
@@ -804,6 +822,14 @@ Definition at line 681 of file Map\+Renderer.\+cpp.
 
 
 Definition at line 342 of file Map\+Renderer.\+cpp.
+
+
+
+References D\+Dirt\+Indices, D\+Dirt\+Unknown, D\+Rock\+Indices, D\+Rock\+Unknown, D\+Tree\+Indices, D\+Tree\+Unknown, D\+Water\+Indices, D\+Water\+Unknown, Make\+Hamming\+Set(), C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Rock, C\+Terrain\+Map\+::tt\+Tree, and C\+Terrain\+Map\+::tt\+Water.
+
+
+
+Referenced by Draw\+Map().
 
 
 \begin{DoxyCode}
@@ -869,16 +895,14 @@ Definition at line 342 of file Map\+Renderer.\+cpp.
 400     \textcolor{keywordflow}{return} ReturnValue;
 401 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCMapRenderer_aec3c1d3294ac3af8ebb717ed5be88870_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -894,6 +918,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 308 of file Map\+Renderer.\+cpp.
+
+
+
+Referenced by C\+Map\+Renderer(), and Find\+Unknown().
 
 
 \begin{DoxyCode}
@@ -931,8 +959,7 @@ Definition at line 308 of file Map\+Renderer.\+cpp.
 339     \}
 340 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -950,6 +977,10 @@ Here is the caller graph for this function\+:
 Definition at line 407 of file Map\+Renderer.\+cpp.
 
 
+
+References D\+Map.
+
+
 \begin{DoxyCode}
 407                                  \{
 408     \textcolor{keywordflow}{return} \hyperlink{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{DMap}->Height();
@@ -964,6 +995,10 @@ Definition at line 407 of file Map\+Renderer.\+cpp.
 
 
 Definition at line 403 of file Map\+Renderer.\+cpp.
+
+
+
+References D\+Map.
 
 
 \begin{DoxyCode}
@@ -984,6 +1019,10 @@ Definition at line 403 of file Map\+Renderer.\+cpp.
 
 Definition at line 31 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), Draw\+Map(), and Find\+Unknown().
+
 \hypertarget{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173}{}\label{classCMapRenderer_ab899664d372da1c8e4b5802c9e720173} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Dirt\+Unknown@{D\+Dirt\+Unknown}}
 \index{D\+Dirt\+Unknown@{D\+Dirt\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -993,6 +1032,10 @@ Definition at line 31 of file Map\+Renderer.\+h.
 
 
 Definition at line 40 of file Map\+Renderer.\+h.
+
+
+
+Referenced by Find\+Unknown().
 
 \hypertarget{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676}{}\label{classCMapRenderer_abea42ed77fce8a53ef0cfd6c82a5d676} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Grass\+Indices@{D\+Grass\+Indices}}
@@ -1004,6 +1047,10 @@ Definition at line 40 of file Map\+Renderer.\+h.
 
 Definition at line 29 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), and Draw\+Map().
+
 \hypertarget{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52}{}\label{classCMapRenderer_ab9a199c61aa1c87a3248af3085d8ba52} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Map@{D\+Map}}
 \index{D\+Map@{D\+Map}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1013,6 +1060,10 @@ Definition at line 29 of file Map\+Renderer.\+h.
 
 
 Definition at line 28 of file Map\+Renderer.\+h.
+
+
+
+Referenced by C\+Map\+Renderer(), Detailed\+Map\+Height(), Detailed\+Map\+Width(), Draw\+Map(), Draw\+Mini\+Map(), Map\+Height(), and Map\+Width().
 
 \hypertarget{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077}{}\label{classCMapRenderer_af636936c20248c3ee6cb6ec46f18f077} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Pixel\+Indices@{D\+Pixel\+Indices}}
@@ -1024,6 +1075,10 @@ Definition at line 28 of file Map\+Renderer.\+h.
 
 Definition at line 36 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), and Draw\+Mini\+Map().
+
 \hypertarget{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4}{}\label{classCMapRenderer_ac9178a9c9d30ac44aed7d324c51164a4} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Rock\+Indices@{D\+Rock\+Indices}}
 \index{D\+Rock\+Indices@{D\+Rock\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1033,6 +1088,10 @@ Definition at line 36 of file Map\+Renderer.\+h.
 
 
 Definition at line 33 of file Map\+Renderer.\+h.
+
+
+
+Referenced by C\+Map\+Renderer(), Draw\+Map(), and Find\+Unknown().
 
 \hypertarget{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274}{}\label{classCMapRenderer_a28aa9c33d5d2eeae0ef7c23e59712274} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Rock\+Unknown@{D\+Rock\+Unknown}}
@@ -1044,6 +1103,10 @@ Definition at line 33 of file Map\+Renderer.\+h.
 
 Definition at line 41 of file Map\+Renderer.\+h.
 
+
+
+Referenced by Find\+Unknown().
+
 \hypertarget{classCMapRenderer_ace0648cba050b5e02431096edd15b836}{}\label{classCMapRenderer_ace0648cba050b5e02431096edd15b836} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tileset@{D\+Tileset}}
 \index{D\+Tileset@{D\+Tileset}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1053,6 +1116,10 @@ Definition at line 41 of file Map\+Renderer.\+h.
 
 
 Definition at line 27 of file Map\+Renderer.\+h.
+
+
+
+Referenced by C\+Map\+Renderer(), Detailed\+Map\+Height(), Detailed\+Map\+Width(), Draw\+Map(), and Draw\+Mini\+Map().
 
 \hypertarget{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2}{}\label{classCMapRenderer_a56708493a1499c671f4378204a0bfcb2} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tree\+Indices@{D\+Tree\+Indices}}
@@ -1064,6 +1131,10 @@ Definition at line 27 of file Map\+Renderer.\+h.
 
 Definition at line 30 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), Draw\+Map(), and Find\+Unknown().
+
 \hypertarget{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8}{}\label{classCMapRenderer_a55024ab05d176fcc6b60031aef47e1c8} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Tree\+Unknown@{D\+Tree\+Unknown}}
 \index{D\+Tree\+Unknown@{D\+Tree\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1073,6 +1144,10 @@ Definition at line 30 of file Map\+Renderer.\+h.
 
 
 Definition at line 38 of file Map\+Renderer.\+h.
+
+
+
+Referenced by Find\+Unknown().
 
 \hypertarget{classCMapRenderer_a032989788e978e11147ab8603d875771}{}\label{classCMapRenderer_a032989788e978e11147ab8603d875771} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Wall\+Damaged\+Indices@{D\+Wall\+Damaged\+Indices}}
@@ -1084,6 +1159,10 @@ Definition at line 38 of file Map\+Renderer.\+h.
 
 Definition at line 35 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), and Draw\+Map().
+
 \hypertarget{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856}{}\label{classCMapRenderer_a5ba880d6fb399fc678321cb1daa2e856} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Wall\+Indices@{D\+Wall\+Indices}}
 \index{D\+Wall\+Indices@{D\+Wall\+Indices}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1093,6 +1172,10 @@ Definition at line 35 of file Map\+Renderer.\+h.
 
 
 Definition at line 34 of file Map\+Renderer.\+h.
+
+
+
+Referenced by C\+Map\+Renderer(), and Draw\+Map().
 
 \hypertarget{classCMapRenderer_af82295ac61f841481490da6f2b433db2}{}\label{classCMapRenderer_af82295ac61f841481490da6f2b433db2} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Water\+Indices@{D\+Water\+Indices}}
@@ -1104,6 +1187,10 @@ Definition at line 34 of file Map\+Renderer.\+h.
 
 Definition at line 32 of file Map\+Renderer.\+h.
 
+
+
+Referenced by C\+Map\+Renderer(), Draw\+Map(), and Find\+Unknown().
+
 \hypertarget{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194}{}\label{classCMapRenderer_a4b2db86f9cb097d28e0bb3b29eb90194} 
 \index{C\+Map\+Renderer@{C\+Map\+Renderer}!D\+Water\+Unknown@{D\+Water\+Unknown}}
 \index{D\+Water\+Unknown@{D\+Water\+Unknown}!C\+Map\+Renderer@{C\+Map\+Renderer}}
@@ -1113,6 +1200,10 @@ Definition at line 32 of file Map\+Renderer.\+h.
 
 
 Definition at line 39 of file Map\+Renderer.\+h.
+
+
+
+Referenced by Find\+Unknown().
 
 
 

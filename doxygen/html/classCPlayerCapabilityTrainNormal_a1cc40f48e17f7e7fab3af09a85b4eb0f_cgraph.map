@@ -1,8 +1,8 @@
 <map id="CPlayerCapabilityTrainNormal::~CPlayerCapabilityTrainNormal" name="CPlayerCapabilityTrainNormal::~CPlayerCapabilityTrainNormal">
-<area shape="rect" id="node2" href="$classCPlayerCapabilityTrainNormal.html#ac49cf646b94220844a03b7c3a8a7f215" title="CPlayerCapabilityTrainNormal\l::CanInitiate" alt="" coords="559,5,774,47"/>
-<area shape="rect" id="node3" href="$classCPlayerCapabilityTrainNormal.html#a625d2154bed47357f45662fe5dee7c1b" title="CPlayerCapabilityTrainNormal\l::CanApply" alt="" coords="288,60,503,101"/>
-<area shape="rect" id="node4" href="$classCPlayerCapabilityTrainNormal.html#a04ed166d2072d44ddc96735ac1beb9bc" title="CPlayerCapabilityTrainNormal\l::ApplyCapability" alt="" coords="288,125,503,167"/>
-<area shape="rect" id="node5" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="589,74,744,101"/>
-<area shape="rect" id="node6" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="590,125,743,167"/>
-<area shape="rect" id="node7" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="551,191,783,218"/>
+<area shape="rect" id="node2" href="$classCPlayerCapabilityTrainNormal.html#a04ed166d2072d44ddc96735ac1beb9bc" title="CPlayerCapabilityTrainNormal\l::ApplyCapability" alt="" coords="288,57,503,98"/>
+<area shape="rect" id="node6" href="$classCPlayerCapabilityTrainNormal.html#a625d2154bed47357f45662fe5dee7c1b" title="CPlayerCapabilityTrainNormal\l::CanApply" alt="" coords="288,122,503,163"/>
+<area shape="rect" id="node7" href="$classCPlayerCapabilityTrainNormal.html#ac49cf646b94220844a03b7c3a8a7f215" title="CPlayerCapabilityTrainNormal\l::CanInitiate" alt="" coords="559,177,774,218"/>
+<area shape="rect" id="node3" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="589,5,744,32"/>
+<area shape="rect" id="node4" href="$classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="590,57,743,98"/>
+<area shape="rect" id="node5" href="$classCPlayerAsset.html#a0aff85b9552967a42f4f3f42cb59c19f" title="CPlayerAsset::UpdateFrequency" alt="" coords="551,123,783,149"/>
 </map>

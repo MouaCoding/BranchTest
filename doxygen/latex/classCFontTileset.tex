@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Font\+Tileset\+:
-\nopagebreak
+Inheritance diagram for C\+Font\+Tileset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for C\+Font\+Tileset\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Font\+Tileset\+:
-\nopagebreak
+Collaboration diagram for C\+Font\+Tileset\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,13 +114,16 @@ Definition at line 28 of file Font\+Tileset.\+cpp.
 Definition at line 38 of file Font\+Tileset.\+h.
 
 
+
+References D\+Character\+Baseline, Draw\+Text(), Draw\+Text\+Color(), Draw\+Text\+With\+Shadow(), Measure\+Text(), and Measure\+Text\+Detailed().
+
+
 \begin{DoxyCode}
 38                                       \{
 39             \textcolor{keywordflow}{return} \hyperlink{classCFontTileset_aba19d07744c08aeb957728067c52466c}{DCharacterBaseline};  
 40         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -140,6 +141,14 @@ Here is the call graph for this function\+:
 Definition at line 146 of file Font\+Tileset.\+cpp.
 
 
+
+References D\+Character\+Widths, D\+Delta\+Widths, and C\+Graphic\+Tileset\+::\+Draw\+Tile().
+
+
+
+Referenced by Character\+Baseline().
+
+
 \begin{DoxyCode}
 146                                                                                                        \{
 147     \textcolor{keywordtype}{int} LastChar, NextChar;
@@ -155,16 +164,14 @@ Definition at line 146 of file Font\+Tileset.\+cpp.
 156     \}
 157 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCFontTileset_a4121603694e96e93378e079edd27086e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,6 +187,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 159 of file Font\+Tileset.\+cpp.
+
+
+
+References D\+Character\+Widths, D\+Delta\+Widths, D\+Pixbuf\+Tilesets, C\+Graphic\+Tileset\+::\+D\+Tile\+Height, and C\+Graphic\+Tileset\+::\+D\+Tile\+Width.
+
+
+
+Referenced by Character\+Baseline(), and Draw\+Text\+With\+Shadow().
 
 
 \begin{DoxyCode}
@@ -203,8 +218,7 @@ Definition at line 159 of file Font\+Tileset.\+cpp.
 173     \}
 174 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -222,6 +236,14 @@ Here is the caller graph for this function\+:
 Definition at line 176 of file Font\+Tileset.\+cpp.
 
 
+
+References D\+Pixbuf\+Tilesets, and Draw\+Text\+Color().
+
+
+
+Referenced by Character\+Baseline().
+
+
 \begin{DoxyCode}
 176                                                                                                            
                                                        \{
@@ -235,16 +257,14 @@ Definition at line 176 of file Font\+Tileset.\+cpp.
 184     \hyperlink{classCFontTileset_a987f13f64865891b7bf8b10f0b519fb7}{DrawTextColor}(drawable, gc, xpos, ypos, color, str);
 185 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCFontTileset_a6716e51a5692130847914287a5f1b734_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -260,6 +280,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 32 of file Font\+Tileset.\+cpp.
+
+
+
+References D\+Character\+Baseline, D\+Character\+Bottoms, D\+Character\+Tops, D\+Character\+Widths, D\+Delta\+Widths, C\+Graphic\+Tileset\+::\+D\+Pixbuf\+Tileset, D\+Pixbuf\+Tilesets, C\+Graphic\+Tileset\+::\+D\+Pixel\+Colors, C\+Graphic\+Tileset\+::\+D\+Tile\+Count, C\+Graphic\+Tileset\+::\+D\+Tile\+Height, C\+Graphic\+Tileset\+::\+D\+Tile\+Width, C\+Graphic\+Tileset\+::\+Load\+Tileset(), C\+Line\+Data\+Source\+::\+Read(), and C\+Tokenizer\+::\+Tokenize().
 
 
 \begin{DoxyCode}
@@ -380,8 +404,7 @@ Definition at line 32 of file Font\+Tileset.\+cpp.
 143     \textcolor{keywordflow}{return} ReturnStatus;
 144 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -399,22 +422,28 @@ Here is the call graph for this function\+:
 Definition at line 187 of file Font\+Tileset.\+cpp.
 
 
+
+References Measure\+Text\+Detailed().
+
+
+
+Referenced by Character\+Baseline().
+
+
 \begin{DoxyCode}
 187                                                                              \{
 188     gint TempTop, TempBottom;
 189     \hyperlink{classCFontTileset_a7afa08157a6bea6c0fbd06299685b8b3}{MeasureTextDetailed}(str, width, height, TempTop, TempBottom);
 190 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCFontTileset_ad6902d89c94a309fb487d4dbdec97a15_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -430,6 +459,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 192 of file Font\+Tileset.\+cpp.
+
+
+
+References D\+Character\+Bottoms, D\+Character\+Tops, D\+Character\+Widths, D\+Delta\+Widths, and C\+Graphic\+Tileset\+::\+D\+Tile\+Height.
+
+
+
+Referenced by Character\+Baseline(), and Measure\+Text().
 
 
 \begin{DoxyCode}
@@ -457,8 +494,7 @@ Definition at line 192 of file Font\+Tileset.\+cpp.
 212     height = \hyperlink{classCGraphicTileset_af48f32e07d5fe69afd5f764318cc3244}{DTileHeight};
 213 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -478,6 +514,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 30 of file Font\+Tileset.\+h.
 
+
+
+Referenced by Character\+Baseline(), and Load\+Font().
+
 \hypertarget{classCFontTileset_a13d7063022d59bf3347452c78be50a8b}{}\label{classCFontTileset_a13d7063022d59bf3347452c78be50a8b} 
 \index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Bottoms@{D\+Character\+Bottoms}}
 \index{D\+Character\+Bottoms@{D\+Character\+Bottoms}!C\+Font\+Tileset@{C\+Font\+Tileset}}
@@ -487,6 +527,10 @@ Definition at line 30 of file Font\+Tileset.\+h.
 
 
 Definition at line 29 of file Font\+Tileset.\+h.
+
+
+
+Referenced by Load\+Font(), and Measure\+Text\+Detailed().
 
 \hypertarget{classCFontTileset_aa009ebe41a491d854a5f6005919649c2}{}\label{classCFontTileset_aa009ebe41a491d854a5f6005919649c2} 
 \index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Tops@{D\+Character\+Tops}}
@@ -498,6 +542,10 @@ Definition at line 29 of file Font\+Tileset.\+h.
 
 Definition at line 28 of file Font\+Tileset.\+h.
 
+
+
+Referenced by Load\+Font(), and Measure\+Text\+Detailed().
+
 \hypertarget{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798}{}\label{classCFontTileset_ad25347b5350a8380be8c550d9f2e2798} 
 \index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Character\+Widths@{D\+Character\+Widths}}
 \index{D\+Character\+Widths@{D\+Character\+Widths}!C\+Font\+Tileset@{C\+Font\+Tileset}}
@@ -507,6 +555,10 @@ Definition at line 28 of file Font\+Tileset.\+h.
 
 
 Definition at line 26 of file Font\+Tileset.\+h.
+
+
+
+Referenced by Draw\+Text(), Draw\+Text\+Color(), Load\+Font(), and Measure\+Text\+Detailed().
 
 \hypertarget{classCFontTileset_a1e253853e14282e9582a7f47dace8f70}{}\label{classCFontTileset_a1e253853e14282e9582a7f47dace8f70} 
 \index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Delta\+Widths@{D\+Delta\+Widths}}
@@ -518,6 +570,10 @@ Definition at line 26 of file Font\+Tileset.\+h.
 
 Definition at line 27 of file Font\+Tileset.\+h.
 
+
+
+Referenced by Draw\+Text(), Draw\+Text\+Color(), Load\+Font(), and Measure\+Text\+Detailed().
+
 \hypertarget{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940}{}\label{classCFontTileset_ae6e92dd613809fb15892b51e0e6b4940} 
 \index{C\+Font\+Tileset@{C\+Font\+Tileset}!D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}}
 \index{D\+Pixbuf\+Tilesets@{D\+Pixbuf\+Tilesets}!C\+Font\+Tileset@{C\+Font\+Tileset}}
@@ -527,6 +583,10 @@ Definition at line 27 of file Font\+Tileset.\+h.
 
 
 Definition at line 25 of file Font\+Tileset.\+h.
+
+
+
+Referenced by Draw\+Text\+Color(), Draw\+Text\+With\+Shadow(), and Load\+Font().
 
 
 

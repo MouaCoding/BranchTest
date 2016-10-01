@@ -1,9 +1,9 @@
 <map id="CSoundEventRenderer::RenderEvents" name="CSoundEventRenderer::RenderEvents">
-<area shape="rect" id="node2" href="$classCRandomNumberGenerator.html#aa7fc51bde5647d15df2f1b9826702ca2" title="CRandomNumberGenerator\l::Random" alt="" coords="224,5,428,47"/>
-<area shape="rect" id="node3" href="$classCSoundEventRenderer.html#a4be5ff09785c55c3b5b6966fb41eb47f" title="CSoundEventRenderer\l::RightBias" alt="" coords="241,71,411,112"/>
-<area shape="rect" id="node5" href="$classCSoundEventRenderer.html#a9df97d476a3a39cb7126db9c366c2f0c" title="CSoundEventRenderer\l::OnScreen" alt="" coords="241,136,411,177"/>
-<area shape="rect" id="node4" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="504,78,607,105"/>
-<area shape="rect" id="node6" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="479,129,632,155"/>
-<area shape="rect" id="node7" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="476,179,635,206"/>
-<area shape="rect" id="node8" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="504,230,607,257"/>
+<area shape="rect" id="node2" href="$classCSoundEventRenderer.html#a9df97d476a3a39cb7126db9c366c2f0c" title="CSoundEventRenderer\l::OnScreen" alt="" coords="241,49,411,90"/>
+<area shape="rect" id="node7" href="$classCRandomNumberGenerator.html#aa7fc51bde5647d15df2f1b9826702ca2" title="CRandomNumberGenerator\l::Random" alt="" coords="224,114,428,155"/>
+<area shape="rect" id="node8" href="$classCSoundEventRenderer.html#a4be5ff09785c55c3b5b6966fb41eb47f" title="CSoundEventRenderer\l::RightBias" alt="" coords="241,179,411,221"/>
+<area shape="rect" id="node3" href="$classCPosition.html#ac4f0edd9c9632f1bdca981ef5d9b71e5" title="CPosition::TileHeight" alt="" coords="476,5,635,32"/>
+<area shape="rect" id="node4" href="$classCPosition.html#a27a7a8b9a5541da0aa8d97d785650fb8" title="CPosition::TileWidth" alt="" coords="479,56,632,83"/>
+<area shape="rect" id="node5" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="504,172,607,199"/>
+<area shape="rect" id="node6" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="504,107,607,133"/>
 </map>

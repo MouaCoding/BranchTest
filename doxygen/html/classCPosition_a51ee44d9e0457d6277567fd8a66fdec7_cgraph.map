@@ -1,8 +1,8 @@
 <map id="CPosition::DecrementY" name="CPosition::DecrementY">
 <area shape="rect" id="node2" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="233,5,405,32"/>
-<area shape="rect" id="node3" href="$classCPosition.html#ac6a1eeaeb98e20942efea7cf253b2ec4" title="CPosition::SetXFromTile" alt="" coords="228,56,409,83"/>
-<area shape="rect" id="node4" href="$classCPosition.html#a4be1caa5ce58297e9d371f6bc1db32d9" title="CPosition::SetYFromTile" alt="" coords="229,107,409,133"/>
-<area shape="rect" id="node5" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="241,157,396,184"/>
-<area shape="rect" id="node6" href="$classCPosition.html#a12795d06d34e608697b7b4c9bf202a10" title="CPosition::SetXToTile" alt="" coords="237,208,400,235"/>
+<area shape="rect" id="node3" href="$classCPosition.html#ae302aa21792de64c97de29e2cbbfeb94" title="CPosition::SetToTile" alt="" coords="241,56,396,83"/>
+<area shape="rect" id="node4" href="$classCPosition.html#ac6a1eeaeb98e20942efea7cf253b2ec4" title="CPosition::SetXFromTile" alt="" coords="228,107,409,133"/>
+<area shape="rect" id="node5" href="$classCPosition.html#a12795d06d34e608697b7b4c9bf202a10" title="CPosition::SetXToTile" alt="" coords="237,157,400,184"/>
+<area shape="rect" id="node6" href="$classCPosition.html#a4be1caa5ce58297e9d371f6bc1db32d9" title="CPosition::SetYFromTile" alt="" coords="229,208,409,235"/>
 <area shape="rect" id="node7" href="$classCPosition.html#a5805485f623398197ac595a5d389f691" title="CPosition::SetYToTile" alt="" coords="237,259,400,285"/>
 </map>

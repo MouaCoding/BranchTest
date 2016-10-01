@@ -222,15 +222,17 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00666">666</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="BasicCapabilities_8cpp_source.html#l00589">CPlayerCapabilityPatrol::ApplyCapability()</a>, <a class="el" href="BasicCapabilities_8cpp_source.html#l00585">CPlayerCapabilityPatrol::CanApply()</a>, <a class="el" href="BasicCapabilities_8cpp_source.html#l00581">CPlayerCapabilityPatrol::CanInitiate()</a>, and <a class="el" href="BasicCapabilities_8cpp_source.html#l00650">DRegistrant</a>.</p>
 <div class="fragment"><div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;{};</div></div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCPlayerCapabilityAttack_ac18875f6e891a2e8b805ed42bb001bb3_cgraph.png" border="0" usemap="#classCPlayerCapabilityAttack_ac18875f6e891a2e8b805ed42bb001bb3_cgraph" alt=""/></div>
 <map name="classCPlayerCapabilityAttack_ac18875f6e891a2e8b805ed42bb001bb3_cgraph" id="classCPlayerCapabilityAttack_ac18875f6e891a2e8b805ed42bb001bb3_cgraph">
-<area shape="rect" id="node2" href="classCPlayerCapabilityPatrol.html#a48e60ecd544759f3aad66afeb4a6e0a9" title="CPlayerCapabilityPatrol\l::CanInitiate" alt="" coords="249,5,424,47"/>
-<area shape="rect" id="node3" href="classCPlayerCapabilityPatrol.html#a63c099d931e1e57db01120db7b1fdbe4" title="CPlayerCapabilityPatrol\l::CanApply" alt="" coords="249,71,424,112"/>
-<area shape="rect" id="node4" href="classCPlayerCapabilityPatrol.html#a6b9e361d99e256efadcd99a829f93f51" title="CPlayerCapabilityPatrol\l::ApplyCapability" alt="" coords="249,136,424,177"/>
-<area shape="rect" id="node5" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="472,136,625,177"/>
+<area shape="rect" id="node2" href="classCPlayerCapabilityPatrol.html#a6b9e361d99e256efadcd99a829f93f51" title="CPlayerCapabilityPatrol\l::ApplyCapability" alt="" coords="249,5,424,47"/>
+<area shape="rect" id="node4" href="classCPlayerCapabilityPatrol.html#a63c099d931e1e57db01120db7b1fdbe4" title="CPlayerCapabilityPatrol\l::CanApply" alt="" coords="249,71,424,112"/>
+<area shape="rect" id="node5" href="classCPlayerCapabilityPatrol.html#a48e60ecd544759f3aad66afeb4a6e0a9" title="CPlayerCapabilityPatrol\l::CanInitiate" alt="" coords="249,136,424,177"/>
+<area shape="rect" id="node3" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98" title="CPlayerCapability::\lAssetCapabilityType" alt="" coords="472,5,625,47"/>
 </map>
 </div>
 
@@ -280,6 +282,10 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#a2ca6fd7fbd9c0178f1cf1d049c63825f">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00694">694</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="GameDataTypes_8h_source.html#l00047">aaCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00071">CPlayerCapability::AssetCapabilityType()</a>, <a class="el" href="PlayerAsset_8h_source.html#l00315">SAssetCommand::DAction</a>, <a class="el" href="PlayerAsset_8h_source.html#l00318">SAssetCommand::DActivatedCapability</a>, <a class="el" href="PlayerAsset_8h_source.html#l00317">SAssetCommand::DAssetTarget</a>, and <a class="el" href="PlayerAsset_8h_source.html#l00316">SAssetCommand::DCapability</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00768">CPlayerCapabilityRepair::~CPlayerCapabilityRepair()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                                                                                                                                                               {</div><div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    <span class="keywordflow">if</span>(actor-&gt;TilePosition() != target-&gt;TilePosition()){</div><div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        <a class="code" href="structSAssetCommand.html">SAssetCommand</a> NewCommand;</div><div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        </div><div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a8edd3b3d59a76d5514ba403bc8076a75">DAction</a> = <a class="code" href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a>;</div><div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a734ea7c6847457b437360f333f570ff9">DCapability</a> = <a class="code" href="classCPlayerCapability.html#a433bb196cd6ab6a932f1cac102b3aa98">AssetCapabilityType</a>();</div><div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">DAssetTarget</a> = target;</div><div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        NewCommand.<a class="code" href="structSAssetCommand.html#ad8beda19520811cc70fe1eab16c774dd">DActivatedCapability</a> = std::make_shared&lt; CActivatedCapability &gt;(actor, playerdata, target);</div><div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        actor-&gt;ClearCommand();</div><div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        actor-&gt;PushCommand(NewCommand);</div><div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    }</div><div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div><div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;}</div><div class="ttc" id="structSAssetCommand_html_a3d9b43f6e59c386c48c41a65448a0c39"><div class="ttname"><a href="structSAssetCommand.html#a3d9b43f6e59c386c48c41a65448a0c39">SAssetCommand::DAssetTarget</a></div><div class="ttdeci">std::shared_ptr&lt; CPlayerAsset &gt; DAssetTarget</div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00317">PlayerAsset.h:317</a></div></div>
 <div class="ttc" id="structSAssetCommand_html"><div class="ttname"><a href="structSAssetCommand.html">SAssetCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="PlayerAsset_8h_source.html#l00314">PlayerAsset.h:314</a></div></div>
 <div class="ttc" id="GameDataTypes_8h_html_ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4"><div class="ttname"><a href="GameDataTypes_8h.html#ab47668e651a3032cfb9c40ea2d60d670acf9fb164e8abd71c71f4a8c7fda360d4">aaCapability</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDataTypes_8h_source.html#l00047">GameDataTypes.h:47</a></div></div>
@@ -349,6 +355,10 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#ae96263e0950f496492f8baeb877b9554">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00687">687</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>References <a class="el" href="GameDataTypes_8h_source.html#l00021">pcNone</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00768">CPlayerCapabilityRepair::~CPlayerCapabilityRepair()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;                                                                                                                                                        {</div><div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="keywordflow">if</span>((actor-&gt;Color() == target-&gt;Color())||(<a class="code" href="GameDataTypes_8h.html#aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729">pcNone</a> == target-&gt;Color())){</div><div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;   </div><div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    }</div><div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordflow">return</span> actor-&gt;Speed() &gt; 0;</div><div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;}</div><div class="ttc" id="GameDataTypes_8h_html_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729"><div class="ttname"><a href="GameDataTypes_8h.html#aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729">pcNone</a></div><div class="ttdef"><b>Definition:</b> <a href="GameDataTypes_8h_source.html#l00021">GameDataTypes.h:21</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -398,6 +408,8 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classCPlayerCapability.html#aa83b1e1fcaff2985c378132d679154ea">CPlayerCapability</a>.</p>
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00683">683</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00768">CPlayerCapabilityRepair::~CPlayerCapabilityRepair()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                                                                                                                     {</div><div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    <span class="keywordflow">return</span> actor-&gt;Speed() &gt; 0;</div><div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -431,6 +443,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="BasicCapabilities_8cpp_source.html#l00650">650</a> of file <a class="el" href="BasicCapabilities_8cpp_source.html">BasicCapabilities.cpp</a>.</p>
+
+<p>Referenced by <a class="el" href="BasicCapabilities_8cpp_source.html#l00666">~CPlayerCapabilityAttack()</a>.</p>
 
 </div>
 </div>

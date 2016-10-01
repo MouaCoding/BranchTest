@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability}\index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Build\+Ranger\+:\+:C\+Activated\+Capability\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -69,6 +67,10 @@ Definition at line 169 of file Unit\+Upgrade\+Capabilities.\+cpp.
 Definition at line 288 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References aa\+Construct, at\+Barracks, at\+Lumber\+Mill, S\+Asset\+Command\+::\+D\+Action, C\+Activated\+Player\+Capability\+::\+D\+Actor, S\+Asset\+Command\+::\+D\+Asset\+Target, D\+Current\+Step, D\+Gold, D\+Lumber, C\+Activated\+Player\+Capability\+::\+D\+Player\+Data, C\+Activated\+Player\+Capability\+::\+D\+Target, D\+Total\+Steps, D\+Unit\+Name, D\+Upgrading\+Type, and C\+Player\+Capability\+::\+Name\+To\+Type().
+
+
 \begin{DoxyCode}
 288                                                                                                            
                                                                                                                   
@@ -96,8 +98,7 @@ Definition at line 288 of file Unit\+Upgrade\+Capabilities.\+cpp.
 307     \}
 308 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,11 +116,14 @@ Here is the call graph for this function\+:
 Definition at line 180 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+Cancel(), C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+Increment\+Step(), and C\+Player\+Capability\+Unit\+Upgrade\+::\+C\+Activated\+Capability\+::\+Percent\+Complete().
+
+
 \begin{DoxyCode}
 180 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,6 +148,10 @@ Implements \hyperlink{classCActivatedPlayerCapability_a5cde83be468e262ad054d81e2
 Definition at line 369 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References at\+Barracks, at\+Lumber\+Mill, C\+Activated\+Player\+Capability\+::\+D\+Actor, D\+Gold, D\+Lumber, C\+Activated\+Player\+Capability\+::\+D\+Player\+Data, C\+Activated\+Player\+Capability\+::\+D\+Target, D\+Unit\+Name, D\+Upgrading\+Type, and C\+Player\+Capability\+::\+Name\+To\+Type().
+
+
 \begin{DoxyCode}
 369                                                              \{
 370     \hyperlink{classCActivatedPlayerCapability_a9bf27c322a73f4b11c8183cc1973c3d8}{DPlayerData}->IncrementLumber(\hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{DLumber});
@@ -159,8 +167,7 @@ Definition at line 369 of file Unit\+Upgrade\+Capabilities.\+cpp.
 378     \hyperlink{classCActivatedPlayerCapability_a54ca944b47bff2718330639941d402b0}{DActor}->PopCommand();
 379 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,6 +187,10 @@ Implements \hyperlink{classCActivatedPlayerCapability_a943b5999a5750439929325038
 
 
 Definition at line 315 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+References act\+Build\+Archer, act\+Build\+Ranger, act\+Longbow, act\+Marksmanship, act\+Ranger\+Scouting, at\+Archer, at\+Barracks, at\+Lumber\+Mill, C\+Activated\+Player\+Capability\+::\+D\+Actor, S\+Game\+Event\+::\+D\+Asset, D\+Current\+Step, C\+Activated\+Player\+Capability\+::\+D\+Player\+Data, C\+Activated\+Player\+Capability\+::\+D\+Target, D\+Total\+Steps, S\+Game\+Event\+::\+D\+Type, et\+Ready, and et\+Work\+Complete.
 
 
 \begin{DoxyCode}
@@ -257,6 +268,10 @@ Implements \hyperlink{classCActivatedPlayerCapability_a405dc6076058006a4f801727d
 Definition at line 311 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
+
+References D\+Current\+Step, and D\+Total\+Steps.
+
+
 \begin{DoxyCode}
 311                                                                             \{
 312     \textcolor{keywordflow}{return} \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a27be6f32606ef0dcc31ec42e0504611c}{DCurrentStep} * max / \hyperlink{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{DTotalSteps};
@@ -275,6 +290,10 @@ Definition at line 311 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 Definition at line 173 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by C\+Activated\+Capability(), Increment\+Step(), and Percent\+Complete().
+
 \hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a1943b07bf35da2a475fd1bb36ca777ab} 
 \index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Gold@{D\+Gold}}
 \index{D\+Gold@{D\+Gold}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
@@ -284,6 +303,10 @@ Definition at line 173 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 176 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by C\+Activated\+Capability(), and Cancel().
 
 \hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a149028982faf1d393580d5d57bf4da03} 
 \index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Lumber@{D\+Lumber}}
@@ -295,6 +318,10 @@ Definition at line 176 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 Definition at line 175 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by C\+Activated\+Capability(), and Cancel().
+
 \hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a322dd429ae588ed82febdcf459232bee} 
 \index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Total\+Steps@{D\+Total\+Steps}}
 \index{D\+Total\+Steps@{D\+Total\+Steps}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
@@ -304,6 +331,10 @@ Definition at line 175 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 174 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by C\+Activated\+Capability(), Increment\+Step(), and Percent\+Complete().
 
 \hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a0914856622c9b77b9943add2491c97be} 
 \index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Unit\+Name@{D\+Unit\+Name}}
@@ -315,6 +346,10 @@ Definition at line 174 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 Definition at line 172 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
+
+
+Referenced by C\+Activated\+Capability(), and Cancel().
+
 \hypertarget{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682}{}\label{classCPlayerCapabilityBuildRanger_1_1CActivatedCapability_a86cf7894dce398e7c5f4642e57e31682} 
 \index{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}!D\+Upgrading\+Type@{D\+Upgrading\+Type}}
 \index{D\+Upgrading\+Type@{D\+Upgrading\+Type}!C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability@{C\+Player\+Capability\+Build\+Ranger\+::\+C\+Activated\+Capability}}
@@ -324,6 +359,10 @@ Definition at line 172 of file Unit\+Upgrade\+Capabilities.\+cpp.
 
 
 Definition at line 171 of file Unit\+Upgrade\+Capabilities.\+cpp.
+
+
+
+Referenced by C\+Activated\+Capability(), and Cancel().
 
 
 

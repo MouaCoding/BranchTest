@@ -1,7 +1,7 @@
 <map id="CGraphicTileset::DrawTile" name="CGraphicTileset::DrawTile">
-<area shape="rect" id="node2" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="243,5,441,32"/>
-<area shape="rect" id="node3" href="$classCCursorSet.html#ab28cc2871e723b2509a5036eac1086ba" title="CCursorSet::DrawCursor" alt="" coords="251,56,433,83"/>
-<area shape="rect" id="node5" href="$classCFontTileset.html#a4121603694e96e93378e079edd27086e" title="CFontTileset::DrawText" alt="" coords="253,107,431,133"/>
-<area shape="rect" id="node4" href="$classCCursorSet.html#a25ce1f3e861c3d4ea701bb2e810728a6" title="CCursorSet::CursorHeight" alt="" coords="509,56,700,83"/>
-<area shape="rect" id="node6" href="$classCFontTileset.html#a888dd4fe8f46b35550386a1997f4376a" title="CFontTileset::CharacterBaseline" alt="" coords="489,107,720,133"/>
+<area shape="rect" id="node2" href="$classCCursorSet.html#ab28cc2871e723b2509a5036eac1086ba" title="CCursorSet::DrawCursor" alt="" coords="251,5,433,32"/>
+<area shape="rect" id="node4" href="$classCFontTileset.html#a4121603694e96e93378e079edd27086e" title="CFontTileset::DrawText" alt="" coords="253,56,431,83"/>
+<area shape="rect" id="node6" href="$classCGraphicTileset.html#af278c60b01100c430bedfcedd9e9489f" title="CGraphicTileset::PixelColor" alt="" coords="243,107,441,133"/>
+<area shape="rect" id="node3" href="$classCCursorSet.html#a25ce1f3e861c3d4ea701bb2e810728a6" title="CCursorSet::CursorHeight" alt="" coords="509,5,700,32"/>
+<area shape="rect" id="node5" href="$classCFontTileset.html#a888dd4fe8f46b35550386a1997f4376a" title="CFontTileset::CharacterBaseline" alt="" coords="489,56,720,83"/>
 </map>

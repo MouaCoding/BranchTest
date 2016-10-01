@@ -123,6 +123,10 @@ Definition at line 22 of file Position.\+h.
 Definition at line 29 of file Position.\+cpp.
 
 
+
+References DX, and DY.
+
+
 \begin{DoxyCode}
 29                                 \{
 30     \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} = x;
@@ -147,6 +151,14 @@ Definition at line 29 of file Position.\+cpp.
 
 
 Definition at line 151 of file Position.\+cpp.
+
+
+
+References Closest\+Position(), d\+Max, D\+Tile\+Directions, DX, DY, Set\+From\+Tile(), and Set\+To\+Tile().
+
+
+
+Referenced by Tile\+Aligned().
 
 
 \begin{DoxyCode}
@@ -174,16 +186,14 @@ Definition at line 151 of file Position.\+cpp.
 171     \}
 172 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a2295901e4c35cfc81304f9a217e34ac7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,6 +209,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 174 of file Position.\+cpp.
+
+
+
+References Distance\+Squared(), Increment\+X(), Increment\+Y(), Tile\+Height(), Tile\+Width(), and X().
+
+
+
+Referenced by Adjacent\+Tile\+Direction(), C\+Player\+Asset\+::\+Closest\+Position(), and Tile\+Aligned().
 
 
 \begin{DoxyCode}
@@ -221,16 +239,14 @@ Definition at line 174 of file Position.\+cpp.
 190     \textcolor{keywordflow}{return} BestPosition;
 191 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a91fd43eeb2c894bcb7577ae87247b726_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -248,14 +264,21 @@ Here is the caller graph for this function\+:
 Definition at line 75 of file Position.\+h.
 
 
+
+References DX.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Build\+Building(), and C\+Router\+Map\+::\+Find\+Route().
+
+
 \begin{DoxyCode}
 75                              \{
 76             \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} -= x; 
 77             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX};
 78         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -273,22 +296,28 @@ Here is the caller graph for this function\+:
 Definition at line 93 of file Position.\+h.
 
 
+
+References DY, Set\+From\+Tile(), Set\+To\+Tile(), Set\+X\+From\+Tile(), Set\+X\+To\+Tile(), Set\+Y\+From\+Tile(), and Set\+Y\+To\+Tile().
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Build\+Building(), and C\+Router\+Map\+::\+Find\+Route().
+
+
 \begin{DoxyCode}
 93                              \{
 94             \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} -= y; 
 95             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY};
 96         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a51ee44d9e0457d6277567fd8a66fdec7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -304,6 +333,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 193 of file Position.\+cpp.
+
+
+
+References DX, DY, Half\+Tile\+Height(), Half\+Tile\+Width(), Tile\+Height(), Tile\+Octant(), and Tile\+Width().
+
+
+
+Referenced by Tile\+Aligned().
 
 
 \begin{DoxyCode}
@@ -337,16 +374,14 @@ Definition at line 193 of file Position.\+cpp.
 220     \textcolor{keywordflow}{return} DeltaPosition.TileOctant();
 221 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a65124e3543c2d2e284e5eb517cd7f842_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -362,6 +397,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 230 of file Position.\+cpp.
+
+
+
+References Distance\+Squared().
+
+
+
+Referenced by Tile\+Aligned().
 
 
 \begin{DoxyCode}
@@ -387,16 +430,14 @@ Definition at line 230 of file Position.\+cpp.
 249     \textcolor{keywordflow}{return} Result;    
 250 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a9edc6690c78a54ea08b137df83c22e91_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -414,6 +455,14 @@ Here is the caller graph for this function\+:
 Definition at line 223 of file Position.\+cpp.
 
 
+
+References DX, and DY.
+
+
+
+Referenced by Closest\+Position(), Distance(), C\+Asset\+Decorated\+Map\+::\+Find\+Asset\+Placement(), C\+Router\+Map\+::\+Find\+Route(), Tile\+Aligned(), and C\+Game\+Model\+::\+Timestep().
+
+
 \begin{DoxyCode}
 223                                                   \{
 224     \textcolor{keywordtype}{int} DeltaX = pos.\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} - \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX};
@@ -422,8 +471,7 @@ Definition at line 223 of file Position.\+cpp.
 227     \textcolor{keywordflow}{return} DeltaX * DeltaX + DeltaY * DeltaY;
 228 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -441,13 +489,20 @@ Here is the caller graph for this function\+:
 Definition at line 58 of file Position.\+h.
 
 
+
+References D\+Half\+Tile\+Height.
+
+
+
+Referenced by Direction\+To(), C\+Asset\+Renderer\+::\+Draw\+Assets(), C\+Asset\+Renderer\+::\+Draw\+Overlays(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Asset\+Renderer\+::\+Draw\+Selections(), and C\+Game\+Model\+::\+Timestep().
+
+
 \begin{DoxyCode}
 58                                    \{
 59             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a1e0af68f7690b3cfc14687cf7fbe7ade}{DHalfTileHeight};  
 60         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -465,13 +520,20 @@ Here is the caller graph for this function\+:
 Definition at line 54 of file Position.\+h.
 
 
+
+References D\+Half\+Tile\+Width.
+
+
+
+Referenced by Direction\+To(), C\+Asset\+Renderer\+::\+Draw\+Assets(), C\+Asset\+Renderer\+::\+Draw\+Overlays(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Asset\+Renderer\+::\+Draw\+Selections(), and C\+Game\+Model\+::\+Timestep().
+
+
 \begin{DoxyCode}
 54                                   \{
 55             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a3227e835d9008346e9d91bdad2380f14}{DHalfTileWidth};  
 56         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -487,6 +549,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 70 of file Position.\+h.
+
+
+
+References DX.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Attack\+Enemies(), C\+A\+I\+Player\+::\+Build\+Building(), Closest\+Position(), C\+Asset\+Renderer\+::\+Draw\+Placement(), and C\+Player\+Asset\+::\+Move\+Step().
 
 
 \begin{DoxyCode}
@@ -514,6 +584,14 @@ Here is the caller graph for this function\+:
 Definition at line 88 of file Position.\+h.
 
 
+
+References DY.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Attack\+Enemies(), C\+A\+I\+Player\+::\+Build\+Building(), Closest\+Position(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Player\+Asset\+::\+Move\+Step(), and C\+Application\+Data\+::\+Process\+Input\+Game\+Mode().
+
+
 \begin{DoxyCode}
 88                              \{
 89             \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} += y;
@@ -539,6 +617,10 @@ Here is the caller graph for this function\+:
 Definition at line 38 of file Position.\+cpp.
 
 
+
+References DX, and DY.
+
+
 \begin{DoxyCode}
 38                                                     \{
 39     \textcolor{keywordflow}{return} (\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} != pos.\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX}) || (\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} != pos.\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY});
@@ -561,6 +643,10 @@ Definition at line 38 of file Position.\+cpp.
 Definition at line 34 of file Position.\+cpp.
 
 
+
+References DX, and DY.
+
+
 \begin{DoxyCode}
 34                                                     \{
 35     \textcolor{keywordflow}{return} (\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} == pos.\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX}) && (\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} == pos.\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY});
@@ -575,6 +661,14 @@ Definition at line 34 of file Position.\+cpp.
 
 
 Definition at line 121 of file Position.\+cpp.
+
+
+
+References D\+Half\+Tile\+Height, D\+Half\+Tile\+Width, D\+Tile\+Height, D\+Tile\+Width, DX, and DY.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Activate\+Peasants(), Adjacent\+Tile\+Direction(), C\+A\+I\+Player\+::\+Build\+Building(), C\+A\+I\+Player\+::\+Build\+Town\+Hall(), Decrement\+Y(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), C\+A\+I\+Player\+::\+Search\+Map(), C\+Player\+Asset\+::\+Tile\+Position(), and C\+Game\+Model\+::\+Timestep().
 
 
 \begin{DoxyCode}
@@ -600,6 +694,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 42 of file Position.\+cpp.
+
+
+
+References d\+East, D\+Half\+Tile\+Height, D\+Half\+Tile\+Width, d\+Max, d\+North, d\+North\+East, d\+North\+West, D\+Octant, d\+South, d\+South\+East, d\+South\+West, D\+Tile\+Height, D\+Tile\+Width, d\+West, X(), and Y().
+
+
+
+Referenced by C\+Application\+Data\+::\+Init().
 
 
 \begin{DoxyCode}
@@ -682,16 +784,14 @@ Definition at line 42 of file Position.\+cpp.
 118     \}
 119 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_a506e9efd21e209e36533ba7e594be75f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -709,14 +809,21 @@ Here is the caller graph for this function\+:
 Definition at line 134 of file Position.\+cpp.
 
 
+
+References D\+Tile\+Height, D\+Tile\+Width, DX, and DY.
+
+
+
+Referenced by Adjacent\+Tile\+Direction(), C\+Player\+Capability\+Build\+Normal\+::\+Apply\+Capability(), C\+Player\+Capability\+Train\+Normal\+::\+Apply\+Capability(), C\+Player\+Capability\+Build\+Ranger\+::\+Apply\+Capability(), C\+Player\+Data\+::\+Create\+Marker(), Decrement\+Y(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Router\+Map\+::\+Find\+Route(), C\+Player\+Asset\+::\+Move\+Step(), C\+Player\+Asset\+::\+Position(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), and C\+Game\+Model\+::\+Timestep().
+
+
 \begin{DoxyCode}
 134                                              \{
 135     \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} = pos.\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} / \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth};
 136     \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} = pos.\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} / \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight};
 137 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -734,13 +841,20 @@ Here is the caller graph for this function\+:
 Definition at line 126 of file Position.\+cpp.
 
 
+
+References D\+Half\+Tile\+Width, D\+Tile\+Width, and DX.
+
+
+
+Referenced by Decrement\+Y(), C\+Application\+Data\+::\+Mini\+Map\+To\+Detailed\+Map(), and C\+Player\+Asset\+::\+Tile\+Position\+X().
+
+
 \begin{DoxyCode}
 126                                  \{
 127     \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} = x * \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth} + \hyperlink{classCPosition_a3227e835d9008346e9d91bdad2380f14}{DHalfTileWidth};
 128 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -758,13 +872,20 @@ Here is the caller graph for this function\+:
 Definition at line 139 of file Position.\+cpp.
 
 
+
+References D\+Tile\+Width, and DX.
+
+
+
+Referenced by Decrement\+Y(), and C\+Player\+Asset\+::\+Position\+X().
+
+
 \begin{DoxyCode}
 139                                \{
 140     \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} = x / \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth};
 141 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -782,13 +903,20 @@ Here is the caller graph for this function\+:
 Definition at line 130 of file Position.\+cpp.
 
 
+
+References D\+Half\+Tile\+Height, D\+Tile\+Height, and DY.
+
+
+
+Referenced by Decrement\+Y(), C\+Application\+Data\+::\+Mini\+Map\+To\+Detailed\+Map(), and C\+Player\+Asset\+::\+Tile\+Position\+Y().
+
+
 \begin{DoxyCode}
 130                                  \{
 131     \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} = y * \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight} + \hyperlink{classCPosition_a1e0af68f7690b3cfc14687cf7fbe7ade}{DHalfTileHeight};
 132 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -806,13 +934,20 @@ Here is the caller graph for this function\+:
 Definition at line 143 of file Position.\+cpp.
 
 
+
+References D\+Tile\+Height, and DY.
+
+
+
+Referenced by Decrement\+Y(), and C\+Player\+Asset\+::\+Position\+Y().
+
+
 \begin{DoxyCode}
 143                                \{
 144     \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} = y / \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight};
 145 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -830,22 +965,28 @@ Here is the caller graph for this function\+:
 Definition at line 105 of file Position.\+h.
 
 
+
+References Adjacent\+Tile\+Direction(), Closest\+Position(), Direction\+To(), Distance(), Distance\+Squared(), D\+Tile\+Height, and Tile\+Octant().
+
+
+
+Referenced by C\+Player\+Asset\+::\+Tile\+Aligned().
+
+
 \begin{DoxyCode}
 105                                 \{
 106             \textcolor{keywordflow}{return} ((\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} % \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth}) == \hyperlink{classCPosition_a3227e835d9008346e9d91bdad2380f14}{DHalfTileWidth}) && ((
       \hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} % \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight}) == \hyperlink{classCPosition_a1e0af68f7690b3cfc14687cf7fbe7ade}{DHalfTileHeight});
 107         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPosition_abe4ef039d9bbf51cd542167b5a0cd88e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -863,13 +1004,20 @@ Here is the caller graph for this function\+:
 Definition at line 50 of file Position.\+h.
 
 
+
+References D\+Tile\+Height.
+
+
+
+Referenced by Closest\+Position(), Direction\+To(), C\+Asset\+Renderer\+::\+Draw\+Selections(), C\+Player\+Asset\+::\+Move\+Step(), C\+Sound\+Event\+Renderer\+::\+On\+Screen(), and C\+Application\+Data\+::\+Process\+Input\+Game\+Mode().
+
+
 \begin{DoxyCode}
 50                                \{
 51             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight};  
 52         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -887,13 +1035,20 @@ Here is the caller graph for this function\+:
 Definition at line 147 of file Position.\+cpp.
 
 
+
+References D\+Octant, D\+Tile\+Height, D\+Tile\+Width, DX, and DY.
+
+
+
+Referenced by Direction\+To(), C\+Player\+Asset\+::\+Move\+Step(), and Tile\+Aligned().
+
+
 \begin{DoxyCode}
 147                                       \{
 148     \textcolor{keywordflow}{return} \hyperlink{classCPosition_a0f7a420e82a180b983e32258729bb984}{DOctant}[\hyperlink{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{DY} % \hyperlink{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{DTileHeight}][\hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX} % \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth}];
 149 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -911,13 +1066,20 @@ Here is the caller graph for this function\+:
 Definition at line 46 of file Position.\+h.
 
 
+
+References D\+Tile\+Width.
+
+
+
+Referenced by Closest\+Position(), Direction\+To(), C\+Asset\+Renderer\+::\+Draw\+Selections(), C\+Player\+Asset\+::\+Move\+Step(), C\+Sound\+Event\+Renderer\+::\+On\+Screen(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), Range\+To\+Distance\+Squared(), and C\+Game\+Model\+::\+Timestep().
+
+
 \begin{DoxyCode}
 46                               \{
 47             \textcolor{keywordflow}{return} \hyperlink{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{DTileWidth};  
 48         \};
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -935,6 +1097,14 @@ Here is the caller graph for this function\+:
 Definition at line 62 of file Position.\+h.
 
 
+
+References DX.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Activate\+Peasants(), C\+A\+I\+Player\+::\+Attack\+Enemies(), C\+A\+I\+Player\+::\+Build\+Building(), C\+A\+I\+Player\+::\+Build\+Town\+Hall(), C\+Asset\+Decorated\+Map\+::\+Can\+Place\+Asset(), C\+Viewport\+Renderer\+::\+Center\+Viewport(), C\+Terrain\+Map\+::\+Change\+Tile\+Type(), Closest\+Position(), C\+Viewport\+Renderer\+::\+Detailed\+Position(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Player\+Data\+::\+Find\+Best\+Asset\+Placement(), C\+Asset\+Decorated\+Map\+::\+Find\+Nearest\+Reachable\+Tile\+Type(), C\+Terrain\+Map\+::\+Find\+Nearest\+Tile\+Type(), C\+Router\+Map\+::\+Find\+Route(), C\+Application\+Data\+::\+Find\+U\+I\+Component\+Type(), C\+Pixel\+Type\+::\+Get\+Pixel\+Type(), C\+Asset\+Decorated\+Map\+::\+Load\+Map(), C\+Application\+Data\+::\+Mini\+Map\+To\+Detailed\+Map(), C\+Player\+Asset\+::\+Move\+Step(), C\+Sound\+Event\+Renderer\+::\+On\+Screen(), C\+Player\+Asset\+::\+Position\+X(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), C\+Application\+Data\+::\+Render\+Game\+Mode(), C\+Sound\+Event\+Renderer\+::\+Right\+Bias(), C\+Application\+Data\+::\+Screen\+To\+Mini\+Map(), C\+Application\+Data\+::\+Screen\+To\+Unit\+Action(), C\+Application\+Data\+::\+Screen\+To\+Unit\+Description(), C\+Application\+Data\+::\+Screen\+To\+Viewport(), C\+A\+I\+Player\+::\+Search\+Map(), C\+Unit\+Action\+Renderer\+::\+Selection(), C\+Unit\+Description\+Renderer\+::\+Selection(), Set\+Tile\+Dimensions(), C\+Player\+Asset\+::\+Tile\+Position\+X(), C\+Terrain\+Map\+::\+Tile\+Type(), C\+Game\+Model\+::\+Timestep(), C\+Visibility\+Map\+::\+Update(), and C\+Asset\+Decorated\+Map\+::\+Update\+Map().
+
+
 \begin{DoxyCode}
 62                      \{
 63             \textcolor{keywordflow}{return} \hyperlink{classCPosition_a28445f9b872169715919074d82044eda}{DX};  
@@ -945,7 +1115,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classCPosition_a9a6b94d3b91df1492d166d9964c865fc_icgraph}
+\includegraphics[height=550pt]{classCPosition_a9a6b94d3b91df1492d166d9964c865fc_icgraph}
 \end{center}
 \end{figure}
 \hypertarget{classCPosition_abcbbd0f2a24118ff32560150c967b1da}{}\label{classCPosition_abcbbd0f2a24118ff32560150c967b1da} 
@@ -973,6 +1143,14 @@ Definition at line 66 of file Position.\+h.
 
 
 Definition at line 80 of file Position.\+h.
+
+
+
+References DY.
+
+
+
+Referenced by C\+A\+I\+Player\+::\+Attack\+Enemies(), C\+A\+I\+Player\+::\+Build\+Building(), C\+Asset\+Decorated\+Map\+::\+Can\+Place\+Asset(), C\+Viewport\+Renderer\+::\+Center\+Viewport(), C\+Terrain\+Map\+::\+Change\+Tile\+Type(), C\+Viewport\+Renderer\+::\+Detailed\+Position(), C\+Asset\+Renderer\+::\+Draw\+Placement(), C\+Player\+Data\+::\+Find\+Best\+Asset\+Placement(), C\+Asset\+Decorated\+Map\+::\+Find\+Nearest\+Reachable\+Tile\+Type(), C\+Terrain\+Map\+::\+Find\+Nearest\+Tile\+Type(), C\+Router\+Map\+::\+Find\+Route(), C\+Application\+Data\+::\+Find\+U\+I\+Component\+Type(), C\+Pixel\+Type\+::\+Get\+Pixel\+Type(), C\+Asset\+Decorated\+Map\+::\+Load\+Map(), C\+Application\+Data\+::\+Mini\+Map\+To\+Detailed\+Map(), C\+Player\+Asset\+::\+Move\+Step(), C\+Sound\+Event\+Renderer\+::\+On\+Screen(), C\+Player\+Asset\+::\+Position\+Y(), C\+Application\+Data\+::\+Process\+Input\+Game\+Mode(), C\+Application\+Data\+::\+Render\+Game\+Mode(), C\+Application\+Data\+::\+Screen\+To\+Mini\+Map(), C\+Application\+Data\+::\+Screen\+To\+Unit\+Action(), C\+Application\+Data\+::\+Screen\+To\+Unit\+Description(), C\+Application\+Data\+::\+Screen\+To\+Viewport(), C\+Unit\+Action\+Renderer\+::\+Selection(), C\+Unit\+Description\+Renderer\+::\+Selection(), Set\+Tile\+Dimensions(), C\+Player\+Asset\+::\+Tile\+Position\+Y(), C\+Terrain\+Map\+::\+Tile\+Type(), C\+Game\+Model\+::\+Timestep(), C\+Visibility\+Map\+::\+Update(), and C\+Asset\+Decorated\+Map\+::\+Update\+Map().
 
 
 \begin{DoxyCode}
@@ -1017,6 +1195,10 @@ Definition at line 84 of file Position.\+h.
 
 Definition at line 30 of file Position.\+h.
 
+
+
+Referenced by Half\+Tile\+Height(), Set\+From\+Tile(), Set\+Tile\+Dimensions(), and Set\+Y\+From\+Tile().
+
 \hypertarget{classCPosition_a3227e835d9008346e9d91bdad2380f14}{}\label{classCPosition_a3227e835d9008346e9d91bdad2380f14} 
 \index{C\+Position@{C\+Position}!D\+Half\+Tile\+Width@{D\+Half\+Tile\+Width}}
 \index{D\+Half\+Tile\+Width@{D\+Half\+Tile\+Width}!C\+Position@{C\+Position}}
@@ -1026,6 +1208,10 @@ Definition at line 30 of file Position.\+h.
 
 
 Definition at line 29 of file Position.\+h.
+
+
+
+Referenced by Half\+Tile\+Width(), Set\+From\+Tile(), Set\+Tile\+Dimensions(), and Set\+X\+From\+Tile().
 
 \hypertarget{classCPosition_a0f7a420e82a180b983e32258729bb984}{}\label{classCPosition_a0f7a420e82a180b983e32258729bb984} 
 \index{C\+Position@{C\+Position}!D\+Octant@{D\+Octant}}
@@ -1037,6 +1223,10 @@ Definition at line 29 of file Position.\+h.
 
 Definition at line 31 of file Position.\+h.
 
+
+
+Referenced by Set\+Tile\+Dimensions(), and Tile\+Octant().
+
 \hypertarget{classCPosition_ab4bc566d2d14d378cfdf6b1d2d3f522e}{}\label{classCPosition_ab4bc566d2d14d378cfdf6b1d2d3f522e} 
 \index{C\+Position@{C\+Position}!D\+Tile\+Directions@{D\+Tile\+Directions}}
 \index{D\+Tile\+Directions@{D\+Tile\+Directions}!C\+Position@{C\+Position}}
@@ -1046,6 +1236,10 @@ Definition at line 31 of file Position.\+h.
 
 
 Definition at line 32 of file Position.\+h.
+
+
+
+Referenced by Adjacent\+Tile\+Direction().
 
 \hypertarget{classCPosition_a202ebb83e86df75cfb76cf1241ba817c}{}\label{classCPosition_a202ebb83e86df75cfb76cf1241ba817c} 
 \index{C\+Position@{C\+Position}!D\+Tile\+Height@{D\+Tile\+Height}}
@@ -1057,6 +1251,10 @@ Definition at line 32 of file Position.\+h.
 
 Definition at line 28 of file Position.\+h.
 
+
+
+Referenced by Set\+From\+Tile(), Set\+Tile\+Dimensions(), Set\+To\+Tile(), Set\+Y\+From\+Tile(), Set\+Y\+To\+Tile(), Tile\+Aligned(), Tile\+Height(), and Tile\+Octant().
+
 \hypertarget{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6}{}\label{classCPosition_ac17d12fb5d35fcf62d63bb42e8cf7ed6} 
 \index{C\+Position@{C\+Position}!D\+Tile\+Width@{D\+Tile\+Width}}
 \index{D\+Tile\+Width@{D\+Tile\+Width}!C\+Position@{C\+Position}}
@@ -1066,6 +1264,10 @@ Definition at line 28 of file Position.\+h.
 
 
 Definition at line 27 of file Position.\+h.
+
+
+
+Referenced by Set\+From\+Tile(), Set\+Tile\+Dimensions(), Set\+To\+Tile(), Set\+X\+From\+Tile(), Set\+X\+To\+Tile(), Tile\+Octant(), and Tile\+Width().
 
 \hypertarget{classCPosition_a28445f9b872169715919074d82044eda}{}\label{classCPosition_a28445f9b872169715919074d82044eda} 
 \index{C\+Position@{C\+Position}!DX@{DX}}
@@ -1077,6 +1279,10 @@ Definition at line 27 of file Position.\+h.
 
 Definition at line 24 of file Position.\+h.
 
+
+
+Referenced by Adjacent\+Tile\+Direction(), C\+Position(), Decrement\+X(), Direction\+To(), Distance\+Squared(), Increment\+X(), operator!=(), operator==(), Set\+From\+Tile(), Set\+To\+Tile(), Set\+X\+From\+Tile(), Set\+X\+To\+Tile(), Tile\+Octant(), and X().
+
 \hypertarget{classCPosition_a84139c9e8eb547e7cf3cb851739943a4}{}\label{classCPosition_a84139c9e8eb547e7cf3cb851739943a4} 
 \index{C\+Position@{C\+Position}!DY@{DY}}
 \index{DY@{DY}!C\+Position@{C\+Position}}
@@ -1086,6 +1292,10 @@ Definition at line 24 of file Position.\+h.
 
 
 Definition at line 25 of file Position.\+h.
+
+
+
+Referenced by Adjacent\+Tile\+Direction(), C\+Position(), Decrement\+Y(), Direction\+To(), Distance\+Squared(), Increment\+Y(), operator!=(), operator==(), Set\+From\+Tile(), Set\+To\+Tile(), Set\+Y\+From\+Tile(), Set\+Y\+To\+Tile(), Tile\+Octant(), and Y().
 
 
 

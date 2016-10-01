@@ -108,6 +108,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8cpp_source.html#l00037">37</a> of file <a class="el" href="PeriodicTimeout_8cpp_source.html">PeriodicTimeout.cpp</a>.</p>
+
+<p>References <a class="el" href="PeriodicTimeout_8h_source.html#l00024">DNextExpectedTimeout</a>, and <a class="el" href="PeriodicTimeout_8h_source.html#l00025">DTimeoutInterval</a>.</p>
 <div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                              {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    gettimeofday(&amp;<a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>, <span class="keyword">nullptr</span>);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(0 &gt;= periodms){</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">DTimeoutInterval</a> = 1000;        </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">else</span>{</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">DTimeoutInterval</a> = periodms;    </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="classCPeriodicTimeout_html_ae85c3dd7526ee6b538b7c6478133013c"><div class="ttname"><a href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">CPeriodicTimeout::DNextExpectedTimeout</a></div><div class="ttdeci">struct timeval DNextExpectedTimeout</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00024">PeriodicTimeout.h:24</a></div></div>
 <div class="ttc" id="classCPeriodicTimeout_html_ab0c2b821c02366c9638a66eced3c1f34"><div class="ttname"><a href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">CPeriodicTimeout::DTimeoutInterval</a></div><div class="ttdeci">int DTimeoutInterval</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00025">PeriodicTimeout.h:25</a></div></div>
 </div><!-- fragment -->
@@ -138,6 +140,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8h_source.html#l00034">34</a> of file <a class="el" href="PeriodicTimeout_8h_source.html">PeriodicTimeout.h</a>.</p>
+
+<p>References <a class="el" href="PeriodicTimeout_8h_source.html#l00025">DTimeoutInterval</a>, and <a class="el" href="PeriodicTimeout_8cpp_source.html#l00047">MiliSecondsUntilDeadline()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                             {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> 1000 / <a class="code" href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">DTimeoutInterval</a>;  </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        };</div><div class="ttc" id="classCPeriodicTimeout_html_ab0c2b821c02366c9638a66eced3c1f34"><div class="ttname"><a href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">CPeriodicTimeout::DTimeoutInterval</a></div><div class="ttdeci">int DTimeoutInterval</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00025">PeriodicTimeout.h:25</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -174,6 +178,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8h_source.html#l00030">30</a> of file <a class="el" href="PeriodicTimeout_8h_source.html">PeriodicTimeout.h</a>.</p>
+
+<p>References <a class="el" href="PeriodicTimeout_8h_source.html#l00025">DTimeoutInterval</a>.</p>
 <div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">DTimeoutInterval</a>; </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        };</div><div class="ttc" id="classCPeriodicTimeout_html_ab0c2b821c02366c9638a66eced3c1f34"><div class="ttname"><a href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">CPeriodicTimeout::DTimeoutInterval</a></div><div class="ttdeci">int DTimeoutInterval</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00025">PeriodicTimeout.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -194,6 +200,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8cpp_source.html#l00047">47</a> of file <a class="el" href="PeriodicTimeout_8cpp_source.html">PeriodicTimeout.cpp</a>.</p>
+
+<p>References <a class="el" href="PeriodicTimeout_8h_source.html#l00024">DNextExpectedTimeout</a>, and <a class="el" href="PeriodicTimeout_8h_source.html#l00025">DTimeoutInterval</a>.</p>
+
+<p>Referenced by <a class="el" href="PeriodicTimeout_8h_source.html#l00034">Frequency()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                              {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">struct </span>timeval CurrentTime;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    int64_t TimeDelta;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    gettimeofday(&amp;CurrentTime, <span class="keyword">nullptr</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    TimeDelta = (<a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_sec * 1000 + <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_usec / 1000) - (CurrentTime.tv_sec * 1000 + CurrentTime.tv_usec / 1000);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">while</span>(0 &gt;= TimeDelta){</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_usec += <a class="code" href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">DTimeoutInterval</a> * 1000;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span>(1000000 &lt;= <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_usec){</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_usec %= 1000000;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_sec++;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        TimeDelta = (<a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_sec * 1000 + <a class="code" href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">DNextExpectedTimeout</a>.tv_usec / 1000) - (CurrentTime.tv_sec * 1000 + CurrentTime.tv_usec / 1000);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> TimeDelta;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="classCPeriodicTimeout_html_ae85c3dd7526ee6b538b7c6478133013c"><div class="ttname"><a href="classCPeriodicTimeout.html#ae85c3dd7526ee6b538b7c6478133013c">CPeriodicTimeout::DNextExpectedTimeout</a></div><div class="ttdeci">struct timeval DNextExpectedTimeout</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00024">PeriodicTimeout.h:24</a></div></div>
 <div class="ttc" id="classCPeriodicTimeout_html_ab0c2b821c02366c9638a66eced3c1f34"><div class="ttname"><a href="classCPeriodicTimeout.html#ab0c2b821c02366c9638a66eced3c1f34">CPeriodicTimeout::DTimeoutInterval</a></div><div class="ttdeci">int DTimeoutInterval</div><div class="ttdef"><b>Definition:</b> <a href="PeriodicTimeout_8h_source.html#l00025">PeriodicTimeout.h:25</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -230,6 +240,8 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8h_source.html#l00024">24</a> of file <a class="el" href="PeriodicTimeout_8h_source.html">PeriodicTimeout.h</a>.</p>
 
+<p>Referenced by <a class="el" href="PeriodicTimeout_8cpp_source.html#l00037">CPeriodicTimeout()</a>, and <a class="el" href="PeriodicTimeout_8cpp_source.html#l00047">MiliSecondsUntilDeadline()</a>.</p>
+
 </div>
 </div>
 <a id="ab0c2b821c02366c9638a66eced3c1f34"></a>
@@ -253,6 +265,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="PeriodicTimeout_8h_source.html#l00025">25</a> of file <a class="el" href="PeriodicTimeout_8h_source.html">PeriodicTimeout.h</a>.</p>
+
+<p>Referenced by <a class="el" href="PeriodicTimeout_8cpp_source.html#l00037">CPeriodicTimeout()</a>, <a class="el" href="PeriodicTimeout_8h_source.html#l00034">Frequency()</a>, <a class="el" href="PeriodicTimeout_8h_source.html#l00030">MiliSecondPeriod()</a>, and <a class="el" href="PeriodicTimeout_8cpp_source.html#l00047">MiliSecondsUntilDeadline()</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 <map id="CTerrainMap::ChangeTileType" name="CTerrainMap::ChangeTileType">
-<area shape="rect" id="node2" href="$classCTerrainMap.html#a3a7229412b3391835dd6036439e5c6c0" title="CTerrainMap::TileType" alt="" coords="294,5,461,32"/>
-<area shape="rect" id="node3" href="$classCTerrainMap.html#a4a4f26c13a3d8116f4295bef3c25c3e5" title="CTerrainMap::ChangeTileType" alt="" coords="269,56,485,83"/>
+<area shape="rect" id="node2" href="$classCTerrainMap.html#a4a4f26c13a3d8116f4295bef3c25c3e5" title="CTerrainMap::ChangeTileType" alt="" coords="269,5,485,32"/>
+<area shape="rect" id="node3" href="$classCTerrainMap.html#a3a7229412b3391835dd6036439e5c6c0" title="CTerrainMap::TileType" alt="" coords="294,56,461,83"/>
 </map>

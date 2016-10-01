@@ -171,6 +171,10 @@ Definition at line 159 of file Player\+Asset.\+h.
 Definition at line 358 of file Player\+Asset.\+cpp.
 
 
+
+References act\+Max.
+
+
 \begin{DoxyCode}
 358                                   \{
 359     \hyperlink{classCPlayerAssetType_a243f9161c56446b378dc42b51977fc58}{DCapabilities}.resize(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea77dccd39fc9e5ee854223444006a6f70}{actMax});
@@ -416,6 +420,10 @@ Definition at line 240 of file Player\+Asset.\+h.
 Definition at line 457 of file Player\+Asset.\+cpp.
 
 
+
+References act\+Max, and act\+None.
+
+
 \begin{DoxyCode}
 457                                                                       \{
 458     std::vector< EAssetCapabilityType > ReturnVector;
@@ -455,6 +463,10 @@ Definition at line 200 of file Player\+Asset.\+h.
 Definition at line 697 of file Player\+Asset.\+cpp.
 
 
+
+References C\+Player\+Asset\+::\+D\+Update\+Divisor, and C\+Player\+Asset\+::\+D\+Update\+Frequency.
+
+
 \begin{DoxyCode}
 697                                                          \{
 698     \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} ThisShared = \hyperlink{classCPlayerAssetType_ae0d263de96ccad929d79d6b46f7b8deb}{DThis}.lock())\{
@@ -490,6 +502,10 @@ Definition at line 216 of file Player\+Asset.\+h.
 Definition at line 684 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Player\+Data\+::\+C\+Player\+Data().
+
+
 \begin{DoxyCode}
 684                                                                                                            
                                   \{
@@ -506,8 +522,7 @@ Definition at line 684 of file Player\+Asset.\+cpp.
 694     \textcolor{keywordflow}{return} ReturnRegistry;
 695 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -525,6 +540,10 @@ Here is the caller graph for this function\+:
 Definition at line 671 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Asset\+Renderer\+::\+Draw\+Mini\+Assets().
+
+
 \begin{DoxyCode}
 671                                                                                             \{
 672     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerAssetType_a24f4ccd06fbddacc936e31a2f1f12ed5}{DRegistry}.find( name );
@@ -535,8 +554,7 @@ Definition at line 671 of file Player\+Asset.\+cpp.
 677     \textcolor{keywordflow}{return} std::shared\_ptr< CPlayerAssetType >();
 678 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -554,13 +572,16 @@ Here is the caller graph for this function\+:
 Definition at line 680 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Asset\+Renderer\+::\+Draw\+Placement().
+
+
 \begin{DoxyCode}
 680                                                                                       \{
 681     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAssetType_a7e1684eac4efaf7afe9a5c15af262b33}{FindDefaultFromName}( \hyperlink{classCPlayerAssetType_a66ce89c35b74940e9fc947a1f4b9e770}{TypeToName}(type) );
 682 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -643,6 +664,14 @@ Definition at line 204 of file Player\+Asset.\+h.
 
 
 Definition at line 523 of file Player\+Asset.\+cpp.
+
+
+
+References act\+Max, at\+None, C\+Player\+Capability\+::\+Name\+To\+Type(), pc\+None, Print\+Error, and C\+Line\+Data\+Source\+::\+Read().
+
+
+
+Referenced by Load\+Types().
 
 
 \begin{DoxyCode}
@@ -795,16 +824,14 @@ Definition at line 523 of file Player\+Asset.\+cpp.
 668     \textcolor{keywordflow}{return} ReturnStatus;
 669 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerAssetType_a8e50738b1b451f4c870108777e6e3f90_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -820,6 +847,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 492 of file Player\+Asset.\+cpp.
+
+
+
+References at\+None, D\+E\+B\+U\+G\+\_\+\+L\+OW, Load(), pc\+None, Print\+Debug, and Print\+Error.
+
+
+
+Referenced by C\+Application\+Data\+::\+Init().
 
 
 \begin{DoxyCode}
@@ -854,16 +889,14 @@ Definition at line 492 of file Player\+Asset.\+cpp.
 520     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 521 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerAssetType_ad36348338ae4fea7e70450ef30c92a26_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -897,6 +930,10 @@ Definition at line 232 of file Player\+Asset.\+h.
 Definition at line 483 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Asset\+Decorated\+Map\+::\+Create\+Visibility\+Map().
+
+
 \begin{DoxyCode}
 483                               \{
 484     \textcolor{keywordtype}{int} MaxSightFound = 0;
@@ -907,8 +944,7 @@ Definition at line 483 of file Player\+Asset.\+cpp.
 489     \textcolor{keywordflow}{return} MaxSightFound;
 490 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -942,6 +978,14 @@ Definition at line 192 of file Player\+Asset.\+h.
 Definition at line 468 of file Player\+Asset.\+cpp.
 
 
+
+References at\+None.
+
+
+
+Referenced by C\+Player\+Data\+::\+C\+Player\+Data(), and C\+Player\+Upgrade\+::\+Load().
+
+
 \begin{DoxyCode}
 468                                                             \{
 469     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerAssetType_a4e7728e5316eb5c1124dcac90f5290d5}{DNameTypeTranslation}.find(name);
@@ -951,8 +995,7 @@ Definition at line 468 of file Player\+Asset.\+cpp.
 473     \textcolor{keywordflow}{return} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone};
 474 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1181,6 +1224,10 @@ Definition at line 196 of file Player\+Asset.\+h.
 Definition at line 476 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Player\+Data\+::\+Add\+Upgrade(), C\+Sound\+Event\+Renderer\+::\+C\+Sound\+Event\+Renderer(), C\+Unit\+Description\+Renderer\+::\+Draw\+Unit\+Description(), and C\+Player\+Data\+::\+Find\+Best\+Asset\+Placement().
+
+
 \begin{DoxyCode}
 476                                                      \{
 477     \textcolor{keywordflow}{if}((0 > type)||(type >= \hyperlink{classCPlayerAssetType_a1f87f6f8c42b692a500c875e9359a438}{DTypeStrings}.size()))\{
@@ -1189,8 +1236,7 @@ Definition at line 476 of file Player\+Asset.\+cpp.
 480     \textcolor{keywordflow}{return} \hyperlink{classCPlayerAssetType_a1f87f6f8c42b692a500c875e9359a438}{DTypeStrings}[type];
 481 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

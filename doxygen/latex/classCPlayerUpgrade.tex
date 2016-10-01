@@ -162,6 +162,10 @@ Definition at line 125 of file Player\+Asset.\+h.
 Definition at line 349 of file Player\+Asset.\+cpp.
 
 
+
+Referenced by C\+Player\+Data\+::\+Add\+Upgrade(), C\+Player\+Capability\+Unit\+Upgrade\+::\+Apply\+Capability(), C\+Player\+Capability\+Build\+Ranger\+::\+Apply\+Capability(), C\+Player\+Capability\+Unit\+Upgrade\+::\+Can\+Initiate(), and C\+Player\+Capability\+Build\+Ranger\+::\+Can\+Initiate().
+
+
 \begin{DoxyCode}
 349                                                                                         \{
 350     \textcolor{keyword}{auto} Iterator = \hyperlink{classCPlayerUpgrade_a33e022bd67ce2f4d9ce83dfd0b7289f6}{DRegistryByName}.find( name );
@@ -172,8 +176,7 @@ Definition at line 349 of file Player\+Asset.\+cpp.
 355     \textcolor{keywordflow}{return} std::shared\_ptr< CPlayerUpgrade >();
 356 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -226,6 +229,14 @@ Definition at line 137 of file Player\+Asset.\+h.
 
 
 Definition at line 243 of file Player\+Asset.\+cpp.
+
+
+
+References act\+None, C\+Player\+Capability\+::\+Name\+To\+Type(), C\+Player\+Asset\+Type\+::\+Name\+To\+Type(), Print\+Error, C\+Line\+Data\+Source\+::\+Read(), and C\+Player\+Capability\+::\+Type\+To\+Name().
+
+
+
+Referenced by Load\+Upgrades().
 
 
 \begin{DoxyCode}
@@ -328,16 +339,14 @@ Definition at line 243 of file Player\+Asset.\+cpp.
 337     \textcolor{keywordflow}{return} ReturnStatus;
 338 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerUpgrade_a685fab69765ef63952cdbcaa6b1b927b_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -353,6 +362,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 219 of file Player\+Asset.\+cpp.
+
+
+
+References D\+E\+B\+U\+G\+\_\+\+L\+OW, Load(), Print\+Debug, and Print\+Error.
+
+
+
+Referenced by C\+Application\+Data\+::\+Init().
 
 
 \begin{DoxyCode}
@@ -380,16 +397,14 @@ Definition at line 219 of file Player\+Asset.\+cpp.
 240     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 241 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerUpgrade_a9bef3d3f2866cd555a9b175426e953d6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -601,6 +616,10 @@ Definition at line 98 of file Player\+Asset.\+h.
 
 Definition at line 103 of file Player\+Asset.\+h.
 
+
+
+Referenced by C\+Player\+Capability\+::\+Type\+To\+Name().
+
 \hypertarget{classCPlayerUpgrade_a04673f65215501e9eb0ce7828091c30c}{}\label{classCPlayerUpgrade_a04673f65215501e9eb0ce7828091c30c} 
 \index{C\+Player\+Upgrade@{C\+Player\+Upgrade}!D\+Registry\+By\+Type@{D\+Registry\+By\+Type}}
 \index{D\+Registry\+By\+Type@{D\+Registry\+By\+Type}!C\+Player\+Upgrade@{C\+Player\+Upgrade}}
@@ -610,6 +629,10 @@ Definition at line 103 of file Player\+Asset.\+h.
 
 
 Definition at line 104 of file Player\+Asset.\+h.
+
+
+
+Referenced by C\+Player\+Capability\+::\+Type\+To\+Name().
 
 \hypertarget{classCPlayerUpgrade_ae233bf472f72c8f16a6f1b1ea3b78012}{}\label{classCPlayerUpgrade_ae233bf472f72c8f16a6f1b1ea3b78012} 
 \index{C\+Player\+Upgrade@{C\+Player\+Upgrade}!D\+Research\+Time@{D\+Research\+Time}}

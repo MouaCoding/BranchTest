@@ -2,8 +2,7 @@
 \label{classCPlayerCapabilityConvey}\index{C\+Player\+Capability\+Convey@{C\+Player\+Capability\+Convey}}
 
 
-Inheritance diagram for C\+Player\+Capability\+Convey\+:
-\nopagebreak
+Inheritance diagram for C\+Player\+Capability\+Convey\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for C\+Player\+Capability\+Convey\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Player\+Capability\+Convey\+:
-\nopagebreak
+Collaboration diagram for C\+Player\+Capability\+Convey\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -87,11 +85,14 @@ Definition at line 461 of file Basic\+Capabilities.\+cpp.
 Definition at line 448 of file Basic\+Capabilities.\+cpp.
 
 
+
+References C\+Player\+Capability\+Cancel\+::\+Apply\+Capability(), C\+Player\+Capability\+Cancel\+::\+Can\+Apply(), C\+Player\+Capability\+Cancel\+::\+Can\+Initiate(), and D\+Registrant.
+
+
 \begin{DoxyCode}
 448 \{\};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,6 +117,14 @@ Implements \hyperlink{classCPlayerCapability_a2ca6fd7fbd9c0178f1cf1d049c63825f}{
 Definition at line 485 of file Basic\+Capabilities.\+cpp.
 
 
+
+References aa\+Capability, C\+Player\+Capability\+::\+Asset\+Capability\+Type(), S\+Asset\+Command\+::\+D\+Action, S\+Asset\+Command\+::\+D\+Activated\+Capability, S\+Asset\+Command\+::\+D\+Asset\+Target, and S\+Asset\+Command\+::\+D\+Capability.
+
+
+
+Referenced by C\+Player\+Capability\+Patrol\+::$\sim$\+C\+Player\+Capability\+Patrol().
+
+
 \begin{DoxyCode}
 485                                                                                                            
                                                           \{
@@ -131,16 +140,14 @@ Definition at line 485 of file Basic\+Capabilities.\+cpp.
 494     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 495 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCPlayerCapabilityConvey_ad05e5ab950872e685fb9449592f7f5a9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,6 +169,14 @@ Implements \hyperlink{classCPlayerCapability_ae96263e0950f496492f8baeb877b9554}{
 Definition at line 469 of file Basic\+Capabilities.\+cpp.
 
 
+
+References aa\+Construct, at\+Castle, at\+Keep, at\+Lumber\+Mill, and at\+Town\+Hall.
+
+
+
+Referenced by C\+Player\+Capability\+Patrol\+::$\sim$\+C\+Player\+Capability\+Patrol().
+
+
 \begin{DoxyCode}
 469                                                                                                            
                                                    \{
@@ -181,8 +196,7 @@ Definition at line 469 of file Basic\+Capabilities.\+cpp.
 482     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
 483 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -204,14 +218,17 @@ Implements \hyperlink{classCPlayerCapability_aa83b1e1fcaff2985c378132d679154ea}{
 Definition at line 465 of file Basic\+Capabilities.\+cpp.
 
 
+
+Referenced by C\+Player\+Capability\+Patrol\+::$\sim$\+C\+Player\+Capability\+Patrol().
+
+
 \begin{DoxyCode}
 465                                                                                                            
                 \{
 466     \textcolor{keywordflow}{return} actor->Speed() > 0 && (actor->Lumber() || actor->Gold());
 467 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -230,6 +247,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 432 of file Basic\+Capabilities.\+cpp.
+
+
+
+Referenced by $\sim$\+C\+Player\+Capability\+Convey().
 
 
 

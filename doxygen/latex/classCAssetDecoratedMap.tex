@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for C\+Asset\+Decorated\+Map\+:
-\nopagebreak
+Inheritance diagram for C\+Asset\+Decorated\+Map\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for C\+Asset\+Decorated\+Map\+:
 \end{figure}
 
 
-Collaboration diagram for C\+Asset\+Decorated\+Map\+:
-\nopagebreak
+Collaboration diagram for C\+Asset\+Decorated\+Map\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -160,6 +158,10 @@ Definition at line 33 of file Asset\+Decorated\+Map.\+cpp.
 Definition at line 37 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Asset\+Initialization\+List, D\+Assets, and D\+Resource\+Initialization\+List.
+
+
 \begin{DoxyCode}
 37                                                                     : 
       \hyperlink{classCTerrainMap_a2ac9c0f2622d06b8e0b1f5d67199f1ea}{CTerrainMap}(map)\{
@@ -179,6 +181,10 @@ Definition at line 37 of file Asset\+Decorated\+Map.\+cpp.
 
 
 Definition at line 43 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References D\+Asset\+Initialization\+List, D\+Assets, and D\+Resource\+Initialization\+List.
 
 
 \begin{DoxyCode}
@@ -228,14 +234,21 @@ Definition at line 58 of file Asset\+Decorated\+Map.\+cpp.
 Definition at line 123 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Assets.
+
+
+
+Referenced by Player\+Count(), and Update\+Map().
+
+
 \begin{DoxyCode}
 123                                                                     \{
 124     \hyperlink{classCAssetDecoratedMap_a94eeed5b16141169b1ba6cb3842055aa}{DAssets}.push\_back(asset);
 125     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 126 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -253,13 +266,20 @@ Here is the caller graph for this function\+:
 Definition at line 372 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Asset\+Initialization\+List.
+
+
+
+Referenced by Player\+Count().
+
+
 \begin{DoxyCode}
 372                                                                                                           \{
 373     \textcolor{keywordflow}{return} \hyperlink{classCAssetDecoratedMap_a2b7bf2e9a19a9173093cef32048608c2}{DAssetInitializationList};
 374 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -277,13 +297,20 @@ Here is the caller graph for this function\+:
 Definition at line 368 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Assets.
+
+
+
+Referenced by C\+Router\+Map\+::\+Find\+Route(), and Player\+Count().
+
+
 \begin{DoxyCode}
 368                                                                                 \{
 369     \textcolor{keywordflow}{return} \hyperlink{classCAssetDecoratedMap_a94eeed5b16141169b1ba6cb3842055aa}{DAssets};
 370 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -299,6 +326,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 133 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References at\+Gold\+Mine, at\+None, D\+Assets, C\+Terrain\+Map\+::\+Height(), C\+Terrain\+Map\+::\+Tile\+Type(), C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Grass, C\+Terrain\+Map\+::tt\+Rubble, C\+Terrain\+Map\+::tt\+Stump, C\+Terrain\+Map\+::\+Width(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
+
+Referenced by Find\+Asset\+Placement(), and Player\+Count().
 
 
 \begin{DoxyCode}
@@ -352,16 +387,14 @@ Definition at line 133 of file Asset\+Decorated\+Map.\+cpp.
 176     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 177 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_ad4baef4b84b066847459e45205c8575c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -377,6 +410,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 380 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References C\+Terrain\+Map\+::\+D\+Map, and C\+Terrain\+Map\+::tt\+None.
+
+
+
+Referenced by Player\+Count().
 
 
 \begin{DoxyCode}
@@ -396,8 +437,7 @@ Definition at line 380 of file Asset\+Decorated\+Map.\+cpp.
 393     \textcolor{keywordflow}{return} ReturnMap;
 394 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -415,22 +455,28 @@ Here is the caller graph for this function\+:
 Definition at line 396 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References C\+Terrain\+Map\+::\+Height(), C\+Player\+Asset\+Type\+::\+Max\+Sight(), and C\+Terrain\+Map\+::\+Width().
+
+
+
+Referenced by Player\+Count().
+
+
 \begin{DoxyCode}
 396                                                                              \{
 397     \textcolor{keywordflow}{return} std::make\_shared< CVisibilityMap >(\hyperlink{classCTerrainMap_a34cb754aa9b26e85a73377159f2527d7}{Width}(), \hyperlink{classCTerrainMap_ae5e4bf6507e0e3e9ac0322b43eed8a7a}{Height}(), 
       \hyperlink{classCPlayerAssetType_a1c1648ef0fdd2d112508c2ef9b7b70d1}{CPlayerAssetType::MaxSight}());
 398 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_aa05e81ec37b4217053e8de050e47dba7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -448,6 +494,14 @@ Here is the caller graph for this function\+:
 Definition at line 115 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+All\+Maps.
+
+
+
+Referenced by C\+Application\+Data\+::\+Calculate\+Player\+A\+I\+Select\+Mode(), C\+Game\+Model\+::\+C\+Game\+Model(), C\+Application\+Data\+::\+Host\+Multi\+Player\+Button\+Callback(), and C\+Application\+Data\+::\+Single\+Player\+Game\+Button\+Callback().
+
+
 \begin{DoxyCode}
 115                                                                                                            
        \{
@@ -457,8 +511,7 @@ Definition at line 115 of file Asset\+Decorated\+Map.\+cpp.
 119     \textcolor{keywordflow}{return} std::make\_shared< CAssetDecoratedMap >( *\hyperlink{classCAssetDecoratedMap_a32cdd80c7e9d31d8ce5397dd6d61dc4b}{DAllMaps}[index], newcolors );
 120 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -474,6 +527,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 179 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References Can\+Place\+Asset(), C\+Position\+::\+Distance\+Squared(), C\+Terrain\+Map\+::\+Height(), M\+AX, M\+IN, and C\+Terrain\+Map\+::\+Width().
+
+
+
+Referenced by Player\+Count().
 
 
 \begin{DoxyCode}
@@ -571,16 +632,14 @@ Definition at line 179 of file Asset\+Decorated\+Map.\+cpp.
 265     \textcolor{keywordflow}{return} BestPosition;
 266 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_a82c30235ceaa63c7382c662687acf9fe_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -596,6 +655,10 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 99 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References D\+Map\+Name\+Translation.
 
 
 \begin{DoxyCode}
@@ -619,6 +682,14 @@ Definition at line 99 of file Asset\+Decorated\+Map.\+cpp.
 Definition at line 268 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References aa\+Construct, and D\+Assets.
+
+
+
+Referenced by Player\+Count().
+
+
 \begin{DoxyCode}
 268                                                                                                            
                     \{
@@ -639,8 +710,7 @@ Definition at line 268 of file Asset\+Decorated\+Map.\+cpp.
 282     \textcolor{keywordflow}{return} BestAsset;
 283 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -656,6 +726,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 484 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References D\+Assets, C\+Terrain\+Map\+::\+D\+Map, D\+Search\+Map, S\+Search\+Tile\+::\+DX, S\+Search\+Tile\+::\+DY, C\+Terrain\+Map\+::\+Height(), S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+Q\+U\+E\+U\+ED, S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+V\+I\+S\+I\+T\+ED, S\+E\+A\+R\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+V\+I\+S\+I\+T\+ED, C\+Terrain\+Map\+::tt\+Dirt, C\+Terrain\+Map\+::tt\+Grass, C\+Terrain\+Map\+::tt\+None, C\+Terrain\+Map\+::tt\+Rubble, C\+Terrain\+Map\+::tt\+Stump, C\+Terrain\+Map\+::\+Width(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
+
+Referenced by Player\+Count().
 
 
 \begin{DoxyCode}
@@ -733,16 +811,14 @@ Definition at line 484 of file Asset\+Decorated\+Map.\+cpp.
 549     \textcolor{keywordflow}{return} \hyperlink{classCPosition}{CPosition}(-1, -1);
 550 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_a9e9eed95b427443d196b56b852cdeb9d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -760,6 +836,14 @@ Here is the caller graph for this function\+:
 Definition at line 108 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+All\+Maps.
+
+
+
+Referenced by C\+Application\+Data\+::\+Process\+Input\+Map\+Select\+Mode(), and C\+Application\+Data\+::\+Render\+Map\+Select\+Mode().
+
+
 \begin{DoxyCode}
 108                                                                              \{
 109     \textcolor{keywordflow}{if}((0 > index)||(\hyperlink{classCAssetDecoratedMap_a32cdd80c7e9d31d8ce5397dd6d61dc4b}{DAllMaps}.size() <= index))\{
@@ -769,8 +853,7 @@ Definition at line 108 of file Asset\+Decorated\+Map.\+cpp.
       \hyperlink{classCAssetDecoratedMap_a32cdd80c7e9d31d8ce5397dd6d61dc4b}{DAllMaps}[index] );
 113 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -790,6 +873,14 @@ Reimplemented from \hyperlink{classCTerrainMap_a620258ecf38afb6275c865dad4fc4af4
 
 
 Definition at line 285 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References D\+Asset\+Initialization\+List, C\+Asset\+Decorated\+Map\+::\+S\+Asset\+Initialization\+::\+D\+Color, C\+Asset\+Decorated\+Map\+::\+S\+Resource\+Initialization\+::\+D\+Color, C\+Asset\+Decorated\+Map\+::\+S\+Resource\+Initialization\+::\+D\+Gold, C\+Asset\+Decorated\+Map\+::\+S\+Resource\+Initialization\+::\+D\+Lumber, D\+Resource\+Initialization\+List, C\+Asset\+Decorated\+Map\+::\+S\+Asset\+Initialization\+::\+D\+Tile\+Position, C\+Asset\+Decorated\+Map\+::\+S\+Asset\+Initialization\+::\+D\+Type, C\+Terrain\+Map\+::\+Height(), C\+Terrain\+Map\+::\+Load\+Map(), pc\+None, Print\+Error, C\+Line\+Data\+Source\+::\+Read(), C\+Tokenizer\+::\+Tokenize(), C\+Terrain\+Map\+::\+Width(), C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
+
+Referenced by Player\+Count().
 
 
 \begin{DoxyCode}
@@ -879,16 +970,14 @@ Definition at line 285 of file Asset\+Decorated\+Map.\+cpp.
 365     
 366 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_aaf40414c8e291bd45327787ddaf58f31_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -904,6 +993,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 72 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References D\+All\+Maps, D\+E\+B\+U\+G\+\_\+\+L\+OW, D\+Map\+Name\+Translation, Print\+Debug, and Print\+Error.
+
+
+
+Referenced by C\+Application\+Data\+::\+Init().
 
 
 \begin{DoxyCode}
@@ -935,8 +1032,7 @@ Definition at line 72 of file Asset\+Decorated\+Map.\+cpp.
 96     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 97 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -954,6 +1050,10 @@ Here is the caller graph for this function\+:
 Definition at line 62 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Asset\+Initialization\+List, D\+Assets, D\+Resource\+Initialization\+List, and C\+Terrain\+Map\+::operator=().
+
+
 \begin{DoxyCode}
 62                                                                               \{
 63     \textcolor{keywordflow}{if}(\textcolor{keyword}{this} != &map)\{
@@ -967,8 +1067,7 @@ Definition at line 62 of file Asset\+Decorated\+Map.\+cpp.
 69     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
 70 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -986,13 +1085,16 @@ Here is the call graph for this function\+:
 Definition at line 61 of file Asset\+Decorated\+Map.\+h.
 
 
+
+References Add\+Asset(), Asset\+Initialization\+List(), Assets(), Can\+Place\+Asset(), Create\+Initialize\+Map(), Create\+Visibility\+Map(), Find\+Asset\+Placement(), Find\+Nearest\+Asset(), Find\+Nearest\+Reachable\+Tile\+Type(), Load\+Map(), Remove\+Asset(), Resource\+Initialization\+List(), and Update\+Map().
+
+
 \begin{DoxyCode}
 61                                \{
 62              \textcolor{keywordflow}{return} \hyperlink{classCAssetDecoratedMap_ab4c78aeb90280ea98a3aa542cdb7f8cc}{DResourceInitializationList}.size() - 1;
 63         \};
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1010,14 +1112,21 @@ Here is the call graph for this function\+:
 Definition at line 128 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Assets.
+
+
+
+Referenced by Player\+Count(), and Update\+Map().
+
+
 \begin{DoxyCode}
 128                                                                        \{
 129     \hyperlink{classCAssetDecoratedMap_a94eeed5b16141169b1ba6cb3842055aa}{DAssets}.remove(asset);
 130     \textcolor{keywordflow}{return} \textcolor{keyword}{true};    
 131 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1035,14 +1144,21 @@ Here is the caller graph for this function\+:
 Definition at line 376 of file Asset\+Decorated\+Map.\+cpp.
 
 
+
+References D\+Resource\+Initialization\+List.
+
+
+
+Referenced by Player\+Count().
+
+
 \begin{DoxyCode}
 376                                                                                                            
            \{
 377     \textcolor{keywordflow}{return} \hyperlink{classCAssetDecoratedMap_ab4c78aeb90280ea98a3aa542cdb7f8cc}{DResourceInitializationList};
 378 \}
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1058,6 +1174,14 @@ Here is the caller graph for this function\+:
 
 
 Definition at line 400 of file Asset\+Decorated\+Map.\+cpp.
+
+
+
+References aa\+Attack, aa\+Decay, Add\+Asset(), at\+None, D\+Assets, C\+Terrain\+Map\+::\+D\+Map, Remove\+Asset(), C\+Visibility\+Map\+::\+Tile\+Type(), C\+Terrain\+Map\+::tt\+None, C\+Visibility\+Map\+::tv\+Partial, C\+Visibility\+Map\+::tv\+Partial\+Partial, C\+Visibility\+Map\+::tv\+Visible, C\+Position\+::\+X(), and C\+Position\+::\+Y().
+
+
+
+Referenced by Player\+Count().
 
 
 \begin{DoxyCode}
@@ -1146,16 +1270,14 @@ Definition at line 400 of file Asset\+Decorated\+Map.\+cpp.
 472     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
 473 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classCAssetDecoratedMap_a7b594b6bef2eed8bbb0e4e4e6b855903_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1175,6 +1297,10 @@ Here is the caller graph for this function\+:
 
 Definition at line 46 of file Asset\+Decorated\+Map.\+h.
 
+
+
+Referenced by Duplicate\+Map(), Get\+Map(), and Load\+Maps().
+
 \hypertarget{classCAssetDecoratedMap_a2b7bf2e9a19a9173093cef32048608c2}{}\label{classCAssetDecoratedMap_a2b7bf2e9a19a9173093cef32048608c2} 
 \index{C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}!D\+Asset\+Initialization\+List@{D\+Asset\+Initialization\+List}}
 \index{D\+Asset\+Initialization\+List@{D\+Asset\+Initialization\+List}!C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}}
@@ -1184,6 +1310,10 @@ Definition at line 46 of file Asset\+Decorated\+Map.\+h.
 
 
 Definition at line 41 of file Asset\+Decorated\+Map.\+h.
+
+
+
+Referenced by Asset\+Initialization\+List(), C\+Asset\+Decorated\+Map(), Load\+Map(), and operator=().
 
 \hypertarget{classCAssetDecoratedMap_a94eeed5b16141169b1ba6cb3842055aa}{}\label{classCAssetDecoratedMap_a94eeed5b16141169b1ba6cb3842055aa} 
 \index{C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}!D\+Assets@{D\+Assets}}
@@ -1195,6 +1325,10 @@ Definition at line 41 of file Asset\+Decorated\+Map.\+h.
 
 Definition at line 40 of file Asset\+Decorated\+Map.\+h.
 
+
+
+Referenced by Add\+Asset(), Assets(), Can\+Place\+Asset(), C\+Asset\+Decorated\+Map(), Find\+Nearest\+Asset(), Find\+Nearest\+Reachable\+Tile\+Type(), operator=(), Remove\+Asset(), and Update\+Map().
+
 \hypertarget{classCAssetDecoratedMap_afe82d461911e52b7e088da903166f1b3}{}\label{classCAssetDecoratedMap_afe82d461911e52b7e088da903166f1b3} 
 \index{C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}!D\+Map\+Name\+Translation@{D\+Map\+Name\+Translation}}
 \index{D\+Map\+Name\+Translation@{D\+Map\+Name\+Translation}!C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}}
@@ -1204,6 +1338,10 @@ Definition at line 40 of file Asset\+Decorated\+Map.\+h.
 
 
 Definition at line 45 of file Asset\+Decorated\+Map.\+h.
+
+
+
+Referenced by Find\+Map\+Index(), and Load\+Maps().
 
 \hypertarget{classCAssetDecoratedMap_ab4c78aeb90280ea98a3aa542cdb7f8cc}{}\label{classCAssetDecoratedMap_ab4c78aeb90280ea98a3aa542cdb7f8cc} 
 \index{C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}!D\+Resource\+Initialization\+List@{D\+Resource\+Initialization\+List}}
@@ -1215,6 +1353,10 @@ Definition at line 45 of file Asset\+Decorated\+Map.\+h.
 
 Definition at line 42 of file Asset\+Decorated\+Map.\+h.
 
+
+
+Referenced by C\+Asset\+Decorated\+Map(), Load\+Map(), operator=(), and Resource\+Initialization\+List().
+
 \hypertarget{classCAssetDecoratedMap_a7e6c8b62a9f83cec4bc77dc833d5787a}{}\label{classCAssetDecoratedMap_a7e6c8b62a9f83cec4bc77dc833d5787a} 
 \index{C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}!D\+Search\+Map@{D\+Search\+Map}}
 \index{D\+Search\+Map@{D\+Search\+Map}!C\+Asset\+Decorated\+Map@{C\+Asset\+Decorated\+Map}}
@@ -1224,6 +1366,10 @@ Definition at line 42 of file Asset\+Decorated\+Map.\+h.
 
 
 Definition at line 43 of file Asset\+Decorated\+Map.\+h.
+
+
+
+Referenced by Find\+Nearest\+Reachable\+Tile\+Type().
 
 
 

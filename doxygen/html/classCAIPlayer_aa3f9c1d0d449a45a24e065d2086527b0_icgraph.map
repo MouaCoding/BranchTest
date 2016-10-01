@@ -1,3 +1,3 @@
 <map id="CAIPlayer::TrainFootman" name="CAIPlayer::TrainFootman">
-<area shape="rect" id="node2" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="CAIPlayer::CalculateCommand" alt="" coords="240,5,463,32"/>
+<area shape="rect" id="node2" href="$classCAIPlayer.html#ae2742efd250c7d6c00b659ccc29c4be3" title="Decides what actions the AI should take. " alt="" coords="240,5,463,32"/>
 </map>
