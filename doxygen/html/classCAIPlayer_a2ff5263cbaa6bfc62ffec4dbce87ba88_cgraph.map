@@ -5,7 +5,7 @@
 <area shape="rect" id="node10" href="$classCPlayerCapability.html#a881ba4b87385d7cfe5cb6ced2d26f226" title="CPlayerCapability::\lFindCapability" alt="" coords="245,259,390,301"/>
 <area shape="rect" id="node11" href="$classCPosition.html#aa5955d67d5ab7ca74d80cb7303b6eaa9" title="CPosition::IncrementX" alt="" coords="233,325,402,352"/>
 <area shape="rect" id="node12" href="$classCPosition.html#a3f2a26798bb27b1252ff1be303b3adfc" title="CPosition::IncrementY" alt="" coords="233,376,401,403"/>
-<area shape="rect" id="node13" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="234,107,401,133"/>
+<area shape="rect" id="node13" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="Function used by the AI player to search for undiscovered tiles on the map. " alt="" coords="234,107,401,133"/>
 <area shape="rect" id="node14" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="493,107,595,133"/>
 <area shape="rect" id="node15" href="$classCPosition.html#a1aa8a30e2f08dda1f797736ba8c13a87" title="CPosition::Y" alt="" coords="266,427,369,453"/>
 <area shape="rect" id="node5" href="$classCPosition.html#ac6a1eeaeb98e20942efea7cf253b2ec4" title="CPosition::SetXFromTile" alt="" coords="453,208,635,235"/>

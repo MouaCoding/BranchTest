@@ -1,5 +1,5 @@
 <map id="CAIPlayer::BuildTownHall" name="CAIPlayer::BuildTownHall">
-<area shape="rect" id="node2" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="240,31,407,57"/>
+<area shape="rect" id="node2" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="Function used by the AI player to search for undiscovered tiles on the map. " alt="" coords="240,31,407,57"/>
 <area shape="rect" id="node3" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="489,5,592,32"/>
 <area shape="rect" id="node4" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="455,68,627,95"/>
 </map>

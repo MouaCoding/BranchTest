@@ -15,7 +15,7 @@ void \hyperlink{classCAIPlayer_ae2742efd250c7d6c00b659ccc29c4be3}{Calculate\+Com
 \begin{DoxyCompactItemize}
 \item 
 bool \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{Search\+Map} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
-\item 
+\begin{DoxyCompactList}\small\item\em Function used by the AI player to search for undiscovered tiles on the map. \end{DoxyCompactList}\item 
 bool \hyperlink{classCAIPlayer_a33b1533570e7a00114d1b85b3551e395}{Find\+Enemies} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
 \begin{DoxyCompactList}\small\item\em Function used by the AI to find enemies by searching assets that are visible to it on the map. \end{DoxyCompactList}\item 
 bool \hyperlink{classCAIPlayer_adf7feeba7debf9f19b000887616d7bfb}{Attack\+Enemies} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
@@ -27,7 +27,7 @@ bool \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{Build\+Buildin
 bool \hyperlink{classCAIPlayer_a3fab1c955fd68bb53fa80bb1872d2819}{Activate\+Peasants} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command, bool trainmore)
 \begin{DoxyCompactList}\small\item\em Function used by the AI to produce peasants and to make them gather resources. \end{DoxyCompactList}\item 
 bool \hyperlink{classCAIPlayer_a4216d7e76315234a4fe22fb3a0a89c1d}{Activate\+Fighters} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
-\begin{DoxyCompactList}\small\item\em Selects fighting units that will be able to receive orders as a group. Returns true or false depending on whether it was able to select any fighters or not. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Makes all fighters stand ground. \end{DoxyCompactList}\item 
 bool \hyperlink{classCAIPlayer_aa3f9c1d0d449a45a24e065d2086527b0}{Train\+Footman} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
 \begin{DoxyCompactList}\small\item\em Function used by the AI to train Footmen. \end{DoxyCompactList}\item 
 bool \hyperlink{classCAIPlayer_af2edf1e3c54d6af693f768f86d484fd6}{Train\+Archer} (\hyperlink{structSPlayerCommandRequest}{S\+Player\+Command\+Request} \&command)
@@ -46,7 +46,7 @@ int \hyperlink{classCAIPlayer_a091aed92cb9ad1a789900a6394d2f352}{D\+Down\+Sample
 \subsection{Detailed Description}
 
 
-Definition at line 28 of file A\+I\+Player.\+h.
+Definition at line 23 of file A\+I\+Player.\+h.
 
 
 
@@ -88,7 +88,7 @@ References D\+Cycle, D\+Down\+Sample, and D\+Player\+Data.
 98     \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData} = playerdata;
 99     \textcolor{comment}{// Sets the current cycle to 0.}
 100     \hyperlink{classCAIPlayer_adf12a7afe7ea86410b18eff47fa95253}{DCycle} = 0;
-101     \textcolor{comment}{// Initializes to DDownSample}
+101     \textcolor{comment}{// Initializes DDownSample.}
 102     \hyperlink{classCAIPlayer_a091aed92cb9ad1a789900a6394d2f352}{DDownSample} = downsample;
 103 \}
 \end{DoxyCode}
@@ -103,12 +103,14 @@ References D\+Cycle, D\+Down\+Sample, and D\+Player\+Data.
 
 
 
-Selects fighting units that will be able to receive orders as a group. Returns true or false depending on whether it was able to select any fighters or not. 
+Makes all fighters stand ground. 
 
 \hypertarget{classCAIPlayer_afhow_sec}{}\subsection{How It Works}\label{classCAIPlayer_afhow_sec}
+The reason this function is necessary is that \hyperlink{classCAIPlayer_adf7feeba7debf9f19b000887616d7bfb}{Attack\+Enemies} only commands fighters that are idle to attack. Some fighters might be moving when another fighter has found an enemy to attack. Those moving fighters must stand ground, so the Attack\+Enemies function will command them to attack the enemy.
+
 The function looks through all the idle assets it has and checks whether they have a speed property and whether they are not a peasant. Then it checks whether the asset is not currently standing ground. If the asset is not standing ground, it is added to a list of actors (assets that can perform actions). The function checks whether that list is empty and if it isn\textquotesingle{}t it will make all the actors on the list stand ground. 
 
-Definition at line 574 of file A\+I\+Player.\+cpp.
+Definition at line 582 of file A\+I\+Player.\+cpp.
 
 
 
@@ -120,42 +122,38 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-574                                                               \{
-575     \textcolor{comment}{// Variable that holds the idle assets of the player.}
-576     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
-577     
-578     \textcolor{comment}{// Searches through all the IdleAssets.}
-579     \textcolor{comment}{// ":" is the range operator in c++ 11. It goes through all the elements}
-580     \textcolor{comment}{// in a list.}
-581     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
-582         \textcolor{comment}{// Checks whether the asset can be assigned to the current asset.}
-583         \textcolor{comment}{// lock() checks whether the pointer is valid.}
-584         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-585             \textcolor{comment}{// Checks whether the current asset has a speed property and that}
-586             \textcolor{comment}{// it is not a peasant. If those two things are true, then the unit}
-587             \textcolor{comment}{// should be a fighter.}
-588             \textcolor{keywordflow}{if}(Asset->Speed() && (\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{atPeasant} != Asset->Type()))\{
-589                 \textcolor{comment}{// Checks if the asset is currently not standing ground.}
-590                 \textcolor{keywordflow}{if}(!Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3}{aaStandGround}) && !Asset->HasActiveCapability(
+582                                                               \{
+583     \textcolor{comment}{// Variable that holds the idle assets of the player.}
+584     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
+585     
+586     \textcolor{comment}{// Searches through all the IdleAssets.}
+587     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
+588         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+589             \textcolor{comment}{// Checks whether the current asset has a speed property and that}
+590             \textcolor{comment}{// it is not a peasant. If those two things are true, then the unit}
+591             \textcolor{comment}{// should be a fighter.}
+592             \textcolor{keywordflow}{if}(Asset->Speed() && (\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{atPeasant} != Asset->Type()))\{
+593                 \textcolor{comment}{// Checks if the asset is currently not standing ground.}
+594                 \textcolor{keywordflow}{if}(!Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abd8a4e07a8f888148ed62ddd46719af3}{aaStandGround}) && !Asset->HasActiveCapability(
       \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{actStandGround}))\{
-591                     \textcolor{comment}{// If the unit is not standing ground it is added to a list}
-592                     \textcolor{comment}{// of actors (assets that can act) which will perform an}
-593                     \textcolor{comment}{// action as a group.}
-594                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(Asset);
-595                 \}
-596             \}
-597         \}
-598     \}
-599     \textcolor{comment}{// Checks whether there are any actors ready to receive orders.}
-600     \textcolor{keywordflow}{if}(command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size())\{
-601         \textcolor{comment}{// Makes the fighters Stand Ground}
-602         command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{actStandGround};
-603         \textcolor{comment}{// returns true because it was able to activate some fighters}
-604         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-605     \}
-606     \textcolor{comment}{// returns false if there are no fighters to activate}
-607     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-608 \}
+595                     \textcolor{comment}{// If the unit is not standing ground it is added to a list}
+596                     \textcolor{comment}{// of actors (assets that can act upon other assets) which }
+597                     \textcolor{comment}{// will perform an action as a group.}
+598                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(Asset);
+599                 \}
+600             \}
+601         \}
+602     \}
+603     \textcolor{comment}{// Checks whether there are any actors ready to receive orders.}
+604     \textcolor{keywordflow}{if}(command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size())\{
+605         \textcolor{comment}{// Makes the fighters Stand Ground}
+606         command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea60ecb1b155c04190174a46d8053b5a04}{actStandGround};
+607         \textcolor{comment}{// returns true because it was able to activate some fighters}
+608         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+609     \}
+610     \textcolor{comment}{// returns false if there are no fighters to activate}
+611     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+612 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -175,9 +173,9 @@ Here is the caller graph for this function\+:\nopagebreak
 Function used by the AI to produce peasants and to make them gather resources. 
 
 \hypertarget{classCAIPlayer_aphow_sec}{}\subsection{How It Works}\label{classCAIPlayer_aphow_sec}
-The function checks if there are any peasants that are idle or if there are any that could be interrupted from what they are doing. Then it has some logic that determines whether the peasants should be gathering wood or gold. For example if the AI currently has too much gold or too many gold miners, those peasants will be reassigned to harvest lumber. If there are no idle peasants or none that need to be switched, but trainmore is true, the function will check if the AI has enough resources to train a peasant, and if it can it will do so. 
+The function checks if there are any peasants that are idle or if there are any that could be interrupted from what they are doing. Then it has some logic that determines whether the peasants should be gathering wood or gold. For example if the AI currently has too much gold or too many gold miners, those peasants will be reassigned to harvest lumber. If there are no idle peasants or none that need to be switched, but trainmore is true, the function will check if the AI has enough resources to train a peasant, and if it can, it will do so. 
 
-Definition at line 439 of file A\+I\+Player.\+cpp.
+Definition at line 446 of file A\+I\+Player.\+cpp.
 
 
 
@@ -189,134 +187,134 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-439                                                                               \{
-440     \textcolor{comment}{//auto IdleAssets = DPlayerData->IdleAssets();}
-441     std::shared\_ptr< CPlayerAsset > MiningAsset;
-442     std::shared\_ptr< CPlayerAsset > InterruptibleAsset;
-443     std::shared\_ptr< CPlayerAsset > TownHallAsset;
-444     \textcolor{keywordtype}{int} GoldMiners = 0;
-445     \textcolor{keywordtype}{int} LumberHarvesters = 0;
-446     \textcolor{keywordtype}{bool} SwitchToGold = \textcolor{keyword}{false};
-447     \textcolor{keywordtype}{bool} SwitchToLumber = \textcolor{keyword}{false};
-448     
-449     \textcolor{comment}{// Iterates through all of the AI's assets.}
-450     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
-451         \textcolor{comment}{// Checks that the asset pointer is valid.}
-452         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-453             \textcolor{comment}{// Checks if the asset has the ability to mine (is a peasant).}
-454             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine}))\{
-455                 \textcolor{comment}{// Checks there is no peasant mining and if the current asset}
-456                 \textcolor{comment}{// is idle.}
-457                 \textcolor{keywordflow}{if}(!MiningAsset && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action()))\{
-458                     MiningAsset = Asset;
-459                 \}
-460                 \textcolor{comment}{// Checks if the asset is currently mining.}
-461                 \textcolor{keywordflow}{if}(Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold}))\{
-462                     GoldMiners++; 
-463                     \textcolor{comment}{// Checks if the asset can be interrupted (stopped from its}
-464                     \textcolor{comment}{// current action), and if it is not idle.}
-465                     \textcolor{keywordflow}{if}(Asset->Interruptible() && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} != Asset->Action()))\{
-466                         InterruptibleAsset = Asset;
-467                     \}
-468                 \}
-469                 \textcolor{comment}{// Checks if the asset is currently harvesting wood.}
-470                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee}{aaHarvestLumber}))\{
-471                     LumberHarvesters++;
+446                                                                               \{
+447     \textcolor{comment}{//auto IdleAssets = DPlayerData->IdleAssets();}
+448     std::shared\_ptr< CPlayerAsset > MiningAsset;
+449     std::shared\_ptr< CPlayerAsset > InterruptibleAsset;
+450     std::shared\_ptr< CPlayerAsset > TownHallAsset;
+451     \textcolor{keywordtype}{int} GoldMiners = 0;
+452     \textcolor{keywordtype}{int} LumberHarvesters = 0;
+453     \textcolor{keywordtype}{bool} SwitchToGold = \textcolor{keyword}{false};
+454     \textcolor{keywordtype}{bool} SwitchToLumber = \textcolor{keyword}{false};
+455     
+456     \textcolor{comment}{// Iterates through all of the AI's assets.}
+457     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
+458         \textcolor{comment}{// Checks that the asset pointer is valid.}
+459         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+460             \textcolor{comment}{// Checks if the asset has the ability to mine (is a peasant).}
+461             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine}))\{
+462                 \textcolor{comment}{// Checks there is no peasant mining and if the current asset}
+463                 \textcolor{comment}{// is idle.}
+464                 \textcolor{keywordflow}{if}(!MiningAsset && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action()))\{
+465                     MiningAsset = Asset;
+466                 \}
+467                 \textcolor{comment}{// Checks if the asset is currently mining.}
+468                 \textcolor{keywordflow}{if}(Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670abc45b1c4fbca1481e373a780a69bd56b}{aaMineGold}))\{
+469                     GoldMiners++; 
+470                     \textcolor{comment}{// Checks if the asset can be interrupted (stopped from its}
+471                     \textcolor{comment}{// current action), and if it is not idle.}
 472                     \textcolor{keywordflow}{if}(Asset->Interruptible() && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} != Asset->Action()))\{
 473                         InterruptibleAsset = Asset;
 474                     \}
 475                 \}
-476             \}
-477             \textcolor{comment}{// Checks if the asset is a Town Hall and whether it is idle.}
-478             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}) && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action()))\{
-479                 TownHallAsset = Asset;
-480             \}
-481         \}
-482     \}
-483     \textcolor{keywordflow}{if}((2 <= GoldMiners)&&(0 == LumberHarvesters))\{
-484         SwitchToLumber = \textcolor{keyword}{true}; 
-485     \}
-486     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((2 <= LumberHarvesters)&&(0 == GoldMiners))\{
-487         SwitchToGold = \textcolor{keyword}{true}; 
-488     \}
-489     \textcolor{comment}{// Checks if there is an idle peasant, or if a peasant must switch from}
-490     \textcolor{comment}{// gathering wood to gathering gold, or vice versa.}
-491     \textcolor{keywordflow}{if}(MiningAsset || (InterruptibleAsset && (SwitchToLumber || SwitchToGold)))\{
-492         \textcolor{comment}{// Checks if there is a peasant that just finished gathering a resource.}
-493         \textcolor{keywordflow}{if}(MiningAsset && (MiningAsset->Lumber() || MiningAsset->Gold()))\{
-494             \textcolor{comment}{// Makes that peasant take the resources back to Town Hall.}
-495             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{actConvey};
-496             command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = TownHallAsset->Color();
-497             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
-498             command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = TownHallAsset->Type();
-499             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TownHallAsset->Position();
-500         \}
-501         \textcolor{keywordflow}{else}\{
-502             \textcolor{comment}{// Checks if there are no idle peasants.}
-503             \textcolor{keywordflow}{if}(!MiningAsset)\{
-504                 \textcolor{comment}{// Since the function got here, it means that the AI needs to }
-505                 \textcolor{comment}{// gather a different resource, but there are no idle peasants,}
-506                 \textcolor{comment}{// so one of them must be interrupted.}
-507                 MiningAsset = InterruptibleAsset;   
-508             \}
-509             \textcolor{comment}{// Finds the nearest gold mine.}
-510             \textcolor{keyword}{auto} GoldMineAsset = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestAsset(MiningAsset->Position(), 
+476                 \textcolor{comment}{// Checks if the asset is currently harvesting wood.}
+477                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a4c44c3d83b3b67a8dd2248d11bedd0ee}{aaHarvestLumber}))\{
+478                     LumberHarvesters++;
+479                     \textcolor{keywordflow}{if}(Asset->Interruptible() && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} != Asset->Action()))\{
+480                         InterruptibleAsset = Asset;
+481                     \}
+482                 \}
+483             \}
+484             \textcolor{comment}{// Checks if the asset is a Town Hall and whether it is idle.}
+485             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}) && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action()))\{
+486                 TownHallAsset = Asset;
+487             \}
+488         \}
+489     \}
+490     \textcolor{keywordflow}{if}((2 <= GoldMiners)&&(0 == LumberHarvesters))\{
+491         SwitchToLumber = \textcolor{keyword}{true}; 
+492     \}
+493     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((2 <= LumberHarvesters)&&(0 == GoldMiners))\{
+494         SwitchToGold = \textcolor{keyword}{true}; 
+495     \}
+496     \textcolor{comment}{// Checks if there is an idle peasant, or if a peasant must switch from}
+497     \textcolor{comment}{// gathering wood to gathering gold, or vice versa.}
+498     \textcolor{keywordflow}{if}(MiningAsset || (InterruptibleAsset && (SwitchToLumber || SwitchToGold)))\{
+499         \textcolor{comment}{// Checks if there is a peasant that just finished gathering a resource.}
+500         \textcolor{keywordflow}{if}(MiningAsset && (MiningAsset->Lumber() || MiningAsset->Gold()))\{
+501             \textcolor{comment}{// Makes that peasant take the resources back to Town Hall.}
+502             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead52ccba78becf1f7411bcea19f1276a8}{actConvey};
+503             command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = TownHallAsset->Color();
+504             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
+505             command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = TownHallAsset->Type();
+506             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TownHallAsset->Position();
+507         \}
+508         \textcolor{keywordflow}{else}\{
+509             \textcolor{comment}{// Checks if there are no idle peasants.}
+510             \textcolor{keywordflow}{if}(!MiningAsset)\{
+511                 \textcolor{comment}{// Since the function got here, it means that the AI needs to }
+512                 \textcolor{comment}{// gather a different resource, but there are no idle peasants,}
+513                 \textcolor{comment}{// so one of them must be interrupted.}
+514                 MiningAsset = InterruptibleAsset;   
+515             \}
+516             \textcolor{comment}{// Finds the nearest gold mine.}
+517             \textcolor{keyword}{auto} GoldMineAsset = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestAsset(MiningAsset->Position(), 
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine});
-511             \textcolor{comment}{// Checks if there are peasants gathering gold and either the }
-512             \textcolor{comment}{// AI has three times more gold than lumber, or there }
-513             \textcolor{comment}{// are too many peasants mining gold.}
-514             \textcolor{keywordflow}{if}(GoldMiners && ((\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Gold() > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Lumber() * 3) || 
+518             \textcolor{comment}{// Checks if there are peasants gathering gold and either the }
+519             \textcolor{comment}{// AI has three times more gold than lumber, or there }
+520             \textcolor{comment}{// are too many peasants mining gold.}
+521             \textcolor{keywordflow}{if}(GoldMiners && ((\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Gold() > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Lumber() * 3) || 
       SwitchToLumber))\{
-515                 \textcolor{comment}{// Finds the nearest tree tile location}
-516                 \hyperlink{classCPosition}{CPosition} LumberLocation = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->
+522                 \textcolor{comment}{// Finds the nearest tree tile location}
+523                 \hyperlink{classCPosition}{CPosition} LumberLocation = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->
       FindNearestReachableTileType(MiningAsset->TilePosition(), \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a15600fc22dc08ff5a3aec20930112f8c}{CTerrainMap::ttTree});
-517                 \textcolor{comment}{// Checks if a tree tile was found.}
-518                 \textcolor{keywordflow}{if}(0 <= LumberLocation.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-519                     \textcolor{comment}{// Makes the peasant start gathering wood.}
-520                     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine};
-521                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
-522                     command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(LumberLocation);
-523                 \}
-524                 \textcolor{keywordflow}{else}\{
-525                     \textcolor{comment}{// If no wood was found, the map must be explored so wood is}
-526                     \textcolor{comment}{// found.}
-527                     \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-528                 \}
-529             \}
-530             \textcolor{keywordflow}{else}\{
-531                 \textcolor{comment}{// If there aren't too many gold miners or if the AI doesn't }
-532                 \textcolor{comment}{// have too much gold, the peasants will be given the command}
-533                 \textcolor{comment}{// to mine gold.}
-534                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine};
-535                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
-536                 command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine};
-537                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = GoldMineAsset->Position();
-538             \}
-539         \}
-540         \textcolor{comment}{// Peasants successfully activated.}
-541         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-542     \}
-543     \textcolor{comment}{// If no changes must be made regarding gathering, but more peasants must}
-544     \textcolor{comment}{// be produced.}
-545     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(TownHallAsset && trainmore)\{
-546         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
+524                 \textcolor{comment}{// Checks if a tree tile was found.}
+525                 \textcolor{keywordflow}{if}(0 <= LumberLocation.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+526                     \textcolor{comment}{// Makes the peasant start gathering wood.}
+527                     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine};
+528                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
+529                     command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(LumberLocation);
+530                 \}
+531                 \textcolor{keywordflow}{else}\{
+532                     \textcolor{comment}{// If no wood was found, the map must be explored so wood is}
+533                     \textcolor{comment}{// found.}
+534                     \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+535                 \}
+536             \}
+537             \textcolor{keywordflow}{else}\{
+538                 \textcolor{comment}{// If there aren't too many gold miners or if the AI doesn't }
+539                 \textcolor{comment}{// have too much gold, the peasants will be given the command}
+540                 \textcolor{comment}{// to mine gold.}
+541                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea2e0db284fd05caa56e3867c661ccdd8b}{actMine};
+542                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MiningAsset);
+543                 command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine};
+544                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = GoldMineAsset->Position();
+545             \}
+546         \}
+547         \textcolor{comment}{// Peasants successfully activated.}
+548         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+549     \}
+550     \textcolor{comment}{// If no changes must be made regarding gathering, but more peasants must}
+551     \textcolor{comment}{// be produced.}
+552     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(TownHallAsset && trainmore)\{
+553         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
       \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}); 
-547         
-548         \textcolor{comment}{// Checks if the AI player has the capability to produce peasants.}
-549         \textcolor{keywordflow}{if}(PlayerCapability)\{
-550             \textcolor{comment}{// Checks if the AI has enough resources to produce a peasant.}
-551             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TownHallAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TownHallAsset))\{
-552                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant};
-553                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TownHallAsset);       
-554                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TownHallAsset->Position();
-555                 \textcolor{comment}{// Successfully started producing a peasant.}
-556                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-557             \}
-558         \}
-559     \}
-560     \textcolor{comment}{// Was unable to make peasants gather or to produce any peasants.}
-561     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-562 \}
+554         
+555         \textcolor{comment}{// Checks if the AI player has the capability to produce peasants.}
+556         \textcolor{keywordflow}{if}(PlayerCapability)\{
+557             \textcolor{comment}{// Checks if the AI has enough resources to produce a peasant.}
+558             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TownHallAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TownHallAsset))\{
+559                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant};
+560                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TownHallAsset);       
+561                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TownHallAsset->Position();
+562                 \textcolor{comment}{// Successfully started producing a peasant.}
+563                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+564             \}
+565         \}
+566     \}
+567     \textcolor{comment}{// Was unable to make peasants gather or to produce any peasants.}
+568     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+569 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -343,9 +341,9 @@ Here is the caller graph for this function\+:\nopagebreak
 Function used by the AI to select fighters and attack the enemy. 
 
 \hypertarget{classCAIPlayer_aehow_sec}{}\subsection{How It Works}\label{classCAIPlayer_aehow_sec}
-The function looks through all the assets of the AI and tries to find fighters that are not currently fighting, and adds them to a list. If the list isn\textquotesingle{}t empty, all those fighters are ordered to attack the nearest enemy. If none are found, the AI starts searching the map. 
+The function searches through all the assets of the AI looking for fighters that are not currently attacking anything. Those fighters are then added to a list. If the list isn\textquotesingle{}t empty after the search is complete, all those fighters are ordered to attack the nearest enemy. If no enemies are found, the AI starts searching the map. 
 
-Definition at line 184 of file A\+I\+Player.\+cpp.
+Definition at line 192 of file A\+I\+Player.\+cpp.
 
 
 
@@ -357,49 +355,50 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-184                                                            \{
-185     \hyperlink{classCPosition}{CPosition} AverageLocation(0,0);
-186     
-187     \textcolor{comment}{// The functions searches through all of the AI's assets to find fighters.}
-188     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
-189         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-190             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{atFootman} == Asset->Type())||(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher} == Asset->Type())||(
+192                                                            \{
+193     \hyperlink{classCPosition}{CPosition} AverageLocation(0,0);
+194     
+195     \textcolor{comment}{// The function searches through all of the AI's assets to find fighters.}
+196     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
+197         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+198             \textcolor{keywordflow}{if}((\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{atFootman} == Asset->Type())||(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher} == Asset->Type())||(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0}{atRanger} == Asset->Type()))\{
-191                 \textcolor{comment}{// Checks if the fighter is currently not attacking.}
-192                 \textcolor{keywordflow}{if}(!Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d}{aaAttack}))\{
-193                     \textcolor{comment}{// The fighter is added to a list of actors, ready to}
-194                     \textcolor{comment}{// receive orders.}
-195                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(Asset);
-196                     AverageLocation.IncrementX(Asset->PositionX());
-197                     AverageLocation.IncrementY(Asset->PositionY());
-198                 \}
-199             \}
-200         \}
-201     \}
-202     \textcolor{comment}{// Checks if there are any actors on the list.}
-203     \textcolor{keywordflow}{if}(command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size())\{
-204         \textcolor{comment}{// The average location of the group is calculated, since every unit}
-205         \textcolor{comment}{// is on a different tile. }
-206         AverageLocation.X(AverageLocation.X() / command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size());
-207         AverageLocation.Y(AverageLocation.Y() / command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size());
-208         \textcolor{comment}{// Finds the location of the nearest enemy.}
-209         \textcolor{keyword}{auto} TargetEnemy = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestEnemy(AverageLocation, -1).lock();
-210         \textcolor{comment}{// If there are no nearby enemies, get back to searching the map.}
-211         \textcolor{keywordflow}{if}(!TargetEnemy)\{
-212             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.clear();
-213             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-214         \}
-215         \textcolor{comment}{// Attacks the enemy.}
-216         command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{actAttack};
-217         command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TargetEnemy->Position();
-218         command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = TargetEnemy->Color();
-219         command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = TargetEnemy->Type(); 
-220         \textcolor{comment}{// Successfully attacked the enemy.}
-221         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-222     \}
-223     \textcolor{comment}{// Failed to attack the enemy.}
-224     \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
-225 \}
+199                 \textcolor{comment}{// Checks if the fighter is currently not attacking.}
+200                 \textcolor{keywordflow}{if}(!Asset->HasAction(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a948eefd20b9e43d3b4cfcf613774716d}{aaAttack}))\{
+201                     \textcolor{comment}{// The fighter is added to a list of actors, ready to}
+202                     \textcolor{comment}{// receive orders.}
+203                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(Asset);
+204                     AverageLocation.IncrementX(Asset->PositionX());
+205                     AverageLocation.IncrementY(Asset->PositionY());
+206                 \}
+207             \}
+208         \}
+209     \}
+210     \textcolor{comment}{// Checks if there are any actors on the list.}
+211     \textcolor{keywordflow}{if}(command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size())\{
+212         \textcolor{comment}{// The average location of the group is calculated, since every unit}
+213         \textcolor{comment}{// is on a different tile. }
+214         AverageLocation.X(AverageLocation.X() / command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size());
+215         AverageLocation.Y(AverageLocation.Y() / command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.size());
+216         \textcolor{comment}{// Finds the location of the nearest enemy, relative to the average }
+217         \textcolor{comment}{// location of the group.}
+218         \textcolor{keyword}{auto} TargetEnemy = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestEnemy(AverageLocation, -1).lock();
+219         \textcolor{comment}{// If there are no nearby enemies, get back to searching the map.}
+220         \textcolor{keywordflow}{if}(!TargetEnemy)\{
+221             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.clear();
+222             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+223         \}
+224         \textcolor{comment}{// Attacks the enemy.}
+225         command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaf90bc0c36c70d816217d0d4b08b0ba4c}{actAttack};
+226         command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TargetEnemy->Position();
+227         command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = TargetEnemy->Color();
+228         command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = TargetEnemy->Type(); 
+229         \textcolor{comment}{// Successfully attacked the enemy.}
+230         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+231     \}
+232     \textcolor{comment}{// Failed to attack the enemy.}
+233     \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+234 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -426,9 +425,9 @@ Here is the caller graph for this function\+:\nopagebreak
 Function used by the AI to build a building other than the Town Hall. Returns true or false, depending on whether it was able to build or not. 
 
 \hypertarget{classCAIPlayer_bthhow_sec}{}\subsection{How It Works}\label{classCAIPlayer_bthhow_sec}
-First he function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The functions has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. This means that for example, if the center of the map is to the North-\/\+West of the AI\textquotesingle{}s Town Hall, the building will be constructed to the North-\/\+West of the neartype building. 
+First the function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The function has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. For example if the center of the map is to the North-\/\+West of the AI\textquotesingle{}s Town Hall, the building will be constructed to the North-\/\+West of the neartype building. 
 
-Definition at line 294 of file A\+I\+Player.\+cpp.
+Definition at line 303 of file A\+I\+Player.\+cpp.
 
 
 
@@ -440,145 +439,143 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-294                                                                                                          \{
-295     std::shared\_ptr< CPlayerAsset > BuilderAsset;
-296     std::shared\_ptr< CPlayerAsset > TownHallAsset;
-297     std::shared\_ptr< CPlayerAsset > NearAsset;
-298     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{EAssetCapabilityType} BuildAction;
-299     \textcolor{keywordtype}{bool} AssetIsIdle = \textcolor{keyword}{false};
-300     
-301     \textcolor{comment}{// Assigns an action based on the type of building that must be built.}
-302     \textcolor{keywordflow}{switch}(buildingtype)\{
-303         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks}:    BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{actBuildBarracks};
-304                             \textcolor{keywordflow}{break};
-305         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill}:  BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{actBuildLumberMill};
-306                             \textcolor{keywordflow}{break};
-307         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{atBlacksmith}:  BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{actBuildBlacksmith};
-308                             \textcolor{keywordflow}{break};
-309         \textcolor{keywordflow}{default}:            BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{actBuildFarm};
-310                             \textcolor{keywordflow}{break};
-311     \}
-312 
-313     \textcolor{comment}{// Loops through all the AI's assets.}
-314     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
-315         \textcolor{comment}{// Checks that the asset pointer is valid.}
-316         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-317             \textcolor{comment}{// Checks if the asset is able to build a specific building, }
-318             \textcolor{comment}{// and whether it can be interrupted from whatever it is doing.}
-319             \textcolor{keywordflow}{if}(Asset->HasCapability(BuildAction) && Asset->Interruptible())\{
-320                 \textcolor{comment}{// Checks if no builder was assinged yet, or if there is a }
-321                 \textcolor{comment}{// mismatch between the local bool AssetIsIdle and whether}
-322                 \textcolor{comment}{// the asset really is idle.}
-323                 \textcolor{keywordflow}{if}(!BuilderAsset || (!AssetIsIdle && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action())))\{
-324                     BuilderAsset = Asset;
-325                     \textcolor{comment}{// Sets AssetIsIdle to true if the asset isn't doing }
-326                     \textcolor{comment}{// anything.}
-327                     AssetIsIdle = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action();
-328                 \}
-329             \}
-330             \textcolor{comment}{// Checks if the asset can build peasants (basically looking for a }
-331             \textcolor{comment}{// Town Hall).}
-332             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}))\{
-333                 TownHallAsset = Asset;
-334             \}
-335             \textcolor{comment}{// Checks if the asset is currently building.}
-336             \textcolor{keywordflow}{if}(Asset->HasActiveCapability(BuildAction))\{
-337                 \textcolor{comment}{// Returns false, most likely because it can better determine }
-338                 \textcolor{comment}{// what it needs to do after the building is completed. It might}
-339                 \textcolor{comment}{// change where this building should be built, or whether it }
-340                 \textcolor{comment}{// should be built at all.}
-341                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
-342             \}
-343             \textcolor{comment}{// Checks if this asset is a building of type neartype, and if }
-344             \textcolor{comment}{// that building isn't currently being contructed.}
-345             \textcolor{keywordflow}{if}((neartype == Asset->Type())&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Asset->Action()))\{
-346                 NearAsset = Asset;
-347             \}
-348             \textcolor{comment}{// Checks if the asset is a building of type buildingtype.}
-349             \textcolor{keywordflow}{if}(buildingtype == Asset->Type())\{
-350                 \textcolor{comment}{// Checks if the building is currently being built.}
-351                 \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} == Asset->Action())\{
-352                     \textcolor{comment}{// Returns false to avoid building more buildings than}
-353                     \textcolor{comment}{// needed.}
-354                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
-355                 \}
-356             \}
-357         \}
-358     \}
-359 
-360     \textcolor{comment}{//Checks if the building the AI is trying to build is not the same as the }
-361     \textcolor{comment}{// building it is supposed to be build near, and  if there is no building}
-362     \textcolor{comment}{// of the neartype.}
-363     \textcolor{keywordflow}{if}((buildingtype != neartype) && !NearAsset)\{
-364         \textcolor{comment}{// Returns false because there is no building that buildingtype can be}
-365         \textcolor{comment}{// built near. }
-366         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
-367     \}
-368 
-369     \textcolor{comment}{// Checks if there is a builder (peasant).}
-370     \textcolor{keywordflow}{if}(BuilderAsset)\{
-371         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
+303                                                                                                          \{
+304     std::shared\_ptr< CPlayerAsset > BuilderAsset;
+305     std::shared\_ptr< CPlayerAsset > TownHallAsset;
+306     std::shared\_ptr< CPlayerAsset > NearAsset;
+307     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{EAssetCapabilityType} BuildAction;
+308     \textcolor{keywordtype}{bool} AssetIsIdle = \textcolor{keyword}{false};
+309     
+310     \textcolor{comment}{// Assigns an action based on the type of building that must be built.}
+311     \textcolor{keywordflow}{switch}(buildingtype)\{
+312         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks}:    BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea47e79df21160eb97064a18e6d36cac}{actBuildBarracks};
+313                             \textcolor{keywordflow}{break};
+314         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill}:  BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaea7fb8009561a58e7b9f2cf741989242}{actBuildLumberMill};
+315                             \textcolor{keywordflow}{break};
+316         \textcolor{keywordflow}{case} \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca2b2badd6cba3212eef87ac295bf9642e}{atBlacksmith}:  BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea45224b077989530810879da4e225eac7}{actBuildBlacksmith};
+317                             \textcolor{keywordflow}{break};
+318         \textcolor{keywordflow}{default}:            BuildAction = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea4de8df4d0a9c3bb6fe33e380bc407078}{actBuildFarm};
+319                             \textcolor{keywordflow}{break};
+320     \}
+321 
+322     \textcolor{comment}{// Loops through all the AI's assets.}
+323     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
+324         \textcolor{comment}{// Checks that the asset pointer is valid.}
+325         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+326             \textcolor{comment}{// Checks if the asset is able to build a specific building, }
+327             \textcolor{comment}{// and whether it can be interrupted from whatever it is doing.}
+328             \textcolor{keywordflow}{if}(Asset->HasCapability(BuildAction) && Asset->Interruptible())\{
+329                 \textcolor{comment}{// Checks if no builder was assinged yet, or if this asset is}
+330                 \textcolor{comment}{// idle, but AssetIsIdle isn't set to true yet.}
+331                 \textcolor{keywordflow}{if}(!BuilderAsset || (!AssetIsIdle && (\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action())))\{
+332                     BuilderAsset = Asset;
+333                     \textcolor{comment}{// Sets AssetIsIdle to true if the asset isn't doing }
+334                     \textcolor{comment}{// anything.}
+335                     AssetIsIdle = \hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670ac17cc5a0035320c060d7f8074143b507}{aaNone} == Asset->Action();
+336                 \}
+337             \}
+338             \textcolor{comment}{// Checks if the asset can build peasants (Town Hall).}
+339             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}))\{
+340                 TownHallAsset = Asset;
+341             \}
+342             \textcolor{comment}{// Checks if the asset is currently building.}
+343             \textcolor{keywordflow}{if}(Asset->HasActiveCapability(BuildAction))\{
+344                 \textcolor{comment}{// Returns false, most likely because it can better determine }
+345                 \textcolor{comment}{// what it needs to do after the building is completed. It might}
+346                 \textcolor{comment}{// change where this building should be built, or whether it }
+347                 \textcolor{comment}{// should be built at all.}
+348                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+349             \}
+350             \textcolor{comment}{// Checks if this asset is a building of type neartype, and if }
+351             \textcolor{comment}{// it isn't currently being constructed.}
+352             \textcolor{keywordflow}{if}((neartype == Asset->Type())&&(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} != Asset->Action()))\{
+353                 NearAsset = Asset;
+354             \}
+355             \textcolor{comment}{// Checks if the asset is a building of type buildingtype.}
+356             \textcolor{keywordflow}{if}(buildingtype == Asset->Type())\{
+357                 \textcolor{comment}{// Checks if the building is currently being built.}
+358                 \textcolor{keywordflow}{if}(\hyperlink{GameDataTypes_8h_ab47668e651a3032cfb9c40ea2d60d670a7ef6b863f66dd7dcc95a199cd758ae1d}{aaConstruct} == Asset->Action())\{
+359                     \textcolor{comment}{// Returns false to avoid building more buildings than}
+360                     \textcolor{comment}{// needed.}
+361                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};   
+362                 \}
+363             \}
+364         \}
+365     \}
+366 
+367     \textcolor{comment}{// Checks if the building the AI is trying to build is not the same as the }
+368     \textcolor{comment}{// building it is supposed to be build near, and if there is no building}
+369     \textcolor{comment}{// of the neartype.}
+370     \textcolor{keywordflow}{if}((buildingtype != neartype) && !NearAsset)\{
+371         \textcolor{comment}{// Returns false because there is no building that buildingtype can be}
+372         \textcolor{comment}{// built near. }
+373         \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+374     \}
+375 
+376     \textcolor{comment}{// Checks if there is a builder (peasant).}
+377     \textcolor{keywordflow}{if}(BuilderAsset)\{
+378         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
       BuildAction);
-372         \textcolor{comment}{// Sets the position where to build at the Town Hall, in case no}
-373         \textcolor{comment}{// neartype is passed in.}
-374         \hyperlink{classCPosition}{CPosition} SourcePosition = TownHallAsset->TilePosition();
-375         \hyperlink{classCPosition}{CPosition} MapCenter(\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->Width()/2, 
+379         \textcolor{comment}{// Sets the position where to build to the Town Hall's location, in }
+380         \textcolor{comment}{// case no neartype is passed in.}
+381         \hyperlink{classCPosition}{CPosition} SourcePosition = TownHallAsset->TilePosition();
+382         \hyperlink{classCPosition}{CPosition} MapCenter(\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->Width()/2, 
       \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->Height()/2);
-376         
-377         \textcolor{comment}{// If a neartype is passed in, it sets the source to that.}
-378         \textcolor{keywordflow}{if}(NearAsset)\{
-379             SourcePosition = NearAsset->TilePosition();
-380         \}
-381 
-382         \textcolor{comment}{/*  }
-383 \textcolor{comment}{            The next four if statements are used to determine how to adjust the}
-384 \textcolor{comment}{            source position. The adjustment is calculated based on where the }
-385 \textcolor{comment}{            center of the map is. The source position is adjusted in such a way }
-386 \textcolor{comment}{            that the AI will expand its base toward the center of the map.}
-387 \textcolor{comment}{        */}
-388         \textcolor{keywordflow}{if}(MapCenter.X() < SourcePosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-389             SourcePosition.\hyperlink{classCPosition_a64f0d8ef8ca26c8b66b0997b3b132416}{DecrementX}(TownHallAsset->Size()/2);   
-390         \}
-391         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(MapCenter.X() > SourcePosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-392             SourcePosition.\hyperlink{classCPosition_aa5955d67d5ab7ca74d80cb7303b6eaa9}{IncrementX}(TownHallAsset->Size()/2);
-393         \}
-394         \textcolor{keywordflow}{if}(MapCenter.Y() < SourcePosition.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}())\{
-395             SourcePosition.\hyperlink{classCPosition_a51ee44d9e0457d6277567fd8a66fdec7}{DecrementY}(TownHallAsset->Size()/2);   
-396         \}
-397         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(MapCenter.Y() > SourcePosition.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}())\{
-398             SourcePosition.\hyperlink{classCPosition_a3f2a26798bb27b1252ff1be303b3adfc}{IncrementY}(TownHallAsset->Size()/2);
-399         \}
-400 
-401         \textcolor{comment}{// Finds the best location to build, based on the source position.}
-402         \hyperlink{classCPosition}{CPosition} Placement = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindBestAssetPlacement(SourcePosition, 
+383         
+384         \textcolor{comment}{// If a neartype is passed in, it sets the source to that.}
+385         \textcolor{keywordflow}{if}(NearAsset)\{
+386             SourcePosition = NearAsset->TilePosition();
+387         \}
+388 
+389         \textcolor{comment}{/*  }
+390 \textcolor{comment}{            The next four if statements are used to determine how to adjust the}
+391 \textcolor{comment}{            source position. The adjustment is calculated based on where the }
+392 \textcolor{comment}{            center of the map is. The source position is adjusted in such a way }
+393 \textcolor{comment}{            that the AI will expand its base toward the center of the map.}
+394 \textcolor{comment}{        */}
+395         \textcolor{keywordflow}{if}(MapCenter.X() < SourcePosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+396             SourcePosition.\hyperlink{classCPosition_a64f0d8ef8ca26c8b66b0997b3b132416}{DecrementX}(TownHallAsset->Size()/2);   
+397         \}
+398         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(MapCenter.X() > SourcePosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+399             SourcePosition.\hyperlink{classCPosition_aa5955d67d5ab7ca74d80cb7303b6eaa9}{IncrementX}(TownHallAsset->Size()/2);
+400         \}
+401         \textcolor{keywordflow}{if}(MapCenter.Y() < SourcePosition.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}())\{
+402             SourcePosition.\hyperlink{classCPosition_a51ee44d9e0457d6277567fd8a66fdec7}{DecrementY}(TownHallAsset->Size()/2);   
+403         \}
+404         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(MapCenter.Y() > SourcePosition.\hyperlink{classCPosition_a1aa8a30e2f08dda1f797736ba8c13a87}{Y}())\{
+405             SourcePosition.\hyperlink{classCPosition_a3f2a26798bb27b1252ff1be303b3adfc}{IncrementY}(TownHallAsset->Size()/2);
+406         \}
+407 
+408         \textcolor{comment}{// Finds the best location to build, based on the source position.}
+409         \hyperlink{classCPosition}{CPosition} Placement = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindBestAssetPlacement(SourcePosition, 
       BuilderAsset, buildingtype, 1);
-403         \textcolor{comment}{// Checks if a placement was not found.}
-404         \textcolor{keywordflow}{if}(0 > Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-405             \textcolor{comment}{// Searches the map for another place where it could build.}
-406             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-407         \}
-408 
-409         \textcolor{comment}{// Checks if the AI Player is capable of building.}
-410         \textcolor{keywordflow}{if}(PlayerCapability)\{
-411             \textcolor{comment}{// Checks if the AI Player can start building, based on the chosen}
-412             \textcolor{comment}{// peasant and the AI's current resources.}
-413             \textcolor{keywordflow}{if}(PlayerCapability->CanInitiate(BuilderAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}))\{
-414                 \textcolor{comment}{// Checks if a placement was found. }
-415                 \textcolor{keywordflow}{if}(0 <= Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-416                     \textcolor{comment}{// The builder is commanded to build at the chosen position,}
-417                     \textcolor{comment}{// and true is returned.}
-418                     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = BuildAction;
-419                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(BuilderAsset);
-420                     command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(Placement);
-421                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-422                 \}
-423             \}
-424         \}
-425     \}
-426 
-427     \textcolor{comment}{// Returns false if it was unable to build the building.}
-428     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-429 \}
+410         \textcolor{comment}{// Checks if a placement was not found.}
+411         \textcolor{keywordflow}{if}(0 > Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+412             \textcolor{comment}{// Searches the map for another place where it could build.}
+413             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+414         \}
+415 
+416         \textcolor{comment}{// Checks if the AI Player is capable of building.}
+417         \textcolor{keywordflow}{if}(PlayerCapability)\{
+418             \textcolor{comment}{// Checks if the AI Player can start building, based on the chosen}
+419             \textcolor{comment}{// peasant and the AI's current resources.}
+420             \textcolor{keywordflow}{if}(PlayerCapability->CanInitiate(BuilderAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}))\{
+421                 \textcolor{comment}{// Checks if a placement was found. }
+422                 \textcolor{keywordflow}{if}(0 <= Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+423                     \textcolor{comment}{// The builder is commanded to build at the chosen position,}
+424                     \textcolor{comment}{// and true is returned.}
+425                     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = BuildAction;
+426                     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(BuilderAsset);
+427                     command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(Placement);
+428                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+429                 \}
+430             \}
+431         \}
+432     \}
+433 
+434     \textcolor{comment}{// Returns false if it was unable to build the building.}
+435     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+436 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -607,7 +604,7 @@ Function used by the AI to build a Town Hall. Returns true or false, depending o
 \hypertarget{classCAIPlayer_bthhow_sec}{}\subsection{How It Works}\label{classCAIPlayer_bthhow_sec}
 First the function looks through all the AI\textquotesingle{}s assets to find one that can build things. Once a builder is found, the function looks for the closest gold mine to the builder. Next, it determines the best position to build the Town Hall. Usually that is right next to the mine, so the peasants can mine gold faster. If it finds a good position, it commands that builder to build a Town Hall. If it can\textquotesingle{}t find a placement for the building, it will search the map. If a Town Hall can\textquotesingle{}t be built, the function returns false. 
 
-Definition at line 236 of file A\+I\+Player.\+cpp.
+Definition at line 245 of file A\+I\+Player.\+cpp.
 
 
 
@@ -619,57 +616,57 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-236                                                            \{
-237     \textcolor{comment}{// Creates a list of the AI's idle assets.}
-238     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
-239     \textcolor{comment}{// Declares a pointer to an asset.}
-240     std::shared\_ptr< CPlayerAsset > BuilderAsset;
-241     
-242     \textcolor{comment}{// Looks through every idle asset}
-243     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
-244         \textcolor{comment}{// Checks whether the asset pointer is valid and assigns it to Asset.}
-245         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-246             \textcolor{comment}{// Checks whether the asset is able to build a Town Hall.}
-247             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall}))\{
-248                 \textcolor{comment}{// If the asset can build a Town Hall, the BuilderAsset will be }
-249                 \textcolor{comment}{// set to point to that asset.}
-250                 BuilderAsset = Asset;
-251                 \textcolor{keywordflow}{break};
-252             \}
-253         \}
-254     \}
-255 
-256     \textcolor{comment}{// Checks if an asset that can build was found (or peasant).}
-257     \textcolor{keywordflow}{if}(BuilderAsset)\{
-258         \textcolor{comment}{// Find the gold mine that is nearest to the peasant and assign it to a}
-259         \textcolor{comment}{// variable.}
-260         \textcolor{keyword}{auto} GoldMineAsset = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestAsset(BuilderAsset->Position(), 
+245                                                            \{
+246     \textcolor{comment}{// Creates a list of the AI's idle assets.}
+247     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
+248     \textcolor{comment}{// Declares a pointer to an asset.}
+249     std::shared\_ptr< CPlayerAsset > BuilderAsset;
+250     
+251     \textcolor{comment}{// Looks through every idle asset.}
+252     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
+253         \textcolor{comment}{// Checks whether the asset pointer is valid and assigns it to Asset.}
+254         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+255             \textcolor{comment}{// Checks whether the asset is able to build a Town Hall.}
+256             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall}))\{
+257                 \textcolor{comment}{// If the asset can build a Town Hall, the BuilderAsset will be }
+258                 \textcolor{comment}{// set to point to that asset.}
+259                 BuilderAsset = Asset;
+260                 \textcolor{keywordflow}{break};
+261             \}
+262         \}
+263     \}
+264 
+265     \textcolor{comment}{// Checks if an asset that can build (peasant) was found.}
+266     \textcolor{keywordflow}{if}(BuilderAsset)\{
+267         \textcolor{comment}{// Find the gold mine that is nearest to the peasant and assign it to a}
+268         \textcolor{comment}{// variable.}
+269         \textcolor{keyword}{auto} GoldMineAsset = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestAsset(BuilderAsset->Position(), 
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine});
-261         \textcolor{comment}{// Finds the best place to build the Town Hall, based on the gold mine's}
-262         \textcolor{comment}{// position.}
-263         \hyperlink{classCPosition}{CPosition} Placement = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindBestAssetPlacement(GoldMineAsset->
+270         \textcolor{comment}{// Finds the best place to build the Town Hall, based on the gold mine's}
+271         \textcolor{comment}{// position.}
+272         \hyperlink{classCPosition}{CPosition} Placement = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindBestAssetPlacement(GoldMineAsset->
       TilePosition(), BuilderAsset, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall}, 1);
-264         \textcolor{comment}{// Checks if a position for the Town Hall was found}
-265         \textcolor{keywordflow}{if}(0 <= Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-266             \textcolor{comment}{// Assigns up the command to execute (Build Town Hall).}
-267             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall};
-268             \textcolor{comment}{// Adds the actor who is supposed to perform the action to DActors.}
-269             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(BuilderAsset);
-270             \textcolor{comment}{// Sets the location where the action should be performed.}
-271             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(Placement);
-272             \textcolor{comment}{// Returns true because the peasant started building.}
-273             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-274         \}
-275         \textcolor{keywordflow}{else}\{
-276             \textcolor{comment}{// Searches the map to find another position. Possible reason}
-277             \textcolor{comment}{// could be that there was no gold mine nearby. Returns the result}
-278             \textcolor{comment}{// of that search.}
-279             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);  
-280         \}
-281     \}
-282     \textcolor{comment}{// Returns false if it couldn't build a Town Hall.}
-283     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-284 \}
+273         \textcolor{comment}{// Checks if a position for the Town Hall was found}
+274         \textcolor{keywordflow}{if}(0 <= Placement.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+275             \textcolor{comment}{// Assigns up the command to execute (Build Town Hall).}
+276             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea0b5f001e8c77b8a87998da6320595498}{actBuildTownHall};
+277             \textcolor{comment}{// Adds the actor who is supposed to perform the action to DActors.}
+278             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(BuilderAsset);
+279             \textcolor{comment}{// Sets the location where the action should be performed.}
+280             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(Placement);
+281             \textcolor{comment}{// Returns true because the peasant started building.}
+282             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+283         \}
+284         \textcolor{keywordflow}{else}\{
+285             \textcolor{comment}{// Searches the map to find another position. Possible reason}
+286             \textcolor{comment}{// could be that there was no gold mine nearby. Returns the result}
+287             \textcolor{comment}{// of that search.}
+288             \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);  
+289         \}
+290     \}
+291     \textcolor{comment}{// Returns false if it couldn't build a Town Hall.}
+292     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+293 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -698,7 +695,7 @@ Decides what actions the AI should take.
 \hypertarget{classCAIPlayer_cchow_sec}{}\subsection{How It Works}\label{classCAIPlayer_cchow_sec}
 Explanation of how it works on \hyperlink{index}{AI Main Page}. 
 
-Definition at line 714 of file A\+I\+Player.\+cpp.
+Definition at line 716 of file A\+I\+Player.\+cpp.
 
 
 
@@ -706,104 +703,104 @@ References Activate\+Fighters(), Activate\+Peasants(), act\+None, at\+Archer, at
 
 
 \begin{DoxyCode}
-714                                                               \{
-715     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone};
-716     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.clear();    
-717     command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone};
-718     command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone};
-719     \textcolor{comment}{// Checks if the AI is allowed to take an action yet. }
-720     \textcolor{keywordflow}{if}((\hyperlink{classCAIPlayer_adf12a7afe7ea86410b18eff47fa95253}{DCycle} % \hyperlink{classCAIPlayer_a091aed92cb9ad1a789900a6394d2f352}{DDownSample}) == 0)\{
-721 
-722         \textcolor{comment}{// Checks if the AI has any gold left in the local gold mine.}
-723         \textcolor{keywordflow}{if}(0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FoundAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine}))\{
-724             \textcolor{comment}{// Search for gold mine}
-725             \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-726         \} 
-727         \textcolor{comment}{// Checks if there is a Town Hall}
-728         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall}))&&(0 == 
+716                                                               \{
+717     command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaa8df154ad276f6f62054e9b5b0696f92}{actNone};
+718     command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.clear();    
+719     command.\hyperlink{structSPlayerCommandRequest_a3690a5117efe6214d92f18d672b5714f}{DTargetColor} = \hyperlink{GameDataTypes_8h_aafb0ca75933357ff28a6d7efbdd7602fa88767aa8e02c7b3192bbab4127b3d729}{pcNone};
+720     command.\hyperlink{structSPlayerCommandRequest_a864e47c641127665751091876a6d3c5e}{DTargetType} = \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca82fb51718e2c00981a2d37bc6fe92593}{atNone};
+721     \textcolor{comment}{// Checks if the AI is allowed to take an action yet. }
+722     \textcolor{keywordflow}{if}((\hyperlink{classCAIPlayer_adf12a7afe7ea86410b18eff47fa95253}{DCycle} % \hyperlink{classCAIPlayer_a091aed92cb9ad1a789900a6394d2f352}{DDownSample}) == 0)\{
+723 
+724         \textcolor{comment}{// Checks if the AI has found a gold mine.}
+725         \textcolor{keywordflow}{if}(0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FoundAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca243d9ba44092eadd561db058d742b3b3}{atGoldMine}))\{
+726             \textcolor{comment}{// Search map to try to find a gold mine.}
+727             \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+728         \} 
+729         \textcolor{comment}{// Checks if there is a Town Hall}
+730         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca5c0fa8a0f367f3358365536d3c7aa321}{atTownHall}))&&(0 == 
       \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaaed39451bedb0392ad95fbc9c95bef31}{atKeep}))&&(0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca6727b47855e74f3f7b6e4a96d0c2a42a}{atCastle})))\{
-729             \hyperlink{classCAIPlayer_a41cdefbe14210fb70b793a32778c5141}{BuildTownHall}(command);
-730         \} 
-731         \textcolor{comment}{// Checks if the AI has fewer than five peasants}
-732         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(5 > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{atPeasant}))\{
-733             \textcolor{comment}{// Makes the peasants gather resources/ produce more peasants.}
-734             \hyperlink{classCAIPlayer_a3fab1c955fd68bb53fa80bb1872d2819}{ActivatePeasants}(command, \textcolor{keyword}{true});
-735         \}
-736         \textcolor{comment}{// Checks if the AI has enough map visibility.}
-737         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(12 > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->VisibilityMap()->SeenPercent(100))\{
-738             \textcolor{comment}{// Starts searching the map to get more visibility.}
-739             \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-740         \}
-741         \textcolor{keywordflow}{else}\{
-742             \textcolor{comment}{// CompletedAction is initialized to false, and set to true if the }
-743             \textcolor{comment}{// AI has completed an action. To prevent the AI from completing}
-744             \textcolor{comment}{// multiple actions in one cycle, every if statement checks}
-745             \textcolor{comment}{// !CompletedAction}
-746             \textcolor{keywordtype}{bool} CompletedAction = \textcolor{keyword}{false};
-747             \textcolor{keywordtype}{int} BarracksCount = 0;
-748             \textcolor{keywordtype}{int} FootmanCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
+731             \textcolor{comment}{// Builds Town Hall}
+732             \hyperlink{classCAIPlayer_a41cdefbe14210fb70b793a32778c5141}{BuildTownHall}(command);
+733         \} 
+734         \textcolor{comment}{// Checks if the AI has fewer than five peasants}
+735         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(5 > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaf5e570c7e5a2266810f610e7f945ea61}{atPeasant}))\{
+736             \textcolor{comment}{// Makes the peasants gather resources / produce more peasants.}
+737             \hyperlink{classCAIPlayer_a3fab1c955fd68bb53fa80bb1872d2819}{ActivatePeasants}(command, \textcolor{keyword}{true});
+738         \}
+739         \textcolor{comment}{// Checks if the AI has enough map visibility.}
+740         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(12 > \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->VisibilityMap()->SeenPercent(100))\{
+741             \textcolor{comment}{// Starts searching the map to get more visibility.}
+742             \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+743         \}
+744         \textcolor{keywordflow}{else}\{
+745             \textcolor{comment}{// CompletedAction is initialized to false, and set to true if the }
+746             \textcolor{comment}{// AI has completed an action. To prevent the AI from completing}
+747             \textcolor{comment}{// multiple actions in one cycle, every if statement checks}
+748             \textcolor{comment}{// !CompletedAction}
+749             \textcolor{keywordtype}{bool} CompletedAction = \textcolor{keyword}{false};
+750             \textcolor{keywordtype}{int} BarracksCount = 0;
+751             \textcolor{keywordtype}{int} FootmanCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{atFootman});
-749             \textcolor{keywordtype}{int} ArcherCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher})+
+752             \textcolor{keywordtype}{int} ArcherCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7fad0074234068ff0af4092a75b929f8}{atArcher})+
       \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(\hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecaafd2b1e0ca34872bb06098dbec9939e0}{atRanger});
-750             \textcolor{comment}{// Checks whether the food consumption of units is bigger than}
-751             \textcolor{comment}{// the food production}
-752             \textcolor{keywordflow}{if}(!CompletedAction && (\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FoodConsumption() >= 
+753             \textcolor{comment}{// Checks whether the AI has enough food to produce more units.}
+754             \textcolor{keywordflow}{if}(!CompletedAction && (\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FoodConsumption() >= 
       \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FoodProduction()))\{
-753                 \textcolor{comment}{// Builds a farm to have more food production}
-754                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm}, 
+755                 \textcolor{comment}{// Builds a farm to have more food.}
+756                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm}, 
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm});
-755             \}
-756             \textcolor{keywordflow}{if}(!CompletedAction)\{
-757                 \textcolor{comment}{// Makes peasants go back to gathering, because they will be}
-758                 \textcolor{comment}{// idle after building a farm.}
-759                 CompletedAction = \hyperlink{classCAIPlayer_a3fab1c955fd68bb53fa80bb1872d2819}{ActivatePeasants}(command, \textcolor{keyword}{false});
-760             \}
-761             \textcolor{comment}{// Checks whether the AI has a Barracks}
-762             \textcolor{keywordflow}{if}(!CompletedAction && (0 == (BarracksCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
+757             \}
+758             \textcolor{keywordflow}{if}(!CompletedAction)\{
+759                 \textcolor{comment}{// Makes peasants go back to gathering, because they will be}
+760                 \textcolor{comment}{// idle after building a farm.}
+761                 CompletedAction = \hyperlink{classCAIPlayer_a3fab1c955fd68bb53fa80bb1872d2819}{ActivatePeasants}(command, \textcolor{keyword}{false});
+762             \}
+763             \textcolor{comment}{// Checks whether the AI has a Barracks}
+764             \textcolor{keywordflow}{if}(!CompletedAction && (0 == (BarracksCount = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks}))))\{
-763                 \textcolor{comment}{// Builds a Barracks next to a Farm}
-764                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks}, 
+765                 \textcolor{comment}{// Builds a Barracks next to a Farm}
+766                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks}, 
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca406eab24dcbad1858522aca11b1088f5}{atFarm});
-765             \}
-766             \textcolor{comment}{// Checks if there are fewer than five Footmen}
-767             \textcolor{keywordflow}{if}(!CompletedAction && (5 > FootmanCount))\{
-768                 \textcolor{comment}{// Trains a footman}
-769                 CompletedAction = \hyperlink{classCAIPlayer_aa3f9c1d0d449a45a24e065d2086527b0}{TrainFootman}(command);
-770             \}
-771             \textcolor{comment}{// Checks whether the AI has a Lumber Mill}
-772             \textcolor{keywordflow}{if}(!CompletedAction && (0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
+767             \}
+768             \textcolor{comment}{// Checks if there are fewer than five Footmen}
+769             \textcolor{keywordflow}{if}(!CompletedAction && (5 > FootmanCount))\{
+770                 \textcolor{comment}{// Trains a footman}
+771                 CompletedAction = \hyperlink{classCAIPlayer_aa3f9c1d0d449a45a24e065d2086527b0}{TrainFootman}(command);
+772             \}
+773             \textcolor{comment}{// Checks whether the AI has a Lumber Mill}
+774             \textcolor{keywordflow}{if}(!CompletedAction && (0 == \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill})))\{
-773                 \textcolor{comment}{// Builds a Lumber Mill next to the Barracks}
-774                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, 
+775                 \textcolor{comment}{// Builds a Lumber Mill next to the Barracks}
+776                 CompletedAction = \hyperlink{classCAIPlayer_a2ff5263cbaa6bfc62ffec4dbce87ba88}{BuildBuilding}(command, 
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca7bb38316bc3193b5c9ec67ea6aad549c}{atLumberMill}, \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477feca1cbf6c944f30d615a247eef1f57b2230}{atBarracks});
-775             \}
-776             \textcolor{comment}{// Checks whether the AI has fewer than five archers}
-777             \textcolor{keywordflow}{if}(!CompletedAction &&  (5 > ArcherCount))\{
-778                 \textcolor{comment}{// Trains an Archer}
-779                 CompletedAction = \hyperlink{classCAIPlayer_af2edf1e3c54d6af693f768f86d484fd6}{TrainArcher}(command);
-780             \}
-781             \textcolor{comment}{// It checks whether it has a Footman.}
-782             \textcolor{keywordflow}{if}(!CompletedAction && \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
+777             \}
+778             \textcolor{comment}{// Checks whether the AI has fewer than five archers}
+779             \textcolor{keywordflow}{if}(!CompletedAction &&  (5 > ArcherCount))\{
+780                 \textcolor{comment}{// Trains an Archer}
+781                 CompletedAction = \hyperlink{classCAIPlayer_af2edf1e3c54d6af693f768f86d484fd6}{TrainArcher}(command);
+782             \}
+783             \textcolor{comment}{// It checks whether it has a Footman.}
+784             \textcolor{keywordflow}{if}(!CompletedAction && \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerAssetCount(
       \hyperlink{GameDataTypes_8h_a5600d4fc433b83300308921974477fecad586e8ff9ee846d22630c2066e8fb7c2}{atFootman}))\{
-783                 \textcolor{comment}{// Sends the Footman to find the enemy.}
-784                 CompletedAction = \hyperlink{classCAIPlayer_a33b1533570e7a00114d1b85b3551e395}{FindEnemies}(command);
-785             \}
-786             \textcolor{keywordflow}{if}(!CompletedAction)\{
-787                 \textcolor{comment}{// Selects the fighters}
-788                 CompletedAction = \hyperlink{classCAIPlayer_a4216d7e76315234a4fe22fb3a0a89c1d}{ActivateFighters}(command);
-789             \}
-790             \textcolor{comment}{// Checks if the AI has at least five Footmen and five Archers.}
-791             \textcolor{keywordflow}{if}(!CompletedAction && ((5 <= FootmanCount) && (5 <= ArcherCount)))\{
-792                 CompletedAction = \hyperlink{classCAIPlayer_adf7feeba7debf9f19b000887616d7bfb}{AttackEnemies}(command);
-793             \}
-794         \}
-795     \}
-796     \hyperlink{classCAIPlayer_adf12a7afe7ea86410b18eff47fa95253}{DCycle}++;
-797 \}
+785                 \textcolor{comment}{// Sends the Footman to find the enemy.}
+786                 CompletedAction = \hyperlink{classCAIPlayer_a33b1533570e7a00114d1b85b3551e395}{FindEnemies}(command);
+787             \}
+788             \textcolor{keywordflow}{if}(!CompletedAction)\{
+789                 \textcolor{comment}{// Selects the fighters}
+790                 CompletedAction = \hyperlink{classCAIPlayer_a4216d7e76315234a4fe22fb3a0a89c1d}{ActivateFighters}(command);
+791             \}
+792             \textcolor{comment}{// Checks if the AI has at least five Footmen and five Archers.}
+793             \textcolor{keywordflow}{if}(!CompletedAction && ((5 <= FootmanCount) && (5 <= ArcherCount)))\{
+794                 CompletedAction = \hyperlink{classCAIPlayer_adf7feeba7debf9f19b000887616d7bfb}{AttackEnemies}(command);
+795             \}
+796         \}
+797     \}
+798     \textcolor{comment}{// Cycle completed.}
+799     \hyperlink{classCAIPlayer_adf12a7afe7ea86410b18eff47fa95253}{DCycle}++;
+800 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -823,7 +820,7 @@ Function used by the AI to find enemies by searching assets that are visible to 
 \hypertarget{classCAIPlayer_fehow_sec}{}\subsection{How It Works}\label{classCAIPlayer_fehow_sec}
 It first finds a Town Hall of the AI, then it searches in a range around that building. The range in this case is unlimited. The function calls \hyperlink{classCPlayerData_a5f0a1280933f7bb9a65ab256ecff1a69}{C\+Player\+Data\+::\+Find\+Nearest\+Enemy}, which iterates through all the assets the AI can see on the map and checks whether its player color is different than the AI\textquotesingle{}s. It also checks if that asset it found is alive. If the pointer to the nearest enemy is expired, the function returns the result of \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{Search\+Map}. It returns false if it can\textquotesingle{}t find anything. 
 
-Definition at line 150 of file A\+I\+Player.\+cpp.
+Definition at line 158 of file A\+I\+Player.\+cpp.
 
 
 
@@ -835,31 +832,31 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-150                                                          \{
-151     std::shared\_ptr< CPlayerAsset > TownHallAsset;
-152     
-153     \textcolor{comment}{// This loop looks through assets to find a Town Hall.}
-154     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
-155         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-156             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}))\{
-157                 TownHallAsset = Asset;
-158                 \textcolor{keywordflow}{break};
-159             \}
-160         \}
-161     \}
-162 
-163     \textcolor{comment}{// Checks if the pointer to the enemy has expired (was deleted).}
-164     \textcolor{comment}{// It starts searching for an enemy from the Town Hall. }
-165     \textcolor{comment}{// The range is unlimited (-1).}
-166     \textcolor{comment}{// FindNearestEnemy searches for an asset on the map that has a different }
-167     \textcolor{comment}{// color than the AI and that is alive.}
-168     \textcolor{keywordflow}{if}(\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestEnemy(TownHallAsset->Position(), -1).expired())\{
-169         \textcolor{comment}{// If the asset pointer is expired it starts exploring the map.}
-170         \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
-171     \}
-172     \textcolor{comment}{// Returns false if it didn't find an enemy.}
-173     \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
-174 \}
+158                                                          \{
+159     std::shared\_ptr< CPlayerAsset > TownHallAsset;
+160     
+161     \textcolor{comment}{// This loop looks through assets to find a Town Hall.}
+162     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->Assets())\{
+163         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+164             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea66c601dce0fc095460b3c2c25f66ee71}{actBuildPeasant}))\{
+165                 TownHallAsset = Asset;
+166                 \textcolor{keywordflow}{break};
+167             \}
+168         \}
+169     \}
+170 
+171     \textcolor{comment}{// Checks if the pointer to the enemy has expired (was deleted).}
+172     \textcolor{comment}{// It starts searching for an enemy from the Town Hall. }
+173     \textcolor{comment}{// The range is unlimited (-1).}
+174     \textcolor{comment}{// FindNearestEnemy searches for an asset on the map that has a different }
+175     \textcolor{comment}{// color than the AI and that is alive.}
+176     \textcolor{keywordflow}{if}(\hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->FindNearestEnemy(TownHallAsset->Position(), -1).expired())\{
+177         \textcolor{comment}{// If the asset pointer is expired it starts exploring the map.}
+178         \textcolor{keywordflow}{return} \hyperlink{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0}{SearchMap}(command);
+179     \}
+180     \textcolor{comment}{// Returns false if it didn't find an enemy.}
+181     \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+182 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -883,7 +880,12 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 106 of file A\+I\+Player.\+cpp.
+Function used by the AI player to search for undiscovered tiles on the map. 
+
+\hypertarget{classCAIPlayer_sm_sec}{}\subsection{How It Works}\label{classCAIPlayer_sm_sec}
+This function returns true if AI Player is able to move to an undiscovered tile and returns false if if fails to find new tiles on the map. First, it looks through all of the idle assets of the AI to find one that has the ability to move. If the first search is successful, the function will proceed on to find the position of the nearest reachable tile in the undiscovered part of the map. This nearest reachable tile is where the AI Player will send a unit to. 
+
+Definition at line 113 of file A\+I\+Player.\+cpp.
 
 
 
@@ -895,41 +897,42 @@ Referenced by Activate\+Peasants(), Attack\+Enemies(), Build\+Building(), Build\
 
 
 \begin{DoxyCode}
-106                                                        \{
-107     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
-108     std::shared\_ptr< CPlayerAsset > MovableAsset;
-109     
-110     \textcolor{comment}{// This loop searches through all the idle assets of the AI to find one that}
-111     \textcolor{comment}{// can move.}
-112     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
-113         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-114             \textcolor{keywordflow}{if}(Asset->Speed())\{
-115                 MovableAsset = Asset;
-116                 \textcolor{keywordflow}{break};
-117             \}
-118         \}
-119     \}
-120     \textcolor{comment}{// Checks if a unit was found.}
-121     \textcolor{keywordflow}{if}(MovableAsset)\{
-122         \textcolor{comment}{// Finds the nearest tile that is still covered by fog of war.}
-123         \hyperlink{classCPosition}{CPosition} UnknownPosition = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->
+113                                                        \{
+114     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
+115     std::shared\_ptr< CPlayerAsset > MovableAsset;
+116     
+117     \textcolor{comment}{// This loop searches through all the idle assets of the AI to find one that}
+118     \textcolor{comment}{// can move.}
+119     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
+120         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+121             \textcolor{keywordflow}{if}(Asset->Speed())\{
+122                 MovableAsset = Asset;
+123                 \textcolor{keywordflow}{break};
+124             \}
+125         \}
+126     \}
+127     \textcolor{comment}{// Checks if a unit (movable asset) was found.}
+128     \textcolor{keywordflow}{if}(MovableAsset)\{
+129         \textcolor{comment}{// Finds the nearest tile that is still covered by fog of war }
+130         \textcolor{comment}{// (undiscovered).}
+131         \hyperlink{classCPosition}{CPosition} UnknownPosition = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->PlayerMap()->
       FindNearestReachableTileType(MovableAsset->TilePosition(), \hyperlink{classCTerrainMap_aff2ab991e237269941416dd79d8871d4a481e779132fb16414d17870bd6229eb5}{CTerrainMap::ttNone});
-124         
-125         \textcolor{comment}{// Checks if it has found an unexplored tile.}
-126         \textcolor{keywordflow}{if}(0 <= UnknownPosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
-127             \textcolor{comment}{//printf("Unkown Position (%d, %d)\(\backslash\)n", UnknownPosition.X(), UnknownPosition.Y());}
-128 
-129             \textcolor{comment}{// Moves the unit toward that tile.}
-130             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{actMove};
-131             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MovableAsset);
-132             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(UnknownPosition);
-133             \textcolor{comment}{// Successfully explored more of the map.}
-134             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-135         \}
-136     \}
-137     \textcolor{comment}{// Couldn't explore more of the map.}
-138     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-139 \}
+132         
+133         \textcolor{comment}{// Checks if it has found an unexplored tile.}
+134         \textcolor{keywordflow}{if}(0 <= UnknownPosition.\hyperlink{classCPosition_a9a6b94d3b91df1492d166d9964c865fc}{X}())\{
+135             \textcolor{comment}{//printf("Unkown Position (%d, %d)\(\backslash\)n", UnknownPosition.X(), UnknownPosition.Y());}
+136 
+137             \textcolor{comment}{// Moves the unit toward that tile.}
+138             command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceaac071f5baee87f2a5ce94c03750a44af}{actMove};
+139             command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(MovableAsset);
+140             command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation}.\hyperlink{classCPosition_a46994e6a8b8e3b4237edd7259ad844b6}{SetFromTile}(UnknownPosition);
+141             \textcolor{comment}{// Successfully discovered a new tile.}
+142             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+143         \}
+144     \}
+145     \textcolor{comment}{// Couldn't find any new tiles.}
+146     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+147 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -938,8 +941,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classCAIPlayer_afafbe8fc589e09a16ae1f02f2794d7b0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -959,7 +961,7 @@ Function used by the AI to train Archers.
 \hypertarget{classCAIPlayer_tfhow_sec}{}\subsection{How It Works}\label{classCAIPlayer_tfhow_sec}
 The function first checks whether the AI has an idle asset which can train Archers. Then it checks whether the AI has the ability to train archers and the resources necessary to do so. If those conditions are met, the Barracks is given a command to build a Footman. 
 
-Definition at line 663 of file A\+I\+Player.\+cpp.
+Definition at line 666 of file A\+I\+Player.\+cpp.
 
 
 
@@ -971,48 +973,47 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-663                                                          \{
-664     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
-665     std::shared\_ptr< CPlayerAsset > TrainingAsset;
-666     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{EAssetCapabilityType} BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher};
-667 
-668     \textcolor{comment}{// Searches through a list of all idle assets for one which has the }
-669     \textcolor{comment}{// capability of training Archers (Lumber Mill).}
-670     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
-671         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-672             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher}))\{
-673                 TrainingAsset = Asset;
-674                 BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher};
-675                 \textcolor{keywordflow}{break};
-676             \}
-677             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger}))\{
-678                 TrainingAsset = Asset;
-679                 BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger};
-680                 \textcolor{keywordflow}{break};
-681             \}
-682             
-683         \}
-684     \}
-685     \textcolor{comment}{// Checks if Lumber Mill was found.}
-686     \textcolor{keywordflow}{if}(TrainingAsset)\{
-687         \textcolor{comment}{// Finds the AI's ability to train Archers.}
-688         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
+666                                                          \{
+667     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
+668     std::shared\_ptr< CPlayerAsset > TrainingAsset;
+669     \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ce}{EAssetCapabilityType} BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher};
+670 
+671     \textcolor{comment}{// Searches through a list of all idle assets for one which has the }
+672     \textcolor{comment}{// capability of training Archers (Lumber Mill).}
+673     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
+674         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+675             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher}))\{
+676                 TrainingAsset = Asset;
+677                 BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778ceae3af0123db77607fb381df7e49c5b48b}{actBuildArcher};
+678                 \textcolor{keywordflow}{break};
+679             \}
+680             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger}))\{
+681                 TrainingAsset = Asset;
+682                 BuildType = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cead539d31a3eb945161800e6342a05fb11}{actBuildRanger};
+683                 \textcolor{keywordflow}{break};
+684             \}
+685             
+686         \}
+687     \}
+688     \textcolor{comment}{// Checks if Lumber Mill was found.}
+689     \textcolor{keywordflow}{if}(TrainingAsset)\{
+690         \textcolor{comment}{// Finds the AI's ability to train Archers.}
+691         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
       BuildType); 
-689         \textcolor{keywordflow}{if}(PlayerCapability)\{
-690             \textcolor{comment}{// Checks if the AI has enough resources to train an Archer.}
-691             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TrainingAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TrainingAsset))\{
-692                 \textcolor{comment}{// Gives the Lumber Mill the command to train an archer}
-693                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = BuildType;
-694                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TrainingAsset);       
-695                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TrainingAsset->Position();
-696                 \textcolor{comment}{// Returns true because it was successful.}
-697                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-698             \}
-699         \}
-700     \}
-701      \textcolor{comment}{// Returns false because it was unable to train an Archer.}
-702     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-703 \}
+692         \textcolor{keywordflow}{if}(PlayerCapability)\{
+693             \textcolor{comment}{// Checks if the AI has enough resources to train an Archer.}
+694             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TrainingAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TrainingAsset))\{
+695                 \textcolor{comment}{// Gives the Lumber Mill the command to train an archer}
+696                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = BuildType;
+697                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TrainingAsset);       
+698                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TrainingAsset->Position();
+699                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+700             \}
+701         \}
+702     \}
+703      \textcolor{comment}{// Returns false because it was unable to train an Archer.}
+704     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+705 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -1041,7 +1042,7 @@ Function used by the AI to train Footmen.
 \hypertarget{classCAIPlayer_tfhow_sec}{}\subsection{How It Works}\label{classCAIPlayer_tfhow_sec}
 The function first checks whether the AI has an idle asset which can train Footmen. Then it checks whether the AI has the ability to train footmen and the resources necessary to do so. If those conditions are met, the Barracks is given a command to build a Footman. 
 
-Definition at line 618 of file A\+I\+Player.\+cpp.
+Definition at line 622 of file A\+I\+Player.\+cpp.
 
 
 
@@ -1053,43 +1054,42 @@ Referenced by Calculate\+Command().
 
 
 \begin{DoxyCode}
-618                                                           \{
-619     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
-620     std::shared\_ptr< CPlayerAsset > TrainingAsset;
-621     
-622     \textcolor{comment}{// Searches through a list of all idle assets for one which has the }
-623     \textcolor{comment}{// capability of training Footmen (Barracks).}
-624     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
-625         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
-626             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman}))\{
-627                 TrainingAsset = Asset;
-628                 \textcolor{keywordflow}{break};
-629             \}
-630         \}
-631     \}
-632 
-633     \textcolor{comment}{// Checks if a Barracks was found}
-634     \textcolor{keywordflow}{if}(TrainingAsset)\{
-635         \textcolor{comment}{// Finds the AI's ability to train Footmen}
-636         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
+622                                                           \{
+623     \textcolor{keyword}{auto} IdleAssets = \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}->IdleAssets();
+624     std::shared\_ptr< CPlayerAsset > TrainingAsset;
+625     
+626     \textcolor{comment}{// Searches through a list of all idle assets for one which has the }
+627     \textcolor{comment}{// capability of training Footmen (Barracks).}
+628     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} WeakAsset : IdleAssets)\{
+629         \textcolor{keywordflow}{if}(\textcolor{keyword}{auto} Asset = WeakAsset.lock())\{
+630             \textcolor{keywordflow}{if}(Asset->HasCapability(\hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman}))\{
+631                 TrainingAsset = Asset;
+632                 \textcolor{keywordflow}{break};
+633             \}
+634         \}
+635     \}
+636 
+637     \textcolor{comment}{// Checks if a Barracks was found}
+638     \textcolor{keywordflow}{if}(TrainingAsset)\{
+639         \textcolor{comment}{// Finds the AI's ability to train Footmen}
+640         \textcolor{keyword}{auto} PlayerCapability = \hyperlink{classCPlayerCapability_a881ba4b87385d7cfe5cb6ced2d26f226}{CPlayerCapability::FindCapability}(
       \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman}); 
-637         
-638         \textcolor{comment}{// Checks if the AI has the capability of training Footmen.}
-639         \textcolor{keywordflow}{if}(PlayerCapability)\{
-640             \textcolor{comment}{// Checks if the AI has enough resources to train a Footman.}
-641             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TrainingAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TrainingAsset))\{
-642                 \textcolor{comment}{// Gives the Barracks the command to train a Footman.}
-643                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman};
-644                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TrainingAsset);       
-645                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TrainingAsset->Position();
-646                 \textcolor{comment}{// Returns true because it was successful.}
-647                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-648             \}
-649         \}
-650     \}
-651     \textcolor{comment}{// Returns false because it was unable to train a Footman.}
-652     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-653 \}
+641         
+642         \textcolor{comment}{// Checks if the AI has the capability of training Footmen.}
+643         \textcolor{keywordflow}{if}(PlayerCapability)\{
+644             \textcolor{comment}{// Checks if the AI has enough resources to train a Footman.}
+645             \textcolor{keywordflow}{if}(PlayerCapability->CanApply(TrainingAsset, \hyperlink{classCAIPlayer_a83b5113c8f7e80df54940b647c5ee2e6}{DPlayerData}, TrainingAsset))\{
+646                 \textcolor{comment}{// Gives the Barracks the command to train a Footman.}
+647                 command.\hyperlink{structSPlayerCommandRequest_a80897bbccf2c4e0b148a7aa815a926c6}{DAction} = \hyperlink{GameDataTypes_8h_a35b98ce26aca678b03c6f9f76e4778cea48885d6af1b7c05c5887978f88556662}{actBuildFootman};
+648                 command.\hyperlink{structSPlayerCommandRequest_aa37fc01519676345703d78b9f573894a}{DActors}.push\_back(TrainingAsset);       
+649                 command.\hyperlink{structSPlayerCommandRequest_a701702b94ca2fd2738e95ef6711dd41a}{DTargetLocation} = TrainingAsset->Position();
+650                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+651             \}
+652         \}
+653     \}
+654     \textcolor{comment}{// Returns false because it was unable to train a Footman.}
+655     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+656 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -1116,7 +1116,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 31 of file A\+I\+Player.\+h.
+Definition at line 26 of file A\+I\+Player.\+h.
 
 
 
@@ -1130,7 +1130,7 @@ Referenced by C\+A\+I\+Player(), and Calculate\+Command().
 
 
 
-Definition at line 32 of file A\+I\+Player.\+h.
+Definition at line 27 of file A\+I\+Player.\+h.
 
 
 
@@ -1144,7 +1144,7 @@ Referenced by C\+A\+I\+Player(), and Calculate\+Command().
 
 
 
-Definition at line 30 of file A\+I\+Player.\+h.
+Definition at line 25 of file A\+I\+Player.\+h.
 
 
 

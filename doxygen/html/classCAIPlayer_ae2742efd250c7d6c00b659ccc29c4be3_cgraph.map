@@ -1,7 +1,7 @@
 <map id="CAIPlayer::CalculateCommand" name="CAIPlayer::CalculateCommand">
-<area shape="rect" id="node2" href="$classCAIPlayer.html#a4216d7e76315234a4fe22fb3a0a89c1d" title="Selects fighting units that will be able to receive orders as a group. Returns true or false dependin..." alt="" coords="280,5,480,32"/>
+<area shape="rect" id="node2" href="$classCAIPlayer.html#a4216d7e76315234a4fe22fb3a0a89c1d" title="Makes all fighters stand ground. " alt="" coords="280,5,480,32"/>
 <area shape="rect" id="node3" href="$classCAIPlayer.html#a3fab1c955fd68bb53fa80bb1872d2819" title="Function used by the AI to produce peasants and to make them gather resources. " alt="" coords="276,157,484,184"/>
-<area shape="rect" id="node5" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="537,259,703,285"/>
+<area shape="rect" id="node5" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="Function used by the AI player to search for undiscovered tiles on the map. " alt="" coords="537,259,703,285"/>
 <area shape="rect" id="node8" href="$classCAIPlayer.html#adf7feeba7debf9f19b000887616d7bfb" title="Function used by the AI to select fighters and attack the enemy. " alt="" coords="284,385,476,412"/>
 <area shape="rect" id="node12" href="$classCAIPlayer.html#a2ff5263cbaa6bfc62ffec4dbce87ba88" title="Function used by the AI to build a building other than the Town Hall. Returns true or false..." alt="" coords="292,487,468,513"/>
 <area shape="rect" id="node20" href="$classCAIPlayer.html#a41cdefbe14210fb70b793a32778c5141" title="Function used by the AI to build a Town Hall. Returns true or false, depending on whether it was able..." alt="" coords="287,309,473,336"/>

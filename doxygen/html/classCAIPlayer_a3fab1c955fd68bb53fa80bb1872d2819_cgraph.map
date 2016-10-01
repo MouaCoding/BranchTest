@@ -1,6 +1,6 @@
 <map id="CAIPlayer::ActivatePeasants" name="CAIPlayer::ActivatePeasants">
 <area shape="rect" id="node2" href="$classCPlayerCapability.html#a881ba4b87385d7cfe5cb6ced2d26f226" title="CPlayerCapability::\lFindCapability" alt="" coords="272,5,417,47"/>
-<area shape="rect" id="node3" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="261,122,428,149"/>
+<area shape="rect" id="node3" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="Function used by the AI player to search for undiscovered tiles on the map. " alt="" coords="261,122,428,149"/>
 <area shape="rect" id="node4" href="$classCPosition.html#a9a6b94d3b91df1492d166d9964c865fc" title="CPosition::X" alt="" coords="511,97,613,123"/>
 <area shape="rect" id="node5" href="$classCPosition.html#a46994e6a8b8e3b4237edd7259ad844b6" title="CPosition::SetFromTile" alt="" coords="476,159,648,186"/>
 </map>

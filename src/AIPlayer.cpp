@@ -248,7 +248,7 @@ bool CAIPlayer::BuildTownHall(SPlayerCommandRequest &command){
     // Declares a pointer to an asset.
     std::shared_ptr< CPlayerAsset > BuilderAsset;
     
-    // Looks through every idle asset
+    // Looks through every idle asset.
     for(auto WeakAsset : IdleAssets){
         // Checks whether the asset pointer is valid and assigns it to Asset.
         if(auto Asset = WeakAsset.lock()){
@@ -262,7 +262,7 @@ bool CAIPlayer::BuildTownHall(SPlayerCommandRequest &command){
         }
     }
 
-    // Checks if an asset that can build was found (or peasant).
+    // Checks if an asset that can build (peasant) was found.
     if(BuilderAsset){
         // Find the gold mine that is nearest to the peasant and assign it to a
         // variable.
@@ -298,7 +298,7 @@ bool CAIPlayer::BuildTownHall(SPlayerCommandRequest &command){
 
    \section bthhow_sec How It Works
 
-   First the function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The functions has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. This means that for example, if the center of the map is to the North-West of the AI's Town Hall, the building will be constructed to the North-West of the neartype building.
+   First the function tries to find a builder, the Town Hall and the building next to which it is supposed to build. The function has multiple checks for determining whether a building is currently being built. If another building is being built, the function returns false. Otherwise it can proceed. In case no neartype was passed in, the building will be constructed next to the town hall. The building will be built such that the AI expands its base toward the center of the map. For example if the center of the map is to the North-West of the AI's Town Hall, the building will be constructed to the North-West of the neartype building.
  */
 bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildingtype, EAssetType neartype){
     std::shared_ptr< CPlayerAsset > BuilderAsset;
@@ -326,9 +326,8 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
             // Checks if the asset is able to build a specific building, 
             // and whether it can be interrupted from whatever it is doing.
             if(Asset->HasCapability(BuildAction) && Asset->Interruptible()){
-                // Checks if no builder was assinged yet, or if there is a 
-                // mismatch between the local bool AssetIsIdle and whether
-                // the asset really is idle.
+                // Checks if no builder was assinged yet, or if this asset is
+                // idle, but AssetIsIdle isn't set to true yet.
                 if(!BuilderAsset || (!AssetIsIdle && (aaNone == Asset->Action()))){
                     BuilderAsset = Asset;
                     // Sets AssetIsIdle to true if the asset isn't doing 
@@ -336,8 +335,7 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
                     AssetIsIdle = aaNone == Asset->Action();
                 }
             }
-            // Checks if the asset can build peasants (basically looking for a 
-            // Town Hall).
+            // Checks if the asset can build peasants (Town Hall).
             if(Asset->HasCapability(actBuildPeasant)){
                 TownHallAsset = Asset;
             }
@@ -350,7 +348,7 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
                 return false;    
             }
             // Checks if this asset is a building of type neartype, and if 
-            // that building isn't currently being contructed.
+            // it isn't currently being constructed.
             if((neartype == Asset->Type())&&(aaConstruct != Asset->Action())){
                 NearAsset = Asset;
             }
@@ -366,8 +364,8 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
         }
     }
 
-    //Checks if the building the AI is trying to build is not the same as the 
-    // building it is supposed to be build near, and  if there is no building
+    // Checks if the building the AI is trying to build is not the same as the 
+    // building it is supposed to be build near, and if there is no building
     // of the neartype.
     if((buildingtype != neartype) && !NearAsset){
         // Returns false because there is no building that buildingtype can be
@@ -378,8 +376,8 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
     // Checks if there is a builder (peasant).
     if(BuilderAsset){
         auto PlayerCapability = CPlayerCapability::FindCapability(BuildAction);
-        // Sets the position where to build at the Town Hall, in case no
-        // neartype is passed in.
+        // Sets the position where to build to the Town Hall's location, in 
+        // case no neartype is passed in.
         CPosition SourcePosition = TownHallAsset->TilePosition();
         CPosition MapCenter(DPlayerData->PlayerMap()->Width()/2, DPlayerData->PlayerMap()->Height()/2);
         
@@ -437,13 +435,13 @@ bool CAIPlayer::BuildBuilding(SPlayerCommandRequest &command, EAssetType buildin
     return false;
 }
 
-// Function that makes the peasants gather resources or to produce peasants.
+// Function that produces peasants and makes peasants gather resources.
 /*! 
    \brief Function used by the AI to produce peasants and to make them gather resources.
 
    \section aphow_sec How It Works
 
-   The function checks if there are any peasants that are idle or if there are any that could be interrupted from what they are doing. Then it has some logic that determines whether the peasants should be gathering wood or gold. For example if the AI currently has too much gold or too many gold miners, those peasants will be reassigned to harvest lumber. If there are no idle peasants or none that need to be switched, but trainmore is true, the function will check if the AI has enough resources to train a peasant, and if it can it will do so.
+   The function checks if there are any peasants that are idle or if there are any that could be interrupted from what they are doing. Then it has some logic that determines whether the peasants should be gathering wood or gold. For example if the AI currently has too much gold or too many gold miners, those peasants will be reassigned to harvest lumber. If there are no idle peasants or none that need to be switched, but trainmore is true, the function will check if the AI has enough resources to train a peasant, and if it can, it will do so.
  */
 bool CAIPlayer::ActivatePeasants(SPlayerCommandRequest &command, bool trainmore){
     //auto IdleAssets = DPlayerData->IdleAssets();
@@ -571,12 +569,13 @@ bool CAIPlayer::ActivatePeasants(SPlayerCommandRequest &command, bool trainmore)
 }
 
 
-// Function used by the AI to select fighters
+// Function used by the AI to select fighters and make them stand ground.
 /*! 
-   \brief Selects fighting units that will be able to receive orders as a group.
-   Returns true or false depending on whether it was able to select any fighters or not.
+   \brief Makes all fighters stand ground.
 
    \section afhow_sec How It Works
+
+   The reason this function is necessary is that \ref AttackEnemies only commands fighters that are idle to attack. Some fighters might be moving when another fighter has found an enemy to attack. Those moving fighters must stand ground, so the AttackEnemies function will command them to attack the enemy.
 
    The function looks through all the idle assets it has and checks whether they have a speed property and whether they are not a peasant. Then it checks whether the asset is not currently standing ground. If the asset is not standing ground, it is added to a list of actors (assets that can perform actions). The function checks whether that list is empty and if it isn't it will make all the actors on the list stand ground.
  */
@@ -585,11 +584,7 @@ bool CAIPlayer::ActivateFighters(SPlayerCommandRequest &command){
     auto IdleAssets = DPlayerData->IdleAssets();
     
     // Searches through all the IdleAssets.
-    // ":" is the range operator in c++ 11. It goes through all the elements
-    // in a list.
     for(auto WeakAsset : IdleAssets){
-        // Checks whether the asset can be assigned to the current asset.
-        // lock() checks whether the pointer is valid.
         if(auto Asset = WeakAsset.lock()){
             // Checks whether the current asset has a speed property and that
             // it is not a peasant. If those two things are true, then the unit
@@ -598,7 +593,7 @@ bool CAIPlayer::ActivateFighters(SPlayerCommandRequest &command){
                 // Checks if the asset is currently not standing ground.
                 if(!Asset->HasAction(aaStandGround) && !Asset->HasActiveCapability(actStandGround)){
                     // If the unit is not standing ground it is added to a list
-                    // of actors (assets that can act upon otehr assets) which 
+                    // of actors (assets that can act upon other assets) which 
                     // will perform an action as a group.
                     command.DActors.push_back(Asset);
                 }
@@ -652,7 +647,6 @@ bool CAIPlayer::TrainFootman(SPlayerCommandRequest &command){
                 command.DAction = actBuildFootman;
                 command.DActors.push_back(TrainingAsset);       
                 command.DTargetLocation = TrainingAsset->Position();
-                // Returns true because it was successful.
                 return true;
             }
         }
@@ -702,7 +696,6 @@ bool CAIPlayer::TrainArcher(SPlayerCommandRequest &command){
                 command.DAction = BuildType;
                 command.DActors.push_back(TrainingAsset);       
                 command.DTargetLocation = TrainingAsset->Position();
-                // Returns true because it was successful.
                 return true;
             }
         }
@@ -728,18 +721,19 @@ void CAIPlayer::CalculateCommand(SPlayerCommandRequest &command){
     // Checks if the AI is allowed to take an action yet. 
     if((DCycle % DDownSample) == 0){
 
-        // Checks if the AI has any gold left in the local gold mine.
+        // Checks if the AI has found a gold mine.
         if(0 == DPlayerData->FoundAssetCount(atGoldMine)){
-            // Search for gold mine
+            // Search map to try to find a gold mine.
             SearchMap(command);
         } 
         // Checks if there is a Town Hall
         else if((0 == DPlayerData->PlayerAssetCount(atTownHall))&&(0 == DPlayerData->PlayerAssetCount(atKeep))&&(0 == DPlayerData->PlayerAssetCount(atCastle))){
+            // Builds Town Hall
             BuildTownHall(command);
         } 
         // Checks if the AI has fewer than five peasants
         else if(5 > DPlayerData->PlayerAssetCount(atPeasant)){
-            // Makes the peasants gather resources/ produce more peasants.
+            // Makes the peasants gather resources / produce more peasants.
             ActivatePeasants(command, true);
         }
         // Checks if the AI has enough map visibility.
@@ -756,10 +750,9 @@ void CAIPlayer::CalculateCommand(SPlayerCommandRequest &command){
             int BarracksCount = 0;
             int FootmanCount = DPlayerData->PlayerAssetCount(atFootman);
             int ArcherCount = DPlayerData->PlayerAssetCount(atArcher)+DPlayerData->PlayerAssetCount(atRanger);
-            // Checks whether the food consumption of units is bigger than
-            // the food production
+            // Checks whether the AI has enough food to produce more units.
             if(!CompletedAction && (DPlayerData->FoodConsumption() >= DPlayerData->FoodProduction())){
-                // Builds a farm to have more food production
+                // Builds a farm to have more food.
                 CompletedAction = BuildBuilding(command, atFarm, atFarm);
             }
             if(!CompletedAction){
@@ -802,6 +795,7 @@ void CAIPlayer::CalculateCommand(SPlayerCommandRequest &command){
             }
         }
     }
+    // Cycle completed.
     DCycle++;
 }
 

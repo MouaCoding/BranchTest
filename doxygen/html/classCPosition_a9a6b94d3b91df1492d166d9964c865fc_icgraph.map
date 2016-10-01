@@ -28,7 +28,7 @@
 <area shape="rect" id="node39" href="$classCApplicationData.html#a2d956280cfd6074f56db3753c7467248" title="CApplicationData::Screen\lToUnitAction" alt="" coords="498,1667,686,1708"/>
 <area shape="rect" id="node40" href="$classCApplicationData.html#a5400b710281ac2671d8d76aa442124ec" title="CApplicationData::Screen\lToUnitDescription" alt="" coords="498,1419,686,1460"/>
 <area shape="rect" id="node41" href="$classCApplicationData.html#aebd3ae4cfd74962413024f1649233f08" title="CApplicationData::Screen\lToViewport" alt="" coords="183,1200,371,1241"/>
-<area shape="rect" id="node43" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="CAIPlayer::SearchMap" alt="" coords="193,129,360,155"/>
+<area shape="rect" id="node43" href="$classCAIPlayer.html#afafbe8fc589e09a16ae1f02f2794d7b0" title="Function used by the AI player to search for undiscovered tiles on the map. " alt="" coords="193,129,360,155"/>
 <area shape="rect" id="node44" href="$classCUnitActionRenderer.html#a41108fd092035a22f7ecd75b18f045a7" title="CUnitActionRenderer\l::Selection" alt="" coords="198,1803,355,1844"/>
 <area shape="rect" id="node45" href="$classCUnitDescriptionRenderer.html#a6ef0c9f010b5502def622e6d830795c7" title="CUnitDescriptionRenderer\l::Selection" alt="" coords="181,1868,372,1909"/>
 <area shape="rect" id="node46" href="$classCPosition.html#a506e9efd21e209e36533ba7e594be75f" title="CPosition::SetTileDimensions" alt="" coords="169,1934,384,1961"/>
